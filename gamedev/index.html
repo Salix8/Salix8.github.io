@@ -24,7 +24,7 @@
       <section class="hero">
         <h1 class="site-header__title">Game Dev</h1>
         <p class="hero__bio">
-          Desarrollador de videojuegos y artista 3D. Aquí encontrarás mis proyectos publicados y una galería de los modelos que voy creando.
+          Desarrollador de videojuegos y artista 3D + VFX. Aquí encontrarás mis proyectos publicados y una galería de los modelos que voy creando.
         </p>
         <a href="https://salix-8.itch.io/" target="_blank" rel="noopener noreferrer" class="itchio-badge" id="itchio-link">
           <svg viewBox="0 0 264 264" xmlns="http://www.w3.org/2000/svg"><path d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 23.394-11.258 23.394-24.62 0 13.362 12.03 24.62 25.614 24.62h.001c13.584 0 25.613-11.258 25.613-24.62 0 13.362 9.808 24.62 23.394 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.319 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056.023 132 0c-25.056.023-48.118.197-100.01 1.365zM2.8 83.593c.737 8.186 4.823 14.453 11.997 18.786 0 30.153-.018 43.143-.013 74.875-.38 25.108 26.327 50.473 50.398 52.38 21.716 1.72 56.566 2.097 66.817 2.097 10.25 0 45.1-.378 66.816-2.098 24.072-1.906 50.779-27.271 50.399-52.379.005-31.732-.
@@ -54,11 +54,43 @@
             ></model-viewer>
             <div class="model-card__info">
               <h3 class="model-card__name">Beholder</h3>
-              <p class="model-card__desc">Criatura icónica de fantasía</p>
+              <p class="model-card__desc">Criatura fantástica (Dungeons & Dragons)</p>
             </div>
           </div>
 
-          <!-- 
+          <div class="model-card" id="model-hacha-kratos">
+            <model-viewer
+              src="../Assets/01Assets3D/HachaKratos.glb"
+              alt="Modelo 3D del Hacha Kratos"
+              auto-rotate
+              camera-controls
+              touch-action="pan-y"
+              shadow-intensity="1"
+              exposure="0.8"
+            ></model-viewer>
+            <div class="model-card__info">
+              <h3 class="model-card__name">Hacha Kratos</h3>
+              <p class="model-card__desc">Hacha de Kratos (God of War)</p>
+            </div>
+          </div>
+
+          <div class="model-card" id="model-templo-mano-abierta">
+            <model-viewer
+              src="../Assets/01Assets3D/TemploDeLaManoAbierta.glb"
+              alt="Modelo 3D del Templo de la Mano Abierta (Baldur's Gate 3)"
+              auto-rotate
+              camera-controls
+              touch-action="pan-y"
+              shadow-intensity="1"
+              exposure="0.8"
+            ></model-viewer>
+            <div class="model-card__info">
+              <h3 class="model-card__name">Templo de la Mano Abierta</h3>
+              <p class="model-card__desc">Templo de la Mano Abierta (Baldur's Gate 3)</p>
+            </div>
+          </div>
+
+          <!--
             Para añadir más modelos, copia este bloque y cambia:
             - src="..." → ruta a tu archivo .glb
             - alt="..." → descripción del modelo
