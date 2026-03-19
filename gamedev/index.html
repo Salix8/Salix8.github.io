@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Salix8 — Perfil de desarrollador de videojuegos, modelos 3D y enlace a itch.io.">
+  <title>Salix8 — Game Dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Model Viewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <div class="page-wrapper">
+    <div class="container">
+
+      <a href="../" class="back-link" id="back-lobby">← Volver al Lobby</a>
+
+      <!-- HERO -->
+      <section class="hero">
+        <h1 class="site-header__title">Game Dev</h1>
+        <p class="hero__bio">
+          Desarrollador de videojuegos y artista 3D. Aquí encontrarás mis proyectos publicados y una galería de los modelos que voy creando.
+        </p>
+        <a href="https://salix-8.itch.io/" target="_blank" rel="noopener noreferrer" class="itchio-badge" id="itchio-link">
+          <svg viewBox="0 0 264 264" xmlns="http://www.w3.org/2000/svg"><path d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 23.394-11.258 23.394-24.62 0 13.362 12.03 24.62 25.614 24.62h.001c13.584 0 25.613-11.258 25.613-24.62 0 13.362 9.808 24.62 23.394 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.319 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056.023 132 0c-25.056.023-48.118.197-100.01 1.365zM2.8 83.593c.737 8.186 4.823 14.453 11.997 18.786 0 30.153-.018 43.143-.013 74.875-.38 25.108 26.327 50.473 50.398 52.38 21.716 1.72 56.566 2.097 66.817 2.097 10.25 0 45.1-.378 66.816-2.098 24.072-1.906 50.779-27.271 50.399-52.379.005-31.732-.
+013-44.722-.013-74.875 7.174-4.333 11.26-10.6 11.996-18.786-8.49 2.252-16.626 7.358-24.903 7.358-13.584 0-24.515-9.482-24.515-22.844 0 13.362-9.808 22.844-23.394 22.844-13.585 0-25.613-9.482-25.613-22.844 0 13.362-12.03 22.844-25.614 22.844h-.001c-13.584 0-25.613-9.482-25.613-22.844 0 13.362-9.808 22.844-23.394 22.844-13.585 0-24.515-9.482-24.515-22.844 0 13.362-11.319 22.844-24.903 22.844C19.425 90.95 11.29 85.845 2.8 83.593zm62.424 37.907c-7.282.093-13.347 1.548-17.308 4.725-5.238 4.199-6.752 7.024-10.07 15.867l10.384 28.17c.27-.457 5.063-9.775 17.95-9.775s17.948 9.775 17.948 9.775l10.384-28.17c-3.318-8.843-4.832-11.668-10.07-15.867-3.544-2.842-8.868-4.632-15.213-4.725h-1.5zm65.478 0c-7.282.093-13.347 1.548-17.308 4.725-5.238 4.199-6.752 7.024-10.07 15.867l10.384 28.17c.27-.457 5.063-9.775 17.95-9.775 12.886 0 17.948 9.775 17.948 9.775l10.384-28.17c-3.318-8.843-4.832-11.668-10.07-15.867-3.544-2.842-8.868-4.632-15.213-4.725h-1.5z"/></svg>
+          Mi perfil en itch.io
+        </a>
+      </section>
+
+      <hr class="divider">
+
+      <!-- 3D MODELS -->
+      <section id="models-section">
+        <h2 class="section-title">Modelos 3D</h2>
+        <p class="section-subtitle">Explora mis modelos: rota, haz zoom y disfruta</p>
+
+        <div class="model-gallery" id="model-gallery">
+
+          <div class="model-card" id="model-beholder">
+            <model-viewer
+              src="../Assets/01Assets3D/Beholder.glb"
+              alt="Modelo 3D de un Beholder"
+              auto-rotate
+              camera-controls
+              touch-action="pan-y"
+              shadow-intensity="1"
+              exposure="0.8"
+            ></model-viewer>
+            <div class="model-card__info">
+              <h3 class="model-card__name">Beholder</h3>
+              <p class="model-card__desc">Criatura icónica de fantasía</p>
+            </div>
+          </div>
+
+          <!-- 
+            Para añadir más modelos, copia este bloque y cambia:
+            - src="..." → ruta a tu archivo .glb
+            - alt="..." → descripción del modelo
+            - El título y la descripción
+
+          <div class="model-card" id="model-nombre">
+            <model-viewer
+              src="../Assets/01Assets3D/TuModelo.glb"
+              alt="Descripción del modelo"
+              auto-rotate
+              camera-controls
+              touch-action="pan-y"
+              shadow-intensity="1"
+              exposure="0.8"
+            ></model-viewer>
+            <div class="model-card__info">
+              <h3 class="model-card__name">Nombre del Modelo</h3>
+              <p class="model-card__desc">Breve descripción</p>
+            </div>
+          </div>
+          -->
+
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Salix8</p>
+    </footer>
+  </div>
+
+</body>
+</html>
