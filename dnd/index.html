@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Salix8 — Sección de D&D en construcción. Próximamente campañas, personajes y recursos.">
-  <title>Salix8 — D&amp;D</title>
+  <meta name="description" content="Salix8 — D&D Hub. Create characters, manage campaigns, and explore resources.">
+  <title>Salix8 — D&D Hub</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/dnd.css">
 </head>
 <body>
   <div class="bg-glow"></div>
@@ -16,16 +17,40 @@
   <div class="page-wrapper">
     <div class="container">
 
-      <a href="../" class="back-link" id="back-lobby">← Volver al Lobby</a>
+      <a href="../" class="back-link" id="back-lobby">← Back to Hub</a>
 
-      <section class="construction">
-        <span class="construction__icon" aria-hidden="true">🐉</span>
-        <h1 class="construction__title">Próximamente</h1>
-        <p class="construction__text">
-          Estoy preparando esta sección con campañas, personajes, mapas y recursos para Dungeons &amp; Dragons. ¡Vuelve pronto!
-        </p>
-        <a href="../" class="btn btn--outline" id="btn-back-home">Volver al inicio</a>
-      </section>
+      <header class="site-header">
+        <h1 class="site-header__title">D&D</h1>
+        <p class="site-header__subtitle">Characters, campaigns, and adventures</p>
+      </header>
+
+      <nav class="dnd-nav-grid" aria-label="D&D Navigation">
+
+        <a href="creator/" class="dnd-nav-card" id="card-creator">
+          <span class="dnd-nav-card__icon">⚔️</span>
+          <h2 class="dnd-nav-card__title">Create Character</h2>
+          <p class="dnd-nav-card__desc">Build a new level 1 character with attributes, skills, and custom modules.</p>
+        </a>
+
+        <a href="characters/" class="dnd-nav-card" id="card-characters">
+          <span class="dnd-nav-card__icon">📜</span>
+          <h2 class="dnd-nav-card__title">My Characters</h2>
+          <p class="dnd-nav-card__desc">View, edit, and manage your saved characters.</p>
+        </a>
+
+        <div class="dnd-nav-card dnd-nav-card--disabled" id="card-classes">
+          <span class="dnd-nav-card__icon">🏰</span>
+          <h2 class="dnd-nav-card__title">Classes</h2>
+          <p class="dnd-nav-card__desc">Explore class features, subclasses, and preloaded modules.</p>
+        </div>
+
+        <div class="dnd-nav-card dnd-nav-card--disabled" id="card-campaigns">
+          <span class="dnd-nav-card__icon">🗺️</span>
+          <h2 class="dnd-nav-card__title">Campaigns</h2>
+          <p class="dnd-nav-card__desc">Manage ongoing campaigns, sessions, and maps.</p>
+        </div>
+
+      </nav>
 
     </div>
 

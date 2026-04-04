@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Salix8 — D&D Characters. View and manage your saved characters.">
+  <title>Salix8 — My Characters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../css/dnd.css">
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <div class="page-wrapper">
+    <div class="container">
+
+      <a href="../" class="back-link" id="back-dnd">← Back to D&D Hub</a>
+
+      <header class="site-header">
+        <h1 class="site-header__title">My Characters</h1>
+        <p class="site-header__subtitle">Manage your saved adventurers</p>
+      </header>
+
+      <div class="io-bar">
+        <label for="import-file" class="btn btn--outline" style="cursor:pointer">
+          📥 Import JSON
+          <input type="file" id="import-file" accept=".json" style="display:none">
+        </label>
+        <button type="button" class="btn btn--outline" id="export-all">📤 Export All</button>
+        <a href="../creator/" class="btn btn--primary">⚔️ Create New</a>
+      </div>
+
+      <div id="characters-container">
+        <!-- Rendered by characters.js -->
+        <div class="empty-state">
+          <div class="empty-state__icon">📜</div>
+          <h2 class="empty-state__text">You have no saved characters yet.</h2>
+          <a href="../creator/" class="btn btn--primary">Create Character</a>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Salix8</p>
+    </footer>
+  </div>
+
+  <script src="../js/utils/helpers.js"></script>
+  <script src="../js/storage/storage.js"></script>
+  <script src="../js/characters/characters.js"></script>
+</body>
+</html>
