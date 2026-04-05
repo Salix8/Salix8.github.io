@@ -34,6 +34,10 @@ const elements = {
   // Notes
   notes: document.getElementById('char-notes'),
 
+  // Tabbed Panel
+  panelTabs: document.getElementById('panel-tabs'),
+  panelBody: document.getElementById('panel-body'),
+
   // Buttons
   addModuleBtn: document.getElementById('add-module'),
   saveBtn: document.getElementById('save-char'),
@@ -134,9 +138,11 @@ function updateUI() {
   elements.background.value = character.background;
 
   // Combat Stats
-  elements.acOverride.checked = character.acOverride !== null;
+  if (elements.acOverride) {
+    elements.acOverride.checked = character.acOverride !== null;
+    elements.ac.disabled = character.acOverride === null;
+  }
   elements.ac.value = calcAC(character);
-  elements.ac.disabled = character.acOverride === null;
   
   elements.init.textContent = formatModifier(calcInitiative(character));
   elements.speed.value = character.speed;
@@ -158,14 +164,16 @@ function updateUI() {
     elements.hdSpent.value = character.hitDiceSpent;
   }
 
-  // Death Saves
-  updateDeathSavesUI();
+  // Death Saves (only if the section exists in the DOM)
+  if (elements.deathSaves) updateDeathSavesUI();
 
   // Abilities & Saves & Skills updates are handled by re-rendering or targeted updates during input
 }
 
 /** Update Death Saves DOM state */
 function updateDeathSavesUI() {
+  if (!elements.deathSaves) return;
+
   const successes = elements.deathSaves.querySelectorAll('.ds-circle--success');
   const failures = elements.deathSaves.querySelectorAll('.ds-circle--failure');
 
@@ -242,19 +250,21 @@ function setupEventListeners() {
   });
 
   // Combat Stats
-  elements.acOverride.addEventListener('change', e => {
-    const isOverride = e.target.checked;
-    elements.ac.disabled = !isOverride;
-    
-    if (isOverride) {
-      character.acOverride = parseInt(elements.ac.value) || 10;
-      character.armorClass = character.acOverride;
-    } else {
-      character.acOverride = null;
-      character.armorClass = null;
-    }
-    updateUI();
-  });
+  if (elements.acOverride) {
+    elements.acOverride.addEventListener('change', e => {
+      const isOverride = e.target.checked;
+      elements.ac.disabled = !isOverride;
+      
+      if (isOverride) {
+        character.acOverride = parseInt(elements.ac.value) || 10;
+        character.armorClass = character.acOverride;
+      } else {
+        character.acOverride = null;
+        character.armorClass = null;
+      }
+      updateUI();
+    });
+  }
 
   elements.ac.addEventListener('input', e => {
     if (character.acOverride !== null) {
@@ -309,23 +319,22 @@ function setupEventListeners() {
      elements.hdSpent.value = val;
   });
 
-  // Death Saves
-  elements.deathSaves.addEventListener('click', e => {
-    const btn = e.target.closest('.ds-circle');
-    if (!btn) return;
+  // Death Saves (only if the section exists in the DOM)
+  if (elements.deathSaves) {
+    elements.deathSaves.addEventListener('click', e => {
+      const btn = e.target.closest('.ds-circle');
+      if (!btn) return;
 
-    const type = btn.dataset.type; // 'success' or 'failure'
-    // Determine the new value: clicking the highest filled un-fills it, otherwise fills up to that point
-    // This is a common pattern for these types of trackers
-    
-    // Simple version: just cycle through 0-3
-    let current = character.deathSaves[type + 'es']; // successes or failures
-    if (current >= 3) current = 0;
-    else current++;
+      const type = btn.dataset.type; // 'success' or 'failure'
+      // Simple version: just cycle through 0-3
+      let current = character.deathSaves[type + 'es']; // successes or failures
+      if (current >= 3) current = 0;
+      else current++;
 
-    character.deathSaves[type + 'es'] = current;
-    updateDeathSavesUI();
-  });
+      character.deathSaves[type + 'es'] = current;
+      updateDeathSavesUI();
+    });
+  }
 
   // Modules
   elements.addModuleBtn.addEventListener('click', () => {
@@ -356,6 +365,30 @@ function setupEventListeners() {
 
   // Notes
   elements.notes.addEventListener('input', e => character.notes = e.target.value);
+
+  // Tabbed Panel switching
+  if (elements.panelTabs) {
+    elements.panelTabs.addEventListener('click', e => {
+      const tab = e.target.closest('.tabbed-panel__tab');
+      if (!tab) return;
+
+      const target = tab.dataset.tab; // 'all', 'features', 'notes'
+
+      // Update active tab
+      elements.panelTabs.querySelectorAll('.tabbed-panel__tab').forEach(t => t.classList.remove('tabbed-panel__tab--active'));
+      tab.classList.add('tabbed-panel__tab--active');
+
+      // Show/hide sections
+      const sections = elements.panelBody.querySelectorAll('.tabbed-panel__section');
+      sections.forEach(section => {
+        if (target === 'all' || section.dataset.section === target) {
+          section.classList.remove('tabbed-panel__section--hidden');
+        } else {
+          section.classList.add('tabbed-panel__section--hidden');
+        }
+      });
+    });
+  }
 
   // Action Bar
   elements.saveBtn.addEventListener('click', handleSave);
