@@ -739,7 +739,7 @@ input[type="number"] {
 
 .tabbed-panel__body {
   overflow-y: auto;
-  max-height: 600px;
+  max-height: 510px;
   padding-top: 1rem;
   scrollbar-width: thin;
   scrollbar-color: hsla(265, 60%, 50%, 0.3) transparent;
