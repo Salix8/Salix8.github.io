@@ -13,6 +13,7 @@ const elements = {
   // Containers
   abilitiesRow: document.getElementById('abilities-row'),
   skillsList: document.getElementById('skills-list'),
+  compList: document.getElementById('comp-list'),
   modulesList: document.getElementById('modules-list'),
   
   // Combat Stats
@@ -61,6 +62,7 @@ function init() {
 
   renderAbilities();
   renderSkills();
+  renderCompetencies();
   renderModules();
   updateUI();
   setupEventListeners();
@@ -112,6 +114,58 @@ function renderSkills() {
         <span class="skill-row__name">${name}</span>
         <span class="skill-row__ability">(${abbr})</span>
         <span class="skill-row__mod" id="skill-mod-${skill}">${formatModifier(mod)}</span>
+    </div>
+    `;
+  }).join('');
+}
+
+/** Render competencies list */
+function renderCompetencies() {
+  const categories = [
+    { id: 'weapons', label: 'Weapons', presets: ['Simple', 'Martial'] },
+    { id: 'armor', label: 'Armor', presets: ['Light', 'Medium', 'Heavy'] },
+    { id: 'tools', label: 'Tools', presets: [] },
+    { id: 'languages', label: 'Languages', presets: [] },
+    { id: 'extras', label: 'Extras', presets: [] }
+  ];
+
+  if (!character.competencies) {
+    character.competencies = { weapons: [], armor: [], tools: [], languages: [], extras: [] };
+  }
+
+  if (!elements.compList) return;
+
+  elements.compList.innerHTML = categories.map(cat => {
+    const list = character.competencies[cat.id] || [];
+    
+    // Filter out presets that are already added
+    const availablePresets = cat.presets.filter(p => !list.includes(p));
+
+    const itemsHtml = list.map(item => `
+      <span class="comp-item">
+        ${escapeHtml(item)}
+        <button type="button" class="comp-item-delete" data-category="${cat.id}" data-item="${escapeHtml(item)}">✕</button>
+      </span>
+    `).join('');
+
+    const presetsHtml = availablePresets.map(p => `
+      <button type="button" class="btn--comp comp-preset" data-category="${cat.id}" data-value="${p}">${p}</button>
+    `).join('');
+
+    return `
+      <div class="comp-category">
+        <div class="comp-header">
+          <span class="comp-label">${cat.label}</span>
+          <div class="comp-items">${itemsHtml}</div>
+        </div>
+        <div class="comp-controls" id="comp-ctrl-${cat.id}">
+          ${presetsHtml}
+          <button type="button" class="btn--comp comp-custom-btn" data-category="${cat.id}">+ Custom</button>
+        </div>
+        <div class="comp-custom-input-group" id="comp-custom-${cat.id}" style="display: none;">
+          <input type="text" class="dnd-input comp-custom-input" placeholder="Enter custom ${cat.label.toLowerCase()}">
+          <button type="button" class="btn btn--outline comp-custom-add" data-category="${cat.id}" style="padding: 0.25rem 0.5rem; min-width: auto; font-size: 0.8rem;">Add</button>
+        </div>
       </div>
     `;
   }).join('');
@@ -248,6 +302,62 @@ function setupEventListeners() {
     
     document.getElementById(`skill-mod-${skill}`).textContent = formatModifier(calcSkillModifier(character, skill));
   });
+
+  // Competencies
+  if (elements.compList) {
+    elements.compList.addEventListener('click', e => {
+      // Add preset
+      if (e.target.classList.contains('comp-preset')) {
+        const cat = e.target.dataset.category;
+        const val = e.target.dataset.value;
+        if (!character.competencies[cat].includes(val)) {
+          character.competencies[cat].push(val);
+          renderCompetencies();
+        }
+      }
+      
+      // Delete item
+      if (e.target.classList.contains('comp-item-delete')) {
+        const cat = e.target.dataset.category;
+        const val = e.target.dataset.item;
+        character.competencies[cat] = character.competencies[cat].filter(i => i !== val);
+        renderCompetencies();
+      }
+
+      // Show custom input
+      if (e.target.classList.contains('comp-custom-btn')) {
+        const cat = e.target.dataset.category;
+        const inputGroup = document.getElementById(`comp-custom-${cat}`);
+        const ctrlGroup = document.getElementById(`comp-ctrl-${cat}`);
+        inputGroup.style.display = 'flex';
+        ctrlGroup.style.display = 'none';
+        inputGroup.querySelector('input').focus();
+      }
+
+      // Add custom
+      if (e.target.classList.contains('comp-custom-add')) {
+        const cat = e.target.dataset.category;
+        const input = document.getElementById(`comp-custom-${cat}`).querySelector('input');
+        const val = input.value.trim();
+        if (val && !character.competencies[cat].includes(val)) {
+          character.competencies[cat].push(val);
+          renderCompetencies();
+        } else if (val === '') {
+          // just cancel
+          renderCompetencies();
+        }
+      }
+    });
+
+    // Handle Enter key on custom input
+    elements.compList.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && e.target.classList.contains('comp-custom-input')) {
+        e.preventDefault();
+        const btn = e.target.nextElementSibling;
+        btn.click();
+      }
+    });
+  }
 
   // Combat Stats
   if (elements.acOverride) {

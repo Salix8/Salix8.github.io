@@ -106,6 +106,13 @@ function createCharacter(overrides = {}) {
     },
 
     modules: [],
+    competencies: {
+      weapons: [],
+      armor: [],
+      tools: [],
+      languages: [],
+      extras: []
+    },
     notes: '',
     ...overrides
   };
