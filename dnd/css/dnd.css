@@ -54,10 +54,26 @@ input[type="number"] {
 
 /* ===== CHARACTER HEADER ===== */
 .char-header {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
   padding: 1rem 0 1.5rem;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--border-glass);
+}
+
+@media (max-width: 768px) {
+  .char-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.char-header__name {
+  flex: 0 1 575px;
+  display: flex;
+  width: 100%;
 }
 
 .char-name-input {
@@ -68,11 +84,17 @@ input[type="number"] {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 700;
-  text-align: center;
+  text-align: left;
   padding: 0.25rem 0.5rem;
-  max-width: 500px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
   color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .char-name-input {
+    text-align: center;
+  }
 }
 
 .char-name-input::placeholder {
@@ -86,19 +108,32 @@ input[type="number"] {
 }
 
 .char-meta {
-  display: flex;
-  justify-content: center;
-  gap: 1.25rem;
-  margin-top: 1.25rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.5rem;
+  flex: 1;
+  min-width: 250px;
+}
+
+@media (max-width: 480px) {
+  .char-meta {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
 }
 
 .char-field {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.3rem;
   min-width: 100px;
+}
+
+@media (max-width: 768px) {
+  .char-field {
+    align-items: center;
+  }
 }
 
 .char-field label {
@@ -111,10 +146,18 @@ input[type="number"] {
 
 .char-field input,
 .char-field select {
-  text-align: center;
-  max-width: 140px;
+  text-align: left;
+  max-width: 100%;
+  width: 100%;
   padding: 0.4rem 0.5rem;
   font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .char-field input,
+  .char-field select {
+    text-align: center;
+  }
 }
 
 .char-field input[type="number"] {
@@ -1244,4 +1287,4 @@ input[type="number"] {
   flex: 1;
   padding: 0.25rem 0.5rem;
   font-size: 0.8rem;
-}
+}

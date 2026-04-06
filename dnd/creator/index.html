@@ -24,12 +24,10 @@
 
       <!-- ===== CHARACTER HEADER ===== -->
       <div class="char-header">
-        <input type="text" class="char-name-input" id="char-name" placeholder="Character Name" autocomplete="off">
+        <div class="char-header__name">
+          <input type="text" class="char-name-input" id="char-name" placeholder="Character Name" autocomplete="off">
+        </div>
         <div class="char-meta">
-          <div class="char-field">
-            <label for="char-race">Race</label>
-            <input type="text" id="char-race" placeholder="e.g. Human" autocomplete="off">
-          </div>
           <div class="char-field">
             <label for="char-class">Class</label>
             <input type="text" id="char-class" placeholder="e.g. Fighter" autocomplete="off">
@@ -37,6 +35,10 @@
           <div class="char-field">
             <label for="char-level">Level</label>
             <input type="number" id="char-level" value="1" min="1" max="20">
+          </div>
+          <div class="char-field">
+            <label for="char-race">Race</label>
+            <input type="text" id="char-race" placeholder="e.g. Human" autocomplete="off">
           </div>
           <div class="char-field">
             <label for="char-background">Background</label>
