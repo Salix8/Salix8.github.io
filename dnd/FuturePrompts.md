@@ -20,4 +20,15 @@ clip-path: polygon(
 
 
 # Module Prompt
-Vamos a actualizar los modulos, cuando cliquen en add module, el usuario debera elegir si es una Acction, Bonus Acction, Reaction, Free Acction o Other. Por lo que en la top bar del Tabbed Panel ahora aparecera Featrures para todas las features, pero ahora podran filtrar segun el tipo. Los filtros seran del tipo selectivo, podran seleccionar accion y bonus accion, por lo que solo apareceran las que tengan esas caracteristicas.
+//Falta una pestaña de All que cuando cliques Add Module te aparezca un pop up para elegir cual de los 8 tipos de modulos quiere añadir.
+//Cuando añades una "Class Feature" puede que esta implemente una accion, una reaccion o una accion bonus. Esta se debera añadir tambien en la otra pestaña de Acciones. Pero en la pestaña de All no debera aparecer duplicada.
+
+
+# Spell Prompt
+//Falta una pestaña de Spells
+
+# Equipment Prompt
+//Falta una pestaña de Equipment
+
+# Conditions Prompt
+//Falta una pestaña de Conditions and defenses

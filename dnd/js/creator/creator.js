@@ -14,7 +14,8 @@ const elements = {
   abilitiesRow: document.getElementById('abilities-row'),
   skillsList: document.getElementById('skills-list'),
   compList: document.getElementById('comp-list'),
-  modulesList: document.getElementById('modules-list'),
+  actionsList: document.getElementById('actions-list'),
+  featuresList: document.getElementById('features-list'),
   
   // Combat Stats
   ac: document.getElementById('stat-ac'),
@@ -40,10 +41,20 @@ const elements = {
   panelBody: document.getElementById('panel-body'),
 
   // Buttons
-  addModuleBtn: document.getElementById('add-module'),
+  addActionBtn: document.getElementById('add-action-module'),
+  addFeatureBtn: document.getElementById('add-feature-module'),
+  typePickerModal: document.getElementById('type-picker-modal'),
+  typePickerGrid: document.getElementById('type-picker-grid'),
+  typePickerClose: document.getElementById('type-picker-close'),
+  actionsFilters: document.getElementById('actions-filters'),
+  featuresFilters: document.getElementById('features-filters'),
   saveBtn: document.getElementById('save-char'),
   exportBtn: document.getElementById('export-char')
 };
+
+// Filter States
+let activeActionFilters = new Set(['all']);
+let activeFeatureFilters = new Set(['all']);
 
 /** Initialize the creator */
 function init() {
@@ -60,10 +71,17 @@ function init() {
     }
   }
 
+  // Default unknown module types to 'other'
+  if (character && character.modules) {
+    character.modules.forEach(m => {
+      if (!m.type) m.type = 'other';
+    });
+  }
+
   renderAbilities();
   renderSkills();
   renderCompetencies();
-  renderModules();
+  renderModuleLists();
   updateUI();
   setupEventListeners();
 }
@@ -171,15 +189,38 @@ function renderCompetencies() {
   }).join('');
 }
 
-/** Render custom modules */
-function renderModules() {
-  elements.modulesList.innerHTML = character.modules.map((mod, index) => `
-    <div class="module-card" data-index="${index}">
-      <button type="button" class="module-delete" aria-label="Delete module">✕</button>
-      <input type="text" class="module-input dnd-input" placeholder="Feature Title" value="${escapeHtml(mod.title)}">
-      <textarea class="module-textarea dnd-input" placeholder="Description...">${escapeHtml(mod.description)}</textarea>
-    </div>
-  `).join('');
+/** Render custom modules split into actions and features */
+function renderModuleLists() {
+  const renderList = (listEl, groupKey, filters) => {
+    if (!listEl) return;
+    const isAll = filters.has('all');
+    const groupTypes = MODULE_GROUPS[groupKey];
+    
+    listEl.innerHTML = character.modules.map((mod, index) => {
+      if (!groupTypes.includes(mod.type)) return '';
+      if (!isAll && !filters.has(mod.type)) return '';
+
+      const typeDef = MODULE_TYPES[mod.type];
+      const shapeHtml = typeDef.shape !== 'none' ? `<span class="badge-shape badge-shape--${typeDef.shape}"></span>` : '';
+      
+      return `
+        <div class="module-card" data-index="${index}">
+          <div class="module-header-row">
+            <span class="module-badge" style="border-color: ${typeDef.color}; color: ${typeDef.color}">
+              ${shapeHtml}
+              ${typeDef.label}
+            </span>
+            <button type="button" class="module-delete" aria-label="Delete module">✕</button>
+          </div>
+          <input type="text" class="module-input dnd-input" placeholder="Feature Title" value="${escapeHtml(mod.title)}">
+          <textarea class="module-textarea dnd-input" placeholder="Description...">${escapeHtml(mod.description)}</textarea>
+        </div>
+      `;
+    }).join('');
+  };
+
+  renderList(elements.actionsList, 'actions', activeActionFilters);
+  renderList(elements.featuresList, 'features', activeFeatureFilters);
 }
 
 /** Update the DOM to match the data model */
@@ -447,21 +488,56 @@ function setupEventListeners() {
   }
 
   // Modules
-  elements.addModuleBtn.addEventListener('click', () => {
-    character.modules.push({ id: generateId(), title: '', description: '' });
-    renderModules();
-  });
+  function showTypePicker(groupKey) {
+    if (!elements.typePickerGrid) return;
+    const types = MODULE_GROUPS[groupKey];
+    elements.typePickerGrid.innerHTML = types.map(type => {
+      const typeDef = MODULE_TYPES[type];
+      const shapeHtml = typeDef.shape !== 'none' ? `<span class="badge-shape badge-shape--${typeDef.shape}"></span>` : '';
+      return `
+        <button type="button" class="btn--type" data-type="${type}">
+          ${shapeHtml}
+          ${typeDef.label}
+        </button>
+      `;
+    }).join('');
+    elements.typePickerModal.classList.remove('hidden');
+  }
 
-  elements.modulesList.addEventListener('click', e => {
+  if (elements.addActionBtn) {
+    elements.addActionBtn.addEventListener('click', () => showTypePicker('actions'));
+  }
+  if (elements.addFeatureBtn) {
+    elements.addFeatureBtn.addEventListener('click', () => showTypePicker('features'));
+  }
+
+  if (elements.typePickerClose) {
+    elements.typePickerClose.addEventListener('click', () => {
+      elements.typePickerModal.classList.add('hidden');
+    });
+  }
+
+  if (elements.typePickerGrid) {
+    elements.typePickerGrid.addEventListener('click', e => {
+      const btn = e.target.closest('.btn--type');
+      if (!btn) return;
+      const type = btn.dataset.type;
+      character.modules.push({ id: generateId(), type: type, title: '', description: '' });
+      elements.typePickerModal.classList.add('hidden');
+      renderModuleLists();
+    });
+  }
+
+  elements.panelBody.addEventListener('click', e => {
     if (e.target.classList.contains('module-delete')) {
       const card = e.target.closest('.module-card');
       const index = parseInt(card.dataset.index);
       character.modules.splice(index, 1);
-      renderModules();
+      renderModuleLists();
     }
   });
 
-  elements.modulesList.addEventListener('input', e => {
+  elements.panelBody.addEventListener('input', e => {
     const card = e.target.closest('.module-card');
     if (!card) return;
     const index = parseInt(card.dataset.index);
@@ -473,8 +549,42 @@ function setupEventListeners() {
     }
   });
 
+  function setupFilterListeners(container, filterSet) {
+    if (!container) return;
+    container.addEventListener('click', e => {
+      const btn = e.target.closest('.sub-filter');
+      if (!btn) return;
+      
+      const filter = btn.dataset.filter;
+      
+      if (filter === 'all') {
+        filterSet.clear();
+        filterSet.add('all');
+      } else {
+        filterSet.delete('all');
+        if (filterSet.has(filter)) filterSet.delete(filter);
+        else filterSet.add(filter);
+        
+        if (filterSet.size === 0) filterSet.add('all');
+      }
+      
+      container.querySelectorAll('.sub-filter').forEach(f => {
+        const fType = f.dataset.filter;
+        if (filterSet.has(fType)) f.classList.add('sub-filter--active');
+        else f.classList.remove('sub-filter--active');
+      });
+      
+      renderModuleLists();
+    });
+  }
+
+  setupFilterListeners(elements.actionsFilters, activeActionFilters);
+  setupFilterListeners(elements.featuresFilters, activeFeatureFilters);
+
   // Notes
-  elements.notes.addEventListener('input', e => character.notes = e.target.value);
+  if (elements.notes) {
+    elements.notes.addEventListener('input', e => character.notes = e.target.value);
+  }
 
   // Tabbed Panel switching
   if (elements.panelTabs) {
@@ -482,7 +592,7 @@ function setupEventListeners() {
       const tab = e.target.closest('.tabbed-panel__tab');
       if (!tab) return;
 
-      const target = tab.dataset.tab; // 'all', 'features', 'notes'
+      const target = tab.dataset.tab; // 'actions', 'features', 'notes'
 
       // Update active tab
       elements.panelTabs.querySelectorAll('.tabbed-panel__tab').forEach(t => t.classList.remove('tabbed-panel__tab--active'));
@@ -491,7 +601,7 @@ function setupEventListeners() {
       // Show/hide sections
       const sections = elements.panelBody.querySelectorAll('.tabbed-panel__section');
       sections.forEach(section => {
-        if (target === 'all' || section.dataset.section === target) {
+        if (section.dataset.section === target) {
           section.classList.remove('tabbed-panel__section--hidden');
         } else {
           section.classList.add('tabbed-panel__section--hidden');

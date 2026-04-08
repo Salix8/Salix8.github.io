@@ -151,21 +151,40 @@
             <!-- RIGHT BOTTOM: Tabbed Panel (D&D Beyond style) -->
             <section class="tabbed-panel sheet-panel" style="margin-top: 1.5rem">
               <div class="tabbed-panel__tabs" id="panel-tabs">
-                <button type="button" class="tabbed-panel__tab tabbed-panel__tab--active" data-tab="all">All</button>
+                <button type="button" class="tabbed-panel__tab tabbed-panel__tab--active" data-tab="actions">Actions</button>
                 <button type="button" class="tabbed-panel__tab" data-tab="features">Features</button>
                 <button type="button" class="tabbed-panel__tab" data-tab="notes">Notes</button>
               </div>
 
               <div class="tabbed-panel__body" id="panel-body">
+                <!-- Actions block -->
+                <div class="tabbed-panel__section" data-section="actions">
+                  <div class="sub-filters" id="actions-filters">
+                    <button type="button" class="sub-filter sub-filter--active" data-filter="all">All</button>
+                    <button type="button" class="sub-filter" data-filter="action">Action</button>
+                    <button type="button" class="sub-filter" data-filter="bonus_action">Bonus Action</button>
+                    <button type="button" class="sub-filter" data-filter="reaction">Reaction</button>
+                    <button type="button" class="sub-filter" data-filter="free_action">Free Action</button>
+                  </div>
+                  <div class="modules-list" id="actions-list"></div>
+                  <button type="button" class="btn--add-module" id="add-action-module">+ Add Module</button>
+                </div>
+
                 <!-- Features block -->
-                <div class="tabbed-panel__section" data-section="features">
-                  <h3 class="sheet-panel__title">Features &amp; Traits</h3>
-                  <div class="modules-list" id="modules-list"></div>
-                  <button type="button" class="btn--add-module" id="add-module">+ Add Module</button>
+                <div class="tabbed-panel__section tabbed-panel__section--hidden" data-section="features">
+                  <div class="sub-filters" id="features-filters">
+                    <button type="button" class="sub-filter sub-filter--active" data-filter="all">All</button>
+                    <button type="button" class="sub-filter" data-filter="class_feature">Class Feature</button>
+                    <button type="button" class="sub-filter" data-filter="race_feature">Race Feature</button>
+                    <button type="button" class="sub-filter" data-filter="background_feature">Background Feature</button>
+                    <button type="button" class="sub-filter" data-filter="other">Other</button>
+                  </div>
+                  <div class="modules-list" id="features-list"></div>
+                  <button type="button" class="btn--add-module" id="add-feature-module">+ Add Module</button>
                 </div>
 
                 <!-- Notes block -->
-                <div class="tabbed-panel__section" data-section="notes">
+                <div class="tabbed-panel__section tabbed-panel__section--hidden" data-section="notes">
                   <h3 class="sheet-panel__title">Notes</h3>
                   <textarea id="char-notes" placeholder="Write your notes here..."></textarea>
                 </div>
@@ -187,6 +206,17 @@
     <footer class="site-footer">
       <p>&copy; 2026 Salix8</p>
     </footer>
+  </div>
+
+  <!-- TYPE PICKER MODAL -->
+  <div id="type-picker-modal" class="modal-overlay hidden">
+    <div class="modal-content type-picker">
+      <h3 class="type-picker__title">Select Type</h3>
+      <div class="type-picker__grid" id="type-picker-grid">
+        <!-- Populated by JS -->
+      </div>
+      <button type="button" class="btn btn--outline type-picker__close" id="type-picker-close">Cancel</button>
+    </div>
   </div>
 
   <script src="../js/utils/helpers.js"></script>

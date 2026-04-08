@@ -62,6 +62,23 @@ const ABILITY_ORDER = [
   'intelligence', 'wisdom', 'charisma'
 ];
 
+/** Module Types and Grouping */
+const MODULE_GROUPS = {
+  actions: ['action', 'bonus_action', 'reaction', 'free_action'],
+  features: ['class_feature', 'race_feature', 'background_feature', 'other']
+};
+
+const MODULE_TYPES = {
+  action: { label: 'Action', color: 'hsl(140, 60%, 50%)', shape: 'circle' },
+  bonus_action: { label: 'Bonus Action', color: 'hsl(30, 90%, 55%)', shape: 'triangle' },
+  reaction: { label: 'Reaction', color: 'hsl(320, 80%, 60%)', shape: 'star' },
+  free_action: { label: 'Free Action', color: 'var(--text-primary)', shape: 'none' },
+  class_feature: { label: 'Class Feature', color: 'var(--accent-2)', shape: 'none' },
+  race_feature: { label: 'Race Feature', color: 'var(--accent-2)', shape: 'none' },
+  background_feature: { label: 'Background Feature', color: 'var(--accent-2)', shape: 'none' },
+  other: { label: 'Other', color: 'var(--text-muted)', shape: 'none' }
+};
+
 /**
  * Create a new character with default values
  * @param {Object} overrides - Optional field overrides
