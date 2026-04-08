@@ -154,6 +154,7 @@ input[type="number"] {
 }
 
 @media (max-width: 768px) {
+
   .char-field input,
   .char-field select {
     text-align: center;
@@ -782,7 +783,7 @@ input[type="number"] {
 
 .tabbed-panel__body {
   overflow-y: auto;
-  max-height: 510px;
+  max-height: 1037px;
   padding-top: 1rem;
   scrollbar-width: thin;
   scrollbar-color: hsla(265, 60%, 50%, 0.3) transparent;
@@ -1249,6 +1250,7 @@ input[type="number"] {
   cursor: pointer;
   padding: 0 0.2rem;
 }
+
 .comp-item-delete:hover {
   color: hsl(0, 70%, 60%);
 }
