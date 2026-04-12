@@ -16,7 +16,7 @@ const elements = {
   compList: document.getElementById('comp-list'),
   actionsList: document.getElementById('actions-list'),
   featuresList: document.getElementById('features-list'),
-  
+
   // Combat Stats
   ac: document.getElementById('stat-ac'),
   acOverride: document.getElementById('ac-override'),
@@ -141,9 +141,9 @@ function renderSkills() {
 function renderCompetencies() {
   const categories = [
     { id: 'weapons', label: 'Weapons', presets: ['Simple', 'Martial'] },
-    { id: 'armor', label: 'Armor', presets: ['Light', 'Medium', 'Heavy'] },
+    { id: 'armor', label: 'Armor', presets: ['Light', 'Medium', 'Heavy', 'Shields'] },
     { id: 'tools', label: 'Tools', presets: [] },
-    { id: 'languages', label: 'Languages', presets: [] },
+    { id: 'languages', label: 'Languages', presets: ['Common'] },
     { id: 'extras', label: 'Extras', presets: [] }
   ];
 
@@ -155,7 +155,7 @@ function renderCompetencies() {
 
   elements.compList.innerHTML = categories.map(cat => {
     const list = character.competencies[cat.id] || [];
-    
+
     // Filter out presets that are already added
     const availablePresets = cat.presets.filter(p => !list.includes(p));
 
@@ -195,14 +195,14 @@ function renderModuleLists() {
     if (!listEl) return;
     const isAll = filters.has('all');
     const groupTypes = MODULE_GROUPS[groupKey];
-    
+
     listEl.innerHTML = character.modules.map((mod, index) => {
       if (!groupTypes.includes(mod.type)) return '';
       if (!isAll && !filters.has(mod.type)) return '';
 
       const typeDef = MODULE_TYPES[mod.type];
       const shapeHtml = typeDef.shape !== 'none' ? `<span class="badge-shape badge-shape--${typeDef.shape}"></span>` : '';
-      
+
       return `
         <div class="module-card" data-index="${index}">
           <div class="module-header-row">
@@ -238,7 +238,7 @@ function updateUI() {
     elements.ac.disabled = character.acOverride === null;
   }
   elements.ac.value = calcAC(character);
-  
+
   elements.init.textContent = formatModifier(calcInitiative(character));
   elements.speed.value = character.speed;
   elements.prof.textContent = formatModifier(calcProficiencyBonus(character.level));
@@ -248,7 +248,7 @@ function updateUI() {
   elements.hpCurrent.value = character.hitPoints.current;
   elements.hpTemp.value = character.hitPoints.temporary;
   elements.hitDice.value = character.hitDice;
-  
+
   if (character.hitDiceSpent === undefined) character.hitDiceSpent = 0;
   elements.hdSpent.value = character.hitDiceSpent;
   elements.hdTotal.textContent = character.level;
@@ -290,7 +290,7 @@ function setupEventListeners() {
   elements.race.addEventListener('input', e => character.race = e.target.value);
   elements.charClass.addEventListener('input', e => character.class = e.target.value);
   elements.background.addEventListener('input', e => character.background = e.target.value);
-  
+
   elements.level.addEventListener('change', e => {
     character.level = parseInt(e.target.value) || 1;
     // Level change affects prof bonus, saves, and skills
@@ -303,7 +303,7 @@ function setupEventListeners() {
       const ability = e.target.id.replace('score-', '');
       let val = parseInt(e.target.value);
       if (isNaN(val)) val = 10;
-      
+
       character.attributes[ability] = val;
       updateAllDerivedStats();
     }
@@ -313,15 +313,15 @@ function setupEventListeners() {
   elements.abilitiesRow.addEventListener('click', e => {
     const btn = e.target.closest('.save-toggle');
     if (!btn) return;
-    
+
     const ability = btn.dataset.ability;
     const current = character.savingThrows[ability];
-    
+
     // Toggle: none -> proficient -> none
     const next = current === 'none' ? 'proficient' : 'none';
     character.savingThrows[ability] = next;
     btn.dataset.level = next;
-    
+
     document.getElementById(`save-${ability}`).textContent = formatModifier(calcSaveModifier(character, ability));
   });
 
@@ -332,7 +332,7 @@ function setupEventListeners() {
 
     const skill = btn.dataset.skill;
     const current = character.skills[skill];
-    
+
     // Cycle: none -> proficient -> expertise -> none
     let next = 'none';
     if (current === 'none') next = 'proficient';
@@ -340,7 +340,7 @@ function setupEventListeners() {
 
     character.skills[skill] = next;
     btn.dataset.level = next;
-    
+
     document.getElementById(`skill-mod-${skill}`).textContent = formatModifier(calcSkillModifier(character, skill));
   });
 
@@ -356,7 +356,7 @@ function setupEventListeners() {
           renderCompetencies();
         }
       }
-      
+
       // Delete item
       if (e.target.classList.contains('comp-item-delete')) {
         const cat = e.target.dataset.category;
@@ -405,7 +405,7 @@ function setupEventListeners() {
     elements.acOverride.addEventListener('change', e => {
       const isOverride = e.target.checked;
       elements.ac.disabled = !isOverride;
-      
+
       if (isOverride) {
         character.acOverride = parseInt(elements.ac.value) || 10;
         character.armorClass = character.acOverride;
@@ -453,7 +453,7 @@ function setupEventListeners() {
     if (character.hitPoints.current < 0) {
       character.hitPoints.current = 0;
     }
-    
+
     // Update the input field visually
     elements.hpCurrent.value = character.hitPoints.current;
   });
@@ -461,13 +461,13 @@ function setupEventListeners() {
   elements.hpTemp.addEventListener('input', e => character.hitPoints.temporary = parseInt(e.target.value) || 0);
 
   elements.hitDice.addEventListener('change', e => character.hitDice = e.target.value);
-  
+
   elements.hdSpent.addEventListener('input', e => {
-     let val = parseInt(e.target.value) || 0;
-     if (val > character.level) val = character.level;
-     if (val < 0) val = 0;
-     character.hitDiceSpent = val;
-     elements.hdSpent.value = val;
+    let val = parseInt(e.target.value) || 0;
+    if (val > character.level) val = character.level;
+    if (val < 0) val = 0;
+    character.hitDiceSpent = val;
+    elements.hdSpent.value = val;
   });
 
   // Death Saves (only if the section exists in the DOM)
@@ -541,7 +541,7 @@ function setupEventListeners() {
     const card = e.target.closest('.module-card');
     if (!card) return;
     const index = parseInt(card.dataset.index);
-    
+
     if (e.target.classList.contains('module-input')) {
       character.modules[index].title = e.target.value;
     } else if (e.target.classList.contains('module-textarea')) {
@@ -554,9 +554,9 @@ function setupEventListeners() {
     container.addEventListener('click', e => {
       const btn = e.target.closest('.sub-filter');
       if (!btn) return;
-      
+
       const filter = btn.dataset.filter;
-      
+
       if (filter === 'all') {
         filterSet.clear();
         filterSet.add('all');
@@ -564,16 +564,16 @@ function setupEventListeners() {
         filterSet.delete('all');
         if (filterSet.has(filter)) filterSet.delete(filter);
         else filterSet.add(filter);
-        
+
         if (filterSet.size === 0) filterSet.add('all');
       }
-      
+
       container.querySelectorAll('.sub-filter').forEach(f => {
         const fType = f.dataset.filter;
         if (filterSet.has(fType)) f.classList.add('sub-filter--active');
         else f.classList.remove('sub-filter--active');
       });
-      
+
       renderModuleLists();
     });
   }
@@ -643,7 +643,7 @@ function handleSave() {
   try {
     saveCharacter(character);
     showToast(`Character "${character.name}" saved successfully!`);
-    
+
     // Update URL parameter so saving again updates instead of duplicates
     const url = new URL(window.location);
     if (!url.searchParams.has('id')) {
@@ -659,24 +659,24 @@ function handleSave() {
 /** Export the character JSON */
 function handleExport() {
   if (!character.name.trim()) return;
-  
+
   const jsonStr = exportCharacter(character.id);
   if (!jsonStr) return;
 
   const blob = new Blob([jsonStr], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
-  
+
   const a = document.createElement('a');
   a.href = url;
   a.download = `${character.name.toLowerCase().replace(/\s+/g, '_')}_dnd.json`;
   a.click();
-  
+
   URL.revokeObjectURL(url);
 }
 
 /** Utility: Escape HTML for modules display */
 function escapeHtml(unsafe) {
-  return (unsafe || '').replace(/[&<"']/g, function(m) {
+  return (unsafe || '').replace(/[&<"']/g, function (m) {
     switch (m) {
       case '&': return '&amp;';
       case '<': return '&lt;';

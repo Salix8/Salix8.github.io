@@ -210,9 +210,8 @@ input[type="number"] {
 }
 
 .sheet-left {
-  flex: 0 0 auto;
-  /* Allow it to size based on its children */
-  min-width: 380px;
+  flex: 0 0 380px;
+  width: 380px;
   display: flex;
   flex-direction: column;
 }
@@ -1370,6 +1369,8 @@ input[type="number"] {
   background: hsla(230, 20%, 16%, 0.3);
   border-radius: 6px;
   border: 1px solid var(--border-glass);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .comp-header {
@@ -1393,6 +1394,7 @@ input[type="number"] {
   gap: 0.5rem;
   align-items: center;
   flex: 1;
+  min-width: 0; /* Prevent flex children from pushing width */
 }
 
 .comp-item {
