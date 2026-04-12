@@ -123,6 +123,8 @@ function createCharacter(overrides = {}) {
     },
 
     modules: [],
+    inventory: [],
+    customTags: [],
     competencies: {
       weapons: [],
       armor: [],
@@ -134,6 +136,16 @@ function createCharacter(overrides = {}) {
     ...overrides
   };
 }
+
+/** Preset inventory tags */
+const INVENTORY_PRESET_TAGS = [
+  { id: 'equipable',    label: 'Equipable',    color: 'hsl(200, 80%, 55%)' },
+  { id: 'weapon',       label: 'Weapon',       color: 'hsl(0, 70%, 55%)' },
+  { id: 'attunement',   label: 'Attunement',   color: 'hsl(280, 70%, 60%)' },
+  { id: 'magic_object', label: 'Magic Object', color: 'hsl(45, 90%, 55%)' }
+];
+
+const CUSTOM_TAG_COLOR = 'hsl(160, 50%, 45%)';
 
 /** Calculate AC (auto or manual override) */
 function calcAC(character) {

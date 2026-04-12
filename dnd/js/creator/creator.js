@@ -40,6 +40,26 @@ const elements = {
   panelTabs: document.getElementById('panel-tabs'),
   panelBody: document.getElementById('panel-body'),
 
+  // Inventory
+  inventoryGrid: document.getElementById('inventory-grid'),
+  addInvItemBtn: document.getElementById('add-inv-item'),
+  invTagFilterBtn: document.getElementById('inv-tag-filter-btn'),
+  invActiveFilters: document.getElementById('inv-active-filters'),
+
+  // Inventory Description Modal
+  invDescModal: document.getElementById('inv-desc-modal'),
+  invDescTagList: document.getElementById('inv-desc-tag-list'),
+  invCustomTagInput: document.getElementById('inv-custom-tag-input'),
+  invCustomTagAdd: document.getElementById('inv-custom-tag-add'),
+  invDescTextarea: document.getElementById('inv-desc-textarea'),
+  invDescSave: document.getElementById('inv-desc-save'),
+
+  // Tag Filter Modal
+  tagFilterModal: document.getElementById('tag-filter-modal'),
+  tagFilterList: document.getElementById('tag-filter-list'),
+  tagFilterClear: document.getElementById('tag-filter-clear'),
+  tagFilterApply: document.getElementById('tag-filter-apply'),
+
   // Buttons
   addActionBtn: document.getElementById('add-action-module'),
   addFeatureBtn: document.getElementById('add-feature-module'),
@@ -55,6 +75,9 @@ const elements = {
 // Filter States
 let activeActionFilters = new Set(['all']);
 let activeFeatureFilters = new Set(['all']);
+let activeInventoryTagFilters = new Set();
+let currentDescItemIndex = null; // index of item currently being edited in desc modal
+let tempTagFilterSelection = new Set(); // temporary selection in tag filter modal
 
 /** Initialize the creator */
 function init() {
@@ -78,10 +101,15 @@ function init() {
     });
   }
 
+  // Ensure inventory and customTags exist for older saved characters
+  if (!character.inventory) character.inventory = [];
+  if (!character.customTags) character.customTags = [];
+
   renderAbilities();
   renderSkills();
   renderCompetencies();
   renderModuleLists();
+  renderInventory();
   updateUI();
   setupEventListeners();
 }
@@ -221,6 +249,154 @@ function renderModuleLists() {
 
   renderList(elements.actionsList, 'actions', activeActionFilters);
   renderList(elements.featuresList, 'features', activeFeatureFilters);
+}
+
+/** Get tag color by id */
+function getTagColor(tagId) {
+  const preset = INVENTORY_PRESET_TAGS.find(t => t.id === tagId);
+  return preset ? preset.color : CUSTOM_TAG_COLOR;
+}
+
+/** Get tag label by id */
+function getTagLabel(tagId) {
+  const preset = INVENTORY_PRESET_TAGS.find(t => t.id === tagId);
+  return preset ? preset.label : tagId;
+}
+
+/** Get all available tags (preset + custom) */
+function getAllTags() {
+  const presets = INVENTORY_PRESET_TAGS.map(t => ({ ...t }));
+  const customs = (character.customTags || []).map(id => ({
+    id,
+    label: id,
+    color: CUSTOM_TAG_COLOR
+  }));
+  return [...presets, ...customs];
+}
+
+/** Render the inventory grid */
+function renderInventory() {
+  if (!elements.inventoryGrid) return;
+
+  const filters = activeInventoryTagFilters;
+  const hasFilters = filters.size > 0;
+
+  const filteredItems = character.inventory.filter((item, idx) => {
+    if (!hasFilters) return true;
+    return item.tags && item.tags.some(t => filters.has(t));
+  });
+
+  elements.inventoryGrid.innerHTML = filteredItems.length === 0 && hasFilters
+    ? `<div style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 2rem; font-size: 0.9rem;">No items match the selected tags.</div>`
+    : character.inventory.map((item, index) => {
+      // Skip if filtered out
+      if (hasFilters && !(item.tags && item.tags.some(t => filters.has(t)))) return '';
+
+      const tagsHtml = (item.tags || []).map(tagId => {
+        const color = getTagColor(tagId);
+        const label = getTagLabel(tagId);
+        return `<span class="inv-tag" style="background:${color}">#${escapeHtml(label)}</span>`;
+      }).join('');
+
+      const hasDesc = item.description && item.description.trim().length > 0;
+      const descBtnClass = hasDesc ? 'inv-card__desc-btn inv-card__desc-btn--has-content' : 'inv-card__desc-btn';
+
+      return `
+        <div class="inv-card" data-inv-index="${index}">
+          <button type="button" class="inv-card__delete" data-inv-delete="${index}" aria-label="Delete item">✕</button>
+          <div class="inv-card__tags">${tagsHtml}</div>
+          <div class="inv-card__fields">
+            <input type="text" class="inv-card__title dnd-input" placeholder="Item name" value="${escapeHtml(item.title)}" data-inv-field="title">
+            <button type="button" class="${descBtnClass}" data-inv-desc="${index}" title="Edit description">📝</button>
+            <div class="inv-card__field-group">
+              <span class="inv-card__qty-label">Qty</span>
+              <input type="number" class="inv-card__qty dnd-input" value="${item.quantity}" min="0" data-inv-field="quantity">
+            </div>
+            <div class="inv-card__field-group">
+              <span class="inv-card__weight-label">Lbs</span>
+              <input type="number" class="inv-card__weight dnd-input" value="${item.weight}" min="0" step="0.1" data-inv-field="weight">
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+  // Update active filters display
+  renderActiveTagFilters();
+}
+
+/** Render active tag filter pills in the toolbar */
+function renderActiveTagFilters() {
+  if (!elements.invActiveFilters) return;
+
+  if (activeInventoryTagFilters.size === 0) {
+    elements.invActiveFilters.innerHTML = '';
+    if (elements.invTagFilterBtn) elements.invTagFilterBtn.classList.remove('btn--tag-filter--active');
+    return;
+  }
+
+  if (elements.invTagFilterBtn) elements.invTagFilterBtn.classList.add('btn--tag-filter--active');
+
+  elements.invActiveFilters.innerHTML = Array.from(activeInventoryTagFilters).map(tagId => {
+    const color = getTagColor(tagId);
+    const label = getTagLabel(tagId);
+    return `<span class="inv-active-tag" style="background:${color}">
+      #${escapeHtml(label)}
+      <button type="button" class="inv-active-tag__remove" data-remove-filter="${escapeHtml(tagId)}">✕</button>
+    </span>`;
+  }).join('');
+}
+
+/** Open description modal for an inventory item */
+function openDescModal(itemIndex) {
+  currentDescItemIndex = itemIndex;
+  const item = character.inventory[itemIndex];
+  if (!item) return;
+
+  // Fill textarea
+  elements.invDescTextarea.value = item.description || '';
+
+  // Render tag buttons
+  renderDescTagList(item);
+
+  elements.invDescModal.classList.remove('hidden');
+}
+
+/** Render tag buttons inside the description modal */
+function renderDescTagList(item) {
+  const allTags = getAllTags();
+  const itemTags = new Set(item.tags || []);
+
+  elements.invDescTagList.innerHTML = allTags.map(tag => {
+    const isActive = itemTags.has(tag.id);
+    const activeClass = isActive ? 'inv-desc-tag-btn--active' : '';
+    const bgStyle = isActive ? `background:${tag.color};` : '';
+    return `<button type="button" class="inv-desc-tag-btn ${activeClass}" style="${bgStyle}" data-tag-id="${escapeHtml(tag.id)}">
+      #${escapeHtml(tag.label)}
+    </button>`;
+  }).join('');
+}
+
+/** Open tag filter modal */
+function openTagFilterModal() {
+  tempTagFilterSelection = new Set(activeInventoryTagFilters);
+  renderTagFilterList();
+  elements.tagFilterModal.classList.remove('hidden');
+}
+
+/** Render tag buttons inside the filter modal */
+function renderTagFilterList() {
+  const allTags = getAllTags();
+
+  elements.tagFilterList.innerHTML = allTags.map(tag => {
+    const isActive = tempTagFilterSelection.has(tag.id);
+    const activeClass = isActive ? 'tag-filter-btn--active' : '';
+    const bgStyle = isActive ? `background:${tag.color}; border-color:${tag.color};` : '';
+    return `<button type="button" class="tag-filter-btn ${activeClass}" style="${bgStyle}" data-filter-tag="${escapeHtml(tag.id)}">
+      <span class="tag-filter-btn__check">✓</span>
+      #${escapeHtml(tag.label)}
+    </button>`;
+  }).join('');
 }
 
 /** Update the DOM to match the data model */
@@ -607,6 +783,221 @@ function setupEventListeners() {
           section.classList.add('tabbed-panel__section--hidden');
         }
       });
+    });
+  }
+
+  // ===== INVENTORY EVENT LISTENERS =====
+
+  // Add inventory item
+  if (elements.addInvItemBtn) {
+    elements.addInvItemBtn.addEventListener('click', () => {
+      character.inventory.push({
+        id: generateId(),
+        title: '',
+        description: '',
+        quantity: 1,
+        weight: 0,
+        tags: []
+      });
+      renderInventory();
+    });
+  }
+
+  // Inventory grid events (delete, description btn, inline editing)
+  if (elements.inventoryGrid) {
+    elements.inventoryGrid.addEventListener('click', e => {
+      // Delete item
+      const delBtn = e.target.closest('[data-inv-delete]');
+      if (delBtn) {
+        const idx = parseInt(delBtn.dataset.invDelete);
+        character.inventory.splice(idx, 1);
+        renderInventory();
+        return;
+      }
+
+      // Open description modal
+      const descBtn = e.target.closest('[data-inv-desc]');
+      if (descBtn) {
+        const idx = parseInt(descBtn.dataset.invDesc);
+        openDescModal(idx);
+        return;
+      }
+    });
+
+    elements.inventoryGrid.addEventListener('input', e => {
+      const card = e.target.closest('.inv-card');
+      if (!card) return;
+      const idx = parseInt(card.dataset.invIndex);
+      const field = e.target.dataset.invField;
+      if (!field) return;
+
+      if (field === 'title') {
+        character.inventory[idx].title = e.target.value;
+      } else if (field === 'quantity') {
+        character.inventory[idx].quantity = parseInt(e.target.value) || 0;
+      } else if (field === 'weight') {
+        character.inventory[idx].weight = parseFloat(e.target.value) || 0;
+      }
+    });
+  }
+
+  // Description modal — toggle tags
+  if (elements.invDescTagList) {
+    elements.invDescTagList.addEventListener('click', e => {
+      const btn = e.target.closest('.inv-desc-tag-btn');
+      if (!btn) return;
+      const tagId = btn.dataset.tagId;
+      if (currentDescItemIndex === null) return;
+
+      const item = character.inventory[currentDescItemIndex];
+      if (!item.tags) item.tags = [];
+
+      const idx = item.tags.indexOf(tagId);
+      if (idx >= 0) {
+        item.tags.splice(idx, 1);
+      } else {
+        item.tags.push(tagId);
+      }
+
+      renderDescTagList(item);
+    });
+  }
+
+  // Description modal — add custom tag
+  if (elements.invCustomTagAdd) {
+    const addCustomTag = () => {
+      const input = elements.invCustomTagInput;
+      let val = input.value.trim();
+      if (!val) return;
+
+      // Normalize: remove leading # if present
+      if (val.startsWith('#')) val = val.slice(1);
+      val = val.trim();
+      if (!val) return;
+
+      // Check if already exists (preset or custom)
+      const existing = INVENTORY_PRESET_TAGS.find(t => t.id === val || t.label.toLowerCase() === val.toLowerCase());
+      if (existing) {
+        // Just toggle it on the item
+        const item = character.inventory[currentDescItemIndex];
+        if (!item.tags.includes(existing.id)) {
+          item.tags.push(existing.id);
+        }
+        renderDescTagList(item);
+        input.value = '';
+        return;
+      }
+
+      // Add as custom tag if not already added
+      if (!character.customTags.includes(val)) {
+        character.customTags.push(val);
+      }
+
+      // Add to current item
+      const item = character.inventory[currentDescItemIndex];
+      if (!item.tags) item.tags = [];
+      if (!item.tags.includes(val)) {
+        item.tags.push(val);
+      }
+
+      renderDescTagList(item);
+      input.value = '';
+    };
+
+    elements.invCustomTagAdd.addEventListener('click', addCustomTag);
+    elements.invCustomTagInput.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        addCustomTag();
+      }
+    });
+  }
+
+  // Description modal — save & close
+  if (elements.invDescSave) {
+    elements.invDescSave.addEventListener('click', () => {
+      if (currentDescItemIndex !== null) {
+        character.inventory[currentDescItemIndex].description = elements.invDescTextarea.value;
+      }
+      elements.invDescModal.classList.add('hidden');
+      currentDescItemIndex = null;
+      renderInventory();
+    });
+  }
+
+  // Close desc modal when clicking overlay
+  if (elements.invDescModal) {
+    elements.invDescModal.addEventListener('click', e => {
+      if (e.target === elements.invDescModal) {
+        // Save before closing
+        if (currentDescItemIndex !== null) {
+          character.inventory[currentDescItemIndex].description = elements.invDescTextarea.value;
+        }
+        elements.invDescModal.classList.add('hidden');
+        currentDescItemIndex = null;
+        renderInventory();
+      }
+    });
+  }
+
+  // Tag filter button — open filter modal
+  if (elements.invTagFilterBtn) {
+    elements.invTagFilterBtn.addEventListener('click', () => {
+      openTagFilterModal();
+    });
+  }
+
+  // Tag filter modal — toggle tags
+  if (elements.tagFilterList) {
+    elements.tagFilterList.addEventListener('click', e => {
+      const btn = e.target.closest('.tag-filter-btn');
+      if (!btn) return;
+      const tagId = btn.dataset.filterTag;
+
+      if (tempTagFilterSelection.has(tagId)) {
+        tempTagFilterSelection.delete(tagId);
+      } else {
+        tempTagFilterSelection.add(tagId);
+      }
+
+      renderTagFilterList();
+    });
+  }
+
+  // Tag filter modal — clear all
+  if (elements.tagFilterClear) {
+    elements.tagFilterClear.addEventListener('click', () => {
+      tempTagFilterSelection.clear();
+      renderTagFilterList();
+    });
+  }
+
+  // Tag filter modal — apply
+  if (elements.tagFilterApply) {
+    elements.tagFilterApply.addEventListener('click', () => {
+      activeInventoryTagFilters = new Set(tempTagFilterSelection);
+      elements.tagFilterModal.classList.add('hidden');
+      renderInventory();
+    });
+  }
+
+  // Close tag filter modal when clicking overlay
+  if (elements.tagFilterModal) {
+    elements.tagFilterModal.addEventListener('click', e => {
+      if (e.target === elements.tagFilterModal) {
+        elements.tagFilterModal.classList.add('hidden');
+      }
+    });
+  }
+
+  // Remove individual active filter tags from toolbar
+  if (elements.invActiveFilters) {
+    elements.invActiveFilters.addEventListener('click', e => {
+      const removeBtn = e.target.closest('[data-remove-filter]');
+      if (!removeBtn) return;
+      const tagId = removeBtn.dataset.removeFilter;
+      activeInventoryTagFilters.delete(tagId);
+      renderInventory();
     });
   }
 

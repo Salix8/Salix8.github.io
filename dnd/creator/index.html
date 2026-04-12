@@ -153,6 +153,7 @@
               <div class="tabbed-panel__tabs" id="panel-tabs">
                 <button type="button" class="tabbed-panel__tab tabbed-panel__tab--active" data-tab="actions">Actions</button>
                 <button type="button" class="tabbed-panel__tab" data-tab="features">Features</button>
+                <button type="button" class="tabbed-panel__tab" data-tab="inventory">Inventory</button>
                 <button type="button" class="tabbed-panel__tab" data-tab="notes">Notes</button>
               </div>
 
@@ -181,6 +182,18 @@
                   </div>
                   <div class="modules-list" id="features-list"></div>
                   <button type="button" class="btn--add-module" id="add-feature-module">+ Add Module</button>
+                </div>
+
+                <!-- Inventory block -->
+                <div class="tabbed-panel__section tabbed-panel__section--hidden" data-section="inventory">
+                  <div class="inventory-toolbar">
+                    <button type="button" class="btn--tag-filter" id="inv-tag-filter-btn">
+                      🏷️ Tags
+                    </button>
+                    <div class="inventory-active-filters" id="inv-active-filters"></div>
+                  </div>
+                  <div class="inventory-grid" id="inventory-grid"></div>
+                  <button type="button" class="btn--add-module" id="add-inv-item">+ Add Item</button>
                 </div>
 
                 <!-- Notes block -->
@@ -216,6 +229,39 @@
         <!-- Populated by JS -->
       </div>
       <button type="button" class="btn btn--outline type-picker__close" id="type-picker-close">Cancel</button>
+    </div>
+  </div>
+
+  <!-- INVENTORY DESCRIPTION MODAL -->
+  <div id="inv-desc-modal" class="modal-overlay hidden">
+    <div class="modal-content inv-desc-modal">
+      <h3 class="inv-desc-modal__title">Item Description</h3>
+      <div class="inv-desc-modal__tags">
+        <span class="inv-desc-modal__tags-label">Tags</span>
+        <div class="inv-desc-modal__tag-list" id="inv-desc-tag-list">
+          <!-- Populated by JS -->
+        </div>
+        <div class="inv-desc-modal__custom-tag">
+          <input type="text" class="dnd-input" id="inv-custom-tag-input" placeholder="New custom tag...">
+          <button type="button" class="btn btn--outline" id="inv-custom-tag-add" style="padding:0.3rem 0.6rem;min-width:auto;font-size:0.8rem;">+ Add</button>
+        </div>
+      </div>
+      <textarea id="inv-desc-textarea" class="dnd-input" placeholder="Write item description here..."></textarea>
+      <button type="button" class="btn btn--primary inv-desc-modal__save" id="inv-desc-save">Save & Close</button>
+    </div>
+  </div>
+
+  <!-- TAG FILTER MODAL -->
+  <div id="tag-filter-modal" class="modal-overlay hidden">
+    <div class="modal-content tag-filter-modal">
+      <h3 class="tag-filter-modal__title">Filter by Tags</h3>
+      <div class="tag-filter-modal__list" id="tag-filter-list">
+        <!-- Populated by JS -->
+      </div>
+      <div class="tag-filter-modal__actions">
+        <button type="button" class="btn btn--outline" id="tag-filter-clear">Clear All</button>
+        <button type="button" class="btn btn--primary" id="tag-filter-apply">Apply</button>
+      </div>
     </div>
   </div>
 

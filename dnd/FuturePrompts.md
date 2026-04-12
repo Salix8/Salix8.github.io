@@ -23,12 +23,9 @@ clip-path: polygon(
 //Falta una pestaña de All que cuando cliques Add Module te aparezca un pop up para elegir cual de los 8 tipos de modulos quiere añadir.
 //Cuando añades una "Class Feature" puede que esta implemente una accion, una reaccion o una accion bonus. Esta se debera añadir tambien en la otra pestaña de Acciones. Pero en la pestaña de All no debera aparecer duplicada.
 
-
-# Spell Prompt
-//Falta una pestaña de Spells
-
-# Equipment Prompt
-//Falta una pestaña de Equipment
+# Actions Prompt
+//Falta añadir el Bono de ataque y daño de ciertas cosas
+En todas las Actiones debe haber un bool que pregunte si esa Action hace daño de alguna forma. Si es asi, debe aparecer un campo con el modificador de ataque y el daño.
 
 # Conditions Prompt
 //Falta una pestaña de Conditions and defenses
