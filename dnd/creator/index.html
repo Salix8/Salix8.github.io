@@ -154,6 +154,7 @@
                 <button type="button" class="tabbed-panel__tab tabbed-panel__tab--active" data-tab="actions">Actions</button>
                 <button type="button" class="tabbed-panel__tab" data-tab="features">Features</button>
                 <button type="button" class="tabbed-panel__tab" data-tab="inventory">Inventory</button>
+                <button type="button" class="tabbed-panel__tab" data-tab="spells">Spells</button>
                 <button type="button" class="tabbed-panel__tab" data-tab="notes">Notes</button>
               </div>
 
@@ -194,6 +195,43 @@
                   </div>
                   <div class="inventory-grid" id="inventory-grid"></div>
                   <button type="button" class="btn--add-module" id="add-inv-item">+ Add Item</button>
+                </div>
+
+                <!-- Spells block -->
+                <div class="tabbed-panel__section tabbed-panel__section--hidden" data-section="spells">
+                  <!-- Spellcasting Header -->
+                  <div class="spell-header">
+                    <div class="spell-focus-group">
+                      <span class="spell-focus-label">Spellcasting Focus</span>
+                      <div class="spell-focus-selector" id="spell-focus-selector">
+                        <button type="button" class="spell-focus-btn" data-focus="intelligence">INT</button>
+                        <button type="button" class="spell-focus-btn" data-focus="wisdom">WIS</button>
+                        <button type="button" class="spell-focus-btn" data-focus="charisma">CHA</button>
+                      </div>
+                    </div>
+                    <div class="spell-stats">
+                      <div class="spell-stat-badge">
+                        <span class="spell-stat-badge__label">Spell DC</span>
+                        <span class="spell-stat-badge__value" id="spell-dc">—</span>
+                      </div>
+                      <div class="spell-stat-badge">
+                        <span class="spell-stat-badge__label">Spell Atk</span>
+                        <span class="spell-stat-badge__value" id="spell-atk">—</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tag filter toolbar -->
+                  <div class="spell-toolbar">
+                    <button type="button" class="btn--tag-filter" id="spell-tag-filter-btn">🏷️ Tags</button>
+                    <div class="inventory-active-filters" id="spell-active-filters"></div>
+                  </div>
+
+                  <!-- Spell groups container -->
+                  <div class="spell-groups" id="spell-groups"></div>
+
+                  <!-- Add spell group -->
+                  <button type="button" class="btn--add-module" id="add-spell-group">+ Add Group</button>
                 </div>
 
                 <!-- Notes block -->
@@ -264,6 +302,88 @@
       </div>
     </div>
   </div>
+
+  <!-- SPELL GROUP TYPE PICKER MODAL -->
+  <div id="spell-type-modal" class="modal-overlay hidden">
+    <div class="modal-content type-picker">
+      <h3 class="type-picker__title">Add Spell Group</h3>
+      <div class="type-picker__grid" id="spell-type-grid">
+        <button type="button" class="btn--type" data-spell-type="cantrip">✨ Cantrips</button>
+        <button type="button" class="btn--type" data-spell-type="level">📖 X Level</button>
+        <button type="button" class="btn--type" data-spell-type="custom">⚙️ Custom</button>
+      </div>
+      <button type="button" class="btn btn--outline type-picker__close" id="spell-type-close">Cancel</button>
+    </div>
+  </div>
+
+  <!-- SPELL LEVEL PICKER MODAL -->
+  <div id="spell-level-modal" class="modal-overlay hidden">
+    <div class="modal-content spell-level-picker">
+      <h3 class="type-picker__title">Select Spell Level</h3>
+      <div class="spell-level-input-row">
+        <label for="spell-level-input" class="spell-level-input-label">Spell Level</label>
+        <input type="number" id="spell-level-input" class="dnd-input" value="1" min="1" style="width: 80px; text-align: center; font-size: 1.2rem; font-weight: 700;">
+      </div>
+      <div class="spell-level-picker__actions">
+        <button type="button" class="btn btn--outline" id="spell-level-cancel">Cancel</button>
+        <button type="button" class="btn btn--primary" id="spell-level-confirm">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CUSTOM SPELL SLOT MODAL -->
+  <div id="spell-custom-modal" class="modal-overlay hidden">
+    <div class="modal-content spell-custom-picker">
+      <h3 class="type-picker__title">Custom Spell Group</h3>
+      <div class="spell-custom-fields">
+        <div class="spell-custom-field">
+          <label for="spell-custom-uses">Uses</label>
+          <input type="number" id="spell-custom-uses" class="dnd-input" value="1" min="1" style="width: 70px; text-align: center;">
+        </div>
+        <span class="spell-custom-sep">/</span>
+        <div class="spell-custom-field">
+          <label for="spell-custom-recharge">Recharge</label>
+          <input type="text" id="spell-custom-recharge" class="dnd-input" placeholder="e.g. Rest" style="width: 120px;">
+        </div>
+      </div>
+      <div class="spell-level-picker__actions">
+        <button type="button" class="btn btn--outline" id="spell-custom-cancel">Cancel</button>
+        <button type="button" class="btn btn--primary" id="spell-custom-confirm">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPELL DESCRIPTION MODAL -->
+  <div id="spell-desc-modal" class="modal-overlay hidden">
+    <div class="modal-content inv-desc-modal">
+      <h3 class="inv-desc-modal__title">Spell Details</h3>
+      <div class="inv-desc-modal__tags">
+        <span class="inv-desc-modal__tags-label">Tags</span>
+        <div class="inv-desc-modal__tag-list" id="spell-desc-tag-list"></div>
+        <div class="inv-desc-modal__custom-tag">
+          <input type="text" class="dnd-input" id="spell-custom-tag-input" placeholder="New custom tag...">
+          <button type="button" class="btn btn--outline" id="spell-custom-tag-add" style="padding:0.3rem 0.6rem;min-width:auto;font-size:0.8rem;">+ Add</button>
+        </div>
+      </div>
+      <textarea id="spell-desc-textarea" class="dnd-input" placeholder="Write spell description here..."></textarea>
+      <button type="button" class="btn btn--primary inv-desc-modal__save" id="spell-desc-save">Save & Close</button>
+    </div>
+  </div>
+
+  <!-- SPELL TAG FILTER MODAL -->
+  <div id="spell-tag-filter-modal" class="modal-overlay hidden">
+    <div class="modal-content tag-filter-modal">
+      <h3 class="tag-filter-modal__title">Filter Spells by Tags</h3>
+      <div class="tag-filter-modal__list" id="spell-tag-filter-list"></div>
+      <div class="tag-filter-modal__actions">
+        <button type="button" class="btn btn--outline" id="spell-tag-filter-clear">Clear All</button>
+        <button type="button" class="btn btn--primary" id="spell-tag-filter-apply">Apply</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPELL TOOLTIP -->
+  <div class="spell-tooltip" id="spell-tooltip"></div>
 
   <script src="../js/utils/helpers.js"></script>
   <script src="../js/models/character.js"></script>

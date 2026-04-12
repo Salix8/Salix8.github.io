@@ -125,6 +125,11 @@ function createCharacter(overrides = {}) {
     modules: [],
     inventory: [],
     customTags: [],
+    spellcasting: {
+      focus: null,       // null | 'intelligence' | 'wisdom' | 'charisma'
+      groups: [],        // { id, type, level?, label?, uses?, recharge?, spells: [] }
+      customTags: []     // custom spell tags
+    },
     competencies: {
       weapons: [],
       armor: [],
@@ -175,3 +180,55 @@ function calcSkillModifier(character, skill) {
   if (level === 'proficient') return mod + prof;
   return mod;
 }
+
+/** Spell level colors — chromatic gradient */
+const SPELL_LEVEL_COLORS = {
+  0: 'hsl(200, 50%, 55%)',  // Cantrips - soft blue
+  1: 'hsl(220, 70%, 60%)',
+  2: 'hsl(260, 65%, 60%)',
+  3: 'hsl(290, 60%, 55%)',
+  4: 'hsl(320, 65%, 55%)',
+  5: 'hsl(350, 65%, 55%)',
+  6: 'hsl(20, 75%, 55%)',
+  7: 'hsl(40, 80%, 50%)',
+  8: 'hsl(55, 85%, 48%)',
+  9: 'hsl(45, 90%, 45%)'
+};
+
+/** Get spell level color — falls back to gold for levels > 9 */
+function getSpellLevelColor(level) {
+  return SPELL_LEVEL_COLORS[level] || 'hsl(45, 90%, 45%)';
+}
+
+/** Preset spell tags */
+const SPELL_PRESET_TAGS = [
+  { id: 'concentration', label: 'Concentration', color: 'hsl(30, 80%, 50%)' },
+  { id: 'ritual',        label: 'Ritual',        color: 'hsl(180, 60%, 45%)' },
+  { id: 'damage',        label: 'Damage',        color: 'hsl(0, 65%, 55%)' },
+  { id: 'healing',       label: 'Healing',       color: 'hsl(140, 60%, 45%)' },
+  { id: 'utility',       label: 'Utility',       color: 'hsl(260, 50%, 55%)' },
+  { id: 'buff',          label: 'Buff',          color: 'hsl(80, 60%, 45%)' },
+  { id: 'debuff',        label: 'Debuff',        color: 'hsl(320, 60%, 50%)' },
+  { id: 'control',       label: 'Control',       color: 'hsl(200, 70%, 50%)' }
+];
+
+const CUSTOM_SPELL_TAG_COLOR = 'hsl(160, 50%, 45%)';
+
+/** Calculate Spell Save DC = 8 + ability modifier + proficiency bonus */
+function calcSpellDC(character) {
+  const focus = character.spellcasting && character.spellcasting.focus;
+  if (!focus) return null;
+  const mod = calcModifier(character.attributes[focus]);
+  const prof = calcProficiencyBonus(character.level);
+  return 8 + mod + prof;
+}
+
+/** Calculate Spell Attack modifier = ability modifier + proficiency bonus */
+function calcSpellAttack(character) {
+  const focus = character.spellcasting && character.spellcasting.focus;
+  if (!focus) return null;
+  const mod = calcModifier(character.attributes[focus]);
+  const prof = calcProficiencyBonus(character.level);
+  return mod + prof;
+}
+

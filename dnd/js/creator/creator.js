@@ -60,6 +60,40 @@ const elements = {
   tagFilterClear: document.getElementById('tag-filter-clear'),
   tagFilterApply: document.getElementById('tag-filter-apply'),
 
+  // Spells
+  spellFocusSelector: document.getElementById('spell-focus-selector'),
+  spellDC: document.getElementById('spell-dc'),
+  spellAtk: document.getElementById('spell-atk'),
+  spellGroups: document.getElementById('spell-groups'),
+  addSpellGroupBtn: document.getElementById('add-spell-group'),
+  spellTagFilterBtn: document.getElementById('spell-tag-filter-btn'),
+  spellActiveFilters: document.getElementById('spell-active-filters'),
+
+  // Spell Modals
+  spellTypeModal: document.getElementById('spell-type-modal'),
+  spellTypeGrid: document.getElementById('spell-type-grid'),
+  spellTypeClose: document.getElementById('spell-type-close'),
+  spellLevelModal: document.getElementById('spell-level-modal'),
+  spellLevelInput: document.getElementById('spell-level-input'),
+  spellLevelCancel: document.getElementById('spell-level-cancel'),
+  spellLevelConfirm: document.getElementById('spell-level-confirm'),
+  spellCustomModal: document.getElementById('spell-custom-modal'),
+  spellCustomUses: document.getElementById('spell-custom-uses'),
+  spellCustomRecharge: document.getElementById('spell-custom-recharge'),
+  spellCustomCancel: document.getElementById('spell-custom-cancel'),
+  spellCustomConfirm: document.getElementById('spell-custom-confirm'),
+  spellDescModal: document.getElementById('spell-desc-modal'),
+  spellDescTagList: document.getElementById('spell-desc-tag-list'),
+  spellCustomTagInput: document.getElementById('spell-custom-tag-input'),
+  spellCustomTagAdd: document.getElementById('spell-custom-tag-add'),
+  spellDescTextarea: document.getElementById('spell-desc-textarea'),
+  spellDescSave: document.getElementById('spell-desc-save'),
+  spellTagFilterModal: document.getElementById('spell-tag-filter-modal'),
+  spellTagFilterList: document.getElementById('spell-tag-filter-list'),
+  spellTagFilterClear: document.getElementById('spell-tag-filter-clear'),
+  spellTagFilterApply: document.getElementById('spell-tag-filter-apply'),
+  spellTooltip: document.getElementById('spell-tooltip'),
+
   // Buttons
   addActionBtn: document.getElementById('add-action-module'),
   addFeatureBtn: document.getElementById('add-feature-module'),
@@ -78,6 +112,12 @@ let activeFeatureFilters = new Set(['all']);
 let activeInventoryTagFilters = new Set();
 let currentDescItemIndex = null; // index of item currently being edited in desc modal
 let tempTagFilterSelection = new Set(); // temporary selection in tag filter modal
+
+// Spell States
+let activeSpellTagFilters = new Set();
+let currentDescSpellGroupId = null;
+let currentDescSpellId = null;
+let tempSpellTagFilterSelection = new Set();
 
 /** Initialize the creator */
 function init() {
@@ -105,11 +145,21 @@ function init() {
   if (!character.inventory) character.inventory = [];
   if (!character.customTags) character.customTags = [];
 
+  // Ensure spellcasting exists for older saved characters
+  if (!character.spellcasting) {
+    character.spellcasting = { focus: null, groups: [], customTags: [] };
+  }
+  if (!character.spellcasting.groups) character.spellcasting.groups = [];
+  if (!character.spellcasting.customTags) character.spellcasting.customTags = [];
+
   renderAbilities();
   renderSkills();
   renderCompetencies();
   renderModuleLists();
   renderInventory();
+  renderSpells();
+  updateSpellStats();
+  updateSpellFocusUI();
   updateUI();
   setupEventListeners();
 }
@@ -397,6 +447,262 @@ function renderTagFilterList() {
       #${escapeHtml(tag.label)}
     </button>`;
   }).join('');
+}
+
+// ===== SPELLS RENDERING =====
+
+/** Get spell tag color by id */
+function getSpellTagColor(tagId) {
+  const preset = SPELL_PRESET_TAGS.find(t => t.id === tagId);
+  return preset ? preset.color : CUSTOM_SPELL_TAG_COLOR;
+}
+
+/** Get spell tag label by id */
+function getSpellTagLabel(tagId) {
+  const preset = SPELL_PRESET_TAGS.find(t => t.id === tagId);
+  return preset ? preset.label : tagId;
+}
+
+/** Get all available spell tags (preset + custom) */
+function getAllSpellTags() {
+  const presets = SPELL_PRESET_TAGS.map(t => ({ ...t }));
+  const customs = (character.spellcasting.customTags || []).map(id => ({
+    id,
+    label: id,
+    color: CUSTOM_SPELL_TAG_COLOR
+  }));
+  return [...presets, ...customs];
+}
+
+/** Render all spell groups */
+function renderSpells() {
+  if (!elements.spellGroups) return;
+
+  const groups = character.spellcasting.groups;
+  const hasTagFilters = activeSpellTagFilters.size > 0;
+
+  if (groups.length === 0) {
+    elements.spellGroups.innerHTML = '';
+    renderActiveSpellTagFilters();
+    return;
+  }
+
+  elements.spellGroups.innerHTML = groups.map(group => {
+    // Build header badge
+    let badgeHtml = '';
+    let groupTitle = '';
+
+    if (group.type === 'cantrip') {
+      const color = getSpellLevelColor(0);
+      badgeHtml = `<span class="spell-group__level-badge" style="background:${color}">Cantrips</span>`;
+    } else if (group.type === 'level') {
+      const color = getSpellLevelColor(group.level);
+      const ordinal = group.level === 1 ? '1st' : group.level === 2 ? '2nd' : group.level === 3 ? '3rd' : `${group.level}th`;
+      badgeHtml = `<span class="spell-group__level-badge" style="background:${color}">${ordinal} Level</span>`;
+    } else if (group.type === 'custom') {
+      badgeHtml = `<span class="spell-group__custom-badge">${group.uses || '?'} / ${escapeHtml(group.recharge || '?')}</span>`;
+      groupTitle = group.label ? `<span class="spell-group__title">${escapeHtml(group.label)}</span>` : '';
+    }
+
+    // Build spell items — filter if tags are active
+    const spellsHtml = (group.spells || []).map(spell => {
+      // Tag filtering
+      if (hasTagFilters) {
+        const spellTags = spell.tags || [];
+        const matchesAny = spellTags.some(t => activeSpellTagFilters.has(t));
+        if (!matchesAny) return '';
+      }
+
+      const tagsHtml = (spell.tags || []).map(tagId => {
+        const color = getSpellTagColor(tagId);
+        return `<span class="spell-item__tag" style="background:${color}">${escapeHtml(getSpellTagLabel(tagId))}</span>`;
+      }).join('');
+
+      const hasDesc = spell.description && spell.description.trim().length > 0;
+      const descBtnClass = hasDesc ? 'spell-item__desc-btn spell-item__desc-btn--has-content' : 'spell-item__desc-btn';
+
+      return `
+        <div class="spell-item" data-group-id="${group.id}" data-spell-id="${spell.id}">
+          <input type="text" class="spell-item__name" placeholder="Spell name" value="${escapeHtml(spell.name)}" data-spell-name>
+          <div class="spell-item__tags">${tagsHtml}</div>
+          <button type="button" class="${descBtnClass}" data-spell-desc="${spell.id}" data-spell-group="${group.id}" title="Edit spell details">📝</button>
+          <button type="button" class="spell-item__delete" data-spell-del="${spell.id}" data-spell-del-group="${group.id}" aria-label="Delete spell">✕</button>
+        </div>
+      `;
+    }).join('');
+
+    return `
+      <div class="spell-group-card" data-group-id="${group.id}">
+        <div class="spell-group__header">
+          <div class="spell-group__header-left">
+            ${badgeHtml}
+            ${groupTitle}
+          </div>
+          <div class="spell-group__header-right">
+            <button type="button" class="spell-group__delete" data-del-group="${group.id}" aria-label="Delete group">✕</button>
+          </div>
+        </div>
+        <div class="spell-items">${spellsHtml}</div>
+        <button type="button" class="spell-group__add" data-add-spell="${group.id}">+ Add Spell</button>
+      </div>
+    `;
+  }).join('');
+
+  renderActiveSpellTagFilters();
+}
+
+/** Update Spell DC & Attack badges */
+function updateSpellStats() {
+  if (!elements.spellDC || !elements.spellAtk) return;
+
+  const dc = calcSpellDC(character);
+  const atk = calcSpellAttack(character);
+
+  elements.spellDC.textContent = dc !== null ? dc : '—';
+  elements.spellAtk.textContent = atk !== null ? formatModifier(atk) : '—';
+}
+
+/** Update focus selector button states */
+function updateSpellFocusUI() {
+  if (!elements.spellFocusSelector) return;
+  const focus = character.spellcasting.focus;
+
+  elements.spellFocusSelector.querySelectorAll('.spell-focus-btn').forEach(btn => {
+    if (btn.dataset.focus === focus) {
+      btn.classList.add('spell-focus-btn--active');
+    } else {
+      btn.classList.remove('spell-focus-btn--active');
+    }
+  });
+}
+
+/** Open spell description modal */
+function openSpellDescModal(groupId, spellId) {
+  currentDescSpellGroupId = groupId;
+  currentDescSpellId = spellId;
+
+  const group = character.spellcasting.groups.find(g => g.id === groupId);
+  if (!group) return;
+  const spell = group.spells.find(s => s.id === spellId);
+  if (!spell) return;
+
+  elements.spellDescTextarea.value = spell.description || '';
+  renderSpellDescTagList(spell);
+  elements.spellDescModal.classList.remove('hidden');
+}
+
+/** Render spell tag buttons inside description modal */
+function renderSpellDescTagList(spell) {
+  const allTags = getAllSpellTags();
+  const spellTags = new Set(spell.tags || []);
+
+  elements.spellDescTagList.innerHTML = allTags.map(tag => {
+    const isActive = spellTags.has(tag.id);
+    const activeClass = isActive ? 'inv-desc-tag-btn--active' : '';
+    const bgStyle = isActive ? `background:${tag.color};` : '';
+    return `<button type="button" class="inv-desc-tag-btn ${activeClass}" style="${bgStyle}" data-spell-tag-toggle="${escapeHtml(tag.id)}">
+      #${escapeHtml(tag.label)}
+    </button>`;
+  }).join('');
+}
+
+/** Open spell tag filter modal */
+function openSpellTagFilterModal() {
+  tempSpellTagFilterSelection = new Set(activeSpellTagFilters);
+  renderSpellTagFilterList();
+  elements.spellTagFilterModal.classList.remove('hidden');
+}
+
+/** Render spell tag filter buttons */
+function renderSpellTagFilterList() {
+  const allTags = getAllSpellTags();
+
+  elements.spellTagFilterList.innerHTML = allTags.map(tag => {
+    const isActive = tempSpellTagFilterSelection.has(tag.id);
+    const activeClass = isActive ? 'tag-filter-btn--active' : '';
+    const bgStyle = isActive ? `background:${tag.color}; border-color:${tag.color};` : '';
+    return `<button type="button" class="tag-filter-btn ${activeClass}" style="${bgStyle}" data-spell-filter-tag="${escapeHtml(tag.id)}">
+      <span class="tag-filter-btn__check">✓</span>
+      #${escapeHtml(tag.label)}
+    </button>`;
+  }).join('');
+}
+
+/** Render active spell tag filter pills */
+function renderActiveSpellTagFilters() {
+  if (!elements.spellActiveFilters) return;
+
+  if (activeSpellTagFilters.size === 0) {
+    elements.spellActiveFilters.innerHTML = '';
+    if (elements.spellTagFilterBtn) elements.spellTagFilterBtn.classList.remove('btn--tag-filter--active');
+    return;
+  }
+
+  if (elements.spellTagFilterBtn) elements.spellTagFilterBtn.classList.add('btn--tag-filter--active');
+
+  elements.spellActiveFilters.innerHTML = Array.from(activeSpellTagFilters).map(tagId => {
+    const color = getSpellTagColor(tagId);
+    const label = getSpellTagLabel(tagId);
+    return `<span class="inv-active-tag" style="background:${color}">
+      #${escapeHtml(label)}
+      <button type="button" class="inv-active-tag__remove" data-remove-spell-filter="${escapeHtml(tagId)}">✕</button>
+    </span>`;
+  }).join('');
+}
+
+/** Show spell tooltip on hover */
+function showSpellTooltip(e, groupId, spellId) {
+  const group = character.spellcasting.groups.find(g => g.id === groupId);
+  if (!group) return;
+  const spell = group.spells.find(s => s.id === spellId);
+  if (!spell) return;
+
+  // Only show if description or tags exist
+  if ((!spell.description || !spell.description.trim()) && (!spell.tags || spell.tags.length === 0)) return;
+
+  const tooltip = elements.spellTooltip;
+
+  let html = '';
+  if (spell.name) {
+    html += `<div class="spell-tooltip__title">${escapeHtml(spell.name)}</div>`;
+  }
+  if (spell.tags && spell.tags.length > 0) {
+    const tagsHtml = spell.tags.map(tagId => {
+      const color = getSpellTagColor(tagId);
+      return `<span class="spell-item__tag" style="background:${color}">${escapeHtml(getSpellTagLabel(tagId))}</span>`;
+    }).join('');
+    html += `<div class="spell-tooltip__tags">${tagsHtml}</div>`;
+  }
+  if (spell.description && spell.description.trim()) {
+    html += `<div class="spell-tooltip__body">${escapeHtml(spell.description)}</div>`;
+  }
+
+  tooltip.innerHTML = html;
+
+  // Position near the cursor
+  const rect = e.target.closest('.spell-item').getBoundingClientRect();
+  let left = rect.right + 10;
+  let top = rect.top;
+
+  // Keep tooltip within viewport
+  if (left + 350 > window.innerWidth) {
+    left = rect.left - 350;
+    if (left < 0) left = 10;
+  }
+  if (top + 200 > window.innerHeight) {
+    top = window.innerHeight - 220;
+  }
+
+  tooltip.style.left = left + 'px';
+  tooltip.style.top = top + 'px';
+  tooltip.classList.add('spell-tooltip--visible');
+}
+
+/** Hide spell tooltip */
+function hideSpellTooltip() {
+  if (elements.spellTooltip) {
+    elements.spellTooltip.classList.remove('spell-tooltip--visible');
+  }
 }
 
 /** Update the DOM to match the data model */
@@ -1001,6 +1307,410 @@ function setupEventListeners() {
     });
   }
 
+  // ===== SPELL EVENT LISTENERS =====
+
+  // Spell Focus Selector
+  if (elements.spellFocusSelector) {
+    elements.spellFocusSelector.addEventListener('click', e => {
+      const btn = e.target.closest('.spell-focus-btn');
+      if (!btn) return;
+      const focus = btn.dataset.focus;
+
+      // Toggle: if already selected, deselect
+      if (character.spellcasting.focus === focus) {
+        character.spellcasting.focus = null;
+      } else {
+        character.spellcasting.focus = focus;
+      }
+
+      updateSpellFocusUI();
+      updateSpellStats();
+    });
+  }
+
+  // Add Spell Group button — open type picker modal
+  if (elements.addSpellGroupBtn) {
+    elements.addSpellGroupBtn.addEventListener('click', () => {
+      elements.spellTypeModal.classList.remove('hidden');
+    });
+  }
+
+  // Spell type picker — close
+  if (elements.spellTypeClose) {
+    elements.spellTypeClose.addEventListener('click', () => {
+      elements.spellTypeModal.classList.add('hidden');
+    });
+  }
+
+  // Spell type picker — overlay close
+  if (elements.spellTypeModal) {
+    elements.spellTypeModal.addEventListener('click', e => {
+      if (e.target === elements.spellTypeModal) {
+        elements.spellTypeModal.classList.add('hidden');
+      }
+    });
+  }
+
+  // Spell type picker — select type
+  if (elements.spellTypeGrid) {
+    elements.spellTypeGrid.addEventListener('click', e => {
+      const btn = e.target.closest('[data-spell-type]');
+      if (!btn) return;
+      const type = btn.dataset.spellType;
+
+      elements.spellTypeModal.classList.add('hidden');
+
+      if (type === 'cantrip') {
+        character.spellcasting.groups.push({
+          id: generateId(),
+          type: 'cantrip',
+          spells: []
+        });
+        renderSpells();
+      } else if (type === 'level') {
+        elements.spellLevelInput.value = 1;
+        elements.spellLevelModal.classList.remove('hidden');
+      } else if (type === 'custom') {
+        elements.spellCustomUses.value = 1;
+        elements.spellCustomRecharge.value = '';
+        elements.spellCustomModal.classList.remove('hidden');
+      }
+    });
+  }
+
+  // Spell level picker — confirm
+  if (elements.spellLevelConfirm) {
+    elements.spellLevelConfirm.addEventListener('click', () => {
+      let level = parseInt(elements.spellLevelInput.value);
+      if (isNaN(level) || level < 1) level = 1;
+
+      character.spellcasting.groups.push({
+        id: generateId(),
+        type: 'level',
+        level: level,
+        spells: []
+      });
+
+      elements.spellLevelModal.classList.add('hidden');
+      renderSpells();
+    });
+  }
+
+  // Spell level picker — cancel
+  if (elements.spellLevelCancel) {
+    elements.spellLevelCancel.addEventListener('click', () => {
+      elements.spellLevelModal.classList.add('hidden');
+    });
+  }
+
+  // Spell level modal — overlay close
+  if (elements.spellLevelModal) {
+    elements.spellLevelModal.addEventListener('click', e => {
+      if (e.target === elements.spellLevelModal) {
+        elements.spellLevelModal.classList.add('hidden');
+      }
+    });
+  }
+
+  // Custom spell group — confirm
+  if (elements.spellCustomConfirm) {
+    elements.spellCustomConfirm.addEventListener('click', () => {
+      let uses = parseInt(elements.spellCustomUses.value);
+      if (isNaN(uses) || uses < 1) uses = 1;
+      const recharge = elements.spellCustomRecharge.value.trim() || 'Rest';
+
+      character.spellcasting.groups.push({
+        id: generateId(),
+        type: 'custom',
+        uses: uses,
+        recharge: recharge,
+        spells: []
+      });
+
+      elements.spellCustomModal.classList.add('hidden');
+      renderSpells();
+    });
+  }
+
+  // Custom spell group — cancel
+  if (elements.spellCustomCancel) {
+    elements.spellCustomCancel.addEventListener('click', () => {
+      elements.spellCustomModal.classList.add('hidden');
+    });
+  }
+
+  // Custom spell modal — overlay close
+  if (elements.spellCustomModal) {
+    elements.spellCustomModal.addEventListener('click', e => {
+      if (e.target === elements.spellCustomModal) {
+        elements.spellCustomModal.classList.add('hidden');
+      }
+    });
+  }
+
+  // Spell groups container — delegated events
+  if (elements.spellGroups) {
+    // Click events: delete group, add spell, delete spell, open desc modal
+    elements.spellGroups.addEventListener('click', e => {
+      // Delete group
+      const delGroupBtn = e.target.closest('[data-del-group]');
+      if (delGroupBtn) {
+        const groupId = delGroupBtn.dataset.delGroup;
+        character.spellcasting.groups = character.spellcasting.groups.filter(g => g.id !== groupId);
+        renderSpells();
+        return;
+      }
+
+      // Add spell to group
+      const addSpellBtn = e.target.closest('[data-add-spell]');
+      if (addSpellBtn) {
+        const groupId = addSpellBtn.dataset.addSpell;
+        const group = character.spellcasting.groups.find(g => g.id === groupId);
+        if (group) {
+          group.spells.push({
+            id: generateId(),
+            name: '',
+            description: '',
+            tags: []
+          });
+          renderSpells();
+          // Focus the new spell name input
+          const groupCard = elements.spellGroups.querySelector(`[data-group-id="${groupId}"]`);
+          if (groupCard) {
+            const inputs = groupCard.querySelectorAll('.spell-item__name');
+            const lastInput = inputs[inputs.length - 1];
+            if (lastInput) lastInput.focus();
+          }
+        }
+        return;
+      }
+
+      // Delete spell
+      const delSpellBtn = e.target.closest('[data-spell-del]');
+      if (delSpellBtn) {
+        const spellId = delSpellBtn.dataset.spellDel;
+        const groupId = delSpellBtn.dataset.spellDelGroup;
+        const group = character.spellcasting.groups.find(g => g.id === groupId);
+        if (group) {
+          group.spells = group.spells.filter(s => s.id !== spellId);
+          renderSpells();
+        }
+        return;
+      }
+
+      // Open spell desc modal
+      const descBtn = e.target.closest('[data-spell-desc]');
+      if (descBtn) {
+        const spellId = descBtn.dataset.spellDesc;
+        const groupId = descBtn.dataset.spellGroup;
+        openSpellDescModal(groupId, spellId);
+        return;
+      }
+    });
+
+    // Inline spell name editing
+    elements.spellGroups.addEventListener('input', e => {
+      if (e.target.hasAttribute('data-spell-name')) {
+        const item = e.target.closest('.spell-item');
+        if (!item) return;
+        const groupId = item.dataset.groupId;
+        const spellId = item.dataset.spellId;
+        const group = character.spellcasting.groups.find(g => g.id === groupId);
+        if (group) {
+          const spell = group.spells.find(s => s.id === spellId);
+          if (spell) spell.name = e.target.value;
+        }
+      }
+    });
+
+    // Hover tooltip
+    elements.spellGroups.addEventListener('mouseenter', e => {
+      const item = e.target.closest('.spell-item');
+      if (!item) return;
+      showSpellTooltip(e, item.dataset.groupId, item.dataset.spellId);
+    }, true);
+
+    elements.spellGroups.addEventListener('mouseleave', e => {
+      const item = e.target.closest('.spell-item');
+      if (!item) return;
+      hideSpellTooltip();
+    }, true);
+  }
+
+  // Spell desc modal — toggle tags
+  if (elements.spellDescTagList) {
+    elements.spellDescTagList.addEventListener('click', e => {
+      const btn = e.target.closest('[data-spell-tag-toggle]');
+      if (!btn) return;
+      const tagId = btn.dataset.spellTagToggle;
+      if (!currentDescSpellGroupId || !currentDescSpellId) return;
+
+      const group = character.spellcasting.groups.find(g => g.id === currentDescSpellGroupId);
+      if (!group) return;
+      const spell = group.spells.find(s => s.id === currentDescSpellId);
+      if (!spell) return;
+
+      if (!spell.tags) spell.tags = [];
+      const idx = spell.tags.indexOf(tagId);
+      if (idx >= 0) {
+        spell.tags.splice(idx, 1);
+      } else {
+        spell.tags.push(tagId);
+      }
+
+      renderSpellDescTagList(spell);
+    });
+  }
+
+  // Spell desc modal — add custom tag
+  if (elements.spellCustomTagAdd) {
+    const addSpellCustomTag = () => {
+      const input = elements.spellCustomTagInput;
+      let val = input.value.trim();
+      if (!val) return;
+      if (val.startsWith('#')) val = val.slice(1);
+      val = val.trim();
+      if (!val) return;
+
+      // Check if already a preset
+      const existing = SPELL_PRESET_TAGS.find(t => t.id === val || t.label.toLowerCase() === val.toLowerCase());
+      if (existing) {
+        const group = character.spellcasting.groups.find(g => g.id === currentDescSpellGroupId);
+        if (group) {
+          const spell = group.spells.find(s => s.id === currentDescSpellId);
+          if (spell && !spell.tags.includes(existing.id)) {
+            spell.tags.push(existing.id);
+          }
+          renderSpellDescTagList(spell);
+        }
+        input.value = '';
+        return;
+      }
+
+      // Add as custom tag
+      if (!character.spellcasting.customTags.includes(val)) {
+        character.spellcasting.customTags.push(val);
+      }
+
+      const group = character.spellcasting.groups.find(g => g.id === currentDescSpellGroupId);
+      if (group) {
+        const spell = group.spells.find(s => s.id === currentDescSpellId);
+        if (spell) {
+          if (!spell.tags) spell.tags = [];
+          if (!spell.tags.includes(val)) {
+            spell.tags.push(val);
+          }
+          renderSpellDescTagList(spell);
+        }
+      }
+      input.value = '';
+    };
+
+    elements.spellCustomTagAdd.addEventListener('click', addSpellCustomTag);
+    elements.spellCustomTagInput.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        addSpellCustomTag();
+      }
+    });
+  }
+
+  // Spell desc modal — save & close
+  if (elements.spellDescSave) {
+    elements.spellDescSave.addEventListener('click', () => {
+      if (currentDescSpellGroupId && currentDescSpellId) {
+        const group = character.spellcasting.groups.find(g => g.id === currentDescSpellGroupId);
+        if (group) {
+          const spell = group.spells.find(s => s.id === currentDescSpellId);
+          if (spell) spell.description = elements.spellDescTextarea.value;
+        }
+      }
+      elements.spellDescModal.classList.add('hidden');
+      currentDescSpellGroupId = null;
+      currentDescSpellId = null;
+      renderSpells();
+    });
+  }
+
+  // Close spell desc modal on overlay click
+  if (elements.spellDescModal) {
+    elements.spellDescModal.addEventListener('click', e => {
+      if (e.target === elements.spellDescModal) {
+        if (currentDescSpellGroupId && currentDescSpellId) {
+          const group = character.spellcasting.groups.find(g => g.id === currentDescSpellGroupId);
+          if (group) {
+            const spell = group.spells.find(s => s.id === currentDescSpellId);
+            if (spell) spell.description = elements.spellDescTextarea.value;
+          }
+        }
+        elements.spellDescModal.classList.add('hidden');
+        currentDescSpellGroupId = null;
+        currentDescSpellId = null;
+        renderSpells();
+      }
+    });
+  }
+
+  // Spell tag filter button — open filter modal
+  if (elements.spellTagFilterBtn) {
+    elements.spellTagFilterBtn.addEventListener('click', () => {
+      openSpellTagFilterModal();
+    });
+  }
+
+  // Spell tag filter modal — toggle
+  if (elements.spellTagFilterList) {
+    elements.spellTagFilterList.addEventListener('click', e => {
+      const btn = e.target.closest('[data-spell-filter-tag]');
+      if (!btn) return;
+      const tagId = btn.dataset.spellFilterTag;
+
+      if (tempSpellTagFilterSelection.has(tagId)) {
+        tempSpellTagFilterSelection.delete(tagId);
+      } else {
+        tempSpellTagFilterSelection.add(tagId);
+      }
+      renderSpellTagFilterList();
+    });
+  }
+
+  // Spell tag filter modal — clear
+  if (elements.spellTagFilterClear) {
+    elements.spellTagFilterClear.addEventListener('click', () => {
+      tempSpellTagFilterSelection.clear();
+      renderSpellTagFilterList();
+    });
+  }
+
+  // Spell tag filter modal — apply
+  if (elements.spellTagFilterApply) {
+    elements.spellTagFilterApply.addEventListener('click', () => {
+      activeSpellTagFilters = new Set(tempSpellTagFilterSelection);
+      elements.spellTagFilterModal.classList.add('hidden');
+      renderSpells();
+    });
+  }
+
+  // Close spell tag filter modal on overlay click
+  if (elements.spellTagFilterModal) {
+    elements.spellTagFilterModal.addEventListener('click', e => {
+      if (e.target === elements.spellTagFilterModal) {
+        elements.spellTagFilterModal.classList.add('hidden');
+      }
+    });
+  }
+
+  // Remove individual active spell tag filters from toolbar
+  if (elements.spellActiveFilters) {
+    elements.spellActiveFilters.addEventListener('click', e => {
+      const removeBtn = e.target.closest('[data-remove-spell-filter]');
+      if (!removeBtn) return;
+      const tagId = removeBtn.dataset.removeSpellFilter;
+      activeSpellTagFilters.delete(tagId);
+      renderSpells();
+    });
+  }
+
   // Action Bar
   elements.saveBtn.addEventListener('click', handleSave);
   elements.exportBtn.addEventListener('click', handleExport);
@@ -1019,6 +1729,9 @@ function updateAllDerivedStats() {
   Object.keys(SKILL_NAMES).forEach(skill => {
     document.getElementById(`skill-mod-${skill}`).textContent = formatModifier(calcSkillModifier(character, skill));
   });
+
+  // Update Spell Stats (DC and Attack depend on ability mods and prof)
+  updateSpellStats();
 
   updateUI();
 }
