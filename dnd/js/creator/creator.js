@@ -1091,6 +1091,7 @@ function setupEventListeners() {
     }
   });
 
+  elements.hpCurrent.addEventListener('focus', e => e.target.select());
   elements.hpCurrent.addEventListener('change', e => {
     let valStr = e.target.value.trim();
     if (valStr.startsWith('+') || valStr.startsWith('-')) {
@@ -1114,7 +1115,37 @@ function setupEventListeners() {
     elements.hpCurrent.value = character.hitPoints.current;
   });
 
-  elements.hpTemp.addEventListener('input', e => character.hitPoints.temporary = parseInt(e.target.value) || 0);
+  elements.hpTemp.addEventListener('focus', e => e.target.select());
+  elements.hpTemp.addEventListener('change', e => {
+    let valStr = e.target.value.trim();
+    if (valStr.startsWith('-')) {
+      const damage = -parseInt(valStr);
+      if (!isNaN(damage)) {
+        if (damage > character.hitPoints.temporary) {
+          const remainingDamage = damage - character.hitPoints.temporary;
+          character.hitPoints.temporary = 0;
+          character.hitPoints.current -= remainingDamage;
+          if (character.hitPoints.current < 0) character.hitPoints.current = 0;
+          elements.hpCurrent.value = character.hitPoints.current;
+        } else {
+          character.hitPoints.temporary -= damage;
+        }
+      }
+    } else if (valStr.startsWith('+')) {
+      const num = parseInt(valStr);
+      if (!isNaN(num)) {
+        character.hitPoints.temporary += num;
+      }
+    } else {
+      character.hitPoints.temporary = parseInt(valStr) || 0;
+    }
+
+    if (character.hitPoints.temporary < 0) {
+      character.hitPoints.temporary = 0;
+    }
+
+    elements.hpTemp.value = character.hitPoints.temporary;
+  });
 
   elements.hitDice.addEventListener('change', e => character.hitDice = e.target.value);
 
