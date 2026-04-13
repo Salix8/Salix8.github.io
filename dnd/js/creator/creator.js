@@ -1573,7 +1573,7 @@ function setupEventListeners() {
         id: generateId(),
         name: title,
         ability: elements.customSkillAbility.value,
-        level: 'none'
+        level: 'proficient'
       });
 
       elements.customSkillModal.classList.add('hidden');
