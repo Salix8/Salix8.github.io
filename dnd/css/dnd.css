@@ -827,6 +827,9 @@ input[type="number"] {
 }
 
 .module-delete {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -2205,9 +2208,16 @@ input[type="number"] {
 
 /* Spell Items List */
 .spell-items {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
   padding: 0.25rem 0;
+}
+
+@media (max-width: 900px) {
+  .spell-items {
+    grid-template-columns: 1fr;
+  }
 }
 
 .spell-item {

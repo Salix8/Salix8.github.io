@@ -29,3 +29,6 @@ En todas las Actiones debe haber un bool que pregunte si esa Action hace daño d
 
 # Conditions Prompt
 //Falta una pestaña de Conditions and defenses
+
+# Tool import to 5etools Prompt
+//Falta implementar la importacion de herramientas desde 5etools
