@@ -882,7 +882,7 @@ function updateUI() {
   elements.hpTemp.value = character.hitPoints.temporary;
   elements.hitDice.value = character.hitDice;
 
-  if (character.hitDiceSpent === undefined) character.hitDiceSpent = 0;
+  if (character.hitDiceSpent === undefined) character.hitDiceSpent = character.level;
   elements.hdSpent.value = character.hitDiceSpent;
   elements.hdTotal.textContent = character.level;
 
@@ -925,7 +925,18 @@ function setupEventListeners() {
   elements.background.addEventListener('input', e => character.background = e.target.value);
 
   elements.level.addEventListener('change', e => {
+    const oldLevel = character.level;
     character.level = parseInt(e.target.value) || 1;
+    const delta = character.level - oldLevel;
+
+    // Adjust available hit dice by the level delta
+    if (character.hitDiceSpent === undefined) character.hitDiceSpent = character.level;
+    else {
+      character.hitDiceSpent += delta;
+      if (character.hitDiceSpent < 0) character.hitDiceSpent = 0;
+      if (character.hitDiceSpent > character.level) character.hitDiceSpent = character.level;
+    }
+
     // Level change affects prof bonus, saves, and skills
     updateAllDerivedStats();
   });
