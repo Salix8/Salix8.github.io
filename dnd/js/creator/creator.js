@@ -100,6 +100,13 @@ const elements = {
   moduleDescTextarea: document.getElementById('module-desc-textarea'),
   moduleDescSave: document.getElementById('module-desc-save'),
 
+  // Module Calc Modal
+  moduleCalcModal: document.getElementById('module-calc-modal'),
+  moduleCalcType: document.getElementById('module-calc-type'),
+  moduleCalcAbility: document.getElementById('module-calc-ability'),
+  moduleCalcCancel: document.getElementById('module-calc-cancel'),
+  moduleCalcConfirm: document.getElementById('module-calc-confirm'),
+
   // Buttons
   addActionBtn: document.getElementById('add-action-module'),
   addFeatureBtn: document.getElementById('add-feature-module'),
@@ -118,6 +125,7 @@ let activeFeatureFilters = new Set(['all']);
 let activeInventoryTagFilters = new Set();
 let currentDescItemIndex = null; // index of item currently being edited in desc modal
 let currentDescModuleIndex = null; // index of module currently being edited in desc modal
+let currentCalcModuleIndex = null; // index of module being auto-calculated
 let tempTagFilterSelection = new Set(); // temporary selection in tag filter modal
 
 // Spell States
@@ -148,6 +156,8 @@ function init() {
       if (m.dealsDamage === undefined) m.dealsDamage = false;
       if (m.attackBonus === undefined) m.attackBonus = '';
       if (m.damageOrEffect === undefined) m.damageOrEffect = '';
+      if (m.calcType === undefined) m.calcType = 'none';
+      if (m.calcAbility === undefined) m.calcAbility = 'strength';
     });
   }
 
@@ -297,19 +307,27 @@ function renderModuleLists() {
 
       // Damage row (only for action group)
       let damageRowHtml = '';
+      let damageCheckHtml = '';
       if (isActionsGroup) {
         const checked = mod.dealsDamage ? 'checked' : '';
         const fieldsStyle = mod.dealsDamage ? '' : 'style="display:none;"';
+        
+        damageCheckHtml = `
+          <label class="module-calc-toggle" style="margin-left: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.65rem; color: var(--text-muted); cursor: pointer;" title="Toggle Damage/Effect Fields">
+            <input type="checkbox" data-mod-damage-check ${checked} style="accent-color: var(--accent-1); cursor: pointer;">
+            Damage
+          </label>
+        `;
+
         damageRowHtml = `
-          <div class="module-card__damage-row">
-            <label class="module-card__damage-check">
-              <input type="checkbox" data-mod-damage-check ${checked}>
-              <span class="module-card__damage-check-label">⚔️</span>
-            </label>
-            <div class="module-card__damage-fields" ${fieldsStyle}>
+          <div class="module-card__damage-row" ${fieldsStyle}>
+            <div class="module-card__damage-fields" style="grid-template-columns: 85px 1fr; gap: 0.5rem;">
               <div class="module-card__damage-field">
-                <span class="module-card__damage-field-label">Atk / CD</span>
-                <input type="text" class="module-card__damage-input dnd-input" placeholder="+7 / 15" value="${escapeHtml(mod.attackBonus || '')}" data-mod-field="attackBonus">
+                <div style="display:flex; justify-content: space-between; width: 100%;">
+                  <span class="module-card__damage-field-label">Atk / CD</span>
+                  <button type="button" class="module-calc-btn" data-mod-calc="${index}" style="font-size: 0.6rem; background: transparent; border: none; cursor: pointer; color: var(--text-muted);" title="Auto Calculate">⚙️</button>
+                </div>
+                <input type="text" class="module-card__damage-input dnd-input" placeholder="+7 / 15" value="${escapeHtml(mod.attackBonus || '')}" data-mod-field="attackBonus" ${mod.calcType !== 'none' ? 'readonly' : ''}>
               </div>
               <div class="module-card__damage-field">
                 <span class="module-card__damage-field-label">Dmg / Effect</span>
@@ -323,10 +341,13 @@ function renderModuleLists() {
       return `
         <div class="module-card" data-index="${index}">
           <div class="module-header-row">
-            <span class="module-badge" style="border-color: ${typeDef.color}; color: ${typeDef.color}">
-              ${shapeHtml}
-              ${typeDef.label}
-            </span>
+            <div style="display: flex; align-items: center;">
+              <span class="module-badge" style="border-color: ${typeDef.color}; color: ${typeDef.color}">
+                ${shapeHtml}
+                ${typeDef.label}
+              </span>
+              ${damageCheckHtml}
+            </div>
             <button type="button" class="module-delete" aria-label="Delete module">✕</button>
           </div>
           <div class="module-card__fields">
@@ -1111,7 +1132,9 @@ function setupEventListeners() {
         description: '',
         dealsDamage: false,
         attackBonus: '',
-        damageOrEffect: ''
+        damageOrEffect: '',
+        calcType: 'none',
+        calcAbility: 'strength'
       });
       elements.typePickerModal.classList.add('hidden');
       renderModuleLists();
@@ -1125,6 +1148,18 @@ function setupEventListeners() {
       const index = parseInt(card.dataset.index);
       character.modules.splice(index, 1);
       renderModuleLists();
+      return;
+    }
+
+    // Open calc modal
+    const calcBtn = e.target.closest('[data-mod-calc]');
+    if (calcBtn) {
+      const idx = parseInt(calcBtn.dataset.modCalc);
+      currentCalcModuleIndex = idx;
+      const mod = character.modules[idx];
+      elements.moduleCalcType.value = mod.calcType || 'none';
+      elements.moduleCalcAbility.value = mod.calcAbility || 'strength';
+      elements.moduleCalcModal.classList.remove('hidden');
       return;
     }
 
@@ -1159,10 +1194,10 @@ function setupEventListeners() {
       const index = parseInt(card.dataset.index);
       character.modules[index].dealsDamage = e.target.checked;
 
-      // Show/hide damage fields
-      const fields = card.querySelector('.module-card__damage-fields');
-      if (fields) {
-        fields.style.display = e.target.checked ? '' : 'none';
+      // Show/hide damage row explicitly
+      const row = card.querySelector('.module-card__damage-row');
+      if (row) {
+        row.style.display = e.target.checked ? '' : 'none';
       }
     }
   });
@@ -1418,6 +1453,43 @@ function setupEventListeners() {
         elements.moduleDescModal.classList.add('hidden');
         currentDescModuleIndex = null;
         renderModuleLists();
+      }
+    });
+  }
+
+  // Module calculation modal — cancel & apply
+  if (elements.moduleCalcCancel) {
+    elements.moduleCalcCancel.addEventListener('click', () => {
+      elements.moduleCalcModal.classList.add('hidden');
+      currentCalcModuleIndex = null;
+    });
+  }
+
+  if (elements.moduleCalcConfirm) {
+    elements.moduleCalcConfirm.addEventListener('click', () => {
+      if (currentCalcModuleIndex !== null) {
+        const mod = character.modules[currentCalcModuleIndex];
+        const oldType = mod.calcType;
+        mod.calcType = elements.moduleCalcType.value;
+        mod.calcAbility = elements.moduleCalcAbility.value;
+
+        // Reset to empty when switching from automated to manual
+        if (mod.calcType === 'none' && oldType !== 'none') {
+            mod.attackBonus = '';
+        }
+      }
+      elements.moduleCalcModal.classList.add('hidden');
+      currentCalcModuleIndex = null;
+      updateAllDerivedStats(); // recalculate and re-render
+    });
+  }
+
+  // Close calc modal when clicking overlay
+  if (elements.moduleCalcModal) {
+    elements.moduleCalcModal.addEventListener('click', e => {
+      if (e.target === elements.moduleCalcModal) {
+        elements.moduleCalcModal.classList.add('hidden');
+        currentCalcModuleIndex = null;
       }
     });
   }
@@ -1909,7 +1981,21 @@ function updateAllDerivedStats() {
   // Update Spell Stats (DC and Attack depend on ability mods and prof)
   updateSpellStats();
 
+  // Recalculate module attacks/DCs
+  character.modules.forEach(mod => {
+    if (mod.calcType === 'attack') {
+      const modVal = calcModifier(character.attributes[mod.calcAbility]);
+      const prof = calcProficiencyBonus(character.level);
+      mod.attackBonus = formatModifier(modVal + prof);
+    } else if (mod.calcType === 'dc') {
+      const modVal = calcModifier(character.attributes[mod.calcAbility]);
+      const prof = calcProficiencyBonus(character.level);
+      mod.attackBonus = 'DC ' + (8 + modVal + prof);
+    }
+  });
+
   updateUI();
+  renderModuleLists();
 }
 
 /** Save character to localStorage and show feedback */

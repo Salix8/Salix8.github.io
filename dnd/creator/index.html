@@ -394,6 +394,39 @@
     </div>
   </div>
 
+  <!-- ACTION CALC MODAL -->
+  <div id="module-calc-modal" class="modal-overlay hidden">
+    <div class="modal-content type-picker" style="max-width: 350px;">
+      <h3 class="type-picker__title">Calculate Atk / CD</h3>
+      
+      <div style="margin-bottom: 1rem;">
+        <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Type</label>
+        <select id="module-calc-type" class="dnd-input">
+          <option value="none">Manual (None)</option>
+          <option value="attack">Attack</option>
+          <option value="dc">Save DC</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Ability Score</label>
+        <select id="module-calc-ability" class="dnd-input">
+          <option value="strength">Strength</option>
+          <option value="dexterity">Dexterity</option>
+          <option value="constitution">Constitution</option>
+          <option value="intelligence">Intelligence</option>
+          <option value="wisdom">Wisdom</option>
+          <option value="charisma">Charisma</option>
+        </select>
+      </div>
+
+      <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+        <button type="button" class="btn btn--outline" id="module-calc-cancel">Cancel</button>
+        <button type="button" class="btn btn--primary" id="module-calc-confirm">Apply</button>
+      </div>
+    </div>
+  </div>
+
   <!-- ACTION TOOLTIP -->
   <div class="spell-tooltip" id="action-tooltip"></div>
 
