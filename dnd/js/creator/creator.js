@@ -31,7 +31,6 @@ const elements = {
   hitDice: document.getElementById('hit-dice'),
   hdSpent: document.getElementById('hd-spent'),
   hdTotal: document.getElementById('hd-total'),
-  deathSaves: document.getElementById('death-saves'),
 
   // Notes
   notes: document.getElementById('char-notes'),
@@ -891,30 +890,8 @@ function updateUI() {
     character.hitDiceSpent = character.level;
     elements.hdSpent.value = character.hitDiceSpent;
   }
-
-  // Death Saves (only if the section exists in the DOM)
-  if (elements.deathSaves) updateDeathSavesUI();
-
-  // Abilities & Saves & Skills updates are handled by re-rendering or targeted updates during input
 }
 
-/** Update Death Saves DOM state */
-function updateDeathSavesUI() {
-  if (!elements.deathSaves) return;
-
-  const successes = elements.deathSaves.querySelectorAll('.ds-circle--success');
-  const failures = elements.deathSaves.querySelectorAll('.ds-circle--failure');
-
-  successes.forEach((btn, i) => {
-    if (i < character.deathSaves.successes) btn.classList.add('ds-circle--filled');
-    else btn.classList.remove('ds-circle--filled');
-  });
-
-  failures.forEach((btn, i) => {
-    if (i < character.deathSaves.failures) btn.classList.add('ds-circle--filled');
-    else btn.classList.remove('ds-circle--filled');
-  });
-}
 
 /** Setup all DOM event listeners */
 function setupEventListeners() {
@@ -1167,23 +1144,6 @@ function setupEventListeners() {
     character.hitDiceSpent = val;
     elements.hdSpent.value = val;
   });
-
-  // Death Saves (only if the section exists in the DOM)
-  if (elements.deathSaves) {
-    elements.deathSaves.addEventListener('click', e => {
-      const btn = e.target.closest('.ds-circle');
-      if (!btn) return;
-
-      const type = btn.dataset.type; // 'success' or 'failure'
-      // Simple version: just cycle through 0-3
-      let current = character.deathSaves[type + 'es']; // successes or failures
-      if (current >= 3) current = 0;
-      else current++;
-
-      character.deathSaves[type + 'es'] = current;
-      updateDeathSavesUI();
-    });
-  }
 
   // Modules
   function showTypePicker(groupKey) {

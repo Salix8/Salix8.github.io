@@ -21,7 +21,7 @@ clip-path: polygon(
 
 
 # 1 Spell slots Prompt
-
+// implementar los spell slots
 
 # 2 Rework de la tool de hover
 Falta reworkear la tool de hover para que cuando pases el mouse por encima de una accion, feature, etc, te aparezca un pop up con la descripcion de la accion, feature, etc. Actualmente se ve la descripcion en un lado y a veces mal alineada. Creo que podria ser mejor si el pop up apareciese encima de las skills.
