@@ -652,29 +652,171 @@ input[type="number"] {
 
 /* ===== CUSTOM MODULES ===== */
 .modules-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .modules-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .module-card {
   background: hsla(230, 20%, 14%, 0.5);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-sm);
-  padding: 0.75rem;
+  padding: 0.65rem 0.75rem;
   position: relative;
-  transition: border-color var(--transition-fast);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+  animation: tagFadeIn 0.25s ease;
 }
 
 .module-card:hover {
   border-color: hsla(265, 90%, 65%, 0.2);
 }
 
+/* Top row: badge + delete */
+.module-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.45rem;
+  padding-right: 0;
+}
+
+/* Middle row: title + desc btn */
+.module-card__fields {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .module-input {
+  flex: 1;
+  min-width: 0;
   font-weight: 600;
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.5rem;
+}
+
+.module-card__desc-btn {
+  background: hsla(230, 20%, 20%, 0.6);
+  border: 1px solid var(--border-glass);
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.module-card__desc-btn:hover {
+  background: hsla(265, 90%, 65%, 0.2);
+  border-color: var(--accent-1);
+  color: var(--text-primary);
+}
+
+.module-card__desc-btn--has-content {
+  color: var(--accent-1);
+  border-color: hsla(265, 90%, 65%, 0.3);
+}
+
+/* Damage / Attack row */
+.module-card__damage-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+}
+
+.module-card__damage-check {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.module-card__damage-check input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--text-muted);
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.module-card__damage-check input[type="checkbox"]:checked {
+  background: var(--accent-1);
+  border-color: var(--accent-1);
+  box-shadow: 0 0 6px hsla(265, 90%, 65%, 0.4);
+}
+
+.module-card__damage-check input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.6rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.module-card__damage-check-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.module-card__damage-fields {
+  display: flex;
+  gap: 0.4rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.module-card__damage-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.module-card__damage-field-label {
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.module-card__damage-input {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.3rem;
 }
 
 .module-textarea {
@@ -685,17 +827,14 @@ input[type="number"] {
 }
 
 .module-delete {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: none;
   background: hsla(0, 70%, 55%, 0.15);
   color: hsl(0, 70%, 60%);
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   display: flex;
   align-items: center;
   justify-content: center;

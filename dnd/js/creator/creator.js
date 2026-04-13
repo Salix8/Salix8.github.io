@@ -93,6 +93,12 @@ const elements = {
   spellTagFilterClear: document.getElementById('spell-tag-filter-clear'),
   spellTagFilterApply: document.getElementById('spell-tag-filter-apply'),
   spellTooltip: document.getElementById('spell-tooltip'),
+  actionTooltip: document.getElementById('action-tooltip'),
+
+  // Module Description Modal
+  moduleDescModal: document.getElementById('module-desc-modal'),
+  moduleDescTextarea: document.getElementById('module-desc-textarea'),
+  moduleDescSave: document.getElementById('module-desc-save'),
 
   // Buttons
   addActionBtn: document.getElementById('add-action-module'),
@@ -111,6 +117,7 @@ let activeActionFilters = new Set(['all']);
 let activeFeatureFilters = new Set(['all']);
 let activeInventoryTagFilters = new Set();
 let currentDescItemIndex = null; // index of item currently being edited in desc modal
+let currentDescModuleIndex = null; // index of module currently being edited in desc modal
 let tempTagFilterSelection = new Set(); // temporary selection in tag filter modal
 
 // Spell States
@@ -134,10 +141,13 @@ function init() {
     }
   }
 
-  // Default unknown module types to 'other'
+  // Default unknown module types to 'other' and ensure new fields exist
   if (character && character.modules) {
     character.modules.forEach(m => {
       if (!m.type) m.type = 'other';
+      if (m.dealsDamage === undefined) m.dealsDamage = false;
+      if (m.attackBonus === undefined) m.attackBonus = '';
+      if (m.damageOrEffect === undefined) m.damageOrEffect = '';
     });
   }
 
@@ -273,6 +283,7 @@ function renderModuleLists() {
     if (!listEl) return;
     const isAll = filters.has('all');
     const groupTypes = MODULE_GROUPS[groupKey];
+    const isActionsGroup = groupKey === 'actions';
 
     listEl.innerHTML = character.modules.map((mod, index) => {
       if (!groupTypes.includes(mod.type)) return '';
@@ -280,6 +291,34 @@ function renderModuleLists() {
 
       const typeDef = MODULE_TYPES[mod.type];
       const shapeHtml = typeDef.shape !== 'none' ? `<span class="badge-shape badge-shape--${typeDef.shape}"></span>` : '';
+
+      const hasDesc = mod.description && mod.description.trim().length > 0;
+      const descBtnClass = hasDesc ? 'module-card__desc-btn module-card__desc-btn--has-content' : 'module-card__desc-btn';
+
+      // Damage row (only for action group)
+      let damageRowHtml = '';
+      if (isActionsGroup) {
+        const checked = mod.dealsDamage ? 'checked' : '';
+        const fieldsStyle = mod.dealsDamage ? '' : 'style="display:none;"';
+        damageRowHtml = `
+          <div class="module-card__damage-row">
+            <label class="module-card__damage-check">
+              <input type="checkbox" data-mod-damage-check ${checked}>
+              <span class="module-card__damage-check-label">⚔️</span>
+            </label>
+            <div class="module-card__damage-fields" ${fieldsStyle}>
+              <div class="module-card__damage-field">
+                <span class="module-card__damage-field-label">Atk / CD</span>
+                <input type="text" class="module-card__damage-input dnd-input" placeholder="+7 / 15" value="${escapeHtml(mod.attackBonus || '')}" data-mod-field="attackBonus">
+              </div>
+              <div class="module-card__damage-field">
+                <span class="module-card__damage-field-label">Dmg / Effect</span>
+                <input type="text" class="module-card__damage-input dnd-input" placeholder="4d6 / Stun" value="${escapeHtml(mod.damageOrEffect || '')}" data-mod-field="damageOrEffect">
+              </div>
+            </div>
+          </div>
+        `;
+      }
 
       return `
         <div class="module-card" data-index="${index}">
@@ -290,8 +329,11 @@ function renderModuleLists() {
             </span>
             <button type="button" class="module-delete" aria-label="Delete module">✕</button>
           </div>
-          <input type="text" class="module-input dnd-input" placeholder="Feature Title" value="${escapeHtml(mod.title)}">
-          <textarea class="module-textarea dnd-input" placeholder="Description...">${escapeHtml(mod.description)}</textarea>
+          <div class="module-card__fields">
+            <input type="text" class="module-input dnd-input" placeholder="Title" value="${escapeHtml(mod.title)}">
+            <button type="button" class="${descBtnClass}" data-mod-desc="${index}" title="Edit description">📝</button>
+          </div>
+          ${damageRowHtml}
         </div>
       `;
     }).join('');
@@ -410,6 +452,16 @@ function openDescModal(itemIndex) {
   renderDescTagList(item);
 
   elements.invDescModal.classList.remove('hidden');
+}
+
+/** Open description modal for a module (action/feature) */
+function openModuleDescModal(modIndex) {
+  currentDescModuleIndex = modIndex;
+  const mod = character.modules[modIndex];
+  if (!mod) return;
+
+  elements.moduleDescTextarea.value = mod.description || '';
+  elements.moduleDescModal.classList.remove('hidden');
 }
 
 /** Render tag buttons inside the description modal */
@@ -702,6 +754,54 @@ function showSpellTooltip(e, groupId, spellId) {
 function hideSpellTooltip() {
   if (elements.spellTooltip) {
     elements.spellTooltip.classList.remove('spell-tooltip--visible');
+  }
+}
+
+/** Show action tooltip on hover */
+function showActionTooltip(e, modIndex) {
+  const mod = character.modules[modIndex];
+  if (!mod) return;
+
+  // Only show if description exists
+  if (!mod.description || !mod.description.trim()) return;
+
+  const tooltip = elements.actionTooltip;
+  const typeDef = MODULE_TYPES[mod.type];
+
+  let html = '';
+  if (mod.title) {
+    html += `<div class="spell-tooltip__title">${escapeHtml(mod.title)}</div>`;
+  }
+  if (typeDef) {
+    html += `<div class="spell-tooltip__tags"><span class="spell-item__tag" style="background:${typeDef.color}">${typeDef.label}</span></div>`;
+  }
+  html += `<div class="spell-tooltip__body">${escapeHtml(mod.description)}</div>`;
+
+  tooltip.innerHTML = html;
+
+  // Position near the card
+  const rect = e.target.closest('.module-card').getBoundingClientRect();
+  let left = rect.right + 10;
+  let top = rect.top;
+
+  // Keep tooltip within viewport
+  if (left + 350 > window.innerWidth) {
+    left = rect.left - 350;
+    if (left < 0) left = 10;
+  }
+  if (top + 200 > window.innerHeight) {
+    top = window.innerHeight - 220;
+  }
+
+  tooltip.style.left = left + 'px';
+  tooltip.style.top = top + 'px';
+  tooltip.classList.add('spell-tooltip--visible');
+}
+
+/** Hide action tooltip */
+function hideActionTooltip() {
+  if (elements.actionTooltip) {
+    elements.actionTooltip.classList.remove('spell-tooltip--visible');
   }
 }
 
@@ -1004,18 +1104,36 @@ function setupEventListeners() {
       const btn = e.target.closest('.btn--type');
       if (!btn) return;
       const type = btn.dataset.type;
-      character.modules.push({ id: generateId(), type: type, title: '', description: '' });
+      character.modules.push({
+        id: generateId(),
+        type: type,
+        title: '',
+        description: '',
+        dealsDamage: false,
+        attackBonus: '',
+        damageOrEffect: ''
+      });
       elements.typePickerModal.classList.add('hidden');
       renderModuleLists();
     });
   }
 
   elements.panelBody.addEventListener('click', e => {
+    // Delete module
     if (e.target.classList.contains('module-delete')) {
       const card = e.target.closest('.module-card');
       const index = parseInt(card.dataset.index);
       character.modules.splice(index, 1);
       renderModuleLists();
+      return;
+    }
+
+    // Open description modal for module
+    const descBtn = e.target.closest('[data-mod-desc]');
+    if (descBtn) {
+      const idx = parseInt(descBtn.dataset.modDesc);
+      openModuleDescModal(idx);
+      return;
     }
   });
 
@@ -1026,10 +1144,42 @@ function setupEventListeners() {
 
     if (e.target.classList.contains('module-input')) {
       character.modules[index].title = e.target.value;
-    } else if (e.target.classList.contains('module-textarea')) {
-      character.modules[index].description = e.target.value;
+    } else if (e.target.dataset.modField === 'attackBonus') {
+      character.modules[index].attackBonus = e.target.value;
+    } else if (e.target.dataset.modField === 'damageOrEffect') {
+      character.modules[index].damageOrEffect = e.target.value;
     }
   });
+
+  // Damage checkbox toggle
+  elements.panelBody.addEventListener('change', e => {
+    if (e.target.hasAttribute('data-mod-damage-check')) {
+      const card = e.target.closest('.module-card');
+      if (!card) return;
+      const index = parseInt(card.dataset.index);
+      character.modules[index].dealsDamage = e.target.checked;
+
+      // Show/hide damage fields
+      const fields = card.querySelector('.module-card__damage-fields');
+      if (fields) {
+        fields.style.display = e.target.checked ? '' : 'none';
+      }
+    }
+  });
+
+  // Action tooltip on hover
+  elements.panelBody.addEventListener('mouseenter', e => {
+    const card = e.target.closest('.module-card');
+    if (!card) return;
+    const index = parseInt(card.dataset.index);
+    showActionTooltip(e, index);
+  }, true);
+
+  elements.panelBody.addEventListener('mouseleave', e => {
+    const card = e.target.closest('.module-card');
+    if (!card) return;
+    hideActionTooltip();
+  }, true);
 
   function setupFilterListeners(container, filterSet) {
     if (!container) return;
@@ -1242,6 +1392,32 @@ function setupEventListeners() {
         elements.invDescModal.classList.add('hidden');
         currentDescItemIndex = null;
         renderInventory();
+      }
+    });
+  }
+
+  // Module description modal — save & close
+  if (elements.moduleDescSave) {
+    elements.moduleDescSave.addEventListener('click', () => {
+      if (currentDescModuleIndex !== null) {
+        character.modules[currentDescModuleIndex].description = elements.moduleDescTextarea.value;
+      }
+      elements.moduleDescModal.classList.add('hidden');
+      currentDescModuleIndex = null;
+      renderModuleLists();
+    });
+  }
+
+  // Close module desc modal when clicking overlay
+  if (elements.moduleDescModal) {
+    elements.moduleDescModal.addEventListener('click', e => {
+      if (e.target === elements.moduleDescModal) {
+        if (currentDescModuleIndex !== null) {
+          character.modules[currentDescModuleIndex].description = elements.moduleDescTextarea.value;
+        }
+        elements.moduleDescModal.classList.add('hidden');
+        currentDescModuleIndex = null;
+        renderModuleLists();
       }
     });
   }

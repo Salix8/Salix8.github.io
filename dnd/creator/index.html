@@ -385,6 +385,18 @@
   <!-- SPELL TOOLTIP -->
   <div class="spell-tooltip" id="spell-tooltip"></div>
 
+  <!-- ACTION DESCRIPTION MODAL -->
+  <div id="module-desc-modal" class="modal-overlay hidden">
+    <div class="modal-content inv-desc-modal">
+      <h3 class="inv-desc-modal__title">Action Description</h3>
+      <textarea id="module-desc-textarea" class="dnd-input" placeholder="Write action description here..."></textarea>
+      <button type="button" class="btn btn--primary inv-desc-modal__save" id="module-desc-save">Save & Close</button>
+    </div>
+  </div>
+
+  <!-- ACTION TOOLTIP -->
+  <div class="spell-tooltip" id="action-tooltip"></div>
+
   <script src="../js/utils/helpers.js"></script>
   <script src="../js/models/character.js"></script>
   <script src="../js/storage/storage.js"></script>
