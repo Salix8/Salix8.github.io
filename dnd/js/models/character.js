@@ -121,6 +121,7 @@ function createCharacter(overrides = {}) {
       performance: 'none', persuasion: 'none', religion: 'none',
       sleightOfHand: 'none', stealth: 'none', survival: 'none'
     },
+    customSkills: [],
 
     modules: [],
     inventory: [],
@@ -176,6 +177,17 @@ function calcSkillModifier(character, skill) {
   const mod = calcModifier(character.attributes[ability]);
   const prof = calcProficiencyBonus(character.level);
   const level = character.skills[skill];
+  if (level === 'expertise') return mod + prof * 2;
+  if (level === 'proficient') return mod + prof;
+  return mod;
+}
+
+/** Calculate a custom skill modifier */
+function calcCustomSkillModifier(character, customSkill) {
+  const ability = customSkill.ability;
+  const mod = calcModifier(character.attributes[ability]);
+  const prof = calcProficiencyBonus(character.level);
+  const level = customSkill.level;
   if (level === 'expertise') return mod + prof * 2;
   if (level === 'proficient') return mod + prof;
   return mod;

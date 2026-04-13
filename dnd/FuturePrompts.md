@@ -19,16 +19,22 @@ clip-path: polygon(
   ); -->
 
 
-# Module Prompt
+
+# 1 Spell slots Prompt
+
+
+# 2 Rework de la tool de hover
+Falta reworkear la tool de hover para que cuando pases el mouse por encima de una accion, feature, etc, te aparezca un pop up con la descripcion de la accion, feature, etc. Actualmente se ve la descripcion en un lado y a veces mal alineada. Creo que podria ser mejor si el pop up apareciese encima de las skills.
+
+
+# 3 Conditions Prompt
+//Falta una pestaña de Conditions and defenses
+
+
+# 4 Module Prompt
 //Falta una pestaña de All que cuando cliques Add Module te aparezca un pop up para elegir cual de los 8 tipos de modulos quiere añadir.
 //Cuando añades una "Class Feature" puede que esta implemente una accion, una reaccion o una accion bonus. Esta se debera añadir tambien en la otra pestaña de Acciones. Pero en la pestaña de All no debera aparecer duplicada.
 
-# Actions Prompt
-//Falta añadir el Bono de ataque y daño de ciertas cosas
-En todas las Actiones debe haber un bool que pregunte si esa Action hace daño de alguna forma. Si es asi, debe aparecer un campo con el modificador de ataque y el daño.
 
-# Conditions Prompt
-//Falta una pestaña de Conditions and defenses
-
-# Tool import to 5etools Prompt
+# 5 Tool import to 5etools Prompt
 //Falta implementar la importacion de herramientas desde 5etools

@@ -107,6 +107,14 @@ const elements = {
   moduleCalcCancel: document.getElementById('module-calc-cancel'),
   moduleCalcConfirm: document.getElementById('module-calc-confirm'),
 
+  // Custom Skill Modal
+  addCustomSkillBtn: document.getElementById('add-custom-skill-btn'),
+  customSkillModal: document.getElementById('custom-skill-modal'),
+  customSkillName: document.getElementById('custom-skill-name'),
+  customSkillAbility: document.getElementById('custom-skill-ability'),
+  customSkillCancel: document.getElementById('custom-skill-cancel'),
+  customSkillConfirm: document.getElementById('custom-skill-confirm'),
+
   // Buttons
   addActionBtn: document.getElementById('add-action-module'),
   addFeatureBtn: document.getElementById('add-feature-module'),
@@ -214,7 +222,7 @@ function renderAbilities() {
 function renderSkills() {
   const skillKeys = Object.keys(SKILL_NAMES).sort((a, b) => SKILL_NAMES[a].localeCompare(SKILL_NAMES[b]));
 
-  elements.skillsList.innerHTML = skillKeys.map(skill => {
+  let html = skillKeys.map(skill => {
     const name = SKILL_NAMES[skill];
     const ability = SKILL_ABILITIES[skill];
     const abbr = ABILITY_ABBR[ability];
@@ -233,6 +241,28 @@ function renderSkills() {
     </div>
     `;
   }).join('');
+
+  if (character.customSkills && character.customSkills.length > 0) {
+    html += '<div style="margin: 0.5rem 0; border-top: 1px solid var(--border-color);"></div>';
+    html += character.customSkills.map(cSkill => {
+      const abbr = ABILITY_ABBR[cSkill.ability];
+      const mod = calcCustomSkillModifier(character, cSkill);
+      return `
+        <div class="skill-row custom-skill-row" style="position: relative; padding-right: 1.5rem;">
+          <button type="button" class="prof-dot-btn skill-toggle" data-custom-skill="${cSkill.id}" data-level="${cSkill.level}" aria-label="Toggle custom skill proficiency">
+            <span class="prof-dot"></span>
+            <span class="prof-dot"></span>
+          </button>
+          <span class="skill-row__name" style="color: var(--text-base);">${escapeHtml(cSkill.name)}</span>
+          <span class="skill-row__ability">(${abbr})</span>
+          <span class="skill-row__mod" id="custom-skill-mod-${cSkill.id}">${formatModifier(mod)}</span>
+          <button type="button" class="skill-delete-btn" data-custom-skill-del="${cSkill.id}" style="position: absolute; right: 0; font-size: 0.7rem; color: var(--text-muted); background: transparent; border: none; cursor: pointer; padding: 0.2rem;" aria-label="Delete Custom Skill">✕</button>
+        </div>
+      `;
+    }).join('');
+  }
+
+  elements.skillsList.innerHTML = html;
 }
 
 /** Render competencies list */
@@ -311,11 +341,11 @@ function renderModuleLists() {
       if (isActionsGroup) {
         const checked = mod.dealsDamage ? 'checked' : '';
         const fieldsStyle = mod.dealsDamage ? '' : 'style="display:none;"';
-        
+
         damageCheckHtml = `
           <label class="module-calc-toggle" style="margin-left: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.65rem; color: var(--text-muted); cursor: pointer;" title="Toggle Damage/Effect Fields">
             <input type="checkbox" data-mod-damage-check ${checked} style="accent-color: var(--accent-1); cursor: pointer;">
-            Damage
+            ⚔️
           </label>
         `;
 
@@ -930,21 +960,44 @@ function setupEventListeners() {
 
   // Skill Prof/Exp Toggles
   elements.skillsList.addEventListener('click', e => {
+    // Delete Custom Skill
+    const delBtn = e.target.closest('[data-custom-skill-del]');
+    if (delBtn) {
+      const id = delBtn.dataset.customSkillDel;
+      character.customSkills = character.customSkills.filter(s => s.id !== id);
+      renderSkills();
+      return;
+    }
+
     const btn = e.target.closest('.skill-toggle');
     if (!btn) return;
 
     const skill = btn.dataset.skill;
-    const current = character.skills[skill];
+    const customId = btn.dataset.customSkill;
 
     // Cycle: none -> proficient -> expertise -> none
-    let next = 'none';
-    if (current === 'none') next = 'proficient';
-    else if (current === 'proficient') next = 'expertise';
+    function cycleProf(current) {
+      if (current === 'none') return 'proficient';
+      if (current === 'proficient') return 'expertise';
+      return 'none';
+    }
 
-    character.skills[skill] = next;
-    btn.dataset.level = next;
-
-    document.getElementById(`skill-mod-${skill}`).textContent = formatModifier(calcSkillModifier(character, skill));
+    let next;
+    if (skill) {
+      const current = character.skills[skill];
+      next = cycleProf(current);
+      character.skills[skill] = next;
+      btn.dataset.level = next;
+      document.getElementById(`skill-mod-${skill}`).textContent = formatModifier(calcSkillModifier(character, skill));
+    } else if (customId) {
+      const cs = character.customSkills.find(s => s.id === customId);
+      if (cs) {
+        next = cycleProf(cs.level);
+        cs.level = next;
+        btn.dataset.level = next;
+        document.getElementById(`custom-skill-mod-${customId}`).textContent = formatModifier(calcCustomSkillModifier(character, cs));
+      }
+    }
   });
 
   // Competencies
@@ -1475,7 +1528,7 @@ function setupEventListeners() {
 
         // Reset to empty when switching from automated to manual
         if (mod.calcType === 'none' && oldType !== 'none') {
-            mod.attackBonus = '';
+          mod.attackBonus = '';
         }
       }
       elements.moduleCalcModal.classList.add('hidden');
@@ -1490,6 +1543,48 @@ function setupEventListeners() {
       if (e.target === elements.moduleCalcModal) {
         elements.moduleCalcModal.classList.add('hidden');
         currentCalcModuleIndex = null;
+      }
+    });
+  }
+
+  // Custom Skill Modal Add
+  if (elements.addCustomSkillBtn) {
+    elements.addCustomSkillBtn.addEventListener('click', () => {
+      elements.customSkillName.value = '';
+      elements.customSkillAbility.value = 'strength'; // default
+      elements.customSkillModal.classList.remove('hidden');
+    });
+  }
+
+  if (elements.customSkillCancel) {
+    elements.customSkillCancel.addEventListener('click', () => {
+      elements.customSkillModal.classList.add('hidden');
+    });
+  }
+
+  if (elements.customSkillConfirm) {
+    elements.customSkillConfirm.addEventListener('click', () => {
+      const title = elements.customSkillName.value.trim();
+      if (!title) return;
+
+      if (!character.customSkills) character.customSkills = [];
+
+      character.customSkills.push({
+        id: generateId(),
+        name: title,
+        ability: elements.customSkillAbility.value,
+        level: 'none'
+      });
+
+      elements.customSkillModal.classList.add('hidden');
+      renderSkills();
+    });
+  }
+
+  if (elements.customSkillModal) {
+    elements.customSkillModal.addEventListener('click', e => {
+      if (e.target === elements.customSkillModal) {
+        elements.customSkillModal.classList.add('hidden');
       }
     });
   }
@@ -1977,6 +2072,16 @@ function updateAllDerivedStats() {
   Object.keys(SKILL_NAMES).forEach(skill => {
     document.getElementById(`skill-mod-${skill}`).textContent = formatModifier(calcSkillModifier(character, skill));
   });
+
+  // Update Custom Skills
+  if (character.customSkills) {
+    character.customSkills.forEach(cs => {
+      const el = document.getElementById(`custom-skill-mod-${cs.id}`);
+      if (el) {
+        el.textContent = formatModifier(calcCustomSkillModifier(character, cs));
+      }
+    });
+  }
 
   // Update Spell Stats (DC and Attack depend on ability mods and prof)
   updateSpellStats();
