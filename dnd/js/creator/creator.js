@@ -124,7 +124,15 @@ const elements = {
   actionsFilters: document.getElementById('actions-filters'),
   featuresFilters: document.getElementById('features-filters'),
   saveBtn: document.getElementById('save-char'),
-  exportBtn: document.getElementById('export-char')
+  exportBtn: document.getElementById('export-char'),
+
+  // Settings & Utilities Modal
+  btnSettings: document.getElementById('btn-settings'),
+  settingsModal: document.getElementById('settings-modal'),
+  settingsClose: document.getElementById('settings-close'),
+  convMeters: document.getElementById('conv-meters'),
+  convFeet: document.getElementById('conv-feet'),
+  convSquares: document.getElementById('conv-squares')
 };
 
 // Filter States
@@ -2254,6 +2262,80 @@ function escapeHtml(unsafe) {
       case '"': return '&quot;';
       default: return '&#039;';
     }
+  });
+}
+
+// Global behavior: auto-select text in inputs when clicked/focused,
+// except for HP current/temp which have their own logic.
+document.addEventListener('focusin', e => {
+  if (e.target.tagName === 'INPUT') {
+    const type = e.target.type;
+    if (type === 'text' || type === 'number') {
+      const id = e.target.id || '';
+      if (id !== 'hp-current' && id !== 'hp-temp') {
+        e.target.select();
+      }
+    }
+  }
+});
+
+// Settings Modal Events
+if (elements.btnSettings) {
+  elements.btnSettings.addEventListener('click', () => {
+    elements.settingsModal.classList.remove('hidden');
+  });
+}
+if (elements.settingsClose) {
+  elements.settingsClose.addEventListener('click', () => {
+    elements.settingsModal.classList.add('hidden');
+  });
+}
+if (elements.settingsModal) {
+  elements.settingsModal.addEventListener('click', e => {
+    if (e.target === elements.settingsModal) {
+      elements.settingsModal.classList.add('hidden');
+    }
+  });
+}
+
+// Distance Converter Logic
+const round2 = num => Math.round(num * 100) / 100;
+
+if (elements.convMeters) {
+  elements.convMeters.addEventListener('input', e => {
+    const m = parseFloat(e.target.value);
+    if (isNaN(m)) {
+      elements.convFeet.value = '';
+      elements.convSquares.value = '';
+      return;
+    }
+    // 1.5m = 5ft = 1 square
+    elements.convSquares.value = round2(m / 1.5);
+    elements.convFeet.value = round2((m / 1.5) * 5);
+  });
+}
+if (elements.convFeet) {
+  elements.convFeet.addEventListener('input', e => {
+    const f = parseFloat(e.target.value);
+    if (isNaN(f)) {
+      elements.convMeters.value = '';
+      elements.convSquares.value = '';
+      return;
+    }
+    elements.convSquares.value = round2(f / 5);
+    elements.convMeters.value = round2((f / 5) * 1.5);
+  });
+}
+if (elements.convSquares) {
+  elements.convSquares.addEventListener('input', e => {
+    const s = parseFloat(e.target.value);
+    if (isNaN(s)) {
+      elements.convMeters.value = '';
+      elements.convFeet.value = '';
+      return;
+    }
+    elements.convMeters.value = round2(s * 1.5);
+    elements.convFeet.value = round2(s * 5);
   });
 }
 

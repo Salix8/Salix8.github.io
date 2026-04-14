@@ -32,9 +32,18 @@
             <label for="char-class">Class</label>
             <input type="text" id="char-class" placeholder="e.g. Fighter" autocomplete="off">
           </div>
-          <div class="char-field">
-            <label for="char-level">Level</label>
-            <input type="number" id="char-level" value="1" min="1" max="20">
+          <div class="char-field char-field--level">
+            <div class="char-field-col">
+              <label for="char-level">Level</label>
+              <input type="number" id="char-level" value="1" min="1" max="20">
+            </div>
+            <div class="char-field-actions">
+              <button class="level-btn" title="Short Rest" id="btn-short-rest">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #ff9d00;"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+              </button>
+              <button class="level-btn" title="Long Rest" id="btn-long-rest">⛺</button>
+              <button class="level-btn" title="Settings" id="btn-settings">⚙️</button>
+            </div>
           </div>
           <div class="char-field">
             <label for="char-race">Race</label>
@@ -399,7 +408,7 @@
   <div id="module-calc-modal" class="modal-overlay hidden">
     <div class="modal-content type-picker" style="max-width: 350px;">
       <h3 class="type-picker__title">Calculate Atk / CD</h3>
-      
+
       <div style="margin-bottom: 1rem;">
         <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Type</label>
         <select id="module-calc-type" class="dnd-input">
@@ -431,7 +440,7 @@
   <div id="custom-skill-modal" class="modal-overlay hidden">
     <div class="modal-content type-picker" style="max-width: 350px;">
       <h3 class="type-picker__title">New Custom Skill</h3>
-      
+
       <div style="margin-bottom: 1rem;">
         <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Skill / Tool Name</label>
         <input type="text" id="custom-skill-name" class="dnd-input" placeholder="e.g. Sailing, Playing Card Set...">
@@ -452,6 +461,33 @@
       <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
         <button type="button" class="btn btn--outline" id="custom-skill-cancel">Cancel</button>
         <button type="button" class="btn btn--primary" id="custom-skill-confirm">Add Skill</button>
+      </div>
+    </div>
+  </div>
+  <!-- SETTINGS MODAL -->
+  <div id="settings-modal" class="modal-overlay hidden" style="z-index: 3000;">
+    <div class="modal-content type-picker" style="max-width: 400px; padding: 1.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h3 class="type-picker__title" style="margin: 0; font-size: 1.1rem;">Settings & Utilities</h3>
+        <button type="button" class="btn btn--outline" id="settings-close" style="padding: 0.2rem 0.5rem; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">✕</button>
+      </div>
+
+      <div class="settings-section">
+        <h4 style="font-size: 0.8rem; color: var(--accent-1); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Distance Converter</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; text-align: center;">
+          <div class="char-field">
+            <label style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 0.3rem;">Metros (m)</label>
+            <input type="number" id="conv-meters" class="dnd-input" step="1.5" style="text-align: center; font-size: 1.2rem; padding: 0.5rem 0.25rem;">
+          </div>
+          <div class="char-field">
+            <label style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 0.3rem;">Feets (ft)</label>
+            <input type="number" id="conv-feet" class="dnd-input" step="5" style="text-align: center; font-size: 1.2rem; padding: 0.5rem 0.25rem;">
+          </div>
+          <div class="char-field">
+            <label style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 0.3rem;">Casillas</label>
+            <input type="number" id="conv-squares" class="dnd-input" step="1" style="text-align: center; font-size: 1.2rem; padding: 0.5rem 0.25rem;">
+          </div>
+        </div>
       </div>
     </div>
   </div>

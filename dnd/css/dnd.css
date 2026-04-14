@@ -165,6 +165,49 @@ input[type="number"] {
   max-width: 60px;
 }
 
+.char-field--level {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-end !important;
+  gap: 0.75rem;
+}
+
+.char-field-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+
+.char-field-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding-bottom: 0.1rem;
+  margin-left: auto;
+}
+
+.level-btn {
+  background: hsla(230, 20%, 15%, 0.6);
+  border: 1px solid var(--border-glass);
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  transition: all var(--transition-fast);
+}
+
+.level-btn:hover {
+  background: hsla(230, 20%, 25%, 0.8);
+  color: var(--accent-1);
+  border-color: var(--accent-1);
+}
+
 /* ===== CHARACTER SHEET WRAPPER ===== */
 .char-sheet {
   display: flex;
