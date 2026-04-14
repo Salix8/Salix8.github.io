@@ -2120,7 +2120,6 @@ input[type="number"] {
   overflow: hidden;
   position: relative;
   transition: border-color var(--transition-fast);
-  animation: tagFadeIn 0.25s ease;
 }
 
 .spell-group-card:hover {
@@ -2204,6 +2203,107 @@ input[type="number"] {
 .spell-group__delete:hover {
   background: hsla(0, 70%, 55%, 0.3);
   color: hsl(0, 70%, 70%);
+}
+
+/* ===== SPELL SLOT DOTS ===== */
+.spell-slots-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 0.25rem;
+}
+
+/* Single clickable button containing all dots (like prof-dot-btn) */
+.spell-slot-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  margin: -4px;
+  border-radius: 4px;
+  transition: background var(--transition-fast);
+  position: relative;
+  z-index: 5;
+}
+
+.spell-slot-btn:hover {
+  background: hsla(0, 0%, 100%, 0.05);
+}
+
+/* Individual dot span (like prof-dot) */
+.spell-slot-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  border: 1.5px solid var(--text-muted);
+  background: transparent;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+/* Fill dots left-to-right based on data-used attribute */
+.spell-slot-btn[data-used="1"] .spell-slot-dot:nth-child(-n+1),
+.spell-slot-btn[data-used="2"] .spell-slot-dot:nth-child(-n+2),
+.spell-slot-btn[data-used="3"] .spell-slot-dot:nth-child(-n+3),
+.spell-slot-btn[data-used="4"] .spell-slot-dot:nth-child(-n+4),
+.spell-slot-btn[data-used="5"] .spell-slot-dot:nth-child(-n+5),
+.spell-slot-btn[data-used="6"] .spell-slot-dot:nth-child(-n+6),
+.spell-slot-btn[data-used="7"] .spell-slot-dot:nth-child(-n+7),
+.spell-slot-btn[data-used="8"] .spell-slot-dot:nth-child(-n+8),
+.spell-slot-btn[data-used="9"] .spell-slot-dot:nth-child(-n+9),
+.spell-slot-btn[data-used="10"] .spell-slot-dot:nth-child(-n+10),
+.spell-slot-btn[data-used="11"] .spell-slot-dot:nth-child(-n+11),
+.spell-slot-btn[data-used="12"] .spell-slot-dot:nth-child(-n+12),
+.spell-slot-btn[data-used="13"] .spell-slot-dot:nth-child(-n+13),
+.spell-slot-btn[data-used="14"] .spell-slot-dot:nth-child(-n+14),
+.spell-slot-btn[data-used="15"] .spell-slot-dot:nth-child(-n+15),
+.spell-slot-btn[data-used="16"] .spell-slot-dot:nth-child(-n+16),
+.spell-slot-btn[data-used="17"] .spell-slot-dot:nth-child(-n+17),
+.spell-slot-btn[data-used="18"] .spell-slot-dot:nth-child(-n+18),
+.spell-slot-btn[data-used="19"] .spell-slot-dot:nth-child(-n+19),
+.spell-slot-btn[data-used="20"] .spell-slot-dot:nth-child(-n+20) {
+  background: var(--accent-1);
+  border-color: var(--accent-1);
+  box-shadow: 0 0 6px hsla(265, 90%, 65%, 0.4);
+}
+
+/* Inline tracker (like hd-tracker) */
+.spell-slots-tracker {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.spell-slots-input {
+  width: 30px;
+  text-align: center;
+  padding: 0.15rem 0.1rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: hsla(230, 20%, 10%, 0.6);
+  border: 1px solid var(--border-glass);
+  border-radius: 4px;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.spell-slots-input:focus {
+  border-color: var(--accent-1);
+  box-shadow: 0 0 0 2px hsla(265, 90%, 65%, 0.15);
+}
+
+.spell-slots-divider {
+  color: var(--text-muted);
+  font-weight: 700;
+  padding: 0 0.1rem;
 }
 
 /* Spell Items List */

@@ -63,6 +63,7 @@ const elements = {
   spellFocusSelector: document.getElementById('spell-focus-selector'),
   spellDC: document.getElementById('spell-dc'),
   spellAtk: document.getElementById('spell-atk'),
+  spellSlotsInput: document.getElementById('spell-slots-input'),
   spellGroups: document.getElementById('spell-groups'),
   addSpellGroupBtn: document.getElementById('add-spell-group'),
   spellTagFilterBtn: document.getElementById('spell-tag-filter-btn'),
@@ -178,6 +179,14 @@ function init() {
   }
   if (!character.spellcasting.groups) character.spellcasting.groups = [];
   if (!character.spellcasting.customTags) character.spellcasting.customTags = [];
+
+  // Ensure spell slot data exists on level groups (migration for older saves)
+  character.spellcasting.groups.forEach(g => {
+    if (g.type === 'level') {
+      if (g.totalSlots === undefined) g.totalSlots = 0;
+      if (g.usedSlots === undefined) g.usedSlots = 0;
+    }
+  });
 
   renderAbilities();
   renderSkills();
@@ -606,6 +615,35 @@ function renderSpells() {
       groupTitle = group.label ? `<span class="spell-group__title">${escapeHtml(group.label)}</span>` : '';
     }
 
+    // Build spell slot dots + tracker for level groups
+    let slotsHtml = '';
+    if (group.type === 'level') {
+      const total = group.totalSlots || 0;
+      const used = group.usedSlots || 0;
+
+      // Build dots inside a single button (like skill prof dots)
+      let dotsHtml = '';
+      if (total > 0) {
+        let dots = '';
+        for (let i = 0; i < total; i++) {
+          dots += `<span class="spell-slot-dot" data-slot-index="${i}"></span>`;
+        }
+        dotsHtml = `<button type="button" class="spell-slot-btn" data-slot-group="${group.id}" data-used="${used}" aria-label="Toggle spell slot">${dots}</button>`;
+      }
+
+      // Inline tracker: input / input (like hit dice)
+      slotsHtml = `
+        <div class="spell-slots-row">
+          ${dotsHtml}
+          <div class="spell-slots-tracker">
+            <input type="number" class="spell-slots-input" data-slot-used="${group.id}" value="${used}" min="0" max="${total}">
+            <span class="spell-slots-divider">/</span>
+            <input type="number" class="spell-slots-input" data-slot-total="${group.id}" value="${total}" min="0" max="20">
+          </div>
+        </div>
+      `;
+    }
+
     // Build spell items — filter if tags are active
     const spellsHtml = (group.spells || []).map(spell => {
       // Tag filtering
@@ -638,6 +676,7 @@ function renderSpells() {
         <div class="spell-group__header">
           <div class="spell-group__header-left">
             ${badgeHtml}
+            ${slotsHtml}
             ${groupTitle}
           </div>
           <div class="spell-group__header-right">
@@ -1733,6 +1772,8 @@ function setupEventListeners() {
         id: generateId(),
         type: 'level',
         level: level,
+        totalSlots: 1,
+        usedSlots: 0,
         spells: []
       });
 
@@ -1797,6 +1838,35 @@ function setupEventListeners() {
   if (elements.spellGroups) {
     // Click events: delete group, add spell, delete spell, open desc modal
     elements.spellGroups.addEventListener('click', e => {
+      // Spell slot button toggle (D&D Beyond style)
+      const slotBtn = e.target.closest('.spell-slot-btn');
+      if (slotBtn) {
+        const groupId = slotBtn.dataset.slotGroup;
+        const group = character.spellcasting.groups.find(g => g.id === groupId);
+        if (!group) return;
+
+        const used = group.usedSlots || 0;
+        const total = group.totalSlots || 0;
+
+        // Check which dot was clicked
+        const dot = e.target.closest('.spell-slot-dot');
+        if (dot && dot.dataset.slotIndex !== undefined) {
+          const idx = parseInt(dot.dataset.slotIndex);
+          if (idx < used) {
+            // Clicked a filled dot → remove 1
+            group.usedSlots = Math.max(0, used - 1);
+          } else {
+            // Clicked an empty dot → add 1
+            group.usedSlots = Math.min(total, used + 1);
+          }
+        } else {
+          // Clicked button area but not a specific dot — ignore
+          return;
+        }
+        renderSpells();
+        return;
+      }
+
       // Delete group
       const delGroupBtn = e.target.closest('[data-del-group]');
       if (delGroupBtn) {
@@ -1853,7 +1923,7 @@ function setupEventListeners() {
       }
     });
 
-    // Inline spell name editing
+    // Inline spell name editing + spell slot inputs
     elements.spellGroups.addEventListener('input', e => {
       if (e.target.hasAttribute('data-spell-name')) {
         const item = e.target.closest('.spell-item');
@@ -1865,6 +1935,34 @@ function setupEventListeners() {
           const spell = group.spells.find(s => s.id === spellId);
           if (spell) spell.name = e.target.value;
         }
+      }
+    });
+
+    // Spell slot inline input changes (used / total)
+    elements.spellGroups.addEventListener('change', e => {
+      // Total slots changed
+      if (e.target.hasAttribute('data-slot-total')) {
+        const groupId = e.target.dataset.slotTotal;
+        const group = character.spellcasting.groups.find(g => g.id === groupId);
+        if (!group) return;
+        let val = parseInt(e.target.value) || 0;
+        if (val < 0) val = 0;
+        if (val > 20) val = 20;
+        group.totalSlots = val;
+        if (group.usedSlots > val) group.usedSlots = val;
+        renderSpells();
+      }
+
+      // Used slots changed
+      if (e.target.hasAttribute('data-slot-used')) {
+        const groupId = e.target.dataset.slotUsed;
+        const group = character.spellcasting.groups.find(g => g.id === groupId);
+        if (!group) return;
+        let val = parseInt(e.target.value) || 0;
+        if (val < 0) val = 0;
+        if (val > group.totalSlots) val = group.totalSlots;
+        group.usedSlots = val;
+        renderSpells();
       }
     });
 
