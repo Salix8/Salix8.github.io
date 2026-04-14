@@ -665,11 +665,11 @@ input[type="number"] {
 }
 
 .skill-row:nth-child(odd) {
-  background: hsla(230, 20%, 16%, 0.3);
+  background: var(--bg-skill-odd, hsla(230, 20%, 16%, 0.3));
 }
 
 .skill-row:hover {
-  background: hsla(230, 20%, 20%, 0.5);
+  background: var(--bg-skill-hover, hsla(230, 20%, 20%, 0.5));
 }
 
 .skill-row__name {

@@ -156,12 +156,17 @@ const elements = {
   colorAccent2Hex: document.getElementById('color-accent2-hex'),
   colorAccent2: document.getElementById('color-accent2'),
   
-  colorBg2Hex: document.getElementById('color-bg2-hex'),
-  colorBg2: document.getElementById('color-bg2'),
   colorText2Hex: document.getElementById('color-text2-hex'),
   colorText2: document.getElementById('color-text2'),
   colorText3Hex: document.getElementById('color-text3-hex'),
   colorText3: document.getElementById('color-text3'),
+
+  colorGlassHex: document.getElementById('color-glass-hex'),
+  colorGlass: document.getElementById('color-glass'),
+  opacityGlass: document.getElementById('opacity-glass'),
+  colorSkillHex: document.getElementById('color-skill-hex'),
+  colorSkill: document.getElementById('color-skill'),
+  opacitySkill: document.getElementById('opacity-skill'),
 
   colorFont: document.getElementById('color-font'),
   colorReset: document.getElementById('color-reset')
@@ -237,6 +242,11 @@ function init() {
   updateSpellStats();
   updateSpellFocusUI();
   updateUI();
+  
+  // Custom Character Colors
+  if (!character.theme) character.theme = {};
+  loadTheme();
+  
   setupEventListeners();
 }
 
@@ -2361,30 +2371,60 @@ if (elements.colorPanelClose) elements.colorPanelClose.addEventListener('click',
 if (elements.colorPanelOverlay) elements.colorPanelOverlay.addEventListener('click', hideColorPanel);
 
 // Color Customization Logic
-const THEME_STORAGE_KEY = 'dnd-character-theme';
 
 const updateColor = (varName, hexValue, hexInput, colorInput, save = true) => {
   document.documentElement.style.setProperty(varName, hexValue);
-  if (hexInput) hexInput.value = hexValue;
-  if (colorInput) colorInput.value = hexValue;
+  if (hexInput && hexInput.value !== hexValue) hexInput.value = hexValue;
+  
+  // Set the color input (stripping alpha if present because type="color" only accepts 6 chars)
+  if (colorInput && hexValue.startsWith('#') && hexValue.length >= 7) {
+    colorInput.value = hexValue.substring(0, 7);
+  } else if (colorInput) {
+    colorInput.value = hexValue;
+  }
   
   if (save) saveTheme();
 };
 
-const setupColorPicker = (hexInput, colorInput, cssVar) => {
+const opacityToHex = (opacity) => {
+  return Math.round(parseFloat(opacity) * 255).toString(16).padStart(2, '0');
+};
+
+const setupColorPicker = (hexInput, colorInput, cssVar, opacitySlider = null) => {
   if (!hexInput || !colorInput) return;
   
-  colorInput.addEventListener('input', e => {
-    updateColor(cssVar, e.target.value, hexInput, colorInput);
+  const getFullHex = () => {
+    let base = colorInput.value;
+    if (opacitySlider) {
+      base += opacityToHex(opacitySlider.value);
+    }
+    return base;
+  };
+  
+  colorInput.addEventListener('input', () => {
+    updateColor(cssVar, getFullHex(), hexInput, colorInput);
   });
+  
+  if (opacitySlider) {
+    opacitySlider.addEventListener('input', () => {
+      updateColor(cssVar, getFullHex(), hexInput, colorInput);
+    });
+  }
   
   hexInput.addEventListener('change', e => {
     let val = e.target.value.trim();
     if (!val.startsWith('#')) val = '#' + val;
-    if (/^#[0-9A-Fa-f]{6}$/i.test(val)) {
+    // Validate hex 6 or hex 8
+    if (/^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$/i.test(val)) {
       updateColor(cssVar, val, hexInput, colorInput);
+      
+      // Sync slider if alpha provided
+      if (opacitySlider && val.length === 9) {
+        const alphaHex = val.substring(7, 9);
+        opacitySlider.value = (parseInt(alphaHex, 16) / 255).toFixed(2);
+      }
     } else {
-      hexInput.value = colorInput.value; // revert invalid hex
+      hexInput.value = getFullHex(); // revert invalid hex
     }
   });
 };
@@ -2396,26 +2436,42 @@ const saveTheme = () => {
     accent: elements.colorAccent ? elements.colorAccent.value : '',
     accent2: elements.colorAccent2 ? elements.colorAccent2.value : '',
     font: elements.colorFont ? elements.colorFont.value : '',
-    bg2: elements.colorBg2 ? elements.colorBg2.value : '',
     text2: elements.colorText2 ? elements.colorText2.value : '',
-    text3: elements.colorText3 ? elements.colorText3.value : ''
+    text3: elements.colorText3 ? elements.colorText3.value : '',
+    glass: elements.colorGlass ? elements.colorGlass.value : '',
+    skill: elements.colorSkill ? elements.colorSkill.value : ''
   };
-  localStorage.setItem(THEME_STORAGE_KEY, JSON.stringify(theme));
+  
+  character.theme = theme;
+  saveCharacter(character);
 };
 
 const loadTheme = () => {
   try {
-    const data = localStorage.getItem(THEME_STORAGE_KEY);
-    if (!data) return;
-    const theme = JSON.parse(data);
+    const theme = character.theme || {};
     
+    // Apply variables to document
     if (theme.bg && elements.colorBg) updateColor('--bg-primary', theme.bg, elements.colorBgHex, elements.colorBg, false);
     if (theme.text && elements.colorText) updateColor('--text-primary', theme.text, elements.colorTextHex, elements.colorText, false);
     if (theme.accent && elements.colorAccent) updateColor('--accent-1', theme.accent, elements.colorAccentHex, elements.colorAccent, false);
     if (theme.accent2 && elements.colorAccent2) updateColor('--accent-2', theme.accent2, elements.colorAccent2Hex, elements.colorAccent2, false);
-    if (theme.bg2 && elements.colorBg2) updateColor('--bg-secondary', theme.bg2, elements.colorBg2Hex, elements.colorBg2, false);
     if (theme.text2 && elements.colorText2) updateColor('--text-secondary', theme.text2, elements.colorText2Hex, elements.colorText2, false);
     if (theme.text3 && elements.colorText3) updateColor('--text-muted', theme.text3, elements.colorText3Hex, elements.colorText3, false);
+    
+    // Check alpha in theme values and sync sliders
+    if (theme.glass && elements.colorGlass) {
+      if (theme.glass.length === 9 && elements.opacityGlass) {
+        elements.opacityGlass.value = (parseInt(theme.glass.substring(7, 9), 16) / 255).toFixed(2);
+      }
+      updateColor('--bg-glass', theme.glass, elements.colorGlassHex, elements.colorGlass, false);
+    }
+    
+    if (theme.skill && elements.colorSkill) {
+      if (theme.skill.length === 9 && elements.opacitySkill) {
+        elements.opacitySkill.value = (parseInt(theme.skill.substring(7, 9), 16) / 255).toFixed(2);
+      }
+      updateColor('--bg-skill-odd', theme.skill, elements.colorSkillHex, elements.colorSkill, false);
+    }
     
     if (theme.font && elements.colorFont) {
       elements.colorFont.value = theme.font;
@@ -2432,9 +2488,10 @@ setupColorPicker(elements.colorBgHex, elements.colorBg, '--bg-primary');
 setupColorPicker(elements.colorTextHex, elements.colorText, '--text-primary');
 setupColorPicker(elements.colorAccentHex, elements.colorAccent, '--accent-1');
 setupColorPicker(elements.colorAccent2Hex, elements.colorAccent2, '--accent-2');
-setupColorPicker(elements.colorBg2Hex, elements.colorBg2, '--bg-secondary');
 setupColorPicker(elements.colorText2Hex, elements.colorText2, '--text-secondary');
 setupColorPicker(elements.colorText3Hex, elements.colorText3, '--text-muted');
+setupColorPicker(elements.colorGlassHex, elements.colorGlass, '--bg-glass', elements.opacityGlass);
+setupColorPicker(elements.colorSkillHex, elements.colorSkill, '--bg-skill-odd', elements.opacitySkill);
 
 if (elements.colorFont) {
   elements.colorFont.addEventListener('change', e => {
@@ -2446,13 +2503,11 @@ if (elements.colorFont) {
 
 if (elements.colorReset) {
   elements.colorReset.addEventListener('click', () => {
-    localStorage.removeItem(THEME_STORAGE_KEY);
+    character.theme = {};
+    saveCharacter(character);
     location.reload();
   });
 }
-
-// Ensure theme is loaded globally independently of character data
-loadTheme();
 
 // Distance Converter Logic
 const round2 = num => Math.round(num * 100) / 100;

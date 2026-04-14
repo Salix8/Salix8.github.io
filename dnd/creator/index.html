@@ -592,10 +592,24 @@
       <details class="color-panel__section" style="margin-top: 1rem; border-top: 1px solid var(--border-glass); padding-top: 1.5rem;">
         <summary class="color-panel__section-title" style="cursor: pointer; user-select: none; margin-bottom: 0;">ADVANCED</summary>
         <div style="margin-top: 1.5rem;">
-          <div class="color-picker-row">
-            <span class="color-picker-row__label">Secondary BG</span>
-            <input type="text" class="color-picker-row__hex" id="color-bg2-hex" spellcheck="false">
-            <input type="color" class="color-picker-row__swatch" id="color-bg2">
+          <div class="color-picker-row" style="margin-bottom: 0.2rem;">
+            <span class="color-picker-row__label" title="Used in Stat Badges and Ability Cards">Glass BG</span>
+            <input type="text" class="color-picker-row__hex" id="color-glass-hex" spellcheck="false" placeholder="#rrggbbaa">
+            <input type="color" class="color-picker-row__swatch" id="color-glass">
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; padding: 0 0.5rem;">
+            <span style="font-size: 0.7rem; color: var(--text-muted);">Opacity:</span>
+            <input type="range" id="opacity-glass" min="0" max="1" step="0.05" value="0.35" style="flex: 1;">
+          </div>
+          
+          <div class="color-picker-row" style="margin-bottom: 0.2rem;">
+            <span class="color-picker-row__label" title="Used in alternating skill rows">Skill Alt BG</span>
+            <input type="text" class="color-picker-row__hex" id="color-skill-hex" spellcheck="false" placeholder="#rrggbbaa">
+            <input type="color" class="color-picker-row__swatch" id="color-skill">
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; padding: 0 0.5rem;">
+            <span style="font-size: 0.7rem; color: var(--text-muted);">Opacity:</span>
+            <input type="range" id="opacity-skill" min="0" max="1" step="0.05" value="0.3" style="flex: 1;">
           </div>
           <div class="color-picker-row">
             <span class="color-picker-row__label">Secondary Text</span>
