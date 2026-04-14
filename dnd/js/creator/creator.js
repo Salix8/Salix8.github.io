@@ -128,11 +128,43 @@ const elements = {
 
   // Settings & Utilities Modal
   btnSettings: document.getElementById('btn-settings'),
-  settingsModal: document.getElementById('settings-modal'),
-  settingsClose: document.getElementById('settings-close'),
+  settingsDropdown: document.getElementById('settings-dropdown'),
+  btnOpenConverter: document.getElementById('settings-open-converter'),
+  btnOpenColors: document.getElementById('settings-open-colors'),
+  
+  converterPanelOverlay: document.getElementById('converter-panel-overlay'),
+  converterPanel: document.getElementById('converter-panel'),
+  converterClose: document.getElementById('converter-close'),
   convMeters: document.getElementById('conv-meters'),
   convFeet: document.getElementById('conv-feet'),
-  convSquares: document.getElementById('conv-squares')
+  convSquares: document.getElementById('conv-squares'),
+  convKg: document.getElementById('conv-kg'),
+  convLbs: document.getElementById('conv-lbs'),
+  convMl: document.getElementById('conv-ml'),
+  convOz: document.getElementById('conv-oz'),
+
+  // Color Panel
+  colorPanelOverlay: document.getElementById('color-panel-overlay'),
+  colorPanel: document.getElementById('color-panel'),
+  colorPanelClose: document.getElementById('color-panel-close'),
+  colorBgHex: document.getElementById('color-bg-hex'),
+  colorBg: document.getElementById('color-bg'),
+  colorTextHex: document.getElementById('color-text-hex'),
+  colorText: document.getElementById('color-text'),
+  colorAccentHex: document.getElementById('color-accent-hex'),
+  colorAccent: document.getElementById('color-accent'),
+  colorAccent2Hex: document.getElementById('color-accent2-hex'),
+  colorAccent2: document.getElementById('color-accent2'),
+  
+  colorBg2Hex: document.getElementById('color-bg2-hex'),
+  colorBg2: document.getElementById('color-bg2'),
+  colorText2Hex: document.getElementById('color-text2-hex'),
+  colorText2: document.getElementById('color-text2'),
+  colorText3Hex: document.getElementById('color-text3-hex'),
+  colorText3: document.getElementById('color-text3'),
+
+  colorFont: document.getElementById('color-font'),
+  colorReset: document.getElementById('color-reset')
 };
 
 // Filter States
@@ -2279,24 +2311,148 @@ document.addEventListener('focusin', e => {
   }
 });
 
-// Settings Modal Events
-if (elements.btnSettings) {
-  elements.btnSettings.addEventListener('click', () => {
-    elements.settingsModal.classList.remove('hidden');
+// Dropdown Toggle
+if (elements.btnSettings && elements.settingsDropdown) {
+  elements.btnSettings.addEventListener('click', (e) => {
+    e.stopPropagation();
+    elements.settingsDropdown.classList.toggle('hidden');
   });
-}
-if (elements.settingsClose) {
-  elements.settingsClose.addEventListener('click', () => {
-    elements.settingsModal.classList.add('hidden');
-  });
-}
-if (elements.settingsModal) {
-  elements.settingsModal.addEventListener('click', e => {
-    if (e.target === elements.settingsModal) {
-      elements.settingsModal.classList.add('hidden');
+
+  document.addEventListener('click', (e) => {
+    if (!elements.settingsDropdown.contains(e.target) && e.target !== elements.btnSettings) {
+      elements.settingsDropdown.classList.add('hidden');
     }
   });
 }
+
+// Converter Panel
+if (elements.btnOpenConverter) {
+  elements.btnOpenConverter.addEventListener('click', () => {
+    elements.settingsDropdown.classList.add('hidden');
+    if (elements.converterPanelOverlay) elements.converterPanelOverlay.classList.remove('hidden');
+    if (elements.converterPanel) elements.converterPanel.classList.remove('hidden');
+  });
+}
+
+const hideConverterPanel = () => {
+  if (elements.converterPanelOverlay) elements.converterPanelOverlay.classList.add('hidden');
+  if (elements.converterPanel) elements.converterPanel.classList.add('hidden');
+};
+
+if (elements.converterClose) elements.converterClose.addEventListener('click', hideConverterPanel);
+if (elements.converterPanelOverlay) elements.converterPanelOverlay.addEventListener('click', hideConverterPanel);
+
+
+// Color Panel
+if (elements.btnOpenColors) {
+  elements.btnOpenColors.addEventListener('click', () => {
+    elements.settingsDropdown.classList.add('hidden');
+    elements.colorPanelOverlay.classList.remove('hidden');
+    elements.colorPanel.classList.remove('hidden');
+  });
+}
+
+const hideColorPanel = () => {
+  if (elements.colorPanelOverlay) elements.colorPanelOverlay.classList.add('hidden');
+  if (elements.colorPanel) elements.colorPanel.classList.add('hidden');
+};
+
+if (elements.colorPanelClose) elements.colorPanelClose.addEventListener('click', hideColorPanel);
+if (elements.colorPanelOverlay) elements.colorPanelOverlay.addEventListener('click', hideColorPanel);
+
+// Color Customization Logic
+const THEME_STORAGE_KEY = 'dnd-character-theme';
+
+const updateColor = (varName, hexValue, hexInput, colorInput, save = true) => {
+  document.documentElement.style.setProperty(varName, hexValue);
+  if (hexInput) hexInput.value = hexValue;
+  if (colorInput) colorInput.value = hexValue;
+  
+  if (save) saveTheme();
+};
+
+const setupColorPicker = (hexInput, colorInput, cssVar) => {
+  if (!hexInput || !colorInput) return;
+  
+  colorInput.addEventListener('input', e => {
+    updateColor(cssVar, e.target.value, hexInput, colorInput);
+  });
+  
+  hexInput.addEventListener('change', e => {
+    let val = e.target.value.trim();
+    if (!val.startsWith('#')) val = '#' + val;
+    if (/^#[0-9A-Fa-f]{6}$/i.test(val)) {
+      updateColor(cssVar, val, hexInput, colorInput);
+    } else {
+      hexInput.value = colorInput.value; // revert invalid hex
+    }
+  });
+};
+
+const saveTheme = () => {
+  const theme = {
+    bg: elements.colorBg ? elements.colorBg.value : '',
+    text: elements.colorText ? elements.colorText.value : '',
+    accent: elements.colorAccent ? elements.colorAccent.value : '',
+    accent2: elements.colorAccent2 ? elements.colorAccent2.value : '',
+    font: elements.colorFont ? elements.colorFont.value : '',
+    bg2: elements.colorBg2 ? elements.colorBg2.value : '',
+    text2: elements.colorText2 ? elements.colorText2.value : '',
+    text3: elements.colorText3 ? elements.colorText3.value : ''
+  };
+  localStorage.setItem(THEME_STORAGE_KEY, JSON.stringify(theme));
+};
+
+const loadTheme = () => {
+  try {
+    const data = localStorage.getItem(THEME_STORAGE_KEY);
+    if (!data) return;
+    const theme = JSON.parse(data);
+    
+    if (theme.bg && elements.colorBg) updateColor('--bg-primary', theme.bg, elements.colorBgHex, elements.colorBg, false);
+    if (theme.text && elements.colorText) updateColor('--text-primary', theme.text, elements.colorTextHex, elements.colorText, false);
+    if (theme.accent && elements.colorAccent) updateColor('--accent-1', theme.accent, elements.colorAccentHex, elements.colorAccent, false);
+    if (theme.accent2 && elements.colorAccent2) updateColor('--accent-2', theme.accent2, elements.colorAccent2Hex, elements.colorAccent2, false);
+    if (theme.bg2 && elements.colorBg2) updateColor('--bg-secondary', theme.bg2, elements.colorBg2Hex, elements.colorBg2, false);
+    if (theme.text2 && elements.colorText2) updateColor('--text-secondary', theme.text2, elements.colorText2Hex, elements.colorText2, false);
+    if (theme.text3 && elements.colorText3) updateColor('--text-muted', theme.text3, elements.colorText3Hex, elements.colorText3, false);
+    
+    if (theme.font && elements.colorFont) {
+      elements.colorFont.value = theme.font;
+      document.documentElement.style.setProperty('--font-body', theme.font);
+      document.documentElement.style.setProperty('--font-display', theme.font);
+    }
+  } catch (e) {
+    console.error('Error loading theme:', e);
+  }
+};
+
+// Bind Pickers
+setupColorPicker(elements.colorBgHex, elements.colorBg, '--bg-primary');
+setupColorPicker(elements.colorTextHex, elements.colorText, '--text-primary');
+setupColorPicker(elements.colorAccentHex, elements.colorAccent, '--accent-1');
+setupColorPicker(elements.colorAccent2Hex, elements.colorAccent2, '--accent-2');
+setupColorPicker(elements.colorBg2Hex, elements.colorBg2, '--bg-secondary');
+setupColorPicker(elements.colorText2Hex, elements.colorText2, '--text-secondary');
+setupColorPicker(elements.colorText3Hex, elements.colorText3, '--text-muted');
+
+if (elements.colorFont) {
+  elements.colorFont.addEventListener('change', e => {
+    document.documentElement.style.setProperty('--font-body', e.target.value);
+    document.documentElement.style.setProperty('--font-display', e.target.value);
+    saveTheme();
+  });
+}
+
+if (elements.colorReset) {
+  elements.colorReset.addEventListener('click', () => {
+    localStorage.removeItem(THEME_STORAGE_KEY);
+    location.reload();
+  });
+}
+
+// Ensure theme is loaded globally independently of character data
+loadTheme();
 
 // Distance Converter Logic
 const round2 = num => Math.round(num * 100) / 100;
@@ -2336,6 +2492,50 @@ if (elements.convSquares) {
     }
     elements.convMeters.value = round2(s * 1.5);
     elements.convFeet.value = round2(s * 5);
+  });
+}
+
+// Weight Converter Logic (1 kg ≈ 2.20462 lbs)
+if (elements.convKg) {
+  elements.convKg.addEventListener('input', e => {
+    const kg = parseFloat(e.target.value);
+    if (isNaN(kg)) {
+      elements.convLbs.value = '';
+      return;
+    }
+    elements.convLbs.value = round2(kg * 2.20462);
+  });
+}
+if (elements.convLbs) {
+  elements.convLbs.addEventListener('input', e => {
+    const lbs = parseFloat(e.target.value);
+    if (isNaN(lbs)) {
+      elements.convKg.value = '';
+      return;
+    }
+    elements.convKg.value = round2(lbs / 2.20462);
+  });
+}
+
+// Volume Converter Logic (1 oz = 29.5735 ml)
+if (elements.convMl) {
+  elements.convMl.addEventListener('input', e => {
+    const ml = parseFloat(e.target.value);
+    if (isNaN(ml)) {
+      elements.convOz.value = '';
+      return;
+    }
+    elements.convOz.value = round2(ml / 29.5735);
+  });
+}
+if (elements.convOz) {
+  elements.convOz.addEventListener('input', e => {
+    const oz = parseFloat(e.target.value);
+    if (isNaN(oz)) {
+      elements.convMl.value = '';
+      return;
+    }
+    elements.convMl.value = round2(oz * 29.5735);
   });
 }
 

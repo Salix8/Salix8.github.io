@@ -42,7 +42,13 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #ff9d00;"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
               </button>
               <button class="level-btn" title="Long Rest" id="btn-long-rest">⛺</button>
-              <button class="level-btn" title="Settings" id="btn-settings">⚙️</button>
+              <div class="settings-dropdown-wrapper">
+                <button class="level-btn" title="Settings" id="btn-settings">⚙️</button>
+                <div class="settings-dropdown hidden" id="settings-dropdown">
+                  <button type="button" class="settings-dropdown__item" id="settings-open-converter">⚖️ Unit Converter</button>
+                  <button type="button" class="settings-dropdown__item" id="settings-open-colors">🎨 Page Colors</button>
+                </div>
+              </div>
             </div>
           </div>
           <div class="char-field">
@@ -464,33 +470,152 @@
       </div>
     </div>
   </div>
-  <!-- SETTINGS MODAL -->
-  <div id="settings-modal" class="modal-overlay hidden" style="z-index: 3000;">
-    <div class="modal-content type-picker" style="max-width: 400px; padding: 1.5rem;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-        <h3 class="type-picker__title" style="margin: 0; font-size: 1.1rem;">Settings & Utilities</h3>
-        <button type="button" class="btn btn--outline" id="settings-close" style="padding: 0.2rem 0.5rem; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">✕</button>
+
+  <!-- CONVERTER SIDE PANEL -->
+  <div class="color-panel-overlay hidden" id="converter-panel-overlay"></div>
+  <aside class="color-panel hidden" id="converter-panel" style="width: 360px;">
+    <div class="color-panel__header">
+      <h3 class="color-panel__title">⚖️ Unit Converter</h3>
+      <button type="button" class="color-panel__close" id="converter-close">✕</button>
+    </div>
+
+    <div class="color-panel__body">
+      <!-- DISTANCE -->
+      <div class="color-panel__section">
+        <h4 class="color-panel__section-title">DISTANCE</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; text-align: center;">
+          <div class="char-field" style="width: 100%; align-items: center;">
+            <label style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 0.3rem;">Meters (m)</label>
+            <input type="number" id="conv-meters" class="dnd-input" step="1.5" style="text-align: center; font-size: 1.1rem; padding: 0.5rem 0.1rem; width: 100%; max-width: none;">
+          </div>
+          <div class="char-field" style="width: 100%; align-items: center;">
+            <label style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 0.3rem;">Feet (ft)</label>
+            <input type="number" id="conv-feet" class="dnd-input" step="5" style="text-align: center; font-size: 1.1rem; padding: 0.5rem 0.1rem; width: 100%; max-width: none;">
+          </div>
+          <div class="char-field" style="width: 100%; align-items: center;">
+            <label style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 0.3rem;">Squares</label>
+            <input type="number" id="conv-squares" class="dnd-input" step="1" style="text-align: center; font-size: 1.1rem; padding: 0.5rem 0.1rem; width: 100%; max-width: none;">
+          </div>
+        </div>
       </div>
 
-      <div class="settings-section">
-        <h4 style="font-size: 0.8rem; color: var(--accent-1); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Distance Converter</h4>
-        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; text-align: center;">
-          <div class="char-field">
-            <label style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 0.3rem;">Metros (m)</label>
-            <input type="number" id="conv-meters" class="dnd-input" step="1.5" style="text-align: center; font-size: 1.2rem; padding: 0.5rem 0.25rem;">
+      <!-- WEIGHT -->
+      <div class="color-panel__section">
+        <h4 class="color-panel__section-title">WEIGHT</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: center;">
+          <div class="char-field" style="width: 100%; align-items: center;">
+            <label style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 0.3rem;">Kilograms (kg)</label>
+            <input type="number" id="conv-kg" class="dnd-input" step="1" style="text-align: center; font-size: 1.1rem; padding: 0.5rem 0.1rem; width: 100%; max-width: none;">
           </div>
-          <div class="char-field">
-            <label style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 0.3rem;">Feets (ft)</label>
-            <input type="number" id="conv-feet" class="dnd-input" step="5" style="text-align: center; font-size: 1.2rem; padding: 0.5rem 0.25rem;">
+          <div class="char-field" style="width: 100%; align-items: center;">
+            <label style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 0.3rem;">Pounds (lbs)</label>
+            <input type="number" id="conv-lbs" class="dnd-input" step="1" style="text-align: center; font-size: 1.1rem; padding: 0.5rem 0.1rem; width: 100%; max-width: none;">
           </div>
-          <div class="char-field">
-            <label style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 0.3rem;">Casillas</label>
-            <input type="number" id="conv-squares" class="dnd-input" step="1" style="text-align: center; font-size: 1.2rem; padding: 0.5rem 0.25rem;">
+        </div>
+      </div>
+
+      <!-- VOLUME -->
+      <div class="color-panel__section">
+        <h4 class="color-panel__section-title">VOLUME</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: center;">
+          <div class="char-field" style="width: 100%; align-items: center;">
+            <label style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 0.3rem;">Mililiters (ml)</label>
+            <input type="number" id="conv-ml" class="dnd-input" step="10" style="text-align: center; font-size: 1.1rem; padding: 0.5rem 0.1rem; width: 100%; max-width: none;">
+          </div>
+          <div class="char-field" style="width: 100%; align-items: center;">
+            <label style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 0.3rem;">Ounces (oz)</label>
+            <input type="number" id="conv-oz" class="dnd-input" step="1" style="text-align: center; font-size: 1.1rem; padding: 0.5rem 0.1rem; width: 100%; max-width: none;">
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </aside>
+
+  <!-- COLOR CUSTOMIZER SIDE PANEL -->
+  <div class="color-panel-overlay hidden" id="color-panel-overlay"></div>
+  <aside class="color-panel hidden" id="color-panel">
+    <div class="color-panel__header">
+      <h3 class="color-panel__title">🎨 Page Colors</h3>
+      <button type="button" class="color-panel__close" id="color-panel-close">✕</button>
+    </div>
+
+    <div class="color-panel__body">
+      <!-- COLOR section -->
+      <div class="color-panel__section">
+        <h4 class="color-panel__section-title">COLOR</h4>
+
+        <div class="color-picker-row">
+          <span class="color-picker-row__label">BG</span>
+          <input type="text" class="color-picker-row__hex" id="color-bg-hex" value="#131620" spellcheck="false">
+          <input type="color" class="color-picker-row__swatch" id="color-bg" value="#131620">
+        </div>
+
+        <div class="color-picker-row">
+          <span class="color-picker-row__label">Text</span>
+          <input type="text" class="color-picker-row__hex" id="color-text-hex" value="#f2f2f2" spellcheck="false">
+          <input type="color" class="color-picker-row__swatch" id="color-text" value="#f2f2f2">
+        </div>
+
+        <div class="color-picker-row">
+          <span class="color-picker-row__label">Accent</span>
+          <input type="text" class="color-picker-row__hex" id="color-accent-hex" value="#9b5de5" spellcheck="false">
+          <input type="color" class="color-picker-row__swatch" id="color-accent" value="#9b5de5">
+        </div>
+
+        <div class="color-picker-row">
+          <span class="color-picker-row__label">Accent 2</span>
+          <input type="text" class="color-picker-row__hex" id="color-accent2-hex" value="#3d9be9" spellcheck="false">
+          <input type="color" class="color-picker-row__swatch" id="color-accent2" value="#3d9be9">
+        </div>
+      </div>
+
+      <!-- TEXT section -->
+      <div class="color-panel__section">
+        <h4 class="color-panel__section-title">TEXT</h4>
+
+        <div class="color-picker-row">
+          <span class="color-picker-row__label">Font</span>
+          <select class="color-picker-row__select" id="color-font">
+            <option value="'Inter', system-ui, sans-serif">Inter</option>
+            <option value="'Outfit', system-ui, sans-serif">Outfit</option>
+            <option value="'Lato', system-ui, sans-serif">Lato</option>
+            <option value="'Roboto', system-ui, sans-serif">Roboto</option>
+            <option value="'Open Sans', system-ui, sans-serif">Open Sans</option>
+            <option value="system-ui, sans-serif">System</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="'Courier New', monospace">Courier</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ADVANCED section -->
+      <details class="color-panel__section" style="margin-top: 1rem; border-top: 1px solid var(--border-glass); padding-top: 1.5rem;">
+        <summary class="color-panel__section-title" style="cursor: pointer; user-select: none; margin-bottom: 0;">ADVANCED</summary>
+        <div style="margin-top: 1.5rem;">
+          <div class="color-picker-row">
+            <span class="color-picker-row__label">Secondary BG</span>
+            <input type="text" class="color-picker-row__hex" id="color-bg2-hex" spellcheck="false">
+            <input type="color" class="color-picker-row__swatch" id="color-bg2">
+          </div>
+          <div class="color-picker-row">
+            <span class="color-picker-row__label">Secondary Text</span>
+            <input type="text" class="color-picker-row__hex" id="color-text2-hex" spellcheck="false">
+            <input type="color" class="color-picker-row__swatch" id="color-text2">
+          </div>
+          <div class="color-picker-row">
+            <span class="color-picker-row__label">Muted Text</span>
+            <input type="text" class="color-picker-row__hex" id="color-text3-hex" spellcheck="false">
+            <input type="color" class="color-picker-row__swatch" id="color-text3">
+          </div>
+        </div>
+      </details>
+
+      <!-- Actions -->
+      <div class="color-panel__actions">
+        <button type="button" class="btn btn--outline" id="color-reset" style="width:100%; font-size: 0.8rem; padding: 0.5rem;">↺ Reset to Defaults</button>
+      </div>
+    </div>
+  </aside>
 
   <!-- ACTION TOOLTIP -->
   <div class="spell-tooltip" id="action-tooltip"></div>
