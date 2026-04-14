@@ -593,9 +593,19 @@
         <summary class="color-panel__section-title" style="cursor: pointer; user-select: none; margin-bottom: 0;">ADVANCED</summary>
         <div style="margin-top: 1.5rem;">
           <div class="color-picker-row" style="margin-bottom: 0.2rem;">
+            <span class="color-picker-row__label" title="Used in all text inputs and character fields">Inputs & Fields</span>
+            <input type="text" class="color-picker-row__hex" id="color-input-hex" spellcheck="false" placeholder="#rrggbbaa" value="#1d202b">
+            <input type="color" class="color-picker-row__swatch" id="color-input" value="#1d202b">
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; padding: 0 0.5rem;">
+            <span style="font-size: 0.7rem; color: var(--text-muted);">Opacity:</span>
+            <input type="range" id="opacity-input" min="0" max="1" step="0.05" value="0.8" style="flex: 1;">
+          </div>
+          
+          <div class="color-picker-row" style="margin-bottom: 0.2rem;">
             <span class="color-picker-row__label" title="Used in Stat Badges and Ability Cards">Glass BG</span>
-            <input type="text" class="color-picker-row__hex" id="color-glass-hex" spellcheck="false" placeholder="#rrggbbaa">
-            <input type="color" class="color-picker-row__swatch" id="color-glass">
+            <input type="text" class="color-picker-row__hex" id="color-glass-hex" spellcheck="false" placeholder="#rrggbbaa" value="#292d3d">
+            <input type="color" class="color-picker-row__swatch" id="color-glass" value="#292d3d">
           </div>
           <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; padding: 0 0.5rem;">
             <span style="font-size: 0.7rem; color: var(--text-muted);">Opacity:</span>
@@ -604,8 +614,8 @@
           
           <div class="color-picker-row" style="margin-bottom: 0.2rem;">
             <span class="color-picker-row__label" title="Used in alternating skill rows">Skill Alt BG</span>
-            <input type="text" class="color-picker-row__hex" id="color-skill-hex" spellcheck="false" placeholder="#rrggbbaa">
-            <input type="color" class="color-picker-row__swatch" id="color-skill">
+            <input type="text" class="color-picker-row__hex" id="color-skill-hex" spellcheck="false" placeholder="#rrggbbaa" value="#202330">
+            <input type="color" class="color-picker-row__swatch" id="color-skill" value="#202330">
           </div>
           <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; padding: 0 0.5rem;">
             <span style="font-size: 0.7rem; color: var(--text-muted);">Opacity:</span>
@@ -613,13 +623,13 @@
           </div>
           <div class="color-picker-row">
             <span class="color-picker-row__label">Secondary Text</span>
-            <input type="text" class="color-picker-row__hex" id="color-text2-hex" spellcheck="false">
-            <input type="color" class="color-picker-row__swatch" id="color-text2">
+            <input type="text" class="color-picker-row__hex" id="color-text2-hex" spellcheck="false" value="#9da1b2">
+            <input type="color" class="color-picker-row__swatch" id="color-text2" value="#9da1b2">
           </div>
           <div class="color-picker-row">
             <span class="color-picker-row__label">Muted Text</span>
-            <input type="text" class="color-picker-row__hex" id="color-text3-hex" spellcheck="false">
-            <input type="color" class="color-picker-row__swatch" id="color-text3">
+            <input type="text" class="color-picker-row__hex" id="color-text3-hex" spellcheck="false" value="#676c7f">
+            <input type="color" class="color-picker-row__swatch" id="color-text3" value="#676c7f">
           </div>
         </div>
       </details>

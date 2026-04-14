@@ -13,7 +13,7 @@
 .module-input,
 .module-textarea,
 #char-notes {
-  background: hsla(230, 20%, 14%, 0.8);
+  background: var(--bg-input, hsla(230, 20%, 14%, 0.8));
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-sm);
   color: var(--text-primary);

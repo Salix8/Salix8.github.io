@@ -161,6 +161,10 @@ const elements = {
   colorText3Hex: document.getElementById('color-text3-hex'),
   colorText3: document.getElementById('color-text3'),
 
+  colorInputHex: document.getElementById('color-input-hex'),
+  colorInput: document.getElementById('color-input'),
+  opacityInput: document.getElementById('opacity-input'),
+  
   colorGlassHex: document.getElementById('color-glass-hex'),
   colorGlass: document.getElementById('color-glass'),
   opacityGlass: document.getElementById('opacity-glass'),
@@ -2438,6 +2442,7 @@ const saveTheme = () => {
     font: elements.colorFont ? elements.colorFont.value : '',
     text2: elements.colorText2 ? elements.colorText2.value : '',
     text3: elements.colorText3 ? elements.colorText3.value : '',
+    input: elements.colorInput ? elements.colorInput.value : '',
     glass: elements.colorGlass ? elements.colorGlass.value : '',
     skill: elements.colorSkill ? elements.colorSkill.value : ''
   };
@@ -2459,6 +2464,13 @@ const loadTheme = () => {
     if (theme.text3 && elements.colorText3) updateColor('--text-muted', theme.text3, elements.colorText3Hex, elements.colorText3, false);
     
     // Check alpha in theme values and sync sliders
+    if (theme.input && elements.colorInput) {
+      if (theme.input.length === 9 && elements.opacityInput) {
+        elements.opacityInput.value = (parseInt(theme.input.substring(7, 9), 16) / 255).toFixed(2);
+      }
+      updateColor('--bg-input', theme.input, elements.colorInputHex, elements.colorInput, false);
+    }
+    
     if (theme.glass && elements.colorGlass) {
       if (theme.glass.length === 9 && elements.opacityGlass) {
         elements.opacityGlass.value = (parseInt(theme.glass.substring(7, 9), 16) / 255).toFixed(2);
@@ -2490,6 +2502,7 @@ setupColorPicker(elements.colorAccentHex, elements.colorAccent, '--accent-1');
 setupColorPicker(elements.colorAccent2Hex, elements.colorAccent2, '--accent-2');
 setupColorPicker(elements.colorText2Hex, elements.colorText2, '--text-secondary');
 setupColorPicker(elements.colorText3Hex, elements.colorText3, '--text-muted');
+setupColorPicker(elements.colorInputHex, elements.colorInput, '--bg-input', elements.opacityInput);
 setupColorPicker(elements.colorGlassHex, elements.colorGlass, '--bg-glass', elements.opacityGlass);
 setupColorPicker(elements.colorSkillHex, elements.colorSkill, '--bg-skill-odd', elements.opacitySkill);
 
