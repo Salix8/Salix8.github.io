@@ -131,15 +131,15 @@
 
             <!-- RIGHT MIDDLE: Prof, Speed, Hit Dice -->
             <div class="sheet-secondary-row">
-              <div class="stat-badge stat-badge--narrow" style="min-width: 80px; flex: 0;">
-                <span class="stat-badge__label">Prof</span>
-                <span class="stat-badge__value" id="stat-prof">+2</span>
-              </div>
-
-              <div class="stat-badge stat-badge--narrow" style="min-width: 80px; flex: 0;">
-                <span class="stat-badge__label">Speed</span>
-                <input type="number" class="stat-badge__input" id="stat-speed" value="30" min="0" max="999">
-                <span class="stat-badge__unit">ft</span>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; flex: 0; min-width: 80px; margin-right: 0.5rem;">
+                <div class="stat-badge stat-badge--narrow" style="flex: 1;">
+                  <span class="stat-badge__label">Prof</span>
+                  <span class="stat-badge__value" id="stat-prof">+2</span>
+                </div>
+                <div class="stat-badge stat-badge--narrow" style="flex: 1;">
+                  <span class="stat-badge__label">Speed</span>
+                  <input type="number" class="stat-badge__input" id="stat-speed" value="30" min="0" max="999">
+                </div>
               </div>
 
               <div class="sheet-panel hd-panel" style="flex: 0.8; padding: 0.75rem 0.5rem; min-width: 80px;">
