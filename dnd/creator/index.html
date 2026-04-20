@@ -142,16 +142,16 @@
                 <span class="stat-badge__unit">ft</span>
               </div>
 
-              <div class="sheet-panel hd-panel" style="flex: 2;">
-                <h3 class="sheet-panel__title">Hit Dice</h3>
-                <div class="hd-content" style="flex-direction: row; gap: 1rem; flex-wrap: wrap;">
+              <div class="sheet-panel hd-panel" style="flex: 0.8; padding: 0.75rem 0.5rem; min-width: 80px;">
+                <h3 class="sheet-panel__title" style="text-align: center;">Hit Dice</h3>
+                <div class="hd-content" style="flex-direction: column; gap: 0.5rem; align-items: center;">
                   <div class="hd-tracker">
                     <input type="number" id="hd-spent" value="1" min="0" class="dnd-input"
-                      style="width:45px; text-align:center;">
-                    <span class="hd-divider" style="padding: 0 0.25rem;">/</span>
+                      style="width:40px; text-align:center; padding: 0.25rem;">
+                    <span class="hd-divider" style="padding: 0 0.15rem;">/</span>
                     <span id="hd-total" class="hd-total">1</span>
                   </div>
-                  <select id="hit-dice" class="dnd-input" style="width: 70px;">
+                  <select id="hit-dice" class="dnd-input" style="width: 60px; padding: 0.25rem; text-align: center;">
                     <option value="d6">d6</option>
                     <option value="d8" selected>d8</option>
                     <option value="d10">d10</option>
@@ -160,8 +160,56 @@
                 </div>
               </div>
 
-              <!-- Death saves commented out directly by user -->
-              <!-- <div class="sheet-panel ds-panel"> ... </div> -->
+              <div class="sheet-panel dc-panel" style="flex: 1.3; display: flex; flex-direction: column; padding: 0.75rem 0.5rem; min-width: 170px;">
+                <h3 class="sheet-panel__title" style="text-align: center;">Defenses</h3>
+                <div class="dc-table__body" id="defenses-list">
+                  <!-- Rendered by JS -->
+                </div>
+                <div class="dc-table__add-row" style="justify-content: center; margin-top: auto; padding-top: 0.5rem;">
+                  <button type="button" class="btn--add-module" id="btn-open-defense-modal" style="padding: 0.4rem; font-size: 0.8rem; width: 100%;">+ Add Defense</button>
+                </div>
+              </div>
+
+              <div class="sheet-panel dc-panel" style="flex: 1.3; display: flex; flex-direction: column; padding: 0.75rem 0.5rem; min-width: 180px;">
+                <h3 class="sheet-panel__title" style="text-align: center;">Conditions</h3>
+                <div class="dc-table__body" id="conditions-list" style="margin-bottom: auto;">
+                  <!-- Rendered by JS -->
+                </div>
+                <div class="dc-table__add-row">
+                  <select id="condition-select" class="dnd-input dc-table__select" style="flex: 1; padding: 0.3rem 0.4rem;">
+                    <option value="">Add condition...</option>
+                    <option value="Blinded">Blinded</option>
+                    <option value="Charmed">Charmed</option>
+                    <option value="Deafened">Deafened</option>
+                    <option value="Frightened">Frightened</option>
+                    <option value="Grappled">Grappled</option>
+                    <option value="Incapacitated">Incapacitated</option>
+                    <option value="Invisible">Invisible</option>
+                    <option value="Paralyzed">Paralyzed</option>
+                    <option value="Petrified">Petrified</option>
+                    <option value="Poisoned">Poisoned</option>
+                    <option value="Prone">Prone</option>
+                    <option value="Restrained">Restrained</option>
+                    <option value="Stunned">Stunned</option>
+                    <option value="Unconscious">Unconscious</option>
+                    <option value="Custom">Custom...</option>
+                  </select>
+                  <button type="button" class="dc-table__add-btn" id="add-condition-btn">+</button>
+                </div>
+                <!-- Exhaustion special row -->
+                <div class="dc-table__exhaustion" style="justify-content: space-between;">
+                  <span class="dc-table__exhaustion-label">Exhaustion</span>
+                  <select id="exhaustion-select" class="dnd-input" style="width: auto; text-align: center; padding: 0.2rem 0.5rem;">
+                    <option value="0">--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </div>
+              </div>
             </div>
 
             <!-- RIGHT BOTTOM: Tabbed Panel (D&D Beyond style) -->
@@ -471,6 +519,50 @@
     </div>
   </div>
 
+  <!-- ADD DEFENSE MODAL -->
+  <div id="add-defense-modal" class="modal-overlay hidden">
+    <div class="modal-content type-picker" style="max-width: 350px;">
+      <h3 class="type-picker__title">Add Defense</h3>
+
+      <div style="margin-bottom: 1rem;">
+        <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Defense Type</label>
+        <select id="modal-defense-type" class="dnd-input">
+          <option value="resistance">Resistance</option>
+          <option value="vulnerability">Vulnerability</option>
+          <option value="immunity">Immunity</option>
+          <option value="custom">Custom</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Defense Target/Name</label>
+        <input type="text" id="modal-defense-value" class="dnd-input" placeholder="e.g. Fire, Poison, Non-magical weapons...">
+      </div>
+
+      <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+        <button type="button" class="btn btn--outline" id="defense-modal-cancel">Cancel</button>
+        <button type="button" class="btn btn--primary" id="defense-modal-confirm">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD CONDITION MODAL -->
+  <div id="add-condition-modal" class="modal-overlay hidden">
+    <div class="modal-content type-picker" style="max-width: 350px;">
+      <h3 class="type-picker__title">Custom Condition</h3>
+
+      <div style="margin-bottom: 1.5rem; margin-top: 1rem;">
+        <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Condition Name</label>
+        <input type="text" id="modal-condition-value" class="dnd-input" placeholder="e.g. Hexed, Cursed, Blessed...">
+      </div>
+
+      <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+        <button type="button" class="btn btn--outline" id="condition-modal-cancel">Cancel</button>
+        <button type="button" class="btn btn--primary" id="condition-modal-confirm">Add</button>
+      </div>
+    </div>
+  </div>
+
   <!-- CONVERTER SIDE PANEL -->
   <div class="color-panel-overlay hidden" id="converter-panel-overlay"></div>
   <aside class="color-panel hidden" id="converter-panel" style="width: 360px;">
@@ -601,7 +693,7 @@
             <span style="font-size: 0.7rem; color: var(--text-muted);">Opacity:</span>
             <input type="range" id="opacity-input" min="0" max="1" step="0.05" value="0.8" style="flex: 1;">
           </div>
-          
+
           <div class="color-picker-row" style="margin-bottom: 0.2rem;">
             <span class="color-picker-row__label" title="Used in Stat Badges and Ability Cards">Glass BG</span>
             <input type="text" class="color-picker-row__hex" id="color-glass-hex" spellcheck="false" placeholder="#rrggbbaa" value="#292d3d">
@@ -611,7 +703,7 @@
             <span style="font-size: 0.7rem; color: var(--text-muted);">Opacity:</span>
             <input type="range" id="opacity-glass" min="0" max="1" step="0.05" value="0.35" style="flex: 1;">
           </div>
-          
+
           <div class="color-picker-row" style="margin-bottom: 0.2rem;">
             <span class="color-picker-row__label" title="Used in alternating skill rows">Skill Alt BG</span>
             <input type="text" class="color-picker-row__hex" id="color-skill-hex" spellcheck="false" placeholder="#rrggbbaa" value="#202330">

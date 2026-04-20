@@ -138,6 +138,9 @@ function createCharacter(overrides = {}) {
       languages: [],
       extras: []
     },
+    defenses: [],       // { id, type: 'resistance'|'vulnerability'|'immunity'|'custom', value: string }
+    conditions: [],     // string[] — active condition names
+    exhaustion: 0,      // 0-6
     notes: '',
     ...overrides
   };

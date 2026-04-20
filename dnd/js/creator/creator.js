@@ -115,6 +115,22 @@ const elements = {
   customSkillCancel: document.getElementById('custom-skill-cancel'),
   customSkillConfirm: document.getElementById('custom-skill-confirm'),
 
+  // Defenses & Conditions
+  defensesList: document.getElementById('defenses-list'),
+  conditionsList: document.getElementById('conditions-list'),
+  btnOpenDefenseModal: document.getElementById('btn-open-defense-modal'),
+  addDefenseModal: document.getElementById('add-defense-modal'),
+  modalDefenseType: document.getElementById('modal-defense-type'),
+  modalDefenseValue: document.getElementById('modal-defense-value'),
+  defenseModalCancel: document.getElementById('defense-modal-cancel'),
+  conditionSelect: document.getElementById('condition-select'),
+  addConditionBtn: document.getElementById('add-condition-btn'),
+  addConditionModal: document.getElementById('add-condition-modal'),
+  modalConditionValue: document.getElementById('modal-condition-value'),
+  conditionModalCancel: document.getElementById('condition-modal-cancel'),
+  conditionModalConfirm: document.getElementById('condition-modal-confirm'),
+  exhaustionSelect: document.getElementById('exhaustion-select'),
+
   // Buttons
   addActionBtn: document.getElementById('add-action-module'),
   addFeatureBtn: document.getElementById('add-feature-module'),
@@ -237,12 +253,20 @@ function init() {
     }
   });
 
+  // Ensure defenses/conditions exist for older saved characters
+  if (!character.defenses) character.defenses = [];
+  if (!character.conditions) character.conditions = [];
+  if (character.exhaustion === undefined) character.exhaustion = 0;
+
   renderAbilities();
   renderSkills();
   renderCompetencies();
   renderModuleLists();
   renderInventory();
   renderSpells();
+  renderDefenses();
+  renderConditions();
+  renderExhaustion();
   updateSpellStats();
   updateSpellFocusUI();
   updateUI();
@@ -946,6 +970,76 @@ function hideActionTooltip() {
   if (elements.actionTooltip) {
     elements.actionTooltip.classList.remove('spell-tooltip--visible');
   }
+}
+
+// ===== CONDITION ICONS =====
+const CONDITION_ICONS = {
+  Blinded: '🙈',
+  Charmed: '💖',
+  Deafened: '🔇',
+  Frightened: '😨',
+  Grappled: '🤼',
+  Incapacitated: '💫',
+  Invisible: '👻',
+  Paralyzed: '⚡',
+  Petrified: '🪨',
+  Poisoned: '☠️',
+  Prone: '🔻',
+  Restrained: '⛓️',
+  Stunned: '💥',
+  Unconscious: '😴'
+};
+
+/** Render defenses list */
+function renderDefenses() {
+  if (!elements.defensesList) return;
+
+  if (character.defenses.length === 0) {
+    elements.defensesList.innerHTML = '<div class="dc-table__empty">No defenses</div>';
+    return;
+  }
+
+  const badgeLabels = {
+    resistance: 'Res',
+    vulnerability: 'Vul',
+    immunity: 'Imm',
+    custom: 'Cst'
+  };
+
+  elements.defensesList.innerHTML = character.defenses.map((def, i) => `
+    <div class="dc-item">
+      <span class="dc-item__badge dc-item__badge--${def.type}">${badgeLabels[def.type] || def.type}</span>
+      <span class="dc-item__name">${escapeHtml(def.value)}</span>
+      <button type="button" class="dc-item__delete" data-defense-del="${i}" aria-label="Remove defense">✕</button>
+    </div>
+  `).join('');
+}
+
+/** Render conditions list */
+function renderConditions() {
+  if (!elements.conditionsList) return;
+
+  if (character.conditions.length === 0) {
+    elements.conditionsList.innerHTML = '<div class="dc-table__empty">No conditions</div>';
+    return;
+  }
+
+  elements.conditionsList.innerHTML = character.conditions.map((cond, i) => {
+    const icon = CONDITION_ICONS[cond] || '⚠️';
+    return `
+      <div class="dc-condition">
+        <span class="dc-condition__icon">${icon}</span>
+        <span class="dc-condition__name">${escapeHtml(cond)}</span>
+        <button type="button" class="dc-condition__delete" data-condition-del="${i}" aria-label="Remove condition">✕</button>
+      </div>
+    `;
+  }).join('');
+}
+
+/** Render exhaustion state */
+function renderExhaustion() {
+  if (!elements.exhaustionSelect) return;
+  elements.exhaustionSelect.value = character.exhaustion || 0;
 }
 
 /** Update the DOM to match the data model */
@@ -2205,6 +2299,149 @@ function setupEventListeners() {
       const tagId = removeBtn.dataset.removeSpellFilter;
       activeSpellTagFilters.delete(tagId);
       renderSpells();
+    });
+  }
+
+  // ===== DEFENSES & CONDITIONS EVENT LISTENERS =====
+
+  // Open Defense Modal
+  if (elements.btnOpenDefenseModal) {
+    elements.btnOpenDefenseModal.addEventListener('click', () => {
+      elements.modalDefenseValue.value = '';
+      elements.modalDefenseType.value = 'resistance'; // default
+      elements.addDefenseModal.classList.remove('hidden');
+    });
+  }
+
+  // Cancel Defense Modal
+  if (elements.defenseModalCancel) {
+    elements.defenseModalCancel.addEventListener('click', () => {
+      elements.addDefenseModal.classList.add('hidden');
+    });
+  }
+
+  // Add Defense (Confirm)
+  if (elements.defenseModalConfirm) {
+    const addDefense = () => {
+      const type = elements.modalDefenseType.value;
+      const value = elements.modalDefenseValue.value.trim();
+      if (!value) return;
+
+      character.defenses.push({
+        id: generateId(),
+        type: type,
+        value: value
+      });
+
+      elements.addDefenseModal.classList.add('hidden');
+      renderDefenses();
+    };
+
+    elements.defenseModalConfirm.addEventListener('click', addDefense);
+    elements.modalDefenseValue.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        addDefense();
+      }
+    });
+  }
+
+  // Close Defense modal on overlay click
+  if (elements.addDefenseModal) {
+    elements.addDefenseModal.addEventListener('click', e => {
+      if (e.target === elements.addDefenseModal) {
+        elements.addDefenseModal.classList.add('hidden');
+      }
+    });
+  }
+  // Delete Defense (delegated)
+  if (elements.defensesList) {
+    elements.defensesList.addEventListener('click', e => {
+      const btn = e.target.closest('[data-defense-del]');
+      if (!btn) return;
+      const idx = parseInt(btn.dataset.defenseDel);
+      character.defenses.splice(idx, 1);
+      renderDefenses();
+    });
+  }
+
+  // Add Condition
+  if (elements.addConditionBtn) {
+    elements.addConditionBtn.addEventListener('click', () => {
+      const select = elements.conditionSelect;
+      const value = select.value;
+      if (!value) return;
+
+      if (value === 'Custom') {
+        elements.modalConditionValue.value = '';
+        elements.addConditionModal.classList.remove('hidden');
+        elements.modalConditionValue.focus();
+      } else {
+        if (!character.conditions.includes(value)) {
+          character.conditions.push(value);
+          renderConditions();
+        }
+        select.value = '';
+      }
+    });
+  }
+
+  // Cancel custom condition
+  if (elements.conditionModalCancel) {
+    elements.conditionModalCancel.addEventListener('click', () => {
+      elements.addConditionModal.classList.add('hidden');
+      elements.conditionSelect.value = ''; // Reset select
+    });
+  }
+
+  // Confirm custom condition
+  if (elements.conditionModalConfirm) {
+    const addCustomCondition = () => {
+      const custom = elements.modalConditionValue.value.trim();
+      if (custom && !character.conditions.includes(custom)) {
+        character.conditions.push(custom);
+        renderConditions();
+      }
+      elements.addConditionModal.classList.add('hidden');
+      elements.conditionSelect.value = ''; // Reset select
+    };
+
+    elements.conditionModalConfirm.addEventListener('click', addCustomCondition);
+    elements.modalConditionValue.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        addCustomCondition();
+      }
+    });
+  }
+
+  // Close Condition modal on overlay click
+  if (elements.addConditionModal) {
+    elements.addConditionModal.addEventListener('click', e => {
+      if (e.target === elements.addConditionModal) {
+        elements.addConditionModal.classList.add('hidden');
+        elements.conditionSelect.value = ''; // Reset select
+      }
+    });
+  }
+
+  // Delete Condition (delegated)
+  if (elements.conditionsList) {
+    elements.conditionsList.addEventListener('click', e => {
+      const btn = e.target.closest('[data-condition-del]');
+      if (!btn) return;
+      const idx = parseInt(btn.dataset.conditionDel);
+      character.conditions.splice(idx, 1);
+      renderConditions();
+    });
+  }
+
+  // Exhaustion Select
+  if (elements.exhaustionSelect) {
+    elements.exhaustionSelect.addEventListener('change', e => {
+      const level = parseInt(e.target.value);
+      character.exhaustion = !isNaN(level) ? level : 0;
+      renderExhaustion();
     });
   }
 
