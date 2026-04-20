@@ -338,6 +338,46 @@
   <div id="inv-desc-modal" class="modal-overlay hidden">
     <div class="modal-content inv-desc-modal">
       <h3 class="inv-desc-modal__title">Item Description</h3>
+
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+        <!-- Action Checkbox -->
+        <div class="desc-option-row" style="flex: 0.75; margin-bottom: 0;">
+          <label class="desc-option-toggle">
+            <input type="checkbox" id="inv-is-action-check">
+            <span class="desc-option-toggle__label">⚔️ Is Action</span>
+          </label>
+          <div class="desc-option-expand" id="inv-action-type-wrap" style="display:none;">
+            <select class="dnd-input desc-option-select" id="inv-action-type-select">
+              <option value="action">Action</option>
+              <option value="bonus_action">Bonus Action</option>
+              <option value="reaction">Reaction</option>
+              <option value="free_action">Free Action</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Uses Checkbox -->
+        <div class="desc-option-row" style="flex: 1.25; margin-bottom: 0;">
+          <label class="desc-option-toggle">
+            <input type="checkbox" id="inv-has-uses-check">
+            <span class="desc-option-toggle__label">🔄 Has Uses</span>
+          </label>
+          <div class="desc-option-expand" id="inv-uses-wrap" style="display:none;">
+            <div class="desc-uses-fields">
+              <input type="number" class="dnd-input desc-uses-input" id="inv-uses-current" min="0" placeholder="Cur">
+              <span class="desc-uses-divider">/</span>
+              <input type="number" class="dnd-input desc-uses-input" id="inv-uses-max" min="0" placeholder="Max">
+              <span class="desc-uses-divider">per</span>
+              <select class="dnd-input desc-option-select" id="inv-uses-recharge">
+                <option value="sr">SR</option>
+                <option value="lr">LR</option>
+                <option value="cst">Cst</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="inv-desc-modal__tags">
         <span class="inv-desc-modal__tags-label">Tags</span>
         <div class="inv-desc-modal__tag-list" id="inv-desc-tag-list">
@@ -449,11 +489,54 @@
   <!-- SPELL TOOLTIP -->
   <div class="spell-tooltip" id="spell-tooltip"></div>
 
-  <!-- ACTION DESCRIPTION MODAL -->
+  <!-- ACTION / FEATURE DESCRIPTION MODAL -->
   <div id="module-desc-modal" class="modal-overlay hidden">
     <div class="modal-content inv-desc-modal">
-      <h3 class="inv-desc-modal__title">Action Description</h3>
-      <textarea id="module-desc-textarea" class="dnd-input" placeholder="Write action description here..."></textarea>
+      <h3 class="inv-desc-modal__title" id="module-desc-title">Description</h3>
+
+      <!-- Source badge (shown when action is linked from a feature/inventory) -->
+      <div class="desc-source-badge" id="module-source-badge" style="display:none;"></div>
+
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+        <!-- Action Checkbox -->
+        <div class="desc-option-row" id="module-action-row" style="display:none; flex: 0.75; margin-bottom: 0;">
+          <label class="desc-option-toggle">
+            <input type="checkbox" id="module-is-action-check">
+            <span class="desc-option-toggle__label">⚔️ Is Action</span>
+          </label>
+          <div class="desc-option-expand" id="module-action-type-wrap" style="display:none;">
+            <select class="dnd-input desc-option-select" id="module-action-type-select">
+              <option value="action">Action</option>
+              <option value="bonus_action">Bonus Action</option>
+              <option value="reaction">Reaction</option>
+              <option value="free_action">Free Action</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Uses Checkbox -->
+        <div class="desc-option-row" id="module-uses-row" style="flex: 1.25; margin-bottom: 0;">
+          <label class="desc-option-toggle">
+            <input type="checkbox" id="module-has-uses-check">
+            <span class="desc-option-toggle__label">🔄 Has Uses</span>
+          </label>
+          <div class="desc-option-expand" id="module-uses-wrap" style="display:none;">
+            <div class="desc-uses-fields">
+              <input type="number" class="dnd-input desc-uses-input" id="module-uses-current" min="0" placeholder="Cur">
+              <span class="desc-uses-divider">/</span>
+              <input type="number" class="dnd-input desc-uses-input" id="module-uses-max" min="0" placeholder="Max">
+              <span class="desc-uses-divider">per</span>
+              <select class="dnd-input desc-option-select" id="module-uses-recharge">
+                <option value="sr">SR</option>
+                <option value="lr">LR</option>
+                <option value="cst">Cst</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <textarea id="module-desc-textarea" class="dnd-input" placeholder="Write description here..."></textarea>
       <button type="button" class="btn btn--primary inv-desc-modal__save" id="module-desc-save">Save & Close</button>
     </div>
   </div>

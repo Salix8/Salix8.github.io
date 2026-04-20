@@ -2183,7 +2183,7 @@ input[type="number"] {
   border-radius: var(--radius-md) !important;
   padding: 1.5rem !important;
   width: 90%;
-  max-width: 520px;
+  max-width: 680px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -2266,6 +2266,237 @@ input[type="number"] {
 .inv-desc-modal__save {
   align-self: center;
   padding: 0.6rem 2rem;
+}
+
+/* ===== DESCRIPTION MODAL — ACTION & USES OPTIONS ===== */
+.desc-option-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  background: hsla(230, 20%, 12%, 0.5);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  flex-wrap: wrap;
+}
+
+.desc-option-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.desc-option-toggle input[type="checkbox"] {
+  accent-color: var(--accent-1);
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+.desc-option-toggle__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.desc-option-expand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 0;
+  animation: tagFadeIn 0.2s ease;
+}
+
+.desc-option-select {
+  padding: 0.2rem 0.4rem !important;
+  font-size: 0.75rem !important;
+  min-width: auto;
+  width: auto !important;
+}
+
+.desc-uses-fields {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: nowrap;
+}
+
+.desc-uses-input {
+  width: 52px !important;
+  text-align: center !important;
+  font-size: 0.85rem !important;
+  font-weight: 600;
+  padding: 0.3rem 0.25rem !important;
+}
+
+.desc-uses-divider {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+/* Source badge — shown at top of action desc when linked from feature/inventory */
+.desc-source-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  align-self: center;
+  animation: tagFadeIn 0.2s ease;
+}
+
+.desc-source-badge--feature {
+  background: hsla(200, 70%, 50%, 0.15);
+  color: hsl(200, 70%, 65%);
+  border: 1px solid hsla(200, 70%, 50%, 0.3);
+}
+
+.desc-source-badge--inventory {
+  background: hsla(30, 70%, 50%, 0.15);
+  color: hsl(30, 70%, 65%);
+  border: 1px solid hsla(30, 70%, 50%, 0.3);
+}
+
+/* ===== USES TRACKER ON CARDS (outside modal) ===== */
+.module-card__uses,
+.inv-card__uses {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+}
+
+.uses-tracker {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.uses-tracker__current {
+  width: 36px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem;
+  background: hsla(230, 20%, 10%, 0.6);
+  border: 1px solid var(--border-glass);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.uses-tracker__current:focus {
+  border-color: var(--accent-1);
+  box-shadow: 0 0 0 2px hsla(265, 90%, 65%, 0.15);
+}
+
+.uses-tracker__divider {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.uses-tracker__max {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  min-width: 16px;
+  text-align: center;
+}
+
+.uses-tracker__recharge {
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  margin-left: 0.2rem;
+  flex-shrink: 0;
+}
+
+.uses-tracker__recharge--sr {
+  background: hsla(30, 80%, 50%, 0.2);
+  color: hsl(30, 80%, 60%);
+  border: 1px solid hsla(30, 80%, 50%, 0.3);
+}
+
+.uses-tracker__recharge--lr {
+  background: hsla(220, 70%, 50%, 0.2);
+  color: hsl(220, 70%, 65%);
+  border: 1px solid hsla(220, 70%, 50%, 0.3);
+}
+
+.uses-tracker__recharge--cst {
+  background: hsla(280, 60%, 50%, 0.2);
+  color: hsl(280, 60%, 65%);
+  border: 1px solid hsla(280, 60%, 50%, 0.3);
+}
+
+/* Source badge on action cards (when linked from feature/inventory) */
+.module-card__source {
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  margin-left: 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.module-card__source--class_feature {
+  background: hsla(200, 60%, 50%, 0.15);
+  color: hsl(200, 60%, 65%);
+  border: 1px solid hsla(200, 60%, 50%, 0.25);
+}
+
+.module-card__source--race_feature {
+  background: hsla(140, 55%, 45%, 0.15);
+  color: hsl(140, 55%, 60%);
+  border: 1px solid hsla(140, 55%, 45%, 0.25);
+}
+
+.module-card__source--background_feature {
+  background: hsla(45, 70%, 50%, 0.15);
+  color: hsl(45, 70%, 60%);
+  border: 1px solid hsla(45, 70%, 50%, 0.25);
+}
+
+.module-card__source--other {
+  background: hsla(260, 50%, 50%, 0.15);
+  color: hsl(260, 50%, 65%);
+  border: 1px solid hsla(260, 50%, 50%, 0.25);
+}
+
+.module-card__source--inventory {
+  background: hsla(30, 70%, 50%, 0.15);
+  color: hsl(30, 70%, 65%);
+  border: 1px solid hsla(30, 70%, 50%, 0.25);
+}
+
+#module-desc-textarea {
+  min-height: 150px;
+  resize: vertical;
+  line-height: 1.6;
+  font-size: 0.9rem;
 }
 
 /* ===== TAG FILTER MODAL ===== */

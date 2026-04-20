@@ -97,8 +97,30 @@ const elements = {
 
   // Module Description Modal
   moduleDescModal: document.getElementById('module-desc-modal'),
+  moduleDescTitle: document.getElementById('module-desc-title'),
   moduleDescTextarea: document.getElementById('module-desc-textarea'),
   moduleDescSave: document.getElementById('module-desc-save'),
+  moduleSourceBadge: document.getElementById('module-source-badge'),
+  moduleActionRow: document.getElementById('module-action-row'),
+  moduleIsActionCheck: document.getElementById('module-is-action-check'),
+  moduleActionTypeWrap: document.getElementById('module-action-type-wrap'),
+  moduleActionTypeSelect: document.getElementById('module-action-type-select'),
+  moduleUsesRow: document.getElementById('module-uses-row'),
+  moduleHasUsesCheck: document.getElementById('module-has-uses-check'),
+  moduleUsesWrap: document.getElementById('module-uses-wrap'),
+  moduleUsesCurrent: document.getElementById('module-uses-current'),
+  moduleUsesMax: document.getElementById('module-uses-max'),
+  moduleUsesRecharge: document.getElementById('module-uses-recharge'),
+
+  // Inventory Description Modal — Action & Uses
+  invIsActionCheck: document.getElementById('inv-is-action-check'),
+  invActionTypeWrap: document.getElementById('inv-action-type-wrap'),
+  invActionTypeSelect: document.getElementById('inv-action-type-select'),
+  invHasUsesCheck: document.getElementById('inv-has-uses-check'),
+  invUsesWrap: document.getElementById('inv-uses-wrap'),
+  invUsesCurrent: document.getElementById('inv-uses-current'),
+  invUsesMax: document.getElementById('inv-uses-max'),
+  invUsesRecharge: document.getElementById('inv-uses-recharge'),
 
   // Module Calc Modal
   moduleCalcModal: document.getElementById('module-calc-modal'),
@@ -141,6 +163,8 @@ const elements = {
   featuresFilters: document.getElementById('features-filters'),
   saveBtn: document.getElementById('save-char'),
   exportBtn: document.getElementById('export-char'),
+  btnShortRest: document.getElementById('btn-short-rest'),
+  btnLongRest: document.getElementById('btn-long-rest'),
 
   // Settings & Utilities Modal
   btnSettings: document.getElementById('btn-settings'),
@@ -198,6 +222,9 @@ let activeFeatureFilters = new Set(['all']);
 let activeInventoryTagFilters = new Set();
 let currentDescItemIndex = null; // index of item currently being edited in desc modal
 let currentDescModuleIndex = null; // index of module currently being edited in desc modal
+let currentDescModuleIsFeature = false; // true if editing a feature vs action in module desc modal
+let currentDescModuleSource = null; // 'module' | 'inventory' — what kind of item opened the modal
+let currentDescInventoryLinkedIndex = null; // inventory index when opening desc via linked action
 let currentCalcModuleIndex = null; // index of module being auto-calculated
 let tempTagFilterSelection = new Set(); // temporary selection in tag filter modal
 
@@ -231,12 +258,29 @@ function init() {
       if (m.damageOrEffect === undefined) m.damageOrEffect = '';
       if (m.calcType === undefined) m.calcType = 'none';
       if (m.calcAbility === undefined) m.calcAbility = 'strength';
+      // Action linking & uses migration
+      if (m.isAction === undefined) m.isAction = false;
+      if (m.actionType === undefined) m.actionType = 'action';
+      if (m.usesEnabled === undefined) m.usesEnabled = false;
+      if (m.usesCurrent === undefined) m.usesCurrent = 0;
+      if (m.usesMax === undefined) m.usesMax = 0;
+      if (m.usesRecharge === undefined) m.usesRecharge = 'lr';
     });
   }
 
   // Ensure inventory and customTags exist for older saved characters
   if (!character.inventory) character.inventory = [];
   if (!character.customTags) character.customTags = [];
+
+  // Migrate inventory items for action linking & uses
+  character.inventory.forEach(item => {
+    if (item.isAction === undefined) item.isAction = false;
+    if (item.actionType === undefined) item.actionType = 'action';
+    if (item.usesEnabled === undefined) item.usesEnabled = false;
+    if (item.usesCurrent === undefined) item.usesCurrent = 0;
+    if (item.usesMax === undefined) item.usesMax = 0;
+    if (item.usesRecharge === undefined) item.usesRecharge = 'lr';
+  });
 
   // Ensure spellcasting exists for older saved characters
   if (!character.spellcasting) {
@@ -411,22 +455,63 @@ function renderModuleLists() {
     const groupTypes = MODULE_GROUPS[groupKey];
     const isActionsGroup = groupKey === 'actions';
 
-    listEl.innerHTML = character.modules.map((mod, index) => {
-      if (!groupTypes.includes(mod.type)) return '';
-      if (!isAll && !filters.has(mod.type)) return '';
+    // Build the array of items to render
+    let renderItems = [];
 
-      const typeDef = MODULE_TYPES[mod.type];
+    if (isActionsGroup) {
+      // 1. Native Actions
+      character.modules.forEach((mod, idx) => {
+        if (groupTypes.includes(mod.type)) {
+          renderItems.push({ item: mod, index: idx, source: 'module' });
+        }
+      });
+      // 2. Linked Features
+      character.modules.forEach((mod, idx) => {
+        if (MODULE_GROUPS.features.includes(mod.type) && mod.isAction) {
+          renderItems.push({ item: mod, index: idx, source: 'module', isLinkedFeature: true });
+        }
+      });
+      // 3. Linked Inventory
+      if (character.inventory) {
+        character.inventory.forEach((inv, idx) => {
+          if (inv.isAction) {
+            renderItems.push({ item: inv, index: idx, source: 'inventory' });
+          }
+        });
+      }
+    } else {
+      // Features list
+      character.modules.forEach((mod, idx) => {
+        if (groupTypes.includes(mod.type)) {
+          renderItems.push({ item: mod, index: idx, source: 'module' });
+        }
+      });
+    }
+
+    listEl.innerHTML = renderItems.map(({ item, index, source, isLinkedFeature }) => {
+      // For linked items, their type might not be an Action type, so we bypass type filtering
+      // But we still apply tag filtering (sub-filters) if they match the module type. (Inventory has no module type, defaults to 'action' in sub-filters if needed).
+      const itemType = isLinkedFeature ? item.actionType : (source === 'inventory' ? item.actionType : item.type);
+      if (!isAll && !filters.has(itemType)) return '';
+
+      let typeDef;
+      if (isLinkedFeature || source === 'inventory') {
+        typeDef = MODULE_TYPES[item.actionType || 'action'];
+      } else {
+        typeDef = MODULE_TYPES[item.type] || MODULE_TYPES['action'];
+      }
+
       const shapeHtml = typeDef.shape !== 'none' ? `<span class="badge-shape badge-shape--${typeDef.shape}"></span>` : '';
 
-      const hasDesc = mod.description && mod.description.trim().length > 0;
+      const hasDesc = item.description && item.description.trim().length > 0;
       const descBtnClass = hasDesc ? 'module-card__desc-btn module-card__desc-btn--has-content' : 'module-card__desc-btn';
 
       // Damage row (only for action group)
       let damageRowHtml = '';
       let damageCheckHtml = '';
-      if (isActionsGroup) {
-        const checked = mod.dealsDamage ? 'checked' : '';
-        const fieldsStyle = mod.dealsDamage ? '' : 'style="display:none;"';
+      if (isActionsGroup && source === 'module') {
+        const checked = item.dealsDamage ? 'checked' : '';
+        const fieldsStyle = item.dealsDamage ? '' : 'style="display:none;"';
 
         damageCheckHtml = `
           <label class="module-calc-toggle" style="margin-left: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.65rem; color: var(--text-muted); cursor: pointer;" title="Toggle Damage/Effect Fields">
@@ -443,33 +528,60 @@ function renderModuleLists() {
                   <span class="module-card__damage-field-label">Atk / CD</span>
                   <button type="button" class="module-calc-btn" data-mod-calc="${index}" style="font-size: 0.6rem; background: transparent; border: none; cursor: pointer; color: var(--text-muted);" title="Auto Calculate">⚙️</button>
                 </div>
-                <input type="text" class="module-card__damage-input dnd-input" placeholder="+7 / 15" value="${escapeHtml(mod.attackBonus || '')}" data-mod-field="attackBonus" ${mod.calcType !== 'none' ? 'readonly' : ''}>
+                <input type="text" class="module-card__damage-input dnd-input" placeholder="+7 / 15" value="${escapeHtml(item.attackBonus || '')}" data-mod-field="attackBonus" ${item.calcType !== 'none' ? 'readonly' : ''}>
               </div>
               <div class="module-card__damage-field">
                 <span class="module-card__damage-field-label">Dmg / Effect</span>
-                <input type="text" class="module-card__damage-input dnd-input" placeholder="4d6 / Stun" value="${escapeHtml(mod.damageOrEffect || '')}" data-mod-field="damageOrEffect">
+                <input type="text" class="module-card__damage-input dnd-input" placeholder="4d6 / Stun" value="${escapeHtml(item.damageOrEffect || '')}" data-mod-field="damageOrEffect">
               </div>
             </div>
           </div>
         `;
       }
 
+      // Uses tracker
+      let usesHtml = '';
+      if (item.usesEnabled) {
+        usesHtml = `
+          <div class="module-card__uses">
+            <div class="uses-tracker">
+              <input type="number" class="uses-tracker__current" data-uses-current value="${item.usesCurrent || 0}" min="0">
+              <span class="uses-tracker__divider">/</span>
+              <span class="uses-tracker__max">${item.usesMax || 0}</span>
+              <span class="uses-tracker__recharge uses-tracker__recharge--${item.usesRecharge || 'lr'}">${item.usesRecharge || 'lr'}</span>
+            </div>
+          </div>
+        `;
+      }
+
+      // Source Badge
+      let sourceBadgeHtml = '';
+      if (isActionsGroup) {
+        if (source === 'inventory') {
+          sourceBadgeHtml = `<span class="module-card__source module-card__source--inventory">🎒 Inventory</span>`;
+        } else if (isLinkedFeature) {
+          sourceBadgeHtml = `<span class="module-card__source module-card__source--${item.type}">📋 ${MODULE_TYPES[item.type]?.label || 'Feature'}</span>`;
+        }
+      }
+
       return `
-        <div class="module-card" data-index="${index}">
+        <div class="module-card" data-index="${index}" data-source="${source}">
           <div class="module-header-row">
             <div style="display: flex; align-items: center;">
               <span class="module-badge" style="border-color: ${typeDef.color}; color: ${typeDef.color}">
                 ${shapeHtml}
                 ${typeDef.label}
               </span>
+              ${sourceBadgeHtml}
               ${damageCheckHtml}
             </div>
             <button type="button" class="module-delete" aria-label="Delete module">✕</button>
           </div>
           <div class="module-card__fields">
-            <input type="text" class="module-input dnd-input" placeholder="Title" value="${escapeHtml(mod.title)}">
+            <input type="text" class="module-input dnd-input" placeholder="Title" value="${escapeHtml(item.title)}" data-mod-field="title">
             <button type="button" class="${descBtnClass}" data-mod-desc="${index}" title="Edit description">📝</button>
           </div>
+          ${usesHtml}
           ${damageRowHtml}
         </div>
       `;
@@ -530,6 +642,21 @@ function renderInventory() {
       const hasDesc = item.description && item.description.trim().length > 0;
       const descBtnClass = hasDesc ? 'inv-card__desc-btn inv-card__desc-btn--has-content' : 'inv-card__desc-btn';
 
+      // Uses tracker
+      let usesHtml = '';
+      if (item.usesEnabled) {
+        usesHtml = `
+          <div class="inv-card__uses">
+            <div class="uses-tracker">
+              <input type="number" class="uses-tracker__current" data-uses-current value="${item.usesCurrent || 0}" min="0">
+              <span class="uses-tracker__divider">/</span>
+              <span class="uses-tracker__max">${item.usesMax || 0}</span>
+              <span class="uses-tracker__recharge uses-tracker__recharge--${item.usesRecharge || 'lr'}">${item.usesRecharge || 'lr'}</span>
+            </div>
+          </div>
+        `;
+      }
+
       return `
         <div class="inv-card" data-inv-index="${index}">
           <button type="button" class="inv-card__delete" data-inv-delete="${index}" aria-label="Delete item">✕</button>
@@ -546,6 +673,7 @@ function renderInventory() {
               <input type="number" class="inv-card__weight dnd-input" value="${item.weight}" min="0" step="0.1" data-inv-field="weight">
             </div>
           </div>
+          ${usesHtml}
         </div>
       `;
     }).join('');
@@ -579,8 +707,21 @@ function renderActiveTagFilters() {
 /** Open description modal for an inventory item */
 function openDescModal(itemIndex) {
   currentDescItemIndex = itemIndex;
+  currentDescModuleSource = 'inventory';
   const item = character.inventory[itemIndex];
   if (!item) return;
+
+  // Action Linking
+  elements.invIsActionCheck.checked = !!item.isAction;
+  elements.invActionTypeWrap.style.display = item.isAction ? 'flex' : 'none';
+  elements.invActionTypeSelect.value = item.actionType || 'action';
+
+  // Uses Tracking
+  elements.invHasUsesCheck.checked = !!item.usesEnabled;
+  elements.invUsesWrap.style.display = item.usesEnabled ? 'flex' : 'none';
+  elements.invUsesCurrent.value = item.usesCurrent !== undefined ? item.usesCurrent : '';
+  elements.invUsesMax.value = item.usesMax !== undefined ? item.usesMax : '';
+  elements.invUsesRecharge.value = item.usesRecharge || 'lr';
 
   // Fill textarea
   elements.invDescTextarea.value = item.description || '';
@@ -592,10 +733,44 @@ function openDescModal(itemIndex) {
 }
 
 /** Open description modal for a module (action/feature) */
-function openModuleDescModal(modIndex) {
+function openModuleDescModal(modIndex, isLinkedFromInventory = false) {
   currentDescModuleIndex = modIndex;
+  currentDescModuleSource = isLinkedFromInventory ? 'inventory' : 'module';
   const mod = character.modules[modIndex];
   if (!mod) return;
+
+  // Determine if it's inherently a feature or an action
+  const isFeatureGroup = MODULE_GROUPS.features.includes(mod.type);
+  currentDescModuleIsFeature = isFeatureGroup;
+
+  elements.moduleDescTitle.textContent = isFeatureGroup ? 'Feature Description' : 'Action Description';
+
+  // Source Badge (only show if it's an action linked from somewhere else, viewed in Actions pane)
+  if (!isFeatureGroup && mod.sourceType) {
+    elements.moduleSourceBadge.style.display = 'inline-flex';
+    elements.moduleSourceBadge.className = `desc-source-badge desc-source-badge--${mod.sourceType === 'inventory' ? 'inventory' : 'feature'}`;
+    const label = mod.sourceType === 'inventory' ? '🎒 Inventory' : '📋 ' + (MODULE_TYPES[mod.sourceType] ? MODULE_TYPES[mod.sourceType].label : 'Feature');
+    elements.moduleSourceBadge.textContent = label;
+  } else {
+    elements.moduleSourceBadge.style.display = 'none';
+  }
+
+  // Action Linking (only show checkbox for features; native actions are always actions)
+  if (isFeatureGroup) {
+    elements.moduleActionRow.style.display = 'flex';
+    elements.moduleIsActionCheck.checked = !!mod.isAction;
+    elements.moduleActionTypeWrap.style.display = mod.isAction ? 'flex' : 'none';
+    elements.moduleActionTypeSelect.value = mod.actionType || 'action';
+  } else {
+    elements.moduleActionRow.style.display = 'none';
+  }
+
+  // Uses Tracking
+  elements.moduleHasUsesCheck.checked = !!mod.usesEnabled;
+  elements.moduleUsesWrap.style.display = mod.usesEnabled ? 'flex' : 'none';
+  elements.moduleUsesCurrent.value = mod.usesCurrent !== undefined ? mod.usesCurrent : '';
+  elements.moduleUsesMax.value = mod.usesMax !== undefined ? mod.usesMax : '';
+  elements.moduleUsesRecharge.value = mod.usesRecharge || 'lr';
 
   elements.moduleDescTextarea.value = mod.description || '';
   elements.moduleDescModal.classList.remove('hidden');
@@ -1105,6 +1280,78 @@ function setupEventListeners() {
     updateAllDerivedStats();
   });
 
+  // ===== REST BUTTONS =====
+  if (elements.btnShortRest) {
+    elements.btnShortRest.addEventListener('click', () => {
+      let resetCount = 0;
+      // Reset modules with SR recharge
+      character.modules.forEach(mod => {
+        if (mod.usesEnabled && mod.usesRecharge === 'sr') {
+          mod.usesCurrent = mod.usesMax;
+          resetCount++;
+        }
+      });
+      // Reset inventory with SR recharge
+      character.inventory.forEach(item => {
+        if (item.usesEnabled && item.usesRecharge === 'sr') {
+          item.usesCurrent = item.usesMax;
+          resetCount++;
+        }
+      });
+
+      if (resetCount > 0) {
+        renderModuleLists();
+        renderInventory();
+        showToast(`Short Rest: Reset ${resetCount} abilities.`, 'success');
+      } else {
+        showToast('Short Rest: No abilities to reset.', 'info');
+      }
+    });
+  }
+
+  if (elements.btnLongRest) {
+    elements.btnLongRest.addEventListener('click', () => {
+      // 1. Reset HP
+      character.hitPoints.current = character.hitPoints.max;
+      character.hitPoints.temporary = 0;
+      elements.hpCurrent.value = character.hitPoints.current;
+      elements.hpTemp.value = 0;
+
+      // 2. Restore Hit Dice (regain half max, min 1)
+      const regain = Math.max(1, Math.floor(character.level / 2));
+      character.hitDiceSpent = Math.max(0, character.hitDiceSpent - Math.floor(regain));
+      if (elements.hdSpent) elements.hdSpent.value = character.hitDiceSpent;
+
+      // 3. Reset Spell Slots (level groups)
+      let spellsReset = false;
+      character.spellcasting.groups.forEach(g => {
+        if (g.type === 'level' && g.usedSlots > 0) {
+          g.usedSlots = 0;
+          spellsReset = true;
+        }
+      });
+      if (spellsReset) renderSpells();
+
+      // 4. Reset Usages (SR and LR)
+      let resetCount = 0;
+      const resetUses = (item) => {
+        if (item.usesEnabled && (item.usesRecharge === 'sr' || item.usesRecharge === 'lr')) {
+          item.usesCurrent = item.usesMax;
+          resetCount++;
+        }
+      };
+      character.modules.forEach(resetUses);
+      character.inventory.forEach(resetUses);
+
+      if (resetCount > 0) {
+        renderModuleLists();
+        renderInventory();
+      }
+
+      showToast('Long Rest completed. HP, Hit Dice, Spells, and Abilities restored.', 'success');
+    });
+  }
+
   // Ability Score updates
   elements.abilitiesRow.addEventListener('input', e => {
     if (e.target.classList.contains('ability-card__score')) {
@@ -1228,6 +1475,120 @@ function setupEventListeners() {
         const btn = e.target.nextElementSibling;
         btn.click();
       }
+    });
+  }
+
+  // ===== DEFENSES & CONDITIONS =====
+  // 1. Defenses List Delete
+  if (elements.defensesList) {
+    elements.defensesList.addEventListener('click', e => {
+      const delBtn = e.target.closest('[data-defense-del]');
+      if (!delBtn) return;
+      const index = parseInt(delBtn.dataset.defenseDel);
+      character.defenses.splice(index, 1);
+      renderDefenses();
+    });
+  }
+
+  // 2. Open Defense Modal
+  if (elements.btnOpenDefenseModal) {
+    elements.btnOpenDefenseModal.addEventListener('click', () => {
+      if (elements.modalDefenseValue) elements.modalDefenseValue.value = '';
+      if (elements.modalDefenseType) elements.modalDefenseType.value = 'resistance';
+      elements.addDefenseModal.classList.remove('hidden');
+    });
+  }
+
+  // 3. Close Defense Modal
+  if (elements.defenseModalCancel) {
+    elements.defenseModalCancel.addEventListener('click', () => {
+      elements.addDefenseModal.classList.add('hidden');
+    });
+  }
+  if (elements.addDefenseModal) {
+    elements.addDefenseModal.addEventListener('click', e => {
+      if (e.target === elements.addDefenseModal) elements.addDefenseModal.classList.add('hidden');
+    });
+  }
+
+  // 4. Confirm Add Defense
+  const defenseModalConfirm = document.getElementById('defense-modal-confirm');
+  if (defenseModalConfirm) {
+    defenseModalConfirm.addEventListener('click', () => {
+      const type = elements.modalDefenseType.value;
+      const val = elements.modalDefenseValue.value.trim();
+      if (!val) return;
+
+      character.defenses.push({ type: type, value: val });
+      renderDefenses();
+      elements.addDefenseModal.classList.add('hidden');
+    });
+  }
+
+  // 5. Conditions Delete
+  if (elements.conditionsList) {
+    elements.conditionsList.addEventListener('click', e => {
+      const delBtn = e.target.closest('[data-condition-del]');
+      if (!delBtn) return;
+      const index = parseInt(delBtn.dataset.conditionDel);
+      character.conditions.splice(index, 1);
+      renderConditions();
+    });
+  }
+
+  // 6. Add Condition Button
+  if (elements.addConditionBtn && elements.conditionSelect) {
+    elements.addConditionBtn.addEventListener('click', () => {
+      const val = elements.conditionSelect.value;
+      if (!val) return;
+
+      if (val === 'Custom') {
+        const modalConditionValue = document.getElementById('modal-condition-value');
+        if (modalConditionValue) modalConditionValue.value = '';
+        elements.addConditionModal.classList.remove('hidden');
+        elements.conditionSelect.value = '';
+        return; // wait for modal
+      }
+
+      // Predefined condition
+      if (!character.conditions.includes(val)) {
+        character.conditions.push(val);
+        renderConditions();
+      }
+      elements.conditionSelect.value = '';
+    });
+  }
+
+  // 7. Custom Condition Modal
+  const conditionModalCancel = document.getElementById('condition-modal-cancel');
+  const conditionModalConfirm = document.getElementById('condition-modal-confirm');
+  const modalConditionValue = document.getElementById('modal-condition-value');
+
+  if (conditionModalCancel) {
+    conditionModalCancel.addEventListener('click', () => elements.addConditionModal.classList.add('hidden'));
+  }
+  if (elements.addConditionModal) {
+    elements.addConditionModal.addEventListener('click', e => {
+      if (e.target === elements.addConditionModal) elements.addConditionModal.classList.add('hidden');
+    });
+  }
+  if (conditionModalConfirm && modalConditionValue) {
+    conditionModalConfirm.addEventListener('click', () => {
+      const val = modalConditionValue.value.trim();
+      if (!val) return;
+
+      if (!character.conditions.includes(val)) {
+        character.conditions.push(val);
+        renderConditions();
+      }
+      elements.addConditionModal.classList.add('hidden');
+    });
+  }
+
+  // 8. Exhaustion Updates
+  if (elements.exhaustionSelect) {
+    elements.exhaustionSelect.addEventListener('change', e => {
+      character.exhaustion = parseInt(e.target.value) || 0;
     });
   }
 
@@ -1388,7 +1749,14 @@ function setupEventListeners() {
     if (e.target.classList.contains('module-delete')) {
       const card = e.target.closest('.module-card');
       const index = parseInt(card.dataset.index);
-      character.modules.splice(index, 1);
+      const source = card.dataset.source || 'module';
+      
+      if (source === 'module') {
+        character.modules.splice(index, 1);
+      } else if (source === 'inventory') {
+        character.inventory.splice(index, 1);
+        renderInventory();
+      }
       renderModuleLists();
       return;
     }
@@ -1396,7 +1764,8 @@ function setupEventListeners() {
     // Open calc modal
     const calcBtn = e.target.closest('[data-mod-calc]');
     if (calcBtn) {
-      const idx = parseInt(calcBtn.dataset.modCalc);
+      const card = calcBtn.closest('.module-card');
+      const idx = parseInt(card.dataset.index);
       currentCalcModuleIndex = idx;
       const mod = character.modules[idx];
       elements.moduleCalcType.value = mod.calcType || 'none';
@@ -1408,8 +1777,17 @@ function setupEventListeners() {
     // Open description modal for module
     const descBtn = e.target.closest('[data-mod-desc]');
     if (descBtn) {
-      const idx = parseInt(descBtn.dataset.modDesc);
-      openModuleDescModal(idx);
+      const card = descBtn.closest('.module-card');
+      const isInventory = card.dataset.source === 'inventory';
+      const idx = parseInt(card.dataset.index);
+      
+      if (isInventory) {
+        // If it's a linked inventory action, open the inventory modal
+        openDescModal(idx);
+      } else {
+        // Open the module desc modal (linked features use this too, since they are modules)
+        openModuleDescModal(idx, false);
+      }
       return;
     }
   });
@@ -1418,9 +1796,17 @@ function setupEventListeners() {
     const card = e.target.closest('.module-card');
     if (!card) return;
     const index = parseInt(card.dataset.index);
+    const source = card.dataset.source || 'module';
+    const isInventory = source === 'inventory';
 
-    if (e.target.classList.contains('module-input')) {
-      character.modules[index].title = e.target.value;
+    if (e.target.dataset.modField === 'title') {
+      if (isInventory) {
+        character.inventory[index].title = e.target.value;
+        renderInventory(); // update the list if visible
+      } else {
+        character.modules[index].title = e.target.value;
+        // In case it's a linked feature, we don't need to re-render the whole list, just sync data.
+      }
     } else if (e.target.dataset.modField === 'attackBonus') {
       character.modules[index].attackBonus = e.target.value;
     } else if (e.target.dataset.modField === 'damageOrEffect') {
@@ -1428,12 +1814,14 @@ function setupEventListeners() {
     }
   });
 
-  // Damage checkbox toggle
+  // Damage checkbox toggle and Uses inline modification
   elements.panelBody.addEventListener('change', e => {
+    const card = e.target.closest('.module-card');
+    if (!card) return;
+    const index = parseInt(card.dataset.index);
+    const source = card.dataset.source || 'module';
+
     if (e.target.hasAttribute('data-mod-damage-check')) {
-      const card = e.target.closest('.module-card');
-      if (!card) return;
-      const index = parseInt(card.dataset.index);
       character.modules[index].dealsDamage = e.target.checked;
 
       // Show/hide damage row explicitly
@@ -1441,6 +1829,24 @@ function setupEventListeners() {
       if (row) {
         row.style.display = e.target.checked ? '' : 'none';
       }
+    }
+    
+    // Updates tracker current uses from card
+    if (e.target.hasAttribute('data-uses-current')) {
+      let val = parseInt(e.target.value) || 0;
+      if (val < 0) val = 0;
+      
+      if (source === 'module') {
+        const item = character.modules[index];
+        if (val > item.usesMax) val = item.usesMax;
+        item.usesCurrent = val;
+      } else if (source === 'inventory') {
+        const item = character.inventory[index];
+        if (val > item.usesMax) val = item.usesMax;
+        item.usesCurrent = val;
+        renderInventory(); // Update inventory view if needed
+      }
+      e.target.value = val;
     }
   });
 
@@ -1562,14 +1968,31 @@ function setupEventListeners() {
       if (!card) return;
       const idx = parseInt(card.dataset.invIndex);
       const field = e.target.dataset.invField;
-      if (!field) return;
 
       if (field === 'title') {
         character.inventory[idx].title = e.target.value;
+        renderModuleLists(); // Action tab might have changed
       } else if (field === 'quantity') {
         character.inventory[idx].quantity = parseInt(e.target.value) || 0;
       } else if (field === 'weight') {
         character.inventory[idx].weight = parseFloat(e.target.value) || 0;
+      }
+    });
+
+    elements.inventoryGrid.addEventListener('change', e => {
+      const card = e.target.closest('.inv-card');
+      if (!card) return;
+      const index = parseInt(card.dataset.invIndex);
+      
+      // Updates tracker current uses from card
+      if (e.target.hasAttribute('data-uses-current')) {
+        let val = parseInt(e.target.value) || 0;
+        if (val < 0) val = 0;
+        const item = character.inventory[index];
+        if (val > item.usesMax) val = item.usesMax;
+        item.usesCurrent = val;
+        e.target.value = val;
+        renderModuleLists(); // Sync Action tab uses
       }
     });
   }
@@ -1646,15 +2069,37 @@ function setupEventListeners() {
     });
   }
 
+  // Toggle UI for checkboxes in mod/inv desc modals
+  elements.invIsActionCheck.addEventListener('change', e => {
+    elements.invActionTypeWrap.style.display = e.target.checked ? 'flex' : 'none';
+  });
+  elements.invHasUsesCheck.addEventListener('change', e => {
+    elements.invUsesWrap.style.display = e.target.checked ? 'flex' : 'none';
+  });
+  elements.moduleIsActionCheck.addEventListener('change', e => {
+    elements.moduleActionTypeWrap.style.display = e.target.checked ? 'flex' : 'none';
+  });
+  elements.moduleHasUsesCheck.addEventListener('change', e => {
+    elements.moduleUsesWrap.style.display = e.target.checked ? 'flex' : 'none';
+  });
+
   // Description modal — save & close
   if (elements.invDescSave) {
     elements.invDescSave.addEventListener('click', () => {
       if (currentDescItemIndex !== null) {
-        character.inventory[currentDescItemIndex].description = elements.invDescTextarea.value;
+        const item = character.inventory[currentDescItemIndex];
+        item.description = elements.invDescTextarea.value;
+        item.isAction = elements.invIsActionCheck.checked;
+        item.actionType = elements.invActionTypeSelect.value;
+        item.usesEnabled = elements.invHasUsesCheck.checked;
+        item.usesCurrent = parseInt(elements.invUsesCurrent.value) || 0;
+        item.usesMax = parseInt(elements.invUsesMax.value) || 0;
+        item.usesRecharge = elements.invUsesRecharge.value;
       }
       elements.invDescModal.classList.add('hidden');
       currentDescItemIndex = null;
       renderInventory();
+      renderModuleLists(); // Action tab might have changed
     });
   }
 
@@ -1664,11 +2109,19 @@ function setupEventListeners() {
       if (e.target === elements.invDescModal) {
         // Save before closing
         if (currentDescItemIndex !== null) {
-          character.inventory[currentDescItemIndex].description = elements.invDescTextarea.value;
+          const item = character.inventory[currentDescItemIndex];
+          item.description = elements.invDescTextarea.value;
+          item.isAction = elements.invIsActionCheck.checked;
+          item.actionType = elements.invActionTypeSelect.value;
+          item.usesEnabled = elements.invHasUsesCheck.checked;
+          item.usesCurrent = parseInt(elements.invUsesCurrent.value) || 0;
+          item.usesMax = parseInt(elements.invUsesMax.value) || 0;
+          item.usesRecharge = elements.invUsesRecharge.value;
         }
         elements.invDescModal.classList.add('hidden');
         currentDescItemIndex = null;
         renderInventory();
+        renderModuleLists(); // Action tab might have changed
       }
     });
   }
@@ -1677,7 +2130,16 @@ function setupEventListeners() {
   if (elements.moduleDescSave) {
     elements.moduleDescSave.addEventListener('click', () => {
       if (currentDescModuleIndex !== null) {
-        character.modules[currentDescModuleIndex].description = elements.moduleDescTextarea.value;
+        const mod = character.modules[currentDescModuleIndex];
+        mod.description = elements.moduleDescTextarea.value;
+        if (currentDescModuleIsFeature) {
+          mod.isAction = elements.moduleIsActionCheck.checked;
+          mod.actionType = elements.moduleActionTypeSelect.value;
+        }
+        mod.usesEnabled = elements.moduleHasUsesCheck.checked;
+        mod.usesCurrent = parseInt(elements.moduleUsesCurrent.value) || 0;
+        mod.usesMax = parseInt(elements.moduleUsesMax.value) || 0;
+        mod.usesRecharge = elements.moduleUsesRecharge.value;
       }
       elements.moduleDescModal.classList.add('hidden');
       currentDescModuleIndex = null;
@@ -1690,7 +2152,16 @@ function setupEventListeners() {
     elements.moduleDescModal.addEventListener('click', e => {
       if (e.target === elements.moduleDescModal) {
         if (currentDescModuleIndex !== null) {
-          character.modules[currentDescModuleIndex].description = elements.moduleDescTextarea.value;
+          const mod = character.modules[currentDescModuleIndex];
+          mod.description = elements.moduleDescTextarea.value;
+          if (currentDescModuleIsFeature) {
+            mod.isAction = elements.moduleIsActionCheck.checked;
+            mod.actionType = elements.moduleActionTypeSelect.value;
+          }
+          mod.usesEnabled = elements.moduleHasUsesCheck.checked;
+          mod.usesCurrent = parseInt(elements.moduleUsesCurrent.value) || 0;
+          mod.usesMax = parseInt(elements.moduleUsesMax.value) || 0;
+          mod.usesRecharge = elements.moduleUsesRecharge.value;
         }
         elements.moduleDescModal.classList.add('hidden');
         currentDescModuleIndex = null;
