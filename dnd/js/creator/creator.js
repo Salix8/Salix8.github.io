@@ -171,7 +171,7 @@ const elements = {
   settingsDropdown: document.getElementById('settings-dropdown'),
   btnOpenConverter: document.getElementById('settings-open-converter'),
   btnOpenColors: document.getElementById('settings-open-colors'),
-  
+
   converterPanelOverlay: document.getElementById('converter-panel-overlay'),
   converterPanel: document.getElementById('converter-panel'),
   converterClose: document.getElementById('converter-close'),
@@ -195,7 +195,7 @@ const elements = {
   colorAccent: document.getElementById('color-accent'),
   colorAccent2Hex: document.getElementById('color-accent2-hex'),
   colorAccent2: document.getElementById('color-accent2'),
-  
+
   colorText2Hex: document.getElementById('color-text2-hex'),
   colorText2: document.getElementById('color-text2'),
   colorText3Hex: document.getElementById('color-text3-hex'),
@@ -204,7 +204,7 @@ const elements = {
   colorInputHex: document.getElementById('color-input-hex'),
   colorInput: document.getElementById('color-input'),
   opacityInput: document.getElementById('opacity-input'),
-  
+
   colorGlassHex: document.getElementById('color-glass-hex'),
   colorGlass: document.getElementById('color-glass'),
   opacityGlass: document.getElementById('opacity-glass'),
@@ -314,11 +314,11 @@ function init() {
   updateSpellStats();
   updateSpellFocusUI();
   updateUI();
-  
+
   // Custom Character Colors
   if (!character.theme) character.theme = {};
   loadTheme();
-  
+
   setupEventListeners();
 }
 
@@ -1319,7 +1319,8 @@ function setupEventListeners() {
 
       // 2. Restore Hit Dice (regain half max, min 1)
       const regain = Math.max(1, Math.floor(character.level / 2));
-      character.hitDiceSpent = Math.max(0, character.hitDiceSpent - Math.floor(regain));
+      character.hitDiceSpent = Math.max(0, character.hitDiceSpent + Math.floor(regain));
+      if (character.hitDiceSpent > character.level) character.hitDiceSpent = character.level;
       if (elements.hdSpent) elements.hdSpent.value = character.hitDiceSpent;
 
       // 3. Reset Spell Slots (level groups)
@@ -1750,7 +1751,7 @@ function setupEventListeners() {
       const card = e.target.closest('.module-card');
       const index = parseInt(card.dataset.index);
       const source = card.dataset.source || 'module';
-      
+
       if (source === 'module') {
         character.modules.splice(index, 1);
       } else if (source === 'inventory') {
@@ -1780,7 +1781,7 @@ function setupEventListeners() {
       const card = descBtn.closest('.module-card');
       const isInventory = card.dataset.source === 'inventory';
       const idx = parseInt(card.dataset.index);
-      
+
       if (isInventory) {
         // If it's a linked inventory action, open the inventory modal
         openDescModal(idx);
@@ -1830,12 +1831,12 @@ function setupEventListeners() {
         row.style.display = e.target.checked ? '' : 'none';
       }
     }
-    
+
     // Updates tracker current uses from card
     if (e.target.hasAttribute('data-uses-current')) {
       let val = parseInt(e.target.value) || 0;
       if (val < 0) val = 0;
-      
+
       if (source === 'module') {
         const item = character.modules[index];
         if (val > item.usesMax) val = item.usesMax;
@@ -1983,7 +1984,7 @@ function setupEventListeners() {
       const card = e.target.closest('.inv-card');
       if (!card) return;
       const index = parseInt(card.dataset.invIndex);
-      
+
       // Updates tracker current uses from card
       if (e.target.hasAttribute('data-uses-current')) {
         let val = parseInt(e.target.value) || 0;
@@ -3087,14 +3088,14 @@ if (elements.colorPanelOverlay) elements.colorPanelOverlay.addEventListener('cli
 const updateColor = (varName, hexValue, hexInput, colorInput, save = true) => {
   document.documentElement.style.setProperty(varName, hexValue);
   if (hexInput && hexInput.value !== hexValue) hexInput.value = hexValue;
-  
+
   // Set the color input (stripping alpha if present because type="color" only accepts 6 chars)
   if (colorInput && hexValue.startsWith('#') && hexValue.length >= 7) {
     colorInput.value = hexValue.substring(0, 7);
   } else if (colorInput) {
     colorInput.value = hexValue;
   }
-  
+
   if (save) saveTheme();
 };
 
@@ -3104,7 +3105,7 @@ const opacityToHex = (opacity) => {
 
 const setupColorPicker = (hexInput, colorInput, cssVar, opacitySlider = null) => {
   if (!hexInput || !colorInput) return;
-  
+
   const getFullHex = () => {
     let base = colorInput.value;
     if (opacitySlider) {
@@ -3112,24 +3113,24 @@ const setupColorPicker = (hexInput, colorInput, cssVar, opacitySlider = null) =>
     }
     return base;
   };
-  
+
   colorInput.addEventListener('input', () => {
     updateColor(cssVar, getFullHex(), hexInput, colorInput);
   });
-  
+
   if (opacitySlider) {
     opacitySlider.addEventListener('input', () => {
       updateColor(cssVar, getFullHex(), hexInput, colorInput);
     });
   }
-  
+
   hexInput.addEventListener('change', e => {
     let val = e.target.value.trim();
     if (!val.startsWith('#')) val = '#' + val;
     // Validate hex 6 or hex 8
     if (/^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$/i.test(val)) {
       updateColor(cssVar, val, hexInput, colorInput);
-      
+
       // Sync slider if alpha provided
       if (opacitySlider && val.length === 9) {
         const alphaHex = val.substring(7, 9);
@@ -3154,7 +3155,7 @@ const saveTheme = () => {
     glass: elements.colorGlass ? elements.colorGlass.value : '',
     skill: elements.colorSkill ? elements.colorSkill.value : ''
   };
-  
+
   character.theme = theme;
   saveCharacter(character);
 };
@@ -3162,7 +3163,7 @@ const saveTheme = () => {
 const loadTheme = () => {
   try {
     const theme = character.theme || {};
-    
+
     // Apply variables to document
     if (theme.bg && elements.colorBg) updateColor('--bg-primary', theme.bg, elements.colorBgHex, elements.colorBg, false);
     if (theme.text && elements.colorText) updateColor('--text-primary', theme.text, elements.colorTextHex, elements.colorText, false);
@@ -3170,7 +3171,7 @@ const loadTheme = () => {
     if (theme.accent2 && elements.colorAccent2) updateColor('--accent-2', theme.accent2, elements.colorAccent2Hex, elements.colorAccent2, false);
     if (theme.text2 && elements.colorText2) updateColor('--text-secondary', theme.text2, elements.colorText2Hex, elements.colorText2, false);
     if (theme.text3 && elements.colorText3) updateColor('--text-muted', theme.text3, elements.colorText3Hex, elements.colorText3, false);
-    
+
     // Check alpha in theme values and sync sliders
     if (theme.input && elements.colorInput) {
       if (theme.input.length === 9 && elements.opacityInput) {
@@ -3178,21 +3179,21 @@ const loadTheme = () => {
       }
       updateColor('--bg-input', theme.input, elements.colorInputHex, elements.colorInput, false);
     }
-    
+
     if (theme.glass && elements.colorGlass) {
       if (theme.glass.length === 9 && elements.opacityGlass) {
         elements.opacityGlass.value = (parseInt(theme.glass.substring(7, 9), 16) / 255).toFixed(2);
       }
       updateColor('--bg-glass', theme.glass, elements.colorGlassHex, elements.colorGlass, false);
     }
-    
+
     if (theme.skill && elements.colorSkill) {
       if (theme.skill.length === 9 && elements.opacitySkill) {
         elements.opacitySkill.value = (parseInt(theme.skill.substring(7, 9), 16) / 255).toFixed(2);
       }
       updateColor('--bg-skill-odd', theme.skill, elements.colorSkillHex, elements.colorSkill, false);
     }
-    
+
     if (theme.font && elements.colorFont) {
       elements.colorFont.value = theme.font;
       document.documentElement.style.setProperty('--font-body', theme.font);
