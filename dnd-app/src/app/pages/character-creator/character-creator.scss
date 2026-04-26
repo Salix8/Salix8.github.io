@@ -1,5 +1,6 @@
 .creator-layout {
-  max-width: 1500px;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
 .creator-nav {
@@ -67,10 +68,14 @@
   gap: 1rem;
   align-items: stretch;
   margin-bottom: 1.5rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
 
   app-abilities-row {
-    flex: 1.2;
+    flex: 1;
     min-width: 0;
   }
 
@@ -82,7 +87,7 @@
 
 .sheet-body {
   display: grid;
-  grid-template-columns: minmax(240px, 300px) 1fr;
+  grid-template-columns: minmax(300px, 380px) 1fr;
   gap: 1.5rem;
 
   @media (max-width: 900px) {

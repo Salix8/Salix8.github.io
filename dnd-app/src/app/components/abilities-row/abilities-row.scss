@@ -1,6 +1,6 @@
 .abilities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 1rem;
   width: 100%;
 }
@@ -73,9 +73,9 @@
 .ability-save {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   margin-top: 0.25rem;
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 0.4rem;
   background: hsla(0, 0%, 0%, 0.2);
   border-radius: 12px;
   cursor: pointer;
