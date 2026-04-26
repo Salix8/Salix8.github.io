@@ -15,43 +15,75 @@
         <button mat-stroked-button (click)="longRest()" title="Long Rest">
           <mat-icon style="color: #4CAF50;">hotel</mat-icon> Long Rest
         </button>
-        <button mat-stroked-button (click)="openSettings()" title="Settings">
-          <mat-icon>settings</mat-icon> Settings
-        </button>
+
+        <!-- Settings dropdown -->
+        <div class="settings-wrapper">
+          <button mat-stroked-button (click)="toggleSettingsMenu()" title="Settings">
+            <mat-icon>settings</mat-icon>
+          </button>
+          <div class="settings-dropdown" *ngIf="settingsOpen">
+            <button class="settings-dropdown__item" (click)="openConverter(); settingsOpen = false;">
+              <mat-icon inline>straighten</mat-icon> Unit Converter
+            </button>
+            <button class="settings-dropdown__item" (click)="openSettings(); settingsOpen = false;">
+              <mat-icon inline>palette</mat-icon> Page Colors
+            </button>
+          </div>
+        </div>
+
         <button mat-flat-button color="primary" (click)="save()">
           <mat-icon>save</mat-icon> Save Character
         </button>
       </div>
     </div>
 
-    <!-- MAIN GRID LAYOUT -->
-    <div class="sheet-grid">
-      
-      <!-- HEADER -->
-      <div class="sheet-header">
-        <app-char-header></app-char-header>
-      </div>
-
-      <!-- Left Column: Abilities & Combat Stats -->
-      <div class="sheet-left">
-        <app-abilities-row></app-abilities-row>
-        <app-combat-stats></app-combat-stats>
-        <!-- Defenses & Conditions will go here -->
-      </div>
-
-      <!-- Center Column: Skills & Features Tabs -->
-      <div class="sheet-center">
-        <app-skills-section></app-skills-section>
-        <app-competencies-section></app-competencies-section>
-        <app-tabbed-panel></app-tabbed-panel>
-      </div>
-
-      <!-- Right Column: Spells & Notes -->
-      <div class="sheet-right">
-        <!-- Spells will go here -->
-      </div>
-
+    <!-- CHARACTER HEADER -->
+    <div class="sheet-header">
+      <app-char-header></app-char-header>
     </div>
 
+    <!-- ROW 1: Abilities + Initiative + AC + HP -->
+    <div class="sheet-top-row">
+      <app-abilities-row></app-abilities-row>
+      <app-combat-stats></app-combat-stats>
+    </div>
+
+    <!-- ROW 2: Two-column layout -->
+    <div class="sheet-body">
+      <!-- LEFT COLUMN: Skills + Competencies (narrow) -->
+      <div class="sheet-left">
+        <app-skills-section></app-skills-section>
+        <app-competencies-section></app-competencies-section>
+      </div>
+
+      <!-- RIGHT COLUMN: Secondary stats row + Tabbed Panel -->
+      <div class="sheet-right">
+        <div class="sheet-secondary-row">
+          <app-secondary-stats></app-secondary-stats>
+        </div>
+        <app-tabbed-panel></app-tabbed-panel>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Unit Converter Side Panel -->
+  <div class="converter-overlay" *ngIf="converterOpen" (click)="converterOpen = false"></div>
+  <div class="converter-panel" [class.open]="converterOpen">
+    <div class="converter-panel__header">
+      <h3>Unit Converter</h3>
+      <button mat-icon-button (click)="converterOpen = false"><mat-icon>close</mat-icon></button>
+    </div>
+    <app-unit-converter></app-unit-converter>
+  </div>
+
+  <!-- Settings Side Panel -->
+  <div class="converter-overlay" *ngIf="settingsPanelOpen" (click)="settingsPanelOpen = false"></div>
+  <div class="converter-panel" [class.open]="settingsPanelOpen">
+    <div class="converter-panel__header">
+      <h3>Page Colors</h3>
+      <button mat-icon-button (click)="settingsPanelOpen = false"><mat-icon>close</mat-icon></button>
+    </div>
+    <app-settings-panel></app-settings-panel>
   </div>
 </div>

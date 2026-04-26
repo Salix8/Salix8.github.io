@@ -69,10 +69,21 @@ import { Module } from '../../models/character.model';
             <input matInput type="number" [(ngModel)]="data.usesMax">
           </mat-form-field>
         </div>
-        <mat-form-field appearance="fill" style="width: 100%;">
-          <mat-label>Recharge (e.g. Short Rest)</mat-label>
-          <input matInput [(ngModel)]="data.usesRecharge">
-        </mat-form-field>
+        <div style="display: flex; gap: 1rem;">
+          <mat-form-field appearance="fill" style="flex: 1;">
+            <mat-label>Recharge</mat-label>
+            <mat-select [(ngModel)]="rechargeType" (selectionChange)="onRechargeChange()">
+              <mat-option value="None">None</mat-option>
+              <mat-option value="Short Rest">Short Rest</mat-option>
+              <mat-option value="Long Rest">Long Rest</mat-option>
+              <mat-option value="Custom">Custom</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="fill" style="flex: 1;" *ngIf="rechargeType === 'Custom'">
+            <mat-label>Custom Recharge</mat-label>
+            <input matInput [(ngModel)]="data.usesRecharge">
+          </mat-form-field>
+        </div>
       </ng-container>
     </mat-dialog-content>
     <mat-dialog-actions align="end">
@@ -90,6 +101,7 @@ export class ModuleDialog {
   isEdit: boolean;
   isAction: boolean;
   availableTypes: { id: string, label: string }[];
+  rechargeType: string = 'None';
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: Module & { isEdit?: boolean, isAction?: boolean }) {
     this.isEdit = !!data.isEdit;
@@ -97,6 +109,24 @@ export class ModuleDialog {
     
     const typesGroup = this.isAction ? MODULE_GROUPS['actions'] : MODULE_GROUPS['features'];
     this.availableTypes = typesGroup.map(id => ({ id, label: MODULE_TYPES[id].label }));
+
+    if (this.data.usesRecharge) {
+      if (this.data.usesRecharge === 'Short Rest' || this.data.usesRecharge === 'Long Rest') {
+        this.rechargeType = this.data.usesRecharge;
+      } else {
+        this.rechargeType = 'Custom';
+      }
+    }
+  }
+
+  onRechargeChange() {
+    if (this.rechargeType === 'None') {
+      this.data.usesRecharge = '';
+    } else if (this.rechargeType !== 'Custom') {
+      this.data.usesRecharge = this.rechargeType;
+    } else {
+      this.data.usesRecharge = '';
+    }
   }
 }
 

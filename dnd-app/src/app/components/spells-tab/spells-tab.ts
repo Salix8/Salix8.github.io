@@ -305,6 +305,30 @@ export class SpellsTab {
     });
   }
 
+  openEditSpellDialog(groupId: string, spell: Spell) {
+    const dialogRef = this.dialog.open(SpellDialog, {
+      width: '450px',
+      data: { ...spell, isEdit: true }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        const currentGroups = [...(this.character().spellcasting?.groups || [])];
+        const groupIndex = currentGroups.findIndex(g => g.id === groupId);
+        if (groupIndex !== -1) {
+          const group = { ...currentGroups[groupIndex] };
+          const spellIndex = group.spells.findIndex(s => s.id === spell.id);
+          if (spellIndex !== -1) {
+            group.spells = [...group.spells];
+            group.spells[spellIndex] = { ...result, id: spell.id };
+            currentGroups[groupIndex] = group;
+            this.characterService.updateNested('spellcasting', { groups: currentGroups });
+          }
+        }
+      }
+    });
+  }
+
   deleteSpell(groupId: string, spellId: string, event: Event) {
     event.stopPropagation();
     if (confirm('Delete this spell?')) {

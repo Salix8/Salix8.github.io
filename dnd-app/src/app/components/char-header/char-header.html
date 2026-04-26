@@ -13,13 +13,13 @@
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="meta-field">
-      <mat-label>Race</mat-label>
-      <input matInput [ngModel]="character().race" (ngModelChange)="updateRace($event)" placeholder="e.g. Human">
+      <mat-label>Level</mat-label>
+      <input matInput type="number" min="1" max="20" [ngModel]="character().level" (ngModelChange)="updateLevel($event)">
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="meta-field">
-      <mat-label>Level</mat-label>
-      <input matInput type="number" min="1" max="20" [ngModel]="character().level" (ngModelChange)="updateLevel($event)">
+      <mat-label>Race</mat-label>
+      <input matInput [ngModel]="character().race" (ngModelChange)="updateRace($event)" placeholder="e.g. Human">
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="meta-field">

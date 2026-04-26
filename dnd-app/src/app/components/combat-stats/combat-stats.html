@@ -47,29 +47,4 @@
       </mat-form-field>
     </div>
   </mat-card>
-
-  <!-- Hit Dice & Exhaustion -->
-  <div class="secondary-stats">
-    <mat-card class="hd-panel">
-      <div class="panel-header">Hit Dice</div>
-      <div class="hd-grid">
-        <mat-form-field appearance="outline" class="dense-field">
-          <mat-label>Total (e.g. d8)</mat-label>
-          <input matInput type="text" [value]="character().hitDice" (change)="updateHitDice($event)">
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="dense-field">
-          <mat-label>Spent</mat-label>
-          <input matInput type="number" min="0" [max]="character().level" [value]="character().hitDiceSpent || 0" (change)="updateHitDiceSpent($event)">
-        </mat-form-field>
-      </div>
-    </mat-card>
-
-    <mat-card class="ex-panel">
-      <div class="panel-header">Exhaustion</div>
-      <mat-form-field appearance="outline" class="dense-field">
-        <input matInput type="number" min="0" max="6" [value]="character().exhaustion" (change)="updateExhaustion($event)">
-        <span matSuffix>/ 6</span>
-      </mat-form-field>
-    </mat-card>
-  </div>
 </div>

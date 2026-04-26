@@ -90,9 +90,8 @@
           No spells.
         </div>
         
-        <mat-card class="spell-card" *ngFor="let spell of getSpells(group)" (click)="openAddSpellDialog(group.id)">
-          <!-- Edit opens the same dialog, but we should pass isEdit and spell data.
-               For brevity, not fully wiring up edit logic for spells here since it's exactly like add. -->
+        <mat-card class="spell-card" *ngFor="let spell of getSpells(group)" (click)="openEditSpellDialog(group.id, spell)">
+          <!-- Clicking a spell opens edit -->
           <div class="spell-card__content">
             <h4 class="spell-name">{{ spell.name }}</h4>
             <div class="spell-tags" *ngIf="spell.tags && spell.tags.length > 0">

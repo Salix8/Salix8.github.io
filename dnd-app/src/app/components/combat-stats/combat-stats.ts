@@ -5,14 +5,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
 import { CharacterService } from '../../services/character.service';
 import { formatModifier } from '../../utils/dnd-math';
 
 @Component({
   selector: 'app-combat-stats',
   standalone: true,
-  imports: [CommonModule, FormsModule, MatCardModule, MatInputModule, MatFormFieldModule, MatIconModule, MatButtonModule],
+  imports: [CommonModule, FormsModule, MatCardModule, MatInputModule, MatFormFieldModule, MatIconModule],
   templateUrl: './combat-stats.html',
   styleUrls: ['./combat-stats.scss']
 })
@@ -21,8 +20,6 @@ export class CombatStats {
   character = this.characterService.character;
   initiative = this.characterService.initiative;
   ac = this.characterService.armorClass;
-
-  
 
   formatMod(mod: number): string {
     return formatModifier(mod);
@@ -40,13 +37,6 @@ export class CombatStats {
     }
   }
 
-  updateSpeed(event: Event) {
-    const val = parseInt((event.target as HTMLInputElement).value, 10);
-    if (!isNaN(val)) {
-      this.characterService.updateCharacter({ speed: val });
-    }
-  }
-
   updateHPMax(event: Event) {
     const val = parseInt((event.target as HTMLInputElement).value, 10);
     if (!isNaN(val)) {
@@ -59,30 +49,52 @@ export class CombatStats {
     const value = input.value.trim();
     if (!value) return;
 
-    let currentVal = this.character().hitPoints[type];
-    let newVal = currentVal;
+    const hp = this.character().hitPoints;
+    let currentHP = hp.current;
+    let tempHP = hp.temporary;
 
-    if (value.startsWith('+') || value.startsWith('-')) {
-      const modifier = parseInt(value, 10);
-      if (!isNaN(modifier)) {
-        newVal += modifier;
+    if (value.startsWith('+')) {
+      const amount = parseInt(value, 10);
+      if (!isNaN(amount)) {
+        if (type === 'current') {
+          currentHP = Math.min(currentHP + amount, hp.max);
+        } else {
+          tempHP += amount;
+        }
+      }
+    } else if (value.startsWith('-')) {
+      let damage = Math.abs(parseInt(value, 10));
+      if (!isNaN(damage)) {
+        if (type === 'current') {
+          // Drain temp HP first
+          if (tempHP > 0) {
+            const absorbed = Math.min(tempHP, damage);
+            tempHP -= absorbed;
+            damage -= absorbed;
+          }
+          currentHP = Math.max(0, currentHP - damage);
+        } else {
+          tempHP = Math.max(0, tempHP - damage);
+        }
       }
     } else {
       const parsed = parseInt(value, 10);
       if (!isNaN(parsed)) {
-        newVal = parsed;
+        if (type === 'current') {
+          currentHP = Math.min(Math.max(0, parsed), hp.max);
+        } else {
+          tempHP = Math.max(0, parsed);
+        }
       }
     }
 
-    if (type === 'current' && newVal > this.character().hitPoints.max) {
-      newVal = this.character().hitPoints.max;
-    }
-    if (newVal < 0) newVal = 0;
+    this.characterService.updateNested('hitPoints', { current: currentHP, temporary: tempHP });
+    input.value = type === 'current' ? currentHP.toString() : tempHP.toString();
+  }
 
-    this.characterService.updateNested('hitPoints', { [type]: newVal });
-    
-    // Reset input so it shows the new calculated value
-    input.value = newVal.toString();
+  updateSpeed(event: Event) {
+    const val = parseInt((event.target as HTMLInputElement).value, 10);
+    if (!isNaN(val)) this.characterService.updateCharacter({ speed: val });
   }
 
   updateHitDice(event: Event) {
@@ -91,16 +103,11 @@ export class CombatStats {
 
   updateHitDiceSpent(event: Event) {
     const val = parseInt((event.target as HTMLInputElement).value, 10);
-    if (!isNaN(val)) {
-      this.characterService.updateCharacter({ hitDiceSpent: val });
-    }
+    if (!isNaN(val)) this.characterService.updateCharacter({ hitDiceSpent: val });
   }
 
   updateExhaustion(event: Event) {
-    let val = parseInt((event.target as HTMLInputElement).value, 10);
-    if (isNaN(val)) val = 0;
-    if (val < 0) val = 0;
-    if (val > 6) val = 6;
-    this.characterService.updateCharacter({ exhaustion: val });
+    const val = parseInt((event.target as HTMLInputElement).value, 10);
+    if (!isNaN(val)) this.characterService.updateCharacter({ exhaustion: val });
   }
 }

@@ -1,0 +1,228 @@
+.secondary-stats-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.narrow-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 80px;
+  flex: 0 0 auto;
+}
+
+.stat-badge {
+  padding: 0.5rem;
+  text-align: center;
+  background: var(--bg-glass) !important;
+  border: 1px solid var(--border-glass) !important;
+
+  &__label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+  }
+
+  &__value {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-1);
+  }
+
+  &__input {
+    width: 100%;
+    background: var(--bg-input);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.25rem;
+
+    &:focus {
+      outline: 1px solid var(--accent-1);
+    }
+  }
+}
+
+.hd-panel, .dc-panel {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.75rem !important;
+  background: var(--bg-glass) !important;
+  border: 1px solid var(--border-glass) !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.hd-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hd-tracker {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.hd-input {
+  width: 40px;
+  text-align: center;
+  padding: 0.25rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-weight: 700;
+
+  &:focus { outline: 1px solid var(--accent-1); }
+}
+
+.hd-divider {
+  color: var(--text-muted);
+  padding: 0 0.15rem;
+}
+
+.hd-total {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.hd-select {
+  width: 60px;
+  padding: 0.25rem;
+  text-align: center;
+  background: var(--bg-input);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+}
+
+.dc-list {
+  flex: 1;
+  margin-bottom: 0.5rem;
+  min-height: 30px;
+}
+
+.dc-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+
+  &:hover .dc-remove {
+    opacity: 1;
+  }
+}
+
+.dc-type {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-1);
+  min-width: 28px;
+}
+
+.dc-icon {
+  font-size: 0.9rem;
+}
+
+.dc-value {
+  flex: 1;
+}
+
+.dc-remove {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: opacity 0.15s;
+
+  &:hover { color: var(--accent-2); }
+}
+
+.dc-empty {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.dc-add-btn {
+  width: 100%;
+  padding: 0.35rem;
+  font-size: 0.8rem;
+  background: var(--bg-input);
+  border: 1px dashed var(--border-glass);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-top: auto;
+
+  &:hover {
+    background: hsla(0,0%,100%,0.05);
+    color: var(--text-primary);
+  }
+}
+
+.dc-add-row {
+  margin-top: auto;
+}
+
+.dc-select {
+  width: 100%;
+  padding: 0.3rem 0.4rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+
+  &.small {
+    width: auto;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+.exhaustion-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-glass);
+}
+
+.exhaustion-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}

@@ -1,0 +1,73 @@
+<div class="secondary-stats-grid">
+  <!-- PB + Speed column -->
+  <div class="stat-col narrow-col">
+    <mat-card class="stat-badge">
+      <div class="stat-badge__label">Prof</div>
+      <div class="stat-badge__value">{{ formatMod(profBonus()) }}</div>
+    </mat-card>
+    <mat-card class="stat-badge">
+      <div class="stat-badge__label">Speed</div>
+      <input type="number" class="stat-badge__input" [value]="character().speed" (change)="updateSpeed($event)">
+    </mat-card>
+  </div>
+
+  <!-- Hit Dice -->
+  <mat-card class="hd-panel">
+    <div class="panel-header">Hit Dice</div>
+    <div class="hd-content">
+      <div class="hd-tracker">
+        <input type="number" class="hd-input" min="0" [max]="character().level"
+               [value]="character().hitDiceSpent || 0" (change)="updateHitDiceSpent($event)">
+        <span class="hd-divider">/</span>
+        <span class="hd-total">{{ character().level }}</span>
+      </div>
+      <select class="hd-select" [ngModel]="character().hitDice" (ngModelChange)="characterService.updateCharacter({hitDice: $event})">
+        <option value="d6">d6</option>
+        <option value="d8">d8</option>
+        <option value="d10">d10</option>
+        <option value="d12">d12</option>
+      </select>
+    </div>
+  </mat-card>
+
+  <!-- Defenses -->
+  <mat-card class="dc-panel">
+    <div class="panel-header">Defenses</div>
+    <div class="dc-list">
+      <div class="dc-item" *ngFor="let def of character().defenses">
+        <span class="dc-type">{{ getDefenseLabel(def.type) }}</span>
+        <span class="dc-value">{{ def.value }}</span>
+        <mat-icon class="dc-remove" (click)="removeDefense(def.id)">close</mat-icon>
+      </div>
+      <div class="dc-empty" *ngIf="character().defenses.length === 0">None</div>
+    </div>
+    <button class="dc-add-btn" (click)="openAddDefense()">+ Add Defense</button>
+  </mat-card>
+
+  <!-- Conditions -->
+  <mat-card class="dc-panel">
+    <div class="panel-header">Conditions</div>
+    <div class="dc-list">
+      <div class="dc-item condition-item" *ngFor="let c of character().conditions">
+        <span class="dc-icon">{{ conditionIcons[c] || '⚠️' }}</span>
+        <span class="dc-value">{{ c }}</span>
+        <mat-icon class="dc-remove" (click)="removeCondition(c)">close</mat-icon>
+      </div>
+      <div class="dc-empty" *ngIf="character().conditions.length === 0">None</div>
+    </div>
+    <div class="dc-add-row">
+      <select class="dc-select" [(ngModel)]="selectedCondition" (change)="addCondition()">
+        <option value="">Add condition...</option>
+        <option *ngFor="let c of conditionList" [value]="c">{{ c }}</option>
+        <option value="Custom">Custom...</option>
+      </select>
+    </div>
+    <!-- Exhaustion -->
+    <div class="exhaustion-row">
+      <span class="exhaustion-label">Exhaustion</span>
+      <select class="dc-select small" [ngModel]="character().exhaustion" (ngModelChange)="updateExhaustion($event)">
+        <option *ngFor="let l of exhaustionLevels" [ngValue]="l">{{ l === 0 ? '--' : l }}</option>
+      </select>
+    </div>
+  </mat-card>
+</div>
