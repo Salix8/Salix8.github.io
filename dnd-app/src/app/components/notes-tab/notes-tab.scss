@@ -1,0 +1,25 @@
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.notes-field {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  ::ng-deep .mat-mdc-form-field-flex {
+    height: 100%;
+  }
+
+  ::ng-deep textarea {
+    height: 100% !important;
+    min-height: 400px;
+    resize: vertical;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+  }
+}

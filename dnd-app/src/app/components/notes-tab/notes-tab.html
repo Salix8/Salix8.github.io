@@ -1,0 +1,13 @@
+<div class="tab-content">
+  <mat-form-field appearance="outline" class="notes-field">
+    <mat-label>Character Notes, Backstory, and Campaign Details</mat-label>
+    <textarea matInput 
+              [ngModel]="character().notes" 
+              (ngModelChange)="updateNotes($event)"
+              placeholder="Write anything you want here..."
+              cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"
+              cdkAutosizeMinRows="15">
+    </textarea>
+  </mat-form-field>
+</div>

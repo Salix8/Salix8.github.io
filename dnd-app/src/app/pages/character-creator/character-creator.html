@@ -1,0 +1,57 @@
+<div class="page-wrapper">
+  <div class="container creator-layout">
+    
+    <div class="creator-nav">
+      <div style="display: flex; gap: 1rem;">
+        <a mat-button routerLink="/characters" class="back-btn">
+          <mat-icon>arrow_back</mat-icon> My Characters
+        </a>
+      </div>
+      
+      <div style="display: flex; gap: 0.5rem; align-items: center;">
+        <button mat-stroked-button (click)="shortRest()" title="Short Rest">
+          <mat-icon style="color: #ff9d00;">local_fire_department</mat-icon> Short Rest
+        </button>
+        <button mat-stroked-button (click)="longRest()" title="Long Rest">
+          <mat-icon style="color: #4CAF50;">hotel</mat-icon> Long Rest
+        </button>
+        <button mat-stroked-button (click)="openSettings()" title="Settings">
+          <mat-icon>settings</mat-icon> Settings
+        </button>
+        <button mat-flat-button color="primary" (click)="save()">
+          <mat-icon>save</mat-icon> Save Character
+        </button>
+      </div>
+    </div>
+
+    <!-- MAIN GRID LAYOUT -->
+    <div class="sheet-grid">
+      
+      <!-- HEADER -->
+      <div class="sheet-header">
+        <app-char-header></app-char-header>
+      </div>
+
+      <!-- Left Column: Abilities & Combat Stats -->
+      <div class="sheet-left">
+        <app-abilities-row></app-abilities-row>
+        <app-combat-stats></app-combat-stats>
+        <!-- Defenses & Conditions will go here -->
+      </div>
+
+      <!-- Center Column: Skills & Features Tabs -->
+      <div class="sheet-center">
+        <app-skills-section></app-skills-section>
+        <app-competencies-section></app-competencies-section>
+        <app-tabbed-panel></app-tabbed-panel>
+      </div>
+
+      <!-- Right Column: Spells & Notes -->
+      <div class="sheet-right">
+        <!-- Spells will go here -->
+      </div>
+
+    </div>
+
+  </div>
+</div>

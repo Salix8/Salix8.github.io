@@ -1,0 +1,154 @@
+@use '@angular/material' as mat;
+
+html {
+  height: 100%;
+  @include mat.theme((
+    color: (
+      theme-type: dark,
+      primary: mat.$violet-palette,
+      tertiary: mat.$cyan-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+:root {
+  /* Vanilla D&D CSS Variables - Overridable by ThemeService */
+  --bg-primary: hsl(230, 25%, 8%);
+  --bg-secondary: hsl(230, 20%, 12%);
+  --bg-card: hsla(230, 20%, 16%, 0.6);
+  --bg-glass: hsla(230, 20%, 20%, 0.35);
+  --border-glass: hsla(0, 0%, 100%, 0.08);
+  --text-primary: hsl(0, 0%, 95%);
+  --text-secondary: hsl(230, 10%, 65%);
+  --text-muted: hsl(230, 10%, 45%);
+  --accent-1: hsl(265, 90%, 65%);
+  --accent-2: hsl(200, 90%, 55%);
+  --accent-gradient: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  --accent-glow: hsla(265, 90%, 65%, 0.35);
+  --bg-input: hsla(230, 20%, 14%, 0.8);
+  --bg-skill-odd: transparent;
+  
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --font-body: 'Inter', Roboto, -apple-system, sans-serif;
+  --font-display: 'Outfit', var(--font-body);
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  color-scheme: dark;
+  margin: 0;
+  height: 100%;
+  
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Background effects */
+.bg-glow {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.4;
+    animation: float 12s ease-in-out infinite alternate;
+  }
+  
+  &::before {
+    width: 500px;
+    height: 500px;
+    background: var(--accent-1);
+    top: -15%;
+    left: -10%;
+    opacity: 0.15;
+  }
+  
+  &::after {
+    width: 400px;
+    height: 400px;
+    background: var(--accent-2);
+    bottom: -10%;
+    right: -10%;
+    opacity: 0.12;
+    animation-delay: -6s;
+  }
+}
+
+@keyframes float {
+  to { transform: translate(60px, 40px) scale(1.1); }
+}
+
+/* Global utility classes */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0.75rem 1.5rem 2rem;
+  
+  @media (max-width: 600px) {
+    padding: 1.25rem 1rem;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Custom styling for Material components to fit the theme */
+.mat-mdc-card {
+  background: var(--bg-glass) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass) !important;
+  border-radius: var(--radius-md) !important;
+  color: var(--text-primary) !important;
+}
+
+.mat-mdc-dialog-surface {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-glass) !important;
+  border-radius: var(--radius-lg) !important;
+  color: var(--text-primary) !important;
+}
+
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+.mat-mdc-text-field-wrapper {
+  background: var(--bg-input) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+/* Toasts */
+.toast-success {
+  --mdc-snackbar-container-color: hsl(140, 60%, 45%);
+  --mdc-snackbar-supporting-text-color: white;
+}
+
+.toast-error {
+  --mdc-snackbar-container-color: hsl(0, 70%, 55%);
+  --mdc-snackbar-supporting-text-color: white;
+}
+
+.toast-info {
+  --mdc-snackbar-container-color: var(--accent-1);
+  --mdc-snackbar-supporting-text-color: white;
+}

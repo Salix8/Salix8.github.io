@@ -1,0 +1,33 @@
+<div class="main-tabs-container">
+  <mat-tab-group dynamicHeight animationDuration="200ms" color="accent">
+    <mat-tab label="Actions">
+      <ng-template matTabContent>
+        <app-actions-tab></app-actions-tab>
+      </ng-template>
+    </mat-tab>
+    
+    <mat-tab label="Features">
+      <ng-template matTabContent>
+        <app-features-tab></app-features-tab>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab label="Inventory">
+      <ng-template matTabContent>
+        <app-inventory-tab></app-inventory-tab>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab label="Spells">
+      <ng-template matTabContent>
+        <app-spells-tab></app-spells-tab>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab label="Notes">
+      <ng-template matTabContent>
+        <app-notes-tab></app-notes-tab>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>

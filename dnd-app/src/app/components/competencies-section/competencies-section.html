@@ -1,0 +1,24 @@
+<mat-card class="competencies-panel">
+  <div class="panel-header">Competencies</div>
+
+  <div class="competency-group" *ngFor="let cat of categories">
+    <div class="group-header">
+      <div class="group-title">
+        <mat-icon>{{ cat.icon }}</mat-icon> {{ cat.label }}
+      </div>
+      <button mat-icon-button class="add-btn" (click)="addCompetency(cat.id, cat.label)">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+
+    <div class="tags-container">
+      <div class="empty-text" *ngIf="getCategoryItems(cat.id).length === 0">
+        None
+      </div>
+      <div class="comp-tag" *ngFor="let item of getCategoryItems(cat.id)">
+        {{ item }}
+        <mat-icon class="tag-remove" (click)="removeCompetency(cat.id, item)">close</mat-icon>
+      </div>
+    </div>
+  </div>
+</mat-card>

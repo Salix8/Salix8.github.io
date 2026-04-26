@@ -1,0 +1,46 @@
+<div class="page-wrapper">
+  <div class="container">
+    <a href="/" class="back-link">
+      <mat-icon inline>arrow_back</mat-icon> Back to Main Hub
+    </a>
+
+    <header class="site-header">
+      <h1 class="site-header__title">D&D</h1>
+      <p class="site-header__subtitle">Characters, campaigns, and adventures</p>
+    </header>
+
+    <div class="nav-grid">
+      <mat-card class="nav-card" routerLink="/creator">
+        <mat-card-content class="card-content">
+          <div class="nav-card__icon">⚔️</div>
+          <h2 class="nav-card__title">Create Character</h2>
+          <p class="nav-card__desc">Build a new level 1 character with attributes, skills, and custom modules.</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="nav-card" routerLink="/characters">
+        <mat-card-content class="card-content">
+          <div class="nav-card__icon">📜</div>
+          <h2 class="nav-card__title">My Characters</h2>
+          <p class="nav-card__desc">View, edit, and manage your saved characters.</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="nav-card disabled">
+        <mat-card-content class="card-content">
+          <div class="nav-card__icon">🏰</div>
+          <h2 class="nav-card__title">Classes</h2>
+          <p class="nav-card__desc">Explore class features, subclasses, and preloaded modules.</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="nav-card disabled">
+        <mat-card-content class="card-content">
+          <div class="nav-card__icon">🗺️</div>
+          <h2 class="nav-card__title">Campaigns</h2>
+          <p class="nav-card__desc">Manage ongoing campaigns, sessions, and maps.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

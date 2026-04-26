@@ -1,0 +1,58 @@
+<div class="page-wrapper">
+  <div class="container">
+    <a routerLink="/" class="back-link">
+      <mat-icon inline>arrow_back</mat-icon> Back to D&D Hub
+    </a>
+
+    <header class="site-header">
+      <h1 class="site-header__title">My Characters</h1>
+      <p class="site-header__subtitle">Manage your saved adventurers</p>
+    </header>
+
+    <div class="io-bar">
+      <button mat-stroked-button (click)="fileInput.click()">
+        <mat-icon>file_download</mat-icon> Import JSON
+      </button>
+      <input #fileInput type="file" accept=".json" style="display:none" (change)="importFile($event)">
+      
+      <button mat-stroked-button *ngIf="characters.length > 0" (click)="exportAll()">
+        <mat-icon>file_upload</mat-icon> Export All
+      </button>
+      <a mat-flat-button color="primary" routerLink="/creator">
+        <mat-icon>add</mat-icon> Create New
+      </a>
+    </div>
+
+    <div class="characters-grid" *ngIf="characters.length > 0; else emptyState">
+      <mat-card class="char-list-card" *ngFor="let char of characters">
+        <mat-card-header>
+          <mat-card-title>{{ char.name || 'Unnamed' }}</mat-card-title>
+          <mat-card-subtitle>{{ getSubtitle(char) }}</mat-card-subtitle>
+        </mat-card-header>
+        
+        <mat-card-content class="char-list-card__stats">
+          <span class="stat"><strong>HP:</strong> {{ char.hitPoints.max }}</span>
+          <span class="stat"><strong>AC:</strong> {{ getAC(char) }}</span>
+          <span class="stat"><strong>Updated:</strong> {{ char.updatedAt | date:'shortDate' }}</span>
+        </mat-card-content>
+
+        <mat-card-actions class="char-list-card__actions">
+          <a mat-stroked-button [routerLink]="['/creator', char.id]" class="edit-btn">
+            <mat-icon>edit</mat-icon> Edit
+          </a>
+          <button mat-icon-button color="warn" (click)="deleteCharacter(char.id)" aria-label="Delete character">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <ng-template #emptyState>
+      <div class="empty-state">
+        <div class="empty-state__icon">📜</div>
+        <h2 class="empty-state__text">You have no saved characters yet.</h2>
+        <a mat-flat-button color="primary" routerLink="/creator">Create Character</a>
+      </div>
+    </ng-template>
+  </div>
+</div>

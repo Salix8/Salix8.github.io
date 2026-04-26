@@ -1,0 +1,125 @@
+.skills-panel {
+  padding: 1rem 1.5rem;
+}
+
+.panel-header {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 0.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  user-select: none;
+
+  &:nth-child(even) {
+    background: var(--bg-skill-odd);
+  }
+
+  &:hover {
+    background: hsla(0, 0%, 100%, 0.05);
+  }
+}
+
+.custom-skill {
+  justify-content: space-between;
+  padding-right: 0;
+
+  .skill-row-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+  }
+
+  .delete-btn {
+    opacity: 0.2;
+    transition: opacity var(--transition-fast);
+    transform: scale(0.8);
+  }
+
+  &:hover .delete-btn {
+    opacity: 1;
+    color: var(--accent-1);
+  }
+}
+
+.prof-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--text-muted);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+
+  &.proficient {
+    background: var(--accent-1);
+    border-color: var(--accent-1);
+    box-shadow: 0 0 8px var(--accent-glow);
+  }
+
+  &.expertise {
+    background: transparent;
+    border-color: var(--accent-1);
+    box-shadow: 0 0 8px var(--accent-glow);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 2px;
+      background: var(--accent-1);
+      border-radius: 50%;
+    }
+  }
+}
+
+.skill-mod {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-primary);
+  width: 2ch;
+  text-align: center;
+}
+
+.skill-name {
+  color: var(--text-secondary);
+}
+
+.skill-ability {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.divider {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 1rem 0 0.5rem;
+  border-top: 1px solid var(--border-glass);
+  padding-top: 1rem;
+}
+
+.add-skill-btn {
+  margin-top: 1rem;
+  width: 100%;
+}

@@ -1,0 +1,56 @@
+<div class="tab-content">
+  <div class="inventory-header">
+    <div class="weight-total">
+      <mat-icon inline>scale</mat-icon> Total Weight: <strong>{{ totalWeight }} lbs</strong>
+    </div>
+    <button mat-stroked-button (click)="openAddDialog()">
+      <mat-icon>add</mat-icon> Add Item
+    </button>
+  </div>
+
+  <div class="tags-filter">
+    <div class="filter-tag" 
+         *ngFor="let tag of presetTags" 
+         [class.active]="activeFilter === tag.id"
+         [style.borderColor]="tag.color"
+         (click)="toggleFilter(tag.id)">
+      {{ tag.label }}
+    </div>
+  </div>
+
+  <div class="inventory-grid">
+    <div class="empty-state" *ngIf="inventory.length === 0">
+      No items found.
+    </div>
+
+    <mat-card class="item-card" *ngFor="let item of inventory" (click)="openEditDialog(item)">
+      <div class="item-card__header">
+        <h3 class="item-card__title">{{ item.title }}</h3>
+        <div class="item-card__actions">
+          <button mat-icon-button class="delete-btn" (click)="deleteItem(item.id, $event)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <div class="item-card__meta">
+        <div class="qty-tracker">
+          <button mat-icon-button class="qty-btn" (click)="updateQuantity(item.id, -1, $event)"><mat-icon>remove</mat-icon></button>
+          <span class="qty-text">x{{ item.quantity }}</span>
+          <button mat-icon-button class="qty-btn" (click)="updateQuantity(item.id, 1, $event)"><mat-icon>add</mat-icon></button>
+        </div>
+        <span class="weight-text">{{ item.weight }} lbs</span>
+      </div>
+
+      <div class="item-card__desc" *ngIf="item.description">
+        {{ item.description }}
+      </div>
+
+      <div class="item-card__tags" *ngIf="item.tags && item.tags.length > 0">
+        <span class="item-tag" *ngFor="let t of item.tags" [style.background]="getTagColor(t)">
+          {{ getTagLabel(t) }}
+        </span>
+      </div>
+    </mat-card>
+  </div>
+</div>

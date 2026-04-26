@@ -1,0 +1,160 @@
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.actions-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+  font-style: italic;
+  background: var(--bg-input);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border-glass);
+}
+
+.module-card {
+  padding: 1rem;
+  background: hsla(230, 20%, 14%, 0.6) !important;
+  border-left: 4px solid var(--mod-color, var(--text-muted)) !important;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+
+  &:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+    
+    .delete-btn {
+      opacity: 1;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__type-badge {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  &__title {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    margin: 0;
+    flex: 1;
+    color: var(--text-primary);
+  }
+
+  &__actions {
+    display: flex;
+    gap: 0.25rem;
+
+    .delete-btn {
+      opacity: 0;
+      color: var(--text-muted);
+      transform: scale(0.85);
+      transition: all var(--transition-fast);
+
+      &:hover {
+        color: var(--accent-2);
+      }
+    }
+  }
+
+  &__combat {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+  }
+
+  &__desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    padding-left: 1.5rem;
+    white-space: pre-wrap;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-glass);
+  }
+}
+
+.combat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: hsla(0, 0%, 0%, 0.3);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--accent-1);
+
+  mat-icon {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.uses-tracker {
+  display: flex;
+  align-items: center;
+  background: var(--bg-input);
+  border-radius: 20px;
+  padding: 0.15rem;
+
+  .use-btn {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    mat-icon {
+      font-size: 16px;
+    }
+  }
+
+  .uses-text {
+    font-family: var(--font-display);
+    font-weight: 700;
+    padding: 0 0.5rem;
+    min-width: 3ch;
+    text-align: center;
+  }
+}
+
+.recharge-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}

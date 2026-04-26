@@ -1,0 +1,39 @@
+<div class="tab-content">
+  <div class="actions-header">
+    <button mat-stroked-button (click)="openAddDialog()">
+      <mat-icon>add</mat-icon> Add Feature
+    </button>
+  </div>
+
+  <div class="modules-list">
+    <div class="empty-state" *ngIf="features.length === 0">
+      No features added yet.
+    </div>
+
+    <mat-card class="module-card" *ngFor="let mod of features" (click)="openEditDialog(mod)" [style.--mod-color]="getModuleColor(mod.type)">
+      <div class="module-card__header">
+        <div class="module-card__type-badge" [style.background]="getModuleColor(mod.type)"></div>
+        <h3 class="module-card__title">{{ mod.title }}</h3>
+        
+        <div class="module-card__actions">
+          <button mat-icon-button class="delete-btn" (click)="deleteModule(mod.id, $event)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <div class="module-card__desc">
+        {{ mod.description }}
+      </div>
+
+      <div class="module-card__footer" *ngIf="mod.usesEnabled">
+        <div class="uses-tracker">
+          <button mat-icon-button class="use-btn" (click)="updateUses(mod.id, -1, $event)"><mat-icon>remove</mat-icon></button>
+          <span class="uses-text">{{ mod.usesCurrent || 0 }} / {{ mod.usesMax }}</span>
+          <button mat-icon-button class="use-btn" (click)="updateUses(mod.id, 1, $event)"><mat-icon>add</mat-icon></button>
+        </div>
+        <span class="recharge-text" *ngIf="mod.usesRecharge"><mat-icon inline>refresh</mat-icon> {{ mod.usesRecharge }}</span>
+      </div>
+    </mat-card>
+  </div>
+</div>

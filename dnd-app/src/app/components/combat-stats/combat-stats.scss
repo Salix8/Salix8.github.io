@@ -1,0 +1,138 @@
+.combat-stats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.badges-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &__label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    z-index: 2;
+  }
+
+  &__value {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--text-primary);
+    z-index: 2;
+  }
+
+  &__input {
+    background: transparent;
+    border: none;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    width: 100%;
+    z-index: 2;
+    outline: none;
+
+    /* Hide number arrows */
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    
+    &::placeholder {
+      color: var(--text-muted);
+      opacity: 0.5;
+    }
+  }
+}
+
+.ac-badge {
+  border-color: var(--accent-1) !important;
+  box-shadow: 0 0 15px var(--accent-glow) !important;
+  
+  .shield-icon {
+    position: absolute;
+    font-size: 100px;
+    width: 100px;
+    height: 100px;
+    opacity: 0.1;
+    color: var(--accent-1);
+    z-index: 1;
+  }
+}
+
+.panel-header {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 0.5rem;
+}
+
+.hp-panel {
+  padding: 1rem 1.5rem 0.5rem;
+}
+
+.hp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+
+  @media (max-width: 400px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.secondary-stats {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hd-panel, .ex-panel {
+  padding: 1rem 1.5rem 0.5rem;
+}
+
+.hd-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Material form field adjustments for dense layout */
+.dense-field {
+  width: 100%;
+  
+  ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+  }
+  ::ng-deep .mat-mdc-text-field-wrapper {
+    padding: 0 12px;
+  }
+}

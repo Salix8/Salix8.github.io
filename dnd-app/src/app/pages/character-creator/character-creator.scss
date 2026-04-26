@@ -1,0 +1,65 @@
+.creator-layout {
+  max-width: 1400px; /* Wider for the creator sheet */
+}
+
+.creator-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--bg-glass);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-glass);
+}
+
+.sheet-grid {
+  display: grid;
+  grid-template-columns: minmax(100px, 300px) minmax(300px, 1fr) minmax(250px, 400px);
+  grid-template-areas:
+    "header header header"
+    "left   center right ";
+  gap: 1.5rem;
+
+  @media (max-width: 1100px) {
+    grid-template-columns: minmax(100px, 300px) 1fr;
+    grid-template-areas:
+      "header header"
+      "left   center"
+      "right  right ";
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "left"
+      "center"
+      "right";
+  }
+}
+
+.sheet-header {
+  grid-area: header;
+}
+
+.sheet-left {
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sheet-center {
+  grid-area: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sheet-right {
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}

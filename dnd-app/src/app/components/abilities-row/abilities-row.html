@@ -1,0 +1,23 @@
+<div class="abilities-grid">
+  <mat-card *ngFor="let ability of abilities" class="ability-card">
+    <div class="ability-header">{{ abbr[ability] }}</div>
+    
+    <div class="ability-score-wrapper">
+      <input 
+        type="number" 
+        class="ability-score" 
+        [value]="getAbilityScore(ability)" 
+        (change)="updateScore(ability, $event)">
+    </div>
+    
+    <div class="ability-mod">
+      {{ getModifier(getAbilityScore(ability)) }}
+    </div>
+    
+    <div class="ability-save" (click)="toggleSave(ability)">
+      <div class="prof-dot" [class.active]="getSaveLevel(ability) === 'proficient'"></div>
+      <span class="save-label">Save</span>
+      <span class="save-mod">{{ getSaveModifier(ability) }}</span>
+    </div>
+  </mat-card>
+</div>

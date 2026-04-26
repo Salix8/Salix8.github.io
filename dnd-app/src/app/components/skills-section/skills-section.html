@@ -1,0 +1,33 @@
+<mat-card class="skills-panel">
+  <div class="panel-header">Skills</div>
+
+  <div class="skills-list">
+    <!-- Standard Skills -->
+    <div class="skill-row" *ngFor="let key of skillKeys" (click)="toggleSkill(key)">
+      <div class="prof-dot" [ngClass]="getSkillLevel(key)"></div>
+      <span class="skill-mod">{{ formatMod(skillMods()[key]) }}</span>
+      <span class="skill-name">{{ skillNames[key] }}</span>
+      <span class="skill-ability">({{ abbr[skillAbilities[key]] }})</span>
+    </div>
+
+    <!-- Custom Skills -->
+    <ng-container *ngIf="character().customSkills.length > 0">
+      <div class="divider">Custom Skills</div>
+      <div class="skill-row custom-skill" *ngFor="let custom of character().customSkills">
+        <div class="skill-row-content" (click)="toggleCustomSkill(custom.id)">
+          <div class="prof-dot" [ngClass]="custom.level"></div>
+          <span class="skill-mod">{{ formatMod(customMods()[custom.id]) }}</span>
+          <span class="skill-name">{{ custom.name }}</span>
+          <span class="skill-ability">({{ abbr[custom.ability] }})</span>
+        </div>
+        <button mat-icon-button class="delete-btn" (click)="deleteCustomSkill(custom.id); $event.stopPropagation()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </ng-container>
+
+    <button mat-stroked-button class="add-skill-btn" (click)="openCustomSkillDialog()">
+      <mat-icon>add</mat-icon> Custom Skill
+    </button>
+  </div>
+</mat-card>

@@ -1,0 +1,30 @@
+<div class="char-header">
+  <div class="char-header__name">
+    <mat-form-field appearance="fill" class="name-field">
+      <mat-label>Character Name</mat-label>
+      <input matInput [ngModel]="character().name" (ngModelChange)="updateName($event)" placeholder="Enter name">
+    </mat-form-field>
+  </div>
+
+  <div class="char-meta">
+    <mat-form-field appearance="fill" class="meta-field">
+      <mat-label>Class</mat-label>
+      <input matInput [ngModel]="character().class" (ngModelChange)="updateClass($event)" placeholder="e.g. Fighter">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="meta-field">
+      <mat-label>Race</mat-label>
+      <input matInput [ngModel]="character().race" (ngModelChange)="updateRace($event)" placeholder="e.g. Human">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="meta-field">
+      <mat-label>Level</mat-label>
+      <input matInput type="number" min="1" max="20" [ngModel]="character().level" (ngModelChange)="updateLevel($event)">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="meta-field">
+      <mat-label>Background</mat-label>
+      <input matInput [ngModel]="character().background" (ngModelChange)="updateBackground($event)" placeholder="e.g. Soldier">
+    </mat-form-field>
+  </div>
+</div>

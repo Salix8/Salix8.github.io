@@ -1,0 +1,33 @@
+.main-tabs-container {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+
+  ::ng-deep .mat-mdc-tab-header {
+    background: hsla(0, 0%, 0%, 0.2);
+    border-bottom: 1px solid var(--border-glass);
+  }
+
+  ::ng-deep .mat-mdc-tab-labels {
+    justify-content: space-around;
+  }
+
+  ::ng-deep .mdc-tab__text-label {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  ::ng-deep .mdc-tab--active .mdc-tab__text-label {
+    color: var(--accent-1);
+  }
+
+  ::ng-deep .mat-mdc-tab-body-content {
+    padding: 1.5rem;
+    min-height: 400px;
+  }
+}

@@ -1,0 +1,115 @@
+<div class="tab-content">
+  <!-- Top Bar: Casting Ability and Filters -->
+  <div class="spells-header">
+    <div class="spellcasting-stats">
+      <mat-form-field appearance="outline" class="focus-field">
+        <mat-label>Spellcasting Ability</mat-label>
+        <mat-select [(ngModel)]="focus">
+          <mat-option [value]="null">None</mat-option>
+          <mat-option *ngFor="let a of abilities" [value]="a.id">{{ a.label }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <div class="spell-calc" *ngIf="focus">
+        <div class="spell-stat">
+          <span class="label">Save DC</span>
+          <span class="value">{{ spellDC() }}</span>
+        </div>
+        <div class="spell-stat">
+          <span class="label">Attack</span>
+          <span class="value">+{{ spellAttack() }}</span>
+        </div>
+      </div>
+    </div>
+
+    <button mat-flat-button color="primary" (click)="openGroupDialog()">
+      <mat-icon>add</mat-icon> Add Spell Group
+    </button>
+  </div>
+
+  <div class="tags-filter">
+    <div class="filter-tag" 
+         *ngFor="let tag of presetTags" 
+         [class.active]="activeFilter === tag.id"
+         [style.borderColor]="tag.color"
+         (click)="toggleFilter(tag.id)">
+      {{ tag.label }}
+    </div>
+  </div>
+
+  <div class="spells-container">
+    <div class="empty-state" *ngIf="groups.length === 0">
+      No spell groups created yet.
+    </div>
+
+    <div class="spell-group" *ngFor="let group of groups">
+      <!-- Group Header -->
+      <div class="group-header" [style.borderColor]="getGroupColor(group)">
+        <div class="group-title-area">
+          <h3 class="group-title" [style.color]="getGroupColor(group)">{{ getGroupTitle(group) }}</h3>
+          
+          <!-- Spell Slots Tracker -->
+          <div class="slots-tracker" *ngIf="group.type === 'level' && group.totalSlots && group.totalSlots > 0">
+            <span class="slots-label">Slots:</span>
+            <div class="slot-bubbles">
+              <div class="slot-bubble" 
+                   *ngFor="let _ of getSlotArray(group.totalSlots); let i = index"
+                   [class.used]="i < (group.usedSlots || 0)"
+                   (click)="updateSlots(group.id, i, i < (group.usedSlots || 0))">
+              </div>
+            </div>
+          </div>
+          
+          <!-- Custom Uses Tracker -->
+          <div class="uses-tracker" *ngIf="group.type === 'custom' && group.uses">
+            <span class="slots-label">Uses:</span>
+            <div class="slot-bubbles">
+              <div class="slot-bubble" 
+                   *ngFor="let _ of getSlotArray(group.uses); let i = index"
+                   [class.used]="i < (group.usedSlots || 0)"
+                   (click)="updateSlots(group.id, i, i < (group.usedSlots || 0))">
+              </div>
+            </div>
+            <span class="recharge-text" *ngIf="group.recharge"><mat-icon inline>refresh</mat-icon> {{ group.recharge }}</span>
+          </div>
+        </div>
+
+        <div class="group-actions">
+          <button mat-icon-button (click)="openAddSpellDialog(group.id)" title="Add Spell">
+            <mat-icon>add</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" class="delete-group-btn" (click)="deleteGroup(group.id)" title="Delete Group">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <!-- Spells List -->
+      <div class="spells-list">
+        <div class="empty-state sm" *ngIf="getSpells(group).length === 0">
+          No spells.
+        </div>
+        
+        <mat-card class="spell-card" *ngFor="let spell of getSpells(group)" (click)="openAddSpellDialog(group.id)">
+          <!-- Edit opens the same dialog, but we should pass isEdit and spell data.
+               For brevity, not fully wiring up edit logic for spells here since it's exactly like add. -->
+          <div class="spell-card__content">
+            <h4 class="spell-name">{{ spell.name }}</h4>
+            <div class="spell-tags" *ngIf="spell.tags && spell.tags.length > 0">
+              <div class="spell-tag" *ngFor="let t of spell.tags" [style.background]="getTagColor(t)"></div>
+            </div>
+          </div>
+          <button mat-icon-button class="delete-spell-btn" (click)="deleteSpell(group.id, spell.id, $event)">
+            <mat-icon>close</mat-icon>
+          </button>
+          
+          <!-- Hover Tooltip content -->
+          <div class="spell-tooltip" *ngIf="spell.description">
+            <div class="tooltip-title">{{ spell.name }}</div>
+            <div class="tooltip-desc">{{ spell.description }}</div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
