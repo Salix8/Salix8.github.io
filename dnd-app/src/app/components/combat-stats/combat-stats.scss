@@ -3,13 +3,19 @@
     flex-direction: row;
     gap: 1rem;
     align-items: stretch;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+    }
 }
 
 .badges-row {
     display: flex;
     gap: 1rem;
-    flex: 0 0 auto;
+    flex: 1;
+    min-width: 250px;
 }
 
 .stat-badge {
@@ -17,6 +23,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0.25rem 0.25rem !important;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -100,7 +107,7 @@
 
 .hp-panel {
     padding: 1rem 1.5rem 0.5rem;
-    flex: 1;
+    flex: 2.5;
 }
 
 .hp-grid {
