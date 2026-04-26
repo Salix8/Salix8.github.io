@@ -27,7 +27,7 @@
   background: hsla(230, 20%, 12%, 0.95);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-sm);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
   z-index: 100;
   min-width: 200px;
   overflow: hidden;
@@ -70,12 +70,12 @@
   flex-wrap: wrap;
 
   app-abilities-row {
-    flex: 2; /* Increased from 1 to give ability scores more space */
+    flex: 1.2;
     min-width: 0;
   }
 
   app-combat-stats {
-    flex: 1; /* Reduced space for HP / AC */
+    flex: 1;
     display: flex;
   }
 }
@@ -112,7 +112,7 @@
 .converter-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 999;
 }
 
@@ -128,7 +128,7 @@
   transition: right 0.3s ease;
   display: flex;
   flex-direction: column;
-  box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
 
   &.open {
     right: 0;

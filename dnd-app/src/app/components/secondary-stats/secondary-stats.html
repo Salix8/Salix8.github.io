@@ -7,7 +7,7 @@
     </mat-card>
     <mat-card class="stat-badge">
       <div class="stat-badge__label">Speed</div>
-      <input type="number" class="stat-badge__input" [value]="character().speed" (change)="updateSpeed($event)">
+      <input type="number" class="stat-badge__input" [value]="character().speed" (change)="updateSpeed($event)" (focus)="$event.target.select()">
     </mat-card>
   </div>
 
@@ -17,7 +17,7 @@
     <div class="hd-content">
       <div class="hd-tracker">
         <input type="number" class="hd-input" min="0" [max]="character().level"
-               [value]="character().hitDiceSpent || 0" (change)="updateHitDiceSpent($event)">
+               [value]="character().hitDiceSpent || 0" (change)="updateHitDiceSpent($event)" (focus)="$event.target.select()">
         <span class="hd-divider">/</span>
         <span class="hd-total">{{ character().level }}</span>
       </div>

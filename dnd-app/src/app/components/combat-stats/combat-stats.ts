@@ -65,17 +65,13 @@ export class CombatStats {
     } else if (value.startsWith('-')) {
       let damage = Math.abs(parseInt(value, 10));
       if (!isNaN(damage)) {
-        if (type === 'current') {
-          // Drain temp HP first
-          if (tempHP > 0) {
-            const absorbed = Math.min(tempHP, damage);
-            tempHP -= absorbed;
-            damage -= absorbed;
-          }
-          currentHP = Math.max(0, currentHP - damage);
-        } else {
-          tempHP = Math.max(0, tempHP - damage);
+        // Always drain Temp HP first, regardless of which input was used
+        if (tempHP > 0) {
+          const absorbed = Math.min(tempHP, damage);
+          tempHP -= absorbed;
+          damage -= absorbed;
         }
+        currentHP = Math.max(0, currentHP - damage);
       }
     } else {
       const parsed = parseInt(value, 10);

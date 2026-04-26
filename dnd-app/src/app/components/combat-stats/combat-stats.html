@@ -11,16 +11,11 @@
       <input type="number" class="stat-badge__input" 
              [value]="character().armorClass !== null ? character().armorClass : ac()" 
              [placeholder]="ac().toString()"
-             (change)="updateAC($event)">
+             (change)="updateAC($event)"
+             (focus)="$event.target.select()">
       <mat-icon class="shield-icon">security</mat-icon>
     </mat-card>
 
-    <mat-card class="stat-badge">
-      <div class="stat-badge__label">Speed (ft)</div>
-      <input type="number" class="stat-badge__input plain-input" 
-             [value]="character().speed" 
-             (change)="updateSpeed($event)">
-    </mat-card>
   </div>
 
   <!-- Hit Points -->
@@ -29,13 +24,14 @@
     <div class="hp-grid">
       <mat-form-field appearance="outline" class="dense-field">
         <mat-label>Max HP</mat-label>
-        <input matInput type="number" min="1" [value]="character().hitPoints.max" (change)="updateHPMax($event)">
+        <input matInput type="number" min="1" [value]="character().hitPoints.max" (change)="updateHPMax($event)" (focus)="$event.target.select()">
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="dense-field">
         <mat-label>Current HP</mat-label>
         <input matInput type="text" [value]="character().hitPoints.current" 
                (change)="handleHPMath($event, 'current')"
+               (focus)="$event.target.select()"
                placeholder="e.g. +5 or -3">
       </mat-form-field>
 
@@ -43,6 +39,7 @@
         <mat-label>Temp HP</mat-label>
         <input matInput type="text" [value]="character().hitPoints.temporary" 
                (change)="handleHPMath($event, 'temporary')"
+               (focus)="$event.target.select()"
                placeholder="e.g. +5 or -3">
       </mat-form-field>
     </div>

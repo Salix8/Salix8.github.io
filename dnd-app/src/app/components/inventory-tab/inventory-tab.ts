@@ -27,11 +27,11 @@ import { InventoryItem } from '../../models/character.model';
       <div style="display: flex; gap: 1rem;">
         <mat-form-field appearance="fill" style="flex: 1;">
           <mat-label>Quantity</mat-label>
-          <input matInput type="number" min="1" [(ngModel)]="data.quantity">
+          <input matInput type="number" min="1" [(ngModel)]="data.quantity" (focus)="$event.target.select()">
         </mat-form-field>
         <mat-form-field appearance="fill" style="flex: 1;">
           <mat-label>Weight (lbs)</mat-label>
-          <input matInput type="number" min="0" step="0.5" [(ngModel)]="data.weight">
+          <input matInput type="number" min="0" step="0.5" [(ngModel)]="data.weight" (focus)="$event.target.select()">
         </mat-form-field>
       </div>
 
