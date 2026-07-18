@@ -2067,6 +2067,148 @@
 						]
 					],
 					"hasFluffImages": true
+				},
+				{
+					"name": "Demeri",
+					"shortName": "Demeri",
+					"source": "Himmo",
+					"page": 84,
+					"edition": "classic",
+					"additionalSpells": [
+						{
+							"prepared": {
+								"3": [
+									"color spray",
+									"distorsionar valor"
+								],
+								"5": [
+									"scorching ray",
+									"shatter"
+								],
+								"9": [
+									"fireball",
+									"wind wall"
+								],
+								"13": [
+									"ice storm",
+									"wall of fire"
+								],
+								"17": [
+									"cone of cold",
+									"wall of force"
+								]
+							}
+						}
+					],
+					"subclassFeatures": [
+						[
+							{
+								"name": "Demeri",
+								"source": "Himmo",
+								"page": 84,
+								"entries": [
+									"Cualquier artífice sabe cómo infundir objetos mundanos en magia, pero el escuadrón de Demeri lleva esta práctica al extremo. Literalmente cualquier cosa puede ser un poderoso objeto mágico en sus manos. Gracias a ello se han granjeado un incalculable respeto entre muchas comunidades mágicas.",
+									{
+										"name": "Tool Proficiency",
+										"source": "Himmo",
+										"page": 84,
+										"header": 1,
+										"entries": [
+											"Cuando adoptas esta especialización en el 3er nivel, obtienes competencia con las herramientas de joyero. Si ya tienes esta competencia, obtienes competencia con otro tipo de herramientas de artesano de tu elección."
+										]
+									},
+									{
+										"name": "Artillerist Spells",
+										"source": "Himmo",
+										"page": 84,
+										"header": 1,
+										"entries": [
+											"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Artillerist Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+											{
+												"type": "table",
+												"caption": "Conjuros de Demeri",
+												"colLabels": [
+													"Artificer Level",
+													"Spell"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"3rd",
+														"{@spell color spray}, {@spell Distort Value|AI}"
+													],
+													[
+														"5th",
+														"{@spell Nystul's Magic Aura}, {@spell Locate Object}"
+													],
+													[
+														"9th",
+														"{@spell Bestow Curse}, {@spell Remove Curse}"
+													],
+													[
+														"13th",
+														"{@spell Conjure Minor Elementals}, {@spell Vitriolic Sphere|XGE}"
+													],
+													[
+														"17th",
+														"{@spell Conjure Elemental}, {@spell Passwall}"
+													]
+												]
+											}
+										]
+									},
+									{
+										"name": "Experto Canalizador",
+										"source": "Himmo",
+										"page": 84,
+										"header": 1,
+										"entries": [
+											"Eres capaz de canalizar una mayor cantidad de magia en tus infusiones. A partir de ahora el número de infusiones que puedes tener activas es igual al número de infusiones conocidas. Además, elige un artículo de la infusión Replicar Objeto Mágico, este lo tendrás preparado siempre y no cuenta para el número de infusiones conocidas. Adquieres otro artículo a niveles 6, 10 y 14.",
+											"Puedes elegir qué infusión desactivar cuando sobrepases el número máximo de infusiones activas, así como desactivar una infusión al acabar un descanso corto."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Foco Mundano",
+								"source": "Himmo",
+								"page": 84,
+								"header": 2,
+								"entries": [
+									"At 5th level, Puedes canalizar la infusión Foco Arcano Mejorado en cualquier objeto de hasta 1 pie cúbico y usarlo como foco de lanzamiento de hechizos. Solo tú podrás usarlo como tal. Si un conjuro requiere un coste material concreto, y el objeto en sí mismo iguala o supera dicho coste, el foco arcano sustituirá dicho componente. Si el conjuro consume el componente con coste, el foco arcano también se consumirá. No puedes infundir un objeto creado con la infusión Replicar Objeto Mágico."
+								]
+							}
+						],
+						[
+							{
+								"name": "Infusión Arcana",
+								"source": "Himmo",
+								"page": 84,
+								"header": 2,
+								"entries": [
+									"Starting at 9th level, Utilizando tus Herramientas de Carpintero, puedes crear recipientes mágicos para guardar tus conjuros. Con un ritual de una hora, que puede coincidir con un descanso corto, puedes gastar un espacio de conjuro que tengas disponible y castear un conjuro dentro de un objeto. Una criatura que no seas necesariamente tú puede usar su acción para castear el conjuro desde el objeto, utilizándolo como foco arcano, valiéndose de tu bono de lanzamiento de conjuros o tu CD de salvación de conjuros. Si el conjuro requiere concentración, deberá ser la criatura que castee el conjuro quien la mantenga. Para poder meter el conjuro dentro del objeto, este debe poder ser casteado en al menos 1 hora.",
+									"Recuperarás el espacio de conjuro en el próximo descanso largo tras su utilización. No puedes usar este rasgo más veces que tu BC. Si superas esa cantidad, el más antiguo se pierde."
+								]
+							}
+						],
+						[
+							{
+								"name": "Maestro de Infusiones",
+								"source": "Himmo",
+								"page": 84,
+								"header": 2,
+								"entries": [
+									"Starting at 15th level, Tus conocimientos sobre las infusiones te posicionan entre los mejores en tu campo. Puedes dedicar un descanso corto a activar una de tus infusiones y, si es necesario, a desactivar otra. Además, con cada descanso largo puedes sustituir una de tus infusiones conocidas por otra."
+								]
+							}
+						]
+					],
+					"hasFluffImages": true
 				}
 			]
 		}

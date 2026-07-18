@@ -1078,6 +1078,10 @@ function Renderer () {
 					case "@highlight": {
 						const parts = text.split("|");
 						const [toDisplay, color] = text.split("|");
+						if (!color) {
+							this._recursiveRender(toDisplay, textStack, meta);
+							break;
+						}
 						const scrubbedColor = BrewUtil.getValidColor(color);
 
 						if (tag === "@color") textStack[0] += `<span style="color: #${scrubbedColor}">`;
