@@ -1,0 +1,22 @@
+{
+  "sources": {
+    "remoteBaseUrl": "https://raw.githubusercontent.com/MSanteler/5e-Tools/master/data/",
+    "localBaseUrl": "data/",
+    "preferRemote": true
+  },
+  "categories": [
+    { "id": "classes", "group": "players", "label": "Classes", "dataType": "class", "index": "class/index.json" },
+    { "id": "spells", "group": "players", "label": "Spells", "dataType": "spell", "index": "spells/index.json" },
+    { "id": "items", "group": "players", "label": "Items", "dataType": "item", "index": null },
+    { "id": "backgrounds", "group": "players", "label": "Backgrounds", "dataType": "background", "index": null },
+    { "id": "feats", "group": "players", "label": "Feats", "dataType": "feat", "index": null },
+    { "id": "bestiary", "group": "dm", "label": "Bestiary", "dataType": "monster", "index": null },
+    { "id": "dmscreen", "group": "dm", "label": "DM Screen", "dataType": "rule", "index": null },
+    { "id": "encounters", "group": "dm", "label": "Encounter Generator", "dataType": "encounter", "index": null }
+  ],
+  "groups": [
+    { "id": "players", "label": "Players" },
+    { "id": "rules", "label": "Rules" },
+    { "id": "dm", "label": "Dungeon Masters" }
+  ]
+}

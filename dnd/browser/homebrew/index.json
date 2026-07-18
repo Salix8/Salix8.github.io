@@ -1,0 +1,6 @@
+{
+	"readme": [
+		"Local homebrew index. Add JSON filenames to the toImport array to auto-load them."
+	],
+	"toImport": []
+}

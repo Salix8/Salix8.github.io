@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!--5ETOOLS_CMP-->
+	<!--5ETOOLS_ANALYTICS-->
+	<!--5ETOOLS_ADCODE-->
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>This Is Your Life - 5etools</title>
+
+	<link rel="manifest" href="manifest.webmanifest">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/jquery-ui-slider-pips.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="favicon.png">
+
+	<script type="text/javascript" src="js/styleswitch.js"></script>
+	<script type="text/javascript" src="js/navigation.js"></script>
+	<script type="text/javascript" src="js/browsercheck.js"></script>
+
+	<style>
+		h4 {
+			border-bottom: 1px solid #333;
+			width: 100%;
+		}
+
+		.night-mode h4 {
+			border-bottom: 1px solid #555;
+		}
+
+		h5 {
+			text-decoration: underline;
+			margin-bottom: 3px;
+		}
+
+		.life__output-wrp-border {
+			border-radius: 4px;
+		}
+
+		.wrp-sect-head {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.wrp-sect-head > button {
+			margin: 6px 0 6px 6px;
+		}
+
+		.life__output {
+			background: none;
+		}
+
+		.btn-supp-fam {
+			margin-top: 7px;
+			margin-bottom: 7px;
+			display: block;
+		}
+
+		.btn-supp-fam::before {
+			content: "Roll Supplemental Tables Details";
+		}
+
+		.note {
+			display: inline-block;
+			margin: 3px 10px;
+			font-style: italic;
+			user-select: none;
+		}
+
+		.btn-reroll::before {
+			content: "Reroll";
+		}
+
+		.life__output {
+			margin: 1em 0;
+			padding: 0.2em 0.7em;
+			border-radius: 0.2em;
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+<header class="hidden-xs hidden-sm page__header">
+	<div class="container">
+
+		<h1 class="page__title">This Is Your Life</h1>
+		<p class="page__subtitle">Select options, and hit generate.</p>
+	</div>
+</header>
+<nav class="container page__nav" id="navigation">
+	<ul class="nav page__nav-inner" id="navbar">
+	</ul>
+</nav>
+
+<div class="cancer__wrp-leaderboard"><!--5ETOOLS_AD_LEADERBOARD--></div>
+<div class="cancer__wrp-sidebar-rhs"><!--5ETOOLS_AD_RIGHT_1--><div class="cancer__sidebar-rhs-inner"><!--5ETOOLS_AD_RIGHT_2--></div></div>
+
+<main class="container">
+
+	<div class="row no-print">
+		<div class="form-group col-2-4">
+			<label for="race">Race</label>
+			<select class="form-control form-inline" id="race" disabled><option>Loading...</option></select>
+		</div>
+
+		<div class="form-group col-2-4">
+			<label for="cha">Charisma Modifier</label>
+			<select class="form-control form-inline" id="cha" disabled><option>Loading...</option></select>
+		</div>
+
+		<div class="form-group col-2-4">
+			<label for="race">Background</label>
+			<select class="form-control form-inline" id="background" disabled><option>Loading...</option></select>
+		</div>
+
+		<div class="form-group col-2-4">
+			<label for="race">Class</label>
+			<select class="form-control form-inline" id="class" disabled><option>Loading...</option></select>
+		</div>
+
+		<div class="form-group col-2-4">
+			<label for="age"><i>Age</i></label>
+			<select class="form-control form-inline" id="age" disabled><option>Loading...</option></select>
+		</div>
+	</div>
+	<div class="row no-print">
+		<div class="form-group col-12">
+			<button class="btn btn-default" onclick="roll()">Generate</button>
+		</div>
+	</div>
+
+	<div class="row no-print" style="padding: 0 3em;">
+		<p>Based on the tables and rules in <a href="#" id="xge_link">Xanathar's Guide to Everything</a>, pages 61-73.</p>
+		<p><i>NOTE: Text displayed in italics is generated for the sake of ease and speed of use, and does not correspond to a table in the original generator. Ignore it as you see fit.</i></p>
+	</div>
+
+	<hr class="life__output" style="display: none; background: transparent">
+	<div class="row life__output night__shadow-big" style="display: none;">
+		<div class="wrp-sect-head"><h4>Parents</h4><button class="btn btn-xs btn-default btn-reroll" onclick="sectParents()"></button></div>
+		<p id="parents"></p>
+	</div>
+	<div class="row life__output night__shadow-big" style="display: none;">
+		<div class="wrp-sect-head"><h4>Birthplace</h4><button class="btn btn-xs btn-default btn-reroll" onclick="sectBirthplace()"></button></div>
+		<p id="birthplace"></p>
+	</div>
+	<div class="row life__output night__shadow-big" style="display: none;">
+		<div class="wrp-sect-head"><h4>Siblings</h4><button class="btn btn-xs btn-default btn-reroll" onclick="sectSiblings()"></button></div>
+		<p id="siblings"></p>
+	</div>
+	<div class="row life__output night__shadow-big" style="display: none;">
+		<div class="wrp-sect-head"><h4>Family and Friends</h4><button class="btn btn-xs btn-default btn-reroll" onclick="sectFamily()"></button></div>
+		<p id="family"></p>
+	</div>
+	<div class="row life__output night__shadow-big" style="display: none;">
+		<div class="wrp-sect-head"><h4>Personal Decisions</h4><button class="btn btn-xs btn-default btn-reroll" onclick="sectPersonalDecisions()"></button></div>
+		<p id="personal"></p>
+	</div>
+	<div class="row life__output night__shadow-big" style="display: none;">
+		<div class="wrp-sect-head"><h4>Class Training</h4><button class="btn btn-xs btn-default btn-reroll" onclick="sectClassTraining()"></button></div>
+		<p id="clss"></p>
+	</div>
+	<div class="row life__output night__shadow-big" style="display: none;">
+		<div class="wrp-sect-head"><h4>Life Events</h4><button class="btn btn-xs btn-default btn-reroll" onclick="sectLifeEvents()"></button></div>
+		<p id="events"></p>
+	</div>
+</main>
+<!--5ETOOLS_SCRIPT_ANCHOR-->
+<!--5ETOOLS_AD_ADHESION-->
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/utils-ui.js"></script>
+<script type="text/javascript" src="lib/localforage.js"></script>
+<script type="text/javascript" src="js/genutils.js"></script>
+<script type="text/javascript" src="js/omnidexer.js"></script>
+<script type="text/javascript" src="js/omnisearch.js"></script>
+<script type="text/javascript" src="js/render.js"></script>
+<script type="text/javascript" src="js/scalecreature.js"></script>
+<script type="text/javascript" src="js/lifegen.js"></script>
+<script type="text/javascript" src="js/list2.js"></script>
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="lib/jquery-ui.js"></script>
+<script type="text/javascript" src="lib/jquery-ui-slider-pip.js"></script>
+<script type="text/javascript" src="lib/elasticlunr.js"></script>
+</body>
+
+</html>
