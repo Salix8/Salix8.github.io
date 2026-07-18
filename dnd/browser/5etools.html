@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!--5ETOOLS_CMP-->
+	<!--5ETOOLS_ANALYTICS-->
+	<!--5ETOOLS_ADCODE-->
+	<meta charset="utf-8">
+	<meta name="description" content="A suite of browser-based tools for 5th Edition  Dungeons &amp; Dragons players and Dungeon Masters.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Salix8 D&amp;D Tools</title>
+
+	<link rel="manifest" href="manifest.webmanifest">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/fontawesome.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/jquery-ui-slider-pips.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="favicon.png">
+
+
+	<script type="text/javascript" src="js/styleswitch.js"></script>
+	<script type="text/javascript" src="js/navigation.js"></script>
+	<script type="text/javascript" src="js/browsercheck.js"></script>
+
+	<style>
+		table.home-table {
+			padding: 0 10px 10px;
+		}
+
+		table.home-table td {
+			vertical-align: top;
+			padding: 0 5px;
+			width: 50%;
+		}
+
+		#don-wrapper {
+			position: relative;
+			margin-bottom: 7px;
+			padding: 5px 15px;
+		}
+
+		.home__btn-page {
+			border-width: 2px;
+			width: 113px;
+			height: 110px;
+			text-align: center;
+			flex-shrink: 0;
+			padding: 6px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.home__btn-page,
+		.home__btn-page:hover,
+		.home__btn-page:active,
+		.home__btn-page:focus {
+			color: #444;
+		}
+
+		.night-mode .home__btn-page,
+		.night-mode .home__btn-page:hover,
+		.night-mode .home__btn-page:active,
+		.night-mode .home__btn-page:focus {
+			color: inherit;
+		}
+
+		.home__icn-page {
+			font-size: 50px;
+			height: 50px;
+			width: 65px;
+			overflow: hidden;
+			text-align: center;
+		}
+
+		.home__lbl-page {
+			height: 34px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 0;
+			font-size: 17px;
+		}
+
+		.home__h-player {
+			text-decoration: underline;
+			text-decoration-color: dodgerblue;
+		}
+
+		.home__h-rule {
+			text-decoration: underline;
+			text-decoration-color: #33a5a5;
+		}
+
+		.home__h-dm {
+			text-decoration: underline;
+			text-decoration-color: darkviolet;
+		}
+
+		.home__btn-player,
+		.home__btn-player:hover,
+		.home__btn-player:active,
+		.home__btn-player:focus,
+		.night-mode .home__btn-player,
+		.night-mode .home__btn-player:hover,
+		.night-mode .home__btn-player:active,
+		.night-mode .home__btn-player:focus {
+			border-color: dodgerblue;
+		}
+
+		.home__btn-rule,
+		.home__btn-rule:hover,
+		.home__btn-rule:active,
+		.home__btn-rule:focus,
+		.night-mode .home__btn-rule,
+		.night-mode .home__btn-rule:hover,
+		.night-mode .home__btn-rule:active,
+		.night-mode .home__btn-rule:focus{
+			border-color: #33a5a5;
+		}
+
+		.home__btn-dm,
+		.home__btn-dm:hover,
+		.home__btn-dm:active,
+		.home__btn-dm:focus,
+		.night-mode .home__btn-dm,
+		.night-mode .home__btn-dm:hover,
+		.night-mode .home__btn-dm:active,
+		.night-mode .home__btn-dm:focus {
+			border-color: darkviolet;
+		}
+
+		.home__stripe {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-top: 55px;
+		}
+
+		.home__stripe-header {
+			font-size: 32px;
+			font-weight: bold;
+			position: absolute;
+			top: -50px;
+			left: 0;
+			right: 0;
+		}
+
+		.home__split {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.home__split-spaced {
+			margin-right: 80px;
+		}
+
+		.home__split-spaced--gutter {
+			margin-right: 10px;
+		}
+
+		.home__wrp-buttons {
+			justify-content: center;
+		}
+
+		.home__mobile-visible {
+			display: none;
+		}
+
+		.home__narrow-visible {
+			display: none;
+		}
+
+		@media (max-width: 991px) {
+			.home__split {
+				flex-direction: column;
+			}
+
+			.home__split > * {
+				margin-bottom: 45px;
+			}
+
+			.home__split-spaced {
+				margin-right: 0;
+				margin-bottom: 15px;
+			}
+
+			.home__split-spaced--no-header {
+				margin-bottom: 0;
+			}
+
+			.home__stripe-header {
+				right: 0;
+				left: 0;
+				top: -40px;
+			}
+
+			.home__mobile-visible {
+				display: block;
+			}
+
+			.home__icn-page {
+				font-size: 50px;
+				height: 50px;
+			}
+
+			.home__btn-page {
+				height: 114px;
+				margin: 5px !important;
+			}
+
+			.home__mobile-hidden {
+				display: none !important;
+			}
+		}
+
+		@media (max-width: 507px) {
+			.home__narrow-visible {
+				display: block !important;
+			}
+
+			.home__narrow-hidden {
+				display: none !important;
+			}
+
+			.home__split-spaced--no-header {
+				margin-bottom: 15px;
+			}
+		}
+	</style>
+</head>
+<body>
+<header class="hidden-xs hidden-sm page__header">
+	<div class="container">
+
+		<h1 class="page__title page__title--home">Salix8<span>D&amp;D</span></h1>
+		<p class="page__subtitle">Herramientas locales para Dungeons &amp; Dragons.</p>
+	</div>
+</header>
+
+<nav class="container page__nav" id="navigation">
+	<ul class="nav page__nav-inner" id="navbar">
+	</ul>
+</nav>
+
+<div class="container">
+	<!--GITHUB_DISCLAIMER-->
+	<!--	<div class="alert alert-warning">-->
+	<!--		<p><strong>Discord update:</strong> A recent bot-hijack resulted in many accounts being banned from our Discord server, along with a general server reset. Besides bans, no user accounts were affected, and the server has largely been restored to its former state. <a class="alert-link" href="https://discord.gg/nGvRCDs" target="_blank" rel="noopener noreferrer">You can rejoin here.</a></p>-->
+	<!--	</div>-->
+</div>
+
+<div class="cancer__wrp-leaderboard"><!--5ETOOLS_AD_LEADERBOARD--></div>
+<div class="cancer__wrp-sidebar-rhs"><!--5ETOOLS_AD_RIGHT_1--><div class="cancer__sidebar-rhs-inner"><!--5ETOOLS_AD_RIGHT_2--></div></div>
+
+<div class="home__stripe">
+	<div class="home__split relative">
+		<div class="home__stripe-header text-right home__h-player"><div class="w-100 text-center">Players</div></div>
+		<div class="flex flex-wrap relative home__split-spaced home__split-spaced--gutter home__split-spaced--no-header home__wrp-buttons">
+			<a class="home__btn-page btn btn-default mr-3 home__btn-player" href="races.html">
+				<div class="fal fa-users home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Races</h4>
+			</a>
+			<a class="home__btn-page btn btn-default mr-3 home__btn-player" href="classes.html" title="Quickly browse the official classes, and their associated subclasses.
+						Unearthed Arcana content can be accessed by cycling the &quot;All Sources&quot; button.">
+				<div class="fal fa-hat-wizard home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Classes</h4>
+			</a>
+			<a class="home__btn-page btn btn-default mr-3 home__btn-player" href="feats.html">
+				<div class="fal fa-chess-queen home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Feats</h4>
+			</a>
+			<a class="home__btn-page btn btn-default home__btn-player" href="optionalfeatures.html" title="A searchable, filterable list of feature choices, including Eldritch Invocations for the Warlock Class, and Maneuvers for the Fighter's Battlemaster subclass.">
+				<div class="fal fa-drafting-compass home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Options<br>&amp; Features</h4>
+			</a>
+
+			<!-- mobile only -->
+			<a class="home__btn-page btn btn-default home__narrow-visible home__btn-player" href="backgrounds.html">
+				<div class="fal fa-portrait home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Backgrounds</h4>
+			</a>
+			<a class="home__btn-page btn btn-default home__narrow-visible home__btn-player" href="items.html">
+				<div class="fal fa-helmet-battle home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Items</h4>
+			</a>
+			<a class="home__btn-page btn btn-default home__narrow-visible home__btn-player" href="spells.html">
+				<div class="fal fa-book-spells home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Spells</h4>
+			</a>
+			<a class="home__btn-page btn btn-default home__narrow-visible home__btn-player" href="psionics.html">
+				<div class="fal fa-brain home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Psionics</h4>
+			</a>
+		</div>
+
+		<div class="flex flex-wrap home__wrp-buttons home__narrow-hidden">
+			<a class="home__btn-page btn btn-default mr-3 home__btn-player" href="backgrounds.html">
+				<div class="fal fa-portrait home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Backgrounds</h4>
+			</a>
+			<a class="home__btn-page btn btn-default mr-3 home__btn-player" href="items.html">
+				<div class="fal fa-helmet-battle home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Items</h4>
+			</a>
+			<a class="home__btn-page btn btn-default mr-3 home__btn-player" href="spells.html">
+				<div class="fal fa-book-spells home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Spells</h4>
+			</a>
+			<a class="home__btn-page btn btn-default home__btn-player" href="psionics.html">
+				<div class="fal fa-brain home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Psionics</h4>
+			</a>
+		</div>
+	</div>
+
+	<div class="my-4 home__mobile-hidden home__narrow-hidden"></div>
+	<div class="my-4 home__mobile-hidden home__narrow-visible"></div>
+	<div class="my-4 home__mobile-hidden"></div>
+
+	<div class="home__split">
+		<div class="flex flex-wrap relative home__split-spaced home__split-spaced--gutter home__wrp-buttons">
+			<div class="home__stripe-header home__h-rule"><div class="w-100 text-center">Rules</div></div>
+			<a class="home__btn-page btn btn-default mr-3 home__btn-rule" href="books.html" title="All the official sources published by Wizards of the Coast.">
+				<div class="fal fa-books home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Books</h4>
+			</a>
+			<a class="home__btn-page btn btn-default mr-3 home__btn-rule" href="quickreference.html" title="A searchable selection of commonly used rules and tables.">
+				<div class="fal fa-info-square home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Quick<br>Reference</h4>
+			</a>
+			<a class="home__btn-page btn btn-default home__btn-rule" href="conditionsdiseases.html" title="A searchable, filterable list of the conditions found in the Player's Handbook, and the sample diseases found in the Dungeon Master's Guide.">
+				<div class="fal fa-skull-crossbones home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Conditions</h4>
+			</a>
+		</div>
+
+		<div class="my-4 home__mobile-visible"></div>
+
+		<div class="flex flex-wrap relative home__wrp-buttons">
+			<div class="home__stripe-header home__h-dm"><div class="w-100 text-center">Dungeon Masters</div></div>
+			<a class="home__btn-page btn btn-default mr-3 home__btn-dm" href="bestiary.html" title="A searchable, filterable list of the more than 1,000 stat blocks in D&amp;D 5e. An encounter builder is included, and creature Challenge Rating can be scaled according to the &quot;Creating Quick Monster Stats&quot; table in the Dungeon Master's Guide.">
+				<div class="fal fa-dragon home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Bestiary</h4>
+			</a>
+			<a class="home__btn-page btn btn-default mr-3 home__btn-dm" href="dmscreen.html" title="A fully-customizable Dungeon Master's screen, featuring an initiative tracker; a unit converter, embedded images, videos, and sites; and the majority of 5etools' content.">
+				<div class="fal fa-map home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">DM Screen</h4>
+			</a>
+			<a class="home__btn-page btn btn-default mr-3 home__btn-dm" href="lootgen.html" title="A random loot generator for both individual and hoards of treasure.">
+				<div class="fal fa-treasure-chest home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">Loot<br>Generator</h4>
+			</a>
+			<a class="home__btn-page btn btn-default home__btn-dm" href="crcalculator.html" title="A verbose, in-depth Challenge Rating calculator, for determining the CR of homebrew creatures.">
+				<div class="fal fa-abacus home__icn-page"></div>
+				<h4 class="text-center home__lbl-page">CR<br>Calculator</h4>
+			</a>
+		</div>
+	</div>
+
+	<div class="my-4"></div>
+
+	<hr class="no-shrink w-100 my-0">
+</div>
+
+<main class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h3>Biblioteca local</h3>
+			<p>Consulta clases, conjuros, objetos, bestiario, reglas y herramientas de DM desde la base de datos JSON incluida en este proyecto.</p>
+		</div>
+	</div>
+</main>
+<footer class="container">
+	<p class="text-center">
+		<span id="current_year">2026</span> Salix8 D&amp;D Tools
+	</p>
+</footer>
+<div class="cancer__home-footer-pad"></div>
+<!--5ETOOLS_SCRIPT_ANCHOR-->
+<!--5ETOOLS_AD_ADHESION-->
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/utils-ui.js"></script>
+<script type="text/javascript" src="lib/localforage.js"></script>
+<script type="text/javascript" src="js/omnidexer.js"></script>
+<script type="text/javascript" src="js/omnisearch.js"></script>
+<script type="text/javascript" src="js/render.js"></script>
+<script type="text/javascript" src="js/scalecreature.js"></script>
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="lib/jquery-ui.js"></script>
+<script type="text/javascript" src="lib/jquery-ui-slider-pip.js"></script>
+<script type="text/javascript" src="lib/elasticlunr.js"></script>
+<script>
+	ExcludeUtil.pInitialise();
+	$(`#current_year`).text((new Date).getFullYear());
+</script>
+</body>
+</html>

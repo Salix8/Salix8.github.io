@@ -1,0 +1,24 @@
+{
+	"monster": [
+		{
+			"name": "Homunculus Servant",
+			"source": "TCE"
+		},
+		{
+			"name": "Mighty Servant of Leuk-o",
+			"source": "TCE"
+		},
+		{
+			"name": "Reflection",
+			"source": "TCE"
+		},
+		{
+			"name": "Shadow Spirit",
+			"source": "TCE"
+		},
+		{
+			"name": "Steel Defender",
+			"source": "TCE"
+		}
+	]
+}
