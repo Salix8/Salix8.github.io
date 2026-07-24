@@ -18942,6 +18942,269 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "Médico",
+			"source": "Himo",
+			"page": "??",
+			"skillProficiencies": [
+				{
+					"medicine": true,
+					"nature": true
+				}
+			],
+			"toolProficiencies": [
+				{
+					"herbalism kit": true
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies",
+							"entry": "{@skill Medicine}, {@skill Nature} (variante Chamán: {@skill Deception} en vez de Naturaleza)"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiencies",
+							"entry": "{@item healer's kit|phb}, herramientas de herborista o suministros de alquimista"
+						},
+						{
+							"type": "item",
+							"name": "Equipment",
+							"entry": "Botiquín, vendas, bisturí, tijeras quirúrgicas, alcohol antiséptico, 3 hierbas analgésicas, 3 hierbas energéticas, aguja, 5 pies de hilo, sierra pequeña, una muda de viaje, kit elegido, libro de medicina y una {@item pouch|phb} con 15 po"
+						}
+					]
+				},
+				{
+					"name": "Feature: Atención Médica",
+					"type": "entries",
+					"entries": [
+						"Las hierbas analgésicas anulan el dolor, pero no el daño, durante operaciones. Las energéticas reaniman con 3 puntos de golpe si superas Medicina CD 10. Cada una tiene tres usos y puede reponerse en tiendas."
+					],
+					"data": {
+						"isFeature": true
+					}
+				}
+			]
+		},
+		{
+			"name": "Adoptado por las Hadas",
+			"source": "Himo",
+			"page": "??",
+			"skillProficiencies": [
+				{
+					"investigation": true,
+					"nature": true
+				}
+			],
+			"toolProficiencies": [
+				{
+					"herbalism kit": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"sylvan": true
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies",
+							"entry": "{@skill Investigation}, {@skill Nature}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiencies",
+							"entry": "{@item herbalism kit|phb}"
+						},
+						{
+							"type": "item",
+							"name": "Languages",
+							"entry": "{@language Sylvan}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment",
+							"entry": "Kit de herboristería, brazalete de tallos escarlata de Diente de Hada y una muda limpia de telas naturales"
+						}
+					]
+				},
+				{
+					"name": "Feature: Heredero Feérico",
+					"type": "entries",
+					"entries": [
+						"Tu crianza entre las hadas te concede vínculos y reconocimiento entre quienes conocen sus costumbres."
+					],
+					"data": {
+						"isFeature": true
+					}
+				}
+			]
+		},
+		{
+			"name": "Cazador Abisal",
+			"source": "Himo",
+			"page": "??",
+			"skillProficiencies": [
+				{
+					"intimidation": true,
+					"stealth": true
+				}
+			],
+			"prerequisite": "Campaña subacuática",
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies",
+							"entry": "{@skill Intimidation}, {@skill Stealth}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment",
+							"entry": "Red de caza, equipo de purificación de peces tóxicos y una fuente de luz"
+						}
+					]
+				},
+				{
+					"name": "Feature: Compañero Abisal",
+					"type": "entries",
+					"entries": [
+						"Puedes escoger una mascota que respire agua y sea una bestia de VD 1/4 o inferior."
+					],
+					"data": {
+						"isFeature": true
+					}
+				}
+			]
+		},
+		{
+			"name": "Amnésico",
+			"source": "Himo",
+			"page": "??",
+			"skillProficiencies": [
+				{
+					"choose": {
+						"from": [
+							"history",
+							"survival",
+							"insight",
+							"religion",
+							"arcana",
+							"perception",
+							"investigation"
+						],
+						"count": 2
+					}
+				}
+			],
+			"languageProficiencies": [
+				{
+					"exotic": 1
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies",
+							"entry": "Dos a elegir entre {@skill History}, {@skill Survival}, {@skill Insight}, {@skill Religion}, {@skill Arcana}, {@skill Perception} o {@skill Investigation}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiencies",
+							"entry": "Un kit, herramientas o set a elección"
+						},
+						{
+							"type": "item",
+							"name": "Languages",
+							"entry": "Un idioma exótico o muy poco común"
+						},
+						{
+							"type": "item",
+							"name": "Equipment",
+							"entry": "Kit, herramientas o set elegido, reliquia de tu pasado, mochila vacía y bolsa para cinturón con insignia desconocida"
+						}
+					]
+				},
+				{
+					"name": "Feature: Ecos del Pasado",
+					"type": "entries",
+					"entries": [
+						"A juicio del DM, pueden aparecer PNJ que te conozcan, lugares que reconozcas u objetos cuyo funcionamiento sepas. El DM puede darte información adicional relacionada con tu trasfondo.",
+						"Variante: el DM escoge tus competencias y herramientas sin decirte por qué las tienes; no conoces absolutamente nada de tu pasado."
+					],
+					"data": {
+						"isFeature": true
+					}
+				}
+			]
+		},
+		{
+			"name": "Cazador",
+			"source": "Himo",
+			"page": "??",
+			"skillProficiencies": [
+				{
+					"stealth": true,
+					"survival": true
+				}
+			],
+			"toolProficiencies": [
+				{
+					"leatherworker's tools": true,
+					"hunter's tools": true
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies",
+							"entry": "{@skill Stealth}, {@skill Survival}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiencies",
+							"entry": "Herramientas de peletero y de cazador"
+						},
+						{
+							"type": "item",
+							"name": "Equipment",
+							"entry": "Herramientas de cazador, trofeo de caza, licencia de cazador, {@item traveler's clothes|phb} y una {@item pouch|phb} con 10 po"
+						}
+					]
+				},
+				{
+					"name": "Feature: Vida de Cazador",
+					"type": "entries",
+					"entries": [
+						"Tienes ventaja al colocar trampas con cepos, cuerdas o redes. En una zona silvestre habitada puedes subsistir moderadamente mientras trabajas como cazador y alimentar hasta a 10 criaturas."
+					],
+					"data": {
+						"isFeature": true
+					}
+				}
+			]
 		}
 	]
 }

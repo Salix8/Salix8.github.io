@@ -1736,6 +1736,14 @@
 							}
 						]
 					]
+				},
+				{
+					"name": "Colegio del Juego", "shortName": "Juego", "source": "Himo", "page": "??",
+					"subclassFeatures": [
+						[{"name": "Colegio del Juego", "source": "Himo", "page": "??", "entries": ["Los bardos del Colegio del Juego saben llevar cualquier juego de cartas a su terreno y doblan su magia a través de los cartones.", {"name": "Dominio del Juego", "source": "Himo", "page": "??", "entries": ["Eres competente con el set de cartas; si ya lo eras, duplicas tu bonificador de competencia. Puedes usarlo como foco arcano y, mediante un ritual de una hora que puede coincidir con un descanso corto o prolongado, recuperar cartas perdidas o destruidas si conservas al menos una carta."]}, {"name": "Suerte del Ludópata", "source": "Himo", "page": "??", "entries": ["Como reacción, tras fallar una prueba de característica, salvación o ataque, puedes gastar Inspiración de Bardo para repetirla, añadir un dado de Inspiración de Bardo y usar el nuevo resultado. Si tienes éxito, anota el resultado del dado; el DM puede aplicarlo como penalizador a un ataque o prueba posterior tuya, y no puedes usar este rasgo de nuevo hasta sufrir ese inconveniente."]}, {"name": "Cartas Letales", "source": "Himo", "page": "??", "entries": ["Mientras uses el set como foco, puedes usar tu acción para hacer un ataque a distancia con una carta: {@dice 1d8} de daño cortante mágico, alcance 30/60, usando Carisma. Puedes lanzar 52 cartas antes de recuperarlas; cada una se rompe tras usarse. Los comodines no son arrojadizos."]}]}],
+						[{"name": "Cartomancia", "source": "Himo", "page": "??", "entries": ["Al final de un descanso prolongado puedes sintonizarte con uno de los ases de la baraja; no cuenta para el límite de sintonización.", {"type": "list", "items": ["Tréboles/Oros: en pruebas de habilidad, los 1 cuentan como 2 y los 19 como 20 antes de modificadores.", "Diamantes/Bastos: resistencia al daño cortante, perforante y contundente.", "Corazones/Copas: añade {@dice 1d8} + Carisma a la curación de conjuros; a nivel 10, añade otro {@dice 1d8}.", "Picas/Espadas: añade {@dice 1d8} + Carisma al daño de conjuros; a nivel 10, añade otro {@dice 1d8}."]}]}],
+						[{"name": "Comodín", "source": "Himo", "page": "??", "entries": ["Puedes gastar un espacio de conjuro de hasta nivel 5 e introducir el conjuro en uno de los comodines. Puedes hacerlo con los dos comodines a la vez, gastando un espacio por cada uno. Cuando lances el conjuro desde la carta, la usas como foco y se consume."]}]
+					]
 				}
 			],
 			"fluff": [

@@ -2,6 +2,14 @@
 
 class PageFilterItems extends PageFilter {
 	// region static
+	static _getAttachedSpells (attachedSpells) {
+		if (attachedSpells == null) return [];
+		if (typeof attachedSpells === "string") return [attachedSpells];
+		if (attachedSpells instanceof Array) return attachedSpells.flatMap(it => PageFilterItems._getAttachedSpells(it));
+		if (typeof attachedSpells === "object") return Object.values(attachedSpells).flatMap(it => PageFilterItems._getAttachedSpells(it));
+		return [];
+	}
+
 	static _rarityValue (rarity) {
 		switch (rarity) {
 			case "None": return 0;
@@ -78,6 +86,7 @@ class PageFilterItems extends PageFilter {
 		// for filter to use
 		item._fTier = tierTags;
 		item._fProperties = item.property ? item.property.map(p => Renderer.item.propertyMap[p].name).filter(n => n) : [];
+		item._fAttachedSpells = PageFilterItems._getAttachedSpells(item.attachedSpells);
 		item._fMisc = item.sentient ? ["Sentient"] : [];
 		if (item.curse) item._fMisc.push("Cursed");
 		const isMundane = item.rarity === "None" || item.rarity === "Unknown" || item._category === "Basic";
@@ -118,7 +127,7 @@ class PageFilterItems extends PageFilter {
 		this._typeFilter.addItem(item._typeListText);
 		this._tierFilter.addItem(item._fTier)
 		this._propertyFilter.addItem(item._fProperties);
-		this._attachedSpellsFilter.addItem(item.attachedSpells);
+		this._attachedSpellsFilter.addItem(item._fAttachedSpells);
 		this._lootTableFilter.addItem(item.lootTables);
 		this._damageTypeFilter.addItem(item.dmgType);
 	}
@@ -156,7 +165,7 @@ class PageFilterItems extends PageFilter {
 			it.dmgType,
 			it._fMisc,
 			it.lootTables,
-			it.attachedSpells
+			it._fAttachedSpells
 		);
 	}
 }

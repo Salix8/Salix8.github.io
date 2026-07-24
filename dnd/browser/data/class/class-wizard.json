@@ -2916,7 +2916,19 @@
 							}
 						]
 					]
-				}
+				},
+				{"name":"Lich","shortName":"Lich","source":"Himo","page":"??","subclassFeatures":[
+					[{"name":"Lich","source":"Himo","page":"??","entries":["Has ido más allá de la Escuela de Nigromancia y buscas comprender la muerte como herramienta, vasallo o juguete.",{"name":"Magia Oscura","source":"Himo","page":"??","entries":["Al preparar trucos o conjuros, puedes escoger conjuros de Nigromancia de cualquier lista."]},{"name":"Heraldo de la Muerte","source":"Himo","page":"??","entries":["Cuando hagas daño necrótico con un conjuro de nivel 1 o superior, añade tu modificador de Inteligencia al daño total."]}]}],
+					[{"name":"Levantar No Muertos","source":"Himo","page":"??","entries":["Como acción, con una mano libre y tu foco arcano, puedes levantar un esqueleto o zombi durante una hora. Puedes liberarlo con una acción. Puedes invocar un máximo de criaturas igual a tu bonificador de competencia, pero solo tener una a la vez; después debes terminar un descanso prolongado para recuperar los usos. No puedes usar el mismo cadáver dos veces."]}],
+					[{"name":"Muerto entre los Vivos","source":"Himo","page":"??","entries":["Ganas resistencia al daño necrótico, tu máximo de puntos de golpe no puede reducirse y ya no necesitas comer, dormir ni respirar. No envejeces y tienes ventaja en salvaciones de muerte."]}],
+					[{"name":"Guía de Almas","source":"Himo","page":"??","entries":["Cuando una criatura muera por tu mano, vuelve como un no muerto leal hasta {@dice 1d6} horas, hasta que la liberes o llegue a 0 puntos de golpe. Usa un espíritu no muerto de nivel 3 como zombi, esqueleto o forma fantasmal según el estado del cuerpo. Solo puedes tener uno, no cuenta para Levantar No Muertos y recuperas el rasgo tras un descanso prolongado."]}]
+				]},
+				{"name":"Oniromante","shortName":"Oniromante","source":"Himo","page":"??","subclassFeatures":[
+					[{"name":"Oniromante","source":"Himo","page":"??","entries":["Los oniromantes investigan la magia de los sueños y el Plano Onírico, un mundo de posibilidades ilimitadas y peligroso.",{"name":"Erudito Oniromante","source":"Himo","page":"??","entries":["Copiar conjuros de oniromancia cuesta la mitad de tiempo y dinero, al igual que los conjuros indicados de sueño, miedo, ilusión, adivinación y magia psíquica de la lista proporcionada."]},{"name":"Consciencia Onírica","source":"Himo","page":"??","entries":["Concentrarte en conjuros de oniromancia no perturba los descansos mientras permanezcas dormido o en actividades relajadas y no lances otros conjuros. Al lanzar Abrir Mente sobre ti mismo, obtienes consciencia del Plano Material similar al Trance élfico."]}]}],
+					[{"name":"Sueño Intrusivo","source":"Himo","page":"??","entries":["Añades 2 dados extra cada vez que lances {@spell sleep} y puedes acceder involuntariamente a la mente de criaturas inconscientes si conoces su nombre."]}],
+					[{"name":"Mente Afilada","source":"Himo","page":"??","entries":["Al lanzar {@spell detect thoughts} en una Burbuja Onírica ajena, no necesitas concentración y dura una hora. En el Plano Material puedes profundizar sin que la criatura sepa que lees su mente."]}],
+					[{"name":"Destructor de Mentes","source":"Himo","page":"??","entries":["Si lanzas en el Plano Onírico un truco o conjuro que ya haga daño psíquico, el objetivo recibe ese daño tanto en su mente como en su cuerpo."]}]
+				]}
 			],
 			"fluff": [
 				{

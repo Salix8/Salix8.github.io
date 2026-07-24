@@ -2071,7 +2071,7 @@
 				{
 					"name": "Demeri",
 					"shortName": "Demeri",
-					"source": "Himmo",
+					"source": "Himo",
 					"page": 84,
 					"edition": "classic",
 					"additionalSpells": [
@@ -2104,13 +2104,13 @@
 						[
 							{
 								"name": "Demeri",
-								"source": "Himmo",
+								"source": "Himo",
 								"page": 84,
 								"entries": [
 									"Cualquier artífice sabe cómo infundir objetos mundanos en magia, pero el escuadrón de Demeri lleva esta práctica al extremo. Literalmente cualquier cosa puede ser un poderoso objeto mágico en sus manos. Gracias a ello se han granjeado un incalculable respeto entre muchas comunidades mágicas.",
 									{
 										"name": "Tool Proficiency",
-										"source": "Himmo",
+										"source": "Himo",
 										"page": 84,
 										"header": 1,
 										"entries": [
@@ -2118,8 +2118,8 @@
 										]
 									},
 									{
-										"name": "Artillerist Spells",
-										"source": "Himmo",
+										"name": "Demeri Spells",
+										"source": "Himo",
 										"page": 84,
 										"header": 1,
 										"entries": [
@@ -2138,7 +2138,7 @@
 												"rows": [
 													[
 														"3rd",
-														"{@spell color spray}, {@spell Distort Value|AI}"
+														"{@spell Color Spray}, {@spell Distort Value|AI}"
 													],
 													[
 														"5th",
@@ -2162,7 +2162,7 @@
 									},
 									{
 										"name": "Experto Canalizador",
-										"source": "Himmo",
+										"source": "Himo",
 										"page": 84,
 										"header": 1,
 										"entries": [
@@ -2176,7 +2176,7 @@
 						[
 							{
 								"name": "Foco Mundano",
-								"source": "Himmo",
+								"source": "Himo",
 								"page": 84,
 								"header": 2,
 								"entries": [
@@ -2187,7 +2187,7 @@
 						[
 							{
 								"name": "Infusión Arcana",
-								"source": "Himmo",
+								"source": "Himo",
 								"page": 84,
 								"header": 2,
 								"entries": [
@@ -2199,7 +2199,7 @@
 						[
 							{
 								"name": "Maestro de Infusiones",
-								"source": "Himmo",
+								"source": "Himo",
 								"page": 84,
 								"header": 2,
 								"entries": [
@@ -2209,6 +2209,91 @@
 						]
 					],
 					"hasFluffImages": true
+				},
+				{
+					"name": "Bladesmith",
+					"shortName": "Bladesmith",
+					"source": "Himo",
+					"page": "??",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Bladesmith",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Es el sueño de cualquier herrero de combate crear el arma definitiva. Allí donde las armas mágicas dominen el combate, un Artificiero Bladesmith martilleará el yunque para forjar la mejor arma jamás vista.",
+									{
+										"name": "Dominio de Armero",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Eres competente en armas marciales y herramientas de herrero. Si ya eras competente con estas últimas, eres competente con herramientas de carpintero o, en su defecto, con un kit de herramientas de tu elección. Fabricar armas te cuesta la mitad de dinero."
+										]
+									},
+									{
+										"name": "Conjuros de Bladesmith",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Siempre tienes preparados los siguientes conjuros. Cuentan como conjuros de artificiero para ti, pero no para el número que puedes preparar.",
+											{
+												"type": "table",
+												"colLabels": ["Nivel de artificiero", "Conjuros"],
+												"colStyles": ["col-2 text-center", "col-10"],
+												"rows": [
+													["3rd", "{@spell compelled duel}, {@spell wrathful smite}"],
+													["5th", "{@spell kinetic jaunt}, {@spell spiritual weapon}"],
+													["9th", "{@spell crusader's mantle}, {@spell elemental weapon}"],
+													["13th", "{@spell staggering smite}, {@spell fire shield}"],
+													["17th", "{@spell steel wind strike}, {@spell holy weapon}"]
+												]
+											}
+										]
+									},
+									{
+										"name": "Segundo Filo",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Al final de un descanso prolongado puedes vincular un arma mágica o mundana. Elige dos armas adicionales con las que seas competente y que no sean la base, o un arma y un escudo. Como acción adicional puedes cambiar el arma equipada por otra de las elegidas. Un arma mágica solo mantiene sus propiedades en su forma original; las otras formas cuentan como mágicas, pero no conservan esas propiedades.",
+											"Puedes usar el arma en cualquiera de sus formas como foco arcano y usar Inteligencia para sus ataques."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Multiataque",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Ejerces la violencia dos veces con tu acción de Ataque. Además, puedes usar tu reacción para cambiar de tipo de arma entre ataques."
+								]
+							}
+						],
+						[
+							{
+								"name": "Armas Modificadas",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Ahora puedes infusionar tus armas de Segundo Filo. Cada una cuenta como un objeto aparte para infusionar y puede contener hasta dos infusiones. Los efectos solo son vigentes cuando tengas equipada el arma en la forma en que la infusionaste."
+								]
+							}
+						],
+						[
+							{
+								"name": "Switch",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Cuando uses tu acción adicional para cambiar de arma, puedes atacar una vez con la nueva. Si cambias a escudo, puedes atacar para dejar al objetivo aturdido. Si el escudo tenía un modificador mágico a tu CA, lo añade al ataque."
+								]
+							}
+						]
+					]
 				}
 			]
 		}

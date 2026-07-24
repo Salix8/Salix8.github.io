@@ -261,7 +261,10 @@ class ItemsPage {
 		await this._pageFilter.pInitFilterBox({
 			$iptSearch: $(`#lst__search`),
 			$wrpFormTop: $(`#filter-search-input-group`).title("Hotkey: f"),
-			$btnReset: $(`#reset`)
+			$btnReset: $(`#reset`),
+			// The old item-filter state was saved before the item lists were initialized.
+			// Keep this page-specific version so those stale values are not reused.
+			namespace: "items-v3"
 		});
 
 		return pPopulateTablesAndFilters({item: await Renderer.item.pBuildList({isAddGroups: true, isBlacklistVariants: true})});
@@ -336,6 +339,12 @@ async function pPopulateTablesAndFilters (data) {
 	SortUtil.initBtnSortHandlers($("#sublistsort"), subList);
 	ListUtil.initGenericAddable();
 
+	// List.js only renders after initialization. Do this before adding any items, so
+	// the first item load cannot leave the lists empty while filters are being built.
+	mundaneList.init();
+	magicList.init();
+	subList.init();
+
 	addItems(data);
 	BrewUtil.pAddBrewData()
 		.then(handleBrew)
@@ -367,10 +376,6 @@ async function pPopulateTablesAndFilters (data) {
 				(a, b) => SortUtil.ascSort(a.name, b.name) || SortUtil.ascSort(a.source, b.source)
 			);
 
-			mundaneList.init();
-			magicList.init();
-			subList.init();
-
 			Hist.init(true);
 			ExcludeUtil.checkShowAllExcluded(itemList, $(`#pagecontent`));
 
@@ -385,6 +390,7 @@ async function handleBrew (homebrew) {
 
 let itemList = [];
 let itI = 0;
+let isInitialFilterStateChecked = false;
 function addItems (data) {
 	if (!data.item || !data.item.length) return;
 
@@ -405,8 +411,20 @@ function addItems (data) {
 	mundaneList.update();
 	magicList.update();
 
-	itemsPage._pageFilter.filterBox.render();
+	const filterBox = itemsPage._pageFilter.filterBox;
+	filterBox.render();
 	itemsPage.handleFilterChange();
+
+	// A stale saved state may hide every loaded item before the user has searched.
+	// Recover once during the initial load, without overriding deliberate later filters.
+	if (!isInitialFilterStateChecked) {
+		isInitialFilterStateChecked = true;
+
+		const isSearchActive = !!$(`#lst__search`).val().trim();
+		const totalItems = mundaneList.items.length + magicList.items.length;
+		const visibleItems = mundaneList.visibleItems.length + magicList.visibleItems.length;
+		if (totalItems && !visibleItems && !isSearchActive) filterBox.reset(true);
+	}
 
 	ListUtil.setOptions({
 		itemList: itemList,

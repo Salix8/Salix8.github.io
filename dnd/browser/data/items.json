@@ -30396,6 +30396,354 @@
 			"miscTags": [
 				"TT"
 			]
+		},
+		{
+			"name": "Rodela",
+			"source": "Himo",
+			"page": "??",
+			"type": "S",
+			"rarity": "None",
+			"value": 1000,
+			"weight": 3,
+			"ac": 1,
+			"entries": [
+				"Como reacción, puedes intentar parar un ataque con una prueba de {@skill Athletics} enfrentada a la tirada de ataque. Con éxito, el ataque falla y esa criatura tiene desventaja al atacarte hasta el inicio de su próximo turno."
+			]
+		},
+		{
+			"name": "Escudo de Guardia",
+			"source": "Himo",
+			"page": "??",
+			"type": "S",
+			"rarity": "None",
+			"value": 3000,
+			"weight": 8,
+			"ac": 2,
+			"entries": [
+				"Como acción puedes adoptar una posición defensiva. Los ataques de oportunidad no requieren que uses tu reacción."
+			]
+		},
+		{
+			"name": "Escudo de Torre",
+			"source": "Himo",
+			"page": "??",
+			"type": "S",
+			"rarity": "None",
+			"value": 10000,
+			"weight": 12,
+			"ac": 2,
+			"entries": [
+				"Como reacción, plantas el escudo y proporcionas cobertura media a quienes estén tras él. Al usar las reacciones de los estilos de lucha Protección e Intercepción, añade +2 adicional a la CA antes de determinar el impacto."
+			]
+		},
+		{
+			"name": "Katana",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 3500,
+			"weight": 3,
+			"dmg1": "1d8",
+			"dmgType": "S",
+			"property": [
+				"F",
+				"2H"
+			],
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Como reacción, ganas un bono a la CA contra un ataque igual a tu bonificador de competencia."
+			]
+		},
+		{
+			"name": "Tanto",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 3000,
+			"weight": 0.6,
+			"dmg1": "1d6",
+			"dmgType": "S",
+			"property": [
+				"F",
+				"L"
+			],
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Puedes imponerte desventaja en un ataque para realizar otro con la misma acción; el segundo ataque también tiene desventaja."
+			]
+		},
+		{
+			"name": "Bō 1,5 m",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 4500,
+			"weight": 0.8,
+			"dmg1": "1d6",
+			"dmgType": "B",
+			"property": [
+				"F",
+				"V"
+			],
+			"source": "Himo",
+			"page": "??",
+			"dmg2": "1d8",
+			"entries": [
+				"Como reacción, ganas +2 a la CA contra un ataque."
+			]
+		},
+		{
+			"name": "Bō 1,8 m",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 10000,
+			"weight": 1.5,
+			"dmg1": "1d8",
+			"dmgType": "B",
+			"property": [
+				"F",
+				"V"
+			],
+			"source": "Himo",
+			"page": "??",
+			"dmg2": "1d10",
+			"entries": [
+				"Como reacción ganas +1 a la CA contra todos los ataques de una criatura, o como acción adicional impones desventaja a proyectiles contra ti hasta el inicio de tu próximo turno."
+			]
+		},
+		{
+			"name": "Bō 2 m",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 29000,
+			"weight": 2.6,
+			"dmg1": "1d8",
+			"dmgType": "B",
+			"property": [
+				"F",
+				"2H",
+				"R"
+			],
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Como acción adicional ganas +1 a la CA y puedes realizar ataques de oportunidad cuando las criaturas entren en tu alcance."
+			]
+		},
+		{
+			"name": "Guadaña",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Simple",
+			"rarity": "None",
+			"value": 0,
+			"weight": 0,
+			"dmg1": "1d4",
+			"dmgType": "S",
+			"property": [
+				"F",
+				"R",
+				"V",
+				"S"
+			],
+			"source": "Himo",
+			"page": "??",
+			"dmg2": "1d6",
+			"entries": [
+				"Pierde la propiedad Alcance cuando se usa con dos manos; su daño versátil es perforante."
+			]
+		},
+		{
+			"name": "Kanabō",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 20000,
+			"weight": 45,
+			"dmg1": "1d12",
+			"dmgType": "B",
+			"property": [
+				"H",
+				"2H",
+				"S"
+			],
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Cuando haces un crítico contra una criatura con armadura o escudo, reduces en 1 su CA, eligiendo cuál. Si no llevaba armadura, queda {@condition dazed}."
+			]
+		},
+		{
+			"name": "Guante de Hilador",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Simple",
+			"rarity": "None",
+			"value": 0,
+			"weight": 1,
+			"dmg1": "1d4",
+			"dmgType": "B",
+			"property": [
+				"L",
+				"2H",
+				"S"
+			],
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Solo un Monje de la Vía del Hilador es competente con esta arma. No permite equipar armas en las manos, pero no entorpece las mecánicas de monje."
+			]
+		},
+		{
+			"name": "Trabuco",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 0,
+			"weight": 0,
+			"dmg1": "3d12",
+			"dmgType": "P",
+			"property": [
+				"A",
+				"2H",
+				"S"
+			],
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Requiere cinco balas por disparo y no tiene tambor. Su alcance es un cono de 15 pies: realiza una tirada de ataque de Fuerza contra cada criatura en el área. Con impacto, debe superar una salvación de Fuerza CD 15 o quedar {@condition prone}."
+			]
+		},
+		{
+			"name": "Naginata",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 0,
+			"weight": 0,
+			"dmg1": "1d10",
+			"dmgType": "S",
+			"property": [
+				"H",
+				"2H",
+				"R",
+				"S"
+			],
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Una vez por turno, si dañas a una criatura, puedes atacar a otra dentro del alcance de la naginata que esté a 5 pies del objetivo. Con impacto, recibe daño igual a tu Fuerza."
+			]
+		},
+		{
+			"name": "Tessen (War Fan)",
+			"source": "Himo",
+			"page": "??",
+			"type": "S",
+			"rarity": "None",
+			"value": 8000,
+			"weight": 1,
+			"ac": 1,
+			"entries": [
+				"También es un arma marcial ligera y sutil que hace {@dice 1d4} contundente y siempre cuenta como de mano torpe. Los monjes lo tratan como arma. Tienes ventaja en Sigilo y Juego de Manos para parecer desarmado. Las criaturas golpeadas con él tienen desventaja al atacarte hasta tu próximo turno."
+			]
+		},
+		{
+			"name": "Kusarigama",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 7500,
+			"weight": 6,
+			"dmg1": "1d4",
+			"dmgType": "S",
+			"property": [
+				"F",
+				"R",
+				"S"
+			],
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Son dos armas ligeras unidas por una cadena. Con un crítico, el objetivo pierde reacciones y no puede beneficiarse de escudos hasta el inicio de su próximo turno. Puedes imponerte desventaja y perder el ataque de acción adicional para forzar este efecto con un impacto."
+			]
+		},
+		{
+			"name": "Guan Dao",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 12000,
+			"weight": 9,
+			"dmg1": "1d10",
+			"dmgType": "S",
+			"property": [
+				"H",
+				"2H",
+				"S"
+			],
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Si te mueves 10 pies en línea recta antes de impactar, eliges empujar 10 pies al objetivo, forzar una salvación de Fuerza o añadir tu bonificador de competencia al daño."
+			]
+		},
+		{
+			"name": "Meteor Hammer",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 11000,
+			"weight": 10,
+			"dmg1": "1d6",
+			"dmgType": "B",
+			"property": [
+				"F",
+				"R",
+				"S"
+			],
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Son dos armas ligeras unidas por cadena. Cada impacto otorga +1 al ataque contra esa criatura hasta +5; después otorga +1 al daño hasta +5. El bono termina al quedar incapacitado, con velocidad 0 o al cambiar de objetivo."
+			]
+		},
+		{
+			"name": "Sansetsukon",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 4000,
+			"weight": 1,
+			"dmg1": "1d8",
+			"dmgType": "B",
+			"property": [
+				"F",
+				"V",
+				"S"
+			],
+			"source": "Himo",
+			"page": "??",
+			"dmg2": "1d10",
+			"entries": [
+				"Son dos armas ligeras unidas. Como acción adicional cambia entre modo bastón, extendido (Alcance 10 pies y desventaja a 5 pies) y giro (daño {@dice 1d6}/ {@dice 1d8}; las criaturas provocan ataques de oportunidad incluso tras Desengancharse o con Flyby)."
+			]
 		}
 	],
 	"itemGroup": [

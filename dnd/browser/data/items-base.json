@@ -1330,6 +1330,59 @@
 			"entries": [
 				"A yklwa (pronounced YICK-ul-wah) is a simple melee weapon that is the traditional weapon of Chultan warriors. A yklwa consists of a 3-foot wooden shaft with a steel or stone blade up to 18 inches long. Although it has the thrown weapon property, the yklwa is not well balanced for throwing."
 			]
+		},
+		{
+			"name": "Daga Larga",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Simple",
+			"rarity": "None",
+			"value": 1000,
+			"weight": 1.5,
+			"dmg1": "1d6",
+			"dmgType": "S",
+			"property": [
+				"F",
+				"T"
+			],
+			"source": "Himo",
+			"page": "??",
+			"range": "20/60"
+		},
+		{
+			"name": "Cimitarra de Doble Filo",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 7500,
+			"weight": 3,
+			"dmg1": "2d4",
+			"dmgType": "S",
+			"property": [
+				"F"
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Sai",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 4000,
+			"weight": 1,
+			"dmg1": "1d4",
+			"dmgType": "P",
+			"property": [
+				"F",
+				"L",
+				"T"
+			],
+			"source": "Himo",
+			"page": "??",
+			"range": "20/60"
 		}
 	],
 	"itemProperty": [

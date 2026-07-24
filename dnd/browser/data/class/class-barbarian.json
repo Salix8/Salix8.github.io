@@ -1797,6 +1797,24 @@
 							}
 						]
 					]
+				},
+				{
+					"name": "Camino Filosofal", "shortName": "Filosofal", "source": "Himo", "page": "??",
+					"subclassFeatures": [
+						[{"name": "Camino Filosofal", "source": "Himo", "page": "??", "entries": ["Una vez pereciste y un alquimista te ofreció una segunda oportunidad: tu corazón es ahora una piedra filosofal y eres poco más que un gólem.", {"name": "Construcción Filosofal", "source": "Himo", "page": "??", "entries": ["Adquieres el tipo constructo. No necesitas comer ni respirar, pero puedes ser curado como un humanoide normal. Eres inmune al veneno y a la condición envenenado."]}, {"name": "Regeneración Filosofal", "source": "Himo", "page": "??", "entries": ["Al entrar en furia te envuelve el poder de la Piedra Filosofal. Mientras dure, eres vulnerable a las curaciones: cuando fueras a recuperar puntos de golpe de cualquier fuente, recuperas el doble. Con un ritual de dos horas, que puede coincidir con un descanso prolongado, puedes regenerar un miembro."]}]}],
+						[{"name": "Resistencia Mágica", "source": "Himo", "page": "??", "entries": ["Tienes ventaja en salvaciones contra conjuros que hagan daño y resistencia al daño de estos."]}],
+						[{"name": "Forzar Regeneración", "source": "Himo", "page": "??", "entries": ["Como acción gastas un dado de golpe, añades el doble de tu modificador de Constitución y recuperas esa cantidad de puntos de golpe. Una vez al día, al terminar un descanso corto, recuperas una cantidad de dados de golpe igual a tu bonificador de competencia."]}],
+						[{"name": "Destello Desmedido", "source": "Himo", "page": "??", "entries": ["Cada vez que restaures puntos de golpe con Forzar Regeneración, curas la mitad a una criatura elegida a 5 pies de ti."]}]
+					]
+				},
+				{
+					"name": "Camino del Berserker (Reworked)", "shortName": "Berserker (Reworked)", "source": "Himo", "page": "??",
+					"subclassFeatures": [
+						[{"name": "Camino del Berserker", "source": "Himo", "page": "??", "entries": ["El camino del berserker es una senda de furia desenfrenada y violencia.", {"name": "Frenesí", "source": "Himo", "page": "??", "entries": ["Mientras estés en furia, puedes usar una acción adicional para hacer un ataque cuerpo a cuerpo adicional o lanzar un objeto o criatura contra un enemigo. Puedes aplicar Ataque Temerario y furia a ambos. Lanzar un objeto no destinado a ser arma o una criatura cuenta como arma improvisada.", {"type": "table", "colLabels": ["Tamaño", "Daño", "Alcance", "Extra"], "colStyles": ["col-2", "col-3", "col-4", "col-3"], "rows": [["Diminuto", "{@dice 1d4} + Fue", "Mod. de Fuerza × 15 pies", "—"], ["Pequeño", "{@dice 1d6} + Fue", "Mod. de Fuerza × 10 pies", "Salvación de Fuerza o derribado"], ["Mediano", "{@dice 1d8} + Fue", "Mod. de Fuerza × 5 pies", "Desventaja si supera la mitad del alcance"], ["Grande", "{@dice 2d10} + Fue", "Mod. de Fuerza × 2 pies", "Con desventaja"], ["Enorme", "{@dice 4d10} + Fue", "Mod. de Fuerza en pies", "Con desventaja"]]}, "Una criatura lanzada siempre queda derribada tras el ataque y puede evitarlo con Atletismo contra su Atletismo o Acrobacias. Si el objeto es Mediano o mayor, el objetivo también queda derribado."]}]}],
+						[{"name": "Fuerza Irracional", "source": "Himo", "page": "??", "entries": ["Eres inmune a quedar hechizado o asustado mientras estés en furia; esos efectos se suprimen si ya los tenías al entrar. Además, cuando uses Ataque Temerario en tu turno, haces crítico con 19."]}],
+						[{"name": "Presencia Intimidante", "source": "Himo", "page": "??", "entries": ["Como acción eliges una criatura que puedas ver a menos de 30 pies. Si puede verte u oírte, debe superar una salvación de Sabiduría contra tu Constitución o temerte hasta el final de tu siguiente turno. En turnos posteriores puedes prolongarlo con tu acción; termina si acaba su turno sin línea de visión o a más de 60 pies. Con éxito, es inmune a este rasgo durante 24 horas."]}],
+						[{"name": "Represalia", "source": "Himo", "page": "??", "entries": ["Mientras estés en furia, cuando una criatura te ataque cuerpo a cuerpo, puedes usar tu reacción para hacer un ataque contra ella."]}]
+					]
 				}
 			],
 			"fluff": [

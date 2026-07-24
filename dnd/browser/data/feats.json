@@ -4289,6 +4289,551 @@
 				}
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Apertura de Chakras",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Aprendes dos maniobras de guerrero. Para usarlas, debes gastar 1 punto de ki en cada una y sustituyes el dado de superioridad por tu dado de Artes Marciales. Si no tienes dado de Artes Marciales, es un d4.",
+						"Ganas 2 puntos de ki adicionales que sólo puedes usar para esto."
+					]
+				}
+			]
+		},
+		{
+			"name": "Arcane Fighting",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Requisito: Tener al menos 1 cantrip de daño o self.",
+						"Puedes cambiar uno de los ataques de tu multiataque por un cantrip. Este debe poder castearse con la acción, targetear a una sola criatura y ser self o de daño. Si tu clase ya te permitía hacer esto, te jodes, ¿pa qué coges esta dote, retrasado?",
+						"Cuando dañes a una criatura con un cantrip en tu turno, el siguiente ataque de arma que hagas ese turno contra esa criatura añade 1d6 del daño del cantrip. Si atacaste a una criatura con un ataque de arma en tu turno, el siguiente cantrip que castees ese turno contra esa criatura tiene ventaja.",
+						"Cuando una criatura a 5 ft de ti falle con un melé attack contra ti, puedes usar tu reacción para castear un cantrip de daño que targetee solo al atacante."
+					]
+				}
+			],
+			"prerequisite": [
+				{
+					"spellcasting": true
+				}
+			]
+		},
+		{
+			"name": "Astral touched",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Mejora de Habilidad: Tu inteligencia, widom o Carisma aumenta en 1, hasta un máximo de 20.",
+						"Aprendes el conjuro Alter self y un conjuro de lv1 de tu elección de las escuelas de Conjuración o Transmutación. Puedes castear cualquiera de los dos conjuros 1 vez por descanso largo sin gastar slot, y usar slots que ya tengas para volver a castearlos. Tu habilidad de spellcasting para castearlos es la subida por esta dote."
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "inherit",
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"alter self",
+									{
+										"choose": "level=1|school=C;T"
+									}
+								]
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Canalización Poderosa",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Requisito: Elfo de Sangre",
+						"Aprende un conjuro de lv1 y otro de lv2 que tengan coste material de hasta 100 GP.",
+						"Puedes ignorar el coste material de un conjuro y gastando 5 HP por cada 25 GP que cueste, hasta un máximo de 100 GP."
+					]
+				}
+			],
+			"prerequisite": [
+				{
+					"race": [
+						{
+							"name": "blood elf"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Castle of Stone",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Requisito (al menos uno de los siguientes): Armadura Mediana, Pesada o Defensa sin Armadura (de bárbaro)",
+						"Antes, pero no después, de tu movimiento puedes invertir tu turno haciendo que el usuario se vea rodeado por una luz amarilla y sea invulnerable a los ataques. Sin embargo, también está inmovilizado mientras dura esta habilidad. Esta habilidad sólo durará dos turnos y solo se podrá utilizar una vez cada descanso largo, a nivel 11 podrás utilizarlo dos veces cada descanso largo."
+					]
+				}
+			],
+			"prerequisite": [
+				{
+					"proficiency": [
+						{
+							"armor": "medium"
+						}
+					]
+				},
+				{
+					"proficiency": [
+						{
+							"armor": "heavy"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Combatiente Arriesgado",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Requisito: Fuerza ≥15",
+						"Como acción puedes arrojar cualquier arma a melé que no tenga los rasgos de pesada o arrojadiza y con la que seas competente; y causar el daño normal de esta más tu modificador de Fuerza. Si el arma es ligera puedes optar por lanzarla con Destreza, sumando dicho modificador al daño en vez del de Fuerza. Las armas que lances tendrán un alcance igual al modificador de la característica empleada en casillas, y al doble con desventaja. E. g. con un +3 en fuerza,  podrás lanzar una espada larga a tres casillas de ti, o a seis con desventaja.",
+						"Si tu modificador de fuerza es de +5 o más, puedes lanzar también armas pesadas."
+					]
+				}
+			],
+			"prerequisite": [
+				{
+					"ability": [
+						{
+							"str": 15
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Combatiente Ciego",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Requisitos: Tener competencia en percepción y al menos un arma marcial a melé",
+						"Doblas Percepción",
+						"Adquieres 30 pies de blindsight. Si ya tenías, añadelo a lo que tuvieras."
+					]
+				}
+			],
+			"prerequisite": [
+				{
+					"proficiency": [
+						{
+							"skill": "perception"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Competente en Rituales",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Requisitos: Spellcaster o Mid-caster sin rasgo de ritual.",
+						"+1 a INT/Wis/Cha",
+						"Añade el rasgo Ritual a tu rasgo de Spellcasting"
+					]
+				}
+			],
+			"prerequisite": [
+				{
+					"spellcasting": true
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 1
+					}
+				}
+			]
+		},
+		{
+			"name": "Consagrado",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Uno de tus stats aumenta en +1",
+						"Una vez al día puedes usar una bonus para castear Bless en ti mismo. Cuando lo castees de esta forma dura 10 minutos sin concentración y aplica también a checks.",
+						"Al final de un descanso largo ganas HPT iguales a tu BC x2"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 1
+					}
+				}
+			]
+		},
+		{
+			"name": "Curandero Protector",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"+1 Carisma o Sabiduría hasta 20 (24 si superas el lv20)",
+						"Cada vez que uno de tus conjuros o rasgos cure los HP de una criatura (tú incluida) por encima de los HP máximos, ganará puntos de golpe adicionales a la suma restante. Estos durarán hasta una hora, a menos que la criatura reciba el daño suficiente como para perderlos. No son acumulables, y este no tendrá efecto si los HP de la criatura ya están al máximo."
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"cha",
+							"wis"
+						],
+						"amount": 1
+					}
+				}
+			]
+		},
+		{
+			"name": "Enroque brumoso",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Requisito: misty step",
+						"Como acción adicional, te permite gastar un uso de uno de tus misty step para cambiar de lugar con una criatura voluntaria que puedas ver en un radio de 30 pies [6 casillas]. Esta habilidad la podrás usar una vez cada descanso largo."
+					]
+				}
+			],
+			"prerequisite": [
+				{
+					"spellcasting": true
+				}
+			]
+		},
+		{
+			"name": "Héroe Eficaz",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Uno de tus rasgos principales de clase mejora para dar de sí más tiempo y con más eficacia. Adquieres cada mejora solo una vez, siempre y cuando tengas ya el rasgo a mejorar.",
+						"- Artificiero, ganas una infusión activa extra.",
+						"- Bárbaro, ganas un uso de tu Furia.",
+						"- Bardo, ganas un uso de tu Inspiración Bárdica.",
+						"- Clérigo, ganas un uso de tu Canalizar Divinidad.",
+						"- Druida, ganas un uso de tu Wild Shape.",
+						"- Guerrero, ganas un uso del Second Wind",
+						"- Hechicero, ganas 2 pt de metamagia.",
+						"- Monje, ganas 2 pt de ki.",
+						"- Paladín, una vez al día, por descanso corto, recuperas una cantidad de puntos de tu imposición de manos igual a la mitad del total redondeado hacia arriba.",
+						"- Ranger, si usas la variante de Favored Foe, ganas un uso al día.",
+						"- Wizard, ganas una recuperación arcana extra.",
+						"Si adquiriste una pool de dados, ya sea por subclase, dote o similar, añades un dado a la pool."
+					]
+				}
+			]
+		},
+		{
+			"name": "Magia Armada",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Requisitos: Lv4 y tener competencia en al menos un arma marcial",
+						"+1 a Carisma",
+						"Aprendes el conjuro Branding Smite y un conjuro a elegir entre Searing Smite, Thunderous Smite o Wrathful Smite.",
+						"Puedes lanzar cada uno de estos conjuros sin gastar un espacio de conjuro una vez entre descansos largos. También puedes lanzar estos conjuros usando espacios del nivel apropiado. Usas Carisma."
+					]
+				}
+			],
+			"prerequisite": [
+				{
+					"level": 4
+				},
+				{
+					"proficiency": [
+						{
+							"weapon": "martial"
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"cha": 1
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"branding smite",
+									"searing smite",
+									"thunderous smite",
+									"wrathful smite"
+								]
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Médico de Combate",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Requisito: Competencia en Medicina",
+						"Expertise en Medicina",
+						"Aprendes el cantrip Spare the Dying y puedes castearlo como reacción a 15 ft cuando una criatura caiga a 0 HP.",
+						"Reroleas 1 y 2 en curaciones y te quedas con la nueva tirada.",
+						"Puedes aplicar pociones de curación a otras criaturas usando la bonus como si fuera la acción. También puedes hacerte esto a ti mismo."
+					]
+				}
+			],
+			"prerequisite": [
+				{
+					"proficiency": [
+						{
+							"skill": "medicine"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Placador Imparable",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Requisito: Competencia con Escudos",
+						"+1 a Fuerza hasta 20 (24 si superas el lv20)",
+						"Puedes Cargar como acción adicional inmediatamente después de moverte al menos 2 casillas en línea recta con el escudo equipado. Al hacerlo, el objetivo debe superar una tirada de salvación de Constitución cuya CD es 8 + BC + tu Modificador de Fuerza. En una tirada fallida, el objetivo recibe 1d4+ tu modificador de Fuerza y es empujada 5 pies o cae tumbada, a tu elección. Si la criatura es al menos un tamaño mayor que tú supera directamente la tirada."
+					]
+				}
+			],
+			"prerequisite": [
+				{
+					"proficiency": [
+						{
+							"armor": "shields"
+						}
+					]
+				}
+			],
+			"ability": [
+				{
+					"str": 1
+				}
+			]
+		},
+		{
+			"name": "Spellcasting Demoníaco",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Requisito: Oni lv4",
+						"Disguise Self at will y Sleep y Darkness una vez al día.",
+						"A lv8 puedes castear Fly (self) una vez al día.",
+						"A lv12 puedes castear una vez gratis Cono de Frío.",
+						"Si tienes una habilidad de Spellcasting y espacios de conjuro, puedes lanzar estos conjuros como si fueran de tu clase y los tienes siempre preparados. Si no, usas Constitución para tu modificador."
+					]
+				}
+			],
+			"prerequisite": [
+				{
+					"race": [
+						{
+							"name": "oni"
+						}
+					]
+				},
+				{
+					"level": 4
+				}
+			]
+		},
+		{
+			"name": "Suave Defense",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Requisito: Carecer del rasgo de Spellcasting (hasta lv9 de conjuro) o Magia de Pacto. De cogerse esta dote, el personaje renuncia a multiclasear con dichas clases.",
+						"Eres competente en Persuasión, y doblas la competencia si ya lo eras.",
+						"Cuando no lleves armadura, tu CA se calcula con 10+Dex+Carisma"
+					]
+				}
+			],
+			"prerequisite": [
+				{
+					"spellcasting": false
+				}
+			]
+		},
+		{
+			"name": "Trampero",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"No recibes daño residual al fallar desarmando una trampa y puedes liberar a una criatura atrapada en una trampa como acción. Si huyes, esta no puede hacerte ataques de oportunidad.",
+						"Haces el doble de cebo y de flechas durante descansos cortos.",
+						"Eres competente en las Herramientas de Cazador. Ahora también podrás fabricar una red entera si tienes los materiales necesarios. Además, como acción puedes poner un cepo en el suelo en una superficie a 5 ft de ti. El cepo no está oculto y se dispara cuando una criatura pasa por dicha casilla.",
+						"La CD para tus trampas es 8+BC+Tu Modificador de Wisdom/Inteligencia/Destreza (eliges al coger esta dote)."
+					]
+				}
+			]
+		},
+		{
+			"name": "Velocidad Versátil",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Requisitos: Tener al menos dos competencias de movilidad y que al menos una de ellas sea diferente a las demás.",
+						"+1 a dex",
+						"Tu movilidad o movilidades más bajas igualan a la más alta. (Ej. Si tienes velocidad de trepar 10 y de correr 30, pasará a ser 30 y 30",
+						"Ganas una movilidad a elegir entre Nadar o Trepar."
+					]
+				}
+			],
+			"ability": [
+				{
+					"dex": 1
+				}
+			]
+		},
+		{
+			"name": "War touched",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Mejora de Habilidad: Tu inteligencia, widom o Carisma aumenta en 1, hasta un máximo de 20.",
+						"Aprendes el conjuro Spiritual Weapon y un conjuro de lv1 de tu elección de las escuelas de Abjuración o Evocación. Puedes castear cualquiera de los dos conjuros 1 vez por descanso largo sin gastar slot, y usar slots que ya tengas para volver a castearlos. Tu habilidad de spellcasting para castearlos es la subida por esta dote."
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "inherit",
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"spiritual weapon",
+									{
+										"choose": "level=1|school=A;V"
+									}
+								]
+							}
+						}
+					}
+				}
+			]
 		}
 	]
 }

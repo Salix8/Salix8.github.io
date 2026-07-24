@@ -2037,6 +2037,665 @@
 							}
 						]
 					]
+				},
+				{
+					"name": "Círculo del Bosque",
+					"shortName": "Bosque",
+					"source": "Himo",
+					"page": "??",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Círculo del Bosque",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Los druidas del bosque son aquellos más en comunión con la vegetación que con los animales o los elementos. Sus enclaves a menudo se dedican a preservar la vegetación, prevenir incendios y reforestar zonas destruidas.",
+									{
+										"name": "Forma Vegetal",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Cuando uses tu Wild Shape, puedes transformarte en plantas con las mismas limitaciones que el Wild Shape del Druida de la Luna."
+										]
+									},
+									{
+										"name": "Conjuros del Bosque",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Tienes los siguientes conjuros siempre preparados y no cuentan para el máximo de conjuros que puedes conocer.",
+											{
+												"type": "table",
+												"colLabels": [
+													"Nivel de druida",
+													"Conjuros"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"3rd",
+														"{@spell entangle}, {@spell ensnaring strike}"
+													],
+													[
+														"5th",
+														"Emboscada, {@spell spike growth}"
+													],
+													[
+														"7th",
+														"{@spell plant growth}, Florecer"
+													],
+													[
+														"9th",
+														"Cambiar Cauce, {@spell grasping vine}"
+													],
+													[
+														"11th",
+														"Ira del Árbol, Espíritu del Sauce"
+													]
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Habla Vegetal",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Puedes lanzar {@spell speak with plants} un número de veces al día igual a tu modificador de Sabiduría."
+								]
+							}
+						],
+						[
+							{
+								"name": "Aliados del Bosque",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Como acción, levantas un árbol que sigue tus comandos. Usa la ficha del {@creature awakened tree}. Puedes hacer esta acción un número de veces igual a tu bonificador de competencia. Pasada una hora, el árbol vuelve a enraizarse en la tierra donde esté y vuelve a la normalidad."
+								]
+							}
+						],
+						[
+							{
+								"name": "Guardián del Bosque",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Puedes gastar dos usos de tu Wild Shape para transformarte en un {@creature treant}. Mientras estés en esta forma puedes hablar, pero no lanzar conjuros."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Círculo Elemental",
+					"shortName": "Elemental",
+					"source": "Himo",
+					"page": "??",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Círculo Elemental",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Los druidas elementales se centran en el estudio y aprendizaje de los cuatro elementos. Estos druidas son capaces de proteger sus enclaves con ataques devastadores, pero a menudo destruyen también aquello que pretendían proteger.",
+									{
+										"name": "Refuerzos Elementales",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Puedes usar un uso de tu Wild Shape para darte resistencia al daño por fuego, frío, contundente, veneno o ácido. Invocas un número de mephits igual a tu bonificador de competencia. Todos son del mismo tipo y se corresponden a tu resistencia: vapor o magma para fuego; hielo para frío; barro o polvo para contundente; humo para veneno; y slime para ácido. Pasados 10 minutos, la resistencia acaba y los mephits que sigan con vida vuelven al Plano Elemental."
+										]
+									},
+									{
+										"name": "Adepto de los Elementos",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Aprendes Primordial y puedes intercambiar el daño de tus conjuros de fuego, frío, ácido, rayo o veneno."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Mejora de Refuerzos Elementales",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Ahora puedes darte dos resistencias y llamar a dos tipos de mephit. Sumas tu modificador de Sabiduría al daño de ese elemento de los conjuros de nivel 1 o superior que lances."
+								]
+							}
+						],
+						[
+							{
+								"name": "Control Total",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Aprendes los conjuros {@spell control water}, {@spell control winds}, {@spell control flames} y {@spell stone shape}, y los tienes siempre preparados. Cuando lances cualquiera de estos conjuros, puedes pasar de uno a otro sin gastar un espacio de conjuro extra ni perder la concentración.",
+									"Dos de estos conjuros son de nivel 4 y dos son de nivel 5. Para pasar de un conjuro de nivel 4 a uno de nivel 5 debes haberlo lanzado con un espacio de nivel 5."
+								]
+							}
+						],
+						[
+							{
+								"name": "Mejora de Refuerzos Elementales",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Ahora recibes todas las resistencias y puedes elegir entre todos los mephits para invocarlos. Como acción adicional, puedes invocar un mephit más cada turno. Las CD de los mephits pasan a ser las tuyas."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Círculo de Esporas",
+					"shortName": "Esporas (Himo)",
+					"source": "Himo",
+					"page": "??",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Círculo de Esporas",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Mantienes la tabla de conjuros y {@spell chill touch}, así como Halo de Esporas.",
+									{
+										"name": "Entidad Simbionte",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Como acción adicional, gastas un uso de Wild Shape para alzar tus esporas y ganar 4 puntos de golpe temporales por nivel de druida. Ganas los siguientes beneficios:",
+											{
+												"type": "list",
+												"items": [
+													"Añades un dado extra al daño del Halo de Esporas.",
+													"Tus ataques cuerpo a cuerpo hacen {@dice 1d6} de daño necrótico adicional.",
+													"Estos beneficios duran 1 minuto, a menos que uses otro Wild Shape."
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Infestación Fúngica",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Tus esporas ganan la habilidad de infestar un cadáver de tamaño Mediano o Pequeño situado a 10 pies de ti que no sea constructo, muerto viviente, oblex, elemental, planta, ni una aberración que no deje cadáver, e infectarlo. Puedes usar este rasgo de dos formas:",
+									{
+										"type": "list",
+										"items": [
+											"Puedes infestar el cadáver y ganar control sobre él. Solo puedes tener uno cada vez, pero puedes hacerlo a voluntad. Usa la ficha de {@creature zombie}, pero con 1 punto de golpe y sin el rasgo Fortaleza de los No Muertos. No puede usar acciones, pero llevará cualquier objeto que se le preste o equipe. Si se le da un arma, la blandirá y la transportará, pero no la usará. Pasada una hora, el exceso de esporas y hongos hará colapsar el cuerpo, impidiendo su movilidad. El efecto acaba.",
+											"Como reacción, infestas el cadáver de un humanoide o bestia que muera a 10 pies de ti y puedas ver. Tus esporas reaccionan con la adrenalina del cadáver, convirtiéndolo en un aliado bastante útil. Usa la ficha de {@creature zombie}, pero tiene telepatía contigo. Actúa después de ti, pero solo recibe órdenes de su objetivo. Si no puede atacar a nadie, se atacará a sí mismo hasta consumirse. Puedes usar esta reacción un número de veces igual a tu bonificador de competencia."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Esparcir Esporas",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Ganas la habilidad de sembrar un área con esporas letales. Como acción adicional mientras tu Entidad Simbionte esté activa, puedes enviar las esporas a 30 pies de ti, llenando un cubo de 10 pies. Estas se disipan como acción adicional, si usas este rasgo otra vez o si se acaba tu Entidad Simbionte.",
+									"Toda criatura que entre o empiece el turno allí debe superar una salvación de Constitución o recibir el daño de tu Halo de Esporas. Solo recibe el daño una vez por turno. Mientras esté activo, no puedes usar la reacción del Halo de Esporas."
+								]
+							}
+						],
+						[
+							{
+								"name": "Cuerpo Fúngico",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"A nivel 14, las esporas fúngicas de tu cuerpo te alteran: no puedes quedar cegado, ensordecido, asustado ni envenenado, y cualquier golpe crítico contra ti cuenta como un golpe normal, salvo que estés incapacitado."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Círculo de las Espinas",
+					"shortName": "Espinas",
+					"source": "Himo",
+					"page": "??",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Círculo de las Espinas",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Los druidas de las espinas son aquellos que se crían entre sangre y muerte y encuentran la belleza en las plantas que se nutren directamente de la muerte. A menudo vampiros y brujos de Gulthias adoptan esta filosofía de vida.",
+									{
+										"name": "Maldición Salvaje",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Tienes siempre preparado el conjuro {@spell hex} y no cuenta para el máximo de conjuros que puedes preparar. Cada vez que elijas un objetivo para {@spell hex}, puedes añadir uno de los siguientes efectos:",
+											{
+												"type": "list",
+												"items": [
+													"Cualquier planta o bestia que invoques le ataca con ventaja y añade {@dice 1d4} de daño necrótico al daño.",
+													"Mientras la criatura se esté concentrando en un conjuro, recibe {@dice 1d6} de daño psíquico al final de cada uno de sus turnos.",
+													"Si la criatura objetivo era una planta de VD igual o inferior al nivel de conjuro, la controlas como si estuviera bajo los efectos de {@spell dominate monster}, pero recibe {@dice 1d6} de daño psíquico al final de cada turno."
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Espíritus Guardianes",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Tienes siempre preparado el conjuro {@spell animate dead} y no cuenta para el máximo de conjuros que puedes preparar. Cuando lo lances, puedes levantar {@creature vine blight|MM|Vine Blights} en vez de esqueletos o zombis.",
+									"Cuando tú o un aliado a 30 pies vaya a recibir daño, puedes usar tu reacción para destruir uno de los blights y reducir el daño en una cantidad igual a los puntos de golpe actuales del blight."
+								]
+							}
+						],
+						[
+							{
+								"name": "Aliados del Bosque",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Tienes siempre preparado el conjuro {@spell scrying} y no cuenta para el máximo de conjuros que puedes preparar. Además, tienes resistencia a todo el daño provocado por plantas y bestias."
+								]
+							}
+						],
+						[
+							{
+								"name": "Aullido de los Muertos",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Una vez al día, como acción, puedes emitir un aullido terrorífico que podrá ser oído a una milla a la redonda. Toda criatura de tu elección a 120 pies debe superar una salvación de Sabiduría —las plantas y los muertos vivientes tienen desventaja— o recibir {@dice 10d6} de daño psíquico; con una salvación exitosa recibe la mitad. Toda criatura Grande o más pequeña que falle la salvación queda asustada de ti y forzada a huir mientras pueda verte y siga asustada. Una criatura asustada de esta forma puede hacer la salvación cuando esté a 60 pies de ti. Si la criatura era inmune al daño psíquico, es inmune a todo este rasgo."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Círculo de lo Salvaje",
+					"shortName": "Salvaje",
+					"source": "Himo",
+					"page": "??",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Círculo de lo Salvaje",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Los druidas salvajes, también conocidos como Yuir entre los elfos, son aquellos que reniegan de toda convención y vagan en libertad por bosques y prados. Su cercanía a la naturaleza les permite transformarse en criaturas mucho más grotescas y salvajes, siendo, a menudo, el depredador ápice de su territorio. Estos druidas, por lo general, no se reúnen en círculos, sino en manadas, y forman una jerarquía basada en la fuerza y el espíritu.",
+									{
+										"name": "Instinto del Cazador",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Aprendes Daelkyr y añades tu modificador de Sabiduría a la iniciativa."
+										]
+									},
+									{
+										"name": "Forma del Depredador",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Al unirte a este círculo descubres ciertas formas salvajes a las que otros druidas no tienen acceso. Añade las siguientes modificaciones a tu tabla de formas salvajes:",
+											{
+												"type": "table",
+												"colLabels": [
+													"Nivel de druida",
+													"Formas"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"2",
+														"Rust Monster, Worg y Krasis Categoría 1"
+													],
+													[
+														"4",
+														"Hippocamp, Nyx-Fleece Ram y Homarid"
+													],
+													[
+														"6",
+														"Kruthik Adulto, Ankheg y Mímico"
+													],
+													[
+														"8",
+														"Griffon, Peryton y Ettercap"
+													],
+													[
+														"9",
+														"Displacer Beast, Basilisk y Owlbear"
+													],
+													[
+														"12",
+														"Kamadan, Strigoi y Doppelganger"
+													],
+													[
+														"15",
+														"Bulette, Sea Lion y Catoblepas"
+													],
+													[
+														"18",
+														"Chimera, Krasis Categoría 2 y Thunder Boar"
+													]
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Depredador Eficaz",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Puedes lanzar {@spell hunter's mark} a nivel 1 una vez por cada uso de Wild Shape y no necesitas concentrarte en este conjuro específicamente."
+								]
+							}
+						],
+						[
+							{
+								"name": "Golpe Mortal",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Mientras estés en tu Forma de Depredador puedes gastar un espacio de conjuro de hasta nivel 3 para añadir {@dice 1d8} × el nivel del conjuro de daño cortante mágico. El objetivo debe superar una salvación de Constitución o recibir hemorragia durante un minuto, pudiendo repetir la salvación al final de cada turno."
+								]
+							}
+						],
+						[
+							{
+								"name": "Instintos Salvajes",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Si resultas sorprendido al inicio de un combate y no estás incapacitado, puedes entrar en Wild Shape y actuar normalmente en tu turno."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Círculo de Santería",
+					"shortName": "Santería",
+					"source": "Himo",
+					"page": "??",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Círculo de Santería",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Fundado por sagas primordiales, el Círculo de la Santería juega con vidas y emociones para su beneficio, tejiendo redes de favores y gobernando en la sombra.",
+									{
+										"name": "Muñeco Vudú",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Puedes tejer un muñeco de vudú e infundirlo en magia con un ritual de una hora que puede coincidir con un descanso corto o prolongado. Es un foco arcano de druida. Como acción puedes afectar a una criatura que veas: debe superar una salvación de Sabiduría contra tu CD de conjuros o tirar en la tabla de Locura Vudú.",
+											{
+												"type": "table",
+												"caption": "Locura Vudú",
+												"colLabels": [
+													"{@dice 1d12}",
+													"Efecto"
+												],
+												"colStyles": [
+													"col-1 text-center",
+													"col-11"
+												],
+												"rows": [
+													[
+														"1",
+														"Depresión profunda: durante una hora falla las pruebas de Carisma y tiene desventaja en salvaciones de Carisma."
+													],
+													[
+														"2",
+														"Queda afectada por {@spell Tasha's hideous laughter} durante 10 minutos."
+													],
+													[
+														"3",
+														"Rabia incontrolable durante un minuto: debe atacar una criatura aleatoria a 5 pies o usar el movimiento para acercarse."
+													],
+													[
+														"4",
+														"Se enamora de una criatura elegida por ti y queda hechizada por ella durante un minuto."
+													],
+													[
+														"5",
+														"Hambre voraz: durante un minuto dedica sus turnos a comer comida visible o equipada; si no hay, hace otra salvación de Sabiduría o intenta comerse a sí misma."
+													],
+													[
+														"6",
+														"Queda dormida como por {@spell sleep} durante 10 minutos."
+													],
+													[
+														"7",
+														"Miedo irracional a algo de su visión elegido por ti; durante un minuto debe huir, cubrirse o esquivar."
+													],
+													[
+														"8",
+														"Queda cegada o ensordecida durante un minuto."
+													],
+													[
+														"9",
+														"Puedes leer su mente como con {@spell detect thoughts}."
+													],
+													[
+														"10",
+														"Gana un nivel de agotamiento durante un minuto; varios efectos desaparecen a la vez al perder el último."
+													],
+													[
+														"11",
+														"Queda paralizada durante un minuto."
+													],
+													[
+														"12",
+														"Recibe un efecto de locura a largo plazo durante 10 minutos y no puede repetir la salvación al final de cada turno."
+													]
+												]
+											},
+											"Puede repetir la salvación al final de cada turno, salvo que se especifique lo contrario. Puedes usar este rasgo un número de veces igual a tu bonificador de competencia por descanso prolongado. No puede recibir un efecto nuevo mientras otro siga activo; al reutilizarlo, se pierde el más antiguo."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Alma Sintética",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Puedes lanzar {@spell animate dead} como ritual, sustituyendo los componentes materiales por un cadáver y tu muñeco de vudú, que consume el hechizo."
+								]
+							}
+						],
+						[
+							{
+								"name": "Hechicería Vudú",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Como acción vinculas una criatura que veas a tu muñeco activo. Desde tu próximo turno tiras dos dados en Locura Vudú y eliges el efecto. Alternativamente, gastas un uso de Wild Shape para afectarla permanentemente con {@spell contagion} o una maldición fey; pueden eliminarse con {@spell greater restoration}, {@spell remove curse} o deseo, y puede repetir la salvación adecuada al final de cada descanso prolongado. No puede volver a sufrir el mismo efecto.",
+									"El portador puede destruir el muñeco: la criatura vinculada hace una salvación de Sabiduría y recibe {@dice 6d8} necrótico con un fallo, o la mitad con éxito. El daño no puede curarse hasta un descanso prolongado; si la reduce a 0 puntos de golpe, muere inmediatamente y pierde Contagio o Maldición Fey."
+								]
+							}
+						],
+						[
+							{
+								"name": "Atrapa-almas",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Puedes lanzar {@spell finger of death} una vez al día sin gastar espacio de conjuro."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Círculo de la Tierra (Corrección)",
+					"shortName": "Tierra (Corrección)",
+					"source": "Himo",
+					"page": "??",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Círculo de la Tierra (Corrección)",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Recuperación Arcana se mantiene y el truco adicional puede ser de druida o mago. Cada terreno añade conjuros y formas exclusivas de Wild Shape.",
+									{
+										"type": "table",
+										"caption": "Conjuros y formas por terreno",
+										"colLabels": [
+											"Terreno",
+											"Nivel 3",
+											"Nivel 5",
+											"Nivel 7",
+											"Nivel 9"
+										],
+										"colStyles": [
+											"col-2",
+											"col-2",
+											"col-2",
+											"col-2",
+											"col-2"
+										],
+										"rows": [
+											[
+												"Ártico",
+												"{@spell Rime's Binding Ice}; {@spell Blur}; {@creature Black Bear|MM}",
+												"{@spell Hypnotic Pattern}; {@spell Slow}; Snow Leopard",
+												"{@spell Greater Invisibility}; {@spell Compulsion}; {@creature Polar Bear|MM} y Sabertooth",
+												"{@spell Steel Wind Strike}; {@spell Hold Monster}; {@creature Killer Whale|MM} y Spotted Lion"
+											],
+											[
+												"Bosque",
+												"{@spell Silence}; {@spell Spider Climb}; {@creature Ape|MM}",
+												"{@spell Clairvoyance}; {@spell Conjure Barrage}; {@creature Brown Bear|MM}",
+												"{@spell Aura of Purity}; {@spell Find Greater Steed}; {@creature Giant Boar|MM}",
+												"{@spell Conjure Volley}; {@spell Seeming}; Juvenile Forest Prowler"
+											],
+											[
+												"Ciénaga",
+												"{@spell Melf's Arrow}; {@spell Web}; {@creature Crocodile|MM}",
+												"{@spell Stinking Cloud}; {@spell Hunger of Hadar}; {@creature Giant Toad|MM}",
+												"{@spell Vitriolic Sphere}; {@spell Evard's Black Tentacles}; River Serpent",
+												"{@spell Nudo de Nyx}; {@spell Enervation}; Amphisbaena"
+											],
+											[
+												"Costa",
+												"{@spell Maximilian's Earthen Grasp}; {@spell Misty Step}; {@creature Giant Crab|MM}",
+												"{@spell Wall of Sand}; {@spell Catnap}; Snapping Turtle",
+												"{@spell Storm Sphere}; {@spell Evard's Black Tentacles}; Giant Crayfish",
+												"{@spell Creation}; {@spell Dawn}; Giant Snapping Turtle y {@creature Killer Whale|MM}"
+											],
+											[
+												"Desierto",
+												"{@spell Phantasmal Force}; {@spell Mirror Image}; Camel (FM!)",
+												"{@spell Gaseous Form}; {@spell Wall of Sand}; Dogmole",
+												"{@spell Sickening Radiance}; {@spell Compulsion}; Relic Sloth",
+												"{@spell Flame Strike}; {@spell Dream}; {@creature Giant Scorpion|MM}"
+											],
+											[
+												"Montaña",
+												"{@spell Spider Climb}; {@spell Snilloc's Snowball Swarm}; {@creature Giant Goat|MM}",
+												"{@spell Thunder Step}; {@spell Peter's Lanza}; Mountain Lion",
+												"{@spell Dimension Door}; {@spell Storm Sphere}; Quetzalcoatlus",
+												"{@spell Passwall}; {@spell Animate Objects}; Dire Bird of Prey sin flyby y 60 ft de vuelo"
+											],
+											[
+												"Pradera",
+												"{@spell Find Steed}; {@spell Invisibility}; {@creature Warhorse|MM}",
+												"{@spell Fly}; {@spell Haste}; {@creature Dire Wolf|MM}",
+												"{@spell Find Greater Steed}; {@spell Greater Invisibility}; {@creature Giant Elk|MM}",
+												"{@spell Dream}; {@spell Far Step}; Dire Bird of Prey sin flyby y 60 ft de vuelo"
+											],
+											[
+												"Underdark",
+												"{@spell Spider Climb}; {@spell Web}; Fiendish Giant Spider",
+												"{@spell Gaseous Form}; {@spell Stinking Cloud}; {@creature Giant Spider|MM} y Dragón de Komodo",
+												"{@spell Greater Invisibility}; {@spell Shadow of Moil}; Young Bulette",
+												"{@spell Mislead}; {@spell Passwall}; Night Scorpion"
+											],
+											[
+												"Subacuático",
+												"{@spell Shatter}; {@spell Invisibility}; {@creature Reef Shark|MM}",
+												"{@spell Hypnotic Pattern}; {@spell Thunder Step}; {@creature Giant Octopus|MM} y Snapping Turtle",
+												"{@spell Evard's Black Tentacles}; {@spell Storm Sphere}; {@creature Plesiosaurus|MM}",
+												"{@spell Dominate Person}; {@spell Nudo de Nyx}; Giant Lightning Eel"
+											]
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Terreno Predilecto",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Eres inmune a terreno difícil, atraviesas plantas sin daño y tienes ventaja contra plantas mágicas; obtienes Terreno Predilecto de explorador solo en tu terreno."
+								]
+							}
+						],
+						[
+							{
+								"name": "Guarda Natural",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Inmune a hechizo y miedo de bestias, plantas, monstruosidades, fey y elementales, además de veneno y enfermedades."
+								]
+							}
+						],
+						[
+							{
+								"name": "Santuario de la Naturaleza",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Bestias y plantas de VD hasta la mitad de tu nivel quedan automáticamente hechizadas y te ven como aliado. Contra VD superior tienes ventaja para hechizarlas por otros medios."
+								]
+							}
+						]
+					]
 				}
 			],
 			"fluff": [

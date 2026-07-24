@@ -3047,7 +3047,13 @@
 							}
 						]
 					]
-				}
+				},
+				{"name":"Linaje Vampírico","shortName":"Vampírico","source":"Himo","page":"??","subclassFeatures":[
+					[{"name":"Linaje Vampírico","source":"Himo","page":"??","entries":["Tu maldición vampírica ha corrompido tu vínculo con la Onda, haciéndote un depredador nocturno sin necesidad de ser un muerto viviente.",{"name":"Trepar como Araña","source":"Himo","page":"??","entries":["Tienes velocidad de escalada igual a tu velocidad andando, puedes adherirte a paredes y techos y moverte por ellos sin usar las manos."]},{"name":"Conjuros de Linaje","source":"Himo","page":"??","entries":["Estos conjuros cuentan como de hechicero y no para tu límite de conjuros conocidos. Al ganar un nivel de hechicero, puedes cambiar uno por un conjuro de Encantamiento o Nigromancia de las listas de hechicero, mago o brujo.",{"type":"table","colLabels":["Nivel","Conjuros"],"colStyles":["col-2 text-center","col-10"],"rows":[["1st","{@spell charm person}, {@spell sleep}"],["3rd","{@spell hold person}, {@spell wither and bloom}"],["5th","{@spell vampiric touch}, {@spell speak with dead}"],["7th","{@spell charm monster}, {@spell shadow of moil}"],["9th","{@spell geas}, {@spell enervation}"]]}]}]}],
+					[{"name":"Cambio de Forma","source":"Himo","page":"??","entries":["Como acción adicional puedes transformarte en un {@creature bat} durante 10 minutos un número de veces igual a tu bonificador de competencia por descanso prolongado; después puedes gastar 1 punto de hechicería para repetirlo. Alternativamente, puedes gastar 2 usos o 2 puntos de hechicería para lanzar {@spell gaseous form} durante 10 minutos."]}],
+					[{"name":"Mordisco de Vampiro","source":"Himo","page":"??","entries":["Como acción haces un ataque de conjuro cuerpo a cuerpo. Si el objetivo no está agarrado, apresado, incapacitado o paralizado, atacas con desventaja. Al impactar puedes gastar de 1 a 5 puntos de hechicería: recibe {@dice 1d6} necrótico por punto, se reduce su máximo de puntos de golpe y recuperas la mitad. Tras gastar 5 puntos con este rasgo, lo recuperas tras un descanso prolongado."]}],
+					[{"name":"Regeneración Vampírica","source":"Himo","page":"??","entries":["Como acción puedes gastar puntos de hechicería para recuperar 5 puntos de golpe por punto. Si gastas al menos 3, también regeneras miembros perdidos y heridas abiertas."]}]
+				]}
 			],
 			"fluff": [
 				{
