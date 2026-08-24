@@ -1,11 +1,40 @@
 "use strict";
 
+const DEFAULT_BUILDER_PAGE_CONFIG = {
+	storageState: "brewbuilderState",
+	storageSettings: "brewbuilderSettings",
+	activeBuilder: "creatureBuilder",
+	modes: [
+		{key: "creatureBuilder", label: "Creature"},
+		{key: "spellBuilder", label: "Spell"}
+	]
+};
+
+const BUILDER_PAGE_CONFIG = (() => {
+	const configured = window.BUILDER_PAGE_CONFIG || {};
+	const modes = (configured.modes || [])
+		.filter(it => it && it.key && it.label)
+		.map(it => ({key: it.key, label: it.label}));
+	const resolvedModes = modes.length ? modes : DEFAULT_BUILDER_PAGE_CONFIG.modes;
+	const activeBuilder = resolvedModes.some(it => it.key === configured.activeBuilder)
+		? configured.activeBuilder
+		: DEFAULT_BUILDER_PAGE_CONFIG.activeBuilder;
+
+	return {
+		storageState: configured.storageState || DEFAULT_BUILDER_PAGE_CONFIG.storageState,
+		storageSettings: configured.storageSettings || DEFAULT_BUILDER_PAGE_CONFIG.storageSettings,
+		activeBuilder: resolvedModes.some(it => it.key === activeBuilder) ? activeBuilder : resolvedModes[0].key,
+		modes: resolvedModes
+	};
+})();
+
 window.onload = () => {
 	doPageInit().catch(e => { throw e })
 };
 
 class PageUi {
 	constructor () {
+		this._config = BUILDER_PAGE_CONFIG;
 		this._builders = {};
 
 		this._$menuInner = null;
@@ -27,8 +56,14 @@ class PageUi {
 		this._isLastRenderInputFail = false;
 	}
 
-	set creatureBuilder (creatureBuilder) { this._builders.creatureBuilder = creatureBuilder; }
-	set spellBuilder (spellBuilder) { this._builders.spellBuilder = spellBuilder; }
+	set creatureBuilder (creatureBuilder) { this.registerBuilder("creatureBuilder", creatureBuilder); }
+	set spellBuilder (spellBuilder) { this.registerBuilder("spellBuilder", spellBuilder); }
+	set characterBuilder (characterBuilder) { this.registerBuilder("characterBuilder", characterBuilder); }
+
+	registerBuilder (key, builder) {
+		this._builders[key] = builder;
+		return builder;
+	}
 
 	get $wrpInput () { return this._$wrpInput; }
 
@@ -57,25 +92,25 @@ class PageUi {
 				builder.isStateDirty = false;
 			}
 		});
-		StorageUtil.pSetForPage(PageUi.STORAGE_STATE, this.__saveableStates);
+		StorageUtil.pSetForPage(this._config.storageState, this.__saveableStates);
 	}
 
-	_doSaveSettings () { StorageUtil.pSetForPage(PageUi.STORAGE_SETTINGS, this._settings); }
+	_doSaveSettings () { StorageUtil.pSetForPage(this._config.storageSettings, this._settings); }
 
 	async init () {
-		this._settings = await StorageUtil.pGetForPage(PageUi.STORAGE_SETTINGS) || {};
+		this._settings = await StorageUtil.pGetForPage(this._config.storageSettings) || {};
 
 		this._$wrpLoad = $(`#page_loading`);
 		this._$wrpSource = $(`#page_source`);
 		this._$wrpMain = $(`#page_main`);
 
-		this._settings.activeBuilder = this._settings.activeBuilder || "creatureBuilder";
+		this._settings.activeBuilder = this._getValidBuilderKey(this._settings.activeBuilder);
 
 		this._initLhs();
 		this._initRhs();
 		this._initSideMenu();
 
-		const storedState = await StorageUtil.pGetForPage(PageUi.STORAGE_STATE) || {};
+		const storedState = await StorageUtil.pGetForPage(this._config.storageState) || {};
 		if (storedState.builders) {
 			Object.entries(storedState.builders).forEach(([name, state]) => {
 				if (this._builders[name]) this._builders[name].setStateFromLoaded(state);
@@ -146,25 +181,43 @@ class PageUi {
 		this._$wrpOutput = $(`#content_output`);
 	}
 
+	_getValidBuilderKey (key) {
+		if (key && this._builders[key] && this._config.modes.some(it => it.key === key)) return key;
+		if (this._builders[this._config.activeBuilder]) return this._config.activeBuilder;
+
+		const firstConfiguredBuilder = this._config.modes.find(it => this._builders[it.key]);
+		if (firstConfiguredBuilder) return firstConfiguredBuilder.key;
+
+		const firstBuilderKey = Object.keys(this._builders)[0];
+		if (firstBuilderKey) return firstBuilderKey;
+
+		throw new Error(`No builders were registered for this page.`);
+	}
+
+	_getActiveBuilder () {
+		return this._builders[this._getValidBuilderKey(this._settings.activeBuilder)];
+	}
+
 	_initSideMenu () {
 		const $mnu = $(`.sidemenu`);
 
 		const prevMode = this._settings.activeBuilder;
+		const modes = this._config.modes.filter(it => this._builders[it.key]);
+		let $selMode = null;
 
-		const $wrpMode = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label mr-2">Mode</div></div>`).appendTo($mnu);
-		const $selMode = $(`
-			<select class="form-control input-xs">
-				<option value="creatureBuilder">Creature</option>
-				<option value="spellBuilder">Spell</option>
-			</select>
-		`).appendTo($wrpMode).change(() => {
-			this._settings.activeBuilder = $selMode.val();
-			const builder = this._builders[this._settings.activeBuilder];
-			builder.renderInput();
-			builder.renderOutput();
-			builder.renderSideMenu();
-			this._saveSettingsDebounced();
-		});
+		if (modes.length > 1) {
+			const $wrpMode = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label mr-2">Mode</div></div>`).appendTo($mnu);
+			$selMode = $(`<select class="form-control input-xs">${modes.map(it => `<option value="${it.key.escapeQuotes()}">${it.label.escapeQuotes()}</option>`)}</select>`)
+				.appendTo($wrpMode)
+				.change(() => {
+					this._settings.activeBuilder = this._getValidBuilderKey($selMode.val());
+					const builder = this._getActiveBuilder();
+					builder.renderInput();
+					builder.renderOutput();
+					builder.renderSideMenu();
+					this._saveSettingsDebounced();
+				});
+		}
 
 		$mnu.append(PageUi.__$getSideMenuDivider(true));
 
@@ -203,7 +256,8 @@ class PageUi {
 		$mnu.append(PageUi.__$getSideMenuDivider(true));
 		this._$menuInner = $(`<div/>`).appendTo($mnu);
 
-		if (prevMode) $selMode.val(prevMode).change();
+		if ($selMode && prevMode) $selMode.val(this._settings.activeBuilder).change();
+		else this._getActiveBuilder().renderSideMenu();
 	}
 
 	set _sideMenuEnabled (val) { $(`.sidemenu__toggle`).toggle(!!val); }
@@ -213,7 +267,7 @@ class PageUi {
 	}
 
 	_doRenderActiveBuilder () {
-		const activeBuilder = this._builders[this._settings.activeBuilder];
+		const activeBuilder = this._getActiveBuilder();
 		activeBuilder.renderInput();
 		activeBuilder.renderOutput();
 	}
@@ -235,13 +289,13 @@ class PageUi {
 		this._allSources.push(source.json);
 		// TODO this should detach + re-order. Ensure correct is re-selected; ensure disabled option is first
 		this._$selSource.append(`<option value="${source.json.escapeQuotes()}">${source.full.escapeQuotes()}</option>`);
-		this._builders[this._settings.activeBuilder].doHandleSourcesAdd();
+		this._getActiveBuilder().doHandleSourcesAdd();
 	}
 
 	_doHandleUpdateSource () {
 		if (this._$selSource) this._$selSource.val(this._settings.activeSource);
 		this._saveSettingsDebounced();
-		this._builders[this._settings.activeBuilder].doHandleSourceUpdate();
+		this._getActiveBuilder().doHandleSourceUpdate();
 	}
 
 	_getJsonOutputTemplate () {

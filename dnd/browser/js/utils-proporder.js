@@ -182,7 +182,9 @@ PropOrder._MONSTER = [
 	new PropOrder._ArrayKey("languageTags", {fnSort: SortUtil.ascSortLower}),
 	new PropOrder._ArrayKey("damageTags", {fnSort: SortUtil.ascSortLower}),
 	new PropOrder._ArrayKey("spellcastingTags", {fnSort: SortUtil.ascSortLower}),
-	new PropOrder._ArrayKey("miscTags", {fnSort: SortUtil.ascSortLower})
+	new PropOrder._ArrayKey("miscTags", {fnSort: SortUtil.ascSortLower}),
+
+	"characterBuilder"
 ];
 PropOrder._MONSTER__COPY_MOD = [
 	"*",

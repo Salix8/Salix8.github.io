@@ -960,17 +960,19 @@ class SearchWidget {
 		return SearchWidget.pGetUserEntitySearch("Select Background", "entity_Backgrounds", tagBuilder);
 	}
 
-	static async pGetUserRaceSearch () {
+	static async pGetUserRaceSearch (options = {}) {
 		// FIXME convert to be more like spell/creature search instead of running custom indexes
+		const isBaseRacesOnly = !!options.isBaseRacesOnly;
+		const indexName = isBaseRacesOnly ? "entity_BaseRaces" : "entity_Races";
 		const dataSource = async () => {
 			const raceJson = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/races.json`);
-			const raceData = Renderer.race.mergeSubraces(raceJson.race);
+			const raceData = isBaseRacesOnly ? raceJson.race : Renderer.race.mergeSubraces(raceJson.race);
 			return {race: raceData};
 		};
-		await SearchWidget.pLoadCustomIndex("entity_Races", dataSource, "race", Parser.CAT_ID_RACE, UrlUtil.PG_RACES, "races");
+		await SearchWidget.pLoadCustomIndex(indexName, dataSource, "race", Parser.CAT_ID_RACE, UrlUtil.PG_RACES, "races");
 
 		const tagBuilder = (encName, encSource) => `{@race ${decodeURIComponent(encName)}${encSource !== UrlUtil.encodeForHash(SRC_PHB) ? `|${decodeURIComponent(encSource)}` : ""}}`;
-		return SearchWidget.pGetUserEntitySearch("Select Race", "entity_Races", tagBuilder);
+		return SearchWidget.pGetUserEntitySearch(isBaseRacesOnly ? "Select Base Race" : "Select Race", indexName, tagBuilder);
 	}
 
 	static async pGetUserOptionalFeatureSearch () {

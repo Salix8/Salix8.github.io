@@ -1402,8 +1402,12 @@ function Renderer () {
 
 					case "@classFeature":
 					case "@subclassFeature": {
-						const [name, className, classSource, subclassName, subclassSource, level, displayText] = text.split("|");
-						textStack[0] += displayText || name;
+						const parts = text.split("|");
+						const [name, className, classSource] = parts;
+						const displayText = tag === "@classFeature" ? parts[5] : parts[7];
+						const classHash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES]({name: className, source: classSource || SRC_PHB});
+						const fauxEntry = {type: "link", href: {type: "internal", path: UrlUtil.PG_CLASSES, hash: classHash}, text: displayText || name};
+						this._recursiveRender(fauxEntry, textStack, meta);
 						break;
 					}
 

@@ -69,6 +69,7 @@ class NavBar {
 		addLi(ulPlayers, "races.html", "Races");
 		addDivider(ulPlayers);
 		addLi(ulPlayers, "statgen.html", "Statgen");
+		addLi(ulPlayers, "characterbuilder.html", "Character Builder");
 		addDivider(ulPlayers);
 		addLi(ulPlayers, "lifegen.html", "This Is Your Life");
 		addLi(ulPlayers, "names.html", "Names");

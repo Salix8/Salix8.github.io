@@ -1,0 +1,98 @@
+{
+	"version": 1,
+	"traits": [
+		{
+			"id": "artificer-spellcasting",
+			"names": ["Spellcasting"],
+			"match": {"featureType": "class", "className": "Artificer", "classSource": "TCE"},
+			"summaryTemplate": "You know {{cantripsKnown}} cantrips and {{preparedSpells}} artificer spells (Int + (Artificer lv / 2)), and use Intelligence as your spellcasting ability."
+		},
+		{
+			"id": "bard-spellcasting",
+			"names": ["Spellcasting"],
+			"match": {"featureType": "class", "className": "Bard", "classSource": "PHB"},
+			"summaryTemplate": "You know {{cantripsKnown}} cantrips and {{spellsKnown}} bard spells, using {{ability}} as your spellcasting ability."
+		},
+		{
+			"id": "cleric-spellcasting",
+			"names": ["Spellcasting"],
+			"match": {"featureType": "class", "className": "Cleric", "classSource": "PHB"},
+			"summaryTemplate": "You know {{cantripsKnown}} cantrips and {{preparedSpells}} cleric spells (Wis + Cleric lv), and use Wisdom as your spellcasting ability."
+		},
+		{
+			"id": "druid-spellcasting",
+			"names": ["Spellcasting"],
+			"match": {"featureType": "class", "className": "Druid", "classSource": "PHB"},
+			"summaryTemplate": "You know {{cantripsKnown}} cantrips and {{preparedSpells}} druid spells (Wis + Druid lv), and use Wisdom as your spellcasting ability."
+		},
+		{
+			"id": "paladin-spellcasting",
+			"names": ["Spellcasting"],
+			"match": {"featureType": "class", "className": "Paladin", "classSource": "PHB"},
+			"summaryTemplate": "You know {{preparedSpells}} paladin spells (Cha + (Paladin lv / 2)), and use Charisma as your spellcasting ability."
+		},
+		{
+			"id": "ranger-spellcasting",
+			"names": ["Spellcasting"],
+			"match": {"featureType": "class", "className": "Ranger", "classSource": "PHB"},
+			"summaryTemplate": "You know {{spellsKnown}} ranger spells and use {{ability}} as your spellcasting ability."
+		},
+		{
+			"id": "revised-ranger-spellcasting",
+			"names": ["Spellcasting"],
+			"match": {"featureType": "class", "className": "Ranger (Revised)", "classSource": "UATheRangerRevised"},
+			"summaryTemplate": "You know {{spellsKnown}} revised ranger spells and use {{ability}} as your spellcasting ability."
+		},
+		{
+			"id": "wizard-spellcasting",
+			"names": [
+				"Spellcasting"
+			],
+			"match": {
+				"featureType": "class",
+				"className": "Wizard",
+				"classSource": "PHB"
+			},
+			"summaryTemplate": "You know {{cantripsKnown}} cantrips and have {{wizardSpellbookKnown}} wizard spells in your spellbook (6 + 2 × (Wizard lv - 1)). You can prepare {{preparedSpells}} wizard spells (Int + Wizard lv), and use Intelligence as your spellcasting ability."
+		},
+		{
+			"id": "sorcerer-spellcasting",
+			"names": [
+				"Spellcasting"
+			],
+			"match": {
+				"featureType": "class",
+				"className": "Sorcerer",
+				"classSource": "PHB"
+			},
+			"summaryTemplate": "You know {{cantripsKnown}} cantrips and {{spellsKnown}} sorcerer spells, using {{ability}} as your spellcasting ability."
+		},
+		{
+			"id": "spellcaster-sidekick-spellcasting",
+			"names": ["Spellcasting"],
+			"match": {"featureType": "class", "className": "Spellcaster Sidekick", "classSource": "UASidekicks"},
+			"summaryTemplate": "You know {{cantripsKnown}} cantrips and {{spellsKnown}} sidekick spells; expand for its chosen role and spell slots."
+		},
+		{
+			"id": "warlock-pact-magic",
+			"names": ["Pact Magic"],
+			"match": {"featureType": "class", "className": "Warlock", "classSource": "PHB"},
+			"summaryTemplate": "You know {{cantripsKnown}} cantrips and {{spellsKnown}} warlock spells, and recover your Pact Magic slots on a short or long rest."
+		},
+		{
+			"id": "spellcasting-generic",
+			"names": [
+				"Spellcasting",
+				"Innate Spellcasting"
+			],
+			"summary": "This character can cast spells."
+		},
+		{
+			"id": "multiattack",
+			"names": [
+				"Multiattack"
+			],
+			"summary": "This character can make multiple attacks when it takes the Attack action."
+		}
+	]
+}

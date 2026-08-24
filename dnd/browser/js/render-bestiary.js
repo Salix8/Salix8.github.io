@@ -1,5 +1,16 @@
 class RenderBestiary {
-	static _getRenderedSection (sectionTrClass, sectionEntries, sectionLevel) {
+	static _getRenderedCollapsibleTrait (entry, presentation, renderer, sectionLevel) {
+		const renderStack = [];
+		renderer.recursiveRender(entry, renderStack, {depth: sectionLevel + 1});
+		const summary = renderer.render(presentation.summary);
+		const name = entry.name ? `${entry.name}.` : "Trait.";
+		const renderedName = presentation.featureHref
+			? `<a href="${presentation.featureHref.escapeQuotes()}" data-character-builder-feature-tag="${(presentation.linkTag || "").escapeQuotes()}">${name.escapeQuotes()}</a>`
+			: `<span class="name">${name}</span>`;
+		return `<details class="mon__trait-toggle"><summary><span class="mon__trait-toggle__indicator mon__trait-toggle__indicator--collapsed">[+]</span><span class="mon__trait-toggle__indicator mon__trait-toggle__indicator--expanded">[-]</span> ${renderedName} ${summary}</summary><div class="mon__trait-toggle__detail">${renderStack.join("")}</div></details>`;
+	}
+
+	static _getRenderedSection (sectionTrClass, sectionEntries, sectionLevel, options = {}) {
 		const renderer = Renderer.get();
 		const renderStack = [];
 		if (sectionTrClass === "legendary") {
@@ -14,7 +25,17 @@ class RenderBestiary {
 			renderer.recursiveRender(toRender, renderStack, {depth: sectionLevel});
 		} else {
 			sectionEntries.forEach(e => {
-				if (e.rendered) renderStack.push(e.rendered);
+				const presentation = e.characterBuilderSummary || (
+					sectionTrClass === "trait"
+					&& options.isCharacterBuilder
+					&& e.entries
+					&& JSON.stringify(e.entries).length >= 280
+						? {summary: "Full description hidden to keep the statblock compact.", isCollapsible: true}
+						: null
+				);
+				if (sectionTrClass === "trait" && presentation && presentation.isCollapsible) {
+					renderStack.push(RenderBestiary._getRenderedCollapsibleTrait(e, presentation, renderer, sectionLevel));
+				} else if (e.rendered) renderStack.push(e.rendered);
 				else renderer.recursiveRender(e, renderStack, {depth: sectionLevel + 1});
 			});
 		}
@@ -126,7 +147,7 @@ class RenderBestiary {
 		</td>
 		` : ""}</tr>
 		
-		${allTraits ? `<tr><td class="divider" colspan="6"><div></div></td></tr>${RenderBestiary._getRenderedSection("trait", allTraits, 1)}` : ""}
+		${allTraits ? `<tr><td class="divider" colspan="6"><div></div></td></tr>${RenderBestiary._getRenderedSection("trait", allTraits, 1, {isCharacterBuilder: !!mon.characterBuilder})}` : ""}
 		${mon.action ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">Actions${mon.actionNote ? ` (<span class="small">${mon.actionNote}</span>)` : ""}</span></td></tr>
 		${RenderBestiary._getRenderedSection("action", mon.action, 1)}` : ""}
 		${mon.reaction ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">Reactions</span></td></tr>
