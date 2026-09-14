@@ -309,6 +309,9 @@ class FilterBox extends ProxyBase {
 		this._combineAs = this._getProxy("combineAs", this.__combineAs);
 		this._$body = $(`body`);
 		this._$overlay = null;
+		this._$iptFilterSearch = null;
+		this._$btnClearFilterSearch = null;
+		this._$dispFilterSearchNoResults = null;
 
 		this._cachedState = null;
 
@@ -379,6 +382,7 @@ class FilterBox extends ProxyBase {
 		if (this._$overlay) {
 			// already rendered previously; simply update the filters
 			this._filters.map(f => f.update());
+			this._handleFilterSearch(this._$iptFilterSearch ? this._$iptFilterSearch.val() : "");
 		} else {
 			this._$overlay = this._render_$getOverlay();
 			if (!this._$wrpMiniPills) {
@@ -388,6 +392,18 @@ class FilterBox extends ProxyBase {
 			}
 
 			const $children = this._filters.map((f, i) => f.$render({filterBox: this, isFirst: i === 0, $wrpMini: this._$wrpMiniPills}));
+
+			this._$iptFilterSearch = $(`<input class="form-control input-sm" type="search" placeholder="Search..." aria-label="Search filters">`)
+				.on("input", () => this._handleFilterSearch(this._$iptFilterSearch.val()));
+			this._$btnClearFilterSearch = $(`<button class="btn btn-default btn-sm" title="Clear filter search" aria-label="Clear filter search"><span class="glyphicon glyphicon-remove"/></button>`)
+				.hide()
+				.click(() => {
+					this._$iptFilterSearch.val("");
+					this._handleFilterSearch("");
+					this._$iptFilterSearch.focus();
+				});
+			const $wrpFilterSearch = $$`<div class="input-group fltr__search-wrp ml-2">${this._$iptFilterSearch}<span class="input-group-btn">${this._$btnClearFilterSearch}</span></div>`;
+			this._$dispFilterSearchNoResults = $(`<div class="text-muted italic py-2">No filters found.</div>`).hide();
 
 			const $btnShowAllFilters = $(`<button class="btn btn-xs btn-default">Show All</button>`)
 				.click(() => this.showAllFilters());
@@ -425,9 +441,18 @@ class FilterBox extends ProxyBase {
 			const $btnCancel = $(`<button class="btn btn-default fltr__btn-close">Cancel</button>`)
 				.click(() => this.pHide(true));
 
+			$(`<style>
+				.fltr__search-hidden { display: none !important; }
+				.fltr__search-wrp { width: 260px; }
+				@media (max-width: 768px) { .fltr__search-wrp { width: 100%; margin: 0.5rem 0 0 0 !important; } }
+			</style>`).appendTo(this._$overlay);
+
 			$$`<div class="ui-modal__inner flex-col ui-modal__inner--large dropdown-menu">
 			<div class="split mb-2 mt-2 flex-v-center mobile__flex-col">
-				<h4 class="m-0 mobile__mb-2">Filters</h4>
+				<div class="flex-v-center mobile__flex-col">
+					<h4 class="m-0">Filters</h4>
+					${$wrpFilterSearch}
+				</div>
 				<div class="flex-v-center mobile__flex-col">
 					<div class="flex-v-center mobile__m-1">
 						<div class="mr-2">Combine as</div>
@@ -448,6 +473,7 @@ class FilterBox extends ProxyBase {
 
 			<hr class="mt-1 mb-1">
 			<div class="ui-modal__scroller smooth-scroll px-1">
+				${this._$dispFilterSearchNoResults}
 				${$children}
 			</div>
 			<hr class="my-1 w-100">
@@ -494,6 +520,28 @@ class FilterBox extends ProxyBase {
 				hkSelFn();
 			}
 		}
+	}
+
+	_handleFilterSearch (searchTerm) {
+		const cleanSearchTerm = FilterBox.getCleanFilterSearchTerm(searchTerm);
+		const visibleFilters = this._filters.filter(filter => filter.handleSearch(cleanSearchTerm));
+		if (this._$btnClearFilterSearch) this._$btnClearFilterSearch.toggle(!!cleanSearchTerm);
+		if (this._$dispFilterSearchNoResults) this._$dispFilterSearchNoResults.toggle(!!cleanSearchTerm && !visibleFilters.length);
+	}
+
+	static getCleanFilterSearchTerm (searchTerm) {
+		return `${searchTerm || ""}`
+			.trim()
+			.toLowerCase()
+			.normalize("NFD")
+			.replace(/[\u0300-\u036f]/g, "");
+	}
+
+	static isFilterSearchMatch (searchTerm, ...values) {
+		if (!searchTerm) return true;
+		return values
+			.filter(it => it != null)
+			.some(it => FilterBox.getCleanFilterSearchTerm(it).includes(searchTerm));
 	}
 
 	_render_$getOverlay () {
@@ -959,6 +1007,7 @@ class FilterBase extends BaseComponent {
 	}
 
 	$render () { throw new Error(`Unimplemented!`); }
+	handleSearch () { throw new Error(`Unimplemented!`); }
 	getValues () { throw new Error(`Unimplemented!`); }
 	reset () { throw new Error(`Unimplemented!`); }
 	resetShallow () { throw new Error(`Unimplemented!`); }
@@ -1365,6 +1414,42 @@ class Filter extends FilterBase {
 		return this.__$wrpFilter;
 	}
 
+	handleSearch (searchTerm) {
+		const isHeaderMatch = FilterBox.isFilterSearchMatch(searchTerm, this.header);
+		const visibleItems = new Set();
+
+		this._items.forEach(item => {
+			const group = this._groupFn ? this._groupFn(item) : item.group;
+			const isVisible = isHeaderMatch || FilterBox.isFilterSearchMatch(
+				searchTerm,
+				item.item,
+				this._displayFn ? this._displayFn(item.item) : null,
+				this._displayFnTitle ? this._displayFnTitle(item.item) : null,
+				item.nest,
+				group
+			);
+			item.$rendered.toggleClass("fltr__search-hidden", !isVisible);
+			if (isVisible) visibleItems.add(item);
+		});
+
+		Object.entries(this._pillGroupsMeta).forEach(([group, groupMeta]) => {
+			const isGroupVisible = this._items.some(item => visibleItems.has(item) && `${this._groupFn(item)}` === group);
+			groupMeta.$hrDivider.toggleClass("fltr__search-hidden", !isGroupVisible);
+			groupMeta.$wrpPills.toggleClass("fltr__search-hidden", !isGroupVisible);
+		});
+
+		if (this._nests) {
+			Object.entries(this._nests).forEach(([nest, nestMeta]) => {
+				const isNestVisible = this._items.some(item => visibleItems.has(item) && item.nest === nest);
+				nestMeta._$btnNest.toggleClass("fltr__search-hidden", !isNestVisible);
+			});
+		}
+
+		const isVisible = isHeaderMatch || !!visibleItems.size;
+		this.__$wrpFilter.toggleClass("fltr__search-hidden", !isVisible);
+		return isVisible;
+	}
+
 	getValues () {
 		const state = MiscUtil.copy(this._state);
 		// remove state for any currently-absent filters
@@ -1737,6 +1822,7 @@ class RangeFilter extends FilterBase {
 			}
 		);
 		this.__$wrpMini = null;
+		this.__$wrpFilter = null;
 		this._$btnsMini = [];
 		this._$slider = null;
 	}
@@ -2058,7 +2144,7 @@ class RangeFilter extends FilterBase {
 			this._$slider.addClass("ve-grow");
 			$wrpSlider.addClass("ve-grow");
 			$wrpDropdowns.addClass("ve-grow");
-			return $$`<div class="flex">
+			this.__$wrpFilter = $$`<div class="flex">
 				<div class="fltr__range-inline-label">${this.header}</div>
 				${$wrpSlider}
 				${$wrpDropdowns}
@@ -2066,7 +2152,7 @@ class RangeFilter extends FilterBase {
 		} else {
 			const $btnMobToggleControls = this._$getBtnMobToggleControls($wrpControls);
 
-			return $$`<div class="flex-col">
+			this.__$wrpFilter = $$`<div class="flex-col">
 				${opts.isFirst ? "" : `<div class="fltr__dropdown-divider mb-1"/>`}
 				<div class="split fltr__h ${this._minimalUi ? "fltr__minimal-hide" : ""} mb-1">
 					<div class="fltr__h-text flex-h-center">${this.header}${$btnMobToggleControls}</div>
@@ -2076,6 +2162,20 @@ class RangeFilter extends FilterBase {
 				${$wrpDropdowns}
 			</div>`;
 		}
+
+		return this.__$wrpFilter;
+	}
+
+	handleSearch (searchTerm) {
+		const isVisible = FilterBox.isFilterSearchMatch(
+			searchTerm,
+			this.header,
+			...(this._labels || []),
+			this._min,
+			this._max
+		);
+		this.__$wrpFilter.toggleClass("fltr__search-hidden", !isVisible);
+		return isVisible;
 	}
 
 	getValues () {
@@ -2181,6 +2281,7 @@ class MultiFilter extends FilterBase {
 		);
 		this._baseState = MiscUtil.copy(this.__state);
 		this._state = this._getProxy("state", this.__state);
+		this.__$wrpFilter = null;
 	}
 
 	getChildFilters () {
@@ -2302,7 +2403,7 @@ class MultiFilter extends FilterBase {
 		this._addHook("meta", "isHidden", hookShowHide);
 		hookShowHide();
 
-		return $$`<div class="flex-col">
+		this.__$wrpFilter = $$`<div class="flex-col">
 			${opts.isFirst ? "" : `<div class="fltr__dropdown-divider mb-1"/>`}
 			<div class="split fltr__h fltr__h--multi ${this._minimalUi ? "fltr__minimal-hide" : ""} mb-1">
 				<div class="flex-v-center">
@@ -2313,6 +2414,18 @@ class MultiFilter extends FilterBase {
 			</div>
 			${$wrpChildren}
 		</div>`;
+
+		return this.__$wrpFilter;
+	}
+
+	handleSearch (searchTerm) {
+		const isHeaderMatch = FilterBox.isFilterSearchMatch(searchTerm, this.header);
+		const isAnyChildVisible = this._filters
+			.map(filter => filter.handleSearch(isHeaderMatch ? "" : searchTerm))
+			.some(Boolean);
+		const isVisible = isHeaderMatch || isAnyChildVisible;
+		this.__$wrpFilter.toggleClass("fltr__search-hidden", !isVisible);
+		return isVisible;
 	}
 
 	/**
