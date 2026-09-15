@@ -30580,7 +30580,7 @@
 			"source": "Himo",
 			"page": "??",
 			"entries": [
-				"Cuando haces un crítico contra una criatura con armadura o escudo, reduces en 1 su CA, eligiendo cuál. Si no llevaba armadura, queda {@condition dazed}."
+				"Cuando haces un crítico contra una criatura con armadura o escudo, reduces en 1 su CA, eligiendo cuál. Esta reducción no se acumula. Si no llevaba armadura, queda {@condition dazed}."
 			]
 		},
 		{
@@ -30601,7 +30601,7 @@
 			"source": "Himo",
 			"page": "??",
 			"entries": [
-				"Solo un Monje de la Vía del Hilador es competente con esta arma. No permite equipar armas en las manos, pero no entorpece las mecánicas de monje."
+				"Solo un Monje de la Vía del Hilador es competente con esta arma, y sus usos se definen en la subclase. No permite equipar armas en las manos, pero no entorpece las mecánicas de monje."
 			]
 		},
 		{
@@ -30616,6 +30616,7 @@
 			"dmgType": "P",
 			"property": [
 				"A",
+				"LD",
 				"2H",
 				"S"
 			],
@@ -30657,7 +30658,9 @@
 			"weight": 1,
 			"ac": 1,
 			"entries": [
-				"También es un arma marcial ligera y sutil que hace {@dice 1d4} contundente y siempre cuenta como de mano torpe. Los monjes lo tratan como arma. Tienes ventaja en Sigilo y Juego de Manos para parecer desarmado. Las criaturas golpeadas con él tienen desventaja al atacarte hasta tu próximo turno."
+				"También es un arma marcial ligera y sutil que hace {@dice 1d4} contundente y siempre cuenta como de mano torpe. No puedes equipar un tessen y otro escudo salvo que tengas un rasgo específico que lo permita. Los monjes lo tratan como arma, no como escudo.",
+				"Tienes ventaja en las pruebas de Destreza (Sigilo) y Destreza (Juego de Manos) para parecer desarmado mientras lo portas.",
+				"Las criaturas golpeadas con el tessen tienen desventaja al atacarte hasta el inicio de tu próximo turno. Si no lo usaste para atacar, obtienes +2 adicional a la CA contra proyectiles y ataques con armas ligeras."
 			]
 		},
 		{
@@ -30678,7 +30681,8 @@
 			"source": "Himo",
 			"page": "??",
 			"entries": [
-				"Son dos armas ligeras unidas por una cadena. Con un crítico, el objetivo pierde reacciones y no puede beneficiarse de escudos hasta el inicio de su próximo turno. Puedes imponerte desventaja y perder el ataque de acción adicional para forzar este efecto con un impacto."
+				"Puede infligir daño cortante o contundente. Técnicamente son dos armas ligeras unidas por una cadena: no puede usarse con una mano, pero tampoco cuenta como un arma a dos manos.",
+				"Con un crítico, el objetivo pierde reacciones y no puede beneficiarse de escudos hasta el inicio de su próximo turno. Puedes imponerte desventaja y perder el ataque de acción adicional para forzar este efecto con un impacto."
 			]
 		},
 		{
@@ -30699,7 +30703,7 @@
 			"source": "Himo",
 			"page": "??",
 			"entries": [
-				"Si te mueves 10 pies en línea recta antes de impactar, eliges empujar 10 pies al objetivo, forzar una salvación de Fuerza o añadir tu bonificador de competencia al daño."
+				"Si te mueves 10 pies en línea recta antes de atacar e impactas, elige uno de estos efectos: empuja 10 pies al objetivo si es como máximo una categoría de tamaño mayor que tú; el objetivo debe superar una salvación de Fuerza contra tu tirada de ataque o queda {@condition prone}; o añade tu bonificador de competencia al daño."
 			]
 		},
 		{
@@ -30720,7 +30724,8 @@
 			"source": "Himo",
 			"page": "??",
 			"entries": [
-				"Son dos armas ligeras unidas por cadena. Cada impacto otorga +1 al ataque contra esa criatura hasta +5; después otorga +1 al daño hasta +5. El bono termina al quedar incapacitado, con velocidad 0 o al cambiar de objetivo."
+				"Técnicamente son dos armas ligeras unidas por una cadena: no puede usarse con una mano, pero tampoco cuenta como un arma a dos manos.",
+				"Cada impacto otorga +1 al ataque contra esa criatura hasta +5; después otorga +1 al daño hasta +5. El bono termina al quedar incapacitado, con velocidad 0 o al cambiar de objetivo."
 			]
 		},
 		{
@@ -30742,7 +30747,247 @@
 			"page": "??",
 			"dmg2": "1d10",
 			"entries": [
-				"Son dos armas ligeras unidas. Como acción adicional cambia entre modo bastón, extendido (Alcance 10 pies y desventaja a 5 pies) y giro (daño {@dice 1d6}/ {@dice 1d8}; las criaturas provocan ataques de oportunidad incluso tras Desengancharse o con Flyby)."
+				"Técnicamente son dos armas ligeras unidas por una cadena: no puede usarse con una mano, pero tampoco cuenta como un arma a dos manos.",
+				"Como acción adicional cambia entre modo bastón, extendido (Alcance 10 pies y desventaja a 5 pies) y giro (daño {@dice 1d6}/ {@dice 1d8}; las criaturas provocan ataques de oportunidad incluso tras Desengancharse o con Flyby)."
+			]
+		},
+		{
+			"name": "Escudo de Bulette",
+			"source": "Himo",
+			"page": "??",
+			"type": "S",
+			"rarity": "None",
+			"value": 10000,
+			"weight": 10,
+			"ac": 2,
+			"entries": [
+				"Se fabrica con la parte superior o inferior del cráneo de un {@creature bulette} adulto.",
+				"Puede usarse como pala. Como acción adicional, puedes realizar un ataque de Fuerza que inflige {@damage 1d6} + tu modificador de Fuerza, o intentar empujar al objetivo 10 pies."
+			]
+		},
+		{
+			"name": "Daga Larga",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Simple",
+			"rarity": "None",
+			"value": 1000,
+			"weight": 1.5,
+			"dmg1": "1d6",
+			"dmgType": "S",
+			"property": [
+				"F",
+				"T"
+			],
+			"range": "20/60",
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Cimitarra doble filo",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 7500,
+			"weight": 3,
+			"dmg1": "2d4",
+			"dmgType": "S",
+			"property": [
+				"F"
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Sai",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "None",
+			"value": 4000,
+			"weight": 1,
+			"dmg1": "1d4",
+			"dmgType": "P",
+			"property": [
+				"F",
+				"L",
+				"T"
+			],
+			"range": "20/60",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Cuando realizas la acción de Desarmar, obtienes un bonificador de +2 por cada sai que tengas equipado."
+			]
+		},
+		{
+			"name": "Armadura de Remorhaz",
+			"type": "HA",
+			"rarity": "None",
+			"value": 430000,
+			"weight": 30,
+			"ac": 17,
+			"stealth": true,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Se fabrica con la quitina de un {@creature remorhaz} adulto. Elige frío o fuego al crearla: el portador obtiene resistencia al tipo de daño elegido.",
+				"Tres veces al día, cuando una criatura ataca al portador cuerpo a cuerpo, este puede usar su reacción para infligirle {@damage 3d6} de daño de fuego.",
+				{
+					"type": "entries",
+					"name": "Variante: Armadura de Remorhaz Joven",
+					"entries": [
+						"La quitina de un remorhaz joven permite fabricar cualquier armadura media. Su CA base se reduce en 1, pesa un 40 % más, impone desventaja en las pruebas de Destreza (Sigilo) para esconderse y concede resistencia al frío o al fuego. Su reacción de {@damage 3d6} de daño de fuego solo puede usarse una vez al día."
+					]
+				}
+			]
+		},
+		{
+			"name": "Armadura de Cuero de Glabrezu",
+			"type": "MA",
+			"rarity": "None",
+			"value": 600000,
+			"weight": 20,
+			"ac": 13,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Se fabrica con el cuero de un {@creature glabrezu}. El portador obtiene resistencia al daño contundente, cortante y perforante de ataques que no sean de plata, y ventaja en las tiradas de salvación de Constitución."
+			]
+		},
+		{
+			"name": "Bulbo de Planta Andante",
+			"type": "MA",
+			"rarity": "None",
+			"value": 500000,
+			"weight": 20,
+			"ac": 12,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Se fabrica con el bulbo central de un {@creature shambling mound}. Mientras el portador esté en contacto con el suelo, es inmune al daño de relámpago.",
+				"Cuando recibe daño de relámpago, añade un dado adicional de daño de relámpago al siguiente ataque que realice con un arma metálica."
+			]
+		},
+		{
+			"name": "Armadura de Carrion Crawler",
+			"type": "MA",
+			"rarity": "None",
+			"value": 250000,
+			"weight": 12,
+			"ac": 11,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Se fabrica con la quitina de un {@creature carrion crawler}. El portador es inmune al veneno de los carrion crawlers.",
+				"Si el portador va a chocar contra una superficie o cae en paralelo a una pared, puede usar su reacción para quedarse adherido a ella. Puede liberarse, o ser liberado, superando una prueba de Fuerza CD 13. Mientras siga adherido, está {@condition restrained}."
+			]
+		},
+		{
+			"name": "Armadura de Bulette",
+			"type": "HA",
+			"rarity": "None",
+			"value": 430000,
+			"weight": 100,
+			"ac": 19,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Se fabrica con placas de {@creature bulette}. Esta versión pesada pesa 100 libras. Al calcular el daño por caída, ignora los primeros 30 pies de la caída.",
+				{
+					"type": "entries",
+					"name": "Variantes",
+					"entries": [
+						"Puede fabricarse como armadura media con CA 16 + Destreza (máximo 2) y un peso de 65 libras.",
+						"También puede replicar una coraza, una cota de escamas o una armadura de placas y bandas. Estas variantes pesan un 40 % más que la armadura base y obtienen +1 a la CA sin ser mágicas. Al calcular el daño por caída, ignoran los primeros 10 pies; la variante de placas y bandas ignora los primeros 20 pies."
+					]
+				}
+			]
+		},
+		{
+			"name": "Armadura de Xorn",
+			"type": "MA",
+			"rarity": "None",
+			"value": 700000,
+			"weight": 50,
+			"ac": 14,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"La piel de un {@creature xorn} permite fabricar tres armaduras de este tipo. Parece una armadura de cuero hecha de roca y tierra, con un ojo de xorn en la pechera.",
+				"Una vez al día, permite atravesar superficies de tierra o roca a la velocidad del portador durante 10 minutos. Si termina dentro de una superficie, sale despedido hacia la superficie más cercana y recibe {@damage 1d10} de daño más el daño de caída correspondiente.",
+				"Tiene 5 cargas. Puedes gastar 1 carga para usar Sentido del Tesoro durante 1 turno o sentido sísmico durante 1 minuto. Sentido del Tesoro detecta metales y piedras preciosas, como monedas o joyas, a 60 pies."
+			]
+		},
+		{
+			"name": "Armadura de Barlgura",
+			"type": "MA",
+			"rarity": "None",
+			"value": 650000,
+			"weight": 20,
+			"ac": 12,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"La piel de un {@creature barlgura} permite fabricar tres armaduras medias o cinco ligeras. La versión media tiene CA 12 + Constitución (máximo 2) y pesa 20 libras; la ligera tiene CA 10 + Constitución y pesa 15 libras. Parece cuero azul cubierto de pelo rojo.",
+				"El portador tiene ventaja en las tiradas de salvación de Constitución para mantener la concentración mientras es invisible, reduce en {@dice 1d4} el daño de frío que recibe y es inmune a las temperaturas extremadamente bajas.",
+				"Tres veces al día, cuando una criatura ataca al portador cuerpo a cuerpo, este puede usar su reacción para infligirle {@damage 3d6} de daño de fuego."
+			]
+		},
+		{
+			"name": "Armadura de Grick",
+			"type": "MA",
+			"rarity": "None",
+			"value": 250000,
+			"weight": 15,
+			"ac": 12,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Se fabrica con la quitina del cuerpo de un {@creature grick}; el pico puede usarse opcionalmente para el casco. Tiene CA 12 + Constitución (máximo 2) y parece una armadura de medias placas blandas y azules ceñidas al cuerpo. El portador es inmune a ser agarrado por ventosas.",
+				{
+					"type": "entries",
+					"name": "Variante: Armadura de Grick Alfa",
+					"entries": [
+						"Si la quitina procede de un {@creature grick alpha}, la armadura obtiene +2 a la CA, pesa 20 libras y vale 3.000 po."
+					]
+				}
+			]
+		},
+		{
+			"name": "Armadura de Aurumvorax",
+			"type": "MA",
+			"rarity": "None",
+			"value": 1200000,
+			"weight": 16,
+			"ac": 12,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Se fabrica con cinco pieles de aurumvorax, o tres para una criatura Pequeña, y puede replicar cualquier armadura base. Parece una armadura de piel dorada y plateada, pesa un 50 % más que la armadura replicada y concede resistencia al daño de fuego.",
+				"Cada vez que el portador recibe un impacto crítico, la CA de la armadura se reduce permanentemente en 1. Si alcanza CA 10 + Destreza, la armadura se destruye. Puede repararse con herramientas de herrero un máximo de diez veces antes de requerir la piel de otro aurumvorax.",
+				{
+					"type": "entries",
+					"name": "Variante: Capa de Aurumvorax",
+					"entries": [
+						"En vez de una armadura, puede fabricarse una capa de 6 libras con una piel para una criatura Pequeña o tres para una Mediana. La capa concede inmunidad a los ataques de gas o mundanos."
+					]
+				}
+			]
+		},
+		{
+			"name": "Armadura de Rust Monster",
+			"type": "HA",
+			"rarity": "None",
+			"value": 300000,
+			"weight": 15,
+			"ac": 10,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Se fabrica con quitina de tres {@creature rust monster} para una criatura Pequeña o cinco para una Grande. Basta con un tercio o la mitad de esas cantidades, respectivamente, si los rust monsters eran Grandes. Tiene CA 10 + Destreza (máximo 2) y parece una armadura de placas blandas naranjas ceñidas al cuerpo.",
+				"Una vez al día, cuando atacan al portador con un arma de metal no mágica, puede usar su reacción para obligar al atacante a realizar una salvación de Destreza CD 13. Con un fallo, el arma recibe un penalizador permanente de -1; si alcanza -5, se rompe."
 			]
 		}
 	],
