@@ -5728,6 +5728,1985 @@
 			"entries": [
 				"You can cast {@spell animate dead} without using a spell slot. Once you do so, you can't cast it in this way again until you finish a long rest."
 			]
+		},
+		{
+			"name": "Poción Explosiva",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Mineral y Animal",
+				"ingredientTypes": [
+					"Animal",
+					"Mineral"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "Instantáneo"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Lanzas una poción que explota al romperse el frasco, creando una explosión que provocará {@dice 2d8} de daño por fuego, o la mitad si salva, a todo aquel dentro de un cuadrado de 4 casillas que falle una tirada de salvación de Destreza sobre tu CD de Pociones. Los objetos inflamables se prenden, y cualquier criatura que hubiese fallado la salvación recibirá {@dice 1d4} de daño por fuego hasta que use su acción para apagarse las llamas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Al subir al lv 3 el daño producido por esta poción aumenta a {@dice 3d8} y el residual a {@dice 1d6}, al 7 hace {@dice 4d8} y {@dice 1d8} y el área es de 9 casillas, al 12 {@dice 5d8} y {@dice 1d10} y el área es de 4x4, y al 17 {@dice 6d8} y {@dice 1d12}. Puedes elegir no escalar las áreas."
+					]
+				}
+			]
+		},
+		{
+			"name": "Elixir curativo",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Vegetal y Otros",
+				"ingredientTypes": [
+					"Vegetal",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "Instantáneo"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Lanzas un frasco que segrega una esencia que revitaliza a quien la huele con {@dice 1d6} (toda la fragancia expira al abrirse el frasco si no se bebe al instante, y el líquido pasa a ser agua amarilla), pero cuya potencia aumenta hasta {@dice 1d8} si se bebe. En ambos casos se suma el modificador de Sabiduría del alquimista."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"al lv3 puede restaurar {@dice 1d6} en un área de cuatro casillas si es arrojado y {@dice 2d8} si se bebe, al lv7 restablece {@dice 1d8} si se arroja y {@dice 3d8} si se bebe, al 12 {@dice 2d8} si se arroja y {@dice 4d10} si se bebe y al 17 {@dice 3d10} si se arroja y {@dice 6d12} si se bebe."
+					]
+				}
+			]
+		},
+		{
+			"name": "Poción Energizante",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Vegetal",
+				"ingredientTypes": [
+					"Vegetal"
+				],
+				"range": "Beber",
+				"use": "Acción adicional",
+				"duration": "1 turno"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Es capaz de aumentar un total de 3 puntos cualquiera de las características de quien lo beba, pudiendo subir +3; +2 y +1 o +1 +1 +1."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						": En combate, al lv3 dura 2 turnos, al 7 puede subir +4 puntos, al 12 dura 3 turnos y al 17 suma hasta +8."
+					]
+				}
+			]
+		},
+		{
+			"name": "Ácido de Mercurio",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Mineral y Otros",
+				"ingredientTypes": [
+					"Mineral",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "Instantáneo"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"El daño de esta poción es de {@dice 1d4} por ácido, ya sea por contacto directo (armadura natural) o ingesta; el doble si cae sobre el equipo. Puede tener los siguientes efectos dependiendo del objetivo, pero solo si recibió el daño:",
+						{
+							"type": "list",
+							"items": [
+								"Armadura o escudo. Recibe el daño y un -1 a la CA. El DM determina su duración. Si cae a 0 HP se destruye. Mientras no caiga a 0, puede ser reparada fácilmente por cualquier herrero competente o con Mending.",
+								"Arma u objeto. Recibe el daño. El DM determina su duración. Si cae a 0 HP se destruye. Mientras no caiga a 0, puede ser reparada fácilmente por cualquier herrero competente o con Mending. Piel.",
+								"Debe salvar Constitución. Con un fallo, recibe el daño y se vuelve vulnerable al daño por ácido durante 1 minuto o, en su defecto, pierde la resistencia. Ingesta.",
+								"Recibe el daño y contrae indigestión en {@dice 1d6} horas.",
+								"Hierro Líquido. Disuelve los efectos de esta poción sin dañar al portador ni a su equipo. Cada objeto u objetivo solo puede recibir los efectos de esta tirada una vez cada 8 horas, a partir del primer uso, sólo recibirá el daño. Si no se especifica o se pretende tirar en área, afecta solo a las armaduras."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"al lv3 el daño aumenta a {@dice 1d8}, al 7 es un área de 4 casillas y puede destruir objetos y artefactos mágicos Uncommon o más comunes; al 12 hace {@dice 1d12} de daño y añade bonificador y al 17 puede destruir objetos muy raros o más comunes."
+					]
+				}
+			]
+		},
+		{
+			"name": "Elixir Animal",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Animal y Otros (alcohol)",
+				"ingredientTypes": [
+					"Animal",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "1 día (entonces el objetivo muere)"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Arroja o haz beber esto a cualquier animal o bestia y se pondrá de tu parte hasta la hora de su muerte… o hasta que lo maten los efectos secundarios dentro de un día. La criatura objetivo deberá superar una tirada de salvación de Sabiduría sobre tu CD de Salvación de pociones. Si lo abandonas estando bajo los efectos del elixir, morirá de pena o te atacará solo a ti. Una bestia de CR 1 salva con ventaja, y de más CR supera automático."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Al subir al lv 3 el CR máximo aumenta a 3, al 7 puedes targetear monstruosidades con inteligencia igual o inferior a 7, al 12 el CR aumenta a 5, y al 17 el CR aumenta a 9 y te sirve cualquier criatura con inteligencia igual o inferior a 7."
+					]
+				}
+			]
+		},
+		{
+			"name": "Frasco de Veneno",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Animal/Vegetal y otros",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal",
+					"Otros"
+				],
+				"range": "beber",
+				"use": "Acción",
+				"duration": "permanente"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Logra que haga efecto y el enemigo pasará a estar envenenado, además de recibir {@dice 1d4} de daño por veneno al principio de cada uno de sus turnos hasta que supere una tirada de salvación de constitución sobre tu CD de Salvación de pociones o sea curado de este efecto. Beber esta poción dos veces no agrava los efectos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Al lv3 el daño residual aumenta a {@dice 2d6}, al 7 descubres el veneno cutáneo, así que puedes arrojarlo hasta una distancia de 20 pies (tirada de ataque a Destreza) y al 12 el daño residual asciende a {@dice 4d8} y al 17 a {@dice 5d10}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Antídoto",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Vegetal x2",
+				"ingredientTypes": [
+					"Vegetal"
+				],
+				"range": "beber",
+				"use": "Acción",
+				"duration": "inmediato"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"dáselo a beber a alguien o aprovechalo tú mismo y curarás cualquier enfermedad no mágica o envenenamiento. Solo curas un efecto cada vez y de forma aleatoria."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"al lv7 descubres cómo hacer antídotos cutáneos, por lo que podrás curar la parálisis (cuando no sea provocada por un agente físico) y petrificación; puedes arrojarlos a una distancia de 20 pies. Al 12 puede curar enfermedades mágicas, así como encantamiento, ceguera y sordera, siempre que hayan sido impuestos de una forma mágica. Al 17 aprendes a fabricarlo en forma de esencia, por lo que el efecto se extiende hasta cuatro casillas."
+					]
+				}
+			]
+		},
+		{
+			"name": "Hierro Líquido",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Mineral x2",
+				"ingredientTypes": [
+					"Mineral"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "Hasta que se reciba daño por ácido o se rompa (ver descripción)."
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Al lanzar o vertir el contenido del frasco se solidifica sobre la ropa o la piel del objetivo, otorgando un bonificador de +1 en su CA. Esta solidificación aguantará un número de impactos críticos igual a tu BC o al recibir cualquier cantidad de daño por ácido. De no romperse, se oxidará pasadas 2 horas y se caerá. Mientras aún aguante 1 golpe, puede ser reparada con mending o con un check de 10 minutos si se es competente en herrería. De esta forma se repara 1 golpe. Cuenta como una armadura en lo que a descansos refiere, y su efecto no es stackeable: mientras dure, cualquier poción de Hierro Líquido usada en este objetivo se pierde."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Al lv3 aumenta la CA en +2; al 7 otorga resistencia a los daños físicos no mágicos, al 12 da resistencia a los daños físicos mágicos, y al 17 aumenta a +3."
+					]
+				}
+			]
+		},
+		{
+			"name": "Poción Famélica",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Vegetal x2 y Otros",
+				"ingredientTypes": [
+					"Vegetal",
+					"Otros"
+				],
+				"range": "beber",
+				"use": "Acción",
+				"duration": "Instantáneo"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Esta lenta cocción crea un líquido dorado capaz de saciar el hambre y la sed de una forma rápida, fácil y barata. Cada toma sirve para un día entero."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Al subir al lv 3 podrá alimentar a dos criaturas, al 5 a tres, al 10 a cuatro, al 12 a cinco, al 15 a seis y al 17 a siete."
+					]
+				}
+			]
+		},
+		{
+			"name": "Frasco de Amoníaco",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Animal y Otros [Precisa botes opacos]",
+				"ingredientTypes": [
+					"Animal",
+					"Otros"
+				],
+				"range": "Arrojadiza 4 casillas.",
+				"use": "Acción",
+				"duration": "Instantáneo"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Este frasco podrá usarse tantas veces como uno quiera mientras no se rompa el recipiente. Basta con destaparlo y ofrecerlo a una criatura dormida o inconsciente para reanimarla al momento. Una criatura con 0 HP reanimada de esta forma solo puede usar sus acciones para correr, esquivar, utilizar un objeto o desengancharse, y carecerá de acciones adicionales ni reacciones hasta que no recupere al menos 1 HP. Además, fallará automáticamente cualquier tirada de habilidad, ataque o salvación. Cada golpe recibido supondrá una tirada de muerte fallida y, como de costumbre, moriría en el acto tras recibir tres golpes o una cantidad de daño igual a sus HP máximos en un turno. Si el objetivo no recupera al menos 1 HP tras un minuto, caerá inconsciente de nuevo. También puede utilizarse como arma. Si un enemigo lo huele (arrojado, 1 uso, si queda al menos la mitad, y afecta a cuatro casillas, o mediante un pañuelo húmedo, 20 usos) deberá superar una tirada de salvación de Constitución sobre tu CD de salvación de pociones o estará envenenado durante un número de turnos igual a tu modificador de Sabiduría. En caso de ser ingerido, causará {@dice 4d12} de daño por veneno y estará envenenado hasta que realice un descanso largo o sea tratado por un profesional de forma mágica o mundana. En este último caso, la poción se gastará aunque el recipiente no se rompa."
+					]
+				}
+			]
+		},
+		{
+			"name": "Cubeta de Ácido",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Mineral y Otros",
+				"ingredientTypes": [
+					"Mineral",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "Instantáneo"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Al arrojar o vertir esta cubeta causas {@dice 2d8} de daño por ácido a cualquier criatura si falla una salvación de Constitución contra tu CD de Pociones o la mitad si salva. Al utilizarla en un objeto o una planta no mágica causará el daño máximo. Este líquido permite deshacerse de los efectos del Hierro Líquido sin causar daño, en caso de que se supere una tirada de Medicina CD 14."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Al subir al lv 3 el daño producido por esta poción aumenta a {@dice 3d8}, al 7 hace {@dice 4d8} y afecta a un área de 2x2, al 12 hace {@dice 5d8} y al 17 se vuelve más corrosivo, por lo que ignora resistencias mágicas y mundanas y puede destruir objetos mágicos raros o más comunes que no estén equipados."
+					]
+				}
+			]
+		},
+		{
+			"name": "Bomba de Humo",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Mineral y Otros/Animal (opcional: Vegetal | si añades un Otro, Vegetal o Animal que sirva como recipiente, no gasta vial)",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal",
+					"Mineral",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción adicional",
+				"duration": "1 minuto"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"El usuario arroja este frasco haciendo que una nube de humo blanco ciegue a toda criatura en un área de 2x2 casillas. Cualquier criatura con visión ciega, verdadera o mágica aún podrá ver. Ninguna tirada basada en el olfato o la vista tendrá éxito dentro de esta nube si se añade Vegetal, y las criaturas con vista ciega también quedarán cegadas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"A partir del nivel 7 ocupará 3x3, y al 12 5x5 y al 17 7x7."
+					]
+				}
+			]
+		},
+		{
+			"name": "Frasco de Velocidad",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Vegetal y Otros",
+				"ingredientTypes": [
+					"Vegetal",
+					"Otros"
+				],
+				"range": "Beber",
+				"use": "Acción adicional",
+				"duration": "1 minuto"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Durante la duración cualquier velocidad que posea la criatura se ve duplicada."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Al subir al lv 3 ignora terreno difícil, al 7 ofrece una reacción extra, al 12 también aporta Spider Climb y al 17 la velocidad base del usuario se triplica."
+					]
+				}
+			]
+		},
+		{
+			"name": "Vial de Crecimiento",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Otros, Animal y Vegetal",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal",
+					"Otros"
+				],
+				"range": "20 pies",
+				"use": "Acción",
+				"duration": "1 minuto o instantáneo"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Esta poción puede hacer crecer a una criatura a una talla más durante un minuto, como si fuese objetivo del conjuro Agrandar. Si el objetivo es una planta en tierra fértil, puedes regarla con la poción y en el lapso de un minuto crecerá hasta el doble de su tamaño y peso y, si puede, dará frutos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Una criatura que lo beba puede sufrir una indigestión (a juicio del DM). Esta poción huele muy mal, y su objetivo también lo hará."
+					]
+				}
+			]
+		},
+		{
+			"name": "Granada de Choque",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Mineral x2, Otro x1",
+				"ingredientTypes": [
+					"Mineral",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "Instantánea"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Cuando este vial se rompa contra el suelo, una onda de choque arremeterá con todas las criaturas en un radio de 15 pies horizontalmente que estén tocando el suelo. Deben salvar fuerza sobre tu CD de pociones o ser empujadas 15 pies y caer prone. Si fallan por 7 o más, además estarán dazed. La criatura en el centro del área es inmune al efecto."
+					]
+				}
+			]
+		},
+		{
+			"name": "Proyectil Efervescente",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Otros x2, Mineral y una piedra cualquiera",
+				"ingredientTypes": [
+					"Mineral",
+					"Otros"
+				],
+				"range": "12 casillas",
+				"use": "Acción",
+				"duration": "Instantáneo"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"El usuario agita el bote y atasca la piedra en la boquilla, de modo que el agua gasificada hace que la piedra salga disparada. El usuario puede realizar una tirada de ataque a distancia para causar {@dice 2d10} de daño contundente. Si la tirada de ataque es 1 o 2 antes de aplicar los modificadores, la botella explota y causa {@dice 1d10} de daño perforante y {@dice 1d10} de daño cortante al usuario y a cualquier criatura a 5 pies de él. Con un crítico (19 o 20) añade un dado al total del daño recibido por el objetivo."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"A partir del nivel 3 hará {@dice 3d10}, al 7 {@dice 4d10}, al 11 {@dice 5d10} y a partir del 17 {@dice 6d10}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Cloroformo",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Otros, Vegetal y Mineral [Precisa botes opacos]",
+				"ingredientTypes": [
+					"Vegetal",
+					"Mineral",
+					"Otros"
+				],
+				"range": "Contacto directo o 4 casillas",
+				"use": "Ver descripción.",
+				"duration": "1 minuto."
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"El efecto y la cantidad de usos dependen del método que se emplee a la hora de utilizarlo.",
+						{
+							"type": "list",
+							"items": [
+								"20 usos. Como Bonus, se moja un trapo y como acción se busca el contacto con las vías respiratorias del objetivo (ataque a dex y salvación de Con) para provocar somnolencia. Durante un minuto, está envenenado y su movilidad se reduce a la mitad. El objetivo puede salvar al final de cada turno. Tras un turno, el trapo se seca y necesita volver a mojarse.",
+								"10 usos. Doblas la cantidad de cloroformo del trapo y sigues el curso de acción de la opción anterior. El efecto es el mismo, pero ahora el objetivo no podrá salvar al final del turno.",
+								"Arrojado. Si aún quedan al menos 15 usos, puedes arrojar el tarro hacia el objetivo. Este deberá salvar Constitución o caer inconsciente durante tres turnos. Mientras dure, no podrá ser despertado de ninguna forma, a menos que reciba una cantidad de daño igual a la mitad de sus HP totales entre los tres turnos. Una vez se levante, estará envenenado hasta que termine el minuto."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Los usos son acumulables (Ej. puedes usar 10 dosis individuales y 5 dobles). El efecto no es stackeable a menos que vaya a más."
+					]
+				}
+			]
+		},
+		{
+			"name": "Esencia Paralizante",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Mineral, Animal y otro",
+				"ingredientTypes": [
+					"Animal",
+					"Mineral",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "1 turno"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Lanza un frasco o haz que tu objetivo huela su interior para que entre en estado de parálisis. El individuo puede intentar superar una tirada de salvación de Constitución sobre tu CD de pociones para intentar evitar dicho efecto, de lo contrario estará paralizado hasta el final de su próximo turno. Puedes darle dos usos si logras que tu objetivo lo huela sin necesidad de arrojarlo. Si el objetivo lo huele voluntariamente o es forzado a ello por otros medios, fallará automáticamente la tirada de salvación."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Al lv7 durará 2 turnos, al 12 tres y al 17, cuatro."
+					]
+				}
+			]
+		},
+		{
+			"name": "Frasco de inmunidad",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Baba de Caracol Explosivo, Vegetal y Otros",
+				"ingredientTypes": [
+					"Vegetal",
+					"Otros"
+				],
+				"range": "4 casillas/beber",
+				"use": "Acción",
+				"duration": "1 ronda"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						": Si lo rocías a un aliado o te lo esparces a ti mismo por encima consigues inmunidad completa a todo lo que pueda ocurrirte. Sin embargo, si eres lo suficientemente estúpido como para beberlo, te hará {@dice 1d4} de daño, aunque siempre puedes ofrecerlo como bebida a un enemigo..."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"al 7 el efecto dura dos turnos y hace {@dice 1d6} de daño por veneno si lo ingieres, al 12 cualquiera que te toque recibirá {@dice 1d6} por tu modificador de Sabiduría de daño por fuerza y al 17 aumentará a d10."
+					]
+				}
+			]
+		},
+		{
+			"name": "Elixir de Concentración",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Vegetal x2 y Otros",
+				"ingredientTypes": [
+					"Vegetal",
+					"Otros"
+				],
+				"range": "Beber",
+				"use": "Acción adicional o Reacción",
+				"duration": "Instantáneo"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Esta pócima es una infusión de hierbas energéticas y mágicas que aumentará la concentración de quien la beba. Puede usarse de dos formas: reacción",
+						{
+							"type": "list",
+							"items": [
+								"Como cuando se falla una salvación para mantener la concentración de un conjuro. Para ello, se debe tener la poción ya en la mano o tenerla a rango de interacción. bonus",
+								"Como para duplicar tu bono de competencia en una tirada de ataque para conjuros."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Poción de Fango",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Otros x2",
+				"ingredientTypes": [
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "2 horas"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"En una casilla de 3x3 se crea un cúmulo de arenas movedizas que obligan a quien pase por allí a realizar una tirada de salvación de destreza contra tu CD de Salvación de Pociones para cada casilla que quiera moverse antes de salir de ella. De fallar, su movilidad se verá reducida a 0 y tendrán desventaja en tiradas de ataque a melé. Si la criatura vuela solo tendrá que tener éxito una vez, y si no está enteramente cubierta por la arena (ej. ocupa toda el área o más) tendrá desventaja en las tiradas de ataque a melé pero ventaja en la salvación. De fallar, su movilidad también se reducirá a 0. Las criaturas diminutas pueden morir ahogadas si no se liberan antes de 5 turnos, y las pequeñas en 10."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"A lv7 ocupará un área de 4x4, al 12 de 5x5 y al 17 de 6x6."
+					]
+				}
+			]
+		},
+		{
+			"name": "Poción Luminiscente",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Vegetal y Otros (uno de los ingredientes debe ser bioluminiscente, sino deberá añadirse ese ingrediente extra)",
+				"ingredientTypes": [
+					"Vegetal",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "1 minuto (10 turnos)"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Al arrojar o verter la poción, un líquido luminiscente queda pegado a la superficie del objetivo. Durante un minuto, la sustancia arroja luz a 3 casillas y luz tenue a tres más. Además, el objetivo tiene desventaja en tiradas de salvación de destreza para evitar ataques si estaba en luz tenue o menor y las tiradas de ataque contra esta tienen ventaja. El fuego, el agua a presión o una gran cantidad de frío concentrado puede arrancar esta sustancia del cuerpo del objetivo. Las criaturas con fuego corporal o biológicamente luminiscentes son inmunes a esta poción."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"al 7 provoca {@dice 1d4} de daño por ácido al principio de cada turno, al 12 la luz aumenta a 6-6 casillas y al 17 el daño aumenta a {@dice 1d12}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Cubierta de Invisibilidad",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Otros x2",
+				"ingredientTypes": [
+					"Otros"
+				],
+				"range": "Uno mismo o 20 pies",
+				"use": "Acción",
+				"duration": "Hasta 1 minuto"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Al vertir este ungüento encima de alguien, las células de su piel y el material de lo que porte se vuelve invisible. Al desplazarse, el suelo se verá cubierto con restos de la poción, ocultando parcialmente las huellas. Además, la pócima neutraliza olores y amortigua ruidos en gran medida, si bien no completamente. De este modo, las tiradas de percepción o supervivencia para rastrearte se hacen con desventaja y estas efectivamente oculto para criaturas con Visión Ciega, aunque estas criaturas no tendrán desventaja para rastrearte. Esta poción acaba con cualquier efecto que hiciera que el objetivo emitiera luz, y uno de estos efectos puede acabar con los de la poción si se han lanzado a lv 2 o superior."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Si el objetivo se limpia o lo limpian con al menos cinco litros de agua, el efecto termina."
+					]
+				}
+			]
+		},
+		{
+			"name": "Broma Revienta-Tímpanos de Himo",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Mineral x2 y Otros",
+				"ingredientTypes": [
+					"Mineral",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción (y Bonus, opcionalmente)",
+				"duration": "1 minuto"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Al romperse este bote recubierto de barro seco cristalizado, un fuerte petardazo se extiende a 500 pies a la redonda. Cualquier criatura a 20 pies del núcleo del petardazo (excepto el usuario, que estará preparado) deberán realizar una tirada de salvación de Constitución o recibir {@dice 2d10} de daño por trueno y quedar ensordecidos en una salvación fallida, o recibir la mitad del daño con una salvación exitosa y no quedar ensordecidos. Una criatura ensordecida puede salvar al final de cada turno."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"El usuario puede usar su bonus antes de lanzar la poción para advertir a varias criaturas que puedan escucharte a 120 pies. Hasta el final del turno del usuario, esta hará la salvación con ventaja y recibirá la mitad del daño si falla y nada si acierta. Las quimeras que hayas invocado serán inmunes a este efecto si saben que lo vas a lanzar (puedes advertirlas como al resto de criaturas)."
+					]
+				}
+			]
+		},
+		{
+			"name": "Elixir de Quimerización",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Mineral, Vegetal, Animal y Otros",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal",
+					"Mineral",
+					"Otros"
+				],
+				"range": "Beber",
+				"use": "Acción",
+				"duration": "10 minutos"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Puedes dárselo a beber a una quimera invocada o transmutada (gasta la reacción de la quimera). Al hacerlo, tu quimera adquiere uno de los siguientes efectos:",
+						{
+							"type": "list",
+							"items": [
+								"El bonificador de ataque o de lanzamiento de conjuros es igual a tu Modificador de Sabiduría más tu bono de competencia, independientemente de sus stats (Esta opción puede elegirse varias veces).",
+								"Adquiere competencia en 2 salvaciones.",
+								"Cambias dos de sus stats por tu Sabiduría.",
+								"Su CA aumenta en una cantidad equivalente a tu BC hasta 22, siempre que tenga armadura natural.",
+								"Un tipo de salvaciones provocadas por la criatura objetivo pasa a ser tu salvación de pociones. Si la criatura puede provocar más de un tipo de salvación, esta poción solo tiene efecto en una. (Esta opción puede elegirse varias veces.)",
+								"La Criatura adquiere una cantidad de pies extra igual a BCx5 en una de sus movilidades (Esta opción puede elegirse varias veces).",
+								"Los HP de la criatura aumentan en 10 x tu BC La criatura será inmune a otras tomas del mismo tipo de poción durante la duración. Una criatura que beba esta poción y no sea una quimera recibirá {@dice 2d10} de daño por ácido y no recibirá ningún efecto."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"A partir de lv7 puedes elegir dos rasgos, al 12 tres y a partir de lv17, cuatro."
+					]
+				}
+			]
+		},
+		{
+			"name": "Cieno Transmutante",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Animal x2 y vial de cieno (cualquiera)",
+				"ingredientTypes": [
+					"Animal"
+				],
+				"range": "Beber",
+				"use": "Acción",
+				"duration": "1 hora"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"La piel de la criatura que lo bebe se torna del color del cieno y adquiere una textura viscosa y acuosa. El objetivo gana la posibilidad de usar su acción para transformarse en una forma líquida o volver a su forma normal. En forma líquida adquiere las siguientes ventajas y desventajas:",
+						{
+							"type": "list",
+							"items": [
+								"Puede pasar por espacios de 5 cm y pasar u ocupar el espacio de otra criatura sin que esta sea terreno dificil.",
+								"Su velocidad de andar es de 10 pies, pero gana una velocidad de trepado de 10 pies y de nado 40 pies.",
+								"Es resistente a los daños físicos e inmune al ácido",
+								"Ventaja en salvaciones de Fuerza, Destreza y Constitución",
+								"Inmunidad a Prone",
+								"No puede hablar, castear conjuros, interactuar con objetos ni blandir armas.",
+								"Cualquier equipo que lleve se funde con él.",
+								"Está sujeto bajo los efectos de Protección Ácida de lv 2",
+								"Actúa como agua para efectos donde sea relevante, como al apagar llamas no mágicas o limpiar superficies."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Aceite Alquímico",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Animal x2 y Vegetal x2 (puede cambiar cada ingrediente por alcohol o aceite)",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "Instantáneo"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Lanzas el frasco a 20 pies de ti para formar un charco de grasa de 3x3. Cualquier criatura en el área salva Destreza o se ve embadurnado en el aceite. Mientras no lave el aceite, con una acción y agua abundante o viento a presión, se prenderá fuego cada vez que reciba daño de fuego. El ataque que inicie las llamas añade tu Wisdom y tu BC al daño del efecto o ataque, y el daño residual es igual a tu modificador de Wisdom. El fuego arde 1 minuto y luego acaba con todo el aceite. Si una criatura ha ardido durante todo el minuto, recibe vulnerabilidad al fuego durante los próximos 10 minutos, o anula resistencia si la tenía. Este efecto no anula inmunidades. De atacarse con fuego en el área, o a una criatura dentro del aceite, este estallará. Una explosión cubrirá un área de 5x5 centrado en el centro del aceite, haciendo el doble del daño base (Wis+BC) a cualquier criatura que no salve Destreza sobre tu CD, o la mitad en un éxito. Esta explosión consume el aceite que haya podido impregnar a una criatura sin darle la vulnerabilidad al fuego. Si lo que prende el área es un efecto de área como Bola de Fuego, este aceite solo extiende el área, sin aportar daño extra, y consume el aceite."
+					]
+				}
+			]
+		},
+		{
+			"name": "Brebaje de Entendimiento",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Animal y Otro",
+				"ingredientTypes": [
+					"Animal",
+					"Otros"
+				],
+				"range": "Beber",
+				"use": "Acción",
+				"duration": "10 minutos"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"La criatura que beba este brebaje será capaz de entender cualquier idioma hablado o escrito."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Al subir al lv 7 puede hacerse entender para cualquiera capaz de entender un idioma, al 12 es capaz de escribir en cualquier idioma que haya visto escrito y al 17 ya no necesita basarse en idiomas para entender o hacerse entender hablando."
+					]
+				}
+			]
+		},
+		{
+			"name": "Fango cegador",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Mineral, Vegetal x2 y Otro",
+				"ingredientTypes": [
+					"Vegetal",
+					"Mineral",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "Instantáneo"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Arrojas un vial con un ungüento fangoso directamente a la cara del objetivo. Con un impacto el objetivo recibe {@dice 1d4}+Modificador de daño cortante y queda cegado. El objetivo puede usar su acción para quitarse el fango. Un chorro de agua a presión también le limpia la cara, pero le hace {@dice 1d4} de daño por clavarle aún más los cristales. Para retirar estos cristales el objetivo o un aliado puede usar su acción para hacer una tirada de medicina (con desventaja si es a sí mismo) sobre tu CD de potis. Mientras tenga los cristales en los ojos, tiene desventaja a percepción y su rango de visión se reduce a 30 pies. De volver a usar esta poción en un mismo objetivo, si no se limpió los cristales, añadirá {@dice 1d4} al daño. Aún podrán quitar todos los cristales con la misma acción."
+					]
+				}
+			]
+		},
+		{
+			"name": "Pociones Vinculantes",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Mineral x1 y Otro x2 (hay que hacer dos de estas para poder usarlas)",
+				"ingredientTypes": [
+					"Mineral",
+					"Otros"
+				],
+				"range": "Acción y Bonus (o dos Acciones)",
+				"use": "Acción",
+				"duration": "1 minuto"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Con una bonus (o una acción) viertes el contenido de esta poción en un carcaj o en una bolsa que contenga proyectiles. Alternativamente puedes untar hasta tres armas arrojadizas. En el momento en el que usas la primera poción tienes 1 minuto para acertar un ataque con otra Poción Vinculante a una criatura de tu elección. Con un impacto, todos los proyectiles afectados acertarán sus tiradas de ataque contra la criatura objetivo. Aún debes tirar un ataque. Con un crítico, añade un dado al daño total. Con una pifia el proyectil pierde el efecto y requiere una tirada normal (rerolleas el ataque)."
+					]
+				}
+			]
+		},
+		{
+			"name": "Compuesto Antiaéreo",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Mineral x2 Animal y Otro (no rompe el vial)",
+				"ingredientTypes": [
+					"Animal",
+					"Mineral",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "10 minutos"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Sacas un moco flácido del vial y lo arrojas a una criatura que pueda volar dentro del área. Haz una tirada de ataque. Con un éxito, el moco se pega en la criatura y se endurece. Uno solo de estos compuestos basta para que una criatura pequeña o diminuta pierda toda su velocidad de vuelo y una mediana la mitad. Para criaturas más grandes, deberá tirarse una por cada casilla que ocupe en el mapa (2 para las medianas). Pasados los 10 minutos, el compuesto se seca y se despega."
+					]
+				}
+			]
+		},
+		{
+			"name": "Glucosa de Conservación",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Vegetal 6, Animal 2 y Otros x7 (alcohol al menos 3 | vinagre al menos 3) [para todos los usos]",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal",
+					"Otros"
+				],
+				"range": "un recipiente de 2 litros o más",
+				"use": "",
+				"duration": "Indefinida"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Esta solución viscosa pero líquida de brillante azul cian ayudará a conservar material orgánico. Toda criatura muerta que se sumerja en esta solución dejará de descomponerse indefinidamente y tampoco podrá ser revivida. Pueden combinarse varias tandas de esta solución para llenar recipientes más grandes, o cocinarse directamente en estos si son aptos para utilizarse a modo de caldero. Esta solución no preserva otros ingredientes de alquimia."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Esta poción no necesita ser contenida con las herramientas de alquimia, pero en el descanso en el que se produzca no podrán crearse otros tipos de pociones."
+					]
+				}
+			]
+		},
+		{
+			"name": "Suero de la verdad",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 10,
+				"ingredients": "Animal x2, Vegetal y Otros (alcohol)",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal",
+					"Otros"
+				],
+				"range": "Beber",
+				"use": "Acción",
+				"duration": "1h"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Consigue que alguien lo tome y te contará todo lo que necesites saber sin oponer resistencia, pero ten en cuenta que puede ser consciente de ello, así que quizá guarde silencio o de un rodeo en su explicación."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Lanzar esta poción no obliga al objetivo a hacer tiradas de ningún tipo, debe beberse todo el frasco e inmediatamente sucumbirá a los efectos."
+					]
+				}
+			]
+		},
+		{
+			"name": "Poción de Control Mental",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 10,
+				"ingredients": "Otros x4 (alcohol al menos 2)",
+				"ingredientTypes": [
+					"Otros"
+				],
+				"range": "Beber",
+				"use": "Acción",
+				"duration": "3h"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Obliga o convence a alguien para que beba esta poción y podrás controlarle durante tres horas, sin excepciones. Las criaturas con inmunidad al encantamiento son inmunes a esta poción. El individuo puede liberarse si supera una tirada de salvación de Inteligencia con tu CD de Salvación de pociones que podrá repetir cada vez que le des una orden, sea cual sea. Si la orden es directamente peligrosa para el objetivo, hará la tirada con ventaja."
+					]
+				}
+			]
+		},
+		{
+			"name": "Poción de Lavado Mental",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 10,
+				"ingredients": "Otros x2 (alcohol al menos 1) y Vegetal x2",
+				"ingredientTypes": [
+					"Vegetal",
+					"Otros"
+				],
+				"range": "beber/4 casillas",
+				"use": "Acción",
+				"duration": "Indefinida o hasta que recupere la memoria por medios mágicos"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"El objetivo olvida todo lo ocurrido durante la última hora al ingerir u oler el brebaje. Si era hostil, olvidará también por qué te atacaba, a menos que viniese de antes de esa hora, dejando de ser hostil hasta que se le vuelva a atacar o hasta que vuelva a tener motivos para volver a serlo. Si se pretende hacer que lo huela lanzando la poción, deberá realizar una tirada de salvación de Constitución sobre tu CD de salvación de pociones."
+					]
+				}
+			]
+		},
+		{
+			"name": "Potencia Animal de Drasus",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 10,
+				"ingredients": "Animal x2, Otros x2",
+				"ingredientTypes": [
+					"Animal",
+					"Otros"
+				],
+				"range": "beber",
+				"use": "Reacción al tirar iniciativa",
+				"duration": "1 turno"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Puedes beber esta poción inmediatamente antes de lanzar iniciativa (sacar esta poción de donde la tengas forma parte de la reacción). Te garantizará ser el primero en iniciativa y, además, tendrás doblado el modificador de fuerza durante el primer turno (si es negativo o cero pasará a ser de +2). Además podrás moverte el doble de tu movilidad normal. Habrás gastado tu reacción de esa ronda. Durante este combate tienes ventaja en checks de fuerza contra ser grappleado o proneado, salvaciones de Fuerza, Destreza y Constitución y no pueden golpearte crítico mientras estés consciente y/o de pie."
+					]
+				}
+			]
+		},
+		{
+			"name": "Ungüento Elemental",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 10,
+				"ingredients": "Vegetal x2 y un ingrediente para el daño (Mineral para fuego o rayo, Otro para frío y Vegetal o Animal para veneno y ácido)",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal",
+					"Mineral",
+					"Otros"
+				],
+				"range": "untar en arma o en la piel/pieza de armadura con la que se pretende golpear",
+				"use": "Acción adicional",
+				"duration": "1 minuto"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Esta solución viscosa puede ser untada en un arma, o en un objeto o parte del cuerpo con la que se pretenda golpear. El daño que normalmente haría el arma es ahora el del ungüento. No tiene ningún efecto cutáneo dañino, pero de ingerirse hará {@dice 1d12} del daño de la poción."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"A partir de lv 15 añadirá los modificadores de Sabiduría de aquel que la preparó y de aquel que la utilizó. De ser la misma persona, se sumará el modificador dos veces."
+					]
+				}
+			]
+		},
+		{
+			"name": "Filtro de Amor",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 10,
+				"ingredients": "Otros x2 (alcohol al menos 1) y Vegetal x2",
+				"ingredientTypes": [
+					"Vegetal",
+					"Otros"
+				],
+				"range": "beber",
+				"use": "Acción",
+				"duration": "1 Hora"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Si una criatura bebe el contenido de este filtro, será hechizada por la primera criatura que vea justo después hasta un lapso de diez minutos. Mientras esté hechizada, la criatura considerará como su amor verdadero al encantador. Este tendrá éxito en cualquier tirada de habilidad de Carisma contra esta y tendrá ventaja en las de Sabiduría e Inteligencia. Además, el objetivo fallará automáticamente cualquier tirada de Salvación de Carisma o checks de Insight contra esa criatura."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Si la criatura encantada es dañada por la criatura que le encantó, directa o indirectamente, recibirá {@dice 2d10} de daño psíquico extra y el efecto terminará. El daño puede ser emocional en lugar de físico, como un insulto, un desprecio o una ruptura, entre otros ejemplos."
+					]
+				}
+			]
+		},
+		{
+			"name": "Alma Filosofal Embotellada",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 10,
+				"ingredients": "Vegetal, Animal y Mineral x2",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal",
+					"Mineral"
+				],
+				"range": "Beber",
+				"use": "Acción",
+				"duration": "10 minutos"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Debe beberlo un cadáver en proceso de descomposición no muy avanzado. Al hacerlo, el líquido rojo te dará control completo sobra la criatura, que utilizará la ficha del Undead Spirit Pútrido como si hubiese sido creado con un espacio de conjuro de lv3. Su bonificador de ataque es tu modificador de Sabiduría +BC. Durante la duración el proceso de descomposición acelerará, causando el colapso de la criatura pasados 10 minutos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Para procesos de resurrección arcana, cada minuto bajo este efecto es un día, y el hecho de usar esta poción anula instantáneamente el Revivify."
+					]
+				}
+			]
+		},
+		{
+			"name": "Ungüento Antimagia",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 10,
+				"ingredients": "Vegetal x3, Animal y Sangre de niño",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal"
+				],
+				"range": "Toque o 4 casillas",
+				"use": "Acción",
+				"duration": "Instantáneo o 1 minuto"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Puedes aplicar este ungüento de tres formas diferentes:",
+						{
+							"type": "list",
+							"items": [
+								"Puedes embadurnar un objeto mágico para eliminar cualquier magia que le afecte o en que esté imbuido si su poder mágico (a discreción del DM) es de un lv de conjuro igual o menor a tu BC.",
+								"Puedes embadurnarlo en una herida mágica para eliminar cualquier efecto, maldición o enfermedad mágica siempre y cuando su poder mágico (a discreción del DM) sea de un lv de conjuro igual o menor a tu BC.",
+								"Puedes cubrir total o parcialmente a una criatura grande o más pequeña con este ungüento si aciertas una tirada de ataque. con un impacto, pierde cualquier efecto mágico o conjuro que le estuviera afectando y, si se estaba concentrando en algún otro, pierde la concentración. Cada vez que esta criatura vaya a lanzar un conjuro de lv igual o menor al BC, deberá superar una salvación de Constitución. De fallar, el conjuro no llega a castearse y el espacio se gasta. Una criatura puede usar un turno entero para limpiarse por completo. Mientras no lo haga, también tiene resistencia a cualquier daño mágico y no se le puede targetear para afectarle mágicamente."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Licor Salvaje",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 10,
+				"ingredients": "Animal x3, Otros x3 (todo alcohol)",
+				"ingredientTypes": [
+					"Animal",
+					"Otros"
+				],
+				"range": "Beber",
+				"use": "Acción",
+				"duration": "10 minutos"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"La criatura que beba este licor siente cómo la voluntad filosofal se adueña de su mente y potencia su cuerpo. Mientras duren los efectos, suma tu modificador de Wisdom a la CA sin armadura (incluso si tiene rasgos como Natural Armor, Defensa sin Armadura y Suave Defense), es resistente a los daños físicos y podrá hacer ataques desarmados añadiendo tu modificador de wisdom tanto al ataque como al daño. Además harán {@dice 1d8} contundente si hacían menos. Cuando el efecto acabe, la criatura objetivo recibirá 4 estadios de borrachera."
+					]
+				}
+			]
+		},
+		{
+			"name": "Elixir de la vida",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 15,
+				"ingredients": "Mineral x6 o Sangre de Niño; y Vegetal",
+				"ingredientTypes": [
+					"Vegetal",
+					"Mineral"
+				],
+				"range": "beber",
+				"use": "Acción",
+				"duration": "Inmediata"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Dáselo de beber a alguien que no lleve muerto más de una decana y revivirá con la mitad de sus HP, incluso si la criatura no quería ser revivida. Al hacerlo regenera miembros faltantes, cura cualquier enfermedad no genética y elimina maldiciones menores. También puede usarse como ingrediente en ciertas transmutaciones como sustitutivo de la Piedra Filosofal, la sangre de niño, el mercurio y el azufre; o ambas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Si lo bebe una criatura viva regenerará miembros amputados y la mitad de sus HP máximos. Además, curaría enfermedades y venenos."
+					]
+				}
+			]
+		},
+		{
+			"name": "Poción Multijugos",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 15,
+				"ingredients": "Vegetal, Otros x2 y ADN de transformación",
+				"ingredientTypes": [
+					"Vegetal",
+					"Otros"
+				],
+				"range": "beber",
+				"use": "Acción",
+				"duration": "1h"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Si consigues ADN de aquello en lo que te quieres convertir podrás transformarte en ello (sin limite de CR)."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Ha de superarse una tirada de salvación de inteligencia cuya CD será igual al challenge de la criatura + 7. De fallar, tu mente colapsará y actuarás como si de verdad fueses dicha criatura durante una hora. El DM te dirá qué debes hacer o cómo debes actuar."
+					]
+				}
+			]
+		},
+		{
+			"name": "Esencia Mágica Embotellada de Ruvyn",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 15,
+				"ingredients": "Vegetal x10",
+				"ingredientTypes": [
+					"Vegetal"
+				],
+				"range": "Beber",
+				"use": "Acción",
+				"duration": "1 minuto"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Un antiguo experto en magia y alquimia logró reunir una variedad de hierbas capaces de aumentar temporalmente la magia de quien lo ingiere. El usuario ganará una cantidad de espacios de conjuro igual a su nivel más alto de conjuros. Puede elegir combinar esta cantidad con espacios de niveles inferiores. Pueden canjearse en su lugar un arcanum y repartirse como conjuros menores (el brujo deberá tener conjuros que, en su forma base, sean de dichos niveles o inferiores, o no podrá canjearlo). El espacio en cuestión no soportará el conjuro Wish en ningún caso. Pasado un minuto, los espacios no gastados desaparecen. Si no tienes espacios de conjuro, esta poción sólo ayudará a saciar el hambre y la sed."
+					]
+				}
+			]
+		},
+		{
+			"name": "Agua de Ki",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 15,
+				"ingredients": "Vegetal x7 y 3 Otros",
+				"ingredientTypes": [
+					"Vegetal",
+					"Otros"
+				],
+				"range": "beber",
+				"use": "Acción",
+				"duration": "1 minuto"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						": Un líquido verdoso y muy aromático te otorgará 5 puntos de Ki extra durante 1 minuto. Cuando vayas a gastar puntos de ki, gastarás estos puntos temporales antes que los que ya tengas. Pasado el minuto, perderás los que no hayas gastado. Si no tienes la habilidad de usar el ki, esta poción sólo ayudará a saciar el hambre y la sed."
+					]
+				}
+			]
+		},
+		{
+			"name": "Bomba Aniquiladora",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 15,
+				"ingredients": "Baba de Caracol Explosivo, Mineral, Otro, Animal y 3 de un ingrediente más según daño (ver en descripción)",
+				"ingredientTypes": [
+					"Animal",
+					"Mineral",
+					"Otros"
+				],
+				"range": "2 o 4 casillas",
+				"use": "Acción",
+				"duration": "Instantáneo"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						": Al arrojar esta mezcla, el usuario puede elegir arrojarla de forma que el contenido del frasco se expanda en un área redonda (20 pies de diámetro) si lo lanza sin más, o en un cono de 25 pies si lo tira raso al suelo (alcance reducido a la mitad). Cualquier criatura en el área debe superar una tirada de salvación de Constitución. De fallar, recibe {@dice 10d10} de daño por fuego o relámpago, si se añadió Mineral; frío, si se añadió Otro; o Veneno o Ácido (si se añadió Vegetal y/o Animal); la mitad si la supera."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Cualquier objeto inanimado o planta recibe el daño máximo y falla la tirada de salvación. Además, de no destruirse, se prenden fuego si recibieron los dos primeros daños o se escarchan (terreno difícil y CD 10 para no caerse) con el tercer daño."
+					]
+				}
+			]
+		},
+		{
+			"name": "Combustible Filosofal",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 15,
+				"ingredients": "Una de cada x5",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal",
+					"Mineral",
+					"Otros"
+				],
+				"range": "Beber",
+				"use": "Acción",
+				"duration": "Instantánea"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Si se da de beber esto a una quimera creada a través del Ritual de Transmutación que haya muerto en los últimos diez días, esta revivirá con 1 HP y sufre una penalización de -4 a todas las tiradas de ataque, tiros de salvación y pruebas de habilidad. Cada vez que el objetivo finaliza un descanso prolongado, la penalización se reduce en 1 hasta que desaparece. No recupera HP hasta haber acabado con las penalizaciones, y tampoco lo hará de ninguna otra forma."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"En caso de que otra criatura ingiera esta pócima, recibe {@dice 4d10} de daño por ácido."
+					]
+				}
+			]
+		},
+		{
+			"name": "Bomba de Fotones",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 15,
+				"ingredients": "Mineral x3, Otros x4, Poción Luminiscente x2",
+				"ingredientTypes": [
+					"Mineral",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción (y Bonus)",
+				"duration": "1 minuto"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Lanzas el frasco en un punto que puedas ver a 20 pies. Toda criatura a 60 pies salva constitución sobre tu CD de potis o queda cegada y stuneada por un minuto. Pueden salvar de nuevo al final del turno. Puedes usar la bonus para hacer un gesto o decir una contraseña que tus aliados entiendan como un aviso. Toda criatura de tu elección que vaya a verse afectada puede salvar con ventaja. De fallar solo estarán cegados."
+					]
+				}
+			]
+		},
+		{
+			"name": "Ácido Corrosivo",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 15,
+				"ingredients": "Vegetal x2 Mineral x7, Otro x2",
+				"ingredientTypes": [
+					"Vegetal",
+					"Mineral",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "1 minuto"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Cubres a una criatura en un ácido que corroe la piel y el equipo de la criatura objetivo. Haz una tirada de ataque contra la criatura:",
+						{
+							"type": "list",
+							"items": [
+								"Con un impacto la criatura se ve cubierta. Por 1 minuto, recibe {@dice 3d6} por ácido al inicio de su turno, y {@dice 3d6} al final. Si la criatura tenía Natural Armor o no llevaba armadura, rerolea 1 y 2 y te quedas con la nueva tirada. La criatura puede limpiarse automáticamente con agua o usar una acción para salvar destreza y limpiar el ácido. Si la criatura cae a 0 HP, sea o no por esta fuente de daño, se descompone junto con cualquier equipo no mágico si el ácido seguía activo.",
+								"Con un fallo, generas un charco de 3x3 centrado en la criatura. Toda criatura que empiece su turno en este área recibe {@dice 3d6} por ácido. Si acaba su turno en el área, también recibe el daño, incluso aunque ya lo haya recibido este turno. Pasado un minuto el ácido se neutraliza y pierde efecto. Cualquier quemadura causada por el ácido es permanente. Si causó 20 de daño o más, puede llegar a desfigurar la cara o cualquier punto del objetivo a discreción del DM, teniendo (o no) repercusiones mecánicas."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Poción de Gargantúa",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 15,
+				"ingredients": "Animal x5, Vegetal, Mineral x6",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal",
+					"Mineral"
+				],
+				"range": "Beber",
+				"use": "Acción",
+				"duration": "1 minuto"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Cuando una criatura bebe esta poción, empieza a crecer hasta ocupar 9 casillas (3x3), o 2x2 si no cabía.",
+						{
+							"type": "list",
+							"items": [
+								"Si creció 2 tallas, su Fuerza y Constitución aumentan hasta el 24 (+7), y su capacidad de carga se multiplica por 8. No gana la vida extra que debería, pero recibe HPT igual a tu lv+tu Wisdom + tu BC. Mientras dure el efecto añade tu Wisdom al daño.",
+								"Si solo creció 1 talla, Su Fuerza y Constitución aumentan hasta el 20 (+5), su capacidad de carga se multiplica por 4. Tampoco gana la vida extra que debería, pero recibe HPT igual a tu lv. Mientras dure el efecto añade tu Wisdom al daño."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Veneno Lento",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 15,
+				"ingredients": "Frasco de veneno x2, Vegetal x7, Animal x3",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal"
+				],
+				"range": "Beber",
+				"use": "Acción",
+				"duration": "6 días"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Cuando esta poción es ingerida, recibe {@dice 3d10} de daño por veneno. Mientras duren los efectos del veneno, la criatura es inmune a los efectos, mágicos y mundanos, que curen el veneno y los puntos de agotamiento. No puede recuperar puntos de agotamiento al final de descansos largos. Al final de estos puede salvar constitución sobre tu CD de pociones. Con un fallo recibe 1 punto de agotamiento. Si al final del sexto día no tiene los 6 PtA, el veneno remite y podrá empezar a recuperarlos de manera normal por cualquier medio."
+					]
+				}
+			]
+		},
+		{
+			"name": "Vinagre Debilitador",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 15,
+				"ingredients": "Vegetal x6, Animal x3, Otros x4 (alcohol al menos 1 y vinagre al menos 2)",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal",
+					"Otros"
+				],
+				"range": "Beber o 4 casillas",
+				"use": "Acción",
+				"duration": "10 minutos"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Una criatura que beba, voluntariamente o no, este compuesto sentirá fuertes mareos y las extremidades entumecidas. Mientras dure el efecto está dazed y ataca con desventaja. Además, recibirá la mitad del daño que haga con el primer ataque que impacte en su turno. Puede salvar al final de cada minuto."
+					]
+				}
+			]
+		},
+		{
+			"name": "Poción de Drenaje Arcano",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 15,
+				"ingredients": "Vegetal x3, Mineral x3, Otro x3 (alcohol al menos 1), Ungüento Antimagia",
+				"ingredientTypes": [
+					"Vegetal",
+					"Mineral",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "Instantánea"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Haces un ataque contra la criatura objetivo. Con un impacto recibe {@dice 1d4}+modificador. Tira {@dice 1d6}. Pierde una cantidad de espacios de conjuro igual al sumatorio del dado, empezando desde los más pequeños. Si la criatura tenía innate spellcasting y espacios de conjuro, afecta primero a los espacios. Si solo tenía Innate Spellcasting, perderá usos de conjuro igual al nivel del sumatorio (Barlgura: si sacó 4, pierde 2 usos de Disguise Self y 1 de Invisibility). Si no puede borrar un conjuro por completo (sobra 1 en el sumatorio y tiene un espacio de lv2), el conjuro no se gasta. Además, salva Constitución sobre tu CD de potis. Con un fallo, es afectado por la enfermedad de Hipo Arcano."
+					]
+				}
+			]
+		},
+		{
+			"name": "Licor Relajante (Lv1)",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Animal/Vegetal x3 y alcohol",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal",
+					"Otros"
+				],
+				"range": "Beber",
+				"use": "Acción",
+				"duration": "1 hora"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Al beber esta poción el objetivo reduce su estrés en una cantidad igual a tu modificador de Wisdom+tu BC y gana 2 estadios de borrachera. Mientras dure la poción tiene ventaja en las tiradas de miedo, pánico, locura y cordura, y de recibir PtE solo recibirá la mitad."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"A lv 3 haces que tenga 2 usos, al 7 tiene 3 y al 12 4 y al 17 al 5."
+					]
+				}
+			]
+		},
+		{
+			"name": "Amplitud de Sentidos (lv5)",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Animal x1, Vegetal x2 y Alcohol x1",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal",
+					"Otros"
+				],
+				"range": "Beber",
+				"use": "Acción",
+				"duration": "1 Hora"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Al beber esta solución eres capaz de abrir tus sentidos más allá del límite posible. Mientras dure la poción, ganas Tremorsense 30 ft. Al acabar el efecto ganas 2 estadios de borrachera."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"A partir del lv11 el rango aumenta a 60 ft y podrás añadir otro ingrediente de alcohol para cambiar tremorsense por thermalsense o visión en el plano etéreo; luego tendrás 4 estadios en vez de 2. A partir del lv17 el rango aumenta a 90ft y puedes añadir otro alcohol para electricsense y 6 estadios. Alternativamente a este nivel, con un total 4 alcohol extra ganas truesight, pero ganas 8 estadios al final del efecto."
+					]
+				}
+			]
+		},
+		{
+			"name": "Bomba Magnética (lv 5)",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Mineral x3 y Otros x2",
+				"ingredientTypes": [
+					"Mineral",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción/reacción",
+				"duration": "1 minuto (acción) o 1 turno (reacción)"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Envuelves al objetivo en un campo estático. Durante 1 minuto, está bajo los efectos de levitación y aplica un bono igual a tu wisdom en sus tiradas para el daño eléctrico o lo reduce si va a recibir dicho daño. Alternativamente, cuando un efecto de área o ataque basado en electricidad fuera a hacer efecto a 20 ft de ti, puedes usar tu reacción para lanzar esta poción. Todo el daño del efecto se desvía para targetear a la poción o se pierde (si el daño extra de un arma fuera eléctrico pero te targetea igual, no recibes el daño extra). Al tirar la poción para desviar un ataque, puedes forzar que se targetee a otra criatura dentro de la casilla especificada (según el ejemplo, esa casilla y todas las criaturas dentro recibirían el daño extra del arma)."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"A partir del lv 7 puede controlar su movilidad mientras levita. Tiene una velocidad de 5 x tu modificador de Wisdom+BC. A partir de lv12 añade el wisdom al daño desviado y el área queda cargada 3 turnos. Toda criatura dentro del área recibe tu modificador de Wisdom en daño eléctrico si empieza su turno ahí. A lv17 el efecto de acción dura 10 minutos y el de reacción 5."
+					]
+				}
+			]
+		},
+		{
+			"name": "Aliento químico (lv1)",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Mineral, Vegetal y Alcohol +1 (ver descripción)",
+				"ingredientTypes": [
+					"Vegetal",
+					"Mineral",
+					"Otros"
+				],
+				"range": "Beber",
+				"use": "Acción",
+				"duration": "1 minuto"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Mientras dure, el objetivo puede usar su acción para exhalar un aliento de 15 ft (cono) de un tipo de daño que depende del ingrediente extra: fuego o relámpago, si se añadió Mineral; frío, si se añadió Otro; o Veneno o Ácido (si se añadió Vegetal o Animal). Toda criatura en el área salva destreza para recibir {@dice 4d4} o la mitad."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"El daño aumenta a {@dice 6d4} a lv 3, {@dice 9d4} a lv7 y a {@dice 12d4} a lv12 y {@dice 15d4} a lv17."
+					]
+				}
+			]
+		},
+		{
+			"name": "Bomba de Escarcha (lv5)",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Otros x2, Mineral y Vegetal (opcional: Mineral)",
+				"ingredientTypes": [
+					"Vegetal",
+					"Mineral",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "10 minutos"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Esta poción puede usarse de varias formas:",
+						{
+							"type": "list",
+							"items": [
+								"Targetear a una criatura. Haz una tirada de ataque contra un objetivo. Con un fallo, se targetea una superficie centrada donde estaba la criatura (ver siguiente). Con un impacto recibe {@dice 2d8} por frío y se cubre en escarcha. Hasta que se derrita, su movilidad se reduce a la mitad, pierde un ataque de su multiataque (si solo tenía un ataque aún puede hacerlo), salva destreza con desventaja y no tiene reacciones. Al final de su turno salva constitución para recibir {@dice 1d6} de daño por frío o nada. La criatura puede usar su acción en salvar destreza para quitarse la escarcha y acabar con el efecto. Si la criatura tenía resistencia al frío, tiene ventaja en las salvaciones para liberarse y para aguantar el daño residual.",
+								"Targetear una superficie. Un área de 20 ft de radio centrado en el punto de impacto pasa a estar cubierta de hielo. Este área pasa a ser terreno difícil 1/2. Una criatura que quiera moverse más rápido debe salvar destreza o caer prone y recibir el daño residual del efecto anterior. Alternativamente, tú y cualquier criatura que haya experimentado antes esta poción, podéis usar la bonus para tirar acrobacias CD 13 y patinar, ignorando restricciones a la movilidad y no provocando ataques de oportunidad. Con un fallo recibe el daño residual y cae prone. Si se usó el componente mineral opcional, el terreno difícil pasará a ser 1/3 y no se podrá patinar. Cualquier criatura dentro del área en el momento en el que se tiró la poción debe salvar Destreza. Con un fallo, recibe el daño residual y su movilidad se reduce a 0. Puede usar su acción para salvar fuerza y liberarse o para liberar a otra criatura. Al final de sus turnos salvan constitución para llevarse el residual. Beber.",
+								"Debe salvar Constitución. Con un fallo recibe {@dice 4d8} por frío y Fiebres Invernales o la mitad del daño y nada más. Una criatura inmune al frío no puede ser cubierta de escarcha ni es afectada por el terreno difícil del hielo (a menos que tenga el ingrediente mineral extra). Si una criatura apresada por el hielo o cubierta de escarcha recibe cualquier cantidad de daño por fuego o irradia calor por contacto, el efecto acaba. Si la superficie congelada recibe daño por fuego, ya sea por estar dentro de un conjuro de área como bola de fuego, ser targeteada por conjuros de fuego como fire bolt o scorching ray, o por el paso de una criatura que quema por contacto, como un elemental de fuego o alguien afectado por Ashardalon’s Stride, ese trozo de área se limpia. Si se usó el mineral extra y se limpió el área, sigue siendo terreno difícil 1/2."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"A los lv 7 y 17 los daños aumentan en {@dice 2d8} si usaban d8 ({@dice 4d8} y {@dice 6d8} para lanzar, y {@dice 6d8} y {@dice 8d8} para beber) y en 1 d6 los residuales ({@dice 2d6} y {@dice 3d6}). A lv12, si se targeteó a una criatura en concreto, pierde 2 ataques pero siempre podrá hacer un mínimo de 1."
+					]
+				}
+			]
+		},
+		{
+			"name": "Vapores del Nirvana (lv 5)",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 5,
+				"ingredients": "Vegetal x3, Alcohol, Otros (2 de los ingredientes deben ser alucinógenos, además del alcohol. Si no, habrá que añadirlos extra)",
+				"ingredientTypes": [
+					"Vegetal",
+					"Otros"
+				],
+				"range": "Beber",
+				"use": "Acción",
+				"duration": "10 minutos"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Al beber este brebaje entras en un trance que dura 10 minutos. Mientras dure, estás incapacitado y stunned. El trance acaba antes si recibes cualquier cantidad de daño. Al final, una verdad de tu elección se muestra ante ti en forma de profecía. Haz una pregunta al DM, que deberá responder de forma críptica y breve. Hay un 30% de posibilidades de que falle. El DM hace esta tirada en secreto. Nunca puede recibirse la misma verdad 2 veces. Tras el efecto ganas 1 estadio de borrachera. Alternativamente, puedes no hacer ninguna pregunta al DM. Entonces será este quien decida qué verdad contarte y cómo, pero siempre será verdad. De usarse de esta forma se ganan 3 estadios en vez de 1 si la visión era realmente útil, y 1 si no lo era. Solo tú, con tu Piedra Filosofal en la mano, puedes ser afectado por esta poción. Si bebes esta poción una segunda vez al día, ganas 4 estadios de borrachera y no hace efecto. Si alguien que no es tú bebe esta poción, gana 4 estadios de borrachera."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"El porcentaje de fallo baja a 25% a lv12 y a 15% a lv17."
+					]
+				}
+			]
+		},
+		{
+			"name": "Bomba Fétida Lv1",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 1,
+				"ingredients": "Animal x2 (si añades un Otro, Vegetal o Animal que sirva como recipiente, no gasta vial)",
+				"ingredientTypes": [
+					"Animal",
+					"Vegetal",
+					"Otros"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "1 minuto"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Cuando esta bomba impacte en una superficie o criatura estalla, creando un área de gas apestoso de 5 ft de radio (+). Toda criatura en el área cuando estalla salva constitución. Si impactó en una criatura, esta salva con desventaja. Con un fallo están envenenados y dazed 1 minuto. Toda criatura que empiece su turno o entre por primera vez en la nube está envenenada hasta el final de ese turno. Una criatura que acabe su turno en la nube salva constitución o queda envenenada 1 minuto. Todas las criaturas envenenadas de esta forma pueden salvar al final del turno, con desventaja si siguen la nube. Una ráfaga de aire de al menos 16 km/h disipa la nube por completo. El usuario, y tú, si la usó otra criatura, salva con ventaja."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"A lv3 el radio aumenta a 10 ft. El usuario ahora podrá avisar a sus aliados como parte de la acción, dando ventaja a las salvaciones. A lv7 el radio aumenta a 15 ft y eres inmune a esta poción si la creaste tú. A lv12 el radio aumenta a 20 ft y tus aliados son inmunes si les avisaste. A lv17 el radio es de 30 ft."
+					]
+				}
+			]
+		},
+		{
+			"name": "Bomba Química (lv 10)",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "POT",
+			"potion": {
+				"level": 10,
+				"ingredients": "Otro, Vegetal y Mineral +1 especial (ver descripción)",
+				"ingredientTypes": [
+					"Vegetal",
+					"Mineral",
+					"Otros",
+					"Especial"
+				],
+				"range": "4 casillas",
+				"use": "Acción",
+				"duration": "10 minutos"
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Descripción",
+					"entries": [
+						"Esta bomba de gas crea una nube de 10 ft centrado en un punto de tu elección. Toda criatura en el área salva constitución, con desventaja si la bomba impactó en ella. El efecto de la nube varía en función del componente especial que añadas, pero una salvación fallida siempre provocará una futura indigestión:",
+						{
+							"type": "list",
+							"items": [
+								"Polvo de hierro. Las criaturas dentro del área ganan 1 PtA y están envenadas 1 minuto, pudiendo salvar al final de cada turno. El gas es rojo y huele muy mal.",
+								"Polvo de Azufre. El rango de visión de la criatura se limita a 10 ft, tiene desventaja en percepción durante 10 minutos y desventaja en salvaciones contra daño radiante y efectos que puedan cegar. El gas es amarillo y pica a la vista y en la nariz.",
+								"Amoníaco líquido o en gas (pueden usarse 10 usos de Frasco de Amoníaco como componente). Reciben {@dice 4d10} de ácido o la mitad si salvan. Toda criatura que empiece su turno en el área recibe {@dice 1d10} por ácido al principio, y de nuevo al final de su turno si también acabó su turno aquí. El gas es azul claro y quema a la piel, ojos y nariz.",
+								"Polvo de Cobre. Reciben {@dice 2d4} por veneno o la mitad si salvan y pierden su resistencia al veneno. Si eran inmunes, ahora son resistentes. El efecto acaba al salir del área o al disiparse. El gas es verde y marea.",
+								"Arsénico. Reciben {@dice 5d10} por veneno o la mitad. De fallar, al final del turno vuelven a salvar para {@dice 1d10} o la mitad. Pasado un minuto deja de recibir el daño. Con 3 éxitos se salva del veneno. Volver a entrar en la nube o empezar el turno ahí hace que vuelvan a salvar si no estaban envenenados. Mientras sigan en la nube salvan constitución con desventaja. El gas es incoloro e invisible, y huele ligeramente a ajo."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"Al subir al lv 12 la nube es de 15 ft y al 17 de 20 ft."
+					]
+				}
+			]
 		}
 	]
 }

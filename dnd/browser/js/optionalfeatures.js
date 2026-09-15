@@ -18,7 +18,7 @@ class OptionalFeaturesPage extends ListPage {
 		const sourceFilter = SourceFilter.getInstance();
 		const typeFilter = new Filter({
 			header: "Feature Type",
-			items: ["AI", "ED", "EI", "MM", "MV", "MV:B", "OTH", "FS:F", "FS:B", "FS:P", "FS:R", "PB"],
+			items: ["AI", "ED", "EI", "MM", "MV", "MV:B", "OTH", "FS:F", "FS:B", "FS:P", "FS:R", "PB", "POT"],
 			displayFn: Parser.optFeatureTypeToFull,
 			itemSortFn: filterFeatureTypeSort
 		});
@@ -41,12 +41,16 @@ class OptionalFeaturesPage extends ListPage {
 			header: "Feature",
 			displayFn: StrUtil.toTitleCase
 		});
+		const ingredientFilter = new Filter({
+			header: "Ingredients",
+			items: ["Animal", "Vegetal", "Mineral", "Otros", "Especial"]
+		});
 		const levelFilter = new Filter({
 			header: "Level",
 			itemSortFn: SortUtil.ascSortNumericalSuffix,
 			nests: []
 		});
-		const prerequisiteFilter = new MultiFilter({header: "Prerequisite", filters: [pactFilter, patronFilter, spellFilter, levelFilter, featureFilter]});
+		const prerequisiteFilter = new MultiFilter({header: "Prerequisite", filters: [pactFilter, patronFilter, spellFilter, levelFilter, featureFilter, ingredientFilter]});
 
 		super({
 			dataSource: "data/optionalfeatures.json",
@@ -78,6 +82,7 @@ class OptionalFeaturesPage extends ListPage {
 		this._spellFilter = spellFilter;
 		this._featureFilter = featureFilter;
 		this._levelFilter = levelFilter;
+		this._ingredientFilter = ingredientFilter;
 	}
 
 	getListItem (it, ivI, isExcluded) {
@@ -112,6 +117,18 @@ class OptionalFeaturesPage extends ListPage {
 				return item;
 			});
 		}
+		if (it.potion) {
+			it._fPotionIngredients = it.potion.ingredientTypes || [];
+			this._ingredientFilter.addItem(it._fPotionIngredients);
+
+			const item = new FilterItem({
+				item: `Alquimista Level ${it.potion.level}`,
+				nest: "Alquimista"
+			});
+			this._levelFilter.addNest("Alquimista", {isHidden: true});
+			this._levelFilter.addItem(item);
+			it._fPrereqLevel = [item];
+		}
 
 		if (it.featureType instanceof Array) {
 			it._dFeatureType = it.featureType.map(ft => Parser.optFeatureTypeToFull(ft));
@@ -119,7 +136,7 @@ class OptionalFeaturesPage extends ListPage {
 			it.featureType.sort((a, b) => SortUtil.ascSortLower(Parser.optFeatureTypeToFull(a), Parser.optFeatureTypeToFull(b)));
 		} else {
 			it._dFeatureType = Parser.optFeatureTypeToFull(it.featureType);
-			it._lFeatureType = it.featureType;
+			it._lFeatureType = it.potion ? it._dFeatureType : it.featureType;
 		}
 
 		if (!isExcluded) {
@@ -133,8 +150,8 @@ class OptionalFeaturesPage extends ListPage {
 
 		const source = Parser.sourceJsonToAbv(it.source);
 		const hash = UrlUtil.autoEncodeHash(it);
-		const prerequisite = Renderer.utils.getPrerequisiteText(it.prerequisite, true, new Set(["level"]));
-		const level = Renderer.optionalfeature.getListPrerequisiteLevelText(it.prerequisite);
+		const prerequisite = it.potion ? it.potion.ingredients : Renderer.utils.getPrerequisiteText(it.prerequisite, true, new Set(["level"]));
+		const level = it.potion ? it.potion.level : Renderer.optionalfeature.getListPrerequisiteLevelText(it.prerequisite);
 
 		eleLi.innerHTML = `<a href="#${hash}" class="lst--border">
 			<span class="bold col-3-2 pl-0">${it.name}</span>
@@ -180,7 +197,8 @@ class OptionalFeaturesPage extends ListPage {
 					it._fPrereqPatron,
 					it._fprereqSpell,
 					it._fPrereqLevel,
-					it._fprereqFeature
+					it._fprereqFeature,
+					it._fPotionIngredients
 				]
 			);
 		});
@@ -189,8 +207,8 @@ class OptionalFeaturesPage extends ListPage {
 
 	getSublistItem (it, pinId) {
 		const hash = UrlUtil.autoEncodeHash(it);
-		const prerequisite = Renderer.utils.getPrerequisiteText(it.prerequisite, true, new Set(["level"]));
-		const level = Renderer.optionalfeature.getListPrerequisiteLevelText(it.prerequisite);
+		const prerequisite = it.potion ? it.potion.ingredients : Renderer.utils.getPrerequisiteText(it.prerequisite, true, new Set(["level"]));
+		const level = it.potion ? it.potion.level : Renderer.optionalfeature.getListPrerequisiteLevelText(it.prerequisite);
 
 		const $ele = $(`<li class="row">
 			<a href="#${hash}" class="lst--border">
