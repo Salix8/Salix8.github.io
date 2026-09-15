@@ -1,0 +1,318 @@
+{
+	"monster": [
+		{
+			"name": "Maztican Giant Eagle",
+			"source": "GMAM",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"A giant eagle is a noble creature that speaks its own language and understands speech in the Common tongue. A mated pair of giant eagles typically has up to four eggs or young in their nest (treat the young as normal eagles)."
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/MM/Giant Eagle.jpg"
+					}
+				}
+			]
+		},
+		{
+			"entries": [
+				"Portfolio: Estrellas, Meteoritos y Oro",
+				"Marido de {@creature Maztica, Madre de la Vida|GMAM|Maztica} y padre del resto del panteón",
+				"Abuelo de Molly",
+				"Rango: Greater Deity (Lesser Deity)"
+			],
+			"name": "Kukul, Antiguo Padre de los Dioses",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: la tierra y la vida",
+				"Madre de todo el panteón, mujer de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y abuela de Molly",
+				"Rango: Overgod (actualmente lesser deity)"
+			],
+			"name": "Maztica, Madre de la Vida",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: ",
+				"Hij@ de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y Xº hermano. Tí@ de Molly",
+				"Rango: X (quasi-deity)"
+			],
+			"name": "Ficha base de dios",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: Guerra, Violencia, Hishna",
+				"Hijo de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y 2º hermano. Tío de Molly",
+				"Rango: God (quasi-deity)"
+			],
+			"name": "Zaltec, la Mano Sangrienta",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: Sol, Calor y Fuego",
+				"Hijo de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y 3º hermano. Tío de Molly",
+				"Rango: God (quasi-deity)",
+				"18 clérigo de la luz + 2 de Mago Evocador + Renacer del Fénix y Dote de ignorar resistencias e inmunidades al fuego",
+				"{@b Macahuitl de Tezca}. Es una longsword +3 de obsidiana (ignora resistencias del daño del arma). Además, el objetivo salva destreza al ser golpeado (CD sobre la fuerza de Tezca) para prenderse fuego. Recibe 1d6 al inicio y al final de cada uno de sus turnos hasta que consiga apagarse.",
+				"{@b Armadura de Tezca}. Plate Armor +3 con Fire Shield siempre activo. Puede activarla para caminar sobre lava y \"respirar\" lava. La armadura es inmune al fuego, pero no garantiza esta inmunidad al portador (pero Tezca también es inmune, así que NP)."
+			],
+			"name": "Tezca, Señor del Sol y el Fuego",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: la tierra y la vida",
+				"Madre de todo el panteón, mujer de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y abuela de Molly",
+				"Rango: Overgod (actualmente lesser deity)"
+			],
+			"name": "Avatar de Maztica",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: Estrellas, Meteoritos y Oro",
+				"Marido de {@creature Maztica, Madre de la Vida|GMAM|Maztica} y padre del resto del panteón",
+				"Abuelo de Molly",
+				"Rango: Greater Deity (Lesser Deity)"
+			],
+			"name": "Avatar de Kukul",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: Sol, Calor y Fuego",
+				"Hijo de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y 3º hermano. Tío de Molly",
+				"Rango: God (quasi-deity)",
+				"18 clérigo de la luz + 2 de Mago Evocador + Renacer del Fénix y Dote de ignorar resistencias e inmunidades al fuego",
+				"{@b Macahuitl de Tezca}. Es una longsword +3 de obsidiana (ignora resistencias del daño del arma). Además, el objetivo salva destreza al ser golpeado (CD sobre la fuerza de Tezca) para prenderse fuego. Recibe 1d6 al inicio y al final de cada uno de sus turnos hasta que consiga apagarse.",
+				"{@b Armadura de Tezca}. Plate Armor +3 con Fire Shield siempre activo. Puede activarla para caminar sobre lava y \"respirar\" lava. La armadura es inmune al fuego, pero no garantiza esta inmunidad al portador (pero Tezca también es inmune, así que NP)."
+			],
+			"name": "Avatar de Tezca",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: ",
+				"Hij@ de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y 3º hermano. Tío de Molly",
+				"Rango: God (quasi-deity)",
+				"2 lv de bárbaro, 18 lv de Clérigo de la Tormenta + aura de Barbaro de la tormenta (frío) y 1 lv de subclase de hechicero tormentoso",
+				"{@b Alabarda de Azul}. Alabarda Finesse +3. Mientras esté atuneado a ella, puede hablar con bestias y monstruosidades marinas y tiene 20 cargas con las que puede castear los siguientes conjuros a dichas criaturas (1 pt x lv de conjuro):",
+				"- {@spell Command}",
+				"- {@spell Beast Bond|XGE}",
+				"- {@spell Beast Sense}",
+				"- {@spell Suggestion}",
+				"- {@spell Fast Friends|AI}",
+				"- {@spell Charm Monster|XGE}",
+				"- {@spell Dominate Beast}",
+				"- {@spell Geas}",
+				"- {@spell Mass Suggestion}",
+				"- {@spell Dominate Monster}",
+				"{@b Armadura de Azul}. Plate Armor +3. Permite detectar la presencia de cualquier criatura viva (con sangre) a 2 millas a la redonda mientras estés en el agua. Además no impone desventajas para moverte por el agua y elimina las desventajas de combate subacuático a su favor."
+			],
+			"name": "Azul, Señor del Agua y la Tormenta",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: ",
+				"Hij@ de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y 3º hermano. Tío de Molly",
+				"Rango: God (quasi-deity)",
+				"2 lv de bárbaro, 18 lv de Clérigo de la Tormenta + aura de Barbaro de la tormenta (frío) y 1 lv de subclase de hechicero tormentoso",
+				"{@b Alabarda de Azul}. Alabarda Finesse +3. Mientras esté atuneado a ella, puede hablar con bestias y monstruosidades marinas y tiene 20 cargas con las que puede castear los siguientes conjuros a dichas criaturas (1 pt x lv de conjuro):",
+				"- {@spell Command}",
+				"- {@spell Beast Bond|XGE}",
+				"- {@spell Beast Sense}",
+				"- {@spell Suggestion}",
+				"- {@spell Fast Friends|AI}",
+				"- {@spell Charm Monster|XGE}",
+				"- {@spell Dominate Beast}",
+				"- {@spell Geas}",
+				"- {@spell Mass Suggestion}",
+				"- {@spell Dominate Monster}",
+				"{@b Armadura de Azul}. Plate Armor +3. Permite detectar la presencia de cualquier criatura viva (con sangre) a 2 millas a la redonda mientras estés en el agua. Además no impone desventajas para moverte por el agua y elimina las desventajas de combate subacuático a su favor."
+			],
+			"name": "Avatar de Azul",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: Montaña, Roca",
+				"Hijo de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y 5º hermano. Tío de Molly",
+				"Rango: God (quasi-deity)",
+				"3 lv Druida Guerra, 10 lv Fighter Zealot, 3 lv bárbaro Totémico",
+				"{@b Corazón de la Montaña}. Artefacto que formaba parte del cuerpo original de Plutoq y que fue robado por Zotzilaha. Este artefacto maxeaba cualquier curación que recibiera el portador y le permitía hacer descansos largos en 4 horas y cortos en 10 minutos. Además aumentaba la CA del portador en 3."
+			],
+			"name": "Plutoq, la Montaña Andante",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: Montaña, Roca",
+				"Hijo de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y 4º hermano. Tío de Molly",
+				"Rango: God (quasi-deity)",
+				"3 lv Druida Guerra, 10 lv Fighter Zealot, 3 lv bárbaro Totémico",
+				"{@b Corazón de la Montaña}. Artefacto que formaba parte del cuerpo original de Plutoq y que fue robado por Zotzilaha. Este artefacto maxeaba cualquier curación que recibiera el portador y le permitía hacer descansos largos en 4 horas y cortos en 10 minutos. Además aumentaba la CA del portador en 3."
+			],
+			"name": "Avatar de Plutoq",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: Aire, Vientos",
+				"Hija de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y 9º hermana. Tía de Molly",
+				"Rango: God (quasi-deity)",
+				"3 lv Monk + 14 lv druid full subclase de los elementos del Monk y algún rasgo extra",
+				"{@b Rosa de los Vientos}. Este artefacto fue robado por Zotzilaha. Permite al portador estar bajo los efectos constantes de {@spell Feather Fall} y {@spell Fly} y permite castear {@spell Levitate} y {@spell Gust of Wind} at will. Gastando 1 carga (tiene 5) puede castear {@spell Wind Wall}, {@spell Control Winds|XGE} o {@spell Investiture of Wind|XGE}. Si es Eha quien está atuneada también puede usar cargas para {@spell Control weather}, {@spell Whirlwind|XGE}, {@spell Gravity Sinkhole|EGW} y {@spell Reverse Gravity}"
+			],
+			"name": "Eha, Duende del Viento",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: Aire, Vientos",
+				"Hija de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y 9º hermana. Tía de Molly",
+				"Rango: God (quasi-deity)",
+				"12 lv Monk + 5 lv druid full subclase del borracho con un rasgo del monko ventoso"
+			],
+			"name": "Avatar de Eha",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: Plantas, Agricultura",
+				"Hija de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y 7º hermana. Tía de Molly",
+				"Rango: God (quasi-deity)",
+				"Druida lv 17 con subclase de Paladín de los Ancestros y smites.",
+				"{@b Calavera de Watil} Maza +3 con reach 30 ft y hace d12. Tiene 10 cargas para:",
+				"- Animar Árboles a 30 ft (1 carga por árbol)",
+				"- Castear {@spell Spike Growth} (1 carga por cada 5 ft de rádio)",
+				"- {@spell Ira Del áRbol|GdR|ira del arbol}/{@spell Espíritu Del Sauce|GdR|espiritu del sauce} (3 cargas)",
+				"- {@spell Resurrection} (5 cargas)",
+				"- {@spell True Resurrection} (10 cargas)",
+				"- {@spell Control Fire|GPNM} (3 cargas)"
+			],
+			"name": "Watil, Guardiana de las Plantas",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: Plantas, Agricultura",
+				"Hija de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y 7º hermana. Tía de Molly",
+				"Rango: God (quasi-deity)",
+				"Druida lv 17 con subclase de Paladín de los Ancestros y smites.",
+				"{@b Calavera de Watil} Maza +3 con reach 30 ft y hace d12. Tiene 10 cargas para:",
+				"- Animar Árboles a 30 ft (1 carga por árbol)",
+				"- Castear {@spell Spike Growth} (1 carga por cada 5 ft de rádio)",
+				"- {@spell Ira Del áRbol|GdR|ira del arbol}/{@spell Espíritu Del Sauce|GdR|espiritu del sauce} (3 cargas)",
+				"- {@spell Resurrection} (5 cargas)",
+				"- {@spell True Resurrection} (10 cargas)",
+				"- {@spell Control Fire|GPNM} (3 cargas)"
+			],
+			"name": "Avatar de Watil",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: amor y fertilidad",
+				"Hija de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y 6º hermana. Tía de Molly",
+				"Rango: God (quasi-deity)",
+				"17 lv de Bardo con metamagias de hechicero y subclase de Mago de encantamiento",
+				"Spellcasting de warlock nerfeado",
+				"{@b Túnica del Amor Incondicional}. Esta túnica +3 confiere al portador la habilidad de crear un aura de 30 ft en la que toda criatura hostil esté bajo los efectos de {@spell Calm Emotions}. El portador puede usar una bonus action para comandar a una de estas criaturas como si estuviera bajo los efectos de {@spell command} y con 1 minuto puede comandarlos como si fuese {@spell suggestion}. Este charm dura hasta que salen del área."
+			],
+			"name": "Kiltzi, Diosa del Amor",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: Animales",
+				"Hija de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y 8º hermana. Tía de Molly",
+				"Rango: God (quasi-deity)",
+				"{@b Lanza de Nula}. {@item +3 spear|DMG|Lanza +3}. Las bestias y las monstruosidades con inteligencia de 5 o menos ven al portador como un aliado amistoso. Como bonus en su turno puede comandar a estas criaturas para que tomen acciones o cursos de acción simples. Además es un arma {@optfeature returning weapon|TCE} y añade 3d8 de fuerza al daño. "
+			],
+			"name": "Nula, Guardiana de los Animales",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: Animales",
+				"Hija de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y 8º hermana. Tía de Molly",
+				"Rango: God (quasi-deity)",
+				"{@b Lanza de Nula}. {@item +3 spear|DMG|Lanza +3}. Las bestias y las monstruosidades con inteligencia de 5 o menos ven al portador como un aliado amistoso. Como bonus en su turno puede comandar a estas criaturas para que tomen acciones o cursos de acción simples. Además es un arma {@optfeature returning weapon|TCE} y añade 3d8 de fuerza al daño. "
+			],
+			"name": "Avatar Híbrido de Nula",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Los Hitotsume Nyūdō  pueden pasar como humanos realmente altos vestidos con vestimentas de monje o de templo, a excepción de su único y enorme ojo en el centro de su cara. Visten ropas de lujo y viajan en enormes palanquines ornamentados cargados por yokai menores o esclavos humanoides. Estos palanquines muestran una enorme procesión de esclavos disfrazados para parecer el servicio de un noble realmente poderoso y rico. Muchos de quienes lo ven pasar se paran mirar, momento que el Hitotsume Nyūdō aprovecha para salir y capturarlos o devorarlos. ",
+				"Este tipo de comportamientos ha granjeado una increíble enemistad entre el Imperio Celestial y los Hitotsume Nyūdō, que se han unido al bando contrario. Esto se debe, en parte, a que son extremadamente sádicos, egoístas y agresivos. Vagan por caminos que conectan poblaciones capturando incautos.",
+				"Son capaces de crecer hasta superar los más altos árboles. Gtacias a esto su fuerza y velocidad aumenta, siendo capaces de cazar cualquier criatura que se propongan, y destruirlo todo a su paso si es necesario para hacerle salir de su escondite."
+			],
+			"name": "Avatar Bestial de Nula (tiny)",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Los Hitotsume Nyūdō  pueden pasar como humanos realmente altos vestidos con vestimentas de monje o de templo, a excepción de su único y enorme ojo en el centro de su cara. Visten ropas de lujo y viajan en enormes palanquines ornamentados cargados por yokai menores o esclavos humanoides. Estos palanquines muestran una enorme procesión de esclavos disfrazados para parecer el servicio de un noble realmente poderoso y rico. Muchos de quienes lo ven pasar se paran mirar, momento que el Hitotsume Nyūdō aprovecha para salir y capturarlos o devorarlos. ",
+				"Este tipo de comportamientos ha granjeado una increíble enemistad entre el Imperio Celestial y los Hitotsume Nyūdō, que se han unido al bando contrario. Esto se debe, en parte, a que son extremadamente sádicos, egoístas y agresivos. Vagan por caminos que conectan poblaciones capturando incautos.",
+				"Son capaces de crecer hasta superar los más altos árboles. Gtacias a esto su fuerza y velocidad aumenta, siendo capaces de cazar cualquier criatura que se propongan, y destruirlo todo a su paso si es necesario para hacerle salir de su escondite."
+			],
+			"name": "Avatar Bestial de Nula (small)",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Los Hitotsume Nyūdō  pueden pasar como humanos realmente altos vestidos con vestimentas de monje o de templo, a excepción de su único y enorme ojo en el centro de su cara. Visten ropas de lujo y viajan en enormes palanquines ornamentados cargados por yokai menores o esclavos humanoides. Estos palanquines muestran una enorme procesión de esclavos disfrazados para parecer el servicio de un noble realmente poderoso y rico. Muchos de quienes lo ven pasar se paran mirar, momento que el Hitotsume Nyūdō aprovecha para salir y capturarlos o devorarlos. ",
+				"Este tipo de comportamientos ha granjeado una increíble enemistad entre el Imperio Celestial y los Hitotsume Nyūdō, que se han unido al bando contrario. Esto se debe, en parte, a que son extremadamente sádicos, egoístas y agresivos. Vagan por caminos que conectan poblaciones capturando incautos.",
+				"Son capaces de crecer hasta superar los más altos árboles. Gtacias a esto su fuerza y velocidad aumenta, siendo capaces de cazar cualquier criatura que se propongan, y destruirlo todo a su paso si es necesario para hacerle salir de su escondite."
+			],
+			"name": "Avatar Bestial de Nula (medium)",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Los Hitotsume Nyūdō  pueden pasar como humanos realmente altos vestidos con vestimentas de monje o de templo, a excepción de su único y enorme ojo en el centro de su cara. Visten ropas de lujo y viajan en enormes palanquines ornamentados cargados por yokai menores o esclavos humanoides. Estos palanquines muestran una enorme procesión de esclavos disfrazados para parecer el servicio de un noble realmente poderoso y rico. Muchos de quienes lo ven pasar se paran mirar, momento que el Hitotsume Nyūdō aprovecha para salir y capturarlos o devorarlos. ",
+				"Este tipo de comportamientos ha granjeado una increíble enemistad entre el Imperio Celestial y los Hitotsume Nyūdō, que se han unido al bando contrario. Esto se debe, en parte, a que son extremadamente sádicos, egoístas y agresivos. Vagan por caminos que conectan poblaciones capturando incautos.",
+				"Son capaces de crecer hasta superar los más altos árboles. Gtacias a esto su fuerza y velocidad aumenta, siendo capaces de cazar cualquier criatura que se propongan, y destruirlo todo a su paso si es necesario para hacerle salir de su escondite."
+			],
+			"name": "Avatar Bestial de Nula (large)",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Los Hitotsume Nyūdō  pueden pasar como humanos realmente altos vestidos con vestimentas de monje o de templo, a excepción de su único y enorme ojo en el centro de su cara. Visten ropas de lujo y viajan en enormes palanquines ornamentados cargados por yokai menores o esclavos humanoides. Estos palanquines muestran una enorme procesión de esclavos disfrazados para parecer el servicio de un noble realmente poderoso y rico. Muchos de quienes lo ven pasar se paran mirar, momento que el Hitotsume Nyūdō aprovecha para salir y capturarlos o devorarlos. ",
+				"Este tipo de comportamientos ha granjeado una increíble enemistad entre el Imperio Celestial y los Hitotsume Nyūdō, que se han unido al bando contrario. Esto se debe, en parte, a que son extremadamente sádicos, egoístas y agresivos. Vagan por caminos que conectan poblaciones capturando incautos.",
+				"Son capaces de crecer hasta superar los más altos árboles. Gtacias a esto su fuerza y velocidad aumenta, siendo capaces de cazar cualquier criatura que se propongan, y destruirlo todo a su paso si es necesario para hacerle salir de su escondite."
+			],
+			"name": "Avatar Bestial de Nula (huge)",
+			"source": "GMAM"
+		},
+		{
+			"entries": [
+				"Portfolio: Creación, Libertad y Pluma",
+				"Hijo de {@creature Kukul, Antiguo Padre de los Dioses|GMAM|Kukul} y {@creature Maztica, Madre de la Vida|GMAM|Maztica} y 1º hermano. Tío de Molly",
+				"Rango: God",
+				"Él en realidad no es un dragón, y no puede hacer avatares. Se aparece como dragón mediante {@spell Illusory Dragon|XGE}"
+			],
+			"name": "Qotal, el Dios Emplumado",
+			"source": "GMAM"
+		}
+	]
+}

@@ -49,5 +49,7 @@
 	"WDH": "bestiary-wdh.json",
 	"WDMM": "bestiary-wdmm.json",
 	"TCE": "bestiary-tce.json",
-	"SCC": "bestiary-scc.json"
+	"SCC": "bestiary-scc.json",
+	"GPNM": "bestiary-gpnm.json",
+	"GMAM": "bestiary-gmam.json"
 }

@@ -19,5 +19,9 @@
 	"UAThatOldBlackMagic": "spells-ua-tobm.json",
 	"XGE": "spells-xge.json",
 	"TCE": "spells-tce.json",
-	"SCC": "spells-scc.json"
+	"SCC": "spells-scc.json",
+	"GdR": "spells-gdr.json",
+	"GPNM": "spells-gpnm.json",
+	"GMAM": "spells-gmam.json",
+	"CdS": "spells-cds.json"
 }

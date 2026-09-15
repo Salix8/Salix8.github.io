@@ -1,0 +1,2555 @@
+{
+	"spell": [
+		{
+			"name": "Cat Charm",
+			"level": 1,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "week",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"El caster elige un felino que pueda ver en el rango y que sea de CR igual a 2 por lv de conjuro. El felino no mágico salva wisdom. Con un fallo, está {@condition charmed} durante la duración del conjuro. El caster puede comandar a la criatura para que realice tareas sencillas, mande mensajes escritos a lugares que la criatura conoce o que proteja o ataque a ciertas criaturas. Cada comando es una acción.",
+				"Por cada kilómetro que el felino se aleje del caster puede volver a salvar para liberarse del conjuro.",
+				"El DM puede elegir que ciertas monstruosidades, aberraciones, fey, etc. similares a felinos puedan ser afectadas por este conjuro, como un tressym, un displacer o un Gremishka.",
+				"Solo puedes tener afectada a una criatura. Si casteas este conjuro en otro felino, el anterior se libera y huye, temiendo a la fuente de tu magia durante al menos 24 horas."
+			],
+			"source": "GMAM",
+			"components": {
+				"v": true,
+				"m": "Raspas de pescado y escamas de serpiente, que el conjuro consume"
+			},
+			"subschools": [
+				"hishna"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Por cada lv extra el CR aumenta en 2 y el rango al que el felino deba alejarse para salvar aumenta en 1 km."
+					]
+				}
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL"
+			]
+		},
+		{
+			"name": "Emboscada",
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Elije hasta 30 criaturas dentro del rango. Su apariencia cambia para mimetizarse con el entorno. Su pelo se convierte en rastas y cambia de color para asemejarse a las ramas, su piel también cambia de color, el olor desaparece...",
+				"Mientras dure el conjuro, y mientras los objetivos no hablen ni se muevan del sitio, tienen ventaja y suman tu modificador de spellcasting a las tiradas de sigilo para esconderse (únicamente).",
+				"En el momento que uno de los objetivos se mueva, hable, castee un conjuro o ataque, todos pierden los efectos del conjuro."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"hishna"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Barro, hierba u otro componente material relacionado con el terreno"
+			},
+			"abilityCheck": [
+				"dexterity"
+			],
+			"areaTags": [
+				"MT",
+				"S"
+			],
+			"miscTags": [
+				"SGT",
+				"RO",
+				"ADV"
+			]
+		},
+		{
+			"name": "Imagen Maldita",
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Creas una figura similar a un objetivo que conozcas y del cual sepas su ubicación aproximada. La figura tiene 100 HP. Con tu acción puedes dañar a la estatua o inmovilizarla. El objetivo recibe el daño que reciba la estatua y está automáticamente {@condition restrained} si decides inmovilizarla (acción de grapple).",
+				"La estatua es inmune a todo daño que no le sea aplicado con un arma a melé, y es resistente a los daños no físicos. EL objetivo recibe todo el daño necrótico. Sin embargo, este conjuro no matará a la criatura si le reduce a 0 HP. En cambio, lo dejará estable pero inconsciente.",
+				"La estatua no puede ser reparada de ninguna forma y se reduce a polvo cuando sus HP o los del objetivo bajan a 0."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"hishna"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "10 kg arcilla roja, una joya por valor de 10.000 GP y pelo, uñas o piel de la víctima, todo consumido por el conjuro",
+					"cost": 1000000
+				}
+			},
+			"damageInflict": [
+				"necrotic"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"PRM",
+				"RO"
+			]
+		},
+		{
+			"name": "Sequía",
+			"level": 3,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"El agua de un área de 15 ft de radio se seca. Las criaturas con sangre y/o agua en su organismo salvan Constitución para recibir {@dice 4d6} de daño necrótico o la mitad. Las plantas y las criaturas hechas enteramente de agua reciben el doble de daño y salvan con desventaja.",
+				"Las plantas no mágicas se secan automáticamente en el área y las charcas de hasta 1 ft de profundidad se seca. Si se riega mágicamente o se castea {@spell Dispel Magic}, la sequía en el área desaparece y el suelo vuelve a ser fértil."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"hishna"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Una pata disecada de rata del desierto"
+			},
+			"damageInflict": [
+				"necrotic"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"MT",
+				"S"
+			],
+			"miscTags": [
+				"PRM",
+				"SCL",
+				"RO",
+				"OBJ"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Hace {@dice 1d6} extra por cada lv extra de conjuro."
+					]
+				}
+			]
+		},
+		{
+			"name": "Incendio",
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Elije un punto que puedas ver dentro del área. Todos los objetos en un radio de 30 ft se prenden fuego al instante, recibiendo {@dice 3d6} de fuego por turno. Si lo casteaste centrado en ti, a ti no te afecta. Todas las demás criaturas dentro del área debe salvar destreza si llevaban equipados objetos inflamables. Con un fallo estos arden, recibiendo, tanto el equipo como la criatura, los {@dice 3d6}.",
+				"El fuego no es mágico y puede ser apagado por medios mundanos o mágicos. Una criatura puede volver a salvar destreza para apagarse el fuego. Una vez acaba el conjuro, este se apaga, a menos que estuviera quemando un objeto ya de por sí inflamable."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"hishna"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "aceite natural y alcohol"
+			},
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"MT",
+				"S"
+			],
+			"miscTags": [
+				"PRM",
+				"RO",
+				"LGT",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Heartsense",
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Agudiza su oído hasta el punto de escuchar los latidos del corazón. Eres capaz de detectar criaturas con corazón (latiente) y sangre caliente dentro del rango y la dirección en la que están respecto a ti. También puedes discernir el tamaño aproximado de la criatura."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"hishna"
+			],
+			"components": {
+				"v": true
+			},
+			"areaTags": [
+				"MT",
+				"S"
+			]
+		},
+		{
+			"name": "Llamada del Cazador",
+			"level": 1,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 3000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				},
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Salvaje",
+							"shortName": "Savage",
+							"source": "PHB"
+						}
+					}
+				]
+			},
+			"entries": [
+				"Atrae a todos los pájaros y mamíferos dentro del área para que se acerquen al caster. Este conjuro no da al caster la posibilidad de comandarlos, no los encanta y no hacen que sean amistosos con él. Mientras dure el conjuro los animales saben dónde se encuentra el caster y sienten la necesidad imperiosa de acercarse. Aún así, sus instintos son superiores. Si acercarse al caster fuera a ponerlos en peligro, quedan libres del conjuro. Ver al caster puede triggerear esta respuesta dependiendo de la criatura.",
+				"Una vez acabe el conjuro, los animales dentro del área dejan de sentirse atraídos, pero recuerdan haber sido atraídos hacia la zona.",
+				"La duración varía en función de si el caster decide o no concentrarse en el conjuro."
+			],
+			"source": "GMAM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un silbato tallado de la garra de un jaguar"
+			},
+			"subschools": [
+				"hishna"
+			],
+			"areaTags": [
+				"MT",
+				"S"
+			],
+			"miscTags": [
+				"SMN"
+			]
+		},
+		{
+			"name": "Hipnosis",
+			"source": "GMAM",
+			"level": 2,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "hierbas aromáticas"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Intentas charmear a una criatura que puedas ver dentro del rango y con la que estés manteniendo una conversación. Esta debe salvar wisdom, con ventaja si es hostil hacia ti. Si falla, está {@condition charmed} por ti mientras dure el conjuro o hasta que tú o algún aliado le dañe de cualquier forma. Si salvó, la criatura no sabe que has intentado charmearla.",
+				"Este conjuro también tiene efecto contra criaturas semiconscientes, como algunos undead o golems, que normalmente son inmunes a charm. Una criatura inmune a charm que sea completamente consciente de lo que hace sigue siendo inmune a este conjuro."
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"affectsCreatureType": [
+				"humanoid"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Trickery Domain",
+							"shortName": "Trickery",
+							"source": "PHB"
+						}
+					},
+					{
+						"class": {
+							"name": "Fighter",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Eldritch Knight",
+							"shortName": "Eldritch Knight",
+							"source": "PHB"
+						}
+					},
+					{
+						"class": {
+							"name": "Ranger",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Fey Wanderer",
+							"shortName": "Fey Wanderer",
+							"source": "TCE"
+						}
+					},
+					{
+						"class": {
+							"name": "Rogue",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Arcane Trickster",
+							"shortName": "Arcane Trickster",
+							"source": "PHB"
+						}
+					}
+				]
+			},
+			"subschools": [
+				"hishna"
+			]
+		},
+		{
+			"name": "Invocar Plaga",
+			"source": "GMAM",
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a few grains of sugar, some kernels of grain, and a smear of fat"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "day",
+						"amount": 10
+					}
+				}
+			],
+			"entries": [
+				"Infestas una zona de tu elección dentro del área con todo tipo de insectos. Estos atacan indiscriminadamente, incluyéndote si estás dentro de dicho área. La zona elegida es un cubo de hasta 20 ft de alto y tan ancho y largo como lo permita el área. Mientras dure el conjuro, está {@quickref Vision and Light|PHB|2||lightly obscured} y es {@quickref difficult terrain||3}.",
+				"Toda criatura dentro del área cuando se castea el conjuro, cuando empieza su turno ahí y cuando lo acaba salva Constitución o recibe {@dice 1d10} perforante, la mitad con un éxito.",
+				"Pasados los 10 días la plaga habrá consumido todas las plantas en la zona hasta no dejar nada, y todos los animales que la habitaban la habrán abandonado. Si alguien decide intentar pararla, cada casilla que ocupe por completo usa el statblock de una {@creature swarm of insects}, pero utiliza el daño y modo de ataque del conjuro y no tiene movilidad."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"PRM",
+				"SMN",
+				"OBS",
+				"DFT",
+				"OBJ"
+			],
+			"areaTags": [
+				"S"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"damageInflict": [
+				"piercing"
+			],
+			"subschools": [
+				"hishna"
+			]
+		},
+		{
+			"name": "Forma de Jaguar",
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Asumes la forma de un jaguar. Mientras dure el conjuro usas el statblock del {@creature Forest Prowler|HWCS}, pero retienes tus stats de inteligencia, wisdom y carisma. También mantienes competencias en habilidades y salvaciones y tu BC, pero no puedes hablar ni castear conjuros. Tu equipo se funde contigo o cae al suelo a tu elección.",
+				"Puedes acabar el conjuro con la bonus, pero acaba antes si caes a 0 HP. El daño restante que fueras a recibir tras esto afecta a tus verdaderos HP."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"hishna"
+			],
+			"components": {
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Este conjuro dura 1 hora más y recibe 15 HP más por lv extra de conjuro."
+					]
+				}
+			],
+			"damageInflict": [
+				"slashing"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"abilityCheck": [
+				"dexterity",
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"THP",
+				"SCL",
+				"MAC",
+				"UBA",
+				"AAD"
+			]
+		},
+		{
+			"name": "Protección",
+			"level": 1,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "un aliado está siendo va a recibir daño de un ataque"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Previenes todo el daño de un ataque que fuera a recibir una criatura que puedas ver a 60 ft de ti. Si el daño venía de un arma metálica el conjuro falla."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"hishna"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "El caparazón de una tortuga mordedora"
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Escamas atrapantes",
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "day",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Transforma la piel de serpiente del componente en un tentáculo que deja {@condition restrained} a una criatura que puedas ver dentro del rango. La criatura salva fuerza para evitarlo y puede seguir salvando al final de cada turno. Mientras dure el conjuro y el efecto, el objetivo no puede usar las manos, incluyendo los somáticos de conjuros, blandir armas y escudos ni utilizar consumibles.",
+				"Este conjuro no puede atrapar a criaturas grandes o más grandes.",
+				"El tentáculo tiene 20 HP y la CA del objetivo. Todo daño excepto el cortante lo recibe también el objetivo, aunque el tentáculo es inmune al daño de armas no mágicas. Si se reduce a 0 HP, el conjuro acaba y el componente se rompe."
+			],
+			"source": "GMAM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Una piel de serpiente que cueste al menos 1 GP, que puede (o no) ser consumido por el conjuro",
+					"consume": true,
+					"cost": 1000
+				}
+			},
+			"savingThrow": [
+				"strength"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"ADV"
+			],
+			"subschools": [
+				"hishna"
+			]
+		},
+		{
+			"name": "Visión de Papiro",
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Plasmas un recuerdo de tu elección en un pergamino. Durante 10 minutos, una imagen en movimiento aparece en el pergamino. Carece de sonido y está algo difuminada, perdiendo muchos de los detalles. Una vez acaba la duración, una imagen de la primera escena queda estática en el pergamino.",
+				"Puedes castear este conjuro gastando un slot de lv1 o como ritual con un pergamino en el que ya se haya plasmado un recuerdo para volver a reproducirlo, incluso si este no era tuyo. Un {@spell Dispel Magic} borra el recuerdo del pergamino.",
+				"Cuanto mayor sea la calidad del pergamino, mayor será la calidad de la imagen. También funciona a la inversa."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"hishna"
+			],
+			"meta": {
+				"ritual": true
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Pergamino de cualquier tipo con valor mínimo de 1 CP, que el conjuro consume",
+					"consume": true,
+					"cost": 1
+				}
+			},
+			"miscTags": [
+				"OBJ"
+			]
+		},
+		{
+			"name": "Sending (Hishna)",
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				},
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "una criatura a 30 ft castee un conjuro"
+				}
+			],
+			"range": {
+				"type": "special"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"La versión Mazticana de este conjuro tiene dos usos posibles:",
+				"El {@b primero} es el de mandar un mensaje de 50 palabras a una criatura en el mismo plano. El objetivo no puede contestarlo.",
+				"El {@b segundo} consiste en potenciar el conjuro de un aliado. Cuando un aliado castee un conjuro a 30 ft de ti, puedes castear este conjuro. Si era de lv3 o inferior, ahora está casteado a lv4. Si es de lv4 o superior aumenta en un lv. Un conjuro puede upcastear por encima del máximo slot de un caster. Un conjuro que no puede upcastear, tampoco puede upcastear de esta forma."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"hishna"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "El hueso de una pata de buitre"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Por cada lv extra, trata la base de este conjuro como uno extra."
+					]
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"RO"
+			]
+		},
+		{
+			"name": "Snake Charm",
+			"level": 2,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Al castear el conjuro el caster conoce la localización de todas las serpientes dentro del área, incluso si no las puede ver. Puede elegir un número de serpientes igual al nivel del caster (si es multiclase solo cuenta los niveles caster según la multiclase). Todas ellas salvan wisdom, con desventaja si están enfadadas o si son hostiles hacia el caster. Con un fallo están charmeadas. Con un acierto, se vuelven hostiles hacia el caster.",
+				"Mientras están {@condition charmed}, pueden comandarlas para hacer tareas complejas, como atacar a criaturas lejanas, espiar, enviar mensajes, etc. Mientras dure la concentración no necesita ver las serpientes para comandarlas. Si el conjuro acaba antes de que alguna serpiente acabe su tarea, esta la acaba dentro de lo que se lo permita su instinto."
+			],
+			"source": "GMAM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Cola de una serpiente de cascabel"
+			},
+			"subschools": [
+				"hishna"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Espolón de Roca",
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tocas un arma hecha de piedra. Mientras dure el conjuro tiene un +3 al daño. Todo el daño que se haga con este arma se almacena en su interior. Al acabar el conjuro esta estalla, hiriendo a una criatura de la elección de su portador en el rango del arma. Si no hay ninguna, el portador puede elegir, al menos, no recibir él el daño. Esta estalla, haciendo todo el daño acumulado si el objetivo falla una salvación de destreza, o la mitad con un éxito. El tipo de daño es de fuerza. Tras esto el arma es destruida."
+			],
+			"source": "GMAM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Garra de Jaguar"
+			},
+			"damageInflict": [
+				"bludgeoning",
+				"force",
+				"piercing",
+				"slashing"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"RO",
+				"UBA",
+				"OBJ"
+			],
+			"subschools": [
+				"hishna"
+			]
+		},
+		{
+			"name": "Vuelo de proyectil",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tres criaturas de tu elección que puedas ver reciben la ligereza del viento. Mientras dure el conjuro, sus ataques con flechas, pernos de ballesta, lanzas, jabalinas u hondas tienen el doble de rango y añaden +1 al daño de ataques a distancia."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"pluma"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a small amount of downfeather shaped like the fletching of an arrow"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Por cada lv extra puedes targetear a 3 criaturas más y el daño aumenta en +1."
+					]
+				}
+			],
+			"damageInflict": [
+				"piercing"
+			],
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"SCT",
+				"AAD"
+			]
+		},
+		{
+			"name": "Desconcierto",
+			"level": 2,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tras una conversación con una criatura que puedas ver dentro del rango, la desorientas y confundes. El objetivo salva wisdom. Con un fallo es incapaz de actuar, hablar o pensar con racionalidad. Como resultado, sumovilidad se reduce a 0 y está {@condition incapacitated}. El conjuro acaba antes si el objetivo sufre daño."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"pluma"
+			],
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Minor Bird Charm",
+			"level": 1,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Atraes a tres pájaros aleatorios dentro del rango, aunque los loros y los colibrís son especialmente vulnerables a este conjuro, y los dotas con la capacidad de entender comandos simples y dar mensajes de hasta 3 palabras."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"pluma"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Un silbato de coral hecho por el caster con un valor de 20 GP",
+					"cost": 2000
+				}
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Invoca 3 pájaros más por cada lv extra."
+					]
+				}
+			],
+			"areaTags": [
+				"MT",
+				"S"
+			],
+			"miscTags": [
+				"SCT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Major Bird Charm",
+			"level": 4,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 900
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Al castear este conjuro atraes a todas las criaturas con plumas dentro del área, independientemente de su tipo de criatura y su CR. Este conjuro es capaz de invocar criaturas como {@creature owlbear|MM|owlbears} y {@creature couatl|MM|couatls}, por ejemplo. Las criaturas de CR superior al lv de conjuro pueden salvar wisdom al ver al caster y a su equipo. ",
+				"Si salvan, huirán del caster o atacarán, según sus impulsos naturales. Si salvaron por 7 o más serán hostiles hacia el caster independientemente de su naturaleza.",
+				"Con un fallo los ven como criaturas amistosas, independientemente de su naturaleza.",
+				"Mientras las controles puedes darles comandos más complejos, pedirles que se enfrenten a algo o que luchen a tu lado, si bien no puedes comandar un curso de acción concreto. La criatura responderá a tus órdenes lo mejor que pueda según su instinto y su criterio. Además podrás enviar mensajes de hasta 100 palabras."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"pluma"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Un silbato de jade hecho por el caster con un valor de 50 GP",
+					"cost": 5000
+				}
+			},
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"MT",
+				"S"
+			],
+			"miscTags": [
+				"SMN"
+			]
+		},
+		{
+			"name": "Florecer",
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 24,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "hemisphere",
+				"distance": {
+					"type": "miles",
+					"amount": 1
+				}
+			},
+			"duration": [
+				{
+					"type": "special"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Este conjuro se castea en 10 minutos, y luego el caster debe concentrarse durante 1 día entero. Mientras se esté concentrando puede castear conjuros complementarios a este sin necesidad de concentrarse (see below), pero perderá la concentración de forma habitual si castea un conjuro de concentración no complementario. Una vez pasadas 24 horas, los cambios hechos en el terreno duran una estación. A partir de este momento serán permanentes solo si el clima acompaña.",
+				"El conjuro transforma un área para hacerla fértil y la llena de vegetación. Puede transformar una ciénaga en un campo fértil o hacer que una zona afectada por las sequía vuelva a ser una tierra húmeda. Aún así, tiene limitaciones: no puede alterar desiertos o zonas afectadas por largas sequías o por los efectos regionales de alguna criatura ni bajo influencia mágica.",
+				"Durante el casteo de este conjuro el caster puede utilizar otros conjuros, como {@spell Create or Destroy Water}, {@spell Invocar Agua|GMAM}, {@spell Plant Growth} o similares. Estos conjuros calarán más en la tierra a transformar y tendrán efectos más permanentes, potenciando el efecto del conjuro. Plantas creadas con conjuros como {@spell Ira del Árbol|GdR} o {@spell Espíritu del Sauce|GdR} se volverán plantas de forma permanente, pero perderán su capacidades mágicas.",
+				"Otros casters pueden participar en la transformación de esta tierra mientras te concentres en el conjuro."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"pluma"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Una espiga de trigo y un galón de agua"
+			},
+			"areaTags": [
+				"H"
+			],
+			"miscTags": [
+				"PRM"
+			]
+		},
+		{
+			"name": "Breathsense",
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Agudiza su oído hasta el punto de escuchar la respiración de otras criaturas. Eres capaz de detectar criaturas que respiren dentro del rango y la dirección en la que están respecto a ti. También puedes discernir el tamaño aproximado de la criatura."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"pluma"
+			],
+			"components": {
+				"v": true
+			},
+			"areaTags": [
+				"MT",
+				"S"
+			]
+		},
+		{
+			"name": "Regulación Térmica",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tocas a una criatura y la proteges contra las inclemencias del tiempo. Al castear el conjuro elige uno de los siguientes efectos:",
+				"{@b Enfriar}. El objetivo es inmune al calor extremo y al exceso de humedad y reduce el daño de fuego en {@dice 1d4}.",
+				"{@b Calentar}. El objetivo es inmune al frío extremo, al cantrip de {@spell Frostbite|XGE} y a la hipotermia y reduce el daño de frío en {@dice 1d4}."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"pluma"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Plumón de pato (para frío) o de ganso (para calor)"
+			},
+			"damageInflict": [
+				"cold",
+				"fire"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"THP",
+				"RO"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Puedes targetear a dos criaturas extra por cada lv extra."
+					]
+				}
+			]
+		},
+		{
+			"name": "Forma de Águila",
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Asumes la forma de un águila gigante. Mientras dure el conjuro usas el statblock del {@creature Maztican Giant Eagle|GMAM}, pero retienes tus stats de inteligencia, wisdom y carisma. También mantienes competencias en habilidades y salvaciones y tu BC, pero no puedes hablar ni castear conjuros. Tu equipo se funde contigo o cae al suelo a tu elección.",
+				"Puedes acabar el conjuro con la bonus, pero acaba antes si caes a 0 HP. El daño restante que fueras a recibir tras esto afecta a tus verdaderos HP."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"pluma"
+			],
+			"components": {
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Este conjuro dura 1 hora más y recibe 15 HP más por lv extra de conjuro."
+					]
+				}
+			],
+			"damageInflict": [
+				"slashing"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"abilityCheck": [
+				"dexterity",
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"THP",
+				"SCL",
+				"MAC",
+				"UBA",
+				"AAD"
+			]
+		},
+		{
+			"name": "Featherweaving",
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				},
+				{
+					"number": 10,
+					"unit": "minute"
+				},
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "permanent"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Usando como base el tapiz, tejes figuras con plumas y plumón. Puedes coser trozos de 1 pulgada cuadrada cada minuto, que pueden juntarse formando cualquier figura. Por ejemplo, podría acabar formando un peluche, una bufanda, un parche, una manta, etc.",
+				"Mientras castees este conjuro una sensación de calma limpia tu cuerpo y espíritu, permitiéndote curarte una vez por hora. La curación es de {@dice 1d2} si estuviste 1 minuto, {@dice 2d2} si fueron 10 minutos y {@dice 3d2}+modificador de spellcasting si fue 1 hora. Además, estás bajo los efectos de {@spell Calm Emotions} hasta que acabes de castear."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"pluma"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Un tapiz de tela por valor de 50 GP; plumón y plumas de ave por valor de 5 CP que el conjuro consume cada minuto, o 12 PP por hora",
+					"consume": true,
+					"cost": 5
+				}
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"A lv 5 el dado de curación aumenta a {@dice d4}, al 11 aumenta a {@dice d6} y al 17 a {@dice d8}."
+					]
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"HL",
+				"SGT",
+				"PRM",
+				"SCL",
+				"RO",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Elevar Menor",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			},
+			"source": "GMAM",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"subschools": [
+				"pluma"
+			],
+			"entries": [
+				"Haces que hasta 5 objetos creados con {@spell featherweaving|GMAM} que puedas ver en el rango se eleven y se muevan a tu antojo. Cada uno puede levantar un máximo de 5 lb si son, como muy grande, del mismo tamaño que el objeto. Con tu acción puede mover cada objeto hasta 30 ft (la misma acción para todos, aunque el movimiento sea diferente)."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Por cada lv extra puedes targetear 2 objetos extra y cada uno pueden levantar 5 lb más."
+					]
+				}
+			],
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"SCT",
+				"FMV",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Suerte del Pescador",
+			"level": 2,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 1000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "day",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Great old one",
+							"shortName": "Great old one",
+							"source": "PHB"
+						}
+					}
+				]
+			},
+			"entries": [
+				"Al castear este conjuro atraes a todos los peces dentro del área, que nadan hacia ti. Para ello, tienes que estar en contacto en todo momento con el cuerpo de agua en el que vas a castear el conjuro. Si dejas de estar en contacto con el agua el conjuro acaba.",
+				"Los peces nadan esquivando obstáculos claros, pero ignoran la presencia de criaturas peligrosas, permitiendo que les pesquen o les cacen si se da el caso. El caster es vulnerable a las salvaciones de concentración mientras dure, por lo que no puede participar en la pesca. También salva {@status concentration} con desventaja.",
+				"Si no hay peces en el área el conjuro falla. El caster es consciente de por qué ha fallado."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"pluma"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "escamas de pez"
+			},
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"SMN"
+			]
+		},
+		{
+			"name": "Cambiar Cauce",
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				},
+				{
+					"type": "permanent"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Puedes redirigir la dirección de un cauce que puedas ver en el área, incluso desafiando las leyes de la gravedad. Sin embargo, solo puede castearse en agua cuyo flujo no sea natural, como el caso de fuentes, acequias, acueductos... No puede castearse en cuerpos naturales de agua, como ríos, lagos o el mar.",
+				"Si el agua no conecta con una fuente de agua, ya sea natural o artificial, estancada o en movimiento, el cauce dura mientras lo haga el conjuro; pero si lo hace, el nuevo cauce durará de forma indefinida.",
+				"El agua fluye a una velocidad de 40 ft por turno y puede imponer terreno difícil para criaturas que pretendan nadar a contracorriente. Tu decides la fuerza del agua. A máxima potencia una criatura dentro del cauce debe salvar fuerza para no ser arrastrada ese turno. Si no tiene mucha fuerza la criatura podría, incluso, no ser arrastrada ni imponer terreno difícil."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"pluma"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Una pata de pato o de ganso"
+			},
+			"miscTags": [
+				"SGT",
+				"PRM",
+				"DFT",
+				"OBJ"
+			],
+			"savingThrow": [
+				"strength"
+			]
+		},
+		{
+			"name": "Invocar Agua",
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Haces brotar agua de la tierra en un chorro vertical de 4ft de altura, independientemente del estado de humedad del terreno. Sacas agua suficiente para hidratar hasta 1000 ft. cuadrados de tierra o para abastecer a 1000 personas."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"pluma"
+			],
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Por cada lv extra humedeces 500 ft cuadrados más y abasteces a 500 personas más, pero también tarda 1 hora más."
+					]
+				}
+			],
+			"areaTags": [
+				"Q"
+			],
+			"miscTags": [
+				"PRM",
+				"SCL",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Elevar Mayor",
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"source": "GMAM",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"subschools": [
+				"pluma"
+			],
+			"entries": [
+				"Haces que un objeto creado con {@spell featherweaving|GMAM} que puedas ver en el rango se eleve y se mueva a tu antojo. Puede levantar un máximo de 40 lb, siempre y cuando su carga sea del mismo tamaño o más pequeña. Con tu acción puedes moverlo hasta 60 ft."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Por cada lv extra levanta 40 lb más."
+					]
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"FMV",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Navegante del Viento",
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Como acción puedes mover hasta 120 ft en horizontal un objeto flotante que puedas ver y que esté por completo dentro de tu área. Para ello el objeto debe flotar en un líquido, en el aire o debe levitar, ya sea por medios mundanos o mágicos; y no puede estar asegurado o equipado.",
+				"En los siguientes turnos puedes usar tu acción para cambiar de objetivo. Mantenerlo en una línea recta no cuesta ninguna acción, pero hacerlo virar al menos una vez para trazar una vía de movimiento requiere la bonus.",
+				"Si el objetivo está en caída libre, puedes moverlo también, pero no puedes detener ni ralentizar su caída."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"pluma"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Una pluma de buitre"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"El rango aumenta en 20 ft por cada lv extra de conjuro."
+					]
+				}
+			],
+			"areaTags": [
+				"ST",
+				"S"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"FMV",
+				"UBA",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Talismán de Hishna",
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 0,
+					"unit": "special"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"{@i Una vez empiece el tiempo de casteo el conjuro se gasta y no se recupera hasta el próximo descanso largo tras haber completado este conjuro. El casteo acaba tras la cantidad acordada según el objeto, teniendo en cuenta que pasas al menos 8 horas al día crafteándolo. Si pasas más tiempo arreglalo con tu DM para reducur el tiempo final. No pasa nada si no crafteas el objeto durante varios días.}",
+				"Este conjuro permite crear una serie de objetos mágicos de la subescuela de hishna, enfocados al combate y la superioridad de campo. {@b No puedes tener preparada la versión de Pluma de este conjuro mientras tengas este preparado ni eliminar este mientras estés casteandolo.}",
+				"- {@i Pimienta de fuego.} {@b 5 meses de casteo.} Creas {@dice 4d20} bolitas de pimienta. Pueden disolverse en un líquido, dejando un rastro inodoro. Una criatura que lo beba sospechando de la trampa puede salvar constitución sobre tu CD. Con un éxito queda {@condition incapacitated|PHB|incapacitado} {@dice 1d6} rondas y cae {@condition prone} mientras grita y vomita. Si falla o si bebió más cantidad sin sospechar nada, queda {@condition incapacitated|PHB|incapacitado} {@dice 2d6} rondas. Alternativamente puedes engañar a una persona para que la ingiera entera y sin disolver. En ese caso, de superar la salvación está {@condition incapacitated|PHB|incapacitado} {@dice 3d6} rondas, y de fallar sus HP se ven reducidos a 0. Una criatura {@condition incapacitated|PHB|incapacitada} de cualquiera de estas formas recibe 1 punto de daño por fuego al final de cada ronda.",
+				"- {@i Buscacorazones.} {@b 18 meses de casteo.} Una lanza pesada de obsidiana imbuida en magia de Hishna. Es una lanza +2, irrompible y cuadriplica daño en críticos.",
+				"- {@i Sandalias de Velocidad.} {@b 10 meses de casteo.} Estas sandalias aumentan tu velocidad base en 20 ft. Además puedes viajar durante 16 horas al día en vez de las 8 habituales.",
+				"- {@i Espolón de Zaltec.} {@b 15 meses de casteo.} Daga hecha a partir de un diente de jaguar que contiene {@dice 1d10} dosis de un veneno potenciado por Zaltec. La CD del veneno es igual a tu CD de conjuros +4. Con un fallo, el objetivo pierde la mitad de sus HP. Además, en el mango de la daga hay un depósito con {@dice 2d12} dosis de polvo cegador. El portador puede hacer una tirada de ataque gastando una dosis. Con un éxito la criatura objetivo está {@condition blinded|PHB|cegada} {@dice 1d12} minutos, pudiendo salvar al final de cada minuto.",
+				"{@i Puedes concretar otros talismanes homebrew con el DM, pero la característica principal es, y cito textualmente} \"Los talismanes no tienen un nivel de poder capaz de destruir una población entera, sino que es un efecto más sutil y prolongado\"."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"hishna"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "El DM puede especificar ciertos componentes específicos para la creación del conjuro, e incluso podrían tener coste"
+			},
+			"damageInflict": [
+				"fire",
+				"piercing",
+				"poison"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"PRM",
+				"RO",
+				"AAD",
+				"OBJ",
+				"PIR"
+			]
+		},
+		{
+			"name": "Talismán de Pluma",
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 0,
+					"unit": "special"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"{@i Una vez empiece el tiempo de casteo el conjuro se gasta y no se recupera hasta el próximo descanso largo tras haber completado este conjuro. El casteo acaba tras la cantidad acordada según el objeto, teniendo en cuenta que pasas al menos 8 horas al día crafteándolo. Si pasas más tiempo arreglalo con tu DM para reducur el tiempo final. No pasa nada si no crafteas el objeto durante varios días.}",
+				"Este conjuro permite crear una serie de objetos mágicos de la subescuela de Pluma, enfocados a la protección y la utilidad. {@b No puedes tener preparada la versión de Hishna de este conjuro mientras tengas este preparado ni eliminar este mientras estés casteandolo.}",
+				"- {@i Brazalete de Plumas.} {@b 20 meses de casteo.} Creas un brazalete con plumas que te otorga una fuerza superior. Mientras lleves el objeto tu stat de fuerza es igual a tu stat de lanzamiento de conjuros.",
+				"- {@i Pluma Protectora.} {@b 20 meses de casteo.} Encantas una pluma con la protección de Qotal. Mientras portes esta pluma tienes un +3 a la CA y a las salvaciones contra efectos mágicos. Cualquier criatura de tu elección a 10ft tiene también este bono a las salvaciones contra efectos mágicos y puedes castear una vez al día {@spell Feather Fall}.",
+				"- {@i Mocasines de libre movimiento.} {@b 15 meses de casteo.} Estos mocasines tienen los efectos de unas {@item Boots of Elvenkind|DMG}, pero te permite usar toda tu movilidad mientras vas a sigilo. Además puede caminar por líquidos, espesos o ligeros, como si fuera una superficie sólida y lisa.",
+				"- {@i Manto de Plumas.} {@b 19 meses de casteo.} Es similar a cualquiera de los objetos que se puedan crear con {@spell Featherweaving|GMAM}, pero no requiere los conjuros de {@spell Elevar Menor|GMAM} ni {@spell Elevar Mayor|GMAM}. Mide 6 ft de ancho, 10 ft de largo y tiene 1 ft de grosor. Puede cargar hasta 750 lb. Requiere una palabra comando para hacer que siga a quien la pronunció en voz alta hasta a una velocidad de 30 ft y otra palabra comando para ascender o descender 30ft por ronda. Seguirá ascendiendo o descendiendo hasta que se use la misma palabra comando para que se detenga.",
+				"- {@i Plumastone.} {@b 16 meses de casteo.} Es un arma encantada que debe añadirse a los componentes del conjuro. En el proceso se usa también un trozo de obsidiana por valor de 500 GP para hacer el filo. El arma puede ser una macahuitl (espada larga), una daga, 3 javalinas o 20 flechas. Estos objetos pueden romperse como cualquier arma mundana, pero son mágicas y reciben un +2 al ataque y +3 al daño.",
+				"- {@i Decantador de Cuero.} {@b 20 meses de casteo.} Este odre siempre está lleno de agua. Puedes verter 1 galón (~4 litros) por ronda.",
+				"{@i Puedes concretar otros talismanes homebrew con el DM, pero la característica principal es, y cito textualmente} \"Los talismanes no tienen un nivel de poder capaz de destruir una población entera, sino que es un efecto más sutil y prolongado\"."
+			],
+			"source": "GMAM",
+			"subschools": [
+				"pluma"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "El DM puede especificar ciertos componentes específicos para la creación del conjuro, e incluso podrían tener coste"
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"PRM",
+				"MAC",
+				"RO",
+				"AAD",
+				"OBJ",
+				"PIR"
+			],
+			"damageInflict": [
+				"piercing",
+				"slashing"
+			]
+		}
+	]
+}

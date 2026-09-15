@@ -1,0 +1,2894 @@
+{
+	"spell": [
+		{
+			"name": "Adivinación Menor",
+			"level": 0,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				},
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tres grandes ojos místicos aparecen alrededor de tu cabeza y te ayudan a centrar tu mente y tu visión en lo que te rodea, pudiendo ver las cosas tal y como son. Puedes elegir uno de los siguientes efectos:",
+				"- Determinas dónde está el norte",
+				"- Eres consciente de si estás en un plano o semiplano y cuál es exactamente (solo si conocías su existencia, sino, averiguas su naturaleza alineamiento)",
+				"- Agregas un bonificador de +2 a una habilidad pasiva a elegir entre Percepción, Investigación o Insight. Este efecto acaba antes si vuelves a castear este conjuro o si realizas una tirada con dicha habilidad, y lo harás con ventaja.",
+				"- Eres capaz de sentir si un objeto que estás tocando esconde un secreto o ha sido manipulado mágicamente, si bien no sabes cuál es la naturaleza de esa extrañeza.",
+				"Solo puedes tener un efecto cada vez."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"abilityCheck": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"ADV"
+			]
+		},
+		{
+			"name": "Graffiti Arcano",
+			"level": 0,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				},
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Liberas un spray de color de las palmas de tus manos con el que puedes tintar items y superficies. Como acción, puedes cambiar el color de cualquier item no mágico o de una superficie que no esté siendo afectada por magia. Tintas del color o colores que quieras una superficie de hasta 5 pies. Puedes superponer varios tintes de este modo. La pintura puede limpiarse con cualquier conjuro que implique magia o con dispel magic o similares.",
+				"Este conjuro no aporta competencia con Utensilios de Pintor, pero puede ser usado con dicha competencia en sustitución, hasta cierto punto, de los utensilios.",
+				"En combate puede distraer a un objetivo en el rango. Esta criatura debe salvar Destreza. De fallar, no podrá hacer ataques de oportunidad hasta el principio de su siguiente turno."
+			],
+			"source": "GdR",
+			"components": {
+				"s": true
+			},
+			"savingThrow": [
+				"dexterity"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"abilityCheck": [
+				"charisma"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"PRM",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Herir",
+			"level": 0,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Señalas con la palma de la mano a una criatura al alcance y la envuelves en un aura necrótica. Haz un melee spell attack. Con un impacto, el objetivo tiene una hemorragia explosiva en alguna parte de su cuerpo que le causa {@dice 1d6} de daño necrótico."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"Al llegar a lv 5, el daño es de {@dice 1d6 + 1d8}; al lv11 es de {@dice 1d6 + 1d8 + 1d10}; y al lv17 es de {@dice 1d6 + 1d8 + 1d10 + 1d12}."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SCL"
+			]
+		},
+		{
+			"name": "Impulso",
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Te vales del impulso arcano de tus conjuros para darte un empujón. Si has utilizado tu acción para lanzar un conjuro de nivel 1 o superior, ganas 5 pies de movilidad adicionales para tu movimiento e impones desventaja en los ataques de oportunidad en tu contra."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"A niveles superiores esta movilidad extra aumenta a 10 pies a lv5, 15 pies a lv11 y 20 pies al 17."
+					]
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SCL",
+				"RO"
+			]
+		},
+		{
+			"name": "Ramo Mágico",
+			"level": 0,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Imbuyes un regalo floral en un aroma embriagador y en un aura encantadora. Si una criatura acepta voluntariamente el regalo y entra en contacto con él, adquieres {@dice 1d4} a las tiradas de persuasión o interpretación hechas para agradar a dicha criatura. Si el objetivo es inmune al encantamiento, no acepta el regalo o no lo toca, el cantrip no tiene efecto sobre el objetivo.",
+				"Una criatura que sospeche puede discernir la naturaleza del encantamiento con una tirada de Arcana o Investigación contra tu CD de salvación de conjuros. La criatura solo es consciente del encantamiento si ha superado una tirada."
+			],
+			"source": "GdR",
+			"components": {
+				"s": true,
+				"m": "Un ramo de flores o una flor por valor de 2 PP"
+			},
+			"abilityCheck": [
+				"charisma"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"RO"
+			]
+		},
+		{
+			"name": "Cauterizar",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Calientas mágicamente el metal mientras lo imbuyes en magia curativa hasta que se encienda al rojo vivo y lo aplicas en la herida. El objetivo aliado recupera {@dice 6d4} + tu modificador de spellcasting. Si tenía una herida abierta o alguna mecánica de sangrado activa, esta finaliza, dejando una cicatriz muy fea.",
+				"Al ser un método de curación tan doloroso la criatura se verá afectada. Durante 1 minuto, la criatura tendrá desventaja en tiradas de ataque, Fuerza y Destreza y no podrá mantener la concentración de conjuros.",
+				"Este conjuro no tiene efecto en constructos."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un trozo de metal de, al menos, 10 cm cuadrados"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cura {@dice 2d4} por cada lv extra hasta un máximo de {@dice 14d4} (lv5)"
+					]
+				}
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"abilityCheck": [
+				"strength",
+				"dexterity",
+				"constitution"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"HL",
+				"SCL"
+			]
+		},
+		{
+			"name": "Conjuro no Letal",
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Arrojas una onda de choque que se estrella contra el objetivo. Haz un spell attack contra el objetivo. Si impacta, recibe {@dice 2d6} de daño por fuerza. Si el objetivo cae a 0 HP o debiera morir al instante, quedará en cambio inconsciente y estable."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"Añade {@dice 1d6} por cada lv de conjuro por encima del lv1."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL"
+			]
+		},
+		{
+			"name": "Danza de las Herramientas",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Imbuyes en magia una herramienta, permitiendo que esta se mueva como si estuviera viva, pudiendo así realizar sus funciones como lo haría cuando la empuña un usuario competente. En un cubo no más grande de 30 pies [6 casillas] esta podrá ejecutar una orden simple. El conjuro no tiene ningún efecto si la orden es perjudicial para o no la puede llevar a cabo y finaliza al completar la orden.",
+				"El objeto no puede pesar más de 10 libras y no puede afectar a una herramienta que está siendo usada o transportada por otra criatura.",
+				"(Este conjuro no afecta a las herramientas sintientes/vivas)"
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"A niveles superiores, Cuando lanzas este conjuro utilizando un espacio de conjuro superior puedes elegir una herramienta extra por cada lv extra."
+					]
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL"
+			],
+			"meta": {
+				"ritual": true
+			}
+		},
+		{
+			"name": "Dispersal",
+			"level": 1,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "eres objetivo de un ataque o conjuro de daño sobre tu CA."
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tratas de evitar el ataque transformándote en una agrupación de bestias diminutas, como una bandada de cuervos, un enjambre de bichos o un cúmulo de serpientes, etc.",
+				"La criatura atacará con desventaja, y de fallar, podrás teletransportarte a un espacio desocupado a 15 pies, apareciendo de nuevo de entre este cúmulo de bestias. Si el ataque impacta, las bestias se esfuman y el conjuro no hace más efecto, impidiendo el teletransporte."
+			],
+			"source": "GdR",
+			"components": {
+				"s": true
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"TP",
+				"RO"
+			]
+		},
+		{
+			"name": "Fuga del Cobarde",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "Cuando realicen un ataque de oportunidad a una criatura en rango"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Empiezas a tocar una canción enfocándose en un aliado evitando que provoque ataques de oportunidad durante el resto del turno además aumenta su velocidad en 20 pies."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un instrumento musical"
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"RO"
+			]
+		},
+		{
+			"name": "Hush",
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Te llevas el dedo a los labios y chistas suavemente hasta dos criaturas voluntarias dentro del rango. Mientras dure el conjuro son incapaces de provocar sonidos anémicamente. Tienen ventaja en sigilo, pero no puede castear conjuros con componente verbal. Si una armadura les imponía desventaja a sigilo, este conjuro funciona como si no la llevaran."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"A niveles superiores puedes agregar dos criaturas por cada lv extra."
+					]
+				}
+			],
+			"spellAttack": [
+				"R"
+			],
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"SCL",
+				"RO"
+			],
+			"abilityCheck": [
+				"dexterity"
+			]
+		},
+		{
+			"name": "Inscripción Diplomática",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "day",
+						"amount": 10
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Escribes en una superficie apta para la escritura en tinta y la imbuyes en magia de transmutación. Cada criatura que pueda leerlo lo ve escrito en su lengua materna o, en su defecto, en el idioma que mejor sepa leer, siempre y cuando pueda leer al menos un idioma. Si embargo, tú decides qué criatura puede leer este documento. Para hacerlo, puedes mencionarlo por su nombre, describirlo físicamente, o explicar quién es y qué relación tiene contigo; lo cual deberás escribirlo en el anverso del mismo.",
+				"Pasado el tiempo del conjuro, el escrito pasa a estar en común o, en su defecto, en tu lengua materna, si no eres capaz de hablar el idioma."
+			],
+			"source": "GdR",
+			"components": {
+				"s": true,
+				"m": "Tinta de plata por valor de 10 GP, que el conjuro consume"
+			},
+			"meta": {
+				"ritual": true
+			},
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Luz de Luna",
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Enfocas la luz de la luna en una criatura que puedas ver dentro del rango, devolviéndola a su forma original. Una criatura de lv o CR igual a lv de conjuro x 2 que esté siendo afectado por un cambio de forma voluntario o no, puede salvar Carisma o volver a su forma original. Si la criatura está en posición de hacerlo, puede elegir fallar la salvación.",
+				"Una criatura que falle la tirada no puede beneficiarse o verse afectada por el rasgo anulado durante la próxima hora.",
+				"Entre otros rasgos, afecta a la Wild Shape, el Shapechanging, conjuros como Polymorph o cualquier otro conjuro o efecto similar, como Enlarge/Reduce o Alter self."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "varias semillas de cualquier planta de semilla de luna y un trozo de feldespato opalescente"
+			},
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"charisma"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"LGT"
+			]
+		},
+		{
+			"name": "Tocón de Elfo",
+			"level": 1,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Un grupo de ramas crece alrededor del objetivo y lo apresa. Este debe superar una Tirada de Salvación de Fuerza sobre tu CD de salvación de conjuros o quedar atrapado. Su movilidad se reducirá a 0 y perderá los ataques de oportunidad que pueda hacer. Puede repetir la tirada al final de cada turno para liberarse. Si lo consigue, tendrá la movilidad reducida a la mitad durante ese turno. No afecta a criaturas que vuelen u ocupen 4 casillas o más. "
+			],
+			"source": "GdR",
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"Si lanzas este conjuro entre los niveles 2 y 4 el conjuro obstruirá también los brazos, evitando las tiradas de ataque y los conjuros somáticos.",
+						"Lanzado al lv5 o superior, se sumará +1 por cada lv extra a la CD de salvación. Además, afectará a las criaturas voladoras, que caerán al suelo y quedarán paralizadas. Además, harán la tirada de salvación con desventaja."
+					]
+				}
+			],
+			"components": {
+				"s": true,
+				"m": "ramas de árbol y tierra fértil"
+			},
+			"savingThrow": [
+				"strength"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL"
+			]
+		},
+		{
+			"name": "Toque de Sune",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Celestial",
+							"source": "XGE"
+						}
+					}
+				]
+			},
+			"entries": [
+				"Tocas a una criatura voluntaria para afectar y embellecer su físico. Puedes otorgarle uno de los siguientes efectos:",
+				"- Su peso se ve aumentado o reducido hasta 3 kg dentro de los parámetros de la raza.",
+				"- Su altura se ve aumentada o reducida hasta 1 cm dentro de los parámetros de la raza.",
+				"- Puedes moldear una parte del cuerpo objetivo, como la nariz, pómulos, pechos, cadera…",
+				"- Eliminas toda la suciedad del cuerpo al instante, eliminando granos e imperfecciones temporales.",
+				"- Elimina imperfecciones permanentes en la piel, como pecas, verrugas, cicatrices, arrugas… ",
+				"- Eliminas de forma temporal, limpias, cortas y/o adecentas todo el pelo del objetivo.",
+				"Una criatura que haya recibido este conjuro no puede volver a ser afectada hasta pasadas 24 horas. La exposición prolongada a los tres primeros efectos puede acarrear malformaciones, errores de conjuración o inmunidad al conjuro a juicio del DM."
+			],
+			"source": "GdR",
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"A niveles superiores puedes añadir un efecto extra por cada lv superior al 1 e inferior o igual a lv4. A partir de lv5 hasta lv8 puedes reducir la posibilidad de que uno de los efectos del conjuro por cada lv extra sea biológicamente contrarrestado (el objetivo tardará más en engordar, en crecer o encorvarse, en ensuciarse por sus propios medios, en crecer su pelo, etc.). A lv9 puedes moldear a voluntad la imagen del objetivo, sin cambiarle de sexo. Tras esto, el objetivo adquiere inmunidad al conjuro.",
+						"Lanzar el conjuro a niveles superiores tendrá más impacto en el objetivo en lo que respecta a los efectos secundarios."
+					]
+				}
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un Símbolo Sagrado de un Dios Bueno"
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"PRM",
+				"SCL"
+			]
+		},
+		{
+			"name": "Amplificación",
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tocas a una criatura voluntaria y potencias su voz hasta los límites de lo audible. Mientras dure el conjuro, el objetivo podrá aumentar su voz a voluntad, hasta un máximo de diez veces su capacidad vocal, permitiéndole ser escuchado hasta a un kilómetro de distancia.",
+				"Además, la criatura puede usar su acción para gritar. Toda criatura en un cono de 15 pies debe superar una salvación de Constitución o recibir {@dice 2d6} por trueno. Cualquier objeto en ese área que no esté siendo transportado o asegurado será empujado 10 pies en el sentido del cono."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"damageInflict": [
+				"thunder"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"ST",
+				"N"
+			],
+			"miscTags": [
+				"FMV",
+				"RO"
+			]
+		},
+		{
+			"name": "Covering",
+			"level": 2,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Abjuration",
+							"source": "PHB"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Celestial",
+							"source": "XGE"
+						}
+					}
+				]
+			},
+			"entries": [
+				"Eliges una criatura que puedas ver a 30 pies [6 casillas] y generas un círculo mágico de protección con un emblema/símbolo arcano en el centro del círculo, este aparece delante de la criatura cuando vayan a golpearla reduciendo en 10 puntos el daño que te van a infringir ese turno. Cada inicio del turno del lanzador del conjuro se repondrán estos 10 puntos de cobertura."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Una pluma de Cisne y una cadenita de hierro"
+			},
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"agregas 5 HP temporales por cada dos lv. Al lv 9 la cantidad asciende a 30 por criatura."
+					]
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"THP",
+				"SGT",
+				"SCL"
+			]
+		},
+		{
+			"name": "Domo de Protección",
+			"level": 2,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "cuando tú o un aliado en rango vayáis a recibir daño"
+				}
+			],
+			"range": {
+				"type": "hemisphere",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Creas una débil barrera protectora muy rápidamente, tratando de prevenir un peligro. Creas un domo centrado en ti que protege a cualquier criatura a 10 pies de ti, aliado o no. Nada puede entrar o salir, si bien no bloquea el teletransporte ni el sonido.",
+				"Tiene una cantidad de HP igual a {@dice 4d6} + el doble del modificador de tu habilidad de lanzamiento de conjuros. Recibe todo el daño destinado al lugar que proteje excepto el daño psíquico o por trueno. Sin embargo, si este excede su cantidad de HP, el ataque destruye la barrera y provoca el daño restante al objetivo. Además, el caster cae al suelo y pierde su reacción, aunque no haya recibido un ataque directo. Si no es destruido, el conjuro acaba al principio de tu turno.",
+				"Si el daño venía de un efecto de área con salvación, falla la salvación automáticamente. Si era un ataque, el atacante hace una tirada de ataque para el domo, que tiene CA 10+lv de conjuro, siendo inmune si no llega a recibir el ataque.",
+				"Una vez roto el domo, las tiradas de ataque contra el domo se mantienen para la criatura objetivo. Para las salvaciones, las criaturas dentro del domo que se vayan a ver afectadas salvan para el daño restante según el funcionamiento del área."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "un anillo con el símbolo de un escudo de armas"
+			},
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"A niveles superiores puedes agregar HP al domo igual a {@dice 2d6} por lv extra."
+					]
+				}
+			],
+			"areaTags": [
+				"H"
+			],
+			"miscTags": [
+				"THP",
+				"SCL"
+			]
+		},
+		{
+			"name": "Jugarreta de Lum",
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Al utilizar este conjuro, una energía cálida brota de tu interior y viaja hasta tus manos, dándote un vigor y una coordinación endiablada. Hasta que termine el conjuro, ignoras las características de pesada o a dos manos de cualquier arma que portes y con la que seas competente. Sin embargo, el usuario puede seguir utilizando el arma a dos manos si así lo prefiere, por lo que las armas versátiles seguirán haciendo daño extra si se usan a dos manos y el normal si se usa a una sola. Durante este periodo de tiempo el usuario también puede añadir el bono de competencia al daño utilizado por el arma."
+			],
+			"source": "GdR",
+			"components": {
+				"m": "un arma con la que seas competente"
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"RO"
+			]
+		},
+		{
+			"name": "Mano de Gond",
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Con una plegaria y un toque mágico, infundes a una criatura con una bendición menor de Gond. Durante la duración, un constructo de tu elección podrá ser curado por cualquier medio mágico o alquímico. Además, podrá ser blanco de conjuros como Revivify o Resurrección si se cumplen el resto de requisitos."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un Símbolo Sagrado de un Dios de valores Neutrales"
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"HL",
+				"SGT",
+				"RO"
+			]
+		},
+		{
+			"name": "Ojos de Oghma",
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Durante la duración del conjuro tu velocidad de lectura aumenta a 100 páginas por minuto. Este conjuro te permite comprender el texto como si te hubieras tomado el tiempo normal para leerlo, pero no te permitirá comprender textos que no entenderías en condiciones normales."
+			],
+			"source": "GdR",
+			"components": {
+				"s": true,
+				"m": "Una lupa de plata por valor de 10 GP"
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"meta": {
+				"ritual": true
+			}
+		},
+		{
+			"name": "Protección Ácida",
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Infundes a una criatura con el limo de un oblex negro, otorgándole una defensa extra contra ataques a melé. Cada vez que el objetivo reciba un ataque a melé, el atacante recibe {@dice 1d4} por ácido debido a salpicaduras del limo. Además, ninguna criatura que le haya golpeado puede desengancharse de él hasta el final de su siguiente turno, a menos que el conjuro haya acabado."
+			],
+			"source": "GdR",
+			"components": {
+				"s": true,
+				"m": "un tarro con limo de oblex negro"
+			},
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"Agrega {@dice 1d4} al daño por lv de conjuro."
+					]
+				}
+			],
+			"damageInflict": [
+				"acid"
+			],
+			"spellAttack": [
+				"O"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SCL",
+				"RO"
+			]
+		},
+		{
+			"name": "Raíces",
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Ocho raíces mágicas verdes brotan de la tierra y enredan a la criatura objetivo obligando a tirar una salvación de destreza. En una salvación fallida, cuando esa criatura reciba daño de una tirada de ataque se romperá una de estas raíces provocando {@dice 1d4} de daño por fuerza y así hasta que se rompan las raíces. Con una salvación exitosa, la criatura objetivo solo se le enredarán cuatro raíces."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "una ramita de un bosque antiguo"
+			},
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"A niveles superiores, por cada nivel extra aparecen cuatro raíces con una salvación fallida y dos en una exitosa."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"RO"
+			]
+		},
+		{
+			"name": "Sonata Atrayente",
+			"level": 2,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tocas y/o cantas una canción pegadiza o conocida. Cualquier criatura que pueda escucharte en el rango debe superar una salvación de Wisdom. De fallar, deberán usar su reacción para acercarse cuanto puedan a ti mientras cantan y bailan contigo. Una criatura afectada por este conjuro es plenamente consciente de que ha sido obligada a seguirte el ritmo. Una criatura con Apariencia Falsa hace la salvación con desventaja."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un instrumento musical [opcional]"
+			},
+			"spellAttack": [
+				"R"
+			],
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"FMV"
+			]
+		},
+		{
+			"name": "Sueño de Selûne",
+			"level": 2,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Celestial",
+							"shortName": "Celestial",
+							"source": "XGE"
+						}
+					}
+				]
+			},
+			"entries": [
+				"Tocas a una criatura mientras le dedicas una plegaria en nombre de Selûne. El objetivo queda profundamente dormido durante la duración del conjuro. Al despertar puede eliminar un punto de agotamiento y gastar hasta un número de dados de golpe igual al nivel del conjuro.",
+				"En lo que a oniromancia respecta, no te hace inmune a intrusiones, pero sí a pesadillas."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un Símbolo Sagrado de un Dios Bueno"
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"HL",
+				"PRM",
+				"SCL",
+				"RO"
+			]
+		},
+		{
+			"name": "Cabaña Instantánea de Leomund",
+			"level": 3,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "hemisphere",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Una cúpula de fuerza inmóvil de 10 pies de radio surge a tu alrededor y por encima de ti y permanece estacionaria durante todo el tiempo. El hechizo termina si abandonas su área.",
+				"Nueve criaturas de tamaño Mediano o más pequeño pueden caber dentro de la cúpula contigo. El hechizo falla si su área incluye una criatura más grande o más de nueve criaturas. Las criaturas y los objetos dentro de la cúpula cuando lanzas este hechizo pueden moverse libremente a través de ella. Todas las demás criaturas y objetos tienen prohibido pasar a través de él. Los hechizos y otros efectos mágicos no pueden extenderse a través de la cúpula ni lanzarse a través de ella. El ambiente dentro del espacio es cómodo y seco, independientemente del clima exterior.",
+				"Tiene una CA de 15 y 30 HP. Es inmune al daño por trueno, por veneno y psíquico, vulnerable a contundente y perforante mágico y al daño fuerza, y resistente al resto de daños. Si el conjuro es destruido, el caster cae al suelo y pierde su reacción esa ronda.",
+				"Si el daño venía de un efecto de área con salvación, falla la salvación automáticamente. Si era un ataque, el atacante hace una tirada de ataque para el domo, que tiene CA 10+lv de conjuro, siendo inmune si no llega a recibir el ataque.",
+				"Una vez roto el domo, las tiradas de ataque contra el domo se mantienen para la criatura objetivo. Para las salvaciones, las criaturas dentro del domo que se vayan a ver afectadas salvan para el daño restante según el funcionamiento del área."
+			],
+			"source": "GdR",
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"Si lanzas este conjuro a niveles superiores, gana 15 HP por cada lv extra."
+					]
+				}
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Una pequeña cuenta de cristal"
+			},
+			"areaTags": [
+				"H"
+			],
+			"miscTags": [
+				"THP",
+				"SCL",
+				"RO"
+			]
+		},
+		{
+			"name": "Hemorragia",
+			"level": 3,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Eliges un punto en el torso del objetivo y este explota en una hemorragia. El objetivo deberá superar una tirada de salvación de Constitución o recibir {@dice 4d12} de daño perforante mágico y sangrado de {@dice 1d4}. Si la supera recibirá la mitad del daño, pero ninguno de los otros efectos. El daño de este conjuro ignora HP temporales procedentes de cualquier fuente, y daña sobre los HP reales aplicando las normas de sangrado desde el daño inicial del conjuro (solo si falla).",
+				"La criatura puede salvar al final de cada turno para acabar con el sangrado. Si no, la hemorragia se detiene pasado un minuto.",
+				"Una criatura incapaz de sangrar no se ve afectada por este conjuro. "
+			],
+			"source": "GdR",
+			"components": {
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"A niveles altos puedes añadir {@dice 1d12} por cada lv extra y el dado de sangrado aumentará en un lv por cada lv extra hasta lv7, y a {@dice 1d12 + 1d4} a lv8 y {@dice 1d12 + 1d6} a lv9."
+					]
+				}
+			],
+			"damageInflict": [
+				"piercing"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"RO"
+			]
+		},
+		{
+			"name": "Canción Táctica",
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tocas una canción materializando su pentagrama, que empezará a acercarse hacia dos criaturas que puedas ver. Deberán realizar una salvación de sabiduría. Con una salvación fallida recibirá {@dice 2d6} de daño sónico y la siguiente tirada de ataque o salvación contra una de estas criaturas tendrá ventaja, con una salvación exitosa solo recibirá la mitad del daño sin ningún otro efecto."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un instrumento musical"
+			},
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este conjuro utilizando un espacio de conjuro superior las criaturas que pueden verse afectadas aumentan en 2 por cada nivel de conjuros superior y el daño en {@dice 1d6}."
+					]
+				}
+			],
+			"damageInflict": [
+				"thunder"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"RO"
+			]
+		},
+		{
+			"name": "Lacrim Vita",
+			"level": 3,
+			"school": "N",
+			"time": [
+				{
+					"number": 10,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "permanent",
+					"ends": [
+						"dispel"
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": []
+			},
+			"entries": [
+				"Se requieren de 1 a 5 spellcasters con al menos un espacio de conjuro de lv3. Los recipientes se llenan de agua con sal, se sumerge la lácrima y se concentra poder mágico. Se repite esto con cada recipiente, gastando un espacio de conjuro de nivel 3 por cada uno, luego se añade ADN del enlazado en cada recipiente (uno en cada uno) y se concentra el poder en la Lácrima, gastando un último espacio de conjuro de lv3. Si no se cargan los cuatro recipientes con magia y ADN ni el tanque de la lágrima, el conjuro falla. Al final del ritual todos los Spellcasters que hayan participado adquieren tres puntos de Agotamiento. Entonces, dos cables de esencia mágica brotarán de la lácrima hacia cada ataúd y se conectarán.",
+				"A partir de ese momento, cada vez que un enlazado muera, su cuerpo físico desaparecerá y su alma será teletransportada a su recipiente, donde se formará un cuerpo exactamente igual al que tenía al morir, pero sin heridas (aplica Resurrection, pero no quita maldiciones).",
+				"Los cables serán indestructibles, y la lácrima solo podrá ser desenlazada con un proceso similar (se deberá castear Disipar Magia con un espacio de conjuro de lv6 por cada recipiente y uno de lv8 al final). Si no hay 4 criaturas enlazadas, quienes se enlacen y mueran revivirán sin recuperar sus cuerpos, y los cables serán endebles al morir el alma.",
+				"Si uno de los enlazados muere por edad, el resto se desvinculará de la lácrima automáticamente."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Lácrima, cuatro recipientes y ADN de cuatro humanoides [no se pueden sustituir componentes]"
+			},
+			"spellAttack": [
+				"O"
+			],
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"HL",
+				"TP",
+				"PS"
+			]
+		},
+		{
+			"name": "Ojo de Halcón",
+			"level": 3,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Cierras tus ojos y tu visión asciende a 500 pies (152 metros). Un halcón etéreo y brillante aparece a esta altura sobre tu cabeza y arroja luz a 10 pies de él. Tanto el caster como el halcón deben poder verse si así lo desean, de lo contrario el conjuro acaba.",
+				"Como acción adicional puedes cambiar tu visión entre la tuya o la del halcón, si bien no puedes ver desde ambas a la vez. Cuando ves desde los ojos del ave, puedes ver con todo detalle a 500 pies de él. Sin embargo, no modifica tu darkvision, por lo que verías a 60 o 120 pies desde una altura elevada."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "La calavera de un halcón"
+			},
+			"meta": {
+				"ritual": true
+			},
+			"miscTags": [
+				"SGT",
+				"RO",
+				"LGT"
+			]
+		},
+		{
+			"name": "Restaurar Mente",
+			"level": 3,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				},
+				{
+					"number": 8,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				},
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Canalizas tu magia y tu fé para devolver la mente del objetivo a su estado natural. Este conjuro puede tener dos efectos diferentes dependiendo de la duración:",
+				"Como acción, tocas a una criatura mientras le dedicas unas palabras de ánimo, acabando una condición a elegir entre charm, miedo o aturdimiento. Además, obtiene ventaja las salvaciones de Wisdom en el próximo minuto.",
+				"Manteniendo 8 horas de conversación ininterrumpidas, puedes aportar suficiente apoyo moral al objetivo como para curar un trauma leve, una manía o una fobia menor."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Por cada lv por encima del 3 puedes agregar una criatura al efecto de acción. A partir del 7, con el efecto de 8 horas puedes tratar un trauma grave, un trastorno obsesivo compulsivo o una fobia mayor."
+					]
+				}
+			],
+			"areaTags": [
+				"ST",
+				"MT"
+			],
+			"miscTags": [
+				"HL",
+				"PRM",
+				"SCL"
+			]
+		},
+		{
+			"name": "Ritual Funerario de Zackie",
+			"level": 3,
+			"school": "N",
+			"time": [
+				{
+					"number": 15,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"duration": [
+				{
+					"type": "permanent"
+				}
+			],
+			"classes": {
+				"fromClassList": []
+			},
+			"entries": [
+				"El usuario se arrodilla frente al cadáver del objetivo (durante este tiempo su percepción pasiva desciende a 1, su CA a 5 y cualquier tirada de salvación fallará automáticamente) y ora por su alma a los espíritus de la naturaleza y a las antiguas hadas arcaicas para que velen por el alma del difunto. La oración durará 5 minutos, y deberá ejecutarse en una de las lenguas que el difunto pudiese comprender, independientemente de cuál. Tras esto, el cuerpo empezará a arder junto con todas sus posesiones, estén o no con él (para esto, sus posesiones deben estar en el mismo plano, o de lo contrario no desaparecerán. Solo cuentan las que el difunto considere como propias). La llama será de un color que represente la personalidad, carácter y esencia vital del objetivo, y consumirá el cuerpo hasta no dejar ningún tipo de rastro. Esta llama no puede apagarse, a menos que se utilice el conjuro Wish o Disipar Magia a nivel 7 o superior. ",
+				"Pasados los 15 minutos, el cuerpo habrá desaparecido, independientemente de su tamaño, y las llamas tomarán la forma del difunto, representando el alma de este. El objetivo será invulnerable para siempre, pero estará ligado al lugar que más haya amado en vida. Además, no podrá comunicarse verbal ni mentalmente. El DM (o el jugador que interpretaba el personaje) decide si su alma decide despedirse o si se va directamente. A partir de entonces, una luz flotará alrededor del lugar al que se dirija, en forma de aurora boreal, destello, estrella, luciérnaga o cualquier otra forma de luz a juicio del DM. ",
+				"Los difuntos afectados por este conjuro nunca podrán resucitar o ser poseídos, sino que deambularán por su lugar más amado para siempre o hasta que ellos decidan desaparecer. Nada puede dañarlos (salvo Wish a juicio del DM) ni afectarles positiva o negativamente. Una vez hayan puesto rumbo al lugar, adoptarán la forma luminosa que tendrán más adelante, y perderán la capacidad de interactuar con los vivos, si bien podrán observarles e interactuar entre sí en caso de que dos almas afectadas por este conjuro coincidan en un mismo lugar. ",
+				"En ningún caso un alma podrá pasar más de 1 minuto estática antes de partir, por lo que si pasado ese tiempo aún no ha terminado de despedirse, será arrastrado al lugar pertinente.",
+				"En algunos casos puede ocurrir que un alma no ame ningún lugar en especial, o que no le dé tanta importancia al espacio como a otras cosas. El DM puede decidir implantar dicha forma luminiscente en algún objeto, criatura o edificio, pero si la decisión recae en el jugador, deberá explicar la situación al DM y este será quien deba tomar la decisión. Este hecho no añadirá ninguna habilidad o característica mecánica, salvo una posible irradiación de luz a un máximo de 2 casillas, que podrá ser permanente o intermitente (a juicio del DM).",
+				"Este ritual no afectará a Undead ni a aquellos que hayan sido resucitados con algún conjuro que no lo convirtiese en Undead. De utilizarse en uno, la llama jamás prendería los cuerpos de estos."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"meta": {
+				"ritual": true
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"HL",
+				"PRM",
+				"MAC",
+				"FMV",
+				"LGT"
+			]
+		},
+		{
+			"name": "Juicio de Selûne",
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 20
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Invocas el poder de Selûne para ayudarte en combate. Desprendes un aura de luz lunar en un cono de 20 pies. Toda criatura hostil deberá hacer una salvación de Wisdom. Lanza {@dice 4d6}:",
+				"- Toda criatura hostil recibe esa cantidad en daño radiante + tu modificador de conjuro o la mitad si salva.",
+				"- Toda criatura aliada recupera HP igual a la mitad de esa cantidad + tu modificador de conjuro. Suma el modificador después de dividir la cantidad de los dados.",
+				"Una criatura bajo cualquier efecto de shapechanging salva con desventaja, y de fallar pasa a su forma original durante una hora sin la posibilidad de cambiar de forma. "
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Símbolo Arcano de un dios bueno"
+			},
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"El daño causado por este conjuro aumenta en {@dice 1d6} por cada nivel extra."
+					]
+				}
+			],
+			"damageInflict": [
+				"radiant"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"areaTags": [
+				"MT",
+				"N"
+			],
+			"miscTags": [
+				"HL",
+				"SCL",
+				"RO",
+				"LGT"
+			],
+			"savingThrow": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Espíritu del Sauce",
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Life",
+							"shortName": "Life",
+							"source": "PHB"
+						}
+					}
+				]
+			},
+			"entries": [
+				"Dejas caer una mota de magia concentrada de tu canalizador sobre una superficie sólida y haces crecer un sauce llorón de tamaño grande y 10 pies de altura con 30 HP y 12 de CA cuya copa ocupa 20 pies desde el centro del tronco. Cada vez que una criatura pase bajo la copa, puedes elegir usar tu reacción para curar {@dice 3d8} más tu habilidad de conjuros. Además, con tu acción adicional puedes acabar con uno de los siguientes efectos a elegir entre ceguera, sordera, parálisis, envenenamiento o una enfermedad a una sola criatura.",
+				"Cuando el conjuro acaba las hojas del árbol empiezan a brillar con una luz amarilla casi dorada mientras se elevan hacia el cielo como luciérnagas. Entonces, puedes elegir en qué dirección cae el tronco del árbol, que permanecerá ahí hasta que se descomponga de manera natural. Cualquier criatura en la trayectoria del tronco deberá hacer una salvación de Destreza o recibir {@dice 2d6} de daño contundente y quedar atrapado. Para liberarse debe superar una tirada de Atletismo CD 16."
+			],
+			"source": "GdR",
+			"components": {
+				"s": true,
+				"m": "Una semilla o baya del bosque"
+			},
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este conjuro utilizando un espacio de conjuro superior la curación aumenta en {@dice 1d8}."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"areaTags": [
+				"Y"
+			],
+			"miscTags": [
+				"HL",
+				"PRM",
+				"SCL",
+				"SMN",
+				"RO",
+				"LGT"
+			]
+		},
+		{
+			"name": "Ira del Árbol",
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Haces brotar un árbol de la nada en un espacio de suelo sólido que puedas ver. Este ocupa una superficie de 3x3 casillas y mide 20 pies de alto. Una criatura que ocupe un espacio dentro de este área debe superar una tirada de salvación de Destreza o recibir {@dice 3d6} de daño contundente y caer tumbado. El conjurador puede decidir qué árbol conjura para decidir qué efecto tiene:",
+				"{@b Un Sauce Llorón}, cada vez que una criatura pase a 10 pies del árbol, el usuario puede utilizar su acción o reacción para propinar un latigazo, {@dice 4d8} de daño contundente, con tu bono de lanzamiento de conjuros; inmovilizar a un enemigo si no supera una tirada de salvación de Destreza sobre tu CD de salvación de conjuros, el objetivo quedará apresado hasta que logre superar la tirada; o lanzar a un objetivo a 15 pies en la dirección que elijas y caer tumbado, haciéndole recibir {@dice 3d6} de daño contundente en caso de fallar una tirada de salvación de Destreza. Solo puede atrapar a 4 criaturas a la vez. De hacerlo no podrá usarse para atacar hasta que no se libere al menos a una. Una criatura apresada puede ser lanzada.",
+				"{@b Un Roble} hueco por dentro con aberturas finas y recubiertas de hojarasca. Las criaturas en el área ignoran la salvación de Destreza y el daño resultante al brotar el árbol. En su lugar, cualquier criatura en el área de crecimiento queda protegida y cubierta por una cobertura total. El árbol tiene 80 HP y una CA de 14 y será débil al fuego y frío mágicos, pero inmune al veneno, al psíquico y al sónico. Dentro de este habrá luz normal debido a sabia bioluminiscente, y podrán disparar conjuros o proyectiles a través de las aberturas.",
+				"{@b Un Cerezo}, cada vez que un spellcaster a tu elección mantenga la concentración en un rango de 30 casillas desde él, tendrá ventaja en las tiradas de salvación para mantenerla. Además, el conjurador, como acción o reacción, puede brindar frutos del tamaño de un puño a cualquier criatura que pase bajo la copa. Estos frutos recuperarán {@dice 2d8} al ingerirlos como acción adicional. Además, inmunizará a las criaturas escogidas en el rango contra ceguera y envenenamiento y arrojará luz brillante dentro del área.",
+				"{@b Una Seta Gigante}, proporciona amortiguación frente a caídas de menos de 100 pies. De usarse en combate extiende una nube de gas de 2x2 que el conjurador puede controlar. Esa nube puede paralizar al objetivo que no supere una tirada de salvación de Constitución sobre tu CD de salvación de Conjuros. Una vez se salve, estará envenenado hasta que finalice el conjuro o muera la seta. Una ráfaga de viento puede disipar la nube de humo, y cualquier criatura, hostil o no, que la respire sufrirá sus efectos.",
+				"{@i El árbol puede treparse con una tirada de Acrobacias 14 o Atletismo 17. Cada 5 pies subidos gastarán 10 a la movilidad. El árbol, a excepción del Roble, tendrá 30 HP y una CA de 12. Tendrá inmunidad al daño psíquico, sónico y por veneno de ataques mágicos y no mágicos, pero será vulnerable al fuego y frío mágico. El árbol no podrá crecer si no dispone de espacio suficiente. Cuando el conjuro acaba, el conjurador puede elegir en qué dirección cae el árbol y causar daño contundente equivalente a {@dice 4d6} en un área de 3 casillas de ancho por 4 de largo desde la base del árbol. A continuación el árbol desaparecerá.}"
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un puñado de semillas, ramas y corteza"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"El {@b Sauce} podrá atrapar a una criatura más por cada nivel de conjuro extra, el {@b Roble} recibirá +10 HP y +1 a la CA, el {@b Cerezo} aumentará su área en 5 pies, y la {@b Seta} causará {@dice 1d12} de daño por veneno con la nube tóxica."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning",
+				"poison"
+			],
+			"spellAttack": [
+				"M",
+				"R"
+			],
+			"savingThrow": [
+				"dexterity",
+				"constitution"
+			],
+			"miscTags": [
+				"HL",
+				"THP",
+				"SCL",
+				"SMN",
+				"MAC",
+				"FMV",
+				"RO",
+				"LGT"
+			],
+			"abilityCheck": [
+				"strength",
+				"dexterity"
+			],
+			"areaTags": [
+				"Y"
+			]
+		},
+		{
+			"name": "Melodía Exhultante",
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Empiezas a tocar una canción que mejora de una a tres criaturas que puedan verte y oírte. Esta agradable melodía podrá aplicar 4 condiciones en total repartiéndolas entre las criaturas que el lanzador de conjuros desee. Las condiciones en cuestión son:",
+				"  - Se aplica un +2 a las tiradas de ataque y daño que haga la criatura afectada.",
+				"  - Obtiene un +3 a la CA.",
+				"  - Los conjuros o habilidades que regeneren HP sumarán {@dice 2d8} más tu modificador de lanzamiento de conjuros.",
+				"  - Aparecen unas alas en su espalda, lo que le da un aumento de la velocidad en 30 pies o una velocidad de vuelo de 30 pies.",
+				"  - Obtiene resistencia al ácido, frío, fuego, relámpago, veneno o trueno (puede escogerse más de una, pero cada una es una condición aparte).",
+				"  - Cuando la criatura realice un ataque este se ve envuelto en la magia de tu canción y aumenta su daño en {@dice 2d8} de daño por trueno una vez en cada uno de tus turnos."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un instrumento musical"
+			},
+			"damageInflict": [
+				"thunder"
+			],
+			"spellAttack": [
+				"O"
+			],
+			"areaTags": [
+				"ST",
+				"MT"
+			],
+			"miscTags": [
+				"HL",
+				"SGT",
+				"MAC",
+				"RO"
+			]
+		},
+		{
+			"name": "Negar la Muerte",
+			"level": 5,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "Una criatura que puedas ver en el rango (tú incluido) cae a 0 HP o muere"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					}
+				},
+				{
+					"type": "special"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Valiéndote de tu fe, vinculas el alma de una criatura a su propio cuerpo, impidiéndole morir. Durante la duración de conjuro, el objetivo no puede caer inconsciente, incluso cuando esté a 0 HP o haya muerto. La criatura puede moverse y realizar su turno de forma normal, pero aún deben aplicarse las normas de las tiradas de muerte. ",
+				"Mientras siga haciendo tiradas de muerte, podrá ser curado de forma normal, lo cual acabará con este conjuro. Sin embargo, si muere, solo podrá ser blanco de conjuros que revivan cadáveres, acabando también con este conjuro. Mientras dure, el cuerpo no se descompondrá, por lo que el tiempo bajo este conjuro no afectará para el lapso de tiempo de dichos conjuros.",
+				"La criatura aún entiende la situación y está en pleno uso de sus capacidades mentales y físicas, pero siente un insoportable dolor en todo el cuerpo, así como un cansancio pesado. Su capacidad de carga se reduce a la mitad.",
+				"No afecta a Undeads."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"A nivel 6 dura 5 minutos, al 7 dura 10, al 8 una hora y al 9 dos horas."
+					]
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"HL",
+				"SGT",
+				"SCL"
+			]
+		},
+		{
+			"name": "Nudo de Nyx",
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Una gran cantidad de serpientes negras sale de tu mano y avanza hasta un objetivo a 15 pies. Si falla una tirada de salvación de Fuerza, será arrastrado tantas casillas como alcance tenga este conjuro, estará atrapado (si la criatura es del tamaño del usuario o uno mayor) y recibirá {@dice 2d6} de daño contundente, {@dice 2d6} de daño perforante y {@dice 2d6} de daño por veneno. Si la supera, no será arrastrado ni atrapado. Además, recibirá la mitad del daño. ",
+				"Cuando el objetivo está atrapado, el usuario puede moverse la mitad de su movilidad y arrastrar al objetivo. Con una tirada de spellcasting (CD 8 diminuto, 10 pequeño, 14 mediano, 18 grande) podrá lanzar al objetivo un numero de casillas igual a {@dice 1d6}. Recibirá tantos {@dice d4} de daño por fuerza como casillas recorridas y acabará el conjuro.",
+				"Al final de cada turno, el objetivo puede repetir la tirada de Fuerza para liberarse, pero no recibirá más daño. Mientras esté atrapado estará paralizado. Si no has atrapado a nadie, puedes usar tu acción para volver a intentarlo mientras dure el conjuro."
+			],
+			"source": "GdR",
+			"components": {
+				"s": true,
+				"m": "Veneno de Serpiente"
+			},
+			"damageInflict": [
+				"bludgeoning",
+				"force",
+				"piercing",
+				"poison"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"strength",
+				"constitution"
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SCL",
+				"FMV",
+				"RO"
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"A niveles superiores se añade {@dice 1d6} al daño a elegir. Además, estará también envenenado hasta que supere una tirada de salvación de Constitución sobre tu CD de lanzamiento de conjuros."
+					]
+				}
+			]
+		},
+		{
+			"name": "Precio del Alma",
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Sintonizas el poder del cáliz con el alma de un objetivo que puedas ver, atrayéndola hacia este en forma de sangre. El objetivo deberá superar una salvación de Constitución o recibir {@dice 4d12} necróticos, o la mitad en una salvación fallida. Si este conjuro reduce los HP de una criatura a 0, muere automáticamente mientras su sangre sale a través de todos sus orificios mientras se transforma en monedas de oro. Al final, el cáliz contiene una cantidad de GP igual a la edad del objetivo en años. Este dinero es de curso legal y no se puede diferenciar de otro tipo de dinero. Sin embargo, los conjuros o habilidades que puedan detectar el origen de la magia (norma homebrew para WHH) podrán detectar trazas de maldición en este dinero.",
+				"Este conjuro no tiene efecto en criaturas sin sangre o sin alma, como la mayoría de Undeads o constructos, y causará el doble de daño a undeads que se compongan solo de un alma, sin cuerpo físico. Para estos últimos, el tiempo que lleven muertos no se incluirá en la cantidad final de GP obtenidos por reducir sus HP a 0."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un cáliz de oro por valor de 200 GP"
+			},
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"Por cada nivel por encima del 5, añade {@dice 2d12} al daño."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"PRM",
+				"SCL"
+			]
+		},
+		{
+			"name": "Amnesia Negra",
+			"level": 7,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "permanent"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Lanzas una pequeña esfera alargada de un color negro tan puro que ni la mismísima luz del sol se atreve a atravesarlo. El objetivo deberá superar una tirada de Sabiduría sobre tu CD de conjuros o quedar inconsciente {@dice 1d6 + 2} turnos. La criatura despertará si recibe un daño proporcional al 50% de los HP del usuario del conjuro. Cuando lo haga, independientemente del motivo, la criatura habrá perdido todos sus recuerdos, pero conservará todos sus atributos. Si algún rasgo depende, de alguna forma, de las memorias del objetivo, este las conservará, pero no recordará cómo las obtuvo. La criatura no podrá recuperar sus recuerdos de formas mundanas, pero estará en pleno uso de sus facultades mentales.",
+				"Un conjuro de Restauración Mayor o Eliminar Maldición a lv7 o Wish le devuelven sus recuerdos automáticamente."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "restos de antigüedades o ruinas en mal estado"
+			},
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"PRM"
+			]
+		},
+		{
+			"name": "Trueno de los Dioses",
+			"level": 9,
+			"school": "V",
+			"time": [
+				{
+					"number": 2,
+					"unit": "round"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 320
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"El usuario se eleva 50 pies (10 casillas) sobre el suelo y el cielo se cubre de un manto de nubes negras durante el primer turno. Durante este tiempo cuenta como paralizado. En el segundo turno, un pequeño rayo aparecerá entre las manos del usuario, y lo clavará en tierra con ambos brazos. Entonces, un enorme trueno caerá en un área redonda de 20 casillas de diámetro y obligará a todas las víctimas en el área o por encima o a 20 pies por debajo a hacer una tirada de salvación de constitución o sufrir {@dice 25d6} de daño por relámpago y {@dice 25d6} por trueno, o la mitad si se supera. Después, el usuario volverá a tierra sin recibir daño (levitará por electricidad estática) y la zona afectada se habrá convertido en un cráter de escombro de 100 pies (20 casillas) de profundidad. Será terreno difícil. Todos los objetivos, salven o no, estarán aturdidos y tumbados."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"damageInflict": [
+				"lightning",
+				"thunder"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"Y"
+			],
+			"miscTags": [
+				"PRM",
+				"RO",
+				"LGT"
+			]
+		},
+		{
+			"name": "Filacteria",
+			"level": 10,
+			"school": "N",
+			"time": [
+				{
+					"number": 8,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "permanent"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Este conjuro solo puede ser casteado por un spellcaster de lv17 con todos sus espacios de conjuro disponibles en el momento en el que se empieza el ritual.",
+				"Durante las dos primeras horas del ritual, dibujas un amplio símbolo arcano con la sangre en una superficie de 20 pies cuadrados. Entonces, colocas la lácrima en el centro y la sumerges en el polvo de plata. Tras esto, durante las siguientes 6 horas gastas todos y cada uno de tus espacios de conjuro para alimentarla con las almas de los humanoides.",
+				"A partir de la realización de este ritual, el conjurador se convertirá en un Undead, lo cual significa que este será el tipo de criatura en lo que refiere a conjuros y otros efectos, no necesitarás comer, beber, dormir o respirar y podrás recibir los efectos de un descanso largo tras seis horas de actividad relajada. Tu cuerpo también se verá afectado. Tu carne se descompondrá durante 1 semana a ritmo lento. Tras esto, no volverá a hacerlo y tampoco envejecerás.",
+				"Cada vez que mueras, tanto tú como tu equipo os desvaneceréis en polvo y reapareceréis alrededor de la lágrima pasados {@dice 1d10} días. La lácrima te protegerá durante un número de siglos igual al número de almas utilizadas en el ritual."
+			],
+			"source": "GdR",
+			"meta": {
+				"ritual": true
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Una lácrima por valor de 25.000 GP y 20 litros de sangre de humanoide; al menos un alma de humanoide y polvo de plata por valor de 5000 GP, que el conjuro consume"
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"HL",
+				"PRM",
+				"RO"
+			]
+		},
+		{
+			"name": "Muro de Frontera",
+			"level": 10,
+			"school": "A",
+			"time": [
+				{
+					"number": 24,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "permanent",
+					"ends": [
+						"dispel"
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": []
+			},
+			"entries": [
+				"Crea un muro mágico de 1/4 pulgadas infundido en un gran poder y que puede flotar libremente o descansar sobre una superficie sólida, pudiendo colocarse por debajo de esta sin atravesarla. Tiene una longitud de hasta 63 Km y 20 Km de altura, aunque se puede moldear la superficie de la misma para crear aberturas, curvas o para cerrar un perímetro si así se requiere. Si la pared atraviesa el espacio de una criatura cuando aparece, es empujada hacia un lado de la pared (tú eliges de qué lado). Nada puede atravesar físicamente la pared. Es inmune a todo daño y no se puede disipar con Disipar magia o el Campo antimagia. También se extiende hacia el Plano Etéreo.",
+				"Cuando lanzas el conjuro se crean los siguientes efectos:",
+				"  - Interferencia extradimensional: Las criaturas afectadas no pueden moverse o viajar usando la teletransportación o por medios extradimensionales o interplanares si la línea recta entre el lugar de partida y el de llegada queda bloqueada por el muro.",
+				"  - Niebla sólida: Desde uno de los lados es opaco y de un color azul, a pesar de verse como una densa niebla, impidiendo todo tipo de visión a través de ella. Por el otro lado es transparente.",
+				"  - Luces danzantes: Coloca a lo largo de su superficie por la parte interior luces danzantes de color verde las cuales se les puede designar un programa simple para que se enciendan y se apaguen.",
+				"  - El sonido no puede atravesar la barrera en el borde del área protegida.",
+				"  - Los sensores creados por hechizos de adivinación no pueden atravesar la barrera en su perímetro."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Una lácrima por valor de 200.000 GP"
+			},
+			"meta": {
+				"ritual": true
+			},
+			"areaTags": [
+				"W"
+			],
+			"miscTags": [
+				"PRM",
+				"FMV",
+				"LGT"
+			]
+		},
+		{
+			"name": "Domo Impenetrable",
+			"level": 10,
+			"school": "A",
+			"time": [
+				{
+					"number": 24,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "hemisphere",
+				"distance": {
+					"type": "miles",
+					"amount": 124
+				}
+			},
+			"duration": [
+				{
+					"type": "permanent",
+					"ends": [
+						"dispel"
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": []
+			},
+			"entries": [
+				"Crea un aura mágica segura que es infundida con un gran poder mágico. Moldeas y das forma a esa energía mágica de forma que creas una esfera que puede flotar libremente o descansar sobre una superficie sólida pudiendo colocarse por debajo de esta sin atravesarla pero proporcionando los beneficios de esta energía. La esfera tiene un diámetro de hasta 200 Km2, aunque se puede moldear la superficie de la misma para crear aberturas si así se requiere. El grosor de esta esfera es de 1/4 pulgadas. Si la pared atraviesa el espacio de una criatura cuando aparece, la criatura es empujada hacia un lado de la pared (tú eliges de qué lado). Nada puede atravesar físicamente la pared. Es inmune a todo daño y no se puede disipar con Disipar Magia o el Campo Antimagia. La esfera también se extiende hacia el Plano Etéreo, bloqueando el viaje etéreo a través de la esfera. El ambiente dentro del espacio es cómodo y seco, independientemente del clima exterior.",
+				"Cuando lanzas el conjuro se crean los siguientes efectos:",
+				"  - Interferencia extradimensional: Las criaturas afectadas no pueden moverse o viajar usando la teletransportación o por medios extradimensionales o interplanar.",
+				"  - Niebla sólida: La esfera es opaca por fuera de un color azul, a pesar de verse como una densa niebla lo que la hace parecer oscura y brumosa, impidiendo la visión (incluida la visión en la oscuridad) a través de ella, pero por dentro es transparente.",
+				"  - Luces danzantes: Coloca a lo largo de su superficie por la parte interior luces danzantes de color verde las cuales se les puede designar un programa simple para que se enciendan y se apaguen.",
+				"  - El sonido no puede atravesar la barrera en el borde del área protegida.",
+				"  - Los sensores creados por hechizos de adivinación no pueden aparecer dentro del área protegida ni atravesar la barrera en su perímetro.",
+				"  - Las criaturas en el área no pueden ser objetivo de hechizos de adivinación ni encantamiento."
+			],
+			"source": "GdR",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Una lácrima por valor de 200.000 GP"
+			},
+			"meta": {
+				"ritual": true
+			},
+			"miscTags": [
+				"FMV",
+				"LGT"
+			],
+			"areaTags": [
+				"H"
+			]
+		}
+	]
+}

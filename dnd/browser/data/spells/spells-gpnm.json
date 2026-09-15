@@ -1,0 +1,3980 @@
+{
+	"spell": [
+		{
+			"name": "Disparo Ilusorio",
+			"level": 0,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Lanzas una esquirla de sombras infundida con el color y el sonido que más prefieras. Puede tener la apariencia y sonido que elijas (jabalina silbante, espada siseante, calavera voladora en llamas que grita fantasmagóricamente...).",
+				"La criatura objetivo salva Inteligencia o recibe {@dice 1d8} de daño psíquico, aunque esta cree que el daño real es otro más apropiado a tu ataque. Si salva, sabe que el ataque ha sido una ilusión. Cualquier efecto visual o sonoro de la ilusión desaparece al impactar.",
+				"Si una criatura cae a 0 HP por el daño de este cantrip, está estable e incosciente."
+			],
+			"source": "GPNM",
+			"components": {
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Añade {@dice 1d8} a lv 5 ({@dice 2d8}), otro a lv 11 ({@dice 3d8}) y otro a lv 17 ({@dice 4d8})."
+					]
+				}
+			]
+		},
+		{
+			"name": "Banerjee's Undead Minion",
+			"level": 1,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Este conjuro crea un sirviente Undead a partir de un cadáver o una pila de huesos perteneciente a una criatura no humanoide de CR 1/8 o inferior. Esta debe ser de tamaño mediano o inferior. Independientemente de si la criatura se alza como esqueleto o como zombie, usa su propia ficha como si estuviera vivo, pero con algunas diferencias:",
+				"- Su modificador de Fuerza baja 2 puntos y el de Constitución aumenta en 2.",
+				"- Es inmune a veneno y a ser envenenado.",
+				"- No tiene necesidades básicas.",
+				"- Gana Undead Fortitude.",
+				"- Sus HP máximos son la mitad de los de la criatura base redondeada hacia arriba.",
+				"- No puede ser curado ni beneficiarse de descansos cortos o largos.",
+				"Puedes comandarlo mentalmente en tu turno, ofreciendo una acción o un curso de acción. Si no recibe un comando, se dedica a seguirte y esquivar.",
+				"La criatura está bajo tus órdenes por 24 horas. Después su cuerpo colapsa y muere. Si casteas este conjuro antes de que acabe el efecto, la duración del conjuro se reinicia por otras 24 horas. Si el minion muere o colapsa, no puede ser objetivo de este conjuro."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "A corpse or a pile of bones"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Por cada nivel extra, sube un lv el CR, siendo una criatura de CR 1/4 a lv 2, 1/2 a lv3, 1 a lv4 y así...",
+						"Alternativamente puede alzar a una criatura extra de CR 1/8 por lv de conjuro. Esto puede compaginarse usando los lv como sumatorio. P. E. puede alzar dos criaturas CR 1/4 con un lv4 o una de CR 1/4 y dos de CR 1/8.",
+						"A partir de lv3 puede targetear criaturas grandes. A partir de lv 7 puede targetear a criaturas muy grandes."
+					]
+				}
+			],
+			"areaTags": [
+				"ST",
+				"MT"
+			],
+			"miscTags": [
+				"PRM",
+				"SCL",
+				"SMN"
+			]
+		},
+		{
+			"name": "Conversación Codificada",
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Elige a 4 criaturas dentro del rango que puedas ver. Mientras dure, puedes superponer un mensaje a cada interacción auditiva de las criaturas afectadas. Una criatura que no haya sido objetivo únicamente escuchará tu mensaje, mientras que los objetivos no serán conscientes de los efectos del conjuro a menos que se lo especifiques.",
+				"No puedes codificar tus propias interacciones.",
+				"Una criatura que detecte pensamientos puede escuchar la conversación real de la mente de un objetivo.",
+				"Una criatura que pueda ver lo {@condition invisible} discierne unos labios etéreos superpuestos a los de los objetivos."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"SGT",
+				"PRM",
+				"SCL"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Puede afectar 2 criaturas más por lv de conjuro extra."
+					]
+				}
+			]
+		},
+		{
+			"name": "Postrar",
+			"level": 1,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 5,
+						"upTo": true
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tocas a una criatura a 0 HP para atarlo con cadenas mágicas. El objetivo queda {@condition incapacitated} y {@condition restrained} hasta que el conjuro acabe, incluso si es curado o despierta por sus propios medios.",
+				"Si vuelve a lanzar el conjuro en el mismo objetivo una vez tiene las cadenas, la duración del conjuro se reinicia, pero si el conjuro llega a su fin en algún momento, será necesario noquearle otra vez.",
+				"El caster puede elegir deshacer las cadenas."
+			],
+			"source": "GPNM",
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"PRM"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un eslabón de hierro y un candado"
+			}
+		},
+		{
+			"name": "Corte Espiritual",
+			"level": 2,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 2
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "The Celestial",
+							"shortName": "Celestial",
+							"source": "XGE"
+						}
+					}
+				]
+			},
+			"entries": [
+				"Invocas 4 espíritus caídos en la naturaleza, representados como pequeños fuegos fatuos que te orbitan. Al lanzar el conjuro, y en cada uno de tus siguientes turnos usando la bonus, puedes comandar uno de estos fuegos fatuos hacia una criatura de tu elección que puedas ver y curarles {@dice 1d4}+modificador de spellcasting. ",
+				"Mientras el conjuro esté activo y no tengas todos tus espíritus, de cualquier criatura que muera a 120 pies de ti saldrá un fuego fatuo que se añadirá a tu Corte."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un ramillete de romero seco y lavanda"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Por cada lv extra este conjuro dura 2 minutos más y gana una mota al máximo."
+					]
+				}
+			],
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"HL",
+				"SGT",
+				"SCL",
+				"RO",
+				"UBA"
+			]
+		},
+		{
+			"name": "Pacto de Verdad",
+			"level": 2,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tú y una criatura voluntaria estáis bajo los efectos de Zona de la Verdad, tenéis desventaja en checks de Carisma y ventaja en Insight para tiradas hacia el otro.",
+				"Si el conjuro acaba para uno de los dos, acaba también para el otro. Ambos saben cuándo el conjuro está activo."
+			],
+			"source": "GPNM",
+			"components": {
+				"s": true,
+				"m": "Los escupitajos del caster y del objetivo"
+			},
+			"abilityCheck": [
+				"wisdom",
+				"charisma"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"RO",
+				"ADV"
+			]
+		},
+		{
+			"name": "Protección Totémica",
+			"level": 2,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Colocas un totem protector en una superficie estable en un punto que puedas ver dentro del rango que emite luz a 10 pies y ténue a otros 10. Toda criatura de tu elección a 10 pies del totem adquiere una resistencia de tu elección. Eliges esta resistencia al castear el conjuro y no lo puedes cambiar. Esta resistencia no puede ser ni perforante, ni cortante ni contundente.",
+				"El totem tiene 15 HP, CA 10+tu modificador de Spellcasting, inmunidad al daño que protege y puede ser transportado por una criatura mediana que use ambas manos o una grande a una mano. Si tu no quieres que alguien lo mueva, deben salvar fuerza para levantarlo, y contará como sobrecargado."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un pequeño totem dedicado a un espíritu de la naturaleza"
+			},
+			"savingThrow": [
+				"strength"
+			],
+			"areaTags": [
+				"S"
+			],
+			"miscTags": [
+				"SGT",
+				"RO",
+				"LGT"
+			]
+		},
+		{
+			"name": "Lanza Atrapante de Claymore",
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				},
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Conjuras una lanza evanescente de dos metros que ilumina a 10 pies y 10 pies ténue y la lanzas a un enemigo en el rango. Haz un ranged spell attack con un impacto recibe {@dice 2d10} de daño por fuerza y es empujado hasta impactar con un objeto u obstáculo o hasta que acabe la distancia, momento en el cual se clava en el suelo.",
+				"La criatura recibe daño por caída en función de la distancia que haya sido arrastrada. Si por el camino impacta en otro objetivo, uno de los {@dice d6} se lo llevará dicho objetivo, que salvará fuerza o caerá {@condition prone} y será empujado 5 pies en perpendicular a la trayectoria.",
+				"La criatura atrapada está {@condition restrained} y puede usar su acción para tirar atletismo contra tu CD y liberarse."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Hace {@dice 1d10} más por cada lv extra."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning",
+				"force"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"areaTags": [
+				"ST",
+				"MT",
+				"L"
+			],
+			"miscTags": [
+				"SCL",
+				"FMV",
+				"RO",
+				"LGT"
+			]
+		},
+		{
+			"name": "Migración",
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "turn",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Un enjambre de mariposas de colores cubre un espacio a 10 pies de ti, volviéndote etéreo a ti y al resto de criaturas de tu elección en el área. Puedes volar 120 pies, pudiendo traspasar objetos, estructuras y criaturas, incluso si estas barreras son mágicas (siempre y cuando no bloqueen el teletransporte por completo).",
+				"Arrastras a las criaturas afectadas contigo, y puedes sumar criaturas extra si las atraviesas. Al final del turno, todas las criaturas aparecen a 5 pies de forma segura y el conjuro acaba."
+			],
+			"source": "GPNM",
+			"components": {
+				"s": true
+			},
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"FMV"
+			]
+		},
+		{
+			"name": "Drenaje de Maná",
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "cuando un conjuro es casteado a 60 ft."
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tratas de interrumpir a una criatura en proceso de castear un conjuro. Si el conjuro es de lv3 o inferior, su conjuro falla, gasta el spell slot y regeneras un espacio del mismo lv. Si es de lv 4 o superior sigue las normas antimagia como si este conjuro tuviera siempre dos niveles menos."
+			],
+			"source": "GPNM",
+			"components": {
+				"s": true,
+				"m": "Foco arcano por valor de 500 GP"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Este conjuro puede ser upcasteado para seguir las normas antimaga."
+					]
+				}
+			]
+		},
+		{
+			"name": "Molly's True Shield",
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Una cúpula de fuerza de 10 pies de radio surge a tu alrededor y permanece centrada en ti durante todo el tiempo. Emite luz a 10 pies y ténue a otros 10.",
+				"Si una criatura queda en medio del borde, puedes elegir protegerla o no, dejándola dentro o fuera. Dejarla dentro la empuja hacia dentro, potencialmente tirando a esa y otras criaturas al suelo (Acrobacias CD 10). Si la criatura no cabía, el conjuro falla.",
+				"Las criaturas y los objetos dentro de la cúpula cuando lanzas este hechizo pueden moverse libremente a través de ella. Todas las demás criaturas y objetos tienen prohibido pasar a través de él. Los hechizos y otros efectos mágicos no pueden extenderse a través de la cúpula ni lanzarse a través de ella. El ambiente dentro del espacio es cómodo y seco, independientemente del clima exterior.",
+				"Tiene 30 HP, es inmune al daño por trueno, por veneno y psíquico, vulnerable al daño por fuerza, y resistente al resto de daños. Si el conjuro es destruido, el caster cae al suelo y pierde su reacción esa ronda.",
+				"El caster puede usar su acción para regenerar el escudo o para volverlo a poner."
+			],
+			"source": "GPNM",
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Gana 5 HP por cada lv extra."
+					]
+				}
+			],
+			"abilityCheck": [
+				"dexterity"
+			],
+			"areaTags": [
+				"S"
+			],
+			"miscTags": [
+				"THP",
+				"SCL",
+				"FMV",
+				"LGT",
+				"OBJ"
+			],
+			"components": {
+				"s": true
+			}
+		},
+		{
+			"name": "Plegaria del Martir",
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Con una plegaria desesperada, pides ayuda a los dioses para proteger a tus aliados a cambio de un sacrificio purificador. Cada vez que una criatura a 30 ft. de ti vaya a recibir daño, puedes interponer un escudo divino y recibir tú ese daño. El tipo de daño ahora es necrótico e ignora resistencias e inmunidades, y no se ve afectado por HP Temporales. Este daño no te hace salvar concentración."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"damageInflict": [
+				"necrotic"
+			],
+			"areaTags": [
+				"ST",
+				"MT"
+			],
+			"miscTags": [
+				"HL"
+			]
+		},
+		{
+			"name": "Power Word Shield",
+			"level": 7,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "cuando tú o un aliado a 60 ft. vaya a recibir daño"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Con una palabra de poder, proteges a un aliado que puedas ver hasta el final de su próxima ronda. Una burbuja naranja aparece a su alrededor y le sigue si se mueve. Es inmune a todo daño excepto psíquico, tiene ventaja en todas las salvaciones y es inmune al resto de conjuros de Power Word.",
+				"Si el objetivo estaba envenenado y/o en llamas, el/los efecto/s acaban."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"HL",
+				"THP",
+				"SGT",
+				"ADV"
+			]
+		},
+		{
+			"name": "Mente Colmena",
+			"level": 9,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tocas una criatura que puedas ver y la fuerzas a salvar Carisma. La criatura puede elegir salvar voluntariamente. Con un fallo, vuestras mentes se fusionan, compartiendo recuerdos, conocimientos e identidades. Ambas criaturas comparten un vínculo telepático mientras estén en el mismo plano.",
+				"Puedes usar tu acción para tener control total de la criatura, haciendo que tome únicamente las acciones que tú le permites. Esto incluye su reacción, aunque también deberás gastar la tuya.",
+				"Castear este conjuro en otras criaturas las añade a tu mente colmena."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Un trozo de Cerebro Anciano con valor de 5000 GP"
+				}
+			},
+			"savingThrow": [
+				"charisma"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"PRM"
+			]
+		},
+		{
+			"name": "Obra Maestra",
+			"level": 9,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "permanent",
+					"ends": [
+						"dispel"
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Creas un retrato de una criatura a 30 pies que puedas ver, ya sea en un cuadro, escultura o mosaico. Si la criatura no es voluntaria, debe salvar Carisma. A la hora de lanzar el conjuro, elige uno de los siguientes efectos:",
+				"- Impresión Atemporal. La apariencia del objetivo no puede ser alterada a partir de la finalización de este conjuro. Cualquier cambio que deban sufrir, como designios de vejez, cicatrices futuras, cambios de fisionomía o pérdidas de miembros; se implementan al cuadro al final de un descanso largo, eliminando dichos cambios en el objetivo. A consecuencia, el objetivo no envejece, pudiendo vivir más allá de su esperanza de vida. Sin embargo, si la obra es destruida todos los cambios se aplicarán de forma inmediata e instantánea, potencialmente acabando con su vida.",
+				"- Representación Atrapante. El objetivo es transferido a la obra. Mientras permanezca en este estado, está en animación suspendida, no envejece y no tiene necesidades básicas, como comer, beber, dormir ni respirar.",
+				"- Fractal Arcano. El objetivo recibe la Maldición del Fractal, haciendo que se teletransporte al lugar donde la obra está almacenada o expuesta cada vez que ve su reflejo en un espejo.",
+				"- Similitud Envolvente. El cuadro cambia con el objetivo, mostrando siempre su apariencia actual. Cualquier criatura que observe detenidamente la obra podrá ver a través de los ojos del objetivo, esté donde esté.",
+				"Una criatura puede ser afectada por este conjuro solo una vez."
+			],
+			"source": "GPNM",
+			"components": {
+				"s": true,
+				"m": {
+					"text": "100 GP en materiales relevantes para la obra por cada Dado de Golpe del objetivo, que son consumidos",
+					"consume": true
+				}
+			},
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"charisma"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"PRM",
+				"TP"
+			]
+		},
+		{
+			"name": "Rapto",
+			"level": 9,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "miles",
+					"amount": 1
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tu voz se hace eco con el poder de los dioses en una plegaria. Todas las criaturas que murieron en la última hora dentro del rango resucitan a 1 HP, y cualquier No muerto de CR 4 o inferior es instantaneamente destruido mientras una onda de sunlight ilumina el área.",
+				"En el momento de lanzar el conjuro puedes designar criaturas que no quieras revivir o no muertos que no quieras destruir."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true
+			},
+			"areaTags": [
+				"MT",
+				"S"
+			],
+			"miscTags": [
+				"HL",
+				"PRM",
+				"LGTS"
+			]
+		},
+		{
+			"name": "Kemiza's Elemental Cover",
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [],
+			"source": "GPNM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "dildo",
+					"cost": 30000
+				}
+			},
+			"damageInflict": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"poison"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"RO"
+			]
+		},
+		{
+			"name": "Paso Elevado",
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Dotas a ti y hasta a diez criaturas que puedas ver en el rango con la ligereza del viento. Mientras dure el conjuro las criaturas objetivo y el equipo que llevaban al recibir el conjuro pesan 1 libra. Los objetivos podrán caminar sobre niebla, nubes y humo como si fueran superficies sólidas. De estar dentro de estas ascenderán a una velocidad de 60 ft. por turno. Pueden elegir acabar este efecto y descender en el gas como si no fuesen afectados por este conjuro y volver a activarlo más tarde.",
+				"Mientras dure el conjuro se ven afectados por el conjuro {@spell Feather Fall} y su distancia de salto se duplica. Cuentan como una criatura tiny para tiradas enfrentadas de fuerza."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Una pieza de algodón"
+			},
+			"meta": {
+				"ritual": true
+			},
+			"abilityCheck": [
+				"strength"
+			],
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Criogénesis",
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Congelas el aire alrededor de una criatura, creando una capa de hielo que le imposibilita el movimiento. Una criatura que puedas ver dentro del rango salva Constitución. Con un fallo recibe {@dice 4d8} de frío y se congela. Mientras esté congelado está {@condition restrained} y es resistente al daño por frío. Si falló por 5 o más está {@condition paralyzed}. Si salvó, solo recibe la mitad del daño.",
+				"Al final de cada uno de sus turnos puede repetir la salvación para liberarse. También puede acabar antes si recibe un daño de 15 o más de una sola vez de uno de los siguientes tipos: fuego, contundente o trueno. Pasado un minuto, si no se liberó ni se rompió el hielo, este se derrite."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Una gota de agua"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Hace {@dice 1d8} extra por lv de conjuro. A partir del lv7 el hielo tarda 10 minutos en descongelarse y el treshold es de 20 HP. A lv 9 tarda 1 hora y tiene un treshold de 30 HP."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning",
+				"cold",
+				"fire",
+				"thunder"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"RO",
+				"ADV"
+			]
+		},
+		{
+			"name": "Embestida Pírica",
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Un enorme jabalí de fuego surge de ti y carga contra un enemigo a 30 ft que puedas ver. El objetivo salva destreza para recibir {@dice 1d4} de fuego por cada 5 ft recorridos por el jabalí o la mitad con éxito.",
+				"Puedes repetir esta acción mientras dure el conjuro."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un colmillo de jabalí carbonizado"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"El dado de daño aumenta a {@dice d6} si es casteado a lv4 o 5, {@dice d8} a lv6 o 7, {@dice d10} al lv8 y {@dice d12} al lv9."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"RO",
+				"LGT",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Cacería",
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Llamas a una manada de bestias espectrales y las comandas en un ataque sincronizado. 8 bestias con un claro alineamiento fey, celestial, infernal o primordial aparecen a tu alrededor. Todas tienen el mismo origen y hacen un tipo de daño en función de este, siendo respectivamente psíquico, radiante, fuego o trueno.",
+				"Asigna a cada lobo una presa que puedas ver en el rango. Haz una tirada de ataque por objetivo (no por bestia).",
+				"- Si enviaste a, al menos, dos bestias a una misma criatura, tienes ventaja en la tirada.",
+				"- Si mandaste 3 o más y el ataque falló, el objetivo aún recibe la mitad del daño.",
+				"- Una criatura objetivo no puede ser atacada por más de 5 bestias.",
+				"Con un impacto el objetivo recibe {@dice 2d6 + 2} por cada bestia que le atacó."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un silbato de plata"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Este conjuro crea una bestia extra por cada lv una vez upcasteado."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire",
+				"psychic",
+				"radiant",
+				"thunder"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"RO",
+				"ADV"
+			]
+		},
+		{
+			"name": "Vértigo",
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Deformas los sentidos de una criatura que puedas ver, que te pueda ver y que esté apoyada en una superficie en el rango. Esta debe superar una salvación de Inteligencia o caer {@condition prone} y se desliza 20 ft. en una dirección de tu elección. Si va a caer por un precipicio, puede usar su reacción para salvar fuerza o destreza a juicio del DM para evitar caer."
+			],
+			"source": "GPNM",
+			"components": {
+				"s": true,
+				"m": "Una pequeña bola de metal y un muelle"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Puedes targuetear a una criatura extra por cada lv añadido."
+					]
+				}
+			],
+			"savingThrow": [
+				"strength",
+				"dexterity",
+				"intelligence"
+			],
+			"areaTags": [
+				"ST",
+				"MT"
+			],
+			"miscTags": [
+				"SGT",
+				"FMV"
+			]
+		},
+		{
+			"name": "Reflejos Predatorios",
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Hasta que el conjuro acabe, el objetivo gana un bono de +3 a la CA y a salvaciones de Fuerza, Destreza y Constitución, 30 ft. extra a la movilidad y gana una reacción extra. Si usaste una de tus reacciones en lanzar un conjuro, no puedes castear un conjuro con la otra. Además, cuando el objetivo se vea incluido en un efecto de área, puede usar una de sus reacciones para moverse hasta 30 ft, potencialmente saliendo del área."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un mechón de la melena de un león"
+			},
+			"savingThrow": [
+				"strength",
+				"dexterity",
+				"constitution"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"MAC"
+			]
+		},
+		{
+			"name": "Barrera",
+			"source": "GPNM",
+			"level": 1,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 20
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a pinch of powder made by crushing a clear gemstone"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Una barrera de fuerza {@condition invisible} surge en un lugar de tu elección en el rango. Un panel de 10 ft cuadrados y 60 cm de grosor aparece en la orientación que prefieras, sea vertical, horizontal o diagonal. Puede estar apoyada sobre una superficie o flotando.",
+				"Permanece mientras dure el conjuro y no la puedes mover. Si al aparecer atravesara a una criatura, eliges en qué lado de la barrera queda.",
+				"Nada puede atravesar la barrera y es inmune a todo daño, excepto al de desintegrar. Para las mecánicas de antimagia, una vez ya puesta cuenta como un conjuro de lv 6. La pared también se extiende en el Plano Etéreo, bloqueando el viaje etéreo.",
+				"Si la barrera se interpone en una línea perfecta entre un caster y el objetivo de su conjuro, esta lo bloquea. Esto incluye también el teletransporte."
+			],
+			"areaTags": [
+				"W"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "TCE"
+						},
+						"subclass": {
+							"name": "Armorer",
+							"shortName": "Armorer",
+							"source": "TCE"
+						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "TCE"
+						},
+						"subclass": {
+							"name": "Artillerist",
+							"shortName": "Artillerist",
+							"source": "TCE"
+						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Oath of Redemption",
+							"shortName": "Redemption",
+							"source": "XGE"
+						}
+					},
+					{
+						"class": {
+							"name": "Sorcerer",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Clockwork Soul",
+							"shortName": "Clockwork Soul",
+							"source": "TCE"
+						}
+					}
+				]
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Puede ponerse un panel extra por cada dos lv. Estos no tienen por qué ser adyacentes ni tocarse y cuentan como efectos separados a la hora de aplicar mecánicas antimagia una vez colocados."
+					]
+				}
+			],
+			"miscTags": [
+				"SCL"
+			]
+		},
+		{
+			"name": "Cronotruco",
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Alteras el paso del tiempo en un área pequeña, afectando rápidamente al paso del tiempo para todos los objetos pequeños o diminutos que elijas en un cubo de 5 ft en el área. Puedes afectarlos todos a la vez con uno de los siguientes efectos:",
+				"{@b Avance rápido.} Secas tinta, haces hervir agua al fuego, consumes velas... El tiempo avanza para estos objetos 10 minutos por cada minuto de duración.",
+				"{@b Revertir.} La fruta podrida vuelve a estar fresca, los documentos desgastados vuelven a su estado inicial, recompones objetos rotos de vidrio o cristal... Reviertes el paso del tiempo en 10 minutos por cada minuto invertido, pero no afectas a la localización ni al contenido de objetos como recipientes.",
+				"Con la bonus puedes cambiar entre un efecto u otro, pero no puedes cambiar el área ni afectar a objetos nuevos que hayan entrado en esta o que hayan salido."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"areaTags": [
+				"MT",
+				"C"
+			],
+			"miscTags": [
+				"HL",
+				"PRM",
+				"UBA",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Nube Voladora",
+			"level": 6,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 100
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Conjuras una nube capaz de transportar a una criatura a grandes velocidades. Al nivel básico es capaz de transportar a cuatro humanoides medianos o más pequeños. Al castear el conjuro elige un punto a 100 millas (160 km) al que sepas viajar. La nube llegará allí recorriendo 1 milla por minuto de forma autónoma. ",
+				"La nube protege a sus pasajeros de las inclemencias del tiempo, como lluvia o viento, pero no de peligros directamente nocivos, como ataques, proyectiles o rayos. Sin embargo sí esquiva obstáculos y criaturas dentro de lo posible. En combate la nube y todos sus pasajeros tienen Flyby.",
+				"Al llegar al destino, la nube desciende de forma segura y desaparece al llegar al suelo.",
+				"Usado en el Wildspace, no te puede llevar más allá del campo gravitatorio de un spelljammer ni crea su propia burbuja de aire."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Una bola de algodón"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Puede llevar un pasajero extra por lv de conjuro."
+					]
+				}
+			],
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"TP",
+				"FMV"
+			]
+		},
+		{
+			"name": "Cápsula Temporal",
+			"level": 1,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Envuelves con tus manos un objeto que quepa en la palma de tu mano y no pese más de 5 lb (2,2 Kg) y lo haces desaparecer del presente. El objeto reaparece en la misma localización exacta en un plazo de hasta 7 días que tu designes. Si ese lugar no estaba libre, reaparece lo más cerca posible."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Con un conjuro de lv5 o superior puedes hacer desaparecer un objeto hasta 100 años."
+					]
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SCL",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Restaurar Juventud",
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 8,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Haces un intrincado ritual centrado en una criatura que no seas tú y que puedas ver. Reduces su edad aparente en {@dice 3d10} años hasta un mínimo de 13, pero no aumenta su esperanza de vida."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"meta": {
+				"ritual": true
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "polvo de oro por valor de 200 GP que el conjuro consume",
+					"consume": true,
+					"cost": 20000
+				}
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"PRM",
+				"RO"
+			]
+		},
+		{
+			"name": "Flecha atemporal",
+			"level": 3,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "cuando una criatura falla o acierta un ataque a distancia dentro del rango"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Congelas un proyectil en el aire y modificas su trayectoria. Si el proyectil iba a impactar, se congela a 5 ft del objetivo. Si iba a fallar, el DM determina el lugar desde el que se congela.",
+				"Como parte de la reacción puedes repetir el ataque con el mismo rango y modificadores originales, pero desde el lugar en el que se congeló. Alternativamente puedes hacer que se esfume o caiga al suelo sin dañar a nadie."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"s": true
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"RO",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Envejecer",
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Una criatura que puedas tocar salva wisdom para quedar maldecida indefinidamente. Mientras esté bajo los efectos de esta maldición, el objetivo envejece dos días por cada día vivido. También tiene desventaja en checks y salvaciones de fuerza. Un conjuro de {@spell Remove Curse} del nivel apropiado acaba con este efecto."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "caparazón de tortuga"
+			},
+			"savingThrow": [
+				"strength"
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"PRM"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Puede upcastear según las normas antimagia."
+					]
+				}
+			]
+		},
+		{
+			"name": "Maldición de Juventud",
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Rejuveneces a un objetivo que puedas ver dentro del rango hasta el punto de convertirlo en un bebé indefenso. El objetivo puede salvar wisdom para resistir el efecto. Este conjuro no afecta a cambiaformas, criaturas a 0 HP, que ya están en la infancia o que no nunca la experimentaron.",
+				"Mentiene todo su statblock con las siguientes excepciones:",
+				"- Todos sus stats bajan a 3 (-4)",
+				"- Sus HP pasan a ser su Modificador de Constitución + su lv/CR",
+				"- Su movilidad es 10 y solo puede moverse gateando ({@condition prone})",
+				"Mientras dure, la criatura está {@condition incapacitated|PHB|incapacitada} y solo puede hablar mediante balbueos. Conjuros y efectos de comprensión idiomática como {@spell Comprehend Languages} o {@spell Tongues} solo son capaces de discernir una idea general de las intenciones del bebé. Además, su equipo no se transforma ni se adapta con él. Potencialmente caerá al suelo debido a la diferencia de tamaño.",
+				"Si el bebé es reducido a 0 HP, el objetivo volverá a su forma original y perderá cualquier cantidad de HP que hayan sobrado del ataque. El objetivo estará dazed hasta el final de su próximo turno."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "una cáscara de huevo"
+			},
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"MAC"
+			]
+		},
+		{
+			"name": "Marca Pasada",
+			"level": 4,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Haces retroceder tus sentidos en el tiempo para percibir tus alrededores como si estuvieras en ese mismo lugar en un tiempo pasado. Debes especificar un momento exacto que no puede alejarse a más de 100 años. La visión es sombría y similar a un sueño, pero puedes percibirlo con total claridad y utilizar cualquier sentido especial que poseas.",
+				"Si te mueves o te giras, puedes seguir percibiendo tu alrededor como si formaras parte de ese momento, pero no puedes hablar ni percibir tus verdaderos alrededores."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Un objeto que pueda medir el tiempo por valor de 100 GP",
+					"cost": 10000
+				}
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Con un slot de lv 7 o superior puedes compartir este conjuro con una segunda criatura que puedas ver a 15 ft. Si no quiere compartir este conjuro, debe salvar Wisdom. Con un slot de lv8 o superior puedes remontarte hasta 1.000 años atrás."
+					]
+				}
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST",
+				"MT"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"SCT"
+			]
+		},
+		{
+			"name": "Guarda Efímera",
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Creas un escudo temporal alrededor de una criatura que puedas ver dentro del rango, ralentizando sus heridas. Mientras dure, cada vez que la criatura fuera a recibir daño, no recibe nada. Cuando el conjuro acabe, el objetivo recibe todo el daño mitigado de golpe. La única forma de mitigar este daño es mediante resistencias e inmunidades, y no es afectado por HPT."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"damageInflict": [
+				"acid",
+				"bludgeoning",
+				"cold",
+				"fire",
+				"force",
+				"lightning",
+				"necrotic",
+				"piercing",
+				"poison",
+				"psychic",
+				"radiant",
+				"slashing",
+				"thunder"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"THP"
+			]
+		},
+		{
+			"name": "Anomalía Espaciotemporal de Molly",
+			"level": 6,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 200
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Perturbas el espacio-tiempo, a tu alrededor para hacer pequeños espacios fuera del propio flujo temporal. Creas 4 brechas de 5 ft cuadrados en espacios que puedas ver dentro del rango. Los objetos y criaturas completamente cubiertos por estas brechas son detenidos al instante. Estas criaturas están {@condition paralyzed|PHB|paralizadas} e {@condition unconscious|PHB|inconscientes}. Tampoco pueden ser targeteadas con ataques o conjuros. Si reciben ataques con armas o proyectiles, estos estarán atrapados también en las brechas.",
+				"Cada criatura atrapada salva Constitución al final de cada uno de sus turnos. Con un éxito reciben {@dice 2d12} por fuerza y caen a 5 ft de la brecha. Con un fallo son teletransportados a otra brecha aleatoria y siguen atrapados."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Por cada lv por encima del lv6 puedes crear 2 brechas extra y el daño por salvar aumenta en {@dice 2d12}."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"areaTags": [
+				"MT",
+				"C"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"SCT",
+				"TP",
+				"FMV",
+				"RO",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Rebobinar",
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 500
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Eres capaz de rebobinar el físico de un objeto o criatura que puedas ver sin sacarlo del presente. El objetivo vuelve al estado en el que se encontraba al principio de tu turno anterior, lo cual incluye sus HP y cualquier efecto que tuviera activo y hubiera acabado en el momento de lanzar este conjuro, como puede ser {@spell haste} o {@spell slow}. Del mismo modo, cualquier efecto que hubiese ganado en el lapso perdido desaparece también, pero sigue gastado para su usuario (i.e. si un paladín se curó 40 HP usando toda su imposición de manos y luego lo rebobinas, no tiene ni los 40 HP ni su imposición de manos). {@b Un objetivo que haya muerto puede volver a la vida si al principio de tu turno anterior estaba vivo.} Funciona igual si el objetivo era un objeto destruido.",
+				"Este conjuro no mueve a los objetivos a la posición a la que estaban antes, pero sí podría afectar a otros objetos o criaturas. Si se anuló un empalamiento por lanza o un {@condition grapple}, la lanza estará en el suelo y la criatura ya no le estará grappleando.",
+				"Si el objetivo es una criatura, mantiene los recuerdos de lo que se ha anulado. "
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"s": true
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"HL",
+				"SGT",
+				"PRM",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Time travel",
+			"level": 9,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Un reloj hecho con perlas y jade por valor de 10.000 GP que el conjuro consume",
+					"consume": true,
+					"cost": 1000000
+				}
+			},
+			"entries": [
+				"Eres capaz de llevarte a ti y a otras criaturas a otros momentos del tiempo. Tú y cualquier otra criatura voluntaria u objeto completamente dentro del área y que puedas ver sois teletransportadas al mismo lugar en el que está cada una, pero 1.000 años antes o después. Si un target es un objeto que está siendo equipado o transportado por una criatura que no quiere ser teletransportada, el objeto no lo hará tampoco.",
+				"Viajar en el tiempo es un tema delicado y difícil. Al castear el conjuro debes ser consciente del momento en el que quieres aparecer. Tira en la tabla de precisión temporal en función de la seguridad que tienes de la fecha a la que quieres llegar. La hora de llegada nunca fallará si la especificaste, y será la misma que a la hora de castear el conjuro si no especificaste.",
+				{
+					"type": "table",
+					"caption": "Precisión Temporal",
+					"colLabels": [
+						"Conocimiento de la fecha",
+						"Fallo de año",
+						"Fallo de mes",
+						"Fallo de días",
+						"Éxito"
+					],
+					"colStyles": [
+						"col-8",
+						"col-1 text-center no-wrap",
+						"col-1 text-center no-wrap",
+						"col-1 text-center no-wrap",
+						"col-1 text-center no-wrap"
+					],
+					"rows": [
+						[
+							"Fecha exacta",
+							"—",
+							"—",
+							"—",
+							"01–100"
+						],
+						[
+							"Fecha aproximada",
+							"01–05",
+							"06–20",
+							"21–40",
+							"41–100"
+						],
+						[
+							"Año y mes",
+							"01–05",
+							"06–16",
+							"17–53",
+							"54–100"
+						],
+						[
+							"Solo año",
+							"01–05",
+							"06–53",
+							"54–73",
+							"74–100"
+						],
+						[
+							"Siglo",
+							"01–43",
+							"44–84",
+							"85–90",
+							"91–100"
+						],
+						[
+							"Nada",
+							"01–100",
+							"—",
+							"—",
+							"—"
+						]
+					]
+				},
+				"{@b Éxito.} Los objetivos llegan exactamente donde querías llegar.",
+				"{@b Fallo de días.} Llegáis {@dice 1d20 + 5} días antes o después de la fecha (par o impar).",
+				"{@b Fallo de mes.} Llegáis {@dice 1d12} meses antes o después de la fecha (par o impar).",
+				"{@b Fallo de año.} Llegas {@dice 10d100} años antes o después de la fecha acordada.",
+				"Este conjuro sigue las normas homebrew de viaje en el tiempo. Puedes verlas en el Rincón del DM en el server de Discord."
+			],
+			"areaTags": [
+				"MT",
+				"S"
+			],
+			"miscTags": [
+				"SGT",
+				"PRM",
+				"TP",
+				"OBJ"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"¿Meto la posibilidad {@b todo mal} y desperdigo a la peña por ahí?"
+					]
+				}
+			]
+		},
+		{
+			"name": "Eco del Presente",
+			"level": 0,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Creas una ilusión de ti mismo realizando una acción que ya ocurrió en el pasado. Elige un punto que puedas ver dentro del rango en el que ya hubieras estado en los últimos 10 meses. Durante la duración, una ilusión de ti aparece en ese punto repitiendo las acciones que realizaste allí, pero no emite sonido ni es tangible.",
+				"La ilusión es ligeramente traslúcida durante el primer turno de casteo. Una criatura que vea la ilusión a partir del segundo turno deberá hacer un check de investigación contra tu CD para determinar si eres tú de verdad o no, aunque solo si sospechaba.",
+				"Puedes decidir qué acción se muestra en la ilusión, pero no puedes alterarla."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"A partir de lv 5 también emite sonido y puedes tener 2 ecos activos a la vez, al 11 dura 10 minutos y puedes tener 3 y al 17 1 hora y puedes tener 4."
+					]
+				}
+			],
+			"abilityCheck": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL"
+			]
+		},
+		{
+			"name": "Latido del Tiempo",
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Haces un melé spell attack contra el objetivo y le provocas una arritmia temporal. El objetivo ve su movilidad reducida a la mitad y tiene desventaja en el próximo ataque o salvación de Fuerza o Destreza que haga."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"s": true
+			},
+			"spellAttack": [
+				"M"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Retrasar Respuesta",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Adelantas la percepción del tiempo de un objetivo que puedas ver en el rango, dificultando sus respuestas. El objetivo salva Inteligencia sobre tu CD. Con un fallo recibe {@dice 2d6} de daño psíquico y pierde las reacciones mientras dure el conjuro. Puede repetir la salvación cada vez que vaya a usar una reacción y no lo consiga. Con un éxito solo recibe la mitad del daño."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"savingThrow": [
+				"intelligence"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"RO"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Por cada lv extra añade {@dice 1d6} al daño."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			]
+		},
+		{
+			"name": "Catalepsis",
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 3
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tienes una visión clara de lo que ocurrirá en los próximos 3 turnos. Mientras dure el conjuro, tienes ventaja a todas las tiradas de ataque, checks y salvaciones."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"A partir de lv4 este conjuro dura una ronda más por cada lv extra."
+					]
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SCL",
+				"ADV"
+			]
+		},
+		{
+			"name": "Ancla Temporal",
+			"level": 2,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Anclas a una criatura en el espacio-tiempo, impidiendo que cambie de lugar y de momento. Elige una criatura que puedas ver dentro del rango. Esta salva Carisma sobre tu CD. Con un fallo, no puede ser targeteada por efectos ni rasgos que le teletransporten, cambien de plano o de tiempo mientras dure el conjuro. Además, la criatura no podrá alejarse a más de 30 ft del punto en el que fue casteado el conjuro. De intentarlo, se teletransportará al punto en el que estaba en el momento en el que recibió el conjuro.",
+				"La criatura puede salvar al final de cada uno de sus turnos para librarse del efecto."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "una pequeña ancla de mithril"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cada 2 lv extra puedes targetear a otra criatura dentro del rango."
+					]
+				}
+			],
+			"savingThrow": [
+				"charisma"
+			],
+			"areaTags": [
+				"ST",
+				"MT"
+			],
+			"miscTags": [
+				"SGT",
+				"SCT",
+				"TP"
+			]
+		},
+		{
+			"name": "Infinitas Posibilidades",
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Varios ecos salen como pulsos de ti, permitiéndote realizar acciones que de otra forma no podrías o no te daría tiempo a hacer. Mientras dure el conjuro tienes 4 interacciones de cada tipo (hablar e interactuar con objetos), puedes equipar armas y escudos con la bonus si te quedaste sin interacciones y puedes usar una de tus interacciones de objetos para que tu movilidad no provoque ataques de oportunidad para una criatura en concreto. Alternativamente puedes gastar las 4 interacciones físicas en tener una acción o reacción extra hasta el principio de tu siguiente turno, pero no puedes usarla para castear conjuros, desengancharte o dashear."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cada 2 lv extra ganas 2 interacciones más."
+					]
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SCL",
+				"UBA",
+				"OBJ"
+			]
+		},
+		{
+			"name": "Eco de Combate",
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Elige una criatura que puedas ver dentro del rango y otro punto que puedas ver dentro del rango. Mientras dure el conjuro, todas las criaturas (tú incluida) pueden targetear a la criatura como si estuviera en el punto que has designado. La criatura deberá salvar para los efectos que lo requieran como es habitual y puede trigerear reacciones y acciones legendarias como si estuviera allí también."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un reloj de plata y cobre"
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"TP"
+			]
+		},
+		{
+			"name": "Cadéncia Sincrónica",
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Entras en un estado de virtuosidad sincrónica con tus aliados. Mientras dure el conjuro, al principio de cada uno de tus turnos eres capaz de adelantar o atrasar en el tiempo a alguno de tus aliados en forma de eco. Una imagen traslúcida de un aliado de tu elección aparece en un punto de tu elección que puedas ver dentro del rango y realiza una acción de su elección. Luego desaparece.",
+				"Si la criatura gastó un consumible mediante el eco (sea spell, imposición de manos, metamagia, etc.) se gasta de verdad para el aliado."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un cronómetro de mithril y adamantina"
+			},
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Espiral de Dolor",
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "cuando una criatura en el rango recibe daño"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 3
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tratas de crear un bucle de dolor alrededor de una criatura. Cuando una criatura dentro del rango que puedas ver recibe daño, puedes forzarla a salvar Constitución sobre tu CD cada turno para hacerle recibir la misma cantidad de daño que trigereó el conjuro y del mismo tipo. Si salva el conjuro acaba y solo recibe la mitad del daño. Si falló, puedes usar tus siguientes 2 acciones en forzarle a salvar de nuevo para ese daño o la mitad. Si falló la primera salvación, el conjuro durará 3 rondas, incluso si salva las otras dos salvaciones."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Manecillas de un reloj de pared bañadas en oro blanco"
+			},
+			"damageInflict": [
+				"psychic"
+			],
+			"abilityCheck": [
+				"constitution"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Clon Temporal",
+			"level": 6,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Creas una copia perfecta de tu yo actual a 5 ft de ti. Este clon tiene los mismos HP que tú y tus mismas habilidades. Además actúa en tu turno de iniciativa junto a ti y cuenta como una criatura independiente a la hora de contabilizar objetivos para conjuros y efectos. Tu mente se divide en ambos cuerpos, por lo que la sincronización es tan perfecta que ni siquiera requiere comunicación.",
+				"Mientras el conjuro se mantenga y el clon viva, tienes ventaja en salvaciones de inteligencia y carisma y tienes dos turnos en vez de uno en tu iniciativa, uno con cada cuerpo. Ambos cuerpos comparten rasgos, por lo que cualquier conjuro casteado por el clon se te gasta a ti también y viceversa. Si cualquiera de los dos cuerpos castea un conjuro de concentración, ambos se concentran y tienes desventaja a la salvación. Cuentan como criaturas separadas para la concentración, por lo que si ambos reciben daño de un mismo efecto salvarás dos veces.",
+				"Si el clon cae a 0 HP, recibes la mitad de tus HP totales en daño psíquico y 3 PtA. Si tú caes a 0 o mueres, puedes seguir actuando desde el clon. Si el conjuro acaba y sigues muert@, el clon pasa a ser tu nuevo cuerpo, pero no puedes restaurar HP ni recuperar tus rasgos consumibles.",
+				"Tú y el clon recibís el daño independientemente del otro, excepto por el daño psíquico. Si cualquiera de los dos recibe daño psíquico, cada cuerpo se llevará la mitad de ese daño."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Un reloj de arena con una figura tuya de Mithril por valor de 250 GP en la parte superior y otra de hueso por valor de 10 GP en la parte de abajo. La de abajo se consume",
+					"consume": true,
+					"cost": 26000
+				}
+			},
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"intelligence",
+				"charisma"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SMN",
+				"ADV"
+			]
+		},
+		{
+			"name": "Ciclo de Estasis",
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Eres capaz de detener pequeñas porciones de tiempo a tu alrededor. Como acción en cada uno de tus turnos, incluyendo cuando castees este conjuro, escoge a una criatura que puedas ver dentro del rango. Dicha criatura salva Carisma sobre tu CD o queda congelada en el tiempo hasta el principio de tu próximo turno. Mientras esté congelada, la criatura está {@condition unconscious|PHB|inconsciente} (y, por tanto, {@condition incapacitated|PHB|incapacitada}) pero no cae {@condition prone}."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Una escama de dragón del tiempo o un mechón de Molly"
+			},
+			"abilityCheck": [
+				"charisma"
+			],
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"SGT",
+				"ADV"
+			]
+		},
+		{
+			"name": "Ecos Alternativos",
+			"level": 7,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Llamas a cientos de criaturas espaciotemporales para ayudarte en batalla. {@b Aparecen 3 ecos por cada aliado} presente dentro del rango y que puedas ver, {@b incluyéndote}. Los ecos aparecen dentro del rango, en un punto que puedas ver. Solo tú y las criaturas que designes sabrán diferenciar entre los reales y los ecos.",
+				"{@b Todos los ecos actuarán igual a la criatura real}, es decir, si la criatura real ataca a melé, todos lo harán; si la criatura castea un conjuro, todos lo harán. {@b Si deben moverse para acomodar la acción al rango, lo harán dentro de sus posibilidades reales} (si el original puede dashear con la bonus, los ecos lo harán aunque el original no). También crean efectos ilusorios para emular la acción del original apropiadamente. {@b Si un aliado fuera a targetar a otro, los ecos targetearán a sus ecos dentro de lo posible}. Cualquier eco descolgado quedará en evidencia.",
+				"{@b Si los ecos pueden realizar la acción} del original con el rango correcto, el original tendrá {@b ventaja en ataques y el objetivo tendrá desventaja en salvaciones}. Además, {@b la primera vez} que el original dañe a una criatura, {@b añadirá} 1 dado extra de daño por cada eco que pueda emular eficazmente la acción. Estos dados serán de daño psíquico. {@b Si algún eco no está a rango} para realizar la acción al rango correcto, la hará igual, potencialmente quedando en evidencia frente a enemigos.",
+				"En cada uno de tus turnos, {@b con la bonus, puedes crear un eco extra por aliado} hasta un máximo de 3 por cada uno {@b y teletransportar a un aliado} a la posición de uno de sus ecos, y al eco a su posición original. Ambos cambian de postura para acomodarse a la nueva posición sin que se perciba el cambio.",
+				"{@i Los ecos son muy convincentes pero intangibles, por lo que no generan temblores ni devuelven ondas de sonido, tampoco tienen olor; criaturas con ecolocalización, blindsight o tremorsense no los perciben mediante estos sentidos. {@b Tienen 1 solo HP}, que perderán al recibir cualquier ataque a melé o con proyectiles y armas a distancia, pero son inmunes a efectos de área. {@b No tienen CA}.}"
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un reloj de arena con ceniza de humanoide dentro"
+			},
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"SGT",
+				"SMN",
+				"TP",
+				"UBA"
+			]
+		},
+		{
+			"name": "Divergencia Temporal",
+			"level": 8,
+			"school": "D",
+			"time": [
+				{
+					"number": 10,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Entras en un éxtasis temporal en el que eres capaz de ver dos realidades paralelas y distintas que llevan hacia un mismo fin o similar. Ves hasta 24 horas en el futuro desde el momento en el que casteas este conjuro. Pregunta al DM sobre los dos posibles resultados de una decisión que haya que tomar. Él ofrece una respuesta directa y veraz de cada uno, con detalles en ambos casos.",
+				"El caster escoge un punto en el que la línea temporal diverge hacia dos finales, a priori, distintos. Si el DM considera que ese final está más allá de las 24 horas, el caster solo ve hasta ese punto. Si, por contra, el final está antes de esas 24 horas, el jugador solo verá hasta ahí.",
+				"{@b Sugerencia de Presentación.} {@i Para no convertir este conjuro en un meta aburrido que pueda joder la campaña, el DM puede forzar a los jugadores a jugar ambas ramas de la línea temporal, ofreciendo ese \"insight\" y esos \"detalles\" mediante la propia partida y vivencias. Cuando los jugadores decidan qué final escoger, se skippea hasta el punto en el que la visión acabó, ya que lo que el caster ha visto es \"la verdad inquebrantable\" y no podrán cambiarlo más allá de decidir un final u otro.}"
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Una bola de cristal por valor de 1.000 GP con un reloj de mithril, oro y obsidiana dentro por valor de 10.000 GP",
+					"cost": 1100000
+				}
+			},
+			"miscTags": [
+				"PRM"
+			]
+		},
+		{
+			"name": "Singularidad Cronológica",
+			"level": 9,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "unlimited"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Chronurgy",
+							"shortName": "Chronurgy",
+							"source": "EGW"
+						}
+					}
+				]
+			},
+			"entries": [
+				"Detienes el tiempo a tu alrededor para todas las criaturas excepto para ti durante la duración. Mientras dure el  efecto, cada acción que realices, cada turno que empieces concentrándote en otro conjuro y cada pie que te alejes a más de 60 ft del punto en el que casteaste este conjuro te envejece el equivalente a un año de humano en tu raza. Si mueres de viejo de esta forma, tu cuerpo se convertirá en polvo y desaparecerá, devolviendo el flujo en el tiempo y acabando con el conjuro.",
+				"Las criaturas congeladas están {@condition unconscious|PHB|inconscientes} pero en pie y no pueden ser targeteadas por conjuros o efectos que requieran que perciba su entorno o salve Inteligencia, Wisdom o Carisma. Además no puede recibir daño excepto si es contundente, perforante o cortante."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true
+			},
+			"miscTags": [
+				"PRM",
+				"OBJ",
+				"ADV"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Sincronía",
+			"level": 4,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "al tirar iniciativa"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Ofreces una breve visión del futuro a ti y a tus compañeros, favoreciendo una sincronización superior en combate. Todos los enemigos que puedas ver dentro del rango salvan Carisma sobre tu CD. Puedes intercambiar los turnos de iniciativa de aliados y de los enemigos que hayan fallado la salvación a tu antojo, incluido tu propio turno."
+			],
+			"source": "GPNM",
+			"subschools": [
+				"Chronomancy"
+			],
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"SGT",
+				"PRM"
+			]
+		},
+		{
+			"name": "Ver Ramificación Temporal",
+			"source": "GPNM",
+			"level": 4,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Un reloj de arena y polvo de rubí por valor de 25 GP que el conjuro consume",
+					"consume": true,
+					"cost": 2500
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Entras en un trance atemporal en el que entras en contacto con las distintas líneas temporales. Haces una pregunta respecto a qué hubiera pasado en un momento concreto si este se hubiera desarrollado de una forma distinta. Debes tener constancia de cómo, dónde y cuándo ocurrió la decisión o el evento a preguntar, aunque no tienes por qué haberlo vivido tú; y debes preguntar por la variación exacta, como elegir una opción B en vez de la que se escogió, haber salvado/matado a cierta criatura, no haber (o haber) huido cuando se tuvo la oportunidad, elegir un camino distinto, etc. El DM te ofrece una respuesta veraz en forma de una visión que muestra únicamente las consecuencias más directas de ese cambio de evento.",
+				"El evento no puede haber ocurrido hace más de 7 días. Mientras dure la visión estás {@condition unconscious|PHB|inconsciente} y {@condition prone|PHB|sentad@}. Si recibes daño de cualquier tipo antes de que el conjuro acabe, este acaba abruptamente. El DM puede decidir en qué punto acaba la visión y cuánta información te pierdes.",
+				"Si casteas este conjuro más de una vez al día, hay un 25 % acumulativo de que la visión se distorsione y te muestre cosas que nunca hubiera pasado. A partir del cuarto intento las visiones ni siquiera tienen sentido o pueden ser, simplemente, visiones horribles. A juicio del DM puedes tener que salvar Wisdom CD 15 para recibir {@dice 3d6} psíquicos o la mitad (así que no te la jueges creyéndote muy gracioso)."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			},
+			"subschools": [
+				"Chronomancy"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Por cada lv extra el porcentaje acumulativo de fallo a partir del segundo uso aumenta en un 5%, y cada dos lv extra puedes ver más atrás en el tiempo: hasta un mes a lv6, hasta 1 año a lv8 o hasta 10 años a lv9."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"PRM",
+				"SCL"
+			]
+		},
+		{
+			"name": "Mirror Echo",
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Creas 3 copias de ti mismo en un lugar que puedas ver dentro del área. Mientras dure el conjuro puedes mover los duplicados como free action. Tienen tu misma movilidad y pueden hacer parecer que usan tus rasgos raciales o de clase, pero realmente no tienen acciones. Su CA es 10+lv de conjuro y puedes usar tu reacción para intercambiarte por uno de ellos cuando vayas a ser atacado o te targeteen en un área. Son inmunes a condiciones, pero cualquier cantidad de daño los deshace. Puedes usar tu bonus para crear un eco dentro del rango, pero no puedes tener más de 3. Con tu acción puedes crear hasta 3.",
+				"Si tú o un aliado fuerais a atacar a melé, podéis flanquear con tus ecos."
+			],
+			"source": "GPNM",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un espejo de steelglass"
+			},
+			"miscTags": [
+				"THP",
+				"SGT",
+				"SCL",
+				"TP",
+				"UBA"
+			]
+		},
+		{
+			"name": "Wall of Acid",
+			"source": "GPNM",
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a drop of slime"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Creas un muro de ácido en una superficie horizontal que puedas ver en el rango. Puedes hacer el muro hasta 30 ft de largo, 10 de alto y 1 ft de grosor, o puedes hacer un anillo de 20 ft de diametro, 20 ft de altura y 1 ft de grosor. Cuando el conjuro acaba el terreno afectado es {@quickref difficult terrain||3|terreno difícil} y cualquier criatura que entre en él por primera vez en su turno o que empiece su turno ahí durante las próximas 24 horas recibe {@dice 1d4} de daño por ácido.",
+				"Cualquier criatura en el área en el momento de lanzar el conjuro salva Constitución. Una criatura está sujeta a esta salvación cada vez que cruce el muro (1 vez en su turno y 1 vez fuera) o cuando empiece su turno en él (cuenta como cruzarlo en su turno). Con un fallo reciben {@dice 5d4} por ácido y un sangrado de {@dice 2d4} de daño por ácido en vez de necrótico. El sangrado no stackea. Con un éxito solo recibe la mitad del daño.",
+				"Además, un objetivo que haya recibido daño de este conjuro recibe un penalizador de -1 a la CA si llevaba armadura mundana. La armadura se rompe cuando deja de aportar CA. Las armas mundanas pueden recibir también este penalizador, rompiéndose al llegar a -5. El equipo destruido por este conjuro es irreparable, pero el equipo dañado puede ser reparado en un descanso corto con el equipo de herrería (una hora por penalizador) o con Mending.",
+				"No se puede ver a través del muro, y los proyectiles de arma se destruyen. Las armas arrojadizas y a melé reciben el penalizador mencionado y la desventaja por atacar a {@condition blinded|PHB|ciegas}. El daño por fuego que atraviese el área se reduce a la mitad y el daño por ácido se anula.",
+				"El daño por frío no solo atraviesa el ácido, sino que lo congela, creando un panel sólido de 5x5 con CA 5 y 15 HP. Golpear al panel puede romperlo, y romperlo crea una apertura que no se rellena, pero el arma con la que se rompa recibe los penalizadores pertinentes. Si en 3 turnos no se ha destruido una sección congelada, se descongela."
+			],
+			"miscTags": [
+				"SGT",
+				"SCL",
+				"MAC",
+				"RO",
+				"OBS",
+				"DFT",
+				"OBJ"
+			],
+			"areaTags": [
+				"R",
+				"W"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"El daño base aumenta en {@dice 2d4} por cada lv extra y el sangrado aumenta en {@dice 1d4} cada dos lv."
+					]
+				}
+			],
+			"damageInflict": [
+				"acid"
+			],
+			"savingThrow": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Control Fire",
+			"source": "GPNM",
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Una pizca de ceniza y una rama carbonizada"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Te haces con el control de cualquier llama en un cubo de 100 ft que puedas ver en el rango. Cuando castees este conjuro y como acción mientras el conjuro sigue activo, elige uno de los efectos:",
+				{
+					"type": "entries",
+					"name": "Ráfagas",
+					"entries": [
+						"Lanzas una llamarada de fuego. Crea un muro de hasta 60 ft de largo, 15 de ancho y 15 de alto. Toda criatura en el área debe salvar Constitución para recibir {@dice 4d8} de daño por fuego o la mitad. Con una salvación fallida el objetivo se prende fuego, recibiendo {@dice 1d6} de fuego al inicio de cada uno de sus turnos hasta que lo apague con la acción. Los objetos inflamables se prenden fuego."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Torbellino",
+					"entries": [
+						"Reúnes todo el fuego del área si había al menos 50 ft cuadrados de fuego y cras un torbellino de 3x3 y 50 ft de alto en un punto que puedas ver dentro del área. Toda criatura en su interior está cegada. El área es terreno difícil de 1:3 ft. Al principio de cada turno que empiecen en el torbellino salvan constitución para recibir {@dice 8d4} o la mitad. A diferencia del resto de efectos, este dura hasta el inicio de tu próximo turno, pero debes usar tu acción para moverlo o mantenerlo."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Condensación y explosión",
+					"entries": [
+						"Junta suficiente fuego como para llenar un diámetro de 60 ft. Condensas todo ese fuego en una mota de 20 cm en un punto que puedas ver y luego lo haces estallar. Toda criatura a 60 ft de la mota salva Destreza para recibir {@dice 7d6} o la mitad y prenderse fuego (como en {@b Ráfaga}). Toda el área de la explosión es ahora terreno difícil y está en llamas. Una criatura que pase por ahí recibe el efecto de {@b Avivar/Mover}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Avivar/Mover",
+					"entries": [
+						"Extiendes el fuego a áreas nuevas o lo avivas donde se está apagando. Elige cualquier zona de 20ft x 20ft donde el fuego sea menos intenso o donde no haya fuego y que esté al menos a 60 ft de una zona con llamas. Las llamas cubren ahora esa zona, que pasa a ser terreno difícil. Por cada casilla recorrida en llamas el objetivo recibe {@dice 1d4} de daño por fuego."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Cortafuegos",
+					"entries": [
+						"Elige una zona en llamas de 30 ft x 30 ft. Todo el fuego en esa zona se disipa o se apaga. Puedes usar este efecto para dispelear conjuros de lv5 o inferior como {@spell Wall of Fire} o {@spell Flaming Sphere}"
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"PRM",
+				"RO",
+				"OBS",
+				"DFT",
+				"OBJ"
+			],
+			"areaTags": [
+				"C"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Light Domain",
+							"shortName": "Light",
+							"source": "PHB"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "The Fiend",
+							"shortName": "Fiend",
+							"source": "PHB"
+						}
+					}
+				]
+			},
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity",
+				"constitution"
+			]
+		}
+	]
+}

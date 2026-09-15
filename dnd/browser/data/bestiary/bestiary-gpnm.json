@@ -1,0 +1,265 @@
+{
+	"monster": [
+		{
+			"name": "Primus",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "construct",
+				"tags": [
+					"god"
+				]
+			},
+			"source": "GPNM",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 22,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "20d20 + 140",
+				"average": 350
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 60,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 26,
+			"dex": 14,
+			"con": 24,
+			"int": 30,
+			"wis": 28,
+			"cha": 26,
+			"passive": 26,
+			"senses": [
+				"truesight 120 ft."
+			],
+			"senseTags": [
+				"U"
+			],
+			"languages": [
+				"all; telepathy (ilimitado en el plano)"
+			],
+			"languageTags": [
+				"XX",
+				"TP"
+			],
+			"save": {
+				"int": "+17",
+				"wis": "+16",
+				"cha": "+15"
+			},
+			"skill": {
+				"perception": "+16",
+				"arcana": "+24",
+				"insight": "+16",
+				"investigation": "+17",
+				"nature": "+17",
+				"religion": "+24",
+				"history": "+24"
+			},
+			"immune": [
+				{
+					"immune": [
+						"psychic"
+					],
+					"note": "y todo daño mágico"
+				}
+			],
+			"conditionImmune": [
+				{
+					"conditionImmune": [
+						"charmed",
+						"exhaustion",
+						"frightened",
+						"incapacitated",
+						"paralyzed",
+						"petrified",
+						"poisoned"
+					],
+					"note": "y cualquier efecto de origen mágico"
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Mecanomancia",
+					"headerEntries": [
+						"+17 to hit, CD 25",
+						"No requiere componentes"
+					],
+					"will": [
+						"{@spell Cápsula Temporal|GPNM|capsula temporal}",
+						"{@spell dispel magic} lv5",
+						"{@spell flecha atemporal|GPNM}",
+						"{@spell immovable object|EGW}",
+						"{@spell marca pasada|GPNM}",
+						"{@spell infernal calling|XGE|Modron calling} (lv10)",
+						"{@spell time stop}"
+					],
+					"daily": {
+						"1": [
+							"{@spell dispel magic} lv10",
+							"{@spell rebobinar|GPNM}",
+							"{@spell time ravage|EGW}"
+						],
+						"3": [
+							"{@spell Anomalía Espaciotemporal De Molly|GPNM|anomalia espaciotemporal de molly}",
+							"{@spell dispel magic} lv8",
+							"{@spell envejecer|GPNM}",
+							"{@spell Maldición De Juventud|GPNM|maldicion de juventud}",
+							"{@spell time travel|GPNM}"
+						],
+						"5": [
+							"{@spell plane shift}",
+							"{@spell restaurar juventud|GPNM}",
+							"{@spell tether essence|EGW}"
+						]
+					},
+					"rest": {
+						"3": [
+							"{@spell gravity fissure|EGW}",
+							"{@spell gravity sinkhole|EGW}",
+							"{@spell temporal shunt|EGW}"
+						]
+					},
+					"weekly": {
+						"1": [
+							"{@spell astral projection}",
+							"{@spell ravenous void|EGW}",
+							"{@spell reality break|EGW}"
+						]
+					},
+					"monthly": {
+						"1": [
+							"{@spell dispel magic} lv20",
+							"{@spell gate}",
+							"{@spell rapto|GPNM} (afecta a constructos y destruye demonios)"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"trait": [
+				{
+					"name": "Resistencia Legendaria (3 /day)",
+					"entries": [
+						"Si falla una salvación, elige tener éxito en su lugar."
+					]
+				},
+				{
+					"name": "Inmunidad mágica",
+					"entries": [
+						"Es completamente inmune a la magia, a menos que la castee él y quiera ser targeteado."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Golpe Axiomático",
+					"entries": [
+						"{@atk mw} {@hit 15} to hit, reach 10 ft., one target. {@h}26 ({@damage 4d8 + 8}) bludgeoning damage, plus 18 ({@damage 4d8}) radiant damage."
+					]
+				},
+				{
+					"name": "Reescribir Realidad (Recarga 5-6 // at will en Mechanus)",
+					"entries": [
+						"Primus puede alterar una pequeña parte de la realidad, causando un efecto similar al conjuro {@spell Wish} sin necesidad de componentes. Este efecto está más limitado que el conjuro real y debe ser más immediato y específico.",
+						"Alternativamente puede castear el conjuro como tal y perder la capacidad de hacer esto en un año o hasta que regrese a Mechanus. Si lo casteó en Mechanus tardará una decana en recuperarlo."
+					]
+				},
+				{
+					"name": "Juicio del Primero",
+					"entries": [
+						"Si Primus usa este rasgo en Mechanus, puede teletransportar automáticamente a una criatura que toque a Arcadia o a Aqueronte.",
+						"Si usa este rasgo fuera de Mechanus, la criatura que toque salva Carisma CD 25 o es teletransportada a Regulus, en Mechanus."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"actionHeader": [
+				"Puede dar dos golpes axiomáticos."
+			],
+			"legendaryHeader": [
+				"Tiene 5 acciones legendarias, pero solo 3 si está fuera de Mechanus."
+			],
+			"legendaryActions": 5,
+			"legendary": [
+				{
+					"name": "Golpe Axiomático",
+					"entries": [
+						"Realiza un ataque de golpe axiomático."
+					]
+				},
+				{
+					"name": "Desfase",
+					"entries": [
+						"Se teletransporta a 60 ft"
+					]
+				},
+				{
+					"name": "Conjuro (cuesta 2 / 1 en Mechanus)",
+					"entries": [
+						"Castea un conjuro que no cueste una semana o un mes en recargar."
+					]
+				},
+				{
+					"name": "Juicio del Primero (cuesta 2)",
+					"entries": [
+						"Usa su rasgo de Juicio del Primero."
+					]
+				},
+				{
+					"name": "Reescribir Realidad (cuesta 3 / 2 en mechanus)",
+					"entries": [
+						"Si estaba disponible este rasgo, lo usa. Si no, lo recarga."
+					]
+				},
+				{
+					"name": "Conjuro poderoso (cuesta 3)",
+					"entries": [
+						"Castea uno de los conjuros que tardan una semana o un mes en recargar."
+					]
+				}
+			],
+			"cr": {
+				"cr": "24",
+				"lair": "30"
+			},
+			"damageTags": [
+				"B",
+				"R"
+			],
+			"damageTagsSpell": [
+				"C",
+				"N",
+				"O",
+				"Y"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"strength",
+				"wisdom"
+			]
+		}
+	]
+}

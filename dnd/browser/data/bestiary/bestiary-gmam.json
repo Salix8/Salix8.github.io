@@ -1,0 +1,5149 @@
+{
+	"monster": [
+		{
+			"name": "Maztican Giant Eagle",
+			"source": "GMAM",
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"formula": "10d10 + 20",
+				"average": 75
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 80
+			},
+			"str": 16,
+			"dex": 18,
+			"con": 14,
+			"int": 8,
+			"wis": 14,
+			"cha": 10,
+			"skill": {
+				"perception": "+8"
+			},
+			"passive": 18,
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Keen Sight",
+					"entries": [
+						"The eagle has advantage on Wisdom ({@skill Perception}) checks that rely on sight."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) slashing damage."
+					]
+				}
+			],
+			"environment": [
+				"mountain",
+				"grassland",
+				"hill",
+				"coastal"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://2014.5e.tools/audio/bestiary/giant-eagle.mp3"
+			},
+			"traitTags": [
+				"Keen Senses"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Giant Eagle",
+				"source": "MM"
+			},
+			"actionHeader": [
+				"Ejerce la violencia 3 veces, una con el pico y dos con sus garras."
+			],
+			"damageTags": [
+				"P",
+				"S"
+			]
+		},
+		{
+			"name": "Kukul, Antiguo Padre de los Dioses",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item breastplate|phb}",
+						"Kukul's Blessing"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d10 + 32",
+				"average": 132
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 90
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 14,
+			"int": 16,
+			"wis": 14,
+			"cha": 20,
+			"passive": 18,
+			"cr": "20",
+			"level": 16,
+			"pbNote": "+5",
+			"senses": [
+				"truesight 300 ft."
+			],
+			"senseTags": [
+				"U"
+			],
+			"languages": [
+				"Olman",
+				"Celestial",
+				"Primordial",
+				"Silvano y Élfico"
+			],
+			"languageTags": [
+				"OTH",
+				"CE",
+				"P"
+			],
+			"trait": [
+				{
+					"name": "Sabiduría divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				},
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				}
+			],
+			"save": {
+				"cha": "+11",
+				"wis": "+8",
+				"int": "+9"
+			},
+			"skill": {
+				"history": "+15",
+				"insight": "+8",
+				"perception": "+8",
+				"religion": "+9"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+10 to hit, CD 18",
+						"*Suma su carisma al daño",
+						"No necesita componentes"
+					],
+					"will": [
+						"{@spell detect evil and good}",
+						"{@spell guiding bolt}*",
+						"{@spell incite greed|AI}",
+						"{@spell magic missile}",
+						"{@spell Melf's minute meteors|XGE}*",
+						"{@spell skywrite|XGE}",
+						"{@spell thaumaturgy}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell crown of stars|XGE}*",
+							"{@spell dream}",
+							"{@spell flesh to stone} (gold)",
+							"{@spell project image}"
+						]
+					},
+					"spells": {
+						"1": {
+							"spells": [
+								"{@spell command}",
+								"{@spell cure wounds}",
+								"{@spell vuelo de proyectil|GMAM}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell phantasmal force}",
+								"{@spell silence}",
+								"{@spell zone of truth}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell daylight}",
+								"{@spell fear}",
+								"{@spell hypnotic pattern}",
+								"{@spell sending}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell fabricate}",
+								"{@spell guardian of faith}*",
+								"{@spell hallucinatory terrain}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell mass cure wounds}",
+								"{@spell plegaria del martir|GPNM}",
+								"{@spell precio del alma|GdR}"
+							],
+							"slots": 1
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"action": [
+				{
+					"name": "Estrella de Luz",
+					"entries": [
+						"{@atk rw} {@hit 10} to hit, range 60 ft., one target. {@h}16 ({@damage 2d8+14}) radiant damage."
+					]
+				},
+				{
+					"name": "Armadura Dorada",
+					"entries": [
+						"Al tocar a una criatura, su ropa será de oro flexible, otorgándole un bonificador de {@dice 1d4} a la CA. También sumará dicha cantidad a las tiradas de salvación de Fuerza, Destreza y Constitución que conlleven un daño o golpe directo. ",
+						"Dura hasta que reciban 5 golpes. ",
+						"Alternativamente puede cubrir por completo un objeto que no esté siendo cargado o equipado en oro macizo."
+					]
+				},
+				{
+					"name": "Aura de Estrellas (1 /rest)",
+					"entries": [
+						"Durante 1 minuto, toda criatura de su elección a 30 ft de él recibe HPT igual a {@dice 1d6 + 9} al final del turno de Kukul"
+					]
+				}
+			],
+			"miscTags": [
+				"RW"
+			],
+			"actionHeader": [
+				"Puede atacar dos veces con su Estrella de Luz"
+			],
+			"legendaryActions": 1,
+			"legendaryHeader": [
+				"Tiene 1 acción legendaria"
+			],
+			"legendary": [
+				{
+					"name": "Conjuro",
+					"entries": [
+						"Puede castear uno de sus conjuros at will"
+					]
+				}
+			],
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "no mágico"
+				},
+				{
+					"resist": [
+						"radiant"
+					]
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"petrified",
+				"poisoned"
+			],
+			"bonus": [
+				{
+					"name": "Shapechenage",
+					"entries": [
+						"Puede transformarse en su {@creature Avatar de Kukul|GMAM|avatar} o volver a su forma original. Si muere, se queda en su forma original. Los consumibles comunes se gastan en ambas formas a la vez."
+					]
+				}
+			],
+			"damageTags": [
+				"R"
+			],
+			"damageTagsSpell": [
+				"F",
+				"O",
+				"R",
+				"Y"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Maztica, Madre de la Vida",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"Suave defense"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d12 + 32",
+				"average": 149
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover ominously)"
+				},
+				"canHover": true
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 14,
+			"int": 12,
+			"wis": 18,
+			"cha": 22,
+			"passive": 14,
+			"cr": "20",
+			"pbNote": "+5",
+			"languages": [
+				"Olman",
+				"Celestial",
+				"Primordial",
+				"Élfico",
+				"y Silvano"
+			],
+			"languageTags": [
+				"OTH",
+				"CE",
+				"P"
+			],
+			"trait": [
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos.",
+						"Está permanentemente bajo los efectos de {@spell Sanctuary}. Si un turno ataca, pierde estos efectos hasta el inicio de su próximo turno."
+					]
+				},
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Creadora de vida",
+					"entries": [
+						"Sus invocaciones aparecen con HP extra iguales a 2xnº de Hit dice y su daño siempre es mágico. Cuando estas acaben su turno en el totem, recuperan 8 HP."
+					]
+				}
+			],
+			"senses": [
+				"truesight 120 ft."
+			],
+			"senseTags": [
+				"U"
+			],
+			"save": {
+				"con": "+7",
+				"wis": "+9",
+				"cha": "+11"
+			},
+			"skill": {
+				"nature": "+6",
+				"medicine": "+14",
+				"history": "+6",
+				"insight": "+14",
+				"survival": "+9"
+			},
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+11 to hit, CD 19"
+					],
+					"will": [
+						"{@spell breathsense|GMAM}",
+						"{@spell cambiar cauce|GMAM}",
+						"{@spell conjure animals}",
+						"{@spell florecer|GMAM}",
+						"{@spell invocar agua|GMAM}",
+						"{@spell major bird charm|GMAM}",
+						"{@spell minor bird charm|GMAM}",
+						"{@spell purify food and drink}",
+						"{@spell speak with dead}",
+						"{@spell speak with plants}",
+						"{@spell suerte del pescador|GMAM}"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell featherweaving|GMAM}",
+								"{@spell guidance}",
+								"{@spell mold earth|XGE}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell earth tremor|XGE}",
+								"{@spell entangle}",
+								"{@spell goodberry}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell lesser restoration}",
+								"{@spell Maximilian's earthen grasp|XGE}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell aura of vitality}",
+								"{@spell beacon of hope}",
+								"{@spell erupting earth|XGE}",
+								"{@spell plant growth}",
+								"{@spell revivify}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell conjure woodland beings}",
+								"{@spell Juicio De Selûne|GdR|juicio de selune}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell Ira Del áRbol|GdR|ira del arbol}",
+								"{@spell mass cure wounds}",
+								"{@spell reincarnate}"
+							],
+							"slots": 2
+						},
+						"6": {
+							"spells": [
+								"{@spell move earth}",
+								"{@spell wall of thorns}"
+							],
+							"slots": 1
+						},
+						"7": {
+							"spells": [
+								"{@spell regenerate}",
+								"{@spell resurrection}"
+							],
+							"slots": 1
+						},
+						"8": {
+							"spells": [
+								"{@spell control weather}",
+								"{@spell earthquake}"
+							],
+							"slots": 1
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"bonus": [
+				{
+					"name": "Totem Espiritual",
+					"entries": [
+						"Crea un espíritu con forma de couatl en un lugar que deba ver a 60 ft. Toda criatura de su elección a 30 ft del espíritu recupera 16 HP cada vez que Maztica castee un conjuro de curación."
+					]
+				},
+				{
+					"name": "Pulso de Vida (16 /day)",
+					"entries": [
+						"Puede usar hasta 8 dados a la vez para curar a una criatura a 120 ft. que puedas ver. El objetivo, además recibe 1 HPT por cada dado que haya recibido de esta forma."
+					]
+				},
+				{
+					"name": "Shapechange",
+					"entries": [
+						"Puede transformarse en su {@creature Avatar de Maztica|GMAM|avatar} o volver a su forma original. Si muere, se queda en su forma original. Los consumibles comunes se gastan en ambas formas a la vez."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Llamada de la naturaleza (1 /day)",
+					"entries": [
+						"Cuando Maztica caiga por debajo de la mitad de sus HP (74), puede castear {@spell Conjure Animals} a lv9."
+					]
+				}
+			],
+			"damageTagsSpell": [
+				"B",
+				"P",
+				"S"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Ficha base de dios",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shapechange",
+					"entries": [
+						"Puede transformarse en su avatar o de vuelta a su forma original. Si muere, vuelve a su forma original.",
+						"Usa el mismo statblock con ambas formas, pero X. Además, hay cosas que no puede hacer en su forma avatar:",
+						"- X",
+						"- Spellcasting capado",
+						"- X"
+					]
+				}
+			],
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Zaltec, la Mano Sangrienta",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item half plate armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "13d10 + 39",
+				"average": 110
+			},
+			"speed": {
+				"walk": 60,
+				"climb": 60,
+				"swim": 40
+			},
+			"str": 18,
+			"dex": 16,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 16,
+			"passive": 16,
+			"cr": "14",
+			"trait": [
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				},
+				{
+					"name": "Sacrificio (1 /day)",
+					"entries": [
+						"Si le permiten hacer un sacrificio de 1 minuto y beber la sangre de un humanoide, Zaltec ganará 9 HPT cada vez que mate a una criatura hasta el final de su próximo descanso largo."
+					]
+				},
+				{
+					"name": "Golpe letal (1 /rest)",
+					"entries": [
+						"Una vez ha acertado un golpe, puede convertir el impacto en un crítico y meter sangrado de {@dice d8} ({@dice d6} a una mano). La CD de curación es de 15."
+					]
+				}
+			],
+			"pbNote": "+4",
+			"senses": [
+				"darkvision 120 ft.",
+				"blindsight 10 ft."
+			],
+			"senseTags": [
+				"SD",
+				"B"
+			],
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial",
+				"Beast Speak"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"save": {
+				"dex": "+10",
+				"con": "+10",
+				"str": "+7",
+				"int": "+7",
+				"wis": "+8",
+				"cha": "+10"
+			},
+			"skill": {
+				"acrobatics": "+8",
+				"athletics": "+9",
+				"stealth": "+13",
+				"survival": "+11",
+				"perception": "+6"
+			},
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "no mágico"
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+7 to hit, CD 15",
+						"Puede gastar un slot de conjuro en añadir 1d8+LVd8 de daño necrótico."
+					],
+					"spells": {
+						"1": {
+							"spells": [
+								"{@spell cat charm|GMAM}",
+								"{@spell cauterizar|GdR}",
+								"{@spell Espolón De Roca|GMAM|espolon de roca}",
+								"{@spell llamada del cazador|GMAM}",
+								"{@spell Protección|GMAM|proteccion}",
+								"{@spell shield of faith}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell emboscada|GMAM}",
+								"{@spell escamas atrapantes|GMAM}",
+								"{@spell heartsense|GMAM}",
+								"{@spell hipnosis|GMAM}",
+								"{@spell snake charm|GMAM}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell forma de jaguar|GMAM}",
+								"{@spell invocar plaga|GMAM}",
+								"{@spell Sequía|GMAM|sequia}"
+							],
+							"slots": 3
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"action": [
+				{
+					"name": "Olfato de Rastreador (4 /day)",
+					"entries": [
+						"Puede detectar la presencia de Undead, demonios, celestiales y objetos o lugares sagrados o desacrados a 60 ft de él y su localización exacta."
+					]
+				},
+				{
+					"name": "Curación Acelerada (55 pt /day)",
+					"entries": [
+						"Puede curarse cualquier cantidad de HP igual a lo que quiera gastar de esa pool de pt. Puede gastar 5 para acabar con veneno o enfermedades.",
+						"Es de toque y puede usarlo en otras criaturas."
+					]
+				},
+				{
+					"name": "Lanza Pesada",
+					"entries": [
+						"{@atk mw,rw} {@hit 9} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}8 ({@damage 1d8 + 4}) piercing damage in melee, or 9 ({@damage 1d10 + 4}) piercing damage at range, or if used with both hands, plus 4 ({@damage 1d8}) necrotic damage."
+					]
+				},
+				{
+					"name": "Aura de sangre",
+					"entries": [
+						"Un aura se extiende como olor de sangre a 10 ft de él. Si él quiere (no suele), puede dar un +3 a salvaciones de criaturas en su área. Cualquier criatura que reciba el daño pasivo de sangrado en su área le aporta HPT a Zaltec igual al daño recibido."
+					]
+				}
+			],
+			"miscTags": [
+				"RW",
+				"MW"
+			],
+			"conditionImmune": [
+				{
+					"conditionImmune": [
+						"frightened"
+					],
+					"note": "enfermedades"
+				}
+			],
+			"actionHeader": [
+				"Ejerce la violencia 2 veces."
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Tezca, Señor del Sol y el Fuego",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item half plate armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "20d10 + 60",
+				"average": 170
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 16,
+			"int": 12,
+			"wis": 10,
+			"cha": 16,
+			"passive": 10,
+			"cr": "22",
+			"trait": [
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				},
+				{
+					"name": "Estallido del Volcán (1 /day)",
+					"entries": [
+						"Si cae a 0 HP, se pone en pie mientras una enorme explosión de calor sacude a sus rivales. Toda criatura de su elección a 15 ft salva Fuerza CD 18 o es empujada 10 ft, cae {@condition prone} y recibe 21 de daño por fuego. Con un éxito recibe la mitad del daño y ningún otro efecto.",
+						"Tras esto Tezca es levantado por la inercia y recupera 21 HP."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shapechange",
+					"entries": [
+						"Puede transformarse en su {@creature Avatar de Tezca|GMAM|avatar} o volver a su forma original. Si muere, se queda en su forma original. Los consumibles comunes se gastan en ambas formas a la vez."
+					]
+				}
+			],
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"save": {
+				"str": "+11",
+				"con": "+10",
+				"wis": "+7"
+			},
+			"skill": {
+				"athletics": "+11",
+				"stealth": "+15",
+				"survival": "+7",
+				"performance": "+10"
+			},
+			"immune": [
+				"fire",
+				"radiant"
+			],
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "no mágico"
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+10 to hit, CD 18",
+						"4 dados al cantrip",
+						"1 vez al día, tras un descanso corto, puede recuperar todos sus slots de lv1.",
+						"Sus conjuros ignoran la resistencia al fuego y convierten la inmunidad en resistencia.",
+						"*Puede hacer que Lv+1 criaturas sean inmunes a este conjuro."
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell Fire Bolt}",
+								"{@spell green-flame blade|TCE}",
+								"{@spell impulso|GdR}",
+								"{@spell light}",
+								"{@spell resistance}",
+								"{@spell sacred flame}",
+								"{@spell thaumaturgy}",
+								"{@spell word of radiance|XGE}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell burning hands}*",
+								"{@spell chromatic orb}",
+								"{@spell faerie fire}*",
+								"{@spell feather fall}",
+								"{@spell Protección|GMAM|proteccion}",
+								"{@spell Regulación Térmica|GMAM|regulacion termica}",
+								"{@spell shield}",
+								"{@spell snare|XGE}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell continual flame}",
+								"{@spell flaming sphere}",
+								"{@spell heartsense|GMAM}",
+								"{@spell scorching ray}",
+								"{@spell spiritual weapon}",
+								"{@spell warding bond}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell daylight}",
+								"{@spell dispel magic}",
+								"{@spell fireball}*",
+								"{@spell Forma De áGuila|GMAM|forma de aguila}",
+								"{@spell Sequía|GMAM|sequia}",
+								"{@spell spirit guardians}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell death ward}",
+								"{@spell guardian of faith}",
+								"{@spell sending (hishna)|GMAM}",
+								"{@spell wall of fire}*"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell dawn|XGE}*",
+								"{@spell flame strike}*",
+								"{@spell precio del alma|GdR}",
+								"{@spell scrying}"
+							],
+							"slots": 3
+						},
+						"6": {
+							"spells": [
+								"{@spell harm}",
+								"{@spell heroes' feast}"
+							],
+							"slots": 2
+						},
+						"7": {
+							"spells": [
+								"{@spell divine word}",
+								"{@spell fire storm}*",
+								"{@spell temple of the gods|XGE}"
+							],
+							"slots": 2
+						},
+						"8": {
+							"spells": [
+								"{@spell earthquake}*",
+								"{@spell sunburst}*"
+							],
+							"slots": 1
+						},
+						"9": {
+							"spells": [
+								"{@spell rapto|GPNM}"
+							],
+							"slots": 1
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"reaction": [
+				{
+					"name": "Ira de Fuego (3 /day)",
+					"entries": [
+						"Impone desventaja a un ataque que vaya a recibir él o un aliado suyo a 30ft si el atacante está también a 30 ft de él. Además, castea {@spell Hellish Rebuke} CD18 sobre él."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Macahuitl",
+					"entries": [
+						"{@atk mw} {@hit 11} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d10 + 4}) slashing damage, plus 9 ({@damage 2d8}) fire damage."
+					]
+				},
+				{
+					"name": "Luz del alba (3 /rest)",
+					"entries": [
+						"Toda luz a 30 ft de Tezca se desvanece y toda criatura de su elección dentro del área salva Constitución CD 18 para recibir {@dice 2d10 + 18} de daño radiante o la mitad. Cobertura total protege de este efecto. Si alguna de las criaturas objetivo era un Undead de CR 4, salva para recibir todo el daño con un éxito o ser completamente incinerado con un fallo."
+					]
+				},
+				{
+					"name": "Aura de Azufre",
+					"entries": [
+						"Puede activar un aura de {@spell daylight} y calor a 60-30 ft que dura 1 minuto sin concentración. Todo enemigo dentro del área tiene desventaja en conjuros de Tezca que hagan daño radiante o por fuego."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"actionHeader": [
+				"Ejerce la violencia 2 veces."
+			],
+			"damageTags": [
+				"F",
+				"S"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O",
+				"R",
+				"T"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Avatar de Maztica",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"Suave defense"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d12 + 32",
+				"average": 149
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover ominously)"
+				},
+				"canHover": true
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 14,
+			"int": 12,
+			"wis": 18,
+			"cha": 22,
+			"passive": 14,
+			"cr": "13",
+			"pbNote": "+5",
+			"languages": [
+				"Olman",
+				"Celestial",
+				"Primordial",
+				"Élfico",
+				"y Silvano"
+			],
+			"languageTags": [
+				"OTH",
+				"CE",
+				"P"
+			],
+			"trait": [
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos.",
+						"Está permanentemente bajo los efectos de {@spell Sanctuary}. Si un turno ataca, pierde estos efectos hasta el inicio de su próximo turno."
+					]
+				},
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Creadora de vida",
+					"entries": [
+						"Sus invocaciones aparecen con HP extra iguales a 2xnº de Hit dice y su daño siempre es mágico. Cuando estas acaben su turno en el totem, recuperan 8 HP."
+					]
+				}
+			],
+			"save": {
+				"con": "+7",
+				"wis": "+9",
+				"cha": "+11"
+			},
+			"skill": {
+				"nature": "+6",
+				"medicine": "+14",
+				"history": "+6",
+				"insight": "+14",
+				"survival": "+9"
+			},
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+11 to hit, CD 19"
+					],
+					"will": [
+						"{@spell breathsense|GMAM}",
+						"{@spell cambiar cauce|GMAM}",
+						"{@spell conjure animals}",
+						"{@spell florecer|GMAM}",
+						"{@spell invocar agua|GMAM}",
+						"{@spell major bird charm|GMAM}",
+						"{@spell minor bird charm|GMAM}",
+						"{@spell purify food and drink}",
+						"{@spell speak with dead}",
+						"{@spell speak with plants}",
+						"{@spell suerte del pescador|GMAM}"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell featherweaving|GMAM}",
+								"{@spell guidance}",
+								"{@spell mold earth|XGE}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell earth tremor|XGE}",
+								"{@spell entangle}",
+								"{@spell goodberry}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell lesser restoration}",
+								"{@spell Maximilian's earthen grasp|XGE}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell aura of vitality}",
+								"{@spell beacon of hope}",
+								"{@spell erupting earth|XGE}",
+								"{@spell plant growth}",
+								"{@spell revivify}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell conjure woodland beings}",
+								"{@spell Juicio De Selûne|GdR|juicio de selune}"
+							],
+							"slots": 3
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"bonus": [
+				{
+					"name": "Totem Espiritual (1 /rest)",
+					"entries": [
+						"Crea un espíritu con forma de couatl en un lugar que deba ver a 60 ft. Toda criatura de su elección a 30 ft del espíritu recupera 16 HP cada vez que Maztica castee un conjuro de curación."
+					]
+				},
+				{
+					"name": "Pulso de Vida (8 /day)",
+					"entries": [
+						"Puede usar hasta 4 dados a la vez para curar a una criatura a 120 ft. que puedas ver. El objetivo, además recibe 1 HPT por cada dado que haya recibido de esta forma."
+					]
+				},
+				{
+					"name": "Shapechange",
+					"entries": [
+						"Puede transformarse en su {@creature Maztica, Madre de la Vida|GMAM|forma original} o volver a su forma avatar. Si muere, vuelve a su forma original. Los consumibles comunes se gastan en ambas formas a la vez."
+					]
+				}
+			],
+			"damageTagsSpell": [
+				"B"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"strength"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Avatar de Kukul",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item breastplate|phb}",
+						"Kukul's Blessing"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d10 + 32",
+				"average": 132
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 30
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 14,
+			"int": 16,
+			"wis": 14,
+			"cha": 20,
+			"passive": 17,
+			"cr": "13",
+			"level": 16,
+			"pbNote": "+5",
+			"languages": [
+				"Olman",
+				"Celestial",
+				"Primordial",
+				"Silvano y Élfico"
+			],
+			"languageTags": [
+				"OTH",
+				"CE",
+				"P"
+			],
+			"trait": [
+				{
+					"name": "Sabiduría divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				},
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				}
+			],
+			"save": {
+				"cha": "+10",
+				"wis": "+7",
+				"int": "+8"
+			},
+			"skill": {
+				"history": "+13",
+				"insight": "+7",
+				"perception": "+7",
+				"religion": "+8"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+10 to hit, CD 18",
+						"*Suma su carisma al daño",
+						"No necesita componentes"
+					],
+					"spells": {
+						"1": {
+							"spells": [
+								"{@spell command}",
+								"{@spell cure wounds}",
+								"{@spell vuelo de proyectil|GMAM}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell phantasmal force}",
+								"{@spell silence}",
+								"{@spell zone of truth}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell daylight}",
+								"{@spell fear}",
+								"{@spell hypnotic pattern}",
+								"{@spell sending}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell fabricate}",
+								"{@spell guardian of faith}*",
+								"{@spell hallucinatory terrain}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell mass cure wounds}",
+								"{@spell plegaria del martir|GPNM}",
+								"{@spell precio del alma|GdR}"
+							],
+							"slots": 1
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"action": [
+				{
+					"name": "Estrella de Luz",
+					"entries": [
+						"{@atk rw} {@hit 10} to hit, range 60 ft., one target. {@h}16 ({@damage 2d8+14}) radiant damage."
+					]
+				},
+				{
+					"name": "Aura de Estrellas (1 /day)",
+					"entries": [
+						"Durante 1 minuto, toda criatura de su elección a 30 ft de él recibe HPT igual a {@dice 1d6 + 9} al final del turno de Kukul"
+					]
+				}
+			],
+			"miscTags": [
+				"RW"
+			],
+			"actionHeader": [
+				"Puede atacar dos veces con su Estrella de Luz"
+			],
+			"resist": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"petrified",
+				"poisoned"
+			],
+			"bonus": [
+				{
+					"name": "Shapechenage",
+					"entries": [
+						"Puede transformarse en su {@creature Kukul, Antiguo Padre de los Dioses|GMAM|forma original} o volver a su forma avatar. Si muere, vuelve a su forma original. Los consumibles comunes se gastan en ambas formas a la vez."
+					]
+				}
+			],
+			"damageTags": [
+				"R"
+			],
+			"damageTagsSpell": [
+				"R",
+				"Y"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity",
+				"intelligence",
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Avatar de Tezca",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item half plate armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "20d10 + 60",
+				"average": 170
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 16,
+			"int": 12,
+			"wis": 10,
+			"cha": 16,
+			"passive": 10,
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shapechange",
+					"entries": [
+						"Puede transformarse en su {@creature Tezca, Señor del Sol y el Fuego|GMAM|forma original} o volver a su forma avatar. Si muere, vuelve a su forma original. Los consumibles comunes se gastan en ambas formas a la vez."
+					]
+				}
+			],
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"save": {
+				"str": "+10",
+				"con": "+9",
+				"wis": "+6"
+			},
+			"skill": {
+				"athletics": "+10",
+				"stealth": "+13",
+				"survival": "+6",
+				"performance": "+9"
+			},
+			"immune": [
+				"fire",
+				"radiant"
+			],
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "no mágico"
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+10 to hit, CD 18",
+						"4 dados al cantrip",
+						"1 vez al día, tras un descanso corto, puede recuperar todos sus slots de lv1.",
+						"Sus conjuros ignoran la resistencia al fuego y convierten la inmunidad en resistencia.",
+						"*Puede hacer que Lv+1 criaturas sean inmunes a este conjuro."
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell Fire Bolt}",
+								"{@spell green-flame blade|TCE}",
+								"{@spell impulso|GdR}",
+								"{@spell light}",
+								"{@spell resistance}",
+								"{@spell sacred flame}",
+								"{@spell thaumaturgy}",
+								"{@spell word of radiance|XGE}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell burning hands}*",
+								"{@spell chromatic orb}",
+								"{@spell faerie fire}*",
+								"{@spell feather fall}",
+								"{@spell Protección|GMAM|proteccion}",
+								"{@spell Regulación Térmica|GMAM|regulacion termica}",
+								"{@spell shield}",
+								"{@spell snare|XGE}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell continual flame}",
+								"{@spell flaming sphere}",
+								"{@spell heartsense|GMAM}",
+								"{@spell scorching ray}",
+								"{@spell spiritual weapon}",
+								"{@spell warding bond}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell daylight}",
+								"{@spell dispel magic}",
+								"{@spell fireball}*",
+								"{@spell Forma De áGuila|GMAM|forma de aguila}",
+								"{@spell Sequía|GMAM|sequia}",
+								"{@spell spirit guardians}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell death ward}",
+								"{@spell guardian of faith}",
+								"{@spell sending (hishna)|GMAM}",
+								"{@spell wall of fire}*"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell dawn|XGE}*",
+								"{@spell flame strike}*",
+								"{@spell precio del alma|GdR}",
+								"{@spell scrying}"
+							],
+							"slots": 3
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"reaction": [
+				{
+					"name": "Ira de Fuego (3 /day)",
+					"entries": [
+						"Impone desventaja a un ataque que vaya a recibir él o un aliado suyo a 30ft si el atacante está también a 30 ft de él."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Macahuitl",
+					"entries": [
+						"{@atk mw} {@hit 11} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d10 + 4}) slashing damage, plus 9 ({@damage 2d8}) fire damage."
+					]
+				},
+				{
+					"name": "Luz del alba (3 /day)",
+					"entries": [
+						"Toda luz a 30 ft de Tezca se desvanece y toda criatura de su elección dentro del área salva Constitución CD 18 para recibir {@dice 2d10 + 18} de daño radiante o la mitad. Cobertura total protege de este efecto. Si alguna de las criaturas objetivo era un Undead de CR 4, salva para recibir todo el daño con un éxito o ser completamente incinerado con un fallo."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"actionHeader": [
+				"Ejerce la violencia 2 veces."
+			],
+			"damageTags": [
+				"F",
+				"S"
+			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O",
+				"R",
+				"T"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Azul, Señor del Agua y la Tormenta",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"formula": "20d10 + 60",
+				"average": 170
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 90,
+				"fly": 30
+			},
+			"str": 14,
+			"dex": 18,
+			"con": 16,
+			"int": 10,
+			"wis": 10,
+			"cha": 16,
+			"passive": 10,
+			"cr": "22",
+			"trait": [
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				},
+				{
+					"name": "Guía de la tormenta",
+					"entries": [
+						"Puede abrir huecos en la lluvia en los que no llueve, así como controlar vientos suaves a voluntad."
+					]
+				},
+				{
+					"name": "Reflejos fluidos",
+					"entries": [
+						"Salva destreza con ventaja si puede percibir el origen de la salvación."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shapechange",
+					"entries": [
+						"Puede transformarse en su {@creature Avatar de Azul|GMAM|forma original} o de vuelta a su forma original. Si muere, se queda en su forma original. Los consumibles comunes se gastan en ambas formas a la vez."
+					]
+				},
+				{
+					"name": "Furia (2 /day)",
+					"entries": [
+						"Puede entrar en un modo Berserker que dura 1 minuto. Mientras dure, es inmune a ataques físicos, no puede castear conjuros (pero sigue pudiendo concentrarse en ellos) y añade 2 al daño de su alabarda.",
+						"Si ace a 0, es {@condition incapacitated|PHB|incapacitado} o no recibe daño ni ataca un turno, se le pasa."
+					]
+				}
+			],
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"senses": [
+				"Darkvision 120 ft"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"save": {
+				"dex": "+11",
+				"con": "+10",
+				"cha": "+10"
+			},
+			"skill": {
+				"acrobatics": "+11",
+				"stealth": "+18",
+				"survival": "+7",
+				"nature": "+7"
+			},
+			"immune": [
+				"cold",
+				"lightning"
+			],
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "no mágico"
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+10 to hit, CD 18",
+						"4 dados al cantrip",
+						"3 veces por descanso puede hacer que un daño eléctrico o por trueno haga daño máximo.",
+						"*Además del daño, empuja a las criaturas objetivo 10 ft (extra si ya empujaban). Al castearlos, toda criatura de su elección a 10 ft recibe 10 de daño por rayo y es empujada 10 ft."
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell gust|XGE}",
+								"{@spell infestation|XGE}",
+								"{@spell resistance}",
+								"{@spell shape water|XGE}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell dispersal|GdR}",
+								"{@spell Espolón De Roca|GMAM|espolon de roca}",
+								"{@spell fog cloud}",
+								"{@spell Regulación Térmica|GMAM|regulacion termica}",
+								"{@spell thunderwave}*"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell gust of wind}",
+								"{@spell shatter}*",
+								"{@spell suerte del pescador|GMAM}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell call lightning}*",
+								"{@spell invocar agua|GMAM}",
+								"{@spell invocar plaga|GMAM}",
+								"{@spell sleet storm}",
+								"{@spell wall of water|XGE}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell control water}",
+								"{@spell Criogénesis|GPNM|criogenesis}",
+								"{@spell elemental bane|XGE}",
+								"{@spell ice storm}",
+								"{@spell sending (hishna)|GMAM}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell cone of cold}",
+								"{@spell conjure elemental}",
+								"{@spell destructive wave}*",
+								"{@spell maelstrom|XGE}"
+							],
+							"slots": 3
+						},
+						"6": {
+							"spells": [
+								"{@spell heal}",
+								"{@spell investiture of ice|XGE}",
+								"{@spell primordial ward|XGE}"
+							],
+							"slots": 1
+						},
+						"7": {
+							"spells": [
+								"{@spell divine word}",
+								"{@spell whirlwind|XGE}"
+							],
+							"slots": 1
+						},
+						"8": {
+							"spells": [
+								"{@spell control weather}",
+								"{@spell earthquake}",
+								"{@spell tsunami}"
+							],
+							"slots": 1
+						},
+						"9": {
+							"spells": [
+								"{@spell storm of vengeance}*"
+							],
+							"slots": 1
+						}
+					},
+					"will": [
+						"{@spell cambiar cauce|GMAM}",
+						"{@spell water breathing}",
+						"{@spell water walk}"
+					],
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"reaction": [
+				{
+					"name": "Ira del Rayo",
+					"entries": [
+						"Cuando le atacan a melé, puede hacer que el atacante reciba {@dice 2d8} por rayo automáticamente y es empujado 10 ft (cae {@condition prone})."
+					]
+				}
+			],
+			"actionHeader": [
+				"Ejerce la violencia 2 veces. Puede darse ventaja en ambos ataques, pero todos le atacarán a él con ventaja."
+			],
+			"action": [
+				{
+					"name": "Alabarda",
+					"entries": [
+						"{@atk mw} {@hit 11} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d10 + 4}) slashing damage, plus 9 ({@damage 2d8}) lightning damage. El objetivo es empujado 10 ft."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"damageTags": [
+				"L",
+				"S"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"R",
+				"T"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Avatar de Azul",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"formula": "20d10 + 60",
+				"average": 170
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30,
+				"fly": 30
+			},
+			"str": 14,
+			"dex": 18,
+			"con": 16,
+			"int": 10,
+			"wis": 10,
+			"cha": 16,
+			"passive": 10,
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				},
+				{
+					"name": "Guía de la tormenta",
+					"entries": [
+						"Puede abrir huecos en la lluvia en los que no llueve, así como controlar vientos suaves a voluntad."
+					]
+				},
+				{
+					"name": "Reflejos fluidos",
+					"entries": [
+						"Salva destreza con ventaja si puede percibir el origen de la salvación."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shapechange",
+					"entries": [
+						"Puede transformarse en su {@creature Azul, Señor del Agua y la Tormenta|GMAM|forma original} o de vuelta a su forma avatar. Si muere, vuelve a su forma original. Los consumibles comunes se gastan en ambas formas a la vez."
+					]
+				},
+				{
+					"name": "Furia (2 /day)",
+					"entries": [
+						"Puede entrar en un modo Berserker que dura 1 minuto. Mientras dure, es resistente a ataques físicos, no puede castear conjurosni concentrarse y añade 2 al daño de su alabarda.",
+						"Si cae a 0, es {@condition incapacitated|PHB|incapacitado} o no recibe daño ni ataca un turno, se le pasa."
+					]
+				}
+			],
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"senses": [
+				"Darkvision 120 ft"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"save": {
+				"dex": "+10",
+				"con": "+9",
+				"cha": "+9"
+			},
+			"skill": {
+				"acrobatics": "+10",
+				"stealth": "+16",
+				"survival": "+6",
+				"nature": "+6"
+			},
+			"immune": [
+				"cold",
+				"lightning"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+10 to hit, CD 18",
+						"4 dados al cantrip",
+						"3 veces al día puede hacer que un daño eléctrico o por trueno haga daño máximo.",
+						"*Además del daño, empuja a las criaturas objetivo 10 ft (extra si ya empujaban). Al castearlos, toda criatura de su elección a 10 ft recibe 10 de daño por rayo y es empujada 10 ft."
+					],
+					"will": [
+						"{@spell cambiar cauce|GMAM}",
+						"{@spell water breathing}",
+						"{@spell water walk}"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell gust|XGE}",
+								"{@spell infestation|XGE}",
+								"{@spell resistance}",
+								"{@spell shape water|XGE}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell dispersal|GdR}",
+								"{@spell Espolón De Roca|GMAM|espolon de roca}",
+								"{@spell fog cloud}",
+								"{@spell Regulación Térmica|GMAM|regulacion termica}",
+								"{@spell thunderwave}*"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell gust of wind}",
+								"{@spell shatter}*",
+								"{@spell suerte del pescador|GMAM}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell call lightning}*",
+								"{@spell invocar agua|GMAM}",
+								"{@spell invocar plaga|GMAM}",
+								"{@spell sleet storm}",
+								"{@spell wall of water|XGE}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell control water}",
+								"{@spell Criogénesis|GPNM|criogenesis}",
+								"{@spell elemental bane|XGE}",
+								"{@spell ice storm}",
+								"{@spell sending (hishna)|GMAM}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell cone of cold}",
+								"{@spell conjure elemental}",
+								"{@spell destructive wave}*",
+								"{@spell maelstrom|XGE}"
+							],
+							"slots": 3
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"reaction": [
+				{
+					"name": "Ira del Rayo (3 /rest)",
+					"entries": [
+						"Cuando le atacan a melé, puede hacer que el atacante reciba {@dice 2d8} por rayo automáticamente y es empujado 10 ft (cae {@condition prone})."
+					]
+				}
+			],
+			"actionHeader": [
+				"Ejerce la violencia 2 veces. Puede darse ventaja en ambos ataques, pero todos le atacarán a él con ventaja."
+			],
+			"action": [
+				{
+					"name": "Alabarda",
+					"entries": [
+						"{@atk mw} {@hit 11} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d10 + 4}) slashing damage, plus 9 ({@damage 2d8}) lightning damage. El objetivo es empujado 10 ft."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"damageTags": [
+				"L",
+				"S"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"R",
+				"T"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Plutoq, la Montaña Andante",
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"formula": "17d20 + 85",
+				"average": 263
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 60
+			},
+			"str": 22,
+			"dex": 6,
+			"con": 20,
+			"int": 6,
+			"wis": 8,
+			"cha": 12,
+			"passive": 15,
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				},
+				{
+					"name": "Bruto",
+					"entries": [
+						"1 vez por descanso puede darse una acción extra.",
+						"Su acción de ataque es de 3 ataques, pero puede atacar una vez más con la bonus. Su bonus siempre suma el stat al daño.",
+						"Si ve la fuente de daño, salva Fuerza y Constitución con ventaja.",
+						"Puede elegir salvar 1 salvación fallida al día. Puede rerolear una extra si está en furia.",
+						"No requiere componentes para ser revivido."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shapechange",
+					"entries": [
+						"Puede transformarse en su {@creature Avatar de Plutoq|GMAM|avatar}. Si muere, se queda en su forma original. Los consumibles comunes se gastan en ambas formas a la vez."
+					]
+				},
+				{
+					"name": "Furia (3 /rest)",
+					"entries": [
+						"Puede entrar en un modo Berserker que dura 1 minuto. Mientras dure, es resistente a todo daño excepto psíquico, no puede castear conjuros ni concentrarse y añade {@dice 1d6 + 3} al daño de su primer ataque y un +2 al del resto de ataques.",
+						"Si cae a 0, es {@condition incapacitated|PHB|incapacitado} o no recibe daño ni ataca un turno, se le pasa."
+					]
+				},
+				{
+					"name": "Reagrupar la Roca (1 /rest)",
+					"entries": [
+						"Se cura {@dice 2d10 + 10} HP."
+					]
+				},
+				{
+					"name": "Rugido de Guerra (1 /rest)",
+					"entries": [
+						"Todos los aliados que puedan oirle a 60 ft reciben ventaja en todos sus ataques y salvaciones hasta el inicio del próximo turno de Plutoq."
+					]
+				}
+			],
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"senses": [
+				"tremorsense 120 ft."
+			],
+			"senseTags": [
+				"T"
+			],
+			"save": {
+				"str": "+12",
+				"con": "+11"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mold earth|XGE}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell earth tremor|XGE}",
+								"{@spell Espolón De Roca|GMAM|espolon de roca}",
+								"{@spell jump}",
+								"{@spell Protección|GMAM|proteccion}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell emboscada|GMAM}",
+								"{@spell heartsense|GMAM}"
+							],
+							"slots": 3
+						}
+					},
+					"daily": {
+						"6": [
+							"{@spell earthquake}",
+							"{@spell move earth}",
+							"{@spell stone shape}",
+							"{@spell wall of stone}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"actionHeader": [
+				"Ejerce la violencia 4 veces, pero una de ellas es una bonus.",
+				"1 vez por descanso puede darse un +10 al ataque."
+			],
+			"action": [
+				{
+					"name": "Gran Puño",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}19 ({@damage 3d8 + 6}) bludgeoning damage. El objetivo es empujado 20 ft. Cae {@condition prone} y recibe daño por caída."
+					]
+				},
+				{
+					"name": "Aplastar",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}17 ({@damage 2d10 + 6}) bludgeoning damage. El objetivo está {@condition prone} y {@condition dazed|FleeMortals}."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "no mágico"
+				}
+			],
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "mágico"
+				}
+			],
+			"skill": {
+				"athletics": "+18",
+				"intimidation": "+7",
+				"perception": "+5",
+				"survival": "+5"
+			},
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"B"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Avatar de Plutoq",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 13,
+					"from": [
+						"Rodela"
+					]
+				}
+			],
+			"hp": {
+				"formula": "14d10 + 28",
+				"average": 105
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 14,
+			"int": 6,
+			"wis": 8,
+			"cha": 12,
+			"passive": 13,
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				},
+				{
+					"name": "Bruto",
+					"entries": [
+						"1 vez por descanso puede darse una acción extra.",
+						"Su acción de ataque es de 2 ataques, pero puede atacar una vez más con la bonus. Su bonus siempre suma el stat al daño.",
+						"Puede elegir salvar 1 salvación fallida por furia.",
+						"No requiere componentes para ser revivido."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shapechange (1 /day)",
+					"entries": [
+						"Puede transformarse en su {@creature Plutoq, La Montaña Andante|GMAM|forma original}. Si muere, vuelve a su forma original. Los consumibles comunes se gastan en ambas formas a la vez."
+					]
+				},
+				{
+					"name": "Furia (2 /day)",
+					"entries": [
+						"Puede entrar en un modo Berserker que dura 1 minuto. Mientras dure, es resistente a los daños físicos, no puede castear conjuros ni concentrarse y añade {@dice 1d6 + 3} al daño de su primer ataque y un +2 al del resto de ataques.",
+						"Si cae a 0, es {@condition incapacitated|PHB|incapacitado} o no recibe daño ni ataca un turno, se le pasa."
+					]
+				},
+				{
+					"name": "Second Wind (1 /rest)",
+					"entries": [
+						"Se cura {@dice 1d10 + 10} HP."
+					]
+				}
+			],
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"save": {
+				"str": "+8",
+				"con": "+6"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mold earth|XGE}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell earth tremor|XGE}",
+								"{@spell Espolón De Roca|GMAM|espolon de roca}",
+								"{@spell jump}",
+								"{@spell Protección|GMAM|proteccion}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell emboscada|GMAM}",
+								"{@spell heartsense|GMAM}"
+							],
+							"slots": 3
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"actionHeader": [
+				"Ejerce la violencia 3 veces, pero una de ellas es una bonus.",
+				"1 vez por descanso puede darse un +10 al ataque."
+			],
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "no mágico"
+				}
+			],
+			"skill": {
+				"athletics": "+12",
+				"intimidation": "+5",
+				"perception": "+3",
+				"survival": "+3"
+			},
+			"action": [
+				{
+					"name": "Macahuitl",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) slashing damage, or 9 ({@damage 1d10 + 4}) slashing damage if used with both hands."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"reaction": [
+				{
+					"name": "Parry (Rodela)",
+					"entries": [
+						"Hace una tirada de Atletismo contra la tirada de ataque que vaya a recibir a melé. Con un éxito no recibe el ataque y no puede ser targeteado por la criatura que le atacó hasta el inicio del próximo turno de Plutoq."
+					]
+				}
+			],
+			"actionTags": [
+				"Parry"
+			],
+			"damageTags": [
+				"S"
+			],
+			"damageTagsSpell": [
+				"B"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Eha, Duende del Viento",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"formula": "17d8",
+				"average": 76
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 90
+			},
+			"str": 6,
+			"dex": 18,
+			"con": 10,
+			"int": 10,
+			"wis": 14,
+			"cha": 14,
+			"passive": 22,
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				},
+				{
+					"name": "Aura de viento",
+					"entries": [
+						"Cualquier proyectil, mágico o mundano, que vaya a impactarle reduce su daño en {@dice 1d10 + 7}.",
+						"Su aura de viento es capaz de extenderse hasta a 500 ft. Puede detectar cualquier cosa en movimiento en ese área, además está bajo los efectos de Blindsight y Tremorsense."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Wild Avatar",
+					"entries": [
+						"Puede usar su {@creature Avatar de Eha|GMAM|avatar} con las normas de la Wild Shape. Cuando lo hace de esta forma, si su avatar cae a 0 recibe 2 PtA."
+					]
+				},
+				{
+					"name": "Avatar",
+					"entries": [
+						"Puede transformarse en su {@creature Avatar de Eha|GMAM|avatar}, perdiendo gran parte de su aptitud mágica y su poder pero ganando una gran versatilidad marcial."
+					]
+				}
+			],
+			"languages": [
+				"all"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"senses": [
+				"Wind Sense"
+			],
+			"save": {
+				"dex": "+10"
+			},
+			"skill": {
+				"acrobatics": "+16",
+				"nature": "+8",
+				"perception": "+12",
+				"stealth": "+16",
+				"survival": "+8"
+			},
+			"resist": [
+				{
+					"resist": [
+						"thunder"
+					]
+				},
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "no mágico"
+				}
+			],
+			"action": [
+				{
+					"name": "Impacto de Presión",
+					"entries": [
+						"{@atk rw} {@hit 10} to hit, range 30 ft., one target. {@h}20 ({@damage 3d10 + 4}) thunder damage. El objetivo es empujado 20 ft y salva fuerza."
+					]
+				}
+			],
+			"miscTags": [
+				"RW"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+8 to hit, CD 16",
+						"4 dados al cantrip."
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell control flames|XGE}",
+								"{@spell guidance}",
+								"{@spell gust|XGE}",
+								"{@spell mending}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell dispersal|GdR}",
+								"{@spell elevar menor|GMAM}",
+								"{@spell minor bird charm|GMAM}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell skywrite|XGE}",
+								"{@spell warding wind|XGE}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell elevar mayor|GMAM}",
+								"{@spell Migración|GPNM|migracion}",
+								"{@spell sleet storm}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell conjure minor elementals}",
+								"{@spell ice storm}",
+								"{@spell major bird charm|GMAM}",
+								"{@spell Sincronía|GPNM|sincronia}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell cone of cold}",
+								"{@spell conjure elemental}",
+								"{@spell maelstrom|XGE}",
+								"{@spell reflejos predatorios|GPNM}"
+							],
+							"slots": 2
+						},
+						"6": {
+							"spells": [
+								"{@spell find the path}"
+							],
+							"slots": 1
+						},
+						"7": {
+							"spells": [
+								"{@spell whirlwind|XGE}"
+							],
+							"slots": 1
+						}
+					},
+					"will": [
+						"{@spell control winds|XGE}",
+						"{@spell freedom of movement}",
+						"{@spell gust of wind}"
+					],
+					"daily": {
+						"3": [
+							"{@spell air bubble|AAG} lv5",
+							"{@spell navegante del viento|GMAM}",
+							"{@spell nube voladora|GPNM}",
+							"{@spell paso elevado|GPNM}",
+							"{@spell wind walk}",
+							"{@spell wind wall}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"damageTags": [
+				"T"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Avatar de Eha",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"formula": "17d8",
+				"average": 76
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 180
+			},
+			"str": 6,
+			"dex": 18,
+			"con": 10,
+			"int": 10,
+			"wis": 14,
+			"cha": 14,
+			"passive": 22,
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				},
+				{
+					"name": "Aura de viento",
+					"entries": [
+						"Su aura de viento es capaz de extenderse hasta a 50 ft. Puede detectar cualquier cosa en movimiento en ese área, además está bajo los efectos de Blindsight y Tremorsense."
+					]
+				},
+				{
+					"name": "Evasiva y ágil",
+					"entries": [
+						"Tiene evasión y puede levantarse usando solo 5 ft.",
+						"Reduce el daño por caída en 60."
+					]
+				}
+			],
+			"languages": [
+				"all"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"senses": [
+				"Wind Sense"
+			],
+			"save": {
+				"dex": "+10"
+			},
+			"skill": {
+				"acrobatics": "+16",
+				"nature": "+8",
+				"perception": "+12",
+				"stealth": "+16",
+				"survival": "+8"
+			},
+			"resist": [
+				"thunder"
+			],
+			"action": [
+				{
+					"name": "Impacto de Presión",
+					"entries": [
+						"{@atk rw} {@hit 10} to hit, range 30 ft., one target. {@h}20 ({@damage 3d10 + 4}) thunder damage. El objetivo es empujado 20 ft y salva fuerza."
+					]
+				},
+				{
+					"name": "Headshot",
+					"entries": [
+						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}17 ({@damage 2d12 + 4}) thunder damage. El objetivo salva Constitución CD 16 o está stuned hasta el final de su próximo turno."
+					]
+				},
+				{
+					"name": "Forma Original (1 /day)",
+					"entries": [
+						"Puede volver a su {@creature Eha, Duende del Viento|GMAM|forma original}."
+					]
+				}
+			],
+			"miscTags": [
+				"RW",
+				"MW"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+8 to hit, CD 16"
+					],
+					"will": [
+						"{@spell control winds|XGE}",
+						"{@spell freedom of movement}",
+						"{@spell gust of wind}"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell control flames|XGE}",
+								"{@spell gust|XGE}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell dispersal|GdR}",
+								"{@spell elevar menor|GMAM}",
+								"{@spell minor bird charm|GMAM}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell skywrite|XGE}",
+								"{@spell warding wind|XGE}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell elevar mayor|GMAM}",
+								"{@spell Migración|GPNM|migracion}"
+							],
+							"slots": 3
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"actionHeader": [
+				"Ejerce la violencia 3 veces usando también la bonus. Solo uno de esos ataques puede ser un headshot."
+			],
+			"reaction": [
+				{
+					"name": "Desviar ataque",
+					"entries": [
+						"Cuando fallan un ataque a melé contra Eha, puede elegir desviar el ataque para que impacte en otra criatura a 5 ft de Eha que siga en el rango del ataque."
+					]
+				},
+				{
+					"name": "Desviar misiles",
+					"entries": [
+						"Cuando le impacte un proyectil, mágico o mundano, reduce el daño del proyectil en {@dice 1d10 + 16}. Si lo reduce a 0, puede devolverlo, cambiando la tirada de ataque y los stats de daño por destreza y su BC ({@hit 10} to hit). El resto de características y rango del ataque se mantiene."
+					]
+				},
+				{
+					"name": "Redirigir Caída",
+					"entries": [
+						"Si está cayendo mientras vuela, puede descontar tanta movilidad como quiera (hasta un máximo de 180) a esa caída. Si la caída se reduce a 0, aterriza con seguridad en el suelo. El siguiente turno habrá perdido una cantidad equivalente de movilidad."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Velocidad Fluida",
+					"entries": [
+						"Puede desengancharse, dashear o esquivar aun habiendo usado un ataque extra con la bonus."
+					]
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"damageTags": [
+				"T"
+			],
+			"savingThrowForcedSpell": [
+				"strength"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Watil, Guardiana de las Plantas",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"Better {@spell Barkskin}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "17d10 + 34",
+				"average": 127
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 14,
+			"int": 12,
+			"wis": 16,
+			"cha": 16,
+			"passive": 13,
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shapechange",
+					"entries": [
+						"Puede transformarse en cualquier planta y en su avatar."
+					]
+				},
+				{
+					"name": "Wild Shape (2 /day)",
+					"entries": [
+						"Puede usar las normas de la wild shape para transformarse en un {@creature treant|MM|Ent}"
+					]
+				}
+			],
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"senses": [
+				"tremorsense 60 ft."
+			],
+			"senseTags": [
+				"T"
+			],
+			"save": {
+				"wis": "+9",
+				"cha": "+9"
+			},
+			"skill": {
+				"nature": "+13",
+				"medicine": "+9",
+				"survival": "+15",
+				"history": "+7",
+				"insight": "+9"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+9 to hit, CD 17",
+						"4 dados al cantrip",
+						"Puede gastar spell slots para añadir 1d8+lvd8 de daño por ácido al daño de sus armas a melé. hasta un máximo de lv5."
+					],
+					"will": [
+						"{@spell beast sense}",
+						"{@spell commune with nature}",
+						"{@spell detect poison and disease}",
+						"{@spell locate animals or plants}",
+						"{@spell plant growth}",
+						"{@spell purify food and drink}",
+						"{@spell speak with plants}",
+						"{@spell tree stride}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell transport via plants}"
+						],
+						"1e": [
+							"{@spell awaken}",
+							"{@spell druid grove|XGE}",
+							"{@spell wall of thorns}"
+						]
+					},
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell featherweaving|GMAM}",
+								"{@spell infestation|XGE}",
+								"{@spell shape water|XGE}",
+								"{@spell thorn whip}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell ensnaring strike}",
+								"{@spell entangle}",
+								"{@spell minor bird charm|GMAM}",
+								"{@spell speak with animals}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell breathsense|GMAM}",
+								"{@spell misty step}",
+								"{@spell moonbeam}",
+								"{@spell spike growth}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell florecer|GMAM}",
+								"{@spell invocar agua|GMAM}",
+								"{@spell protection from energy}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell cambiar cauce|GMAM}",
+								"{@spell control water}",
+								"{@spell giant insect}",
+								"{@spell grasping vine}",
+								"{@spell guardian of nature|XGE}",
+								"{@spell major bird charm|GMAM}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell Espíritu Del Sauce|GdR|espiritu del sauce}",
+								"{@spell Ira Del áRbol|GdR|ira del arbol}",
+								"{@spell wrath of nature|XGE}"
+							],
+							"slots": 2
+						},
+						"6": {
+							"spells": [
+								"{@spell heal}"
+							],
+							"slots": 1
+						},
+						"7": {
+							"spells": [
+								"{@spell regenerate}"
+							],
+							"slots": 1
+						},
+						"8": {
+							"spells": [
+								"{@spell control weather}"
+							],
+							"slots": 1
+						},
+						"9": {
+							"spells": [
+								"{@spell mass heal}"
+							],
+							"slots": 1
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"actionHeader": [
+				"Ejerce la violencia dos veces."
+			],
+			"action": [
+				{
+					"name": "Garrazo",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d10 + 3}) piercing damage, plus 4 ({@damage 1d8}) acid damage."
+					]
+				},
+				{
+					"name": "Latigazo",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 60 ft., one target. {@h}7 ({@damage 1d8 + 3}) bludgeoning damage, plus 4 ({@damage 1d8}) acid damage. Puede elegir no hacer daño y {@condition grappled|PHB|atrapar} a una criatura y arrastrarla hasta 40 ft hacia ella. La criatura estará {@condition prone} y recibirá la mitad del daño por caída que debería recibir."
+					]
+				},
+				{
+					"name": "Animar Bosque (1 /day)",
+					"entries": [
+						"Watil anima hasta un máximo de 5 {@creature awakened tree|MM|árboles}."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"I",
+				"O",
+				"P",
+				"R",
+				"S"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Avatar de Watil",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@spell Barkskin}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "17d10 + 34",
+				"average": 127
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 14,
+			"int": 12,
+			"wis": 16,
+			"cha": 16,
+			"passive": 13,
+			"cr": "12",
+			"trait": [
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shapechange",
+					"entries": [
+						"Puede transformarse en cualquier planta y en su {@creature Watil, Guardiana de las Plantas|GMAM|forma original}."
+					]
+				},
+				{
+					"name": "Wild Shape (2 /day)",
+					"entries": [
+						"Puede usar las normas de la wild shape para transformarse en un {@creature awakened tree|MM|Ent Menor}"
+					]
+				}
+			],
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"save": {
+				"wis": "+7",
+				"cha": "+7"
+			},
+			"skill": {
+				"nature": "+9",
+				"medicine": "+7",
+				"survival": "+11",
+				"history": "+5",
+				"insight": "+7"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+9 to hit, CD 17",
+						"4 dados al cantrip",
+						"Puede gastar spell slots para añadir 1d8+lvd8 de daño por veneno al daño de sus armas a melé."
+					],
+					"will": [
+						"{@spell beast sense}",
+						"{@spell commune with nature}",
+						"{@spell detect poison and disease}",
+						"{@spell locate animals or plants}",
+						"{@spell purify food and drink}",
+						"{@spell speak with plants}"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell featherweaving|GMAM}",
+								"{@spell infestation|XGE}",
+								"{@spell shape water|XGE}",
+								"{@spell thorn whip}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell ensnaring strike}",
+								"{@spell entangle}",
+								"{@spell minor bird charm|GMAM}",
+								"{@spell speak with animals}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell breathsense|GMAM}",
+								"{@spell misty step}",
+								"{@spell moonbeam}",
+								"{@spell spike growth}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell florecer|GMAM}",
+								"{@spell invocar agua|GMAM}",
+								"{@spell plant growth}",
+								"{@spell protection from energy}"
+							],
+							"slots": 3
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"actionHeader": [
+				"Ejerce la violencia dos veces, una con su shortsword y otra con su maza."
+			],
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) slashing damage, plus 4 ({@damage 1d8}) poison damage."
+					]
+				},
+				{
+					"name": "Maza",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 30 ft., one target. {@h}7 ({@damage 1d8 + 3}) bludgeoning damage, plus 4 ({@damage 1d8}) poison damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RCH"
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"S"
+			],
+			"damageTagsSpell": [
+				"I",
+				"P",
+				"R"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Kiltzi, Diosa del Amor",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"Suave defense"
+					]
+				}
+			],
+			"hp": {
+				"formula": "17d8 + 68",
+				"average": 144
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 18,
+			"int": 12,
+			"wis": 14,
+			"cha": 20,
+			"passive": 12,
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				}
+			],
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"save": {
+				"wis": "+8",
+				"cha": "+11"
+			},
+			"skill": {
+				"persuasion": "+17",
+				"insight": "+14",
+				"animal handling": "+8",
+				"performance": "+17",
+				"medicine": "+14",
+				"acrobatics": "+6"
+			},
+			"conditionImmune": [
+				"charmed"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+11 to hit, CD 19",
+						"4 dados al cantrip",
+						"*Puede targetear una criatura extra.",
+						"Los conjuros y efectos de charm (sugestión incluido) provocados por Kiltzi son imperceptibles para los objetivos. Kiltzi puede elegir que los objetivos no recuerden ciertas cosas que ella les haya hecho hacer mientras estaban charmeados."
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell disparo ilusorio|GPNM}",
+								"{@spell friends}",
+								"{@spell message}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"5": {
+							"spells": [
+								"{@spell calm emotions}",
+								"{@spell charm monster|XGE}*",
+								"{@spell charm person}*",
+								"{@spell command}*",
+								"{@spell compulsion}*",
+								"{@spell confusion}*",
+								"{@spell cure wounds}",
+								"{@spell desconcierto|GMAM}*",
+								"{@spell enthrall}",
+								"{@spell fast friends|AI}*",
+								"{@spell greater restoration}",
+								"{@spell major bird charm|GMAM}",
+								"{@spell mass healing word}",
+								"{@spell Protección|GMAM|proteccion}",
+								"{@spell sending (hishna)|GMAM}",
+								"{@spell suggestion}*"
+							],
+							"slots": 4,
+							"lower": 1
+						}
+					},
+					"will": [
+						"{@spell toque de sune|GdR} (sin efectos secundarios)"
+					],
+					"daily": {
+						"1e": [
+							"{@spell heal}",
+							"{@spell mass suggestion}*",
+							"{@spell regenerate}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"bonus": [
+				{
+					"name": "Inspiración bárdica (10 /rest)",
+					"entries": [
+						"Ofrece una inspiración bárdica de {@dice d12} que puede usarse en curación y daño de conjuros. Puede inspirarse a sí misma, pero ella solo puede añadirlo a curaciones."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Countercharm",
+					"entries": [
+						"Cuando una criatura a 60 ft de Kiltzi vaya a ser charmeada o asustada, Kiltzi puede bloquear el efecto y devolverlo a la criatura que lo provocó. La salvación ahora es de CD 19."
+					]
+				},
+				{
+					"name": "Encantamiento inquisitivo",
+					"entries": [
+						"Cuando vaya a recibir un ataque de una criatura a 30 pies o menos, el atacante salva Wisdom 16 o targetea al objetivo posible más cercano a Kiltzi dentro del ataque."
+					]
+				}
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Nula, Guardiana de los Animales",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "17d12 + 34",
+				"average": 144
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(60 when felinetaur)"
+				},
+				"swim": {
+					"number": 60,
+					"condition": "(when snaketaur)"
+				},
+				"fly": 60
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 14,
+			"int": 10,
+			"wis": 12,
+			"cha": 14,
+			"passive": 17,
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shapechange",
+					"entries": [
+						"Puede transformarse en su {@creature Avatar Híbrido de Nula|GMAM|avatar híbrido} o en su {@creature Avatar Bestial de Nula (tiny)|GMAM|avatar bestial}. También puede pasar de forma Felintaur a su forma Snaketaur."
+					]
+				},
+				{
+					"name": "Wildshape",
+					"entries": [
+						"Puede transformarse en cualquier bestia sin límite de CR y monstruosidades de hasta CR 10. Su favorito es el {@creature Relic Sloth|SCC|Mono Sabio}.",
+						"En esta forma aún puede hablar y castear conjuros."
+					]
+				}
+			],
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial",
+				"{@spell Speak with Animals|PHB|Beast Speech}"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"senses": [
+				"darkvision 120 ft.",
+				"blindsight 30 ft.",
+				"tremorsense 60 ft."
+			],
+			"senseTags": [
+				"SD",
+				"B",
+				"T"
+			],
+			"save": {
+				"dex": "+9",
+				"wis": "+7"
+			},
+			"skill": {
+				"acrobatics": "+9",
+				"animal handling": "+13",
+				"intimidation": "+8",
+				"nature": "+12",
+				"stealth": "+15",
+				"survival": "+7",
+				"perception": "+7"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+8 to hit, CD 16",
+						"4 dados al cantrip"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell hunter sense|GHLoE}",
+								"{@spell primal savagery|XGE}",
+								"{@spell resistance}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell beast bond|XGE}",
+								"{@spell cat charm|GMAM}",
+								"{@spell cure wounds}",
+								"{@spell llamada del cazador|GMAM}",
+								"{@spell minor bird charm|GMAM}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell beast sense}",
+								"{@spell heat metal}",
+								"{@spell snake charm|GMAM}",
+								"{@spell suerte del pescador|GMAM}",
+								"{@spell summon beast|TCE}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell conjure animals}",
+								"{@spell Forma De áGuila|GMAM|forma de aguila}",
+								"{@spell forma de jaguar|GMAM}",
+								"{@spell invocar plaga|GMAM}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell giant insect}",
+								"{@spell guardian of nature|XGE}",
+								"{@spell major bird charm|GMAM}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell Cacería|GPNM|caceria}",
+								"{@spell commune with nature}",
+								"{@spell insect plague}"
+							],
+							"slots": 2
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"action": [
+				{
+					"name": "Lanza",
+					"entries": [
+						"{@atk mw,rw} {@hit 9} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage in melee or at range, or 8 ({@damage 1d10 + 3}) piercing damage if used with both hands."
+					]
+				},
+				{
+					"name": "{@item Oversized longbow|WDH}",
+					"entries": [
+						"{@atk rw} {@hit 9} to hit, range 150/600 ft., one target. {@h}12 ({@damage 2d8 + 3}) piercing damage."
+					]
+				},
+				{
+					"name": "Garrazo (when Felinetaur)",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 10 ft., one target. {@h}13 ({@damage 3d6 + 3}) slashing damage."
+					]
+				},
+				{
+					"name": "Constrict (when snaketaur)",
+					"entries": [
+						"{@atk mw} {@hit +9} to hit, reach 5 ft., one creature. {@h}7 ({@damage 1d8 + 3}) bludgeoning damage, y el objetivo está {@condition grappled|PHB|atrapado} CD 17. Mientras continue atrapado, esta {@condition restrained} y Nula no puede atrapar a nadie más."
+					]
+				}
+			],
+			"miscTags": [
+				"RW",
+				"MW",
+				"RNG",
+				"RCH"
+			],
+			"actionHeader": [
+				"Ejerce la violencia 3 veces, pero solo una de esas veces puede ser un ataque especial de su forma."
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"A",
+				"F",
+				"O",
+				"P"
+			],
+			"savingThrowForcedSpell": [
+				"constitution"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Avatar Híbrido de Nula",
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "17d12 + 34",
+				"average": 144
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(60 when felinetaur)"
+				},
+				"swim": {
+					"number": 60,
+					"condition": "(when snaketaur)"
+				},
+				"fly": {
+					"number": 60,
+					"condition": "(when snaketaur)"
+				}
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 14,
+			"int": 10,
+			"wis": 12,
+			"cha": 14,
+			"passive": 15,
+			"cr": "12",
+			"trait": [
+				{
+					"name": "Renacido",
+					"entries": [
+						"Todos sus stats tienen un -4 (-2 al modificador). Ya están aplicados."
+					]
+				},
+				{
+					"name": "Sabiduría Divina",
+					"entries": [
+						"Es capaz de entender todos los idiomas, aunque solo es capaz de responder en unos pocos."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shapechange",
+					"entries": [
+						"Puede transformarse en su avatar bestial o volver a su forma original. También puede pasar de forma Felintaur a su forma Snaketaur."
+					]
+				},
+				{
+					"name": "Wildshape",
+					"entries": [
+						"Puede transformarse en cualquier bestia de hasta CR 5 y monstruosidades de hasta CR 3. Su favorito es el {@creature Relic Sloth|SCC|Mono Sabio}.",
+						"En esta forma aún puede hablar, pero no castear conjuros."
+					]
+				}
+			],
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial",
+				"{@spell Speak with Animals|PHB|Beast Speech}"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"senses": [
+				"darkvision 120 ft.",
+				"blindsight 10 ft.",
+				"tremorsense 30 ft."
+			],
+			"senseTags": [
+				"SD",
+				"B",
+				"T"
+			],
+			"save": {
+				"dex": "+9",
+				"wis": "+7"
+			},
+			"skill": {
+				"acrobatics": "+7",
+				"animal handling": "+9",
+				"intimidation": "+6",
+				"nature": "+8",
+				"stealth": "+11",
+				"survival": "+5",
+				"perception": "+5"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+8 to hit, CD 16",
+						"4 dados al cantrip"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell hunter sense|GHLoE}",
+								"{@spell primal savagery|XGE}",
+								"{@spell resistance}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell beast bond|XGE}",
+								"{@spell cat charm|GMAM}",
+								"{@spell cure wounds}",
+								"{@spell llamada del cazador|GMAM}",
+								"{@spell minor bird charm|GMAM}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell beast sense}",
+								"{@spell heat metal}",
+								"{@spell snake charm|GMAM}",
+								"{@spell suerte del pescador|GMAM}",
+								"{@spell summon beast|TCE}"
+							],
+							"slots": 3
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"action": [
+				{
+					"name": "Lanza",
+					"entries": [
+						"{@atk mw,rw} {@hit 9} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage in melee or at range, or 8 ({@damage 1d10 + 3}) piercing damage if used with both hands."
+					]
+				},
+				{
+					"name": "{@item Oversized longbow|WDH}",
+					"entries": [
+						"{@atk rw} {@hit 9} to hit, range 150/600 ft., one target. {@h}12 ({@damage 2d8 + 3}) piercing damage."
+					]
+				},
+				{
+					"name": "Garrazo (when Felinetaur)",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 10 ft., one target. {@h}13 ({@damage 3d6 + 3}) slashing damage."
+					]
+				},
+				{
+					"name": "Constrict (when snaketaur)",
+					"entries": [
+						"{@atk mw} {@hit +9} to hit, reach 5 ft., one creature. {@h}7 ({@damage 1d8 + 3}) bludgeoning damage, y el objetivo está {@condition grappled|PHB|atrapado} CD 17. Mientras continue atrapado, esta {@condition restrained} y Nula no puede atrapar a nadie más."
+					]
+				}
+			],
+			"miscTags": [
+				"RW",
+				"MW",
+				"RNG",
+				"RCH"
+			],
+			"actionHeader": [
+				"Ejerce la violencia 3 veces, pero solo una de esas veces puede ser un ataque especial de su forma."
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"A",
+				"F"
+			],
+			"savingThrowForcedSpell": [
+				"constitution"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Avatar Bestial de Nula (tiny)",
+			"size": [
+				"T"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d12 - 30",
+				"average": 35
+			},
+			"speed": {
+				"walk": 5,
+				"fly": 30
+			},
+			"str": 4,
+			"dex": 20,
+			"con": 4,
+			"int": 10,
+			"wis": 12,
+			"cha": 14,
+			"passive": 14,
+			"cr": "7",
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial",
+				"{@spell Speak with Animals|PHB|Beast Speech}"
+			],
+			"trait": [
+				{
+					"name": "Crecimiento",
+					"entries": [
+						"Nula puede regular su altura entre los 20 cm y los 12 metros (huge). Por cada talla que aumente adquiere un +4 a fuerza y constitución (+20 HP) y +15 ft a sus movilidades; pero pierde -4 a destreza y -1 a la CA.",
+						"Cada talla, además, aumenta en 1 el número de dados de daño de cada ataque y el rango de sus ataques en 5 ft a melé a partir del mediano.",
+						"Mientras sea Tiny o small tiene ventaja a sigilo y triplica su velocidad al dashear. Tiene Flyby.",
+						"{@b Esta ficha tiene en cuenta que es tiny.}"
+					]
+				}
+			],
+			"actionHeader": [
+				"Ataca 2 veces."
+			],
+			"bonus": [
+				{
+					"name": "Cambiar tamaño",
+					"entries": [
+						"Nula gana o pierde una talla."
+					]
+				},
+				{
+					"name": "Veloz",
+					"entries": [
+						"Puede dashear con la bonus"
+					]
+				}
+			],
+			"environment": [
+				"grassland",
+				"hill"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"skill": {
+				"acrobatics": "+8",
+				"animal handling": "+7",
+				"intimidation": "+5",
+				"nature": "+6",
+				"perception": "+4",
+				"stealth": "+11",
+				"survival": "+7"
+			},
+			"save": {
+				"dex": "+8",
+				"wis": "+4"
+			},
+			"senses": [
+				"darkvision 120 ft.",
+				"blindsight 10 ft."
+			],
+			"senseTags": [
+				"SD",
+				"B"
+			],
+			"action": [
+				{
+					"name": "Picotazo",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}6 piercing damage."
+					]
+				},
+				{
+					"name": "Cambiar Tamaño",
+					"entries": [
+						"Nula gana o pierde 3 tamaños."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"damageTags": [
+				"P"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Avatar Bestial de Nula (small)",
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d12 - 10",
+				"average": 55
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 45
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 8,
+			"int": 10,
+			"wis": 12,
+			"cha": 14,
+			"passive": 14,
+			"cr": "7",
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial",
+				"{@spell Speak with Animals|PHB|Beast Speech}"
+			],
+			"trait": [
+				{
+					"name": "Crecimiento",
+					"entries": [
+						"Nula puede regular su altura entre los 20 cm y los 12 metros (huge). Por cada talla que aumente adquiere un +4 a fuerza y constitución (+20 HP) y +15 ft a sus movilidades; pero pierde -4 a destreza y -1 a la CA.",
+						"Cada talla, además, aumenta en 1 el número de dados de daño de cada ataque y el rango de sus ataques en 5 ft a melé a partir del mediano.",
+						"Mientras sea Tiny o small tiene ventaja a sigilo y triplica su velocidad al dashear. Tiene Flyby.",
+						"{@b Esta ficha tiene en cuenta que es small.}"
+					]
+				}
+			],
+			"actionHeader": [
+				"Ataca 2 veces."
+			],
+			"bonus": [
+				{
+					"name": "Cambiar tamaño",
+					"entries": [
+						"Nula gana o pierde una talla."
+					]
+				},
+				{
+					"name": "Veloz",
+					"entries": [
+						"Puede dashear con la bonus."
+					]
+				}
+			],
+			"environment": [
+				"grassland",
+				"hill"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"skill": {
+				"acrobatics": "+6",
+				"animal handling": "+7",
+				"intimidation": "+5",
+				"nature": "+6",
+				"perception": "+4",
+				"stealth": "+9",
+				"survival": "+7"
+			},
+			"save": {
+				"dex": "+6",
+				"wis": "+4"
+			},
+			"senses": [
+				"darkvision 120 ft.",
+				"blindsight 10 ft."
+			],
+			"senseTags": [
+				"SD",
+				"B"
+			],
+			"action": [
+				{
+					"name": "Picotazo",
+					"entries": [
+						"{@atk mw} {@hit 2} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d6 - 1}) piercing damage."
+					]
+				},
+				{
+					"name": "Cambiar Tamaño",
+					"entries": [
+						"Nula gana o pierde 3 tamaños."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"damageTags": [
+				"P"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Avatar Bestial de Nula (medium)",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d12 + 10",
+				"average": 75
+			},
+			"speed": {
+				"walk": 35,
+				"fly": 60
+			},
+			"str": 12,
+			"dex": 12,
+			"con": 12,
+			"int": 10,
+			"wis": 12,
+			"cha": 14,
+			"passive": 14,
+			"cr": "7",
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial",
+				"{@spell Speak with Animals|PHB|Beast Speech}"
+			],
+			"trait": [
+				{
+					"name": "Crecimiento",
+					"entries": [
+						"Nula puede regular su altura entre los 20 cm y los 12 metros (huge). Por cada talla que aumente adquiere un +4 a fuerza y constitución (+20 HP) y +15 ft a sus movilidades; pero pierde -4 a destreza y -1 a la CA.",
+						"Cada talla, además, aumenta en 1 el número de dados de daño de cada ataque y el rango de sus ataques en 5 ft a melé a partir del mediano.",
+						"{@b Esta ficha tiene en cuenta que es medium.}"
+					]
+				}
+			],
+			"actionHeader": [
+				"Ataca 2 veces."
+			],
+			"bonus": [
+				{
+					"name": "Cambiar tamaño",
+					"entries": [
+						"Nula gana o pierde una talla."
+					]
+				},
+				{
+					"name": "Veloz",
+					"entries": [
+						"Puede dashear con la bonus"
+					]
+				}
+			],
+			"environment": [
+				"grassland",
+				"hill"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"skill": {
+				"acrobatics": "+4",
+				"intimidation": "+5",
+				"nature": "+6",
+				"perception": "+4",
+				"stealth": "+7",
+				"survival": "+7",
+				"animal handling": "+7"
+			},
+			"save": {
+				"dex": "+4",
+				"wis": "+4"
+			},
+			"senses": [
+				"darkvision 120 ft.",
+				"blindsight 10 ft."
+			],
+			"senseTags": [
+				"SD",
+				"B"
+			],
+			"action": [
+				{
+					"name": "Cambiar Tamaño",
+					"entries": [
+						"Nula gana o pierde 3 tamaños."
+					]
+				},
+				{
+					"name": "Picotazo",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 2d6 + 1}) piercing damage."
+					]
+				},
+				{
+					"name": "Garrazo",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d8 + 1}) slashing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Avatar Bestial de Nula (large)",
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d12 + 30",
+				"average": 95
+			},
+			"speed": {
+				"walk": 50,
+				"fly": 75
+			},
+			"str": 16,
+			"dex": 8,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 14,
+			"passive": 14,
+			"cr": "7",
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial",
+				"{@spell Speak with Animals|PHB|Beast Speech}"
+			],
+			"trait": [
+				{
+					"name": "Crecimiento",
+					"entries": [
+						"Nula puede regular su altura entre los 20 cm y los 12 metros (huge). Por cada talla que aumente adquiere un +4 a fuerza y constitución (+20 HP) y +15 ft a sus movilidades; pero pierde -4 a destreza y -1 a la CA.",
+						"Cada talla, además, aumenta en 1 el número de dados de daño de cada ataque y el rango de sus ataques en 5 ft a melé y en 30 ft a rango.",
+						"{@b Esta ficha tiene en cuenta que es large.}"
+					]
+				}
+			],
+			"actionHeader": [
+				"Ataca 2 veces."
+			],
+			"bonus": [
+				{
+					"name": "Cambiar tamaño",
+					"entries": [
+						"Nula gana o pierde una talla."
+					]
+				},
+				{
+					"name": "Veloz",
+					"entries": [
+						"Puede dashear con la bonus"
+					]
+				}
+			],
+			"environment": [
+				"grassland",
+				"hill"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"skill": {
+				"acrobatics": "+2",
+				"animal handling": "+7",
+				"intimidation": "+5",
+				"nature": "+6",
+				"perception": "+4",
+				"stealth": "+5",
+				"survival": "+7"
+			},
+			"save": {
+				"dex": "+2",
+				"wis": "+4"
+			},
+			"senses": [
+				"darkvision 120 ft.",
+				"blindsight 10 ft."
+			],
+			"senseTags": [
+				"SD",
+				"B"
+			],
+			"action": [
+				{
+					"name": "Picotazo",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 10 ft., one target. {@h}13 ({@damage 3d6 + 3}) piercing damage."
+					]
+				},
+				{
+					"name": "Garrazo",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 10 ft., one target. {@h}12 ({@damage 2d8 + 3}) slashing damage. Si la criatura era más pequeña que Nula, salva Fuerza CD 14 o está {@condition prone}."
+					]
+				},
+				{
+					"name": "Cambiar Tamaño",
+					"entries": [
+						"Nula gana o pierde 3 tamaños."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Avatar Bestial de Nula (huge)",
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d12 + 50",
+				"average": 115
+			},
+			"speed": {
+				"walk": 65,
+				"fly": 80
+			},
+			"str": 20,
+			"dex": 4,
+			"con": 20,
+			"int": 10,
+			"wis": 12,
+			"cha": 14,
+			"passive": 14,
+			"cr": "7",
+			"languages": [
+				"Olman",
+				"Primordial",
+				"Celestial",
+				"{@spell Speak with Animals|PHB|Beast Speech}"
+			],
+			"trait": [
+				{
+					"name": "Crecimiento",
+					"entries": [
+						"Nula puede regular su altura entre los 20 cm y los 12 metros (huge). Por cada talla que aumente adquiere un +4 a fuerza y constitución (+20 HP) y +15 ft a sus movilidades; pero pierde -4 a destreza y -1 a la CA.",
+						"Cada talla, además, aumenta en 1 el número de dados de daño de cada ataque y el rango de sus ataques en 5 ft a melé y en 30 ft a rango.",
+						"{@b Esta ficha tiene en cuenta que es huge.}"
+					]
+				}
+			],
+			"actionHeader": [
+				"Ataca 2 veces."
+			],
+			"bonus": [
+				{
+					"name": "Cambiar tamaño",
+					"entries": [
+						"Nula gana o pierde una talla."
+					]
+				},
+				{
+					"name": "Veloz",
+					"entries": [
+						"Puede dashear con la bonus"
+					]
+				}
+			],
+			"environment": [
+				"grassland",
+				"hill"
+			],
+			"languageTags": [
+				"OTH",
+				"P",
+				"CE"
+			],
+			"skill": {
+				"animal handling": "+7",
+				"intimidation": "+5",
+				"nature": "+6",
+				"perception": "+4",
+				"stealth": "+0",
+				"survival": "+7",
+				"athletics": "+11"
+			},
+			"save": {
+				"wis": "+4",
+				"str": "+8",
+				"con": "+8"
+			},
+			"senses": [
+				"darkvision 120 ft.",
+				"blindsight 10 ft."
+			],
+			"senseTags": [
+				"SD",
+				"B"
+			],
+			"action": [
+				{
+					"name": "Picotazo",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 10 ft., one target. {@h}13 ({@damage 4d6 + 5}) piercing damage."
+					]
+				},
+				{
+					"name": "Garrazo",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 10 ft., one target. {@h}12 ({@damage 3d8 + 5}) slashing damage. Si la criatura era más pequeña que Nula, salva Fuerza CD 16 o es empujado 20 ft y está {@condition prone}."
+					]
+				},
+				{
+					"name": "Rugido Intimidante (Recarga 4-6)",
+					"entries": [
+						"Toda criatura a 60 ft de Nula salva Wisdom CD 15 o están asustados de ella."
+					]
+				},
+				{
+					"name": "Cambiar Tamaño",
+					"entries": [
+						"Nula gana o pierde 3 tamaños."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Qotal, el Dios Emplumado",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"God"
+				]
+			},
+			"source": "GMAM",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 28,
+					"from": [
+						"unarmored defense",
+						"{@spell Talismán de Pluma|GMAM|Pluma Protectora}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "40d10 + 160",
+				"average": 380
+			},
+			"speed": {
+				"walk": 60,
+				"fly": 90,
+				"climb": 60
+			},
+			"str": 24,
+			"dex": 26,
+			"con": 18,
+			"int": 18,
+			"wis": 24,
+			"cha": 20,
+			"passive": 24,
+			"cr": "24",
+			"bonus": [
+				{
+					"name": "Movimiento Ágil",
+					"entries": [
+						"Puede dashear, desengancharse o esquivar."
+					]
+				},
+				{
+					"name": "Shapechange",
+					"entries": [
+						"Puede Mostrarse como un Avatar humanoide o enviar una copia de este statblock con su forma humanoide a donde él desee.",
+						"También puede mostrarse como cualquier otra criatura, de cualquier forma o tamaño. El statblock no cambia."
+					]
+				},
+				{
+					"name": "Magia rápida",
+					"entries": [
+						"Puede castear los siguientes conjuros con la bonus, incluso si no debería:",
+						"- {@spell impulso|GdR}",
+						"- {@spell call lightning}",
+						"- {@spell thunder step|XGE}",
+						"- {@spell dimension door}",
+						"- {@spell mirror echo|GPNM}",
+						"- {@spell Sincronía|GPNM|sincronia}",
+						"- {@spell far step|XGE}",
+						"- {@spell invisibility}"
+					]
+				}
+			],
+			"languages": [
+				"all"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"senses": [
+				"blindsight 20 ft.",
+				"truesight 60 ft."
+			],
+			"senseTags": [
+				"B",
+				"U"
+			],
+			"save": {
+				"dex": "+15",
+				"wis": "+14",
+				"cha": "+12",
+				"str": "+14",
+				"con": "+11",
+				"int": "+11"
+			},
+			"skill": {
+				"acrobatics": "+22",
+				"athletics": "+14",
+				"history": "+11",
+				"insight": "+14",
+				"nature": "+11",
+				"perception": "+14",
+				"persuasion": "+12"
+			},
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "mágico"
+				}
+			],
+			"immune": [
+				{
+					"immune": [
+						"poison",
+						"radiant"
+					]
+				},
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "no mágico"
+				}
+			],
+			"conditionImmune": [
+				{
+					"conditionImmune": [
+						"charmed",
+						"exhaustion",
+						"frightened",
+						"poisoned"
+					],
+					"note": "y enfermedades"
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+14 to hit, CD 22",
+						"5 dados al cantrip",
+						"Puede mantener concentraciones separadas para hasta 3 conjuros."
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell featherweaving|GMAM}",
+								"{@spell fire bolt}",
+								"{@spell gust|XGE}",
+								"{@spell impulso|GdR}",
+								"{@spell mage hand}",
+								"{@spell message}"
+							]
+						},
+						"3": {
+							"spells": [
+								"{@spell augury}",
+								"{@spell call lightning}",
+								"{@spell calm emotions}",
+								"{@spell counterspell}",
+								"{@spell daylight}",
+								"{@spell dispel magic}",
+								"{@spell dispersal|GdR}",
+								"{@spell Domo De Protección|GdR|domo de proteccion}",
+								"{@spell feather fall}",
+								"{@spell invisibility}",
+								"{@spell lesser restoration}",
+								"{@spell major image}",
+								"{@spell Migración|GPNM|migracion}",
+								"{@spell pass without trace}",
+								"{@spell plant growth}",
+								"{@spell remove curse}",
+								"{@spell sending (hishna)|GMAM}",
+								"{@spell spirit guardians}",
+								"{@spell thunder step|XGE}",
+								"{@spell wind wall}"
+							],
+							"slots": 0,
+							"lower": 1
+						},
+						"4": {
+							"spells": [
+								"{@spell dimension door}",
+								"{@spell divination}",
+								"{@spell mirror echo|GPNM}",
+								"{@spell paso elevado|GPNM}",
+								"{@spell Sincronía|GPNM|sincronia}",
+								"{@spell stone shape}"
+							],
+							"slots": 4
+						},
+						"5": {
+							"spells": [
+								"{@spell creation}",
+								"{@spell dream}",
+								"{@spell far step|XGE}",
+								"{@spell mislead}",
+								"{@spell passwall}",
+								"{@spell scrying}",
+								"{@spell steel wind strike|XGE}",
+								"{@spell transmute rock|XGE}",
+								"{@spell wall of light|XGE}"
+							],
+							"slots": 3
+						},
+						"6": {
+							"spells": [
+								"{@spell chain lightning}",
+								"{@spell move earth}",
+								"{@spell nube voladora|GPNM}",
+								"{@spell programmed illusion}",
+								"{@spell wind walk}"
+							],
+							"slots": 3
+						},
+						"7": {
+							"spells": [
+								"{@spell divine word}",
+								"{@spell fire storm}",
+								"{@spell mirage arcane}",
+								"{@spell teleport}"
+							],
+							"slots": 3
+						},
+						"8": {
+							"spells": [
+								"{@spell control weather}",
+								"{@spell earthquake}",
+								"{@spell illusory dragon|XGE}",
+								"{@spell tsunami}"
+							],
+							"slots": 2
+						},
+						"9": {
+							"spells": [
+								"{@spell rapto|GPNM}",
+								"{@spell trueno de los dioses|GdR}",
+								"{@spell wish}"
+							],
+							"slots": 2
+						}
+					},
+					"will": [
+						"{@spell breathsense|GMAM}",
+						"{@spell cambiar cauce|GMAM}",
+						"{@spell desconcierto|GMAM}",
+						"{@spell elevar mayor|GMAM}",
+						"{@spell elevar menor|GMAM}",
+						"{@spell florecer|GMAM}",
+						"{@spell Forma De áGuila|GMAM|forma de aguila}",
+						"{@spell invocar agua|GMAM}",
+						"{@spell major bird charm|GMAM}",
+						"{@spell minor bird charm|GMAM}",
+						"{@spell navegante del viento|GMAM}",
+						"{@spell Regulación Térmica|GMAM|regulacion termica}",
+						"{@spell suerte del pescador|GMAM}",
+						"{@spell Talismán De Pluma|GMAM|talisman de pluma}",
+						"{@spell vuelo de proyectil|GMAM}"
+					],
+					"constant": [
+						"{@spell detect magic}",
+						"{@spell investiture of wind|XGE}",
+						"{@spell mind blank}",
+						"{@spell tongues}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell astral projection}",
+							"{@spell plane shift}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"trait": [
+				{
+					"name": "Evasion",
+					"entries": [
+						"Salva destreza para la mitad o nada.",
+						"Reduce el daño por caída en 100 HP."
+					]
+				},
+				{
+					"name": "Resistencias Legendarias (3 /day)",
+					"entries": [
+						"Si falla una salvación, elige tener éxito."
+					]
+				},
+				{
+					"name": "Equipo de Pluma-Magic",
+					"entries": [
+						"Tiene equipados todos los objetos que probee el conjuro {@spell Talismán de Pluma|GMAM}. A continuación se apuntan los cambios en sus stats por si los pierde: ",
+						"- Su stat base de fuerza sin el brazalete es de 16 (+3).",
+						"- Sin la pluma protectora pierde su rasgo {@b Aura de Protección} y su +3 a la CA",
+						"- Pierde su rasgo de {@b Movimiento libre} si pierde los mocasines",
+						"- Sus kunai están bajo los efectos de Plumastone.",
+						"Además tiene un {@spell Talismán de Pluma|GMAM|Manto de Plumas} y un {@spell Talismán de Pluma|GMAM|Decantador de Cuero}"
+					]
+				},
+				{
+					"name": "Aura de protección",
+					"entries": [
+						"Él y sus aliados a10 ft suman 3 a la CA y a salvaciones contra efectos mágicos."
+					]
+				},
+				{
+					"name": "Movimiento libre",
+					"entries": [
+						"Tiene ventaja a sigilo y puede moverse sigilosamente sin perder movilidad. Además puede moverse por superficies líquidas como si fuera terreno sólido."
+					]
+				}
+			],
+			"actionHeader": [
+				"Ejerce la violencia 5 veces"
+			],
+			"action": [
+				{
+					"name": "Ataque desarmado / bo",
+					"entries": [
+						"{@atk mw} {@hit 15} to hit, reach 5 ft., one target. {@h}14 ({@damage 1d12 + 8}) bludgeoning damage. Puede elegir empujar al enemigo 15 ft y dejarlo {@condition prone} y dazed.",
+						"Puede elegir no hacer daño y {@condition stunned|PHB|aturdir}."
+					]
+				},
+				{
+					"name": "Kunai (tiene 5)",
+					"entries": [
+						"{@atk mw,rw} {@hit 17} to hit, reach 5 ft. or range 40/120 ft., one target. {@h}17 ({@damage 1d12 + 11}) piercing damage in melee or at range."
+					]
+				},
+				{
+					"name": "Palma Vibrante (4 /rest)",
+					"entries": [
+						"Al golpear a una criatura, elige no hacer daño y meter las vibraciones del golpe hasta lo más profundo de su ser.",
+						"En las próximas 24 horas puede usar su acción para hacer estallar estas vibraciones. El objetivo salva Constitución CD 22. Con un éxito, recibe {@dice 10d10} necróticos. Con un fallo muere instantáneamente."
+					]
+				},
+				{
+					"name": "Aliento de Plumas (3 /day)",
+					"entries": [
+						"Exhala un aliento de 120 ft. Todas las criaturas en el área recuperan 100 HP y están bajo los efectos de {@spell Calm Emotions}"
+					]
+				},
+				{
+					"name": "Second Wind (1 /rest)",
+					"entries": [
+						"Recupera 100 HP."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"reaction": [
+				{
+					"name": "Spellcasting Reactivo",
+					"entries": [
+						"Puede castear los siguientes conjuros con la reacción:",
+						"- {@spell counterspell}",
+						"- {@spell dispersal|GdR}",
+						"- {@spell Domo De Protección|GdR|domo de proteccion}",
+						"- {@spell feather fall}"
+					]
+				},
+				{
+					"name": "Desviar Misiles",
+					"entries": [
+						"Reduce el daño de un proyectil mágico o no mágico en {@dice 1d10 + 28}. Si reduce el daño a 0, devuelve el ataque con el mismo daño y rango, pero ahora usa la destreza de Qotal."
+					]
+				},
+				{
+					"name": "Redirigir caída",
+					"entries": [
+						"Si está cayendo mientras vuela, puede descontar tanta movilidad como quiera (hasta un máximo de 90) a esa caída. Si la caída se reduce a 0, aterriza con seguridad en el suelo. El siguiente turno habrá perdido una cantidad equivalente de movilidad."
+					]
+				}
+			],
+			"bonusHeader": [
+				"Solo tiene una bonus, pero cada vez que use algo que no sea su {@b Movimiento ágil}, puede usar esta bonus también. Si usó la bonus específicamente para esto, la usa dos veces."
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O",
+				"R",
+				"T",
+				"Y"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"strength",
+				"wisdom"
+			],
+			"hasFluff": true
+		}
+	]
+}

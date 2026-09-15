@@ -1,0 +1,858 @@
+{
+	"spell": [
+		{
+			"name": "Abrir Mente",
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Expandes la mente de una criatura voluntaria que esté inconsciente y que puedas ver. La criatura puede ser targeteada por el conjuro si te ha dado permiso expreso previamente y conoces su nombre. También puedes targetearte a ti mismo.",
+				"Mientras dure el conjuro, la criatura es plenamente consciente de su Burbuja Onírica mientras duerme y tiene el control de la misma (eso no significa que sepa tener el control).",
+				"Este conjuro le permite abrir una ventana para ver el espacio a 10 pies de su cuerpo con una vista frontal. El objetivo puede usar su acción para ofrecer un simple y leve gesto o acomodar su cuerpo, siempre y cuando pueda hacer el mismo en su burbuja. Este conjuro también ofrece una breve guía mágica para el objetivo, que le enseña cómo utilizar de forma básica e incompleta su propia burbuja o las bases más triviales del Plano Onírico. Esta guía puede tomar la forma que el objetivo desee y sigue subordinada a su burbuja y, por tanto, a la voluntad del objetivo. Si el objetivo decide no darle forma o no le importa hacerlo, será una versión etérea del caster.",
+				"El objetivo no puede despertarse por su propia voluntad y cualquier criatura a excepción del caster debe dañarle o pasar un minuto tratando de despertarle. Al hacerlo, el objetivo salva Wisdom sobre tu CD de conjuros, y solo despierta con un éxito. El caster puede despertarle en cualquier momento con su acción mientras dure el conjuro o romper la concentración como free action, dando ventaja a las salvaciones para despertarlo.",
+				"Aunque dure 8 horas, una criatura bajo los efectos de este conjuro no recibe los beneficios de un descanso largo, pero tampoco recibe Puntos de Agotamiento por no dormir. Si lo desea, en cambio, puede recuperar HP con dados de golpe."
+			],
+			"source": "CdS",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Inciensos y un botafumeiro de plata por valor de 50 GP"
+				}
+			},
+			"meta": {
+				"ritual": true
+			},
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"PS"
+			],
+			"subschools": [
+				"Oniromancia"
+			]
+		},
+		{
+			"name": "Buscador de Sueños",
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 6,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tocas a una criatura que esté voluntariamente dormida y estable y te adentras en su mente. Por la duración tu cuerpo está ciego, sordo y paralizado y no puedes ser consciente de lo que te rodea. Fallas automáticamente toda tirada de Percepción.",
+				"Tu mente y tus sentidos viajan al paraje onírico de la criatura, donde puedes ver y oír con todo lujo de detalle lo que esta está soñando. Apareces aquí con una apariencia traslúcida y puedes caminar por sus sueños como si estuvieses realmente ahí. Sin embargo, el objetivo no sabe que estás ahí ni puedes intervenir en el sueño.",
+				"Si el objetivo se despierta, el conjurador recibe {@dice 1d12} de daño psíquico, queda aturdido un minuto, pudiendo hacer una salvación de Wisdom sobre su propia CD al final de cada uno, y el conjuro acaba. Si el conjuro acaba antes de que la criatura despierte, esta lo hará en {@dice 2d4} minutos, alterada y sudando, creyendo que alguien le observaba."
+			],
+			"source": "CdS",
+			"subschools": [
+				"Oniromancia"
+			],
+			"components": {
+				"s": true,
+				"m": "Incienso de Tila"
+			},
+			"damageInflict": [
+				"psychic"
+			],
+			"spellAttack": [
+				"O"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"RO",
+				"PS"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Si lanzas este conjuro con un espacio de lv5 o superior no necesitas que el objetivo se haya dormido volunariamente. Servirá cualquier criatura inconsciente pero estable."
+					]
+				}
+			]
+		},
+		{
+			"name": "Anonimato",
+			"level": 3,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tratas de borrar tu presencia de la mente de una criatura. Una criatura en rango que puedas ver debe salvar Wisdom, con ventaja si estás luchando contra el objetivo. De fallar, el objetivo olvida todo lo relacionado mínimamente contigo durante los últimos 10 minutos, incluido este mismo conjuro. El objetivo podría olvidar que interactuaste con un objeto o que hablaste con él, pero no olvidará cómo otras criaturas interactuaron contigo. Sin embargo, creerá que tus interacciones en dicha conversación vinieron de su propia parte, creyendo que era él quien interactuaba con el tercero. El objetivo puede retener detalles que no estén directamente relacionados contigo pese a habérselo mostrado tu, como cuando le enseñas un gesto, un símbolo o haces un sonido muy específico.",
+				"Si conociste a la criatura hace menos de 10 minutos, olvida completamente tu existencia. Un conjuro de Quitar Maldición o Restauración Mayor devuelve los recuerdos perdidos."
+			],
+			"source": "CdS",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un reloj colgado de una cadena de oro, los cuales deben tener un coste de 15 GP"
+			},
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT",
+				"PRM"
+			],
+			"subschools": [
+				"Oniromancia"
+			]
+		},
+		{
+			"name": "Atar Consciencia",
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tocas a una criatura que está durmiendo y la obligas a seguir dormida por la duración del conjuro. Si la criatura dio su permiso expreso y conoces su nombre, falla automáticamente la tirada; si no, salva Inteligencia. Una criatura que reciba este conjuro desde el Plano Onírico salva con desventaja.",
+				"Mientras dure el conjuro, el objetivo no puede ser despertado desde el plano material ni desde el onírico, ni siquiera si recibe daño en cualquiera de estos planos. Si los HP del objetivo caen a 0 HP en el Plano Onírico, sigue consciente y en pleno uso de sus facultades mentales, pero recibe un punto de agotamiento y empieza a recibir el daño en el Plano Material. Si vuelve a caer a 0 su Paraje Onírico se desmorona y la Burbuja estalla, haciéndolo caer al Vacío Onírico.",
+				"El caster puede usar su acción para acabar el conjuro, despertando al instante y de forma segura al objetivo. Si el objetivo era el anfitrión del Paraje en el que se encontraba, el Paraje desaparece, enviando al resto de oniromantes a sus respectivas Burbujas Oníricas. Si el objetivo era un oniromante en paraje ajeno, el conjuro o efecto que lo mantuviera en el Plano Onirico acaba."
+			],
+			"source": "CdS",
+			"subschools": [
+				"Oniromancia"
+			],
+			"components": {
+				"s": true,
+				"m": "Una almohada rellena de plumas de pavo real"
+			},
+			"damageInflict": [
+				"psychic"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SCL",
+				"PS"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Dura 1 hora extra por cada lv de más."
+					]
+				}
+			]
+		},
+		{
+			"name": "Bloqueo Onírico",
+			"level": 4,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tocas a una criatura voluntaria que puedas ver, puedes ser tú mismo, y la proteges contra cualquier tipo de mal que pueda afectarle mientras duerma. Mientras dure el conjuro, solo el caster de este conjuro puede acceder al Paraje Onírico del objetivo, a menos que otro posible intruso haya utilizado un conjuro más poderoso.",
+				"Este conjuro también evita modificaciones oníricas que fueran a causar pesadillas, bloquea la entrada de beholders, quori y atrapasueños y otorga resistencia al daño psíquico al objetivo."
+			],
+			"source": "CdS",
+			"subschools": [
+				"Oniromancia"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un atrapasueños con plumas de grifo"
+			},
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Puede upcastear para aplicar normas de antimagia."
+					]
+				}
+			]
+		},
+		{
+			"name": "Caminante de Sueños",
+			"level": 4,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Mezclas tu cuerpo con los planos etéreo y onírico. Al inicio del conjuro, quedas profundamente dormido y tu consciencia sale de tu cuerpo como si de un fantasma se tratara. Mientras dure el conjuro, puedes tocar a una criatura voluntariamente dormida y estable y acceder a sus sueños. Puedes ser partícipe de los sueños de la criatura, pero estás subordinada a su Paraje Onírico como si fueses un producto de su imaginación. Sin embargo, puedes dejarlo cuando quieras.",
+				"Al salir de un Paraje Onírico, la criatura debe hacer una salvación de inteligencia contra tu CD (o una tirada enfrentada, a tu elección). Si falla, se mostrará molesta por la invasión, pero no se despertará ni se dará cuenta de que has accedido a su mente. Si tiene éxito despierta, recordándote como un sueño invasivo.",
+				"El conjuro acaba antes si un objetivo se despierta contigo dentro o si te han despertado. Al hacerlo, tu conciencia volverá al instante a tu cuerpo y recibirás {@dice 3d12} de daño psíquico y un punto de agotamiento."
+			],
+			"source": "CdS",
+			"subschools": [
+				"Oniromancia"
+			],
+			"components": {
+				"s": true,
+				"m": "Un peluche con motivos estrellados"
+			},
+			"damageInflict": [
+				"psychic"
+			],
+			"spellAttack": [
+				"O"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"abilityCheck": [
+				"intelligence"
+			],
+			"areaTags": [
+				"ST",
+				"MT"
+			],
+			"miscTags": [
+				"PRM",
+				"TP",
+				"FMV",
+				"RO",
+				"PS"
+			]
+		},
+		{
+			"name": "Pesadilla",
+			"level": 4,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				},
+				{
+					"type": "special"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tocas la cabeza de una criatura inconsciente y estable y ves una imagen nítida en tu mente. Como acción puedes añadir una modificación a su sueño, de forma que este varíe y se deforme. La criatura recibe {@dice 3d12} psíquicos y hace una salvación de Inteligencia. Si falla, no podrá ser despertada por medios no mágicos, pero podrá repetir la salvación de inteligencia cada vez que reciba daño. Puedes usar tu acción cada turno durante la duración para agregar otro elemento destructor. La criatura recibe otros {@dice 3d12} y repite la salvación de Inteligencia al final de su siguiente turno con desventaja. Si la supera, se despierta y el conjuro acaba."
+			],
+			"source": "CdS",
+			"subschools": [
+				"Oniromancia"
+			],
+			"components": {
+				"s": true,
+				"m": "Una cáscara de erizo de mar y un atrapasueños hecho con tela de araña y huesos"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Agrega un minuto a la duración por cada lv extra."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"spellAttack": [
+				"O"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SCL",
+				"RO"
+			]
+		},
+		{
+			"name": "Robar Pensamientos",
+			"level": 4,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Tocas a una criatura cuya inteligencia sea superior a 5 y fuerzas su mente hasta que logras entrar. Haz un melé spell attack. Con un fallo el conjuro acaba. Si le golpeas, recibe {@dice 4d10} psíquico y automáticamente conoces el nombre real de la criatura, su mayor motivación actualmente y los pensamientos más superficiales que ocupen su mente.",
+				"Si la criatura sobrevivió al ataque, puedes hacerle salvar Wisdom. Con un fallo, puedes ahondar, buscando todo lo que la criatura sepa sobre una criatura, objeto, evento o localización de manera específica. Después el conjuro acaba."
+			],
+			"source": "CdS",
+			"subschools": [
+				"Oniromancia"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un Pergamino Vacío"
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Por cada lv extra añade {@dice 1d10} al daño, y por cada dos puede ahondar en los conocimientos de una memoria más."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"PRM",
+				"SCL",
+				"RO"
+			]
+		},
+		{
+			"name": "Fusionar Parajes Oníricos",
+			"level": 6,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 20
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Elije hasta 6 criaturas voluntarias que puedas ver, que te hayan dado permiso expreso y cuyo nombre conozcas en el área. Mientras dure el conjuro tú y todas las criaturas afectadas fusionáis vuestras Burbujas Oníricas, contando como anfitriones en dicha burbuja. Además, todos ganan consciencia de su Paraje mientras duerman. Los HP requeridos para expulsar a los objetivos de vuestra burbuja pasan a compartirse también, siendo la suma de todos.",
+				"Desde otras burbujas, la Burbuja Onírica comunitaria está centrada en la posición del caster, y crece 10 pies de radio por cada criatura que haya sido añadida. Retiene la apariencia de la burbuja del caster, pero tiene reflejos y ondas de los colores del resto de anfitriones.",
+				"Si este conjuro es lanzado todos los días durante un año entero, las burbujas se fusionan permanentemente."
+			],
+			"source": "CdS",
+			"subschools": [
+				"Oniromancia"
+			],
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Esporas de Mycónido y un Cráneo de Ilícido"
+			},
+			"areaTags": [
+				"MT"
+			],
+			"miscTags": [
+				"SGT",
+				"PRM",
+				"PS"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Este conjuro permite targetear dos criaturas extra por lv de conjuro, hasta un máximo de 12 a lv9."
+					]
+				}
+			]
+		},
+		{
+			"name": "Paraje Onírico",
+			"level": 6,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "unlimited"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "day",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Te duermes automáticamente para enviar a una criatura en tu mismo plano de existencia a tu burbuja onírica dentro del Plano de los Sueños. La criatura debe hacer una salvación de Sabiduría o quedar profundamente dormida. Si utilizas una posesión del objetivo como parte de los componentes del conjuro o si la criatura ya está dormida, falla la salvación automáticamente.",
+				"En este plano os encontráis tú y el objetivo. Se aplican las normas del Plano de los Sueños descritos en su respectivo documento, pero tus pensamientos se superponen a los de la criatura. El conjuro acaba si despiertas (voluntariamente o no), si el objetivo recibe daño dondequiera que esté o si lanzan {@spell Dispel Magic} en uno de los dos al nivel necesario.",
+				"Si los HP de uno de los dos se reducen a 0 dentro del Plano de los Sueños, despierta y el conjuro acaba. Si una criatura implicada rompe el conjuro de forma involuntaria, recibe {@dice 8d12} de daño psíquico. Si este daño fuese a reducir a una criatura a 0 pero no dobla sus HP máximos, la criatura sangrará por todos sus orificios y despertará pasada una hora con 1 HP y un punto de agotamiento.",
+				"Mientras permanezcan dormidos, ni el usuario ni el objetivo podrán beneficiarse de descansos cortos o largos ni necesitarán comer o beber. Sin embargo, sí pierden 1pt de agotamiento por cada 24 horas dormidos, si es posible."
+			],
+			"source": "CdS",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "Un atrapasueños con joyas engarzadas valorado en 3000 GP y una posesión del objetivo [opcional]"
+			},
+			"subschools": [
+				"Oniromancia"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"A lv7 la duración aumenta a 48 horas, a lv8 a una semana y a lv9 a un mes."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"spellAttack": [
+				"O"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"HL",
+				"SCL",
+				"SMN",
+				"TP",
+				"FMV",
+				"RO",
+				"PS"
+			]
+		},
+		{
+			"name": "Proyección Onírica",
+			"level": 9,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 20
+				}
+			},
+			"duration": [
+				{
+					"type": "special"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Hasta diez criaturas que puedas ver dentro del radio, incluyéndote, quedáis dormidas bajo el aroma de los inciensos mientras vuestras consciencias viajan a tu paraje onírico. Mientras dure, los cuerpos permanecen incapacitados e inconscientes en el suelo.",
+				"Una vez en tu paraje onírico, solo tú puedes guiar a estas criaturas por el Plano de los Sueños, abriendo puertas y túneles entre parajes. Todos, tú incluido, están sujetos a las leyes del mundo onírico. Cada vez que pretendas adentrarte en un paraje onírico que no sea el tuyo o el de alguna criatura que te haya invitado, deberás hacer una salvación de Wisdom CD 16 o recibir {@dice 4d12} de daño psíquicos que no podrán reducirse de ninguna forma. Cualquier criatura que vaya contigo puede abrir una puerta a su paraje onírico esté donde esté usando su acción, y volverla a cerrar de la misma forma.",
+				"Cuando entres a un Paraje Onírico activo, pasarás a formar parte de él hasta que salgas, con todo lo que ello conlleva. Cada vez que afectes negativamente los sueños del huésped, este recibirá {@dice 3d12} de daño psíquico y deberá hacer una salvación de wisdom contra tu CD. De fallar, despertará y seréis expulsados del paraje. Deberás hacer una salvación de wisdom sobre tu propia CD. Con un éxito, volvéis a tu paraje onírico. Con un fracaso, tú y todos los objetivos os despertáis de vuelta en vuestros cuerpos recibiendo {@dice 8d12} de daño psíquico.",
+				"Por otro lado, si la criatura muere mientras estáis en sus sueños, el mundo colapsará con vosotros dentro. Abrir un portal a otro paraje costará una tirada de wisdom (base) CD 16, o CD 22 si no estás invitado. El caster del conjuro se considera competente en esta tirada y puede arrastrar con él al resto de criaturas. Si en 1 minuto no habéis salido de allí, cada participante deberá hacer una salvación de inteligencia CD 16 al final de cada uno de sus turnos. Con un fracaso recibe {@dice 8d12} mientras se hunde en el vacío onírico. Con un éxito, vuelve de vuelta a su cuerpo y recibe {@dice 3d12}. Si sus HP se reducen a 0, su consciencia se pierde para siempre en el vacío onírico. Solo podrá ser revivido con un conjuro de Wish.",
+				"Puedes tratar de encontrar el paraje onírico de una criatura en concreto con una prueba de inteligencia cuya CD es 10+modificadores siempre y cuando esté a diez millas o menos de donde realizaste el conjuro:",
+				"- Si no la conoces +10",
+				"- Si has oído hablar de ella +7",
+				"- Si has tratado con esa criatura +5",
+				"- Si conoces a la criatura +3",
+				"- Si sabes exactamente dónde está -2",
+				"- Si no sabes dónde está +5",
+				"- Si sabes aproximadamente dónde está +1",
+				"- Si está despierta +7",
+				"- Si está dormida +0",
+				"Puedes agregar más de un bonificador a la tirada.",
+				"El caster puede despertar a las criaturas que llevó consigo tocándolas y utilizando su acción. Estas no pueden despertar por sí mismas. Una criatura en el plano material puede tratar de despertar a las criaturas, pero solo lo conseguirá por medios antimágicos o dañando a las criaturas objetivo. Al recibir cualquier cantidad de daño, salvan Constitución como si se estuvieran concentrando. Con un fallo, despiertan, recibendo {@dice 3d12} psíquicos."
+			],
+			"source": "CdS",
+			"subschools": [
+				"Oniromancia"
+			],
+			"components": {
+				"s": true,
+				"m": "Inciensos por valor de 1000 GP que consumen el conjuro"
+			},
+			"damageInflict": [
+				"psychic"
+			],
+			"spellAttack": [
+				"O"
+			],
+			"savingThrow": [
+				"intelligence",
+				"wisdom"
+			],
+			"areaTags": [
+				"MT",
+				"R"
+			],
+			"miscTags": [
+				"SGT",
+				"PRM",
+				"FMV",
+				"RO",
+				"LGT",
+				"PS"
+			],
+			"abilityCheck": [
+				"intelligence",
+				"wisdom"
+			]
+		}
+	]
+}
