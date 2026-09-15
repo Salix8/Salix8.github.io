@@ -703,7 +703,7 @@
 				{
 					"name": "Golpe letal (1 /rest)",
 					"entries": [
-						"Una vez ha acertado un golpe, puede convertir el impacto en un crítico y meter sangrado de {@dice d8} ({@dice d6} a una mano). La CD de curación es de 15."
+						"Una vez ha acertado un golpe, puede convertir el impacto en un crítico y meter {@condition Sangrado|Himo|sangrado} de {@dice d8} ({@dice d6} a una mano). La CD de curación es de 15."
 					]
 				}
 			],

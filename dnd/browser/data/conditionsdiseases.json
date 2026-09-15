@@ -269,6 +269,36 @@
 			"source": "PHB",
 			"page": 292,
 			"srd": true
+		},
+		{
+			"name": "Dazed",
+			"entries": [
+				{
+					"type": "list",
+					"items": [
+						"El objetivo pierde reacciones hasta que acabe el efecto y su movilidad se reduce a la mitad."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Sangrado",
+			"entries": [
+				{
+					"type": "list",
+					"items": [
+						"Un daño necrótico, perforante o cortante puede provocar sangrado por diversos motivos a juicio del DM, como golpes críticos, dotes como piercer o slasher, o conjuros como {@spell Hemorragia|GdR}.",
+						"Una criatura sujeta a sangrado recibe un daño necrótico fijo al inicio de cada turno, pudiendo salvar al final. Este daño no puede ser reducido y nunca afecta a los HPT. Además, reduce los HP máximos del sujeto mientras dure el sangrado.",
+						"La salvación siempre es de Constitución, y la CD puede ser o 8+Modificador de ataque de la criatura que lo provocó; o la CD del rasgo que lo provocó.",
+						"Si la fuente de sangrado no especifica daño, este será igual a un dado de daño utilizado en el ataque de alguno de los daños mencionados (si hay más de uno, siempre el más pequeño). Si el efecto solo metía sangrado pero no hacía daño, este será de {@dice 1d4}.",
+						"El sangrado se cura con Medicina con la CD del sangrado o curando mágicamente al objetivo hasta llegar al máximo actual."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
 		}
 	],
 	"disease": [
@@ -362,6 +392,1908 @@
 			],
 			"source": "GoS",
 			"page": 234
+		},
+		{
+			"name": "Aeromonosis",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Enrojecimiento alrededor de la herida, dolor creciente, fiebre, inflamación, secreción de pus. En casos graves aparecen ampollas, necrosis de tejidos y {@disease Gangrena|Himo|gangrena}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Heridas expuestas a agua contaminada o mordeduras de animales (especialmente serpientes acuáticas o venenosas que porten la bacteria). También por ingerir agua contaminada."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"La enfermedad aparece tras 1d4 días desde el contagio.",
+								"Mientras la herida permanezca infectada, el objetivo tiene desventaja en las pruebas de Constitución para resistir agotamiento.",
+								"Al amanecer de cada día realiza una salvación de Constitución CD 13.",
+								"Éxito: la enfermedad no empeora.",
+								"Fracaso: recibe 1 ptA y la infección progresa.",
+								"Fracaso por 7 o más: Provoca {@disease Apendicitis|Himo|Apendicitis}.",
+								"Tras 3 fracasos acumulados, la infección alcanza tejidos profundos y aparece {@disease Gangrena|Himo|gangrena} en el miembro afectado (si procede). Si no hay un miembro identificable, la criatura adquiere septicemia y realiza las salvaciones diarias con CD 16."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Con tratamiento adecuado desaparece tras 2d6+4 días. Sin tratamiento remite por sí sola únicamente si consigue 3 salvaciones consecutivas de Constitución CD 13 antes de desarrollar {@disease Gangrena|Himo|gangrena}. Un conjuro que elimine enfermedades acaba inmediatamente con la infección."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Limpiar la herida durante el primer día concede ventaja a las salvaciones. Las hierbas antisépticas también otorgan ventaja. Extirpar tejido muerto requiere Medicina CD 15; un éxito reduce la CD de las salvaciones en 2 hasta el final de la enfermedad."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Si la herida permanece cerrada con tejido necrótico o sucio durante varios días, el DM puede aumentar la CD en 2 o acelerar la aparición de la {@disease Gangrena|Himo|gangrena}."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Anemia",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Sensación de cansancio, piel pálida, debilidad, dificultad para respirar, posibles desmayos"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Tras la pérdida de una cantidad significativa de sangre o falta de alguna vitamina."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"1 PtA permanente",
+								"Desventaja a salvaciones y checks de Fuerza, Destreza y Constitución. De fallar por 7 o más, recibe 1 PtA que desaparece con un descanso corto (1 por descanso)."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Acabar con la fuente de la anemia suele acabar con esta también. La ingesta prolongada de alimentos ricos en hierro puede acabar con la anemia incluso si no se acabó con la fuente. Un conjuro de curación que cure al menos 20 HP (puede ser más de uno) acaba con la anemia durante 24 horas. Si curó 150 HP en menos de 1 hora, acaba con la anemia."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Acabar con lo que provocó esta enfermedad (hemorragia u otra enfermedad). También puede intentarse fomentar la producción de glóbulos rojos mediante glucosa"
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Apendicitis",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Dolor alrededor del ombligo que, tras varias horas, se desplaza al lado inferior derecho del abdomen. Fiebre, náuseas, vómitos, pérdida del apetito y dificultad para caminar erguido."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"No es contagiosa. Se produce por la obstrucción e inflamación del apéndice."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Primeras 12 horas: desventaja en las pruebas de Atletismo y Acrobacias que impliquen esfuerzo abdominal.",
+								"12-24 horas: velocidad reducida en 3 m (10 pies). Tras cada combate debe superar una salvación de Constitución CD 12 o gana 1 ptA.",
+								"24-48 horas: desventaja en las tiradas de ataque cuerpo a cuerpo y en las pruebas de Fuerza. Al inicio de cada combate salva Constitución CD 13 o queda Envenenado durante 1 minuto debido al dolor.",
+								"48-72 horas: al amanecer de cada día realiza una salvación de Constitución CD 15.",
+								"Éxito: el apéndice aún no se rompe.",
+								"Fracaso: el apéndice se perfora y comienza una peritonitis.",
+								"Tras la perforación: al amanecer realiza una salvación de Constitución CD 16.",
+								"Éxito: recibe 1 ptA.",
+								"Fracaso: recibe 2 ptA.",
+								"Cuando alcance 4 ptA por esta enfermedad, además queda Envenenado permanentemente hasta ser tratado.",
+								"Si alcanza 6 ptA debido a la enfermedad, muere por septicemia."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Solo mediante cirugía o magia que elimine enfermedades o regenere el órgano dañado (a criterio del DM). Un conjuro de Restauración Mayor elimina la infección, pero no reconstruye un apéndice perforado si este ya se ha necrosado; una curación mágica potente o Regeneración puede hacerlo instantáneamente."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Reposo absoluto concede ventaja a las salvaciones anteriores a la perforación.",
+								"Los analgésicos reducen el dolor (ignoran las penalizaciones a las pruebas), pero no retrasan la enfermedad.",
+								"Apendicectomía (cirugía):",
+								"Medicina CD 15 con instrumental quirúrgico y un ayudante competente.",
+								"CD 18 si solo se dispone de herramientas improvisadas.",
+								"CD 22/25 si el apéndice ya se ha perforado.",
+								"Éxito: El objetivo recibe 1d6 penalizadores de -1 a todos los checks, eliminando uno con cada descanso largo o con Restauración Mayor. Cuando se queda sin, la enfermedad remite.",
+								"Fracaso por 1-4: la cirugía falla y puede volver a intentarse tras 8 horas.",
+								"Fracaso por 5 o más: provoca una peritonitis inmediata (si aún no existía) y el paciente recibe 2 ptA."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Una criatura puede combatir incluso tras la perforación, pero cada combate cuenta como un esfuerzo intenso. Al finalizar cualquier combate de al menos 3 asaltos debe realizar inmediatamente una salvación de Constitución CD 15; si falla recibe 1 ptA adicional por el agravamiento de la peritonitis."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Ataque de Ansiedad",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Pérdida de nervios, incapacidad para razonar, pulso acelerado, llanto, hiperventilación, habla entrecortada..."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Por fallar estrepitosamente varias tiradas de miedo o tras un acto traumático de gran embergadura"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Recibe 1d12 de daño psíquico al inicio de la enferemedad",
+								"Desventaja en checks de Inteligencia y Wisdom (de fallar se considera pifia, salga lo que salga en el dado)",
+								"Desventaja en salvaciones de Wisdom e Inteligencia",
+								"Hay un 20% de posibilidades de que le entre la paranoia",
+								"Tiene el efecto de Enemies Abound"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Cada diez minutos puede repetir una última salvación de Wisdom cuya CD es igual a la última salvación de miedo que realizó. Con un éxito se calma. Con un error recibe 1d12 de daño psíquico."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Si alguien intenta calmarle o está en un lugar tranquilo o que fomenta su relajación, puede obtener ventaja en las salvaciones. Por contra, exponerse a la fuente de miedo o estar bajo una gran cantidad de estrés puede dar desventaja."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Un conjuro de Calmar Emociones acaba con la enfermedad."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Caosfágia",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Transformación lenta pero constante en slaad."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Por el mordisco de un slaad rojo o los miasmas del azul."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Te transformas en slaad:",
+								"1d6+1 días después de la infección, tu piel se endurece y adquiere un tono...",
+								"60% rojo",
+								"40% azul",
+								"Si caster con lv de conjuro 3 o superior verde",
+								"1d4 días después, sus ojos se vuelven reptilianos del color de la piel",
+								"Durante los siguientes 4d4 días su piel va adquiriendo el tono de forma más viva.",
+								"En el primer d4 sus dados de golpe cambian a d10",
+								"En el segundo d4 ganas resistencia al frío y al fuego",
+								"En el tercer d4 ganas el resto de resistencias",
+								"En el último d4 ganas la regeneración",
+								"En los próximos 2d6 días se formarán las garras y otras rugosidades (dolor insoportable y velocidad a la mitad).",
+								"En los siguientes 1d8 días gana la resistencia mágica y su alineamiento cambia a caótico si no lo era ya",
+								"En los siguientes 2d10 su cuerpo presenta dolorosas malformaciones que rompen huesos y desgarra músculos hasta adquirir la forma de un slaad.",
+								"En los siguientes 2d4 días su cráneo pasa a ser el de un slaad y está completamente formado. Su alineamiento cambia a Caótico Neutral si no lo era ya."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Remove curse, Greater Restoration, Wish o Intervención Divina."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"No hay"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Se incuba 1 día antes de empezar a obtener efectos. A partir de ese día cada cambio será permanente, aunque se elimine la enfermedad, y solo un conjuro de Wish podrá curarla."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Depresión",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Pesadumbre, desgana, ansiedad, llantos esporádicos, negatividad, pasividad ante estímulos, debilidad psicológica, insomnio..."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Sufrir demasiado o estar expuesto a demasiado estrés"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"1 pt de Agotamiento",
+								"de recibir más de otra fuente, se sobreescriben a este",
+								"desventaja a salvaciones de Wisdom",
+								"Las de miedo reciben ventaja.",
+								"Al inicio de cada combate hace una tirada de Wisdom base CD 10. Si supera la tirada, pierde los dos puntos de agotamiento hasta el final del combate.",
+								"Cuando esto ocurra, salvación de Wisdom CD 10 antes de recuperar los ptA, de salvar, no los recupera hasta el día siguiente.",
+								"Tampoco podrá ser curado hasta entonces",
+								"Propenso a recaer.",
+								"Si se da una ocasión para ello, salva Wisdom CD 14. De fallar recae y recupera los ptA",
+								"Si se ve sorprendido, la sorpresa durará un turno más.",
+								"Desventaja frente a stun"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"En cuanto se neutralice su fuente de estrés, quedará a disposición del jugador eliminar el efecto como y cuando quiera. Si solo se minimiza, debe salvar Wisdom CD 15 y corre el riesgo de recaer cuando el factor crezca de nuevo o resurja."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Dialogo sano, atención terapeutica, redimir acciones..."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"natillas"
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Escorbuto",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Debilidad, cansancio, cambios en el cabello, dolor en brazos y piernas, enfermedad de las encías, sangrado fácil."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"por la falta de vitamina C tras pasar mucho tiempo sin la ingesta de frutas y verduras frescas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"se puede tardar meses en desarrollar la enfermedad, pero una vez se salve, se contrae de inmediato.",
+								"Desventaja en salvaciones y checks de constitución",
+								"Al final de un descanso corto se recibe 2 HP de daño por cada Dado de golpe gastado",
+								"Al recibir daño cortante o perforante se recibe {@condition Sangrado|Himo|sangrado} de 1 HP CD 7. Es acumulativo",
+								"Cada vez que se ingieran alimentos que requieran masticar, recibe 1 HP de daño.",
+								"Una vez al día el paciente tira 1d100. Si saca un 1, muere instantáneamente."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"con la ingesta de vitamina c mediante cítricos los síntomas desaparecen entre 24 y 72 horas.",
+								"Dolores en 2 horas",
+								"Hemorragias en 24",
+								"Encías entre 48 y 72 horas",
+								"{@disease Anemia|Himo|Anemia} 2-4 meses"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"limpiar heridas y demás"
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Fiebre de las Alcantarillas",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Fuertes e insoportables dolores de barriga y fiebres altas que, prácticamente, impiden el movimiento y provocan temblores y alucinaciones."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Virus que puede ser contraído al ingerir o aspirar sustancias contaminadas por las alcantarillas de Waterdeep."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"(aparecen en 1d12 horas)",
+								"Movilidad reducida a 1 pie",
+								"Cuatro puntos de agotamiento (solo pueden quitarse con tratamiento o restauración menor)."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Al final de cada día o al recibir el conjuro Restauración Menor, puede hacer una salvación de Constitución CD 12."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Puede guardar reposo y evitar los sofocos. Puede correr riesgo de deshidratación. Si no se sigue el tratamiento, las salvaciones se hacen con desventaja."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"No suele ser mortal, pero no respetar el tratamiento puede suponer otro punto de cansancio."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Fiebre de Infección",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Ojeras, sudores, temblores y una herida infectada."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Pasar mucho tiempo (a partir de 8 horas se hace una salvación de Constitución CD 13 cada hora) con una herida mal tratada."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						"Tiene desventaja en tiradas y salvaciones de fuerza, destreza y constitución y no puede beneficiarse de descansos largos, aunque la falta de estos no le aporta agotamiento si ha mantenido reposo total al menos 12 horas y no ha hecho grandes esfuerzos las otras doce."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Con Medicina CD 15 puede limpiarse la herida. Debe limpiarse la herida cada 6 horas y mantener reposo. Pasadas las primeras 18 horas, el paciente puede repetir la salvación de Constitución cada hora. Con un éxito, recibe dos puntos de agotamiento y la enfermedad acaba."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Debe limpiarse la herida cada 15 horas, aunque un conjuro que elimine una enfermedad puede eliminar esta al instante."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Dependiendo de la gravedad el paciente podría ver su movilidad reducida a la mitad y recibir un punto de agotamiento directo."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Fiebre Ghoul",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Fiebre y devilitamiento. Caída de pelo en fases avanzadas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Mordisco de Ghoul"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						"1 día de incubación. Al final de un descanso corto la criatura salva de nuevo. Con un éxito, \"recupera una fase\", y con un fallo la pierte. Por cada fase perdida pierde 1 pt a dex y otro a consti. Cuando uno de los dos stats cao a 0, la criatura muere y se convierte en el mismo tipo de ghoul que le infectó."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Lesser Restoration a lv6 o heal pueden curar esta enfermedad. Mantener los stats base durante 3 días seguidos cura la enfermedad por medio mundanos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Greater Restoration puede alargar la vida del paciente, ya que elimina una de las reducciones de stat."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"La CD de esta enfermedad varía según el ghoul."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Fiebres Invernales",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Fiebre, temblores, mucosidad, falta de aire, tos..."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Exponerse al frío durante mucho tiempo"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						"Desventaja en tiradas y salvaciones de fuerza, destreza y constitución. 1 pt de agotamiento que no se puede perder hasta curarse."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Al final de cada día, salva constitución CD 13"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Sonarse en abundancia, junto con hierbas medicinales ayuda a remitir los efectos y da ventaja en la tirada para su recuperación."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Si es muy grave, el paciente no puede beneficiarse de descansos largos. Cada 12 horas debe salvar Constitución CD 10 o ganar un pt de agotamiento."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Fiebre del Oro",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Obsesión por la adquisición de más tesoros de la misma naturaleza que el que provocó la enfermedad. Ve a cualquier persona que trate de quitárselo como un enemigo en el que bajo ningún concepto se puede confiar."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Es una enfermedad mágica que puede darse de forma natural en enanos, dragones y otras razas propensas a la acumulación de tesoros tras una exposición prolongada a tesoros especialmente relevantes."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Falla automáticamente Insight en tiradas que envuelvan tesoros.",
+								"Esta charmed como en Incite Greed, pero además sentirá la necesidad de quedarselo.",
+								"Es hostil hacia cualquier criatura que intente quitarle o pedirle el tesoro.",
+								"Si no lleva su tesoro encima o está a 60 ft de él, tiene desventaja en tiradas de percepción y salvaciones de Inteligencia y Carisma"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Si el tratamiento funcionó, ya no tiene la enfermedad. También puede curarse con restaurar mente upcasteado."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Puede tratarse como si fuera un vicio, pero es un proceso peligroso para quienes tratan de ayudar al paciente, ya que serán atacados por este. Cada día que se le prive de ver su tesoro, recibe 3d10 psíquico no letal y entra en un rampage hostil y reckless."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Fractura",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Dolor intenso, inflamación y pérdida parcial o total de la funcionalidad del hueso afectado."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Se produce por traumatismos intensos, aplastamientos o caídas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"El miembro afectado queda inutilizado para cualquier acción que requiera un esfuerzo considerable.",
+								"Cada vez que la criatura utilice voluntariamente el miembro fracturado debe superar una salvación de Constitución CD 13 o recibir la condición Envenenado hasta el final de su siguiente turno por el dolor.",
+								"Si una fractura de una pierna soporta peso durante un combate completo, realiza una salvación de Constitución CD 15. Si falla, el tiempo de recuperación aumenta en 1d4 días."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Requiere inmovilización durante 2d4 semanas (huesos pequeños) o 1d6+2 semanas (huesos largos). Regeneración o magia equivalente la cura instantáneamente."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Colocar correctamente el hueso requiere Medicina CD 14. Un éxito reduce el tiempo de recuperación a la mitad. Un fracaso por 5 o más aumenta el tiempo de recuperación en 1d6 días."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Una fractura abierta puede derivar en una infección o {@disease Gangrena|Himo|gangrena} si no se limpia correctamente."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Gangrena",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Necrosis en alguna extremidad u órgano interno."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Por heridas mal curadas o cicatrizadas o tras un proceso de infección prolongada. También puede ocurrir como resultado de temperaturas extremadamente bajas o algunas enfermedades como la {@disease Malaria|Himo|malaria}. Los primeros síntomas aparecen tras 1d6+1 minutos de haberla contraído."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Inutilización total de la zona gangrenada, cuyos efectos mecánicos difieren según dónde se dé el caso.",
+								"Brazo/mano:",
+								"La criatura pierde la capacidad de usar interacciones físicas o bonus actions. Si hace una de las dos, pierde la posibilidad de hacer la otra.",
+								"Desventaja en salvaciones de Fuerza y tiradas de Juego de Manos",
+								"Pie:",
+								"movilidad reducida a la mitad.",
+								"Desventaja en salvaciones de Destreza y tiradas de acrobacias",
+								"Pierna: movilidad reducida a un tercio.",
+								"Desventaja en salvaciones de Destreza y tiradas de acrobacias y sigilo",
+								"Ala/aleta: pierde la movilidad para la que se requiere la extremidad",
+								"Órgano interno",
+								"-2 a Constitución y desventaja a salvaciones de constitución",
+								"1 ptA permanente. Cada 4 horas hace una salvación de Constitución o recibe otro ptA."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Incurable. La zona afectada solo puede recuperarse mediante amputación y regeneración."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Puede frenarse con tres tiradas exitosas de Medicina CD 19 que envuelvan limpiezas de sangre, como el uso de sanguijuelas, larvas de mosca u otros parásitos, creación de úlceras controladas o apertura de hemorragias. Solo puede repetir la tirada una vez cada hora. Un conjuro de Restauración Menor limpia la sangre durante 6 horas, deteniendo el avance por la duración, pero no acabando con la enfermedad. Restauración Mayor acaba con la dolencia."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Si el afectado no frena la gangrena antes de 2 horas, sufrirá un ptA. Tras esto, recibirá otro cada hora hasta su muerte."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Golpe de Calor",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"sed, sudor, agotamiento, mareos, confusión, calor, dolor de cabeza y nauseas"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Tras pasar mucho tiempo bajo mecánicas de calor extremo. Si la tirada de calor extremo falló por 5 o más, el personaje recibe un golpe de calor."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						"inconsciente hasta que se reduzca su temperatura corporal y desventaja a salvaciones de calor extremo hasta que pierda los PtA. De recibir daño por fuego salva de nuevo para calor extremo."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Si se aplica el tratamiento de forma efectiva, las desventajas desaparecen cuando al paciente no le queden PtA."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"disminuir de forma inmediata la temperatura central del organismo y tratar la deshidratación. De no tratarse, el paciente recibe 1PtA cada 10 minutos."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Hipo Arcano",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Burbujas flotantes aparecen a tu alrededor cada vez que hablas, aunque no impiden la socialización. Además, los conjuros que lances pueden desmadrarse."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Al recibir un conjuro de ataque crítico (10%), pifiar en el lanzamiento de un conjuro (10%), como efecto secundario de algunos objetos y/o maldiciones, o al lanzar un conjuro en una zona con antimagia (50%)."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Aparición 1d10 minutos.",
+								"Cada vez que vas a lanzar un conjuro de lv1 o superior, tira 1d20, con un 7 o menos, tira en la tabla*",
+								"Las burbujas que flotan a tu alrededor incomodan a la gente. Tienes desventaja en persuasión."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Cuando gastes todos y cada uno de tus espacios de conjuro, puedes hacer una tirada con tu modificador de lanzamiento de conjuros sobre tu propia CD de conjuros. Con un éxito la enfermedad termina."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Un campo antimagia anula el exceso de magia temporalmente, pero no acaba con la enfermedad, que sigue ahí cuando abandonas ese campo."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Si el afectado falla la tirada para curarse, las burbujas remiten hasta que recupera sus espacios de conjuro.",
+								"* Velocidad = 10 pies y desventaja en Fue, Dex y Con",
+								"** Desventaja a tiradas de Constitución hasta que coma",
+								"*** Eres incapaz de mantener cualquier tipo de concentración"
+							]
+						}
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Efectos del Hipo Arcano",
+					"colLabels": [
+						"d20",
+						"Efecto"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"Recibes 1 pt de agotamiento"
+						],
+						[
+							"2",
+							"Recibes los efectos de Confusión"
+						],
+						[
+							"3",
+							"Pierdes HP = lv de conjuro x5"
+						],
+						[
+							"4",
+							"Vomitas arcoíris (aturdido 1 rnd)"
+						],
+						[
+							"5",
+							"Llegas al límite de carga* 1 min"
+						],
+						[
+							"6",
+							"Potencia/duración reducida a la mitad"
+						],
+						[
+							"7",
+							"Castea con desventaja o salvan con ventaja"
+						],
+						[
+							"8-12",
+							"El conjuro se anula y lanza una nube de burbujas"
+						],
+						[
+							"13",
+							"Se te cae todo el pelo"
+						],
+						[
+							"14",
+							"Te aparecen plumas por todo el cuerpo"
+						],
+						[
+							"15",
+							"Las alimañas te persiguen durante una hora"
+						],
+						[
+							"16",
+							"Tu estómago se vacía automáticamente**"
+						],
+						[
+							"17",
+							"Un pitido resuena en tu cabeza*** 1 min"
+						],
+						[
+							"18",
+							"Se anula tu sintonización más antigua"
+						],
+						[
+							"19",
+							"El target cambia aleatoriamente"
+						],
+						[
+							"20",
+							"Dobla potencia y tira con ventaja"
+						]
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Hipotermia",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"depende del estadio: 1) temblores, confusión y torpeza. 2) desorientación y somnolencia. 3) inconsciencia"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Fallar una salvación de frío extremo por 5 o más produce un primer estadio de hipotermia. Fallar dos más empeora la hipotermia en 1 estadio por cada salvación."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Estadio 1: Desventaja a ataques; checks y salvaciones de destreza e inteligencia.",
+								"Estadio 2: Desventaja a checks y salvaciones de wisdom y contra ser dormido. 1 PtA extra. (si pierdes este estadio, pierdes el PtA)",
+								"Estadio 3: Inconsciencia y salvación de frío extremo cada 10 minutos."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Si se tiene éxito en el tratamiento, la enfermedad acaba. Puede eliminarse PtA para atenuar los efectos, pero esto no acabará directamente con la enfermedad aunque se reduzcan a 0 (si reducirá los estadios a 1)."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Calentar al paciente para que aumente su calor corporal."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Indigestión",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Dolor de barriga y facilidad para vomitar y cagar (diarrea)."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Comer algo en mal estado. Posible efecto secundario de otra enfermedad."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Movilidad reducida a la mitad y un punto de agotamiento que solo puede perderse al curarse de esta enfermedad.",
+								"Desventaja en salvaciones y habilidades de Destreza y ataques a melé.",
+								"Cuando recive un ataque físico o realiza una acción para saltar, correr o esquivar; debe hacer una salvación de Constitución CD 10 o pasar el siguiente turno vomitando o teniendo arcadas (aturdido)",
+								"Una vez por hora, repite la tirada. De fallar, siente unas ganas apremiantes de cagar. Si en un minuto no ha ido, debe hacer salvaciones de Constitución CD 14 cada turno o cagarse encima (movilidad a la mitad y aturdido ese turno).",
+								"Si no tiene qué kgar, caga líquido. Si no bebe lo suficiente como para contrarrestarlo adquiere un punto de agotamiento."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Cada vez que cague hace una salvación de Constitución CD 13. Con un éxito la enfermedad termina. Pasada una hora pierde el punto de agotamiento."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Hay ciertas medicinas naturales que ayudan a purgar el estómago. Si sigue el tratamiento obtiene ventaja a las salvaciones al cagar."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Si es grave todas las tiradas se hacen con desventaja."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Lepra",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Aparecen heridas por todo el cuerpo. Estas dejan de sangrar en algún momento, pero no llegan a cicatrizar del todo. Pierde el sentido del tacto."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Por vías respiratorias"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						"Pasadas 2d4 decanas. Los HP máximos se reducen en 1 cada día, hasta llegar al 25% del máximo. Desventaja en Checks y Salvaciones de Atletismo y Fuerza."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Se puede curar untando aceites naturales durante 1d4+2 meses. Puede repetirse la salvación cada decana a partir del primer mes. Un conjuro de Restauración Menor lv4 o Restauración Mayor acaba con la enfermedad."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Untando aceites naturales. Las heridas deben limpiarse una vez al día."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Si no se limpian las heridas se puede contraer {@disease Fiebre de Infección|Himo|Fiebre de Infección}."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Malaria",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Vómitos, diarreas sanguinas, amarilleamiento de piel y ojos, fiebre, sudoración, escalofríos, dolor de cabeza, {@disease Gangrena|Himo|gangrena}..."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Por ingerir o recibir por vía intravenosa el factor infectante."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"2 ptA y una vez por hora, salva consti CD 8. De fallar, siente unas ganas apremiantes de cagar. Si en un minuto no ha ido, debe hacer salvaciones de Constitución CD 14 cada turno o cagarse encima (movilidad a la mitad y {@condition Dazed|Himo|dazed} ese turno).",
+								"Si no tiene qué kgar, caga sangre. Si no bebe lo suficiente como para contrarrestarlo adquiere un punto de agotamiento."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Solo puede curarse por medios mágicos, pero hay un 33% de posibilidades de que desaparezca sin más pasado un año. Un conjuro de Restauración Mayor acaba con la enfermedad."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Beber mucha agua e ingerir azucar para reponer sangre y líquidos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"No contrarrestar la deshidratación o el desangramiento puede suponer 1ptA. Un conjuro de curación contrarresta 1 litro de sangre por lv de conjuro."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Peste",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Fiebre, exceso de mucosidad, dolor de cabeza, malestar, calambres, {@disease Gangrena|Himo|gangrena} en extremidades (pasados 2 días) y labios, vomitos de sangre y posibles delirios y/o comas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"por vías respiratorias o intravenosas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						"Aparecen pasadas 1d12 horas. 2 ptA, desventaja a ataques, conjuros y salvaciones de Fuerza y Destreza y 30% de posibilidad de parálisis cuando intente hacer grandes esfuerzos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Puede paliarse y curarse con un tratamiento antes de las 24 horas. A partir de ahí dependen de la magia. Cada día hará una salvación de Constitución CD 16. Con un éxito pierde un ptA, con un fallo lo adquiere."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Hay muchas plantas medicinales que pueden ayudar. Reposo absoluto e higiene máxima."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Es extremadamente contagioso. La {@disease Gangrena|Himo|gangrena} puede aportar los efectos de la {@disease Fiebre de Infección|Himo|Fiebre de Infección} pasados unos días."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Pulmones Sucios",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Falta de aire constante. El mínimo esfuerzo extra supone una pérdida de aire casi total, que puede derivar en agotamientos severos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Cuando la respiración se ve comprometida por exceso de polvo, hollín, esporas, gas venenoso... Los efectos aparecen pasadas 1d12 horas desde la aspiración de sustancias nocivas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Desventaja en tiradas de costitución, destreza y fuerza falla automáticamente pruebas de Atletismo y Acrobacias.",
+								"Velocidad reducida a la mitad",
+								"Capacidad de carga reducida a la mitad",
+								"Velocidad reducida a 0 si lleva arma o armadura pesada.",
+								"Incapacidad para aguantar la respiración."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Esta puede ser eliminada con un restauración menor, con una poción de curación normal o con un tratamiento de limpieza interior en los templos de Lathander o Sune (50 GP) si es muy grave."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Es crónico."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"El paciente puede sufrir asfixias puntuales en determinados casos o recibir puntos de agotamiento."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Rabia",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Va por fases. El inicio de una fase acaba la anterior.",
+								"En 1d8 días, dolor de cabeza y náuseas.",
+								"1d6 días después, paralisis y alucinaciones aleatorias, cambios de humor muy marcados, debilidad a luz y/o sonido...",
+								"1d6 días después, hidrofobia y echa espumarajos por la boca. No le responde el cerebro. Dura 3d20 horas. Si no se trata como es debido, muere."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Por intercambio de fluidos con una criatura infectada."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Varían por fase",
+								"1 ptA y la posibilidad de perder 1 turno (aturdido) vomitando en cualquier momento.",
+								"El estado de parálisis y/o debilidad al daño radiante y/o por trueno cuando sea necesario.",
+								"Parálisis e incapaz de respirar al entrar en contacto con agua."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Su única curación es por medios mágicos. Un conjuro de Restauración Mayor acaba con la enfermedad."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"No, realmente. Se aconseja atar al paciente."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Cuando pierda el control, este pasa a disposición del DM."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Salmonela",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Diarrea, calambres estomacales y fiebre (pasadas 3d20+8 horas desde el contagio)"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Agua o alimentos contaminados o sin tratar."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"La enfermedad remite por sí sola pasados 1d10+5 días, pero la criatura afectada puede salvar Constitución CD 15 al final de cada día para que acabe antes. Cualquuier conjuro que acabe con enfermedades acaba con la salmonela."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Las hierbas medicinales y la comida digestiva dan ventaja a la salvación diaria."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"En casos graves o cuando no se ingiere suficiente agua, la criatura corre riesgo de morir por deshidratación."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Sarna",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Erupciones y heridas por todo el cuerpo."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Por intercambio de parásitos. No afecta a criaturas con armadura natural o con escamas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						"Aparece en 1d12 horas Desventaja en checks y salvaciones de Fuerza y en checks de Carisma (a partir de un día y medio)."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Hay ciertas plantas e inciensos que logran eliminar los parásitos. No puede por medios mágicos, puesto que no es una enfermedad como tal."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Higiene abundante."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"La desventaja en Carisma permanece hasta pasados 2d4 días a menos que se use el Toque de Sune o se haga el esfuerzo de curar y tapar las heridas."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Sida",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Debilitamiento general y debilidad física."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Mediante cualquier tipo de fluido de una persona infectada. El paciente no sabe que lo tiene."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						"Desventaja a salvaciones contra enfermedades y sus HP se reducen a la mitad."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"La única cura es un conjuro de Restauración Mayor."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Debe prevenir el contagio. Cualquier intercambio de fluidos puede resultar en un contagio si el otro individuo falla una Salvación de Constitución CD 10."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Los conjuros y efectos que aumenten temporalmente sus HP máximos aún harán efecto."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Síndrome de Abstinencia",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Nervios, temblores, cambios de humor, delirios, dolor de cabeza, somnolencia/insomnio..."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Tras un tiempo prolongado sin ceder a un vicio, adicción o TOC (a juicio del DM). Una vez contraído, pasa a segunda fase en 1d6+2 días y a tercera en 1d4."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"varían según el momento y la adicción en sus diferentes etapas.",
+								"Fase 1 (nervios)",
+								"Desventaja a tiradas de ataque.",
+								"Desventaja en checks y salvaciones de Wisdom y Carisma.",
+								"Salva concentración con desventaja",
+								"Al ir a dormir (se mantiene en las siguientes fases)",
+								"Salvación de Wisdom CD 15. De fallar:",
+								"Si el número sacado fue par, no logra dormir en toda la noche. Gana un ptA que solo se va durmiendo.",
+								"Solo puede tener un ptA de esta manera",
+								"Si guardó reposo absoluto, aún hace el descanso largo, pero no pierde ptA ganados de otras formas.",
+								"Si el número fue impar, duerme con normalidad, pero no hace descanso largo ni gana ninguno de sus beneficios. No recibe ptA, pero tampoco los restaura.",
+								"Fase 2 (cambios de humor)",
+								"Cada hora, realiza una salvación de Wisdom o tira en la tabla de estado.",
+								"Con cada pifia o error en salvaciones de Wisdom o Carisma, tira en la tabla de estados",
+								"Fase 3 (ira y pérdida de nervios)",
+								"Ventaja en todos los ataques",
+								"Recibe ataques con ventaja",
+								"Desventaja a toda salvación salvo Constitución",
+								"Desventaja en todos los checks de habilidad",
+								"Al tirar iniciativa salva Wisdom CD 15. De fallar tira 1d4:",
+								"Se ve afectado por Confusión",
+								"Se ve afectado por Phantasmal Force",
+								"Se ve afectado por Enemies Abound",
+								"Agredes a la criatura más cercana con ventaja",
+								"Cada 3 turnos repite la salvación, independientemente del resultado anterior. Con un fallo vuelve a tirar el d4"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Dos opciones:",
+								"Ceder a la adicción hace desaparecer los síntomas en 1d4 minutos. Debe ceder al menos una vez durante los próximos 1d4+1 días o recaer. El conjuro Calmar Emociones anula el mono durante 1d6-1 horas, pero no lo elimina.",
+								"Al llegar a la fase 3 puede salvar Wisdom CD 19 con desventaja cada día. Con 3 éxitos seguidos el vicio, adicción o TOC desaparece permanentemente."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Mantener un ambiente tranquilo y estable y acondicionarlo a las necesidades del paciente puede calmar ligeramente los cambios de humor o los nervios (permitiendo una salvación de wisdom adicional antes de recibir el efecto). También otorga ventaja ante las salvaciones de desintoxicación de la fase 3."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"El DM puede añadir cosas dependiendo del vicio, TOC o adicción."
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Estados emocionales del Síndrome de Abstinencia",
+					"colLabels": [
+						"d20",
+						"Estado Emocional",
+						"Efecto"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-3",
+						"col-8"
+					],
+					"rows": [
+						[
+							"1",
+							"Feliz",
+							"Desventaja en habilidades de inteligencia y sigilo"
+						],
+						[
+							"2",
+							"Enfadado",
+							"Reckless attack permanente y desventaja en checks, salvaciones y habilidades de Wisdom"
+						],
+						[
+							"3",
+							"Triste",
+							"ptA temporal"
+						],
+						[
+							"4",
+							"Horny",
+							"Desventaja a Carisma y todo lo que hagas que no implique un fin sexual se hace con desventaja"
+						],
+						[
+							"5",
+							"Hambriento",
+							"Todo lo que hagas que no te acerque a saciar tu hambre se hace con desventaja"
+						],
+						[
+							"6",
+							"Pletórico",
+							"Desventaja en habilidades de inteligencia y sigilo y ventaja en ataques"
+						],
+						[
+							"7",
+							"Cansado",
+							"2 ptA temporales"
+						],
+						[
+							"8",
+							"Estresado",
+							"Desventaja en toda habilidad y velocidad aumentada en 15 pies"
+						],
+						[
+							"9",
+							"Confiado",
+							"Te atacan con ventaja y salvas con desventaja"
+						],
+						[
+							"10",
+							"Confuso",
+							"Te ves afectado por Confusión"
+						]
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Tetano",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Espasmos rígidos en cualquier parte del cuerpo, fiebre y sudoración y babeo excesivos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Al ingerir o recibir por vía intravenosas las bacterias del tétanos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						"Tras 1d10 días el personaje puede recibir parálisis aleatorias que durarán 1d10 minutos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Un conjuro de Restauración Menor o Mayor puede curar la enfermedad. Un tratamiento a tiempo puede prevenir o curar la enfermedad. Puede repetir la salvación CD 12 al final de cada día si el tratamiento se ha cumplido."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Limpiar la herida y dejarla al descubierto."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Pasadas dos semanas solo podrá curarse por medios mágicos."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Tifus",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Fuertes fiebres, dolor de cabeza y articulaciones, sensibilidad a destellos y erupciones en todo el cuerpo salvo en las palmas de pies y manos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Los efectos aparecen pasadas 1d12+8 horas. Se contagia por vía intravenosa."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						"Desventaja en pruebas y salvaciones de inteligencia, en percepción delante de fuentes intensas de luz o del día y un pt de agotamiento permanente."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Si se sigue el tratamiento puede repetir la salvación cada dos días. (CD 12)"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Descanso absoluto y hierbas medicinales."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Durante este tiempo ninguno de sus descansos contará para el descanso largo. Si no guarda reposo sí podrá obtener otro ptA."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Tuberculosis",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"2 fases",
+								"Leve: Fiebre, cansancio, sudor nocturno, falta de aire, pérdida de apetito y de peso.",
+								"Pasados 15 días hay un 25% de que derive en una Escrófula: inflamación no dolorosa de los ganglios del cuello"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Por vías respiratorias"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Depende de la fase",
+								"1 ptA",
+								"Escrófula",
+								"Desventaja en tiradas de costitución, destreza y fuerza falla automáticamente pruebas de Atletismo y Acrobacias.",
+								"Velocidad reducida a la mitad",
+								"Capacidad de carga reducida a la mitad",
+								"Velocidad reducida a 0 si lleva arma o armadura pesada.",
+								"Incapacidad para aguantar la respiración."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Puede curarse sola si se sigue el tratamiento. Una Restauración Menor puede acabar con la enfermedad."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Existen ciertas medicinas naturales. Guardar reposo en un lugar elevado ayuda."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Muchas complicaciones respiratorias por la noche pueden degenerar en 1 ptA al día siguiente."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
+			"name": "Viruela",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Va por fases.",
+								"1 día de fiebre",
+								"Aparecen pústulas y erupciones que van reventando, secretando mucha pus. Es altamente contagioso. Desaparece la fiebre. Dura 1d4 días.",
+								"Cicatrización de pústulas. Dura 1d4 días.",
+								"Se caen las pústulas. 2 días."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Fluidos y contacto"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Aparecen en [1d4-1 días](si sale 0 1d10+10 horas) y va por fases.",
+								"1 ptA",
+								"Desventaja en pruebas de Carisma",
+								"1 ptA Desventaja en pruebas de Carisma y velocidad a la mitad.",
+								"Desventaja en pruebas de Carisma (permanente)"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"Suele curarse sola, pero una Restauración Menor puede agilizar el proceso."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Higiene abundante."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Las cicatrices son permanentes, pero pueden ser eliminadas por completo con un Toque de Sune lv5."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
 		}
 	]
 }

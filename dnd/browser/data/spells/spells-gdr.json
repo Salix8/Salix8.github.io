@@ -366,7 +366,7 @@
 				]
 			},
 			"entries": [
-				"Calientas mágicamente el metal mientras lo imbuyes en magia curativa hasta que se encienda al rojo vivo y lo aplicas en la herida. El objetivo aliado recupera {@dice 6d4} + tu modificador de spellcasting. Si tenía una herida abierta o alguna mecánica de sangrado activa, esta finaliza, dejando una cicatriz muy fea.",
+				"Calientas mágicamente el metal mientras lo imbuyes en magia curativa hasta que se encienda al rojo vivo y lo aplicas en la herida. El objetivo aliado recupera {@dice 6d4} + tu modificador de spellcasting. Si tenía una herida abierta o alguna mecánica de {@condition Sangrado|Himo|sangrado} activa, esta finaliza, dejando una cicatriz muy fea.",
 				"Al ser un método de curación tan doloroso la criatura se verá afectada. Durante 1 minuto, la criatura tendrá desventaja en tiradas de ataque, Fuerza y Destreza y no podrá mantener la concentración de conjuros.",
 				"Este conjuro no tiene efecto en constructos."
 			],
@@ -1730,7 +1730,7 @@
 				]
 			},
 			"entries": [
-				"Eliges un punto en el torso del objetivo y este explota en una hemorragia. El objetivo deberá superar una tirada de salvación de Constitución o recibir {@dice 4d12} de daño perforante mágico y sangrado de {@dice 1d4}. Si la supera recibirá la mitad del daño, pero ninguno de los otros efectos. El daño de este conjuro ignora HP temporales procedentes de cualquier fuente, y daña sobre los HP reales aplicando las normas de sangrado desde el daño inicial del conjuro (solo si falla).",
+				"Eliges un punto en el torso del objetivo y este explota en una hemorragia. El objetivo deberá superar una tirada de salvación de Constitución o recibir {@dice 4d12} de daño perforante mágico y {@condition Sangrado|Himo|sangrado} de {@dice 1d4}. Si la supera recibirá la mitad del daño, pero ninguno de los otros efectos. El daño de este conjuro ignora HP temporales procedentes de cualquier fuente, y daña sobre los HP reales aplicando las normas de sangrado desde el daño inicial del conjuro (solo si falla).",
 				"La criatura puede salvar al final de cada turno para acabar con el sangrado. Si no, la hemorragia se detiene pasado un minuto.",
 				"Una criatura incapaz de sangrar no se ve afectada por este conjuro. "
 			],

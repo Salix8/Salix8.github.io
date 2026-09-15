@@ -2430,7 +2430,7 @@
 								"source": "Himo",
 								"page": "??",
 								"entries": [
-									"Mientras estés en tu Forma de Depredador puedes gastar un espacio de conjuro de hasta nivel 3 para añadir {@dice 1d8} × el nivel del conjuro de daño cortante mágico. El objetivo debe superar una salvación de Constitución o recibir hemorragia durante un minuto, pudiendo repetir la salvación al final de cada turno."
+									"Mientras estés en tu Forma de Depredador puedes gastar un espacio de conjuro de hasta nivel 3 para añadir {@dice 1d8} × el nivel del conjuro de daño cortante mágico. El objetivo debe superar una salvación de Constitución o recibir {@condition Sangrado|Himo|hemorragia} durante un minuto, pudiendo repetir la salvación al final de cada turno."
 								]
 							}
 						],

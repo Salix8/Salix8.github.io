@@ -6,8 +6,7 @@ class ConditionsDiseasesPage extends ListPage {
 		const typeFilter = new Filter({
 			header: "Type",
 			items: ["condition", "disease"],
-			displayFn: StrUtil.uppercaseFirst,
-			deselFn: (it) => it === "disease"
+			displayFn: StrUtil.uppercaseFirst
 		});
 		const miscFilter = new Filter({header: "Miscellaneous", items: ["SRD"]});
 

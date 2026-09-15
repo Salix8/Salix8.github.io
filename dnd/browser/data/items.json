@@ -30582,7 +30582,7 @@
 			"source": "Himo",
 			"page": "??",
 			"entries": [
-				"Cuando haces un crítico contra una criatura con armadura o escudo, reduces en 1 su CA, eligiendo cuál. Esta reducción no se acumula. Si no llevaba armadura, queda {@condition dazed}."
+				"Cuando haces un crítico contra una criatura con armadura o escudo, reduces en 1 su CA, eligiendo cuál. Esta reducción no se acumula. Si no llevaba armadura, queda {@condition Dazed|Himo|dazed}."
 			]
 		},
 		{
@@ -31006,7 +31006,7 @@
 						"col-6"
 					],
 					"rows": [
-						["Tratar herida", "10", "Cura una hemorragia y previene efectos negativos."],
+						["Tratar herida", "10", "Cura una {@condition Sangrado|Himo|hemorragia} y previene efectos negativos."],
 						["Extirpar miembro de forma segura*", "13", "Evita efectos negativos de heridas graves."],
 						["Preparar calmantes", "14", "+5 a las pruebas con este kit durante operaciones; gasta tres hierbas analgésicas."],
 						["Preparar somníferos", "14", "+10 a las pruebas con este kit durante operaciones; gasta diez hierbas analgésicas."],
