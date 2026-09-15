@@ -198,6 +198,10 @@
 			abilityScores: {dex: 14},
 			armor: {baseAc: 16, type: "HA"}
 		}), 16);
+		assertEqual(CharacterStatblockService.getArmorClass({
+			abilityScores: {dex: 8, con: 18},
+			armor: {baseAc: 12, type: "MA", acAbility: "con", acAbilityMax: 2}
+		}), 14);
 	});
 
 	test("derives choices, traits, size, and speed from a merged species", () => {

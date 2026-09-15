@@ -733,8 +733,14 @@ class CharacterBuilder extends Builder {
 			const dex = Parser.getAbilityModNumber(abilitySummary.dex.total);
 			if (!armor) return 10 + dex + (shield ? Number(shield.ac || 0) : 0);
 			const armorType = `${armor.type || ""}`.toUpperCase();
-			const dexBonus = armorType === "HA" ? 0 : armorType === "MA" ? Math.min(dex, 2) : dex;
-			return Number(armor.ac || 10) + dexBonus + (shield ? Number(shield.ac || 0) : 0);
+			const abilityAliases = {strength: "str", dexterity: "dex", constitution: "con", intelligence: "int", wisdom: "wis", charisma: "cha"};
+			const rawAbility = `${armor.acAbility || "dex"}`.trim().toLowerCase();
+			const ability = abilityAliases[rawAbility] || rawAbility;
+			const abilitySummaryEntry = abilitySummary[ability] || abilitySummary.dex;
+			const abilityModifier = Parser.getAbilityModNumber(abilitySummaryEntry.total);
+			const abilityMax = armor.acAbilityMax == null ? 2 : Number(armor.acAbilityMax);
+			const abilityBonus = armorType === "HA" ? 0 : armorType === "MA" ? Math.min(abilityModifier, abilityMax) : abilityModifier;
+			return Number(armor.ac || 10) + abilityBonus + (shield ? Number(shield.ac || 0) : 0);
 		};
 		const armor = [null, ...armors].reduce((best, candidate) => getAc(candidate) > getAc(best) ? candidate : best, null);
 		const ac = getAc(armor);

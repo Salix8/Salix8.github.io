@@ -685,19 +685,26 @@
 			let mode = "default";
 			let baseArmorClass = 10;
 			let dexterityContribution = dexterityModifier;
+			let armorAbility = "dex";
+			let armorAbilityModifier = dexterityModifier;
+			let armorAbilityContribution = dexterityModifier;
 			let unarmoredDefenseContribution = 0;
 			let allowsShield = true;
 
 			if (hasArmor) {
 				mode = "armor";
 				baseArmorClass = armorBase;
-				if (isHeavyArmor || armor.dexterityBonus === false || armor.addDexterity === false) dexterityContribution = 0;
+				armorAbility = _normaliseAbility(_getFirstDefined(armor.acAbility, "dex"));
+				armorAbilityModifier = _getFirstDefined(_getAbilityModifier(abilityScores, armorAbility), 0);
+				armorAbilityContribution = armorAbilityModifier;
+				if (isHeavyArmor || armor.dexterityBonus === false || armor.addDexterity === false) armorAbilityContribution = 0;
 				else if (isMediumArmor) {
-					const dexterityMax = _getFirstDefined(_toInteger(_getFirstDefined(armor.dexterityMax, armor.maxDexBonus, armor.dexterityCap)), 2);
-					dexterityContribution = Math.min(dexterityModifier, dexterityMax);
+					const abilityMax = _getFirstDefined(_toInteger(_getFirstDefined(armor.acAbilityMax, armor.dexterityMax, armor.maxDexBonus, armor.dexterityCap)), 2);
+					armorAbilityContribution = Math.min(armorAbilityModifier, abilityMax);
 				} else if (!isLightArmor && armor.dexterityMax != null) {
-					dexterityContribution = Math.min(dexterityModifier, _toInteger(armor.dexterityMax));
+					armorAbilityContribution = Math.min(armorAbilityModifier, _toInteger(armor.dexterityMax));
 				}
+				dexterityContribution = armorAbility === "dex" ? armorAbilityContribution : 0;
 			} else if (options.unarmoredDefense) {
 				mode = "unarmored";
 				const unarmoredDefense = Array.isArray(options.unarmoredDefense)
@@ -718,13 +725,16 @@
 			const shieldBonus = shield && allowsShield
 				? _getFirstDefined(_toNumber(_getFirstDefined(shield.acBonus, shield.bonus, shield.ac, shield)), shield === true ? 2 : 0)
 				: 0;
-			const armorClass = baseArmorClass + dexterityContribution + unarmoredDefenseContribution + shieldBonus + bonusArmorClass;
+			const armorClass = baseArmorClass + (hasArmor ? armorAbilityContribution : dexterityContribution) + unarmoredDefenseContribution + shieldBonus + bonusArmorClass;
 			return {
 				armorClass,
 				mode,
 				baseArmorClass,
 				dexterityModifier,
 				dexterityContribution,
+				armorAbility,
+				armorAbilityModifier,
+				armorAbilityContribution,
 				unarmoredDefenseContribution,
 				shieldBonus,
 				bonusArmorClass

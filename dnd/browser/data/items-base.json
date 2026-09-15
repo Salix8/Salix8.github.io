@@ -1347,7 +1347,10 @@
 			],
 			"source": "Himo",
 			"page": "??",
-			"range": "20/60"
+			"range": "20/60",
+			"entries": [
+				"Cuando realizas la acción de Desarmar, obtienes un bonificador de +2 por cada sai que tengas equipado."
+			]
 		},
 		{
 			"name": "Cimitarra de Doble Filo",
@@ -1383,6 +1386,64 @@
 			"source": "Himo",
 			"page": "??",
 			"range": "20/60"
+		},
+		{
+			"name": "Diente de Hada",
+			"type": "G",
+			"rarity": "None",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Flor roja parecida al diente de león que crece en las Islas de las Hadas. Puede cultivarse en climas húmedos y soleados si la tierra utilizada pertenece a las islas. Debe plantarse por separado y regarse con un dedal de agua una vez al día. Tarda una semana en crecer y florecer, y un mes en morir.",
+				"De cada flor pueden obtenerse {@dice 1d20 + 10} flores en simiente o 10 gramos de polvo."
+			]
+		},
+		{
+			"name": "Atanor",
+			"type": "G",
+			"rarity": "None",
+			"value": 2000,
+			"weight": 8,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Cofre piramidal de base triangular y punta truncada, con una compuerta en la base pequeña. Está relleno de arena y contiene un frasco de cristal en el centro. Sus paredes huecas tienen pequeñas válvulas impermeables para llenarlas de aceite y un botón yesquero que prende el combustible y mantiene caliente la arena. Cada carga dura una semana.",
+				"Puede fabricarse con cuatro planchas de madera y cuatro de mithril o acero de 20 × 20, una bisagra mediana, quince tornillos grandes, un bote de cristal y herramientas de hojalatero, artesano o armero."
+			]
+		},
+		{
+			"name": "Hierbas Analgésicas",
+			"type": "G",
+			"rarity": "None",
+			"value": 10,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Anulan el dolor, pero no el daño, durante operaciones y procedimientos quirúrgicos, concediendo ventaja a la prueba correspondiente."
+			]
+		},
+		{
+			"name": "Hierbas Energéticas",
+			"type": "G",
+			"rarity": "None",
+			"value": 10,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Si se usan como parte de una prueba para estabilizar a una criatura, le permiten recuperar 3 puntos de golpe. Una criatura solo puede beneficiarse de estas hierbas un número de veces igual a su bonificador de competencia entre descansos cortos."
+			]
+		},
+		{
+			"name": "Incienso Onírico",
+			"type": "G",
+			"rarity": "None",
+			"value": 5000,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Este incienso emula los efectos del conjuro {@spell Abrir Mente|CdS}, afectando a todas las criaturas en un área de 10 pies. El efecto dura 8 horas desde su inhalación, pero no duerme a ninguna criatura.",
+				"Las criaturas afectadas pueden desplazarse libremente entre sus Burbujas Oníricas, pero no pueden entrar en otras sin utilizar conjuros. Todas ellas cumplen la función del lanzador para despertarse entre sí. El incienso se consume tras su uso."
+			]
 		}
 	],
 	"itemProperty": [

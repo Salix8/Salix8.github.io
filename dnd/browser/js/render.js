@@ -3998,6 +3998,28 @@ Renderer.item = {
 		return Renderer.get().render(tagged);
 	},
 
+	_getArmorAbilityText (item) {
+		const defaultAbility = item.type === "LA" || item.type === "MA" ? "dex" : null;
+		const rawAbility = item.acAbility || defaultAbility;
+		if (!rawAbility) return "";
+
+		const abilityAliases = {
+			strength: "str",
+			dexterity: "dex",
+			constitution: "con",
+			intelligence: "int",
+			wisdom: "wis",
+			charisma: "cha"
+		};
+		const normalizedAbility = `${rawAbility}`.trim().toLowerCase();
+		const ability = abilityAliases[normalizedAbility] || normalizedAbility;
+		const abilityLabel = `${ability.charAt(0).toUpperCase()}${ability.slice(1, 3)}`;
+		const abilityMax = item.acAbilityMax != null
+			? item.acAbilityMax
+			: item.acAbility == null && item.type === "MA" ? 2 : null;
+		return ` + ${abilityLabel}${abilityMax != null ? ` (max ${abilityMax})` : ""}`;
+	},
+
 	getDamageAndPropertiesText: function (item) {
 		const damageParts = [];
 
@@ -4006,7 +4028,7 @@ Renderer.item = {
 		// armor
 		if (item.ac != null) {
 			const prefix = item.type === "S" ? "+" : "";
-			const suffix = item.type === "LA" ? " + Dex" : item.type === "MA" ? " + Dex (max 2)" : "";
+			const suffix = Renderer.item._getArmorAbilityText(item);
 			damageParts.push(`AC ${prefix}${item.ac}${suffix}`);
 		}
 		if (item.acSpecial != null) damageParts.push(item.ac != null ? item.acSpecial : `AC ${item.acSpecial}`);

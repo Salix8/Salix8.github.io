@@ -30531,8 +30531,10 @@
 			"property": [
 				"F",
 				"2H",
-				"R"
+				"R",
+				"V"
 			],
+			"dmg2": "1d10",
 			"source": "Himo",
 			"page": "??",
 			"entries": [
@@ -30766,62 +30768,6 @@
 			]
 		},
 		{
-			"name": "Daga Larga",
-			"type": "M",
-			"weapon": true,
-			"weaponCategory": "Simple",
-			"rarity": "None",
-			"value": 1000,
-			"weight": 1.5,
-			"dmg1": "1d6",
-			"dmgType": "S",
-			"property": [
-				"F",
-				"T"
-			],
-			"range": "20/60",
-			"source": "Himo",
-			"page": "??"
-		},
-		{
-			"name": "Cimitarra doble filo",
-			"type": "M",
-			"weapon": true,
-			"weaponCategory": "Martial",
-			"rarity": "None",
-			"value": 7500,
-			"weight": 3,
-			"dmg1": "2d4",
-			"dmgType": "S",
-			"property": [
-				"F"
-			],
-			"source": "Himo",
-			"page": "??"
-		},
-		{
-			"name": "Sai",
-			"type": "M",
-			"weapon": true,
-			"weaponCategory": "Martial",
-			"rarity": "None",
-			"value": 4000,
-			"weight": 1,
-			"dmg1": "1d4",
-			"dmgType": "P",
-			"property": [
-				"F",
-				"L",
-				"T"
-			],
-			"range": "20/60",
-			"source": "Himo",
-			"page": "??",
-			"entries": [
-				"Cuando realizas la acción de Desarmar, obtienes un bonificador de +2 por cada sai que tengas equipado."
-			]
-		},
-		{
 			"name": "Armadura de Remorhaz",
 			"type": "HA",
 			"rarity": "None",
@@ -30917,7 +30863,7 @@
 			"entries": [
 				"La piel de un {@creature xorn} permite fabricar tres armaduras de este tipo. Parece una armadura de cuero hecha de roca y tierra, con un ojo de xorn en la pechera.",
 				"Una vez al día, permite atravesar superficies de tierra o roca a la velocidad del portador durante 10 minutos. Si termina dentro de una superficie, sale despedido hacia la superficie más cercana y recibe {@damage 1d10} de daño más el daño de caída correspondiente.",
-				"Tiene 5 cargas. Puedes gastar 1 carga para usar Sentido del Tesoro durante 1 turno o sentido sísmico durante 1 minuto. Sentido del Tesoro detecta metales y piedras preciosas, como monedas o joyas, a 60 pies."
+				"Tiene 5 cargas. Puedes gastar 1 carga para usar Treasure Sense durante 1 turno o Tremorsense durante 1 minuto. Sentido del Tesoro detecta metales y piedras preciosas, como monedas o joyas, a 60 pies."
 			]
 		},
 		{
@@ -30927,6 +30873,8 @@
 			"value": 650000,
 			"weight": 20,
 			"ac": 12,
+			"acAbility": "con",
+			"acAbilityMax": 2,
 			"source": "Himo",
 			"page": "??",
 			"entries": [
@@ -30942,6 +30890,8 @@
 			"value": 250000,
 			"weight": 15,
 			"ac": 12,
+			"acAbility": "con",
+			"acAbilityMax": 2,
 			"source": "Himo",
 			"page": "??",
 			"entries": [
@@ -30965,20 +30915,21 @@
 			"source": "Himo",
 			"page": "??",
 			"entries": [
-				"Se fabrica con cinco pieles de aurumvorax, o tres para una criatura Pequeña, y puede replicar cualquier armadura base. Parece una armadura de piel dorada y plateada, pesa un 50 % más que la armadura replicada y concede resistencia al daño de fuego.",
-				"Cada vez que el portador recibe un impacto crítico, la CA de la armadura se reduce permanentemente en 1. Si alcanza CA 10 + Destreza, la armadura se destruye. Puede repararse con herramientas de herrero un máximo de diez veces antes de requerir la piel de otro aurumvorax.",
+				"Se fabrica con cinco pieles de Aurumvorax (o tres si es talla pequeña), y puede replicar cualquier armadura base. Se ve como una armadura de piel dorada y plateada, pesa un 50 % más que la armadura replicada.",
+				"Concede resistencia al daño de fuego.",
+				"Cada vez que el portador recibe un impacto crítico, la CA de la armadura se reduce permanentemente en 1. Si la CA baja a 10 + Destreza, la armadura se destruye. Puede repararse con herramientas de herrero un máximo de diez veces antes de requerir la piel de otro aurumvorax.",
 				{
 					"type": "entries",
 					"name": "Variante: Capa de Aurumvorax",
 					"entries": [
-						"En vez de una armadura, puede fabricarse una capa de 6 libras con una piel para una criatura Pequeña o tres para una Mediana. La capa concede inmunidad a los ataques de gas o mundanos."
+						"En vez de una armadura, puede fabricarse una capa de 6 libras con una piel para una criatura pequeña o tres para una mediana. La capa concede inmunidad a los ataques de gas o mundanos."
 					]
 				}
 			]
 		},
 		{
 			"name": "Armadura de Rust Monster",
-			"type": "HA",
+			"type": "MA",
 			"rarity": "None",
 			"value": 300000,
 			"weight": 15,
@@ -30988,6 +30939,399 @@
 			"entries": [
 				"Se fabrica con quitina de tres {@creature rust monster} para una criatura Pequeña o cinco para una Grande. Basta con un tercio o la mitad de esas cantidades, respectivamente, si los rust monsters eran Grandes. Tiene CA 10 + Destreza (máximo 2) y parece una armadura de placas blandas naranjas ceñidas al cuerpo.",
 				"Una vez al día, cuando atacan al portador con un arma de metal no mágica, puede usar su reacción para obligar al atacante a realizar una salvación de Destreza CD 13. Con un fallo, el arma recibe un penalizador permanente de -1; si alcanza -5, se rompe."
+			]
+		},
+		{
+			"name": "Botiquín",
+			"type": "T",
+			"rarity": "None",
+			"value": 7500,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Este kit sirve para cerrar heridas y realizar intervenciones quirúrgicas de gran precisión y dificultad, como amputar miembros de forma segura, reconstruir huesos u operar a torso abierto. Su característica asociada es Sabiduría.",
+				{
+					"type": "entries",
+					"name": "Componentes",
+					"entries": [
+						"Vendas, bisturí, tijeras quirúrgicas, alcohol antiséptico, tres hierbas analgésicas, tres hierbas energéticas, aguja, 5 pies de hilo, sierra pequeña para huesos, un juego de escalpelos y bisturís, un estetoscopio, una lupa, diez viales y una varilla para remover."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Arcana",
+					"entries": [
+						"Puedes determinar el nivel de conjuro necesario para acabar con una enfermedad mágica."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Investigación",
+					"entries": [
+						"Te resulta más fácil investigar medicamentos y antídotos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Naturaleza",
+					"entries": [
+						"Te resulta más fácil encontrar hierbas medicinales para reponer el kit."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Medicina",
+					"entries": [
+						"Te resulta más fácil determinar qué tipo de daño causó determinadas heridas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Supervivencia",
+					"entries": [
+						"Puedes determinar el estado físico de una criatura observando únicamente sus rastros de sangre si conoces su tamaño."
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Actividades del Botiquín",
+					"colLabels": [
+						"Actividad",
+						"CD",
+						"Efecto"
+					],
+					"colStyles": [
+						"col-5",
+						"col-1 text-center",
+						"col-6"
+					],
+					"rows": [
+						["Tratar herida", "10", "Cura una hemorragia y previene efectos negativos."],
+						["Extirpar miembro de forma segura*", "13", "Evita efectos negativos de heridas graves."],
+						["Preparar calmantes", "14", "+5 a las pruebas con este kit durante operaciones; gasta tres hierbas analgésicas."],
+						["Preparar somníferos", "14", "+10 a las pruebas con este kit durante operaciones; gasta diez hierbas analgésicas."],
+						["Tratar herida interna*", "15", "Recupera puntos de golpe máximos perdidos o evita efectos negativos de heridas graves internas."],
+						["Hacer una autopsia", "15", "Determinas la causa de la muerte."],
+						["Extirpar órgano*", "17", "Evita efectos negativos de heridas internas muy graves."],
+						["Trasplante*", "25", "Probablemente, si has llegado a este punto, la alternativa sea resurrección."]
+					]
+				},
+				"* Requiere competencia con el kit o en Medicina."
+			]
+		},
+		{
+			"name": "Kit de Tatuador",
+			"type": "T",
+			"rarity": "None",
+			"value": 1000,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Muchas razas y sociedades graban arte, palabras, hechos o historias en la piel. Este kit reúne las herramientas necesarias para hacerlo. Sus características asociadas son Destreza para la corrección o Carisma para la expresividad.",
+				{
+					"type": "entries",
+					"name": "Componentes",
+					"entries": [
+						"Tinta, agujas de tatuador, cuero, henna, carboncillo y papel vegetal, alcohol, cremas y aceites hidratantes."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Arcana y Religión",
+					"entries": [
+						"Puedes reconocer glifos mágicos o símbolos religiosos en tatuajes ajenos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Historia",
+					"entries": [
+						"Puedes reconocer tatuajes tribales, de bandas y de otras organizaciones."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Perspicacia",
+					"entries": [
+						"Puedes reconocer la naturaleza o el significado de un tatuaje."
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Actividades del Kit de Tatuador",
+					"colLabels": ["Actividad", "CD"],
+					"colStyles": ["col-10", "col-2 text-center"],
+					"rows": [
+						["Tatuar un símbolo simple o letras", "10"],
+						["Tatuar un símbolo detallado", "17"],
+						["Tatuar un símbolo complejo", "20"],
+						["Tatuar escamas (simple/detallado/complejo)", "14/21/24"]
+					]
+				}
+			]
+		},
+		{
+			"name": "Figura Ilusoria",
+			"type": "G",
+			"rarity": "None",
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Esta figura de acción mide aproximadamente un palmo y medio, aunque su tamaño puede variar. Su aspecto cambia según el estado emocional de quien la observa: ante emociones negativas muestra a su mayor enemigo o a la criatura que más odia; ante emociones positivas representa al observador o a alguien a quien admira.",
+				"Una prueba de Inteligencia (Investigación) CD 18 permite encontrar un pequeño botón. Al pulsarlo, la figura conserva el aspecto que tenía en ese momento hasta que vuelva a pulsarse."
+			]
+		},
+		{
+			"name": "Herramientas de Cazador",
+			"type": "T",
+			"rarity": "None",
+			"value": 1000,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"La caza es una profesión muy extendida en la Costa de la Espada. Este kit reúne sus herramientas habituales y tiene Sabiduría como característica asociada.",
+				{
+					"type": "entries",
+					"name": "Componentes",
+					"entries": [
+						"Aparejos de pesca, una red, un cepo, 100 pies de cuerda, un cuchillo y cebos variados."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Perspicacia e Investigación",
+					"entries": [
+						"Te resulta más fácil reconocer qué trampa es más eficaz contra un tipo de criatura y qué cebo conviene utilizar."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Naturaleza",
+					"entries": [
+						"Te resulta más fácil recoger ingredientes para elaborar cebos o fabricar armas y trampas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Juego de Manos",
+					"entries": [
+						"Puedes añadir tu competencia con el kit a las pruebas para desarmar las trampas de otros cazadores."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Supervivencia",
+					"entries": [
+						"Puedes añadir tu competencia con el kit a las pruebas para montar trampas contra cualquier tipo de criatura."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Trato con Animales",
+					"entries": [
+						"Te resulta más fácil tratar con criaturas no alineadas y poco inteligentes si utilizas tus cebos."
+					]
+				},
+				"Durante un descanso corto puedes fabricar un arco corto o una jabalina como arma de cazador menor, o un arco largo o una lanza como arma de cazador mayor, si dispones de los materiales necesarios. Las actividades siguientes requieren 1 hora de elaboración.",
+				{
+					"type": "table",
+					"caption": "Actividades de las Herramientas de Cazador",
+					"colLabels": ["Actividad", "CD"],
+					"colStyles": ["col-10", "col-2 text-center"],
+					"rows": [
+						["Preparar cebo genérico", "10"],
+						["Preparar cebo especializado", "15"],
+						["Poner una trampa común", "X = CD"],
+						["Poner una trampa para presa mayor", "X = CD"],
+						["Fabricar arma de cazador menor", "15"],
+						["Fabricar arma de cazador mayor", "20"],
+						["Fabricar diez flechas para arco", "12"],
+						["Reparar una red", "13"]
+					]
+				}
+			]
+		},
+		{
+			"name": "Kit de Purificación de Toxinas",
+			"type": "T",
+			"rarity": "None",
+			"value": 1000,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Este kit permite limpiar completamente las toxinas de una criatura. Su característica asociada es Sabiduría.",
+				{
+					"type": "entries",
+					"name": "Componentes",
+					"entries": [
+						"Cuchillos pequeños de varios grosores, piedra de afilar, pinzas, tijeras y vinagre."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Naturaleza",
+					"entries": [
+						"Puedes purificar comida en mal estado y recuperar una ración por cada dos desperdiciadas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Medicina",
+					"entries": [
+						"Te resulta más fácil lidiar con venenos naturales."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Supervivencia",
+					"entries": [
+						"Te resulta más fácil reconocer tipos de toxinas naturales."
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Actividades del Kit de Purificación de Toxinas",
+					"colLabels": ["Actividad", "CD"],
+					"colStyles": ["col-10", "col-2 text-center"],
+					"rows": [
+						["Purificar una presa Diminuta", "10"],
+						["Purificar una presa Pequeña", "14"],
+						["Purificar una presa Mediana", "18"]
+					]
+				}
+			]
+		},
+		{
+			"name": "Kit de Embalsamador",
+			"type": "T",
+			"rarity": "None",
+			"value": 3000,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Muchos cultos a la muerte y a la no muerte necesitan que los cadáveres perduren. Este kit permite conseguirlo y tiene Inteligencia como característica asociada.",
+				{
+					"type": "entries",
+					"name": "Componentes",
+					"entries": [
+						"Martillo y cincel pequeños, cizallas, tijeras, una sierra pequeña para huesos, pinzas de precisión, dos cuchillas, dos punzones, viales, una botella de formol, una de alcohol de curar y maquillaje."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Arcana",
+					"entries": [
+						"Puedes determinar cómo y durante cuánto tiempo ha estado un cadáver bajo los efectos de un conjuro de conservación, y detectar la influencia de conjuros que suspenden la vida, como {@spell feign death} o {@spell sequester}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Medicina",
+					"entries": [
+						"Te resulta más fácil reconocer la causa de la muerte y estimar cuánto tiempo lleva muerta una criatura."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Naturaleza",
+					"entries": [
+						"Puedes reconocer la raza y el sexo de un cadáver incluso si solo queda el esqueleto."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Religión o Historia",
+					"entries": [
+						"Puedes determinar la religión, culto, época, etnia o civilización de quien realizó el ritual funerario de un cadáver."
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Actividades del Kit de Embalsamador",
+					"colLabels": ["Actividad", "CD"],
+					"colStyles": ["col-10", "col-2 text-center"],
+					"rows": [
+						["Esconder o disimular lesiones o marcas en la piel de una criatura viva o muerta", "12"],
+						["Conservar una parte específica del cuerpo", "15"],
+						["Extirpar miembros internos sin dañar el físico externo", "18"],
+						["Embalsamar un cadáver correctamente", "20"]
+					]
+				}
+			]
+		},
+		{
+			"name": "Kit de Torturador",
+			"type": "T",
+			"rarity": "None",
+			"value": 2000,
+			"source": "Himo",
+			"page": "??",
+			"entries": [
+				"Este kit reúne herramientas diseñadas para infligir dolor. Su característica asociada es Fuerza.",
+				{
+					"type": "entries",
+					"name": "Componentes",
+					"entries": [
+						"Un juego de cuchillos y tenazas de varios tamaños, una lima, pinzas de presión, dos sierras para huesos, trapos, alcohol, una lupa y diez velas. Las versiones +1 pueden contener peras anales de varios tamaños, potros, damas de hierro, tornos, toros de bronce y otros instrumentos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Intimidación",
+					"entries": [
+						"Puedes sumar el bonificador del kit —Fuerza más bonificador de competencia— a una prueba de Intimidación en la que lo utilices."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Historia",
+					"entries": [
+						"Puedes determinar automáticamente si un aparato fue diseñado para torturar y cómo funciona."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Juego de Manos",
+					"entries": [
+						"Puedes sumar el bonificador del kit —Fuerza más bonificador de competencia— a una prueba para atar a una criatura."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Medicina",
+					"entries": [
+						"Te resulta más fácil detectar si un metal puede transmitir enfermedades e infecciones."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Naturaleza o Investigación",
+					"entries": [
+						"Te resulta más fácil detectar puntos débiles en criaturas vivas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Religión o Historia",
+					"entries": [
+						"Puedes determinar a qué religión, culto, época, etnia o civilización pertenece un método concreto de tortura."
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Actividades del Kit de Torturador",
+					"colLabels": ["Actividad*", "CD"],
+					"colStyles": ["col-10", "col-2 text-center"],
+					"rows": [
+						["Reducir los puntos de golpe máximos en una cantidad igual al bonificador de competencia", "12"],
+						["Reducir un Dado de Golpe actual", "14"],
+						["Romper huesos (una desventaja del DMG)", "16"],
+						["Reducir un Dado de Golpe máximo**", "18"],
+						["Provocar un punto de agotamiento", "18"]
+					]
+				},
+				"* Fallar una prueba inflige una cantidad de daño letal igual a los puntos de golpe que fueran a perderse y deja inconsciente al objetivo.",
+				"** La criatura recupera uno de estos Dados de Golpe por descanso largo."
 			]
 		}
 	],
