@@ -3,6 +3,7 @@
 	"alchemist": "class-alchemist.json",
 	"barbarian": "class-barbarian.json",
 	"bard": "class-bard.json",
+	"canalla": "class-canalla.json",
 	"cleric": "class-cleric.json",
 	"druid": "class-druid.json",
 	"fighter": "class-fighter.json",
