@@ -335,8 +335,8 @@ class PageFilterSpells extends PageFilter {
 		this._areaTypeFilter = areaTypeFilter;
 	}
 
-	populateHomebrewClassLookup (homebrew) {
-		// load homebrew class spell list addons
+	populateClassLookup (classData) {
+		// Load class spell list addons from either built-in or homebrew class data.
 		// Three formats are available. A string (shorthand for "spell" format with source "PHB"), "spell" format (object
 		//   with a `name` and a `source`), and "class" format (object with a `class` and a `source`).
 
@@ -383,8 +383,8 @@ class PageFilterSpells extends PageFilter {
 			}
 		};
 
-		if (homebrew.class) {
-			homebrew.class.forEach(c => {
+		if (classData.class) {
+			classData.class.forEach(c => {
 				c.source = c.source || SRC_PHB;
 
 				if (c.classSpells) c.classSpells.forEach(it => handleSpellListItem(it, c.name, c.source));
@@ -400,8 +400,8 @@ class PageFilterSpells extends PageFilter {
 			})
 		}
 
-		if (homebrew.subclass) {
-			homebrew.subclass.forEach(sc => {
+		if (classData.subclass) {
+			classData.subclass.forEach(sc => {
 				sc.classSource = sc.classSource || SRC_PHB;
 				sc.shortName = sc.shortName || sc.name;
 				sc.source = sc.source || sc.classSource;
@@ -410,6 +410,10 @@ class PageFilterSpells extends PageFilter {
 				if (sc.subSubclassSpells) Object.entries(sc.subSubclassSpells).forEach(([ssC, arr]) => arr.forEach(it => handleSpellListItem(it, sc.class, sc.classSource, sc.shortName, sc.source, ssC)));
 			});
 		}
+	}
+
+	populateHomebrewClassLookup (homebrew) {
+		this.populateClassLookup(homebrew);
 	}
 
 	mutateForFilters (spell) {
@@ -556,6 +560,7 @@ class ModalFilterSpells extends ModalFilter {
 	}
 
 	async _pInit () {
+		this._pageFilter.populateClassLookup(await DataUtil.class.loadJSON());
 		this._pageFilter.populateHomebrewClassLookup(BrewUtil.homebrew);
 	}
 

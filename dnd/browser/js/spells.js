@@ -330,10 +330,14 @@ async function pPageInit (loadedSources) {
 		hasPrintColumns: true
 	});
 
-	const homebrew = await BrewUtil.pAddBrewData();
+	const [homebrew, classData] = await Promise.all([
+		BrewUtil.pAddBrewData(),
+		DataUtil.class.loadJSON()
+	]);
 	BrewUtil.bind({pHandleBrew: () => {}}); // temporarily bind "do nothing" brew handler
 	await BrewUtil.pAddLocalBrewData(); // load local homebrew, so we can add any local spell classes
 	BrewUtil.bind({pHandleBrew: null}); // unbind temporary handler
+	spellsPage._pageFilter.populateClassLookup(classData);
 	spellsPage._pageFilter.populateHomebrewClassLookup(homebrew);
 }
 
