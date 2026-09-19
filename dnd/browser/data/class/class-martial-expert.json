@@ -1,0 +1,130 @@
+{
+	"class": [
+		{
+			"name": "Experto Marcial",
+			"source": "Himo",
+			"page": "??",
+			"hd": {"number": 1, "faces": 10},
+			"proficiency": ["str", "con"],
+			"startingProficiencies": {
+				"armor": ["Todas", "escudos"],
+				"weapons": ["Simples", "Marciales"],
+				"tools": ["Herrero"],
+				"skills": [{"choose": {"from": ["athletics", "intimidation", "medicine", "persuasion", "history", "insight", "survival"], "count": 2}}]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) Ring Mail, (b) Hide Armor o (c) Leather Armor.",
+					"(a) Un arma marcial o (b) Dos armas ligeras.",
+					"(a) Arco corto y 20 virotes o (b) 4 armas arrojadizas.",
+					"Un escudo, Un kit de explorador y el Kit de Herrero."
+				]
+			},
+			"multiclassing": {
+				"requirements": {"str": 13, "con": 13},
+				"proficienciesGained": {
+					"armor": ["ligera", "media"],
+					"tools": ["Kit de Herrero"]
+				}
+			},
+			"fluff": [{
+				"name": "Experto Marcial",
+				"source": "Himo",
+				"page": "??",
+				"entries": [
+					"Un experto marcial es un tipo de caballero capaz de sacar el máximo partido a su equipo de combate y las situaciones en las que se encuentren, por difíciles que sean. Pasan tanto tiempo curtiendo su físico como afilando sus armas o reparando sus armaduras. Son combatientes fieros y temibles, pero responsables y serios. Saben que en el combate solo existe la vida y la muerte, y no tienen intención de perder a nadie en el camino.",
+					"Si cualquier rasgo de esta clase requiere una salvación, la CD es 8+BC+Constitución"
+				]
+			}],
+			"classFeatures": [
+				[
+					{"name": "Máximo Partido", "source": "Himo", "page": "??", "entries": ["Eres capaz de asestar un golpe especialmente temible con tu arma. Una vez por turno, al acertar un golpe, puedes decidir hacer crítico automático a costa de la integridad del arma. El arma utilizada recibe un penalizador permanente de -1 cada vez que hagas esto (si utilizaste un arco, el penalizador lo recibe el arco). En el momento que un arma con al menos un penalizador de este tipo tenga el modificador en negativo, esta se rompe. Si el arma era mágica, pierde todas sus propiedades permanentemente.", "Este rasgo solo dobla el daño del arma, y no de daños extra como sneak attack, smites (normales o mejorados), conjuros que potencien el arma (hex, booming blade, hunter's mark...), pero sí stackea específicamente con crítico brutal o las maniobras del guerrero.", "Puedes reparar tu equipo gastando 20 minutos, tus herramientas de herrero y un dado de golpe por cada penalizador que haya ganado de esta forma. Esto puede coincidir con un descanso corto o largo."]},
+					{"name": "Estilo de Lucha", "source": "Himo", "page": "??", "entries": ["Ganas un estilo de lucha a elegir en la siguiente lista. Puedes escoger uno más a los lv 6, 11 y 17.", {"type": "list", "items": ["{@optfeature Defense|PHB|Defensa}", "{@optfeature Dueling|PHB|Duelista}", "{@optfeature Great Weapon Fighting|PHB}", "{@optfeature Interception|TCE}", "{@optfeature Protection|PHB}", {"type": "item", "name": "Shield Fighting", "entry": "Puedes usar el escudo como arma a melé. Hace {@damage 1d8} contundente y va a fuerza."}, "{@optfeature Superior Technique|TCE} (puede cogerse más de una vez)", "{@optfeature Thrown Weapon Fighting|TCE}", "{@optfeature Two-Weapon Fighting|PHB}", "{@optfeature Unarmed Fighting|TCE|Unarmed Strike}"]}]}
+				],
+				[{"name": "Golpe Amortiguado", "source": "Himo", "page": "??", "entries": ["Mientras lleves armadura, todo daño cortante, contundente o perforante que recibas se ve reducido en una cantidad igual a tu BC, potencialmente anulando el daño. Además, dependiendo del tipo de armadura que lleves tienes acceso a las siguientes reacciones:", {"type": "list", "items": [{"type": "item", "name": "Armadura Ligera", "entry": "Reduces el daño de una fuente de daño en una cantidad igual a tu modificador de destreza+BC y te mueves 15 ft. sin provocar ataques de oportunidad. Hasta el final de tu próximo turno ganas un bono a la CA igual a la mitad de tu BC. La armadura recibe un penalizador de -1 a la CA."}, {"type": "item", "name": "Armadura Media", "entry": "Cuando tengas que salvar destreza, puedes salvar constitución en su lugar y reducir el daño a la mitad, independientemente de si salvas o no. Hasta el final de tu siguiente turno, reduces todas las fuentes de daño que vayas a recibir en una cantidad igual a tu modificador de Constitución. La armadura recibe un penalizador de -1 a la CA."}, {"type": "item", "name": "Armadura Pesada", "entry": "Aumenta tu CA en una cantidad igual a tu modificador de fuerza+BC para el golpe que triggerea la reacción y la mitad del BC hasta el final de tu próximo turno. La armadura recibe un penalizador de -1 a la CA."}, {"type": "item", "name": "Escudo", "entry": "Cuando vayas a recibir un golpe crítico, no solo es anulado sino que el ataque falla. El escudo recibe un penalizador de -1 a la CA."}]}, "Cuando la CA de la armadura acumule un penalizador igual a tu BC + Dex, Constitución o Fuerza (si era ligera, media o pesada respectivamente) en negativo, esta es destruida independientemente de si es o no mágica. El escudo es destruido cuando ya no puede aportar CA. Si la armadura o escudo tienen modificadores mágicos, también extienden la durabilidad de las armas.", "Puedes reparar tu armadura como si fuera un arma con tu rasgo de Máximo Partido.", "Si puedes usar el escudo como arma y recibió un penalizador por hacer crítico con un ataque, tu CA no se ve reducida, sino que lo hace el modificador de ataque y daño de tu escudo como arma. Lleva los modificadores de ataque y CA por separado."]}],
+				[{"name": "Forma de Combate", "source": "Himo", "page": "??", "gainSubclassFeature": true, "entries": ["En el nivel 3, eliges una Forma de Combate de la lista de formas disponibles. Tu elección te otorga rasgos en el nivel 3 y de nuevo en los niveles 7, 13 y 18."]}],
+				[
+					{"name": "Ability Score Improvement", "source": "Himo", "page": "??", "entries": ["When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]},
+					{"name": "Generar Apertura", "source": "Himo", "page": "??", "entries": ["Un número de veces igual a tu BC por descanso corto puedes usar tu máximo partido o tu golpe amortiguado sin penalizadores."]}
+				],
+				[
+					{"name": "Multiataque", "source": "Himo", "page": "??", "entries": ["Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."]},
+					{"name": "Siempre Listo", "source": "Himo", "page": "??", "entries": ["Eres capaz de prepararte aún más rápido para el combate. Tardas 20 Segundos (3 turnos) en equipar o desequipar una armadura ligera, 1 minuto en equipar o desequipar una armadura media y 5 minutos en equipar o desequipar una armadura pesada. También puedes equipar el escudo con la bonus."]}
+				],
+				[
+					{"name": "Estilo de Lucha", "source": "Himo", "page": "??", "entries": ["Escoges un estilo de lucha más de la lista de Estilo de Lucha."]},
+					{"name": "Estallido de Guerra", "source": "Himo", "page": "??", "entries": ["Puedes cambiar uno de tus ataques del multiataque por la acción de dash. Hasta tres aliados de tu elección que te vean hacerlo pueden usar su reacción para moverse hasta la mitad de su movilidad en la misma dirección que tu sin provocar ataques de oportunidad.", "Ganas 5 ft de movilidad."]}
+				],
+				[{"name": "Forma de Combate", "source": "Himo", "page": "??", "gainSubclassFeature": true, "entries": ["Obtienes un nuevo rasgo de tu Forma de Combate."]}],
+				[{"name": "Ability Score Improvement", "source": "Himo", "page": "??", "entries": ["When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]}],
+				[{"name": "Maestro Reparador", "source": "Himo", "page": "??", "entries": ["Tienes expertise en herramientas de Herrero. Además, cuando repares un arma, armadura o escudo, eliminas dos penalizadores en vez de uno. Además, cuando gastes dados de golpe en reparar tus armas, puedes tirar el dado igualmente, sumar tu constitución y curarte la mitad del resultado."]}],
+				[{"name": "Golpes Potentes", "source": "Himo", "page": "??", "entries": ["Cuando usas tu rasgo de Máximo Partido, el objetivo salva Fuerza. Con un fallo es empujado 5 ft y cae prone."]}],
+				[
+					{"name": "Estilo de Lucha", "source": "Himo", "page": "??", "entries": ["Escoges un estilo de lucha más de la lista de Estilo de Lucha."]},
+					{"name": "Rematador", "source": "Himo", "page": "??", "entries": ["Cuando golpees a una criatura con un ataque letal, si quedó con 5 HP o menos muere directamente."]}
+				],
+				[{"name": "Ability Score Improvement", "source": "Himo", "page": "??", "entries": ["When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]}],
+				[{"name": "Forma de Combate", "source": "Himo", "page": "??", "gainSubclassFeature": true, "entries": ["Obtienes un nuevo rasgo de tu Forma de Combate."]}],
+				[{"name": "Desarmar y Humillar", "source": "Himo", "page": "??", "entries": ["Si usas tu acción para desarmar a un oponente y lo consigues, puedes usar una mano libre para coger su arma y atacarle como parte de la acción. Esta acción no puede  beneficiarse del rasgo Máximo Partido. No puedes usar este rasgo si no puedes equipar el arma del rival."]}],
+				[{"name": "Violencia Extrema", "source": "Himo", "page": "??", "entries": ["Si utilizaste todo tu multiataque en pegar a una sola criatura, puedes atacar dos veces más con la bonus a esa criatura. Si la criatura muere antes de dar el segundo ataque, este se pierde."]}],
+				[{"name": "Ability Score Improvement", "source": "Himo", "page": "??", "entries": ["When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]}],
+				[
+					{"name": "Estilo de Lucha", "source": "Himo", "page": "??", "entries": ["Escoges un estilo de lucha más de la lista de Estilo de Lucha."]},
+					{"name": "Mejora de Rematador", "source": "Himo", "page": "??", "entries": ["Ahora la criatura muere automáticamente si cae por debajo de 10 HP"]}
+				],
+				[{"name": "Forma de Combate", "source": "Himo", "page": "??", "gainSubclassFeature": true, "entries": ["Obtienes un nuevo rasgo de tu Forma de Combate."]}],
+				[{"name": "Ability Score Improvement", "source": "Himo", "page": "??", "entries": ["When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]}],
+				[{"name": "Peligroso", "source": "Himo", "page": "??", "entries": ["Las armas que uses siempre son consideradas mágicas para evitar resistencias e inmunidades. Además, sumas tanto fuerza como destreza al daño de tus armas, independientemente de cuál hayas usado para atacar."]}]
+			],
+			"subclassTitle": "Formas de Combate",
+			"subclasses": [
+				{
+					"name": "Bruto", "shortName": "Bruto", "source": "Himo", "page": "??",
+					"subclassFeatures": [
+						[{"name": "Bruto", "source": "Himo", "page": "??", "entries": ["Este tipo de expertos marciales sabe no depender únicamente de sus armas para acabar con el enemigo. Los brutos son capaces de arrebatos incontrolables de fuerza, utilizando técnicas avanzadas para someter a sus enemigos con sus manos desnudas. Aun así, no son pocos los brutos que siguen apoyándose en armas para asegurar el trabajo.", {"type": "entries", "name": "Luchador rabioso", "entries": ["Una vez por ronda, si atacaste a una criatura con un ataque desarmado, puedes hacer un ataque desarmado extra como parte de ese ataque."]}]}],
+						[{"name": "Cabeza dura", "source": "Himo", "page": "??", "entries": ["Como parte de tu ataque puedes darle un cabezazo a un objetivo a melé. Si golpeas, el objetivo recibe {@damage 2d10}+fuerza de daño contundente y tu la mitad. Ambos quedáis Dazed. El daño que recibes de este ataque puede ser reducido por tu armadura."]}],
+						[{"name": "Melé Devastadora", "source": "Himo", "page": "??", "entries": ["Si te moviste al menos 20 ft en línea recta hacia un objetivo, puedes hacer un ataque desarmado especial contra él como parte de tu multiataque si decides usarlo. Con un impacto, en vez de hacer daño, proneas al objetivo y está restringido por ti. Mientras dure esta posición, tú estás prone y él no puede ser empujado ni salvar destreza contra otros efectos si tú no lo permites. Tu salvas destreza con desventaja contra otros efectos, y de fallar él se libera. La criatura no puede ser Large o más grande. Ocupáis el mismo espacio."]}],
+						[{"name": "Sin miedo a morir", "source": "Himo", "page": "??", "entries": ["Cuando te reduzcan a 0 HP, puedes usar tu reacción para correr hacia un enemigo y atacarle tantas veces como te atrevas o seas capaz. Por cada ataque haz una salvación de muerte. Todos esos golpes son críticos si impactan. Si superaste las tres tiradas, quedas a 1 HP y tienes 1 PtA. Si te reviven después de esto, mantienes cualquier PtA ganado de esta forma (hasta un máximo de 5)."]}]
+					]
+				},
+				{
+					"name": "Inexpugnable", "shortName": "Inexpugnable", "source": "Himo", "page": "??",
+					"subclassFeatures": [
+						[{"name": "Inexpugnable", "source": "Himo", "page": "??", "entries": ["Expertos eruditos en el arte de la lucha con escudos. No existe ningún tipo de combatiente capaz de sacarle mayor partido a un escudo en combate. Los más entrenados son capaces de usar dos escudos a la vez con total destreza y precisión, siendo incluso capaces de cubrir por completo el daño.", {"type": "entries", "name": "Protección a Medida", "entries": ["Mientras lleves tu escudo reduces el daño de los ataques contundentes perforantes y cortantes en una cantidad igual al modificador de CA de tu escudo. Además, cuentas como en cobertura media para salvaciones de destreza."]}]}],
+						[{"name": "Entereza", "source": "Himo", "page": "??", "entries": ["Suma tu modificador de fuerza a la cantidad de penalizadores que puede recibir tu escudo antes de de ver reducido su modificador de CA."]}],
+						[{"name": "Baluarte en mano", "source": "Himo", "page": "??", "entries": ["Puedes equipar dos escudos y ganar sus beneficios. Si haces esto, se te considera bajo cobertura tres cuartos para salvaciones."]}],
+						[{"name": "Máxima defensa", "source": "Himo", "page": "??", "entries": ["Mientras lleves dos escudos equipados, puedes usar tu reacción para darte cobertura total a ataques y efectos de área hasta el inicio de tu próximo turno. Tus escudos reciben un penalizador de -1 cada uno por cada efecto de área que hayas recibido, y un -1 por cada ataque, aunque solo lo recibe uno cada vez y puedes decidir cuál."]}]
+					]
+				},
+				{
+					"name": "Armado", "shortName": "Armado", "source": "Himo", "page": "??",
+					"subclassFeatures": [
+						[{"name": "Armado", "source": "Himo", "page": "??", "entries": ["Muchos guerreros utilizan intrincadas maniobras, llaves o movimientos precisos. Los expertos armados son capaces de realizar golpes especiales en el momento correcto, de forma que el oponente se vea abrumado ante la potente superioridad de sus ataques. Este tipo de combatientes sabe llevar las armas al extremo y romperlas solo si es necesario. Esta gestión de recursos y visión de la oportunidad les diferencian de cualquier otro tipo de guerrero.", {"type": "entries", "name": "Uno con tu arma", "entries": ["No puedes ser desarmado si no quieres y puedes sacar un arma como parte del ataque."]}, {"type": "entries", "name": "Parry", "entries": ["Como reacción puedes darte un bono a la CA igual a tu modificador de Destreza o Fuerza. Si el ataque falló, puedes hacer un ataque con tu arma al objetivo. Si decides atacar y lo consigues, el arma recibe un penalizador de -1."]}]}],
+						[{"name": "Golpe ralentizante", "source": "Himo", "page": "??", "entries": ["Puedes sacrificar el segundo ataque de tu multiataque para hacer un golpe especialmente potente. Con un impacto, el objetivo pierde la capacidad de atacar en su turno o,  si tiene multiataque, uno de sus ataques a tu elección. No puedes anular un ataque que desconoces ni la capacidad de lanzar conjuros."]}],
+						[{"name": "Tornado de Carne", "source": "Himo", "page": "??", "entries": ["Cuando aciertes dos ataques de tu multiataque, puedes seguir atacando hasta que falles. Por cada impacto tu arma recibe un penalizador de -1."]}],
+						[{"name": "Golpe de Gracia", "source": "Himo", "page": "??", "entries": ["Los ataques contra criaturas inconscientes o tumbadas son siempre crítico."]}]
+					]
+				},
+				{
+					"name": "Blindado", "shortName": "Blindado", "source": "Himo", "page": "??",
+					"subclassFeatures": [
+						[{"name": "Blindado", "source": "Himo", "page": "??", "entries": ["Tan importante es una espada afilada como una armadura encerada. Los expertos blindados han conseguido sacar el máximo partido a su equipo de combate, independiente de cuál sea, y la costumbre de llevar siempre tanto peso extra en el cuerpo ha acabado otorgándoles beneficios extra incluso cuando no tienen nada equipado.", {"type": "entries", "name": "Acostumbrado al peso", "entries": ["Te es más fácil moverte con las armaduras, permitiéndote ganar ciertos efectos cuando te vales de tus reflejos. Ganas los siguientes rasgos mientras lleves algún tipo de armadura:", {"type": "list", "items": [{"type": "item", "name": "Ligera o nada", "entry": "Tu movilidad aumenta en 5 ft con armadura ligera o 10 sin armadura. Una vez por ronda, cuando uses tu Golpe Amortiguado, ganas la cantidad amortiguada en HPT."}, {"type": "item", "name": "Media", "entry": "Cuando uses la acción de Esquivar, puedes curarte {@dice 1d10}+Constitución. Solo puedes usar esta acción de esta manera en combate y un número de veces igual a tu modificador de Constitución al día."}, {"type": "item", "name": "Pesada", "entry": "Cuando uses la acción de Esquivar, puedes tauntear a cualquier criatura a 5 ft de ti y que pueda verte. Cada una salva Wisdom. Con un fallo, deben targetearte a ti con cualquier ataque o efecto de área."}]}]}]}],
+						[{"name": "Fortificado", "source": "Himo", "page": "??", "entries": ["Ahora puedes reducir el daño de fuego, frío, trueno y eléctrico."]}],
+						[{"name": "Caída ligera, caída pesada", "source": "Himo", "page": "??", "entries": ["Al caer, dependiendo de qué armadura lleves equipada, ganas uno de los siguientes rasgos a costa de un penalizador de -1:", {"type": "list", "items": [{"type": "item", "name": "Ligera", "entry": "Reduces el daño por caída en una cantidad igual a la protección de tu armadura + lv (Este rasgo stackea con Golpe Amortiguado)."}, {"type": "item", "name": "Media", "entry": "Salvas consti CD 10+1 por cada 10ft de caída. Con un éxito te llevas un cuarto del daño, y con un fallo la mitad."}, {"type": "item", "name": "Pesada", "entry": "Si caes encima de una criatura puedes ponerte en una posición ventajosa. Haced una tirada de atletismo enfrentada. El perdedor está prone y recibe todo el daño. El ganador también está prone y recibe solo la mitad. El objetivo recibe daño extra igual a tu lv pase lo que pase."}]}]}],
+						[{"name": "Maestro en Armaduras", "source": "Himo", "page": "??", "entries": ["Ganas un rasgo dependiendo del tipo de armadura que lleves:", {"type": "list", "items": [{"type": "item", "name": "Ligera o nada", "entry": "Cuando te veas targeteado por un efecto de área para una fuente de daño, puedes usar tu reacción para moverte toda tu movilidad, potencialmente saliendo del área de efecto."}, {"type": "item", "name": "Media", "entry": "La armadura no cuenta para el peso que puedes llevar o cargar. Ganas los rasgos de armadura ligera de esta subclase de lv3."}, {"type": "item", "name": "Pesada", "entry": "Como parte de tu acción de dash puedes hacer ataques desarmados como free action al entrar en el espacio de una criatura. Con un impacto la criatura es empujada 5 ft, cae prone y está dazed. Este ataque no daña a la criatura, ni siquiera con rasgos externos a la clase."}]}]}]
+					]
+				},
+				{
+					"name": "Yeoman", "shortName": "Yeoman", "source": "Himo", "page": "??",
+					"subclassFeatures": [
+						[{"name": "Yeoman", "source": "Himo", "page": "??", "entries": ["Los yeomans son una orden de arqueros bajo el mando de los más grandes reyes. Su puntería es legendaria, siendo capaces de disparar incluso a proyectiles en el aire. Estos expertos marciales, sin embargo, son igual de potentes a malé, aunque saben buscarse la posición ventajosa par acribillar al enemigo a flechazos.", {"type": "entries", "name": "Disparador Multirango", "entries": ["Ignoras las desventajas por disparar a melé o a rango largo."]}]}],
+						[{"name": "Preciso", "source": "Himo", "page": "??", "entries": ["Ignoras toda cobertura que no sea total y no tienes desventaja por atacar a enemigos tumbados."]}],
+						[{"name": "Una flecha para un amigo", "source": "Himo", "page": "??", "entries": ["Como reacción cuando vayan a hacer un ataque a distancia contra ti o un aliado dentro del rango de tu arma, puedes hacer un ataque con tu arma a distancia contra el proyectil o efecto del ataque. Haz una tirada de ataque cuya CD es la tirada de ataque objetivo. Con un éxito, anulas el ataque, pero tu arma recibe un penalizador de -1 por cada tres dados de daño que fuese a tener el ataque. Con un fallo reduce el daño del ataque en una cantidad equivalente al daño de tu ataque."]}],
+						[{"name": "Francotirador", "source": "Himo", "page": "??", "entries": ["Como parte de la acción de esconderte puedes adoptar una pose de disparo que te facilite el apuntado y la velocidad de disparo. Mientras no uses tu acción para levantarte, eres invisible, tienes ventaja a todos los ataques y ganas dos ataques para tu multiataque. Por contra, tienes desventaja en salvaciones de fuerza y destreza, y fallarlas rompe esta postura, y vulnerabilidad a todo daño a melé. Tu movilidad se reduce a 0 y no puede aumentar de ninguna forma."]}]
+					]
+				}
+			]
+		}
+	]
+}
