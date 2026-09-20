@@ -1,14 +1,1 @@
-[
-	{
-		"tag": "creature",
-		"name": "Forest Prowler",
-		"source": "HWCS",
-		"reason": "The referenced HWCS creature is absent from both supplied 5etools catalogs; the spell text is retained without inventing a replacement stat block."
-	},
-	{
-		"tag": "spell",
-		"name": "Peter's Lanza",
-		"source": "PHB",
-		"reason": "No spell with this name exists in the local, 2014, or 2024 supplied catalogs; its intended homebrew source cannot be inferred safely."
-	}
-]
+[]

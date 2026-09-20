@@ -2609,7 +2609,7 @@
 												"{@spell Silence}; {@spell Spider Climb}; {@creature Ape|MM}",
 												"{@spell Clairvoyance}; {@spell Conjure Barrage}; {@creature Brown Bear|MM}",
 												"{@spell Aura of Purity}; {@spell Find Greater Steed|XGE}; {@creature Giant Boar|MM}",
-												"{@spell Conjure Volley}; {@spell Seeming}; Juvenile Forest Prowler"
+												"{@spell Conjure Volley}; {@spell Seeming}; {@creature Juvenile Forest Prowler|HWCS}"
 											],
 											[
 												"Ciénaga",
@@ -2635,7 +2635,7 @@
 											[
 												"Montaña",
 												"{@spell Spider Climb}; {@spell Snilloc's Snowball Swarm|XGE}; {@creature Giant Goat|MM}",
-												"{@spell Thunder Step|XGE}; {@spell Peter's Lanza}; Mountain Lion",
+												"{@spell Thunder Step|XGE}; {@spell Lanza Atrapante de Claymore|GPNM}; Mountain Lion",
 												"{@spell Dimension Door}; {@spell Storm Sphere|XGE}; Quetzalcoatlus",
 												"{@spell Passwall}; {@spell Animate Objects}; Dire Bird of Prey sin flyby y 60 ft de vuelo"
 											],

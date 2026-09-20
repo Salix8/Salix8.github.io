@@ -22,6 +22,7 @@ CLSS_NON_STANDARD_SOURCE = "spicy-sauce";
 CLSS_HOMEBREW_SOURCE = "refreshing-brew";
 
 MON_HASH_SCALED = "scaled";
+MON_HASH_SCALED_SPELL_SUMMON = "scaledspellsummon";
 
 STR_NONE = "None";
 STR_SEE_CONSOLE = "See the console (CTRL+SHIFT+J) for details.";
@@ -679,6 +680,8 @@ Parser.acToFull = function (ac) {
 					inBraces = false;
 				}
 			}
+		} else if (cur.special) {
+			stack += cur.special;
 		} else {
 			stack += cur;
 		}
@@ -2229,6 +2232,7 @@ SRC_AAG = "AAG";
 SRC_BMT = "BMT";
 SRC_EGW = "EGW";
 SRC_FTD = "FTD";
+SRC_HWCS = "HWCS";
 SRC_IDRotF = "IDRotF";
 SRC_SatO = "SatO";
 SRC_GdR = "GdR";
@@ -2387,6 +2391,7 @@ Parser.SOURCE_JSON_TO_FULL[SRC_AAG] = "Astral Adventurer's Guide";
 Parser.SOURCE_JSON_TO_FULL[SRC_BMT] = "The Book of Many Things";
 Parser.SOURCE_JSON_TO_FULL[SRC_EGW] = "Explorer's Guide to Wildemount";
 Parser.SOURCE_JSON_TO_FULL[SRC_FTD] = "Fizban's Treasury of Dragons";
+Parser.SOURCE_JSON_TO_FULL[SRC_HWCS] = "Humblewood Campaign Setting";
 Parser.SOURCE_JSON_TO_FULL[SRC_IDRotF] = "Icewind Dale: Rime of the Frostmaiden";
 Parser.SOURCE_JSON_TO_FULL[SRC_SatO] = "Sigil and the Outlands";
 Parser.SOURCE_JSON_TO_FULL[SRC_GdR] = "Grimorio de Ruvyn";
@@ -2526,6 +2531,7 @@ Parser.SOURCE_JSON_TO_ABV[SRC_AAG] = "AAG";
 Parser.SOURCE_JSON_TO_ABV[SRC_BMT] = "BMT";
 Parser.SOURCE_JSON_TO_ABV[SRC_EGW] = "EGW";
 Parser.SOURCE_JSON_TO_ABV[SRC_FTD] = "FTD";
+Parser.SOURCE_JSON_TO_ABV[SRC_HWCS] = "HWCS";
 Parser.SOURCE_JSON_TO_ABV[SRC_IDRotF] = "IDRotF";
 Parser.SOURCE_JSON_TO_ABV[SRC_SatO] = "SatO";
 Parser.SOURCE_JSON_TO_ABV[SRC_GdR] = "GdR";

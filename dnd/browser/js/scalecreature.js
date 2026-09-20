@@ -1963,3 +1963,85 @@
 		return level < 11 ? 0 : level < 13 ? 1 : level < 15 ? 2 : level < 17 ? 3 : 4;
 	}
 };
+
+class SpellSummonedCreatureScaleService {
+	static scale (creature, spellLevel) {
+		if (creature.summonedBySpellLevel == null) return creature;
+
+		const level = Number(spellLevel);
+		if (!Number.isInteger(level) || level < creature.summonedBySpellLevel || level > 9) {
+			throw new Error(`Invalid summon spell level "${spellLevel}" for ${creature.name}.`);
+		}
+
+		const scaled = JSON.parse(JSON.stringify(creature));
+		scaled._displayName = `${scaled.name} (${this._getOrdinal(level)}-Level Spell)`;
+		scaled.ac = (scaled.ac || []).map(item => this._scaleArmorClass(item, level));
+		this._scaleHitPoints(scaled, level);
+
+		for (const property of ["trait", "action", "bonus", "reaction"]) {
+			if (scaled[property]) scaled[property] = this._replaceStrings(scaled[property], value => this._scaleEntry(value, level));
+		}
+
+		scaled._summonedBySpell_level = level;
+		scaled._isScaledSpellSummon = true;
+		return scaled;
+	}
+
+	static _scaleArmorClass (item, spellLevel) {
+		if (!item || typeof item !== "object") return item;
+		const property = item.special != null ? "special" : typeof item.ac === "string" ? "ac" : null;
+		if (!property) return item;
+
+		item[property] = item[property].replace(
+			/(\d+)\s*\+\s*(?:the level of the spell|the spell's level|1 per spell level)/gi,
+			(match, base) => Number(base) + spellLevel
+		);
+		const naturalArmor = /^(\d+) \(natural armor\)$/i.exec(item[property]);
+		if (naturalArmor) return {ac: Number(naturalArmor[1]), from: ["natural armor"]};
+		return item;
+	}
+
+	static _scaleHitPoints (creature, spellLevel) {
+		if (!creature.hp?.special) return;
+		creature.hp.special = creature.hp.special.replace(
+			/(\d+)\s*\+\s*(\d+) for each spell level above (\d+)(?:st|nd|rd|th)?/gi,
+			(match, base, increment, threshold) => Number(base) + Number(increment) * (spellLevel - Number(threshold))
+		).replace(
+			/a number of Hit Dice \[d(\d+)s?] equal to the level of the spell/gi,
+			`${spellLevel}d$1 Hit Dice`
+		);
+	}
+
+	static _scaleEntry (value, spellLevel) {
+		return value
+			.replace(
+				/a number of(?: ([^.!?]+))? attacks equal to half (?:this|the) spell's level \(round(?:ed)? down\)/gi,
+				(match, attackName) => {
+					const count = Math.floor(spellLevel / 2);
+					return `${this._numberToText(count)}${attackName ? ` ${attackName}` : ""} attack${count === 1 ? "" : "s"}`;
+				}
+			)
+			.replace(/summonSpellLevel/g, `${spellLevel}`);
+	}
+
+	static _replaceStrings (value, transform) {
+		if (typeof value === "string") return transform(value);
+		if (Array.isArray(value)) return value.map(item => this._replaceStrings(item, transform));
+		if (!value || typeof value !== "object") return value;
+		for (const [key, child] of Object.entries(value)) value[key] = this._replaceStrings(child, transform);
+		return value;
+	}
+
+	static _numberToText (number) {
+		return ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"][number] || `${number}`;
+	}
+
+	static _getOrdinal (number) {
+		const mod100 = number % 100;
+		if (mod100 >= 11 && mod100 <= 13) return `${number}th`;
+		return `${number}${number % 10 === 1 ? "st" : number % 10 === 2 ? "nd" : number % 10 === 3 ? "rd" : "th"}`;
+	}
+}
+
+(typeof module !== "undefined" ? global : window).SpellSummonedCreatureScaleService = SpellSummonedCreatureScaleService;
+if (typeof module !== "undefined") module.exports.SpellSummonedCreatureScaleService = SpellSummonedCreatureScaleService;

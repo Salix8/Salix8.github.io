@@ -187,13 +187,22 @@ class BestiaryPage {
 
 		printBookView.handleSub(sub);
 
-		const scaledHash = sub.find(it => it.startsWith(MON_HASH_SCALED));
+		const scaledHash = sub.find(it => it.startsWith(`${MON_HASH_SCALED}${HASH_SUB_KV_SEP}`));
 		if (scaledHash) {
 			const scaleTo = Number(UrlUtil.unpackSubHash(scaledHash)[MON_HASH_SCALED][0]);
 			const scaleToStr = Parser.numberToCr(scaleTo);
 			const mon = monsters[Hist.lastLoadedId];
 			if (Parser.isValidCr(scaleToStr) && scaleTo !== Parser.crToNumber(lastRendered.mon.cr)) {
 				ScaleCreature.scale(mon, scaleTo).then(scaled => renderStatblock(scaled, true));
+			}
+		}
+
+		const scaledSpellSummonHash = sub.find(it => it.startsWith(`${MON_HASH_SCALED_SPELL_SUMMON}${HASH_SUB_KV_SEP}`));
+		if (scaledSpellSummonHash) {
+			const spellLevel = Number(UrlUtil.unpackSubHash(scaledSpellSummonHash)[MON_HASH_SCALED_SPELL_SUMMON][0]);
+			const mon = monsters[Hist.lastLoadedId];
+			if (Number.isInteger(spellLevel) && mon.summonedBySpellLevel != null && spellLevel >= mon.summonedBySpellLevel && spellLevel <= 9) {
+				renderStatblock(SpellSummonedCreatureScaleService.scale(mon, spellLevel), false, true);
 			}
 		}
 
@@ -447,7 +456,7 @@ function onSublistChange () {
 
 let monsters = [];
 let mI = 0;
-const lastRendered = {mon: null, isScaled: false};
+const lastRendered = {mon: null, isScaled: false, isScaledSpellSummon: false};
 function getScaledData () {
 	const last = lastRendered.mon;
 	return {scaled: last._isScaledCr, customHashId: getMonCustomHashId(last)};
@@ -560,9 +569,14 @@ async function pPreloadSublistSources (json) {
 }
 
 let $btnProf = null;
-function renderStatblock (mon, isScaled) {
+function renderStatblock (mon, isScaled, isScaledSpellSummon) {
+	if (mon.summonedBySpellLevel != null && mon._summonedBySpell_level == null) {
+		mon = SpellSummonedCreatureScaleService.scale(mon, mon.summonedBySpellLevel);
+		isScaledSpellSummon = true;
+	}
 	lastRendered.mon = mon;
 	lastRendered.isScaled = isScaled;
+	lastRendered.isScaledSpellSummon = !!isScaledSpellSummon;
 	renderer.setFirstSection(true);
 
 	const $content = $("#pagecontent").empty();
@@ -596,6 +610,7 @@ function renderStatblock (mon, isScaled) {
 			.toggle(isScaled) : null;
 
 		$content.append(RenderBestiary.$getRenderedCreature(mon, meta, {$btnScaleCr, $btnResetScaleCr}));
+		$content.find("#sel-summon-spell-level").change(evt => Hist.setSubhash(MON_HASH_SCALED_SPELL_SUMMON, Number(evt.target.value)));
 
 		// tokens
 		(() => {

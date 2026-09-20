@@ -139,13 +139,22 @@ class RenderBestiary {
 		<tr><td colspan="6"><strong>Senses</strong> ${Renderer.monster.getSensesPart(mon)}</td></tr>
 		<tr><td colspan="6"><strong>Languages</strong> ${Renderer.monster.getRenderedLanguages(mon.languages)}</td></tr>
 		
-		<tr>${Parser.crToNumber(mon.cr) !== 100 ? $$`
+		${mon.summonedBySpellLevel != null ? `<tr>
+		<td colspan="6"><strong>Spell Level</strong>
+			<select id="sel-summon-spell-level" class="form-control input-xs inline-block ml-2" style="width: auto;">
+				${[...new Array(10 - mon.summonedBySpellLevel)].map((unused, index) => {
+					const level = index + mon.summonedBySpellLevel;
+					return `<option value="${level}" ${level === mon._summonedBySpell_level ? "selected" : ""}>${level}</option>`;
+				}).join("")}
+			</select>
+		</td>
+		</tr>` : mon.cr != null && Parser.crToNumber(mon.cr) !== 100 ? $$`<tr>
 		<td colspan="6" style="position: relative;"><strong>Challenge</strong>
 			<span>${Parser.monCrToFull(mon.cr)}</span>
 			${options.$btnScaleCr || ""}
 			${options.$btnResetScaleCr || ""}
 		</td>
-		` : ""}</tr>
+		</tr>` : ""}
 		
 		${allTraits ? `<tr><td class="divider" colspan="6"><div></div></td></tr>${RenderBestiary._getRenderedSection("trait", allTraits, 1, {isCharacterBuilder: !!mon.characterBuilder})}` : ""}
 		${mon.action ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">Actions${mon.actionNote ? ` (<span class="small">${mon.actionNote}</span>)` : ""}</span></td></tr>

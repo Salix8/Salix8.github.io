@@ -1,0 +1,68 @@
+{
+	"monster": [
+		{
+			"name": "Forest Prowler",
+			"source": "HWCS",
+			"page": 183,
+			"size": "L",
+			"type": "beast",
+			"alignment": ["U"],
+			"ac": [{"ac": 16, "from": ["natural armor"]}],
+			"hp": {"average": 75, "formula": "10d10 + 20"},
+			"speed": {"walk": 40, "climb": 40},
+			"str": 15,
+			"dex": 18,
+			"con": 14,
+			"int": 4,
+			"wis": 14,
+			"cha": 9,
+			"skill": {"perception": "+4", "stealth": "+6"},
+			"senses": ["darkvision 60 ft."],
+			"passive": 14,
+			"languages": [],
+			"cr": "4",
+			"trait": [
+				{"name": "Natural Camouflage", "entries": ["The prowler has advantage on Dexterity ({@skill Stealth}) checks made in the forest. Creatures who attack a target that cannot see them have advantage on their attack roll."]},
+				{"name": "Pounce", "entries": ["If the prowler moves at least 10 feet toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a {@dc 14} Strength saving throw or be knocked {@condition Prone|PHB}. The prowler can use its bonus action to make another claw attack against this target."]},
+				{"name": "Ambuscade", "entries": ["The prowler can take the {@action Dash} or {@action Hide} action as a bonus action."]}
+			],
+			"action": [
+				{"name": "Multiattack", "entries": ["The prowler makes two claw attacks and one bite attack."]},
+				{"name": "Claw", "entries": ["{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}{@damage 1d8 + 4} slashing damage."]},
+				{"name": "Bite", "entries": ["{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}{@damage 2d8 + 4} piercing damage. If the target is {@condition Prone|PHB}, it takes an additional {@damage 1d8} piercing damage."]}
+			]
+		},
+		{
+			"name": "Juvenile Forest Prowler",
+			"source": "HWCS",
+			"page": 183,
+			"size": "L",
+			"type": "beast",
+			"alignment": ["U"],
+			"ac": [{"ac": 15, "from": ["natural armor"]}],
+			"hp": {"average": 52, "formula": "7d10 + 14"},
+			"speed": {"walk": 40, "climb": 40},
+			"str": 14,
+			"dex": 17,
+			"con": 14,
+			"int": 4,
+			"wis": 13,
+			"cha": 9,
+			"skill": {"perception": "+3", "stealth": "+5"},
+			"senses": ["darkvision 60 ft."],
+			"passive": 13,
+			"languages": [],
+			"cr": "3",
+			"trait": [
+				{"name": "Natural Camouflage", "entries": ["The prowler has advantage on Dexterity ({@skill Stealth}) checks made in the forest. Creatures who attack a target that cannot see them have advantage on their attack roll."]},
+				{"name": "Pounce", "entries": ["If the prowler moves at least 10 feet toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a {@dc 13} Strength saving throw or be knocked {@condition Prone|PHB}. The prowler can use its bonus action to make another claw attack against this target."]},
+				{"name": "Ambuscade", "entries": ["The prowler can take the {@action Dash} or {@action Hide} action as a bonus action."]}
+			],
+			"action": [
+				{"name": "Multiattack", "entries": ["The prowler makes one claw attack and one bite attack."]},
+				{"name": "Claw", "entries": ["{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}{@damage 1d8 + 3} slashing damage."]},
+				{"name": "Bite", "entries": ["{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}{@damage 2d8 + 3} piercing damage. If the target is {@condition Prone|PHB}, it takes an additional {@damage 1d8} piercing damage."]}
+			]
+		}
+	]
+}
