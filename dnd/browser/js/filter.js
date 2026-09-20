@@ -2505,6 +2505,7 @@ if (typeof module !== "undefined") {
 	module.exports = {
 		FilterUtil,
 		PageFilter,
+		ModalFilter,
 		FilterBox,
 		FilterItem,
 		FilterBase,

@@ -1,0 +1,143 @@
+{
+	"class": [
+		{
+			"name": "Desangrador",
+			"source": "Himo",
+			"page": "??",
+			"hd": {"number": 1, "faces": 10},
+			"proficiency": ["con", "cha"],
+			"spellcastingAbility": "con",
+			"preparedSpells": "<$level$>",
+			"preparedSpellsChange": "restLong",
+			"classSpells": [
+				{"filter": {"schools": ["N"], "levels": [1, 2, 3, 4, 5]}}
+			],
+			"startingProficiencies": {
+				"armor": ["Todas", "Escudos"],
+				"weapons": ["Todas excepto Firearms"],
+				"tools": ["Kit de Torturador"],
+				"skills": [{"choose": {"from": ["athletics", "insight", "intimidation", "medicine", "nature", "religion"], "count": 2}}]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) Ring Mail o (b) Chain Shirt.",
+					"(a) Un arma marcial o (b) 2 armas simples.",
+					"(a) Escudo o (b) 4 jabalinas.",
+					"2 dagas, kit de torturador y un pack de dunjeoneer."
+				]
+			},
+			"multiclassing": {
+				"requirements": {"con": 13},
+				"proficienciesGained": {
+					"armor": ["ligeras", "medias"],
+					"weapons": ["armas marciales"],
+					"tools": ["Kit de torturador"]
+				}
+			},
+			"fluff": [{
+				"name": "Desangrador",
+				"source": "Himo",
+				"page": "??",
+				"entries": [
+					"Los desangradores son combatientes temibles que se arrastran por el campo de batalla en un éxtasis de sangre y violencia. A menudo tocados por la locura y una insaciable sed de sangre y sufrimiento, estos guerreros son capaces de utilizar la sangre del campo de batalla para castear conjuros prohibidos. En muchas civilizaciones su mera existencia se limita a torturadores y criminales corsarios, más útiles vivos que muertos, pero más temidos que idolatrados.",
+					"CD = 8 + BC + Constitución"
+				]
+			}],
+			"classTableGroups": [{
+				"title": "Blood Magic",
+				"colLabels": ["Slot máx", "PtS máx"],
+				"rows": [
+					[1, 2], [1, 3], [1, 4], [1, 5], [2, 7], [2, 8], [2, 9], [2, 10], [3, 12], [3, 13],
+					[3, 14], [3, 15], [4, 17], [4, 18], [4, 19], [4, 20], [5, 22], [5, 24], [5, 26], [5, 28]
+				]
+			}],
+			"classFeatures": [
+				[
+					{"name": "Puntos de Sangre", "source": "Himo", "page": "??", "entries": ["Tienes una pool de Puntos de Sangre (PtS) máxima limitada en la tabla según tu lv. Puedes usar esa sangre como consumible ciertos rasgos. Pierdes todos los puntos de sangre tras un descanso largo y una cantidad igual a tu BC tras un descanso corto. Puedes ganar PtS de las siguientes maneras siempre y cuando las criaturas objetivo puedan sangrar o seas tú si lo especifica:", {"type": "list", "items": ["Hacer un golpe crítico con un arma o con daño necrótico.", "Recibir un ataque crítico de los daños BSP o necrótico", "Como reacción cuando una criatura caiga a 0 HP a 30 ft de ti. Si tú redujiste a la criatura a 0 HP, no gastas la reacción.", "Como reacción cuando una criatura enemiga reciba daño de sangrado.", "Cuando caes a 0 HP.", "Cuando mueres, recibes PtS igual a tu máximo en el caso de que te revivan."]}]},
+					{"name": "Blood Magic", "source": "Himo", "page": "??", "entries": ["Puedes usar tu sangre para castear conjuros que te ayuden en combate. Puedes preparar conjuros de la escuela de {@filter Nigromancia|spells|school=N|level=1;2;3;4;5} igual a tu lv de Desangrador. Constitución es tu aptitud mágica y no puedes usar rituales ni tienes cantrips. Tampoco tienes slots, sino que gastas 2 PtS por lv de conjuro. El lv máximo de tus slots viene delimitado según la tabla y puedes cambiar 1 conjuro por descanso largo. Las subclases te dan acceso a otras escuelas de magia. Usas tu kit de torturador como foco arcano. La subclase te permite usar un arma específica como foco arcano."]},
+					{"name": "Estilo de Lucha", "source": "Himo", "page": "??", "entries": ["Tienes acceso a los estilos de lucha del fighter. Elige 1. Puedes cambiarlo al llegar a los lv de dote.", {"type": "list", "items": ["{@optfeature Archery|PHB}", "{@optfeature Blind Fighting|TCE}", "{@optfeature Defense|PHB}", "{@optfeature Dueling|PHB}", "{@optfeature Great Weapon Fighting|PHB}", "{@optfeature Interception|TCE}", "{@optfeature Protection|PHB}", "{@optfeature Superior Technique|TCE}", "{@optfeature Thrown Weapon Fighting|TCE}", "{@optfeature Two-Weapon Fighting|PHB}", "{@optfeature Unarmed Fighting|TCE}"]}]}
+				],
+				[
+					{"name": "Protección Sanguina", "source": "Himo", "page": "??", "entries": ["Como reacción al recibir daño, gasta PtS para anular el daño de 1 dado por punto de sangre. Elige el dado antes de ver el resultado."]},
+					{"name": "Filo Sangriento", "source": "Himo", "page": "??", "entries": ["Puedes gastar 1 PtS o más en potenciar tu ataque. Una vez hayas acertado el ataque, puedes elegir como free action gastar PtS. Añade al daño {@damage 1d6} necrótico por cada punto gastado y el objetivo salva Constitución. Con un fallo recibe sangrado igual {@damage 1d6}+ la cantidad de PtS gastados."]}
+				],
+				[{"name": "Ritos de Sangre", "source": "Himo", "page": "??", "gainSubclassFeature": true, "entries": ["En el nivel 3, eliges un Rito de Sangre de la lista de ritos disponibles. Tu elección te otorga rasgos en el nivel 3 y de nuevo en los niveles 6, 10 y 14."]}],
+				[{"name": "Ability Score Improvement", "source": "Himo", "page": "??", "entries": ["When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]}],
+				[{"name": "Multiataque", "source": "Himo", "page": "??", "entries": ["Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."]}],
+				[{"name": "Ritos de Sangre", "source": "Himo", "page": "??", "gainSubclassFeature": true, "entries": ["Obtienes un nuevo rasgo de tu Rito de Sangre."]}],
+				[{"name": "Regeneración Vascular", "source": "Himo", "page": "??", "entries": ["Como acción puedes gastar un dado de golpe y curarte esa cantidad más tu modificador de constitución. Puedes gastar PtS para curarte 1 dado de golpe extra por cada punto. Cada dado suma la consti individualmente. Recuperas todos los dados de golpe por descanso largo."]}],
+				[{"name": "Ability Score Improvement", "source": "Himo", "page": "??", "entries": ["When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]}],
+				[{"name": "Heridas Vigorizantes", "source": "Himo", "page": "??", "entries": ["Como parte de un ataque, salvación o check fallido, puedes recibir daño y sumar los HP perdidos a la tirada, potencialmente convirtiendo un fracaso en un éxito. Si decides recibir 30 de daño, la tirada se convierte en un crítico.", "Si la tirada original era una pifia, solo puedes convertirla en crítico gastando 60 HP."]}],
+				[{"name": "Ritos de Sangre", "source": "Himo", "page": "??", "gainSubclassFeature": true, "entries": ["Obtienes un nuevo rasgo de tu Rito de Sangre."]}],
+				[
+					{"name": "Transfusión", "source": "Himo", "page": "??", "entries": ["Como acción, puedes curar a un aliado que puedas tocar. Gasta un dado de golpe, el objetivo recupera HP igual a la tirada más tu modificador de constitución y la suya. Si el objetivo estaba incapacitado o si usó su reacción para aceptar la transfusión, no tiras el dado, sino que se cura máximo. Tras esto, tú tienes sangrado igual a tu HD gastado."]},
+					{"name": "Hostigador", "source": "Himo", "page": "??", "entries": ["Cuando golpees crítico a una criatura, recibe sangrado igual a tu BC. Si ya iba a recibir sangrado, lo suma a esa cantidad."]}
+				],
+				[{"name": "Ability Score Improvement", "source": "Himo", "page": "??", "entries": ["When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]}],
+				[],
+				[{"name": "Ritos de Sangre", "source": "Himo", "page": "??", "gainSubclassFeature": true, "entries": ["Obtienes un nuevo rasgo de tu Rito de Sangre."]}],
+				[{"name": "Renacido", "source": "Himo", "page": "??", "entries": ["Cuando caigas a 0 HP pero no mueras, puedes gastar PtS como free action para curarte {@dice 1d6} por cada uno. No llegas a caer inconsciente, si es relevante. La curación se produce antes de caer virtualmente a cero, por lo que no recibes el punto de sangre por caer a 0."]}],
+				[{"name": "Ability Score Improvement", "source": "Himo", "page": "??", "entries": ["When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]}],
+				[],
+				[{"name": "Sed de Sangre", "source": "Himo", "page": "??", "entries": ["Cuando mates a una criatura, ganas HPT iguales a su stat de Constitución y puedes atacar de nuevo con la bonus, sumando tu constitución al daño además del stat habitual."]}],
+				[{"name": "Ability Score Improvement", "source": "Himo", "page": "??", "entries": ["When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]}],
+				[{"name": "Vigor Sanguíneo", "source": "Himo", "page": "??", "entries": ["Si al tirar iniciativa no tienes PtS, ganas 5 PtS."]}]
+			],
+			"subclassTitle": "Ritos de Sangre",
+			"subclasses": [
+				{
+					"name": "Rito del Flagelante", "shortName": "Flagelante", "source": "Himo", "page": "??",
+					"subclassSpells": [{"filter": {"schools": ["V"], "levels": [1, 2, 3, 4, 5], "class": {"name": "Cleric", "source": "PHB"}}}],
+					"subclassFeatures": [
+						[{"name": "Rito del Flagelante", "source": "Himo", "page": "??", "entries": ["La orden de Flagelantes se regocijan en su propio sufrimiento, siendo cada vez más fuertes a medida que el dolor los consume. Los ritos de esta orden les permiten usar un látigo para invocar una magia aún más poderosa, una que pueden blandir como un arma con la que devolver el sufrimiento que ellos quieren sentir en sus propias carnes.", {"type": "entries", "name": "Magia Flagelante", "entries": ["Puedes preparar conjuros de la escuela de evocación de la lista de clérigo. En tus manos, los látigos hacen {@damage 1d10} y puedes usarlos como foco arcano."]}, {"type": "entries", "name": "Mártir Masoquista", "entries": ["El daño recibido te llena de determinación. Como reacción tras recibir daño, puedes gastar 1 PtS. Al hacerlo, ganas HPT iguales a los HP perdidos."]}]}],
+						[{"name": "Vigor Frenético", "source": "Himo", "page": "??", "entries": ["Cuando recibas un golpe crítico, tienes resistencia a todo daño, incluido el crítico, hasta el inicio de tu próximo turno y ventaja en el siguiente ataque que hagas."]}],
+						[{"name": "Gemido de Dolor", "source": "Himo", "page": "??", "entries": ["Un número de veces al día igual a tu BC, cuando recibas daño, puedes usar tu reacción para gemir de dolor. Cualquier criatura a 90 ft de ti que pueda oirte salva Wisdom o está asustada de ti durante 1 minuto, pudiendo salvar al final de cada turno. Los aliados que puedan oirte dentro del área ganan HPT iguales a la mitad del daño recibido."]}],
+						[{"name": "Martirio", "source": "Himo", "page": "??", "entries": ["Una vez al día, gastando 5 PtS, entras en un éxtasis de violencia y sangre. Durante 1 minuto o hasta que te incapaciten, cada vez que recibas daño a melé, el atacante recibe tu BC en daño necrótico. Si te atacaron pero fallaron el ataque, puedes usar tu reacción para que el ataque te golpee crítico. Los dos recibís el daño. El objetivo recibe el ataque como si fueras tú quien le golpea crítico."]}]
+					]
+				},
+				{
+					"name": "Rito del Quebrantahuesos", "shortName": "Quebrantahuesos", "source": "Himo", "page": "??",
+					"subclassSpells": [{"filter": {"schools": ["V"], "levels": [1, 2, 3, 4, 5], "class": {"name": "Paladin", "source": "PHB"}}}],
+					"subclassFeatures": [
+						[{"name": "Rito del Quebrantahuesos", "source": "Himo", "page": "??", "entries": ["La sangre es aquello que circula alrededor de los huesos y por debajo de los músculos. La orden de los quebrantahuesos busca romper esos esquemas, literalmente. A base de quebrar el hueso, logran desgarrar el múscuclo y debilitar a sus oponentes, dejándolos a su merced para divertirse con ellos sin limitaciones.", {"type": "entries", "name": "Magia Quebrantahuesos", "entries": ["Puedes preparar conjuros de la escuela de evocación de la lista de paladín. En tus manos, las mazas hacen {@damage 1d10} y puedes usarlas como foco arcano."]}, {"type": "entries", "name": "Golpes Aplastantes", "entries": ["Cuando hagas daño contundente, reúne los requisitos de los daños cortantes y perforantes para contabilizar otras habilidades, conjuros o dotes, incluidas las mecánicas de sangrado. También cuenta para vulnerabilidades, pero no para resistencias o inmunidades o traits beneficiosos para tus enemigos."]}]}],
+						[{"name": "Entumecedor", "source": "Himo", "page": "??", "entries": ["Eres capaz de entumecer los músculos de tus rivales a base de golpes. Cuando uses tu Filo Sangriento, puedes gastar 1 PtS extra para entumecer al objetivo. Este tiene desventaja a checks de fuerza y ataques físicos y cada vez que reciba daño contundente añade tu BC al daño. Además, si se estaba concentrando, la CD para mantener la concentración para ese ataque, es la tuya, si la del daño era más baja. El objetivo salva al final de cada turno para quitarse el efecto de entumecido. Si no salva, remite pasados diez minutos."]}],
+						[{"name": "Romper Huesos", "source": "Himo", "page": "??", "entries": ["Tus ataques son capaces de deshacer lo huesos de tus enemigos uno a uno. Cuando golpees crítico con daño contundente a un objetivo que tenga huesos, tira en la tabla:", {"type": "table", "caption": "Romper Huesos", "colLabels": ["d8", "Hueso Roto", "Efecto"], "colStyles": ["col-1 text-center", "col-2", "col-9"], "rows": [[1, "Pie", "Desventaja contra efectos que le empujen o le proneen"], [2, "Pierna", "-15 ft de movilidad por cada pierna rota"], [3, "Cadera", "Desventaja a checks y salvaciones de destreza"], [4, "Brazo", "Desventaja a los checks y ataques relacionados con ese brazo"], [5, "Mano", "No puede equipar nada en esa mano ni usarla para los somáticos de conjuros"], [6, "Costillas", "Desventaja en salvaciones de concentración, agotamiento y no puede aguantar la respiración"], [7, "Espalda", "Si se movió más de la mitad de su movilidad sin dashear, cae prone"], [8, "Cabeza", "Desventaja en salvaciones de concentración, Inteligencia, wisdom y carisma"]]}]}],
+						[{"name": "Impacto Grave", "source": "Himo", "page": "??", "entries": ["Tus golpes son demoledores, y has averiguado cómo explotar sus defensas a base de pura brutalidad. Ignoras HPT y resistencias a los daños BSP y necrótico."]}]
+					]
+				},
+				{
+					"name": "Rito Vampírico", "shortName": "Vampírico", "source": "Himo", "page": "??",
+					"subclassSpells": [{"filter": {"schools": ["E"], "levels": [1, 2, 3, 4, 5], "class": {"name": "Wizard", "source": "PHB"}}}],
+					"subclassFeatures": [
+						[{"name": "Rito Vampírico", "source": "Himo", "page": "??", "entries": ["A menudo los desangradores optan por ritos vampíricos, no porque quieran convertirse en no muertos chupasangre, sino porque sus métodos se alinean bastante con los suyos. Este tipo de desangrador opta por medios más finos para llegar hasta sus presas y caza sistemáticamente a presas muy selectas, para luego beber la sangre que tanto ansían. Algunos, incluso, llegan a emular el propio vampirismo.", {"type": "entries", "name": "Magia Vampírica", "entries": ["Puedes preparar conjuros de la escuela de ncantamiento de la lista de mago. En tus manos, las dagas hacen {@damage 1d10} y puedes usarlas como foco arcano."]}, {"type": "entries", "name": "Beber Sangre", "entries": ["Un número de veces al día igual a tu BC, cuando recibas PtS de una criatura que haya recibido daño por sangrado usando tu reacción, te curas HP iguales al daño recibido + tu BC."]}]}],
+						[{"name": "Éxtasis Salvaje", "source": "Himo", "page": "??", "entries": ["Como bonus, gastas 5 PtS para entrar en un éxtasis vampírico. Durante 1 minuto, ganas spider climb y resistencia al veneno. Tus ataques desarmados hacen {@damage 1d6} slashing o piercing y añaden tanto tu modificador de fuerza como el de constitución al daño, y te curas HP igual a tu modificador de constitución por cada ataque que impacte."]}],
+						[{"name": "Desangrar", "source": "Himo", "page": "??", "entries": ["Como acción, atacas a una criatura que tenga sangrado. Con un impacto, puedes gastar PtS en añadir {@damage 1d6} por cada PtS a su sangrado."]}],
+						[{"name": "Afín a la no muerte", "source": "Himo", "page": "??", "entries": ["Tienes resistencia al daño necrótico y no necesitas respirar. También tienes ventaja en salvaciones de muerte. Por cada salvación de muerte que hagas, ganas 1 PtS."]}]
+					]
+				},
+				{
+					"name": "Rito Pagano", "shortName": "Pagano", "source": "Himo", "page": "??",
+					"subclassSpells": ["hex", {"filter": {"schools": ["C"], "levels": [1, 2, 3, 4, 5], "class": {"name": "Warlock", "source": "PHB"}}}],
+					"additionalSpells": [{"prepared": {"3": ["hex"]}}],
+					"subclassFeatures": [
+						[{"name": "Rito Pagano", "source": "Himo", "page": "??", "entries": ["A menudo llamados chamanes, los desangradores paganos son capaces de usar la magia para invocar las fuerzas ocultas de otros mundos y otras vidas, llegando incluso a transmitir maldiciones de sangre a sus enemigos. Este es, probablemente, el tipo de desangrador que más se apoya en la magia, pero también es el único que nunca lucha solo.", {"type": "entries", "name": "Magia Pagana", "entries": ["Puedes preparar conjuros de la escuela de conjuración de la lista de warlock y tienes siempre preparado {@spell hex} y no cuenta para el máximo de conjuros que puedes preparar. En tus manos, las hoces hacen {@damage 1d10} y puedes usarlas como foco arcano."]}, {"type": "entries", "name": "Maldición de Sangre", "entries": ["Cuando castees Hex, la criatura objetivo puede recibir sangrado por cada uno de tus ataques y los de las criaturas que invoques como si hubieses usado el Filo Sangrante, incluso si no lo hiciste. Tus invocaciones también hacen el daño extra de hex."]}]}],
+						[{"name": "Alzamiento de Ultratumba", "source": "Himo", "page": "??", "entries": ["Cuando una criatura muera a 30 ft de ti, puedes gastar 3 PtS como reacción. La criatura muerta se levanta como un zombie bajo tu control. Pasados 10 minutos, la criatura muere definitivamente."]}],
+						[{"name": "Invocaciones de Sangre", "source": "Himo", "page": "??", "entries": ["Cuando invoques a una criatura, puedes gastar PtS adicionales para darle resistencia a la criatura. Por cada PtS, la criatura gana 5 HPT. Si triplicaste el coste total del conjuro, no necesitas concentrarte en ese conjuro."]}],
+						[{"name": "Intercambio Equivalente", "source": "Himo", "page": "??", "entries": ["Una vez al día, como acción, trata de unir tu sangre con la de otra criatura. La criatura salva Constitución. Con un éxito, recibe sangrado de {@damage 2d10}. Con un éxito, tu y el objetivo perdéis todos los HP y los unís en una sola pool de vida. Luego cada uno recibe la mitad de esa pool. Este rasgo no puede curar al objetivo por encima de sus HP máximos, y en tu caso, el extra perdido se convierte en HPT."]}]
+					]
+				},
+				{
+					"name": "Rito Delirante", "shortName": "Delirante", "source": "Himo", "page": "??",
+					"subclassSpells": [{"filter": {"schools": ["D"], "levels": [1, 2, 3, 4, 5], "class": {"name": "Cleric", "source": "PHB"}}}],
+					"subclassFeatures": [
+						[{"name": "Rito Delirante", "source": "Himo", "page": "??", "entries": ["Destruidos por las visiones que fueron, son y serán, los desangradores delirantes gritan falsos futuros y siniestros presagios mientras te destruyen. Cuando gritan \"es el fin del mundo\", no quieren decir que el mundo vaya a acabar, quieren decir que \"tu mundo está llegando a su fin\".", {"type": "entries", "name": "Magia Delirante", "entries": ["Puedes preparar conjuros de la escuela de adivinación de la lista de clérigo. En tus manos, los bastones (staff) hacen {@damage 1d10} y puedes usarlos como foco arcano."]}, {"type": "entries", "name": "Grito Delirante", "entries": ["Como acción puedes gastar 1 PtS para asustar a una criatura que pueda oírte a 90 ft. Esa criatura pierde toda su movilidad mientras esté asustada de ti. Puede salvar al final de cada turno."]}]}],
+						[{"name": "Saciado por el Miedo", "source": "Himo", "page": "??", "entries": ["Cuando una criatura esté asustada, puedes usar una bonus para acabar con su estado de miedo. Al hacerlo, ganas 1 PtS y el objetivo recibe {@damage 1d6} psíquicos y queda dazed hasta el final de su próximo turno."]}],
+						[{"name": "Delirios Protectores", "source": "Himo", "page": "??", "entries": ["Ya nada es real para ti y a la vez todo lo es. Eres inmune a charm y miedo y ves a través de ilusiones."]}],
+						[{"name": "Grito de Horror", "source": "Himo", "page": "??", "entries": ["Como acción, emites un grito horroroso que paraliza de miedo a tus objetivos. Gasta 3 PtS por cada objetivo de tu elección que pueda oirte a 60 ft. Cada uno salva Wisdom. Con un fallo está asustado, y mientras esté asustado, está también paralizado, pudiendo salvar al final de cada turno.", "Tu grito delirante pasa a ser una bonus."]}]
+					]
+				}
+			]
+		}
+	]
+}

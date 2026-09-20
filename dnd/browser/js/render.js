@@ -2750,6 +2750,10 @@ Renderer.spell = {
 	initClasses (spell, brewSpellClasses) {
 		if (spell._isInitClasses) return;
 		spell._isInitClasses = true;
+		Object.defineProperty(spell, "_classSpellFilterOriginalClasses", {
+			value: MiscUtil.copy(spell.classes || {}),
+			configurable: true
+		});
 
 		// add eldritch knight and arcane trickster
 		if (spell.classes && spell.classes.fromClassList && spell.classes.fromClassList.filter(c => c.name === Renderer.spell.STR_WIZARD && c.source === SRC_PHB).length) {
@@ -2831,18 +2835,41 @@ Renderer.spell = {
 		// add homebrew class/subclass
 		if (brewSpellClasses) {
 			const lowName = spell.name.toLowerCase();
+			const addClassListItems = (items) => {
+				if (!items || !items.length) return;
+				spell.classes = spell.classes || {};
+				spell.classes.fromClassList = spell.classes.fromClassList || [];
+				items.forEach(toAdd => {
+					if (spell.classes.fromClassList.some(it => it.name === toAdd.name && it.source === toAdd.source)) return;
+					spell.classes.fromClassList.push(MiscUtil.copy(toAdd));
+				});
+			};
+			const addSubclassItems = (items) => {
+				if (!items || !items.length) return;
+				spell.classes = spell.classes || {};
+				spell.classes.fromSubclass = spell.classes.fromSubclass || [];
+				items.forEach(toAdd => {
+					if (spell.classes.fromSubclass.some(it => it.class.name === toAdd.class.name
+						&& it.class.source === toAdd.class.source
+						&& it.subclass.name === toAdd.subclass.name
+						&& it.subclass.source === toAdd.subclass.source
+						&& it.subclass.subSubclass === toAdd.subclass.subSubclass)) return;
+					spell.classes.fromSubclass.push(MiscUtil.copy(toAdd));
+				});
+			};
+
+			if (brewSpellClasses.filter) {
+				brewSpellClasses.filter.forEach(filterDetails => {
+					if (!Renderer.spell.isClassSpellFilterMatch(spell, filterDetails.filter, spell._classSpellFilterOriginalClasses)) return;
+					addClassListItems(filterDetails.fromClassList);
+					addSubclassItems(filterDetails.fromSubclass);
+				});
+			}
 
 			if (brewSpellClasses.spell) {
 				if (brewSpellClasses.spell[spell.source] && brewSpellClasses.spell[spell.source][lowName]) {
-					spell.classes = spell.classes || {};
-					if (brewSpellClasses.spell[spell.source][lowName].fromClassList.length) {
-						spell.classes.fromClassList = spell.classes.fromClassList || [];
-						spell.classes.fromClassList.push(...brewSpellClasses.spell[spell.source][lowName].fromClassList);
-					}
-					if (brewSpellClasses.spell[spell.source][lowName].fromSubclass.length) {
-						spell.classes.fromSubclass = spell.classes.fromSubclass || [];
-						spell.classes.fromSubclass.push(...brewSpellClasses.spell[spell.source][lowName].fromSubclass);
-					}
+					addClassListItems(brewSpellClasses.spell[spell.source][lowName].fromClassList);
+					addSubclassItems(brewSpellClasses.spell[spell.source][lowName].fromSubclass);
 				}
 			}
 
@@ -2857,14 +2884,8 @@ Renderer.spell = {
 
 						const fromDetails = searchForClasses[clsLowName];
 
-						if (fromDetails.fromClassList) {
-							spell.classes.fromClassList.push(...fromDetails.fromClassList);
-						}
-
-						if (fromDetails.fromSubclass) {
-							spell.classes.fromSubclass = spell.classes.fromSubclass || [];
-							spell.classes.fromSubclass.push(...fromDetails.fromSubclass);
-						}
+						addClassListItems(fromDetails.fromClassList);
+						addSubclassItems(fromDetails.fromSubclass);
 
 						// Only add it once regardless of how many classes match
 						break outer;
@@ -2872,6 +2893,17 @@ Renderer.spell = {
 				}
 			}
 		}
+	},
+	isClassSpellFilterMatch (spell, filter, originalClasses) {
+		if (!filter) return false;
+		if (filter.schools && !filter.schools.includes(spell.school)) return false;
+		if (filter.levels && !filter.levels.includes(spell.level)) return false;
+		if (filter.class) {
+			const classSource = filter.class.source || SRC_PHB;
+			const originalClassList = originalClasses && originalClasses.fromClassList ? originalClasses.fromClassList : [];
+			if (!originalClassList.some(it => it.source === classSource && it.name.toLowerCase() === filter.class.name.toLowerCase())) return false;
+		}
+		return true;
 	},
 	STR_WIZARD: "Wizard",
 	STR_FIGHTER: "Fighter",

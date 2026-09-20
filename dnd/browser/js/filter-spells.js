@@ -337,8 +337,9 @@ class PageFilterSpells extends PageFilter {
 
 	populateClassLookup (classData) {
 		// Load class spell list addons from either built-in or homebrew class data.
-		// Three formats are available. A string (shorthand for "spell" format with source "PHB"), "spell" format (object
-		//   with a `name` and a `source`), and "class" format (object with a `class` and a `source`).
+		// Four formats are available. A string (shorthand for "spell" format with source "PHB"), "spell" format (object
+		//   with a `name` and a `source`), "class" format (object with a `class` and a `source`), and "filter" format
+		//   (object with optional `schools`, `levels`, and original `class` constraints).
 
 		const handleSpellListItem = (it, className, classSource, subclassShortName, subclassSource, subSubclassName) => {
 			const doAdd = (target) => {
@@ -359,7 +360,13 @@ class PageFilterSpells extends PageFilter {
 				}
 			};
 
-			if (it.class) {
+			if (it.filter) {
+				this._brewSpellClasses.filter = this._brewSpellClasses.filter || [];
+
+				const filterDetails = {filter: MiscUtil.copy(it.filter)};
+				doAdd(filterDetails);
+				this._brewSpellClasses.filter.push(filterDetails);
+			} else if (it.class) {
 				if (!it.class) return;
 
 				this._brewSpellClasses.class = this._brewSpellClasses.class || {};
