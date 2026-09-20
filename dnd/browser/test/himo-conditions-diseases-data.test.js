@@ -29,7 +29,8 @@ function findTable (name) {
 
 assert.strictEqual(data.disease.length, 38, "El catálogo debe contener 38 enfermedades.");
 assert.strictEqual(data.condition.length, 17, "El catálogo debe contener 17 condiciones.");
-for (const [label, collection] of [["enfermedades", data.disease], ["condiciones", data.condition]]) {
+assert.strictEqual(data.status.length, 2, "El catálogo debe contener los estados Concentration y Surprised.");
+for (const [label, collection] of [["enfermedades", data.disease], ["condiciones", data.condition], ["estados", data.status]]) {
 	const keys = collection.map(it => `${it.name.toLowerCase()}|${it.source.toLowerCase()}`);
 	assert.strictEqual(new Set(keys).size, keys.length, `No debe haber ${label} duplicadas por nombre y fuente.`);
 }
@@ -57,12 +58,16 @@ for (const name of ["Hipo Arcano", "Síndrome de Abstinencia"]) {
 
 const knownByTag = {
 	disease: new Set(data.disease.map(it => `${it.name.toLowerCase()}|${it.source.toLowerCase()}`)),
-	condition: new Set(data.condition.map(it => `${it.name.toLowerCase()}|${it.source.toLowerCase()}`))
+	condition: new Set(data.condition.map(it => `${it.name.toLowerCase()}|${it.source.toLowerCase()}`)),
+	status: new Set(data.status.map(it => `${it.name.toLowerCase()}|${it.source.toLowerCase()}`))
 };
 const serialized = JSON.stringify(data);
-for (const match of serialized.matchAll(/\{@(disease|condition) ([^|}]+)\|([^|}]+)(?:\|[^}]*)?}/g)) {
+for (const match of serialized.matchAll(/\{@(disease|condition|status) ([^|}]+)\|([^|}]+)(?:\|[^}]*)?}/g)) {
 	const [, tag, name, source] = match;
 	assert.ok(knownByTag[tag].has(`${name.toLowerCase()}|${source.toLowerCase()}`), `La referencia {@${tag} ${name}|${source}} no tiene destino.`);
+}
+for (const name of ["Concentration", "Surprised"]) {
+	assert.strictEqual(searchIndex.filter(it => it.c === 49 && it.s === "PHB" && it.n === name).length, 1, `${name} debe aparecer una sola vez en el buscador general.`);
 }
 
 for (const [category, names] of [[21, himoDiseaseNames], [6, himoConditionNames]]) {
@@ -74,4 +79,4 @@ for (const [category, names] of [[21, himoDiseaseNames], [6, himoConditionNames]
 assert.strictEqual(new Set(searchIndex.map(it => it.id)).size, searchIndex.length, "El índice no debe contener identificadores duplicados.");
 assert.ok(!pageController.includes("deselFn: (it) => it === \"disease\""), "Las enfermedades no deben estar excluidas al abrir la página.");
 
-console.log("PASS: catálogo Himo (38 enfermedades, 17 condiciones, tablas, referencias e índice)");
+console.log("PASS: catálogo Himo (38 enfermedades, 17 condiciones, 2 estados, tablas, referencias e índice)");

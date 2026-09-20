@@ -425,7 +425,7 @@ class RendererMarkdown {
 >###### **Casting Time** ${Parser.spTimeListToFull(sp.time)}
 >###### **Range** ${Parser.spRangeToFull(sp.range)}
 >###### **Components** ${Parser.spComponentsToFull(sp.components, sp.level)}
->###### **Duration** ${Parser.spDurationToFull(sp.duration)}
+>###### **Duration** ${Parser.spDurationToFull(sp.duration, {isPlainText: true})}
 >---\n`;
 
 		const cacheDepth = meta.depth;

@@ -1393,7 +1393,6 @@ function Renderer () {
 					}
 
 					case "@quickref":
-					case "@status":
 					case "@itemProperty": {
 						const parts = text.split("|");
 						textStack[0] += parts[parts.length - 1] || parts[0];
@@ -1560,6 +1559,7 @@ function Renderer () {
 								this._recursiveRender(fauxEntry, textStack, meta);
 								break;
 							case "@condition":
+							case "@status":
 								fauxEntry.href.path = "conditionsdiseases.html";
 								if (!source) fauxEntry.href.hash += HASH_LIST_SEP + SRC_PHB;
 								fauxEntry.href.hover = {
@@ -1892,6 +1892,7 @@ Renderer.HOVER_TAG_TO_PAGE = {
 	"creature": UrlUtil.PG_BESTIARY,
 	"condition": UrlUtil.PG_CONDITIONS_DISEASES,
 	"disease": UrlUtil.PG_CONDITIONS_DISEASES,
+	"status": UrlUtil.PG_CONDITIONS_DISEASES,
 	"background": UrlUtil.PG_BACKGROUNDS,
 	"race": UrlUtil.PG_RACES,
 	"optfeature": UrlUtil.PG_OPT_FEATURES,
@@ -6003,7 +6004,7 @@ Renderer.hover = {
 			case UrlUtil.PG_TRAPS_HAZARDS: return pLoadSimple(page, "trapshazards.json", ["trap", "hazard"]);
 			case UrlUtil.PG_VARIATNRULES: return pLoadSimple(page, "variantrules.json", "variantrule");
 			case UrlUtil.PG_CULTS_BOONS: return pLoadSimple(page, "cultsboons.json", ["cult", "boon"], (listProp, item) => item._type = listProp === "cult" ? "c" : "b");
-			case UrlUtil.PG_CONDITIONS_DISEASES: return pLoadSimple(page, "conditionsdiseases.json", ["condition", "disease"], (listProp, item) => item._type = listProp === "condition" ? "c" : "d");
+			case UrlUtil.PG_CONDITIONS_DISEASES: return pLoadSimple(page, "conditionsdiseases.json", ["condition", "disease", "status"], (listProp, item) => item._type = listProp === "condition" ? "c" : listProp === "disease" ? "d" : "s");
 			case UrlUtil.PG_TABLES: return pLoadSimple(page, "generated/gendata-tables.json", ["table", "tableGroup"], (listProp, item) => item._type = listProp === "table" ? "t" : "g");
 			case UrlUtil.PG_VEHICLES: return pLoadSimple(page, "vehicles.json", "vehicle");
 			case UrlUtil.PG_ACTIONS: return pLoadSimple(page, "actions.json", "action");

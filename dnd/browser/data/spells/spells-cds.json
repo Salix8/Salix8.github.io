@@ -41,10 +41,10 @@
 				]
 			},
 			"entries": [
-				"Expandes la mente de una criatura voluntaria que esté inconsciente y que puedas ver. La criatura puede ser targeteada por el conjuro si te ha dado permiso expreso previamente y conoces su nombre. También puedes targetearte a ti mismo.",
+				"Expandes la mente de una criatura voluntaria que esté {@condition Unconscious|PHB} y que puedas ver. La criatura puede ser targeteada por el conjuro si te ha dado permiso expreso previamente y conoces su nombre. También puedes targetearte a ti mismo.",
 				"Mientras dure el conjuro, la criatura es plenamente consciente de su Burbuja Onírica mientras duerme y tiene el control de la misma (eso no significa que sepa tener el control).",
 				"Este conjuro le permite abrir una ventana para ver el espacio a 10 pies de su cuerpo con una vista frontal. El objetivo puede usar su acción para ofrecer un simple y leve gesto o acomodar su cuerpo, siempre y cuando pueda hacer el mismo en su burbuja. Este conjuro también ofrece una breve guía mágica para el objetivo, que le enseña cómo utilizar de forma básica e incompleta su propia burbuja o las bases más triviales del Plano Onírico. Esta guía puede tomar la forma que el objetivo desee y sigue subordinada a su burbuja y, por tanto, a la voluntad del objetivo. Si el objetivo decide no darle forma o no le importa hacerlo, será una versión etérea del caster.",
-				"El objetivo no puede despertarse por su propia voluntad y cualquier criatura a excepción del caster debe dañarle o pasar un minuto tratando de despertarle. Al hacerlo, el objetivo salva Wisdom sobre tu CD de conjuros, y solo despierta con un éxito. El caster puede despertarle en cualquier momento con su acción mientras dure el conjuro o romper la concentración como free action, dando ventaja a las salvaciones para despertarlo.",
+				"El objetivo no puede despertarse por su propia voluntad y cualquier criatura a excepción del caster debe dañarle o pasar un minuto tratando de despertarle. Al hacerlo, el objetivo salva Wisdom sobre tu CD de conjuros, y solo despierta con un éxito. El caster puede despertarle en cualquier momento con su acción mientras dure el conjuro o romper la {@status Concentration|PHB} como free action, dando ventaja a las salvaciones para despertarlo.",
 				"Aunque dure 8 horas, una criatura bajo los efectos de este conjuro no recibe los beneficios de un descanso largo, pero tampoco recibe Puntos de Agotamiento por no dormir. Si lo desea, en cambio, puede recuperar HP con dados de golpe."
 			],
 			"source": "CdS",
@@ -123,9 +123,9 @@
 				]
 			},
 			"entries": [
-				"Tocas a una criatura que esté voluntariamente dormida y estable y te adentras en su mente. Por la duración tu cuerpo está ciego, sordo y paralizado y no puedes ser consciente de lo que te rodea. Fallas automáticamente toda tirada de Percepción.",
+				"Tocas a una criatura que esté voluntariamente dormida y estable y te adentras en su mente. Por la duración tu cuerpo está ciego, sordo y {@condition Paralyzed|PHB} y no puedes ser consciente de lo que te rodea. Fallas automáticamente toda tirada de {@skill Perception}.",
 				"Tu mente y tus sentidos viajan al paraje onírico de la criatura, donde puedes ver y oír con todo lujo de detalle lo que esta está soñando. Apareces aquí con una apariencia traslúcida y puedes caminar por sus sueños como si estuvieses realmente ahí. Sin embargo, el objetivo no sabe que estás ahí ni puedes intervenir en el sueño.",
-				"Si el objetivo se despierta, el conjurador recibe {@dice 1d12} de daño psíquico, queda aturdido un minuto, pudiendo hacer una salvación de Wisdom sobre su propia CD al final de cada uno, y el conjuro acaba. Si el conjuro acaba antes de que la criatura despierte, esta lo hará en {@dice 2d4} minutos, alterada y sudando, creyendo que alguien le observaba."
+				"Si el objetivo se despierta, el conjurador recibe {@dice 1d12} de daño psíquico, queda {@condition Stunned|PHB} un minuto, pudiendo hacer una salvación de Wisdom sobre su propia CD al final de cada uno, y el conjuro acaba. Si el conjuro acaba antes de que la criatura despierte, esta lo hará en {@dice 2d4} minutos, alterada y sudando, creyendo que alguien le observaba."
 			],
 			"source": "CdS",
 			"subschools": [
@@ -156,7 +156,7 @@
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"Si lanzas este conjuro con un espacio de lv5 o superior no necesitas que el objetivo se haya dormido volunariamente. Servirá cualquier criatura inconsciente pero estable."
+						"Si lanzas este conjuro con un espacio de lv5 o superior no necesitas que el objetivo se haya dormido volunariamente. Servirá cualquier criatura {@condition Unconscious|PHB} pero estable."
 					]
 				}
 			]
@@ -491,7 +491,7 @@
 				]
 			},
 			"entries": [
-				"Tocas la cabeza de una criatura inconsciente y estable y ves una imagen nítida en tu mente. Como acción puedes añadir una modificación a su sueño, de forma que este varíe y se deforme. La criatura recibe {@dice 3d12} psíquicos y hace una salvación de Inteligencia. Si falla, no podrá ser despertada por medios no mágicos, pero podrá repetir la salvación de inteligencia cada vez que reciba daño. Puedes usar tu acción cada turno durante la duración para agregar otro elemento destructor. La criatura recibe otros {@dice 3d12} y repite la salvación de Inteligencia al final de su siguiente turno con desventaja. Si la supera, se despierta y el conjuro acaba."
+				"Tocas la cabeza de una criatura {@condition Unconscious|PHB} y estable y ves una imagen nítida en tu mente. Como acción puedes añadir una modificación a su sueño, de forma que este varíe y se deforme. La criatura recibe {@dice 3d12} psíquicos y hace una salvación de Inteligencia. Si falla, no podrá ser despertada por medios no mágicos, pero podrá repetir la salvación de inteligencia cada vez que reciba daño. Puedes usar tu acción cada turno durante la duración para agregar otro elemento destructor. La criatura recibe otros {@dice 3d12} y repite la salvación de Inteligencia al final de su siguiente turno con desventaja. Si la supera, se despierta y el conjuro acaba."
 			],
 			"source": "CdS",
 			"subschools": [
@@ -802,7 +802,7 @@
 				]
 			},
 			"entries": [
-				"Hasta diez criaturas que puedas ver dentro del radio, incluyéndote, quedáis dormidas bajo el aroma de los inciensos mientras vuestras consciencias viajan a tu paraje onírico. Mientras dure, los cuerpos permanecen incapacitados e inconscientes en el suelo.",
+				"Hasta diez criaturas que puedas ver dentro del radio, incluyéndote, quedáis dormidas bajo el aroma de los inciensos mientras vuestras consciencias viajan a tu paraje onírico. Mientras dure, los cuerpos permanecen {@condition Incapacitated|PHB} e {@condition Unconscious|PHB} en el suelo.",
 				"Una vez en tu paraje onírico, solo tú puedes guiar a estas criaturas por el Plano de los Sueños, abriendo puertas y túneles entre parajes. Todos, tú incluido, están sujetos a las leyes del mundo onírico. Cada vez que pretendas adentrarte en un paraje onírico que no sea el tuyo o el de alguna criatura que te haya invitado, deberás hacer una salvación de Wisdom CD 16 o recibir {@dice 4d12} de daño psíquicos que no podrán reducirse de ninguna forma. Cualquier criatura que vaya contigo puede abrir una puerta a su paraje onírico esté donde esté usando su acción, y volverla a cerrar de la misma forma.",
 				"Cuando entres a un Paraje Onírico activo, pasarás a formar parte de él hasta que salgas, con todo lo que ello conlleva. Cada vez que afectes negativamente los sueños del huésped, este recibirá {@dice 3d12} de daño psíquico y deberá hacer una salvación de wisdom contra tu CD. De fallar, despertará y seréis expulsados del paraje. Deberás hacer una salvación de wisdom sobre tu propia CD. Con un éxito, volvéis a tu paraje onírico. Con un fracaso, tú y todos los objetivos os despertáis de vuelta en vuestros cuerpos recibiendo {@dice 8d12} de daño psíquico.",
 				"Por otro lado, si la criatura muere mientras estáis en sus sueños, el mundo colapsará con vosotros dentro. Abrir un portal a otro paraje costará una tirada de wisdom (base) CD 16, o CD 22 si no estás invitado. El caster del conjuro se considera competente en esta tirada y puede arrastrar con él al resto de criaturas. Si en 1 minuto no habéis salido de allí, cada participante deberá hacer una salvación de inteligencia CD 16 al final de cada uno de sus turnos. Con un fracaso recibe {@dice 8d12} mientras se hunde en el vacío onírico. Con un éxito, vuelve de vuelta a su cuerpo y recibe {@dice 3d12}. Si sus HP se reducen a 0, su consciencia se pierde para siempre en el vacío onírico. Solo podrá ser revivido con un conjuro de Wish.",

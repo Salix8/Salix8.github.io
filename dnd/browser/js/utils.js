@@ -1206,7 +1206,10 @@ Parser.spEndTypeToFull = function (type) {
 	return Parser._parse_aToB(Parser.SP_END_TYPE_TO_FULL, type);
 };
 
-Parser.spDurationToFull = function (dur) {
+Parser.spDurationToFull = function (dur, {isPlainText = false} = {}) {
+	const concentrationText = isPlainText
+		? "Concentration"
+		: Renderer.get().render("{@status Concentration|PHB}");
 	let hasSubOr = false;
 	const outParts = dur.map(d => {
 		switch (d.type) {
@@ -1215,7 +1218,7 @@ Parser.spDurationToFull = function (dur) {
 			case "instant":
 				return `Instantaneous${d.condition ? ` (${d.condition})` : ""}`;
 			case "timed":
-				return `${d.concentration ? "Concentration, " : ""}${d.concentration ? "u" : d.duration.upTo ? "U" : ""}${d.concentration || d.duration.upTo ? "p to " : ""}${d.duration.amount} ${d.duration.amount === 1 ? d.duration.type : `${d.duration.type}s`}`;
+				return `${d.concentration ? `${concentrationText}, ` : ""}${d.concentration ? "u" : d.duration.upTo ? "U" : ""}${d.concentration || d.duration.upTo ? "p to " : ""}${d.duration.amount} ${d.duration.amount === 1 ? d.duration.type : `${d.duration.type}s`}`;
 			case "permanent": {
 				if (d.ends) {
 					const endsToJoin = d.ends.map(m => Parser.spEndTypeToFull(m));
@@ -1700,6 +1703,7 @@ Parser.CAT_ID_ACTION = 42;
 Parser.CAT_ID_LANGUAGE = 43;
 Parser.CAT_ID_POTION = 44;
 Parser.CAT_ID_POWER_WORD = 45;
+Parser.CAT_ID_STATUS = 49;
 
 Parser.CAT_ID_TO_FULL = {};
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CREATURE] = "Bestiary";
@@ -1748,6 +1752,7 @@ Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ACTION] = "Action";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_LANGUAGE] = "Language";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_POTION] = "Poti";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_POWER_WORD] = "Palabra de Poder";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_STATUS] = "Status";
 
 Parser.pageCategoryToFull = function (catId) {
 	return Parser._parse_aToB(Parser.CAT_ID_TO_FULL, catId);
@@ -1800,6 +1805,7 @@ Parser.CAT_ID_TO_PROP[Parser.CAT_ID_ACTION] = "action";
 Parser.CAT_ID_TO_PROP[Parser.CAT_ID_LANGUAGE] = "language";
 Parser.CAT_ID_TO_PROP[Parser.CAT_ID_POTION] = "optionalfeature";
 Parser.CAT_ID_TO_PROP[Parser.CAT_ID_POWER_WORD] = "optionalfeature";
+Parser.CAT_ID_TO_PROP[Parser.CAT_ID_STATUS] = "status";
 
 Parser.pageCategoryToProp = function (catId) {
 	return Parser._parse_aToB(Parser.CAT_ID_TO_PROP, catId);
@@ -4966,6 +4972,7 @@ UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_CLASS_FEATURE] = UrlUtil.PG_CLASSES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_SUBCLASS] = UrlUtil.PG_CLASSES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_SUBCLASS_FEATURE] = UrlUtil.PG_CLASSES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_CONDITION] = UrlUtil.PG_CONDITIONS_DISEASES;
+UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_STATUS] = UrlUtil.PG_CONDITIONS_DISEASES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_FEAT] = UrlUtil.PG_FEATS;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_ELDRITCH_INVOCATION] = UrlUtil.PG_OPT_FEATURES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_METAMAGIC] = UrlUtil.PG_OPT_FEATURES;
@@ -6615,7 +6622,7 @@ BrewUtil = {
 						case UrlUtil.PG_REWARDS: return ["reward"];
 						case UrlUtil.PG_PSIONICS: return ["psionic"];
 						case UrlUtil.PG_VARIATNRULES: return ["variantrule"];
-						case UrlUtil.PG_CONDITIONS_DISEASES: return ["condition", "disease"];
+						case UrlUtil.PG_CONDITIONS_DISEASES: return ["condition", "disease", "status"];
 						case UrlUtil.PG_ADVENTURES: return ["adventure"];
 						case UrlUtil.PG_BOOKS: return ["book"];
 						case UrlUtil.PG_TABLES: return ["table"];
@@ -7058,7 +7065,7 @@ BrewUtil = {
 						case UrlUtil.PG_REWARDS: return ["reward"];
 						case UrlUtil.PG_PSIONICS: return ["psionic"];
 						case UrlUtil.PG_VARIATNRULES: return ["variantrule"];
-						case UrlUtil.PG_CONDITIONS_DISEASES: return ["condition", "disease"];
+						case UrlUtil.PG_CONDITIONS_DISEASES: return ["condition", "disease", "status"];
 						case UrlUtil.PG_ADVENTURES: return ["adventure", "adventureData"];
 						case UrlUtil.PG_BOOKS: return ["book", "bookData"];
 						case UrlUtil.PG_TABLES: return ["table", "tableGroup"];

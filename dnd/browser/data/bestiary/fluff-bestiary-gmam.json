@@ -234,7 +234,7 @@
 				"Rango: God (quasi-deity)",
 				"17 lv de Bardo con metamagias de hechicero y subclase de Mago de encantamiento",
 				"Spellcasting de warlock nerfeado",
-				"{@b Túnica del Amor Incondicional}. Esta túnica +3 confiere al portador la habilidad de crear un aura de 30 ft en la que toda criatura hostil esté bajo los efectos de {@spell Calm Emotions}. El portador puede usar una bonus action para comandar a una de estas criaturas como si estuviera bajo los efectos de {@spell command} y con 1 minuto puede comandarlos como si fuese {@spell suggestion}. Este charm dura hasta que salen del área."
+				"{@b Túnica del Amor Incondicional}. Esta túnica +3 confiere al portador la habilidad de crear un aura de 30 ft en la que toda criatura hostil esté bajo los efectos de {@spell Calm Emotions}. El portador puede usar una bonus action para comandar a una de estas criaturas como si estuviera bajo los efectos de {@spell command} y con 1 minuto puede comandarlos como si fuese {@spell suggestion}. Este {@condition Charmed|PHB} dura hasta que salen del área."
 			],
 			"name": "Kiltzi, Diosa del Amor",
 			"source": "GMAM"

@@ -5925,7 +5925,7 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Logra que haga efecto y el enemigo pasará a estar envenenado, además de recibir {@dice 1d4} de daño por veneno al principio de cada uno de sus turnos hasta que supere una tirada de salvación de constitución sobre tu CD de Salvación de pociones o sea curado de este efecto. Beber esta poción dos veces no agrava los efectos."
+						"Logra que haga efecto y el enemigo pasará a estar {@condition Poisoned|PHB}, además de recibir {@dice 1d4} de daño por veneno al principio de cada uno de sus turnos hasta que supere una tirada de salvación de constitución sobre tu CD de Salvación de pociones o sea curado de este efecto. Beber esta poción dos veces no agrava los efectos."
 					]
 				},
 				{
@@ -5957,14 +5957,14 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"dáselo a beber a alguien o aprovechalo tú mismo y curarás cualquier enfermedad no mágica o envenenamiento. Solo curas un efecto cada vez y de forma aleatoria."
+						"dáselo a beber a alguien o aprovechalo tú mismo y curarás cualquier enfermedad no mágica o {@condition Poisoned|PHB}. Solo curas un efecto cada vez y de forma aleatoria."
 					]
 				},
 				{
 					"type": "entries",
 					"name": "Información Extra",
 					"entries": [
-						"al lv7 descubres cómo hacer antídotos cutáneos, por lo que podrás curar la parálisis (cuando no sea provocada por un agente físico) y petrificación; puedes arrojarlos a una distancia de 20 pies. Al 12 puede curar enfermedades mágicas, así como encantamiento, ceguera y sordera, siempre que hayan sido impuestos de una forma mágica. Al 17 aprendes a fabricarlo en forma de esencia, por lo que el efecto se extiende hasta cuatro casillas."
+						"al lv7 descubres cómo hacer antídotos cutáneos, por lo que podrás curar la {@condition Paralyzed|PHB} (cuando no sea provocada por un agente físico) y {@condition Petrified|PHB}; puedes arrojarlos a una distancia de 20 pies. Al 12 puede curar enfermedades mágicas, así como encantamiento, {@condition Blinded|PHB} y {@condition Deafened|PHB}, siempre que hayan sido impuestos de una forma mágica. Al 17 aprendes a fabricarlo en forma de esencia, por lo que el efecto se extiende hasta cuatro casillas."
 					]
 				}
 			]
@@ -6055,7 +6055,7 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Este frasco podrá usarse tantas veces como uno quiera mientras no se rompa el recipiente. Basta con destaparlo y ofrecerlo a una criatura dormida o inconsciente para reanimarla al momento. Una criatura con 0 HP reanimada de esta forma solo puede usar sus acciones para correr, esquivar, utilizar un objeto o desengancharse, y carecerá de acciones adicionales ni reacciones hasta que no recupere al menos 1 HP. Además, fallará automáticamente cualquier tirada de habilidad, ataque o salvación. Cada golpe recibido supondrá una tirada de muerte fallida y, como de costumbre, moriría en el acto tras recibir tres golpes o una cantidad de daño igual a sus HP máximos en un turno. Si el objetivo no recupera al menos 1 HP tras un minuto, caerá inconsciente de nuevo. También puede utilizarse como arma. Si un enemigo lo huele (arrojado, 1 uso, si queda al menos la mitad, y afecta a cuatro casillas, o mediante un pañuelo húmedo, 20 usos) deberá superar una tirada de salvación de Constitución sobre tu CD de salvación de pociones o estará envenenado durante un número de turnos igual a tu modificador de Sabiduría. En caso de ser ingerido, causará {@dice 4d12} de daño por veneno y estará envenenado hasta que realice un descanso largo o sea tratado por un profesional de forma mágica o mundana. En este último caso, la poción se gastará aunque el recipiente no se rompa."
+						"Este frasco podrá usarse tantas veces como uno quiera mientras no se rompa el recipiente. Basta con destaparlo y ofrecerlo a una criatura dormida o {@condition Unconscious|PHB} para reanimarla al momento. Una criatura con 0 HP reanimada de esta forma solo puede usar sus acciones para correr, esquivar, utilizar un objeto o desengancharse, y carecerá de acciones adicionales ni reacciones hasta que no recupere al menos 1 HP. Además, fallará automáticamente cualquier tirada de habilidad, ataque o salvación. Cada golpe recibido supondrá una tirada de muerte fallida y, como de costumbre, moriría en el acto tras recibir tres golpes o una cantidad de daño igual a sus HP máximos en un turno. Si el objetivo no recupera al menos 1 HP tras un minuto, caerá {@condition Unconscious|PHB} de nuevo. También puede utilizarse como arma. Si un enemigo lo huele (arrojado, 1 uso, si queda al menos la mitad, y afecta a cuatro casillas, o mediante un pañuelo húmedo, 20 usos) deberá superar una tirada de salvación de Constitución sobre tu CD de salvación de pociones o estará {@condition Poisoned|PHB} durante un número de turnos igual a tu modificador de Sabiduría. En caso de ser ingerido, causará {@dice 4d12} de daño por veneno y estará {@condition Poisoned|PHB} hasta que realice un descanso largo o sea tratado por un profesional de forma mágica o mundana. En este último caso, la poción se gastará aunque el recipiente no se rompa."
 					]
 				}
 			]
@@ -6081,7 +6081,7 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Al arrojar o vertir esta cubeta causas {@dice 2d8} de daño por ácido a cualquier criatura si falla una salvación de Constitución contra tu CD de Pociones o la mitad si salva. Al utilizarla en un objeto o una planta no mágica causará el daño máximo. Este líquido permite deshacerse de los efectos del Hierro Líquido sin causar daño, en caso de que se supere una tirada de Medicina CD 14."
+						"Al arrojar o vertir esta cubeta causas {@dice 2d8} de daño por ácido a cualquier criatura si falla una salvación de Constitución contra tu CD de Pociones o la mitad si salva. Al utilizarla en un objeto o una planta no mágica causará el daño máximo. Este líquido permite deshacerse de los efectos del Hierro Líquido sin causar daño, en caso de que se supere una tirada de {@skill Medicine} CD 14."
 					]
 				},
 				{
@@ -6156,7 +6156,7 @@
 					"type": "entries",
 					"name": "Información Extra",
 					"entries": [
-						"Al subir al lv 3 ignora terreno difícil, al 7 ofrece una reacción extra, al 12 también aporta Spider Climb y al 17 la velocidad base del usuario se triplica."
+						"Al subir al lv 3 ignora terreno difícil, al 7 ofrece una reacción extra, al 12 también aporta {@spell Spider Climb|PHB} y al 17 la velocidad base del usuario se triplica."
 					]
 				}
 			]
@@ -6216,7 +6216,7 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Cuando este vial se rompa contra el suelo, una onda de choque arremeterá con todas las criaturas en un radio de 15 pies horizontalmente que estén tocando el suelo. Deben salvar fuerza sobre tu CD de pociones o ser empujadas 15 pies y caer prone. Si fallan por 7 o más, además estarán dazed. La criatura en el centro del área es inmune al efecto."
+						"Cuando este vial se rompa contra el suelo, una onda de choque arremeterá con todas las criaturas en un radio de 15 pies horizontalmente que estén tocando el suelo. Deben salvar fuerza sobre tu CD de pociones o ser empujadas 15 pies y caer {@condition Prone|PHB}. Si fallan por 7 o más, además estarán {@condition Dazed|Himo}. La criatura en el centro del área es inmune al efecto."
 					]
 				}
 			]
@@ -6280,9 +6280,9 @@
 						{
 							"type": "list",
 							"items": [
-								"20 usos. Como Bonus, se moja un trapo y como acción se busca el contacto con las vías respiratorias del objetivo (ataque a dex y salvación de Con) para provocar somnolencia. Durante un minuto, está envenenado y su movilidad se reduce a la mitad. El objetivo puede salvar al final de cada turno. Tras un turno, el trapo se seca y necesita volver a mojarse.",
+								"20 usos. Como Bonus, se moja un trapo y como acción se busca el contacto con las vías respiratorias del objetivo (ataque a dex y salvación de Con) para provocar somnolencia. Durante un minuto, está {@condition Poisoned|PHB} y su movilidad se reduce a la mitad. El objetivo puede salvar al final de cada turno. Tras un turno, el trapo se seca y necesita volver a mojarse.",
 								"10 usos. Doblas la cantidad de cloroformo del trapo y sigues el curso de acción de la opción anterior. El efecto es el mismo, pero ahora el objetivo no podrá salvar al final del turno.",
-								"Arrojado. Si aún quedan al menos 15 usos, puedes arrojar el tarro hacia el objetivo. Este deberá salvar Constitución o caer inconsciente durante tres turnos. Mientras dure, no podrá ser despertado de ninguna forma, a menos que reciba una cantidad de daño igual a la mitad de sus HP totales entre los tres turnos. Una vez se levante, estará envenenado hasta que termine el minuto."
+								"Arrojado. Si aún quedan al menos 15 usos, puedes arrojar el tarro hacia el objetivo. Este deberá salvar Constitución o caer {@condition Unconscious|PHB} durante tres turnos. Mientras dure, no podrá ser despertado de ninguna forma, a menos que reciba una cantidad de daño igual a la mitad de sus HP totales entre los tres turnos. Una vez se levante, estará {@condition Poisoned|PHB} hasta que termine el minuto."
 							]
 						}
 					]
@@ -6318,7 +6318,7 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Lanza un frasco o haz que tu objetivo huela su interior para que entre en estado de parálisis. El individuo puede intentar superar una tirada de salvación de Constitución sobre tu CD de pociones para intentar evitar dicho efecto, de lo contrario estará paralizado hasta el final de su próximo turno. Puedes darle dos usos si logras que tu objetivo lo huela sin necesidad de arrojarlo. Si el objetivo lo huele voluntariamente o es forzado a ello por otros medios, fallará automáticamente la tirada de salvación."
+						"Lanza un frasco o haz que tu objetivo huela su interior para que entre en estado de {@condition Paralyzed|PHB}. El individuo puede intentar superar una tirada de salvación de Constitución sobre tu CD de pociones para intentar evitar dicho efecto, de lo contrario estará {@condition Paralyzed|PHB} hasta el final de su próximo turno. Puedes darle dos usos si logras que tu objetivo lo huela sin necesidad de arrojarlo. Si el objetivo lo huele voluntariamente o es forzado a ello por otros medios, fallará automáticamente la tirada de salvación."
 					]
 				},
 				{
@@ -6384,11 +6384,11 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Esta pócima es una infusión de hierbas energéticas y mágicas que aumentará la concentración de quien la beba. Puede usarse de dos formas: reacción",
+						"Esta pócima es una infusión de hierbas energéticas y mágicas que aumentará la {@status Concentration|PHB} de quien la beba. Puede usarse de dos formas: reacción",
 						{
 							"type": "list",
 							"items": [
-								"Como cuando se falla una salvación para mantener la concentración de un conjuro. Para ello, se debe tener la poción ya en la mano o tenerla a rango de interacción. bonus",
+								"Como cuando se falla una salvación para mantener la {@status Concentration|PHB} de un conjuro. Para ello, se debe tener la poción ya en la mano o tenerla a rango de interacción. bonus",
 								"Como para duplicar tu bono de competencia en una tirada de ataque para conjuros."
 							]
 						}
@@ -6481,7 +6481,7 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Al vertir este ungüento encima de alguien, las células de su piel y el material de lo que porte se vuelve invisible. Al desplazarse, el suelo se verá cubierto con restos de la poción, ocultando parcialmente las huellas. Además, la pócima neutraliza olores y amortigua ruidos en gran medida, si bien no completamente. De este modo, las tiradas de percepción o supervivencia para rastrearte se hacen con desventaja y estas efectivamente oculto para criaturas con Visión Ciega, aunque estas criaturas no tendrán desventaja para rastrearte. Esta poción acaba con cualquier efecto que hiciera que el objetivo emitiera luz, y uno de estos efectos puede acabar con los de la poción si se han lanzado a lv 2 o superior."
+						"Al vertir este ungüento encima de alguien, las células de su piel y el material de lo que porte se vuelve {@condition Invisible|PHB}. Al desplazarse, el suelo se verá cubierto con restos de la poción, ocultando parcialmente las huellas. Además, la pócima neutraliza olores y amortigua ruidos en gran medida, si bien no completamente. De este modo, las tiradas de {@skill Perception} o {@skill Survival} para rastrearte se hacen con desventaja y estas efectivamente oculto para criaturas con Visión Ciega, aunque estas criaturas no tendrán desventaja para rastrearte. Esta poción acaba con cualquier efecto que hiciera que el objetivo emitiera luz, y uno de estos efectos puede acabar con los de la poción si se han lanzado a lv 2 o superior."
 					]
 				},
 				{
@@ -6601,7 +6601,7 @@
 								"Su velocidad de andar es de 10 pies, pero gana una velocidad de trepado de 10 pies y de nado 40 pies.",
 								"Es resistente a los daños físicos e inmune al ácido",
 								"Ventaja en salvaciones de Fuerza, Destreza y Constitución",
-								"Inmunidad a Prone",
+								"Inmunidad a {@condition Prone|PHB}",
 								"No puede hablar, castear conjuros, interactuar con objetos ni blandir armas.",
 								"Cualquier equipo que lleve se funde con él.",
 								"Está sujeto bajo los efectos de Protección Ácida de lv 2",
@@ -6694,7 +6694,7 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Arrojas un vial con un ungüento fangoso directamente a la cara del objetivo. Con un impacto el objetivo recibe {@dice 1d4}+Modificador de daño cortante y queda cegado. El objetivo puede usar su acción para quitarse el fango. Un chorro de agua a presión también le limpia la cara, pero le hace {@dice 1d4} de daño por clavarle aún más los cristales. Para retirar estos cristales el objetivo o un aliado puede usar su acción para hacer una tirada de medicina (con desventaja si es a sí mismo) sobre tu CD de potis. Mientras tenga los cristales en los ojos, tiene desventaja a percepción y su rango de visión se reduce a 30 pies. De volver a usar esta poción en un mismo objetivo, si no se limpió los cristales, añadirá {@dice 1d4} al daño. Aún podrán quitar todos los cristales con la misma acción."
+						"Arrojas un vial con un ungüento fangoso directamente a la cara del objetivo. Con un impacto el objetivo recibe {@dice 1d4}+Modificador de daño cortante y queda cegado. El objetivo puede usar su acción para quitarse el fango. Un chorro de agua a presión también le limpia la cara, pero le hace {@dice 1d4} de daño por clavarle aún más los cristales. Para retirar estos cristales el objetivo o un aliado puede usar su acción para hacer una tirada de {@skill Medicine} (con desventaja si es a sí mismo) sobre tu CD de potis. Mientras tenga los cristales en los ojos, tiene desventaja a {@skill Perception} y su rango de visión se reduce a 30 pies. De volver a usar esta poción en un mismo objetivo, si no se limpió los cristales, añadirá {@dice 1d4} al daño. Aún podrán quitar todos los cristales con la misma acción."
 					]
 				}
 			]
@@ -6840,7 +6840,7 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Obliga o convence a alguien para que beba esta poción y podrás controlarle durante tres horas, sin excepciones. Las criaturas con inmunidad al encantamiento son inmunes a esta poción. El individuo puede liberarse si supera una tirada de salvación de Inteligencia con tu CD de Salvación de pociones que podrá repetir cada vez que le des una orden, sea cual sea. Si la orden es directamente peligrosa para el objetivo, hará la tirada con ventaja."
+						"Obliga o convence a alguien para que beba esta poción y podrás controlarle durante tres horas, sin excepciones. Las criaturas con inmunidad a {@condition Charmed|PHB} son inmunes a esta poción. El individuo puede liberarse si supera una tirada de salvación de Inteligencia con tu CD de Salvación de pociones que podrá repetir cada vez que le des una orden, sea cual sea. Si la orden es directamente peligrosa para el objetivo, hará la tirada con ventaja."
 					]
 				}
 			]
@@ -6953,14 +6953,14 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Si una criatura bebe el contenido de este filtro, será hechizada por la primera criatura que vea justo después hasta un lapso de diez minutos. Mientras esté hechizada, la criatura considerará como su amor verdadero al encantador. Este tendrá éxito en cualquier tirada de habilidad de Carisma contra esta y tendrá ventaja en las de Sabiduría e Inteligencia. Además, el objetivo fallará automáticamente cualquier tirada de Salvación de Carisma o checks de Insight contra esa criatura."
+						"Si una criatura bebe el contenido de este filtro, será {@condition Charmed|PHB} por la primera criatura que vea justo después hasta un lapso de diez minutos. Mientras esté {@condition Charmed|PHB}, la criatura considerará como su amor verdadero al encantador. Este tendrá éxito en cualquier tirada de habilidad de Carisma contra esta y tendrá ventaja en las de Sabiduría e Inteligencia. Además, el objetivo fallará automáticamente cualquier tirada de Salvación de Carisma o checks de {@skill Insight} contra esa criatura."
 					]
 				},
 				{
 					"type": "entries",
 					"name": "Información Extra",
 					"entries": [
-						"Si la criatura encantada es dañada por la criatura que le encantó, directa o indirectamente, recibirá {@dice 2d10} de daño psíquico extra y el efecto terminará. El daño puede ser emocional en lugar de físico, como un insulto, un desprecio o una ruptura, entre otros ejemplos."
+						"Si la criatura {@condition Charmed|PHB} es dañada por la criatura que le encantó, directa o indirectamente, recibirá {@dice 2d10} de daño psíquico extra y el efecto terminará. El daño puede ser emocional en lugar de físico, como un insulto, un desprecio o una ruptura, entre otros ejemplos."
 					]
 				}
 			]
@@ -6994,7 +6994,7 @@
 					"type": "entries",
 					"name": "Información Extra",
 					"entries": [
-						"Para procesos de resurrección arcana, cada minuto bajo este efecto es un día, y el hecho de usar esta poción anula instantáneamente el Revivify."
+						"Para procesos de resurrección {@skill Arcana}, cada minuto bajo este efecto es un día, y el hecho de usar esta poción anula instantáneamente el Revivify."
 					]
 				}
 			]
@@ -7026,7 +7026,7 @@
 							"items": [
 								"Puedes embadurnar un objeto mágico para eliminar cualquier magia que le afecte o en que esté imbuido si su poder mágico (a discreción del DM) es de un lv de conjuro igual o menor a tu BC.",
 								"Puedes embadurnarlo en una herida mágica para eliminar cualquier efecto, maldición o enfermedad mágica siempre y cuando su poder mágico (a discreción del DM) sea de un lv de conjuro igual o menor a tu BC.",
-								"Puedes cubrir total o parcialmente a una criatura grande o más pequeña con este ungüento si aciertas una tirada de ataque. con un impacto, pierde cualquier efecto mágico o conjuro que le estuviera afectando y, si se estaba concentrando en algún otro, pierde la concentración. Cada vez que esta criatura vaya a lanzar un conjuro de lv igual o menor al BC, deberá superar una salvación de Constitución. De fallar, el conjuro no llega a castearse y el espacio se gasta. Una criatura puede usar un turno entero para limpiarse por completo. Mientras no lo haga, también tiene resistencia a cualquier daño mágico y no se le puede targetear para afectarle mágicamente."
+								"Puedes cubrir total o parcialmente a una criatura grande o más pequeña con este ungüento si aciertas una tirada de ataque. con un impacto, pierde cualquier efecto mágico o conjuro que le estuviera afectando y, si se estaba concentrando en algún otro, pierde la {@status Concentration|PHB}. Cada vez que esta criatura vaya a lanzar un conjuro de lv igual o menor al BC, deberá superar una salvación de Constitución. De fallar, el conjuro no llega a castearse y el espacio se gasta. Una criatura puede usar un turno entero para limpiarse por completo. Mientras no lo haga, también tiene resistencia a cualquier daño mágico y no se le puede targetear para afectarle mágicamente."
 							]
 						}
 					]
@@ -7387,7 +7387,7 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Una criatura que beba, voluntariamente o no, este compuesto sentirá fuertes mareos y las extremidades entumecidas. Mientras dure el efecto está dazed y ataca con desventaja. Además, recibirá la mitad del daño que haga con el primer ataque que impacte en su turno. Puede salvar al final de cada minuto."
+						"Una criatura que beba, voluntariamente o no, este compuesto sentirá fuertes mareos y las extremidades entumecidas. Mientras dure el efecto está {@condition Dazed|Himo} y ataca con desventaja. Además, recibirá la mitad del daño que haga con el primer ataque que impacte en su turno. Puede salvar al final de cada minuto."
 					]
 				}
 			]
@@ -7414,7 +7414,7 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Haces un ataque contra la criatura objetivo. Con un impacto recibe {@dice 1d4}+modificador. Tira {@dice 1d6}. Pierde una cantidad de espacios de conjuro igual al sumatorio del dado, empezando desde los más pequeños. Si la criatura tenía innate spellcasting y espacios de conjuro, afecta primero a los espacios. Si solo tenía Innate Spellcasting, perderá usos de conjuro igual al nivel del sumatorio (Barlgura: si sacó 4, pierde 2 usos de Disguise Self y 1 de Invisibility). Si no puede borrar un conjuro por completo (sobra 1 en el sumatorio y tiene un espacio de lv2), el conjuro no se gasta. Además, salva Constitución sobre tu CD de potis. Con un fallo, es afectado por la enfermedad de Hipo Arcano."
+						"Haces un ataque contra la criatura objetivo. Con un impacto recibe {@dice 1d4}+modificador. Tira {@dice 1d6}. Pierde una cantidad de espacios de conjuro igual al sumatorio del dado, empezando desde los más pequeños. Si la criatura tenía innate spellcasting y espacios de conjuro, afecta primero a los espacios. Si solo tenía Innate Spellcasting, perderá usos de conjuro igual al nivel del sumatorio (Barlgura: si sacó 4, pierde 2 usos de Disguise Self y 1 de Invisibility). Si no puede borrar un conjuro por completo (sobra 1 en el sumatorio y tiene un espacio de lv2), el conjuro no se gasta. Además, salva Constitución sobre tu CD de potis. Con un fallo, es afectado por la enfermedad de {@disease Hipo Arcano|Himo}."
 					]
 				}
 			]
@@ -7441,7 +7441,7 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Al beber esta poción el objetivo reduce su estrés en una cantidad igual a tu modificador de Wisdom+tu BC y gana 2 estadios de borrachera. Mientras dure la poción tiene ventaja en las tiradas de miedo, pánico, locura y cordura, y de recibir PtE solo recibirá la mitad."
+						"Al beber esta poción el objetivo reduce su estrés en una cantidad igual a tu modificador de Wisdom+tu BC y gana 2 estadios de borrachera. Mientras dure la poción tiene ventaja en las tiradas de {@condition Frightened|PHB}, pánico, locura y cordura, y de recibir PtE solo recibirá la mitad."
 					]
 				},
 				{
@@ -7581,7 +7581,7 @@
 							"type": "list",
 							"items": [
 								"Targetear a una criatura. Haz una tirada de ataque contra un objetivo. Con un fallo, se targetea una superficie centrada donde estaba la criatura (ver siguiente). Con un impacto recibe {@dice 2d8} por frío y se cubre en escarcha. Hasta que se derrita, su movilidad se reduce a la mitad, pierde un ataque de su multiataque (si solo tenía un ataque aún puede hacerlo), salva destreza con desventaja y no tiene reacciones. Al final de su turno salva constitución para recibir {@dice 1d6} de daño por frío o nada. La criatura puede usar su acción en salvar destreza para quitarse la escarcha y acabar con el efecto. Si la criatura tenía resistencia al frío, tiene ventaja en las salvaciones para liberarse y para aguantar el daño residual.",
-								"Targetear una superficie. Un área de 20 ft de radio centrado en el punto de impacto pasa a estar cubierta de hielo. Este área pasa a ser terreno difícil 1/2. Una criatura que quiera moverse más rápido debe salvar destreza o caer prone y recibir el daño residual del efecto anterior. Alternativamente, tú y cualquier criatura que haya experimentado antes esta poción, podéis usar la bonus para tirar acrobacias CD 13 y patinar, ignorando restricciones a la movilidad y no provocando ataques de oportunidad. Con un fallo recibe el daño residual y cae prone. Si se usó el componente mineral opcional, el terreno difícil pasará a ser 1/3 y no se podrá patinar. Cualquier criatura dentro del área en el momento en el que se tiró la poción debe salvar Destreza. Con un fallo, recibe el daño residual y su movilidad se reduce a 0. Puede usar su acción para salvar fuerza y liberarse o para liberar a otra criatura. Al final de sus turnos salvan constitución para llevarse el residual. Beber.",
+								"Targetear una superficie. Un área de 20 ft de radio centrado en el punto de impacto pasa a estar cubierta de hielo. Este área pasa a ser terreno difícil 1/2. Una criatura que quiera moverse más rápido debe salvar destreza o caer {@condition Prone|PHB} y recibir el daño residual del efecto anterior. Alternativamente, tú y cualquier criatura que haya experimentado antes esta poción, podéis usar la bonus para tirar {@skill Acrobatics} CD 13 y patinar, ignorando restricciones a la movilidad y no provocando ataques de oportunidad. Con un fallo recibe el daño residual y cae {@condition Prone|PHB}. Si se usó el componente mineral opcional, el terreno difícil pasará a ser 1/3 y no se podrá patinar. Cualquier criatura dentro del área en el momento en el que se tiró la poción debe salvar Destreza. Con un fallo, recibe el daño residual y su movilidad se reduce a 0. Puede usar su acción para salvar fuerza y liberarse o para liberar a otra criatura. Al final de sus turnos salvan constitución para llevarse el residual. Beber.",
 								"Debe salvar Constitución. Con un fallo recibe {@dice 4d8} por frío y Fiebres Invernales o la mitad del daño y nada más. Una criatura inmune al frío no puede ser cubierta de escarcha ni es afectada por el terreno difícil del hielo (a menos que tenga el ingrediente mineral extra). Si una criatura apresada por el hielo o cubierta de escarcha recibe cualquier cantidad de daño por fuego o irradia calor por contacto, el efecto acaba. Si la superficie congelada recibe daño por fuego, ya sea por estar dentro de un conjuro de área como bola de fuego, ser targeteada por conjuros de fuego como fire bolt o scorching ray, o por el paso de una criatura que quema por contacto, como un elemental de fuego o alguien afectado por Ashardalon’s Stride, ese trozo de área se limpia. Si se usó el mineral extra y se limpió el área, sigue siendo terreno difícil 1/2."
 							]
 						}
@@ -7617,7 +7617,7 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Al beber este brebaje entras en un trance que dura 10 minutos. Mientras dure, estás incapacitado y stunned. El trance acaba antes si recibes cualquier cantidad de daño. Al final, una verdad de tu elección se muestra ante ti en forma de profecía. Haz una pregunta al DM, que deberá responder de forma críptica y breve. Hay un 30% de posibilidades de que falle. El DM hace esta tirada en secreto. Nunca puede recibirse la misma verdad 2 veces. Tras el efecto ganas 1 estadio de borrachera. Alternativamente, puedes no hacer ninguna pregunta al DM. Entonces será este quien decida qué verdad contarte y cómo, pero siempre será verdad. De usarse de esta forma se ganan 3 estadios en vez de 1 si la visión era realmente útil, y 1 si no lo era. Solo tú, con tu Piedra Filosofal en la mano, puedes ser afectado por esta poción. Si bebes esta poción una segunda vez al día, ganas 4 estadios de borrachera y no hace efecto. Si alguien que no es tú bebe esta poción, gana 4 estadios de borrachera."
+						"Al beber este brebaje entras en un trance que dura 10 minutos. Mientras dure, estás {@condition Incapacitated|PHB} y {@condition Stunned|PHB}. El trance acaba antes si recibes cualquier cantidad de daño. Al final, una verdad de tu elección se muestra ante ti en forma de profecía. Haz una pregunta al DM, que deberá responder de forma críptica y breve. Hay un 30% de posibilidades de que falle. El DM hace esta tirada en secreto. Nunca puede recibirse la misma verdad 2 veces. Tras el efecto ganas 1 estadio de borrachera. Alternativamente, puedes no hacer ninguna pregunta al DM. Entonces será este quien decida qué verdad contarte y cómo, pero siempre será verdad. De usarse de esta forma se ganan 3 estadios en vez de 1 si la visión era realmente útil, y 1 si no lo era. Solo tú, con tu Piedra Filosofal en la mano, puedes ser afectado por esta poción. Si bebes esta poción una segunda vez al día, ganas 4 estadios de borrachera y no hace efecto. Si alguien que no es tú bebe esta poción, gana 4 estadios de borrachera."
 					]
 				},
 				{
@@ -7651,7 +7651,7 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Cuando esta bomba impacte en una superficie o criatura estalla, creando un área de gas apestoso de 5 ft de radio (+). Toda criatura en el área cuando estalla salva constitución. Si impactó en una criatura, esta salva con desventaja. Con un fallo están envenenados y dazed 1 minuto. Toda criatura que empiece su turno o entre por primera vez en la nube está envenenada hasta el final de ese turno. Una criatura que acabe su turno en la nube salva constitución o queda envenenada 1 minuto. Todas las criaturas envenenadas de esta forma pueden salvar al final del turno, con desventaja si siguen la nube. Una ráfaga de aire de al menos 16 km/h disipa la nube por completo. El usuario, y tú, si la usó otra criatura, salva con ventaja."
+						"Cuando esta bomba impacte en una superficie o criatura estalla, creando un área de gas apestoso de 5 ft de radio (+). Toda criatura en el área cuando estalla salva constitución. Si impactó en una criatura, esta salva con desventaja. Con un fallo están {@condition Poisoned|PHB} y {@condition Dazed|Himo} 1 minuto. Toda criatura que empiece su turno o entre por primera vez en la nube está {@condition Poisoned|PHB} hasta el final de ese turno. Una criatura que acabe su turno en la nube salva constitución o queda {@condition Poisoned|PHB} 1 minuto. Todas las criaturas {@condition Poisoned|PHB} de esta forma pueden salvar al final del turno, con desventaja si siguen la nube. Una ráfaga de aire de al menos 16 km/h disipa la nube por completo. El usuario, y tú, si la usó otra criatura, salva con ventaja."
 					]
 				},
 				{
@@ -7691,10 +7691,10 @@
 							"type": "list",
 							"items": [
 								"Polvo de hierro. Las criaturas dentro del área ganan 1 PtA y están envenadas 1 minuto, pudiendo salvar al final de cada turno. El gas es rojo y huele muy mal.",
-								"Polvo de Azufre. El rango de visión de la criatura se limita a 10 ft, tiene desventaja en percepción durante 10 minutos y desventaja en salvaciones contra daño radiante y efectos que puedan cegar. El gas es amarillo y pica a la vista y en la nariz.",
+								"Polvo de Azufre. El rango de visión de la criatura se limita a 10 ft, tiene desventaja en {@skill Perception} durante 10 minutos y desventaja en salvaciones contra daño radiante y efectos que puedan cegar. El gas es amarillo y pica a la vista y en la nariz.",
 								"Amoníaco líquido o en gas (pueden usarse 10 usos de Frasco de Amoníaco como componente). Reciben {@dice 4d10} de ácido o la mitad si salvan. Toda criatura que empiece su turno en el área recibe {@dice 1d10} por ácido al principio, y de nuevo al final de su turno si también acabó su turno aquí. El gas es azul claro y quema a la piel, ojos y nariz.",
 								"Polvo de Cobre. Reciben {@dice 2d4} por veneno o la mitad si salvan y pierden su resistencia al veneno. Si eran inmunes, ahora son resistentes. El efecto acaba al salir del área o al disiparse. El gas es verde y marea.",
-								"Arsénico. Reciben {@dice 5d10} por veneno o la mitad. De fallar, al final del turno vuelven a salvar para {@dice 1d10} o la mitad. Pasado un minuto deja de recibir el daño. Con 3 éxitos se salva del veneno. Volver a entrar en la nube o empezar el turno ahí hace que vuelvan a salvar si no estaban envenenados. Mientras sigan en la nube salvan constitución con desventaja. El gas es incoloro e invisible, y huele ligeramente a ajo."
+								"Arsénico. Reciben {@dice 5d10} por veneno o la mitad. De fallar, al final del turno vuelven a salvar para {@dice 1d10} o la mitad. Pasado un minuto deja de recibir el daño. Con 3 éxitos se salva del veneno. Volver a entrar en la nube o empezar el turno ahí hace que vuelvan a salvar si no estaban {@condition Poisoned|PHB}. Mientras sigan en la nube salvan constitución con desventaja. El gas es incoloro e {@condition Invisible|PHB}, y huele ligeramente a ajo."
 							]
 						}
 					]
@@ -7712,7 +7712,7 @@
 			"name": "Condición",
 			"source": "Himo", "page": "??", "featureType": "PW",
 			"prerequisite": [{"level": {"level": 2, "class": {"name": "Lexarca"}}}],
-			"entries": ["En el momento en el que preparas esta palabra elige una de las siguientes condiciones: ceguera, sordera, dazed, mudo, charmed o miedo. El objetivo salva Carisma o está bajo los efectos de esa condición. Puede salvar al final de cada turno para acabar con el efecto. Si no, dura un número de minutos igual a tu Modificador de Wisdom. Puedes preparar esta palabra más de una vez con distintos efectos."]
+			"entries": ["En el momento en el que preparas esta palabra elige una de las siguientes condiciones: {@condition Blinded|PHB}, {@condition Deafened|PHB}, {@condition Dazed|Himo}, mudo, {@condition Charmed|PHB} o {@condition Frightened|PHB}. El objetivo salva Carisma o está bajo los efectos de esa condición. Puede salvar al final de cada turno para acabar con el efecto. Si no, dura un número de minutos igual a tu Modificador de Wisdom. Puedes preparar esta palabra más de una vez con distintos efectos."]
 		},
 		{
 			"name": "Empujar",
@@ -7772,19 +7772,19 @@
 			"name": "Levitar",
 			"source": "Himo", "page": "??", "featureType": "PW",
 			"prerequisite": [{"level": {"level": 7, "class": {"name": "Lexarca"}}}],
-			"entries": ["La criatura objetivo salva Carisma o empieza a flotar a una altura de un número de ft igual a tu modificador de wisdom x5. Mientras se mantenga ahí está restrained. Puede salvar al final de cada turno. Al liberarse cae y punto (puede recibir daño)."]
+			"entries": ["La criatura objetivo salva Carisma o empieza a flotar a una altura de un número de ft igual a tu modificador de wisdom x5. Mientras se mantenga ahí está {@condition Restrained|PHB}. Puede salvar al final de cada turno. Al liberarse cae y punto (puede recibir daño)."]
 		},
 		{
 			"name": "Inconsciencia",
 			"source": "Himo", "page": "??", "featureType": "PW",
 			"prerequisite": [{"level": {"level": 13, "class": {"name": "Lexarca"}}}],
-			"entries": ["El objetivo cae inconsciente un número de minutos igual a tu modificador de Wisdom. Cada vez que reciba daño salva de nuevo. Con un éxito despierta."]
+			"entries": ["El objetivo cae {@condition Unconscious|PHB} un número de minutos igual a tu modificador de Wisdom. Cada vez que reciba daño salva de nuevo. Con un éxito despierta."]
 		},
 		{
 			"name": "Paz",
 			"source": "Himo", "page": "??", "featureType": "PW",
 			"prerequisite": [{"level": {"level": 13, "class": {"name": "Lexarca"}}}],
-			"entries": ["Una criatura de tu elección salva Carisma o pasa a ser inmune a miedo y a charm y pierde todas las ganas de luchar hasta que reciba daño de nuevo. Su iniciativa, si se había tirado, pasa a ser 0. Si recibe daño, el efecto acaba y rerolea la iniciativa."]
+			"entries": ["Una criatura de tu elección salva Carisma o pasa a ser inmune a {@condition Frightened|PHB} y a {@condition Charmed|PHB} y pierde todas las ganas de luchar hasta que reciba daño de nuevo. Su iniciativa, si se había tirado, pasa a ser 0. Si recibe daño, el efecto acaba y rerolea la iniciativa."]
 		},
 		{
 			"name": "Guerra",
@@ -7808,7 +7808,7 @@
 			"name": "Abismo",
 			"source": "Himo", "page": "??", "featureType": "PW",
 			"prerequisite": [{"level": {"level": 17, "class": {"name": "Lexarca"}}}],
-			"entries": ["Esta palabra vale el equivalente a 5 palabras de poder.", "El suelo se abre bajo los pies del objetivo. Este salva Carisma o cae en un abismo sin fondo. Con un fallo el objetivo desaparece hasta que salve de nuevo al final de cada turno. Con cada fallo recibe {@damage 4d6} psíquicos, con un éxito el portal se abre en el cielo y cae prone donde estaba. El portal aparece a un número de ft de altura igual a tus modificadores de Inteligencia, wisdom y carisma multiplicados por 5 y recibe daño por caída."]
+			"entries": ["Esta palabra vale el equivalente a 5 palabras de poder.", "El suelo se abre bajo los pies del objetivo. Este salva Carisma o cae en un abismo sin fondo. Con un fallo el objetivo desaparece hasta que salve de nuevo al final de cada turno. Con cada fallo recibe {@damage 4d6} psíquicos, con un éxito el portal se abre en el cielo y cae {@condition Prone|PHB} donde estaba. El portal aparece a un número de ft de altura igual a tus modificadores de Inteligencia, wisdom y carisma multiplicados por 5 y recibe daño por caída."]
 		},
 		{
 			"name": "Antagonizar",
@@ -7820,7 +7820,7 @@
 			"name": "Perdición",
 			"source": "Himo", "page": "??", "featureType": "PW",
 			"prerequisite": [{"level": {"level": 17, "class": {"name": "Lexarca"}}}],
-			"entries": ["Esta palabra vale el equivalente a 5 palabras de poder.", "La criatura salva Carisma o queda ciega permanentemente. Solo un conjuro o efecto que cure la ceguera puede devolverle la vista."]
+			"entries": ["Esta palabra vale el equivalente a 5 palabras de poder.", "La criatura salva Carisma o queda ciega permanentemente. Solo un conjuro o efecto que cure la {@condition Blinded|PHB} puede devolverle la vista."]
 		},
 		{
 			"name": "Alma",
@@ -7838,13 +7838,13 @@
 			"name": "Vida",
 			"source": "Himo", "page": "??", "featureType": "PW",
 			"prerequisite": [{"level": {"level": 3, "class": {"name": "Lexarca"}, "subclass": {"name": "Lengua de Oro", "source": "Himo"}}}],
-			"entries": ["Cuando una criatura caiga a 0 HP a 120 ft de ti, puedes gastar una palabra de poder como reacción para cerrar sus heridas. La criatura recupera HP iguales a tu lv. Si estaba envenenado, ya no lo está. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]
+			"entries": ["Cuando una criatura caiga a 0 HP a 120 ft de ti, puedes gastar una palabra de poder como reacción para cerrar sus heridas. La criatura recupera HP iguales a tu lv. Si estaba {@condition Poisoned|PHB}, ya no lo está. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]
 		},
 		{
 			"name": "Curación",
 			"source": "Himo", "page": "??", "featureType": "PW",
 			"prerequisite": [{"level": {"level": 6, "class": {"name": "Lexarca"}, "subclass": {"name": "Lengua de Oro", "source": "Himo"}}}],
-			"entries": ["Acabas con una condición en una criatura de tu elección. La condiciones que puedes eliminar son ceguera, sordera, dazed, mudo, charmed, miedo, parálisis, petrificación, veneno y enfermedades. Además la criatura puede gastar un dado de golpe para curarse le resultado más su modificador de constitución más tu modificador de carisma. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]
+			"entries": ["Acabas con una condición en una criatura de tu elección. La condiciones que puedes eliminar son {@condition Blinded|PHB}, {@condition Deafened|PHB}, {@condition Dazed|Himo}, mudo, {@condition Charmed|PHB}, {@condition Frightened|PHB}, {@condition Paralyzed|PHB}, {@condition Petrified|PHB}, veneno y enfermedades. Además la criatura puede gastar un dado de golpe para curarse le resultado más su modificador de constitución más tu modificador de carisma. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]
 		},
 		{
 			"name": "Revivir",
@@ -7856,7 +7856,7 @@
 			"name": "Rugido",
 			"source": "Himo", "page": "??", "featureType": "PW",
 			"prerequisite": [{"level": {"level": 18, "class": {"name": "Lexarca"}, "subclass": {"name": "Lengua de Serpiente", "source": "Himo"}}}],
-			"entries": ["Como acción, gastas 5 palabras de poder y todas las criaturas de tu elección cuyo rostro puedas ver y que puedan oírte salvan Carisma. Con un fallo, reciben tu lv de daño por trueno, tu lv de un daño de tu elección de tu variación elemental y están dazed, son empujados 15 ft y caen prone. Con un éxito, solo reciben la mitad del daño.", "Este trait es una Palabra de poder, por lo que triggerea tu variación elemental, tu entereza dracónida si estaba activa y tu Invocación Ancestral si estaba activa.", "Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]
+			"entries": ["Como acción, gastas 5 palabras de poder y todas las criaturas de tu elección cuyo rostro puedas ver y que puedan oírte salvan Carisma. Con un fallo, reciben tu lv de daño por trueno, tu lv de un daño de tu elección de tu variación elemental y están {@condition Dazed|Himo}, son empujados 15 ft y caen {@condition Prone|PHB}. Con un éxito, solo reciben la mitad del daño.", "Este trait es una Palabra de poder, por lo que triggerea tu variación elemental, tu entereza dracónida si estaba activa y tu Invocación Ancestral si estaba activa.", "Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]
 		},
 		{
 			"name": "Jaula",

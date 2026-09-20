@@ -43,7 +43,7 @@
 				]
 			},
 			"entries": [
-				"You touch one willing creature. While this spell is active, the target's senses are heightened. If the target rolls a 9 or below on the die when making a Wisdom (Perception) check, they instead act as if they rolled a 10."
+				"You touch one willing creature. While this spell is active, the target's senses are heightened. If the target rolls a 9 or below on the die when making a Wisdom ({@skill Perception}) check, they instead act as if they rolled a 10."
 			],
 			"source": "GHLoE",
 			"page": "??"

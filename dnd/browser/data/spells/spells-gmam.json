@@ -123,7 +123,7 @@
 			},
 			"entries": [
 				"Elije hasta 30 criaturas dentro del rango. Su apariencia cambia para mimetizarse con el entorno. Su pelo se convierte en rastas y cambia de color para asemejarse a las ramas, su piel también cambia de color, el olor desaparece...",
-				"Mientras dure el conjuro, y mientras los objetivos no hablen ni se muevan del sitio, tienen ventaja y suman tu modificador de spellcasting a las tiradas de sigilo para esconderse (únicamente).",
+				"Mientras dure el conjuro, y mientras los objetivos no hablen ni se muevan del sitio, tienen ventaja y suman tu modificador de spellcasting a las tiradas de {@skill Stealth} para esconderse (únicamente).",
 				"En el momento que uno de los objetivos se mueva, hable, castee un conjuro o ataque, todos pierden los efectos del conjuro."
 			],
 			"source": "GMAM",
@@ -191,7 +191,7 @@
 			},
 			"entries": [
 				"Creas una figura similar a un objetivo que conozcas y del cual sepas su ubicación aproximada. La figura tiene 100 HP. Con tu acción puedes dañar a la estatua o inmovilizarla. El objetivo recibe el daño que reciba la estatua y está automáticamente {@condition restrained} si decides inmovilizarla (acción de grapple).",
-				"La estatua es inmune a todo daño que no le sea aplicado con un arma a melé, y es resistente a los daños no físicos. EL objetivo recibe todo el daño necrótico. Sin embargo, este conjuro no matará a la criatura si le reduce a 0 HP. En cambio, lo dejará estable pero inconsciente.",
+				"La estatua es inmune a todo daño que no le sea aplicado con un arma a melé, y es resistente a los daños no físicos. EL objetivo recibe todo el daño necrótico. Sin embargo, este conjuro no matará a la criatura si le reduce a 0 HP. En cambio, lo dejará estable pero {@condition Unconscious|PHB}.",
 				"La estatua no puede ser reparada de ninguna forma y se reduce a polvo cuando sus HP o los del objetivo bajan a 0."
 			],
 			"source": "GMAM",
@@ -265,7 +265,7 @@
 			},
 			"entries": [
 				"El agua de un área de 15 ft de radio se seca. Las criaturas con sangre y/o agua en su organismo salvan Constitución para recibir {@dice 4d6} de daño necrótico o la mitad. Las plantas y las criaturas hechas enteramente de agua reciben el doble de daño y salvan con desventaja.",
-				"Las plantas no mágicas se secan automáticamente en el área y las charcas de hasta 1 ft de profundidad se seca. Si se riega mágicamente o se castea {@spell Dispel Magic}, la sequía en el área desaparece y el suelo vuelve a ser fértil."
+				"Las plantas no mágicas se secan automáticamente en el área y las charcas de hasta 1 ft de profundidad se seca. Si se riega mágicamente o se castea {@spell Dispel Magic}, la {@spell Sequía|GMAM} en el área desaparece y el suelo vuelve a ser fértil."
 			],
 			"source": "GMAM",
 			"subschools": [
@@ -563,7 +563,7 @@
 			],
 			"entries": [
 				"Intentas charmear a una criatura que puedas ver dentro del rango y con la que estés manteniendo una conversación. Esta debe salvar wisdom, con ventaja si es hostil hacia ti. Si falla, está {@condition charmed} por ti mientras dure el conjuro o hasta que tú o algún aliado le dañe de cualquier forma. Si salvó, la criatura no sabe que has intentado charmearla.",
-				"Este conjuro también tiene efecto contra criaturas semiconscientes, como algunos undead o golems, que normalmente son inmunes a charm. Una criatura inmune a charm que sea completamente consciente de lo que hace sigue siendo inmune a este conjuro."
+				"Este conjuro también tiene efecto contra criaturas semiconscientes, como algunos undead o golems, que normalmente son inmunes a {@condition Charmed|PHB}. Una criatura inmune a {@condition Charmed|PHB} que sea completamente consciente de lo que hace sigue siendo inmune a este conjuro."
 			],
 			"savingThrow": [
 				"wisdom"
@@ -1146,7 +1146,7 @@
 			},
 			"entries": [
 				"Al castear el conjuro el caster conoce la localización de todas las serpientes dentro del área, incluso si no las puede ver. Puede elegir un número de serpientes igual al nivel del caster (si es multiclase solo cuenta los niveles caster según la multiclase). Todas ellas salvan wisdom, con desventaja si están enfadadas o si son hostiles hacia el caster. Con un fallo están charmeadas. Con un acierto, se vuelven hostiles hacia el caster.",
-				"Mientras están {@condition charmed}, pueden comandarlas para hacer tareas complejas, como atacar a criaturas lejanas, espiar, enviar mensajes, etc. Mientras dure la concentración no necesita ver las serpientes para comandarlas. Si el conjuro acaba antes de que alguna serpiente acabe su tarea, esta la acaba dentro de lo que se lo permita su instinto."
+				"Mientras están {@condition charmed}, pueden comandarlas para hacer tareas complejas, como atacar a criaturas lejanas, espiar, enviar mensajes, etc. Mientras dure la {@status Concentration|PHB} no necesita ver las serpientes para comandarlas. Si el conjuro acaba antes de que alguna serpiente acabe su tarea, esta la acaba dentro de lo que se lo permita su instinto."
 			],
 			"source": "GMAM",
 			"components": {
@@ -1587,8 +1587,8 @@
 				]
 			},
 			"entries": [
-				"Este conjuro se castea en 10 minutos, y luego el caster debe concentrarse durante 1 día entero. Mientras se esté concentrando puede castear conjuros complementarios a este sin necesidad de concentrarse (see below), pero perderá la concentración de forma habitual si castea un conjuro de concentración no complementario. Una vez pasadas 24 horas, los cambios hechos en el terreno duran una estación. A partir de este momento serán permanentes solo si el clima acompaña.",
-				"El conjuro transforma un área para hacerla fértil y la llena de vegetación. Puede transformar una ciénaga en un campo fértil o hacer que una zona afectada por las sequía vuelva a ser una tierra húmeda. Aún así, tiene limitaciones: no puede alterar desiertos o zonas afectadas por largas sequías o por los efectos regionales de alguna criatura ni bajo influencia mágica.",
+				"Este conjuro se castea en 10 minutos, y luego el caster debe concentrarse durante 1 día entero. Mientras se esté concentrando puede castear conjuros complementarios a este sin necesidad de concentrarse (see below), pero perderá la {@status Concentration|PHB} de forma habitual si castea un conjuro de {@status Concentration|PHB} no complementario. Una vez pasadas 24 horas, los cambios hechos en el terreno duran una estación. A partir de este momento serán permanentes solo si el clima acompaña.",
+				"El conjuro transforma un área para hacerla fértil y la llena de vegetación. Puede transformar una ciénaga en un campo fértil o hacer que una zona afectada por las {@spell Sequía|GMAM} vuelva a ser una tierra húmeda. Aún así, tiene limitaciones: no puede alterar desiertos o zonas afectadas por largas sequías o por los efectos regionales de alguna criatura ni bajo influencia mágica.",
 				"Durante el casteo de este conjuro el caster puede utilizar otros conjuros, como {@spell Create or Destroy Water}, {@spell Invocar Agua|GMAM}, {@spell Plant Growth} o similares. Estos conjuros calarán más en la tierra a transformar y tendrán efectos más permanentes, potenciando el efecto del conjuro. Plantas creadas con conjuros como {@spell Ira del Árbol|GdR} o {@spell Espíritu del Sauce|GdR} se volverán plantas de forma permanente, pero perderán su capacidades mágicas.",
 				"Otros casters pueden participar en la transformación de esta tierra mientras te concentres en el conjuro."
 			],
@@ -2068,7 +2068,7 @@
 			},
 			"entries": [
 				"Al castear este conjuro atraes a todos los peces dentro del área, que nadan hacia ti. Para ello, tienes que estar en contacto en todo momento con el cuerpo de agua en el que vas a castear el conjuro. Si dejas de estar en contacto con el agua el conjuro acaba.",
-				"Los peces nadan esquivando obstáculos claros, pero ignoran la presencia de criaturas peligrosas, permitiendo que les pesquen o les cacen si se da el caso. El caster es vulnerable a las salvaciones de concentración mientras dure, por lo que no puede participar en la pesca. También salva {@status concentration} con desventaja.",
+				"Los peces nadan esquivando obstáculos claros, pero ignoran la presencia de criaturas peligrosas, permitiendo que les pesquen o les cacen si se da el caso. El caster es vulnerable a las salvaciones de {@status Concentration|PHB} mientras dure, por lo que no puede participar en la pesca. También salva {@status concentration} con desventaja.",
 				"Si no hay peces en el área el conjuro falla. El caster es consciente de por qué ha fallado."
 			],
 			"source": "GMAM",
@@ -2520,9 +2520,9 @@
 				"Este conjuro permite crear una serie de objetos mágicos de la subescuela de Pluma, enfocados a la protección y la utilidad. {@b No puedes tener preparada la versión de Hishna de este conjuro mientras tengas este preparado ni eliminar este mientras estés casteandolo.}",
 				"- {@i Brazalete de Plumas.} {@b 20 meses de casteo.} Creas un brazalete con plumas que te otorga una fuerza superior. Mientras lleves el objeto tu stat de fuerza es igual a tu stat de lanzamiento de conjuros.",
 				"- {@i Pluma Protectora.} {@b 20 meses de casteo.} Encantas una pluma con la protección de Qotal. Mientras portes esta pluma tienes un +3 a la CA y a las salvaciones contra efectos mágicos. Cualquier criatura de tu elección a 10ft tiene también este bono a las salvaciones contra efectos mágicos y puedes castear una vez al día {@spell Feather Fall}.",
-				"- {@i Mocasines de libre movimiento.} {@b 15 meses de casteo.} Estos mocasines tienen los efectos de unas {@item Boots of Elvenkind|DMG}, pero te permite usar toda tu movilidad mientras vas a sigilo. Además puede caminar por líquidos, espesos o ligeros, como si fuera una superficie sólida y lisa.",
+				"- {@i Mocasines de libre movimiento.} {@b 15 meses de casteo.} Estos mocasines tienen los efectos de unas {@item Boots of Elvenkind|DMG}, pero te permite usar toda tu movilidad mientras vas a {@skill Stealth}. Además puede caminar por líquidos, espesos o ligeros, como si fuera una superficie sólida y lisa.",
 				"- {@i Manto de Plumas.} {@b 19 meses de casteo.} Es similar a cualquiera de los objetos que se puedan crear con {@spell Featherweaving|GMAM}, pero no requiere los conjuros de {@spell Elevar Menor|GMAM} ni {@spell Elevar Mayor|GMAM}. Mide 6 ft de ancho, 10 ft de largo y tiene 1 ft de grosor. Puede cargar hasta 750 lb. Requiere una palabra comando para hacer que siga a quien la pronunció en voz alta hasta a una velocidad de 30 ft y otra palabra comando para ascender o descender 30ft por ronda. Seguirá ascendiendo o descendiendo hasta que se use la misma palabra comando para que se detenga.",
-				"- {@i Plumastone.} {@b 16 meses de casteo.} Es un arma encantada que debe añadirse a los componentes del conjuro. En el proceso se usa también un trozo de obsidiana por valor de 500 GP para hacer el filo. El arma puede ser una macahuitl (espada larga), una daga, 3 javalinas o 20 flechas. Estos objetos pueden romperse como cualquier arma mundana, pero son mágicas y reciben un +2 al ataque y +3 al daño.",
+				"- {@i Plumastone.} {@b 16 meses de casteo.} Es un arma {@condition Charmed|PHB} que debe añadirse a los componentes del conjuro. En el proceso se usa también un trozo de obsidiana por valor de 500 GP para hacer el filo. El arma puede ser una macahuitl (espada larga), una daga, 3 javalinas o 20 flechas. Estos objetos pueden romperse como cualquier arma mundana, pero son mágicas y reciben un +2 al ataque y +3 al daño.",
 				"- {@i Decantador de Cuero.} {@b 20 meses de casteo.} Este odre siempre está lleno de agua. Puedes verter 1 galón (~4 litros) por ronda.",
 				"{@i Puedes concretar otros talismanes homebrew con el DM, pero la característica principal es, y cito textualmente} \"Los talismanes no tienen un nivel de poder capaz de destruir una población entera, sino que es un efecto más sutil y prolongado\"."
 			],

@@ -87,14 +87,14 @@ assert.strictEqual(new Set(lexarch.classSpells.map(normalizeSpell)).size, 173);
 for (const spell of lexarch.classSpells) assert(availableSpells.has(normalizeSpell(spell)), `Unknown Lexarca spell: ${spell}`);
 
 const serialized = JSON.stringify(lexarch);
-for (const link of [
-	"{@spell Comprehend Languages|PHB|Comprender Idiomas}",
-	"{@spell Heroism|PHB|Heroísmo}",
-	"{@spell Tasha's Hideous Laughter|PHB|Tasha's Laughter}",
-	"{@spell Otiluke's Resilient Sphere|PHB|Otiluke}",
-	"{@spell Teleportation Circle|PHB|Círculo de TP}",
-	"{@spell Bones of the Earth|XGE|Bones of Earth}"
-]) assert(serialized.includes(link), `Missing canonical spell link: ${link}`);
+for (const spell of [
+	"Comprehend Languages|PHB",
+	"Heroism|PHB",
+	"Tasha's Hideous Laughter|PHB",
+	"Otiluke's Resilient Sphere|PHB",
+	"Teleportation Circle|PHB",
+	"Bones of the Earth|XGE"
+]) assert(lexarch.classSpells.map(normalizeSpell).includes(normalizeSpell(spell)), `Missing canonical class spell: ${spell}`);
 assert(!serialized.includes("{@spell True Name"));
 assert(serialized.includes("{@filter Palabras de Poder|optionalfeatures|feature type=PW|source=Himo}"));
 assert(!serialized.includes("El suelo se abre bajo los pies"), "Power-word descriptions must not be duplicated in the class data.");

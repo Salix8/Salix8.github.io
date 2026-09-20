@@ -30661,7 +30661,7 @@
 			"ac": 1,
 			"entries": [
 				"También es un arma marcial ligera y sutil que hace {@dice 1d4} contundente y siempre cuenta como de mano torpe. No puedes equipar un tessen y otro escudo salvo que tengas un rasgo específico que lo permita. Los monjes lo tratan como arma, no como escudo.",
-				"Tienes ventaja en las pruebas de Destreza (Sigilo) y Destreza (Juego de Manos) para parecer desarmado mientras lo portas.",
+				"Tienes ventaja en las pruebas de Destreza ({@skill Stealth}) y Destreza ({@skill Sleight of Hand}) para parecer desarmado mientras lo portas.",
 				"Las criaturas golpeadas con el tessen tienen desventaja al atacarte hasta el inicio de tu próximo turno. Si no lo usaste para atacar, obtienes +2 adicional a la CA contra proyectiles y ataques con armas ligeras."
 			]
 		},
@@ -30727,7 +30727,7 @@
 			"page": "??",
 			"entries": [
 				"Técnicamente son dos armas ligeras unidas por una cadena: no puede usarse con una mano, pero tampoco cuenta como un arma a dos manos.",
-				"Cada impacto otorga +1 al ataque contra esa criatura hasta +5; después otorga +1 al daño hasta +5. El bono termina al quedar incapacitado, con velocidad 0 o al cambiar de objetivo."
+				"Cada impacto otorga +1 al ataque contra esa criatura hasta +5; después otorga +1 al daño hasta +5. El bono termina al quedar {@condition Incapacitated|PHB}, con velocidad 0 o al cambiar de objetivo."
 			]
 		},
 		{
@@ -30784,7 +30784,7 @@
 					"type": "entries",
 					"name": "Variante: Armadura de Remorhaz Joven",
 					"entries": [
-						"La quitina de un remorhaz joven permite fabricar cualquier armadura media. Su CA base se reduce en 1, pesa un 40 % más, impone desventaja en las pruebas de Destreza (Sigilo) para esconderse y concede resistencia al frío o al fuego. Su reacción de {@damage 3d6} de daño de fuego solo puede usarse una vez al día."
+						"La quitina de un remorhaz joven permite fabricar cualquier armadura media. Su CA base se reduce en 1, pesa un 40 % más, impone desventaja en las pruebas de Destreza ({@skill Stealth}) para esconderse y concede resistencia al frío o al fuego. Su reacción de {@damage 3d6} de daño de fuego solo puede usarse una vez al día."
 					]
 				}
 			]
@@ -30879,7 +30879,7 @@
 			"page": "??",
 			"entries": [
 				"La piel de un {@creature barlgura} permite fabricar tres armaduras medias o cinco ligeras. La versión media tiene CA 12 + Constitución (máximo 2) y pesa 20 libras; la ligera tiene CA 10 + Constitución y pesa 15 libras. Parece cuero azul cubierto de pelo rojo.",
-				"El portador tiene ventaja en las tiradas de salvación de Constitución para mantener la concentración mientras es invisible, reduce en {@dice 1d4} el daño de frío que recibe y es inmune a las temperaturas extremadamente bajas.",
+				"El portador tiene ventaja en las tiradas de salvación de Constitución para mantener la {@status Concentration|PHB} mientras es {@condition Invisible|PHB}, reduce en {@dice 1d4} el daño de frío que recibe y es inmune a las temperaturas extremadamente bajas.",
 				"Tres veces al día, cuando una criatura ataca al portador cuerpo a cuerpo, este puede usar su reacción para infligirle {@damage 3d6} de daño de fuego."
 			]
 		},
@@ -30895,7 +30895,7 @@
 			"source": "Himo",
 			"page": "??",
 			"entries": [
-				"Se fabrica con la quitina del cuerpo de un {@creature grick}; el pico puede usarse opcionalmente para el casco. Tiene CA 12 + Constitución (máximo 2) y parece una armadura de medias placas blandas y azules ceñidas al cuerpo. El portador es inmune a ser agarrado por ventosas.",
+				"Se fabrica con la quitina del cuerpo de un {@creature grick}; el pico puede usarse opcionalmente para el casco. Tiene CA 12 + Constitución (máximo 2) y parece una armadura de medias placas blandas y azules ceñidas al cuerpo. El portador es inmune a ser {@condition Grappled|PHB} por ventosas.",
 				{
 					"type": "entries",
 					"name": "Variante: Armadura de Grick Alfa",
@@ -31016,7 +31016,7 @@
 						["Trasplante*", "25", "Probablemente, si has llegado a este punto, la alternativa sea resurrección."]
 					]
 				},
-				"* Requiere competencia con el kit o en Medicina."
+				"* Requiere competencia con el kit o en {@skill Medicine}."
 			]
 		},
 		{
@@ -31078,7 +31078,7 @@
 			"page": "??",
 			"entries": [
 				"Esta figura de acción mide aproximadamente un palmo y medio, aunque su tamaño puede variar. Su aspecto cambia según el estado emocional de quien la observa: ante emociones negativas muestra a su mayor enemigo o a la criatura que más odia; ante emociones positivas representa al observador o a alguien a quien admira.",
-				"Una prueba de Inteligencia (Investigación) CD 18 permite encontrar un pequeño botón. Al pulsarlo, la figura conserva el aspecto que tenía en ese momento hasta que vuelva a pulsarse."
+				"Una prueba de Inteligencia ({@skill Investigation}) CD 18 permite encontrar un pequeño botón. Al pulsarlo, la figura conserva el aspecto que tenía en ese momento hasta que vuelva a pulsarse."
 			]
 		},
 		{
@@ -31279,7 +31279,7 @@
 					"type": "entries",
 					"name": "Intimidación",
 					"entries": [
-						"Puedes sumar el bonificador del kit —Fuerza más bonificador de competencia— a una prueba de Intimidación en la que lo utilices."
+						"Puedes sumar el bonificador del kit —Fuerza más bonificador de competencia— a una prueba de {@skill Intimidation} en la que lo utilices."
 					]
 				},
 				{
@@ -31330,8 +31330,21 @@
 						["Provocar un punto de agotamiento", "18"]
 					]
 				},
-				"* Fallar una prueba inflige una cantidad de daño letal igual a los puntos de golpe que fueran a perderse y deja inconsciente al objetivo.",
+				"* Fallar una prueba inflige una cantidad de daño letal igual a los puntos de golpe que fueran a perderse y deja {@condition Unconscious|PHB} al objetivo.",
 				"** La criatura recupera uno de estos Dados de Golpe por descanso largo."
+			]
+		},
+		{
+			"name": "Spelljamming Helm",
+			"source": "AAG",
+			"page": 23,
+			"rarity": "rare",
+			"reqAttune": "by a spellcaster",
+			"wondrous": true,
+			"entries": [
+				"The function of this ornate chair is to propel and maneuver a ship on which it has been installed through space and air. It can also propel and maneuver a ship on water or underwater, provided the ship is built for such travel. The ship in question must weigh 1 ton or more.",
+				"While attuned to a spelljamming helm and sitting in it, you can propel and steer the vessel for as long as you maintain {@status Concentration|PHB} as if concentrating on a spell. You can also see and hear what is happening on and around the vessel as though standing at a location of your choice aboard it.",
+				{"type": "entries", "name": "Transfer Attunement", "entries": ["You can use an action to touch a willing spellcaster. That creature attunes to the spelljamming helm immediately, and your attunement to it ends."]}
 			]
 		}
 	],

@@ -4454,8 +4454,8 @@
 				{
 					"type": "entries",
 					"entries": [
-						"Requisitos: Tener competencia en percepción y al menos un arma marcial a melé",
-						"Doblas Percepción",
+						"Requisitos: Tener competencia en {@skill Perception} y al menos un arma marcial a melé",
+						"Doblas {@skill Perception}",
 						"Adquieres 30 pies de blindsight. Si ya tenías, añadelo a lo que tuvieras."
 					]
 				}
@@ -4511,7 +4511,7 @@
 					"type": "entries",
 					"entries": [
 						"Uno de tus stats aumenta en +1",
-						"Una vez al día puedes usar una bonus para castear Bless en ti mismo. Cuando lo castees de esta forma dura 10 minutos sin concentración y aplica también a checks.",
+						"Una vez al día puedes usar una bonus para castear Bless en ti mismo. Cuando lo castees de esta forma dura 10 minutos sin {@status Concentration|PHB} y aplica también a checks.",
 						"Al final de un descanso largo ganas HPT iguales a tu BC x2"
 					]
 				}
@@ -4595,7 +4595,7 @@
 						"- Monje, ganas 2 pt de ki.",
 						"- Paladín, una vez al día, por descanso corto, recuperas una cantidad de puntos de tu imposición de manos igual a la mitad del total redondeado hacia arriba.",
 						"- Ranger, si usas la variante de Favored Foe, ganas un uso al día.",
-						"- Wizard, ganas una recuperación arcana extra.",
+						"- Wizard, ganas una recuperación {@skill Arcana} extra.",
 						"Si adquiriste una pool de dados, ya sea por subclase, dote o similar, añades un dado a la pool."
 					]
 				}
@@ -4659,8 +4659,8 @@
 				{
 					"type": "entries",
 					"entries": [
-						"Requisito: Competencia en Medicina",
-						"Expertise en Medicina",
+						"Requisito: Competencia en {@skill Medicine}",
+						"Expertise en {@skill Medicine}",
 						"Aprendes el cantrip Spare the Dying y puedes castearlo como reacción a 15 ft cuando una criatura caiga a 0 HP.",
 						"Reroleas 1 y 2 en curaciones y te quedas con la nueva tirada.",
 						"Puedes aplicar pociones de curación a otras criaturas usando la bonus como si fuera la acción. También puedes hacerte esto a ti mismo."
@@ -4744,7 +4744,7 @@
 					"type": "entries",
 					"entries": [
 						"Requisito: Carecer del rasgo de Spellcasting (hasta lv9 de conjuro) o Magia de Pacto. De cogerse esta dote, el personaje renuncia a multiclasear con dichas clases.",
-						"Eres competente en Persuasión, y doblas la competencia si ya lo eras.",
+						"Eres competente en {@skill Persuasion}, y doblas la competencia si ya lo eras.",
 						"Cuando no lleves armadura, tu CA se calcula con 10+Dex+Carisma"
 					]
 				}

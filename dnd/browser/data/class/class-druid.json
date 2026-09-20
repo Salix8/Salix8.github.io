@@ -2082,7 +2082,7 @@
 													],
 													[
 														"5th",
-														"Emboscada, {@spell spike growth}"
+														"{@spell Emboscada|GMAM}, {@spell spike growth}"
 													],
 													[
 														"7th",
@@ -2090,11 +2090,11 @@
 													],
 													[
 														"9th",
-														"Cambiar Cauce, {@spell grasping vine}"
+														"{@spell Cambiar Cauce|GMAM}, {@spell grasping vine}"
 													],
 													[
 														"11th",
-														"Ira del Árbol, Espíritu del Sauce"
+														"Ira del Árbol, {@spell Espíritu del Sauce|GdR}"
 													]
 												]
 											}
@@ -2183,7 +2183,7 @@
 								"source": "Himo",
 								"page": "??",
 								"entries": [
-									"Aprendes los conjuros {@spell control water}, {@spell control winds}, {@spell control flames} y {@spell stone shape}, y los tienes siempre preparados. Cuando lances cualquiera de estos conjuros, puedes pasar de uno a otro sin gastar un espacio de conjuro extra ni perder la concentración.",
+									"Aprendes los conjuros {@spell control water}, {@spell control winds|XGE}, {@spell control flames|XGE} y {@spell stone shape}, y los tienes siempre preparados. Cuando lances cualquiera de estos conjuros, puedes pasar de uno a otro sin gastar un espacio de conjuro extra ni perder la {@status Concentration|PHB}.",
 									"Dos de estos conjuros son de nivel 4 y dos son de nivel 5. Para pasar de un conjuro de nivel 4 a uno de nivel 5 debes haberlo lanzado con un espacio de nivel 5."
 								]
 							}
@@ -2266,7 +2266,7 @@
 								"source": "Himo",
 								"page": "??",
 								"entries": [
-									"A nivel 14, las esporas fúngicas de tu cuerpo te alteran: no puedes quedar cegado, ensordecido, asustado ni envenenado, y cualquier golpe crítico contra ti cuenta como un golpe normal, salvo que estés incapacitado."
+									"A nivel 14, las esporas fúngicas de tu cuerpo te alteran: no puedes quedar {@condition blinded}, {@condition deafened}, {@condition Frightened|PHB} ni {@condition Poisoned|PHB}, y cualquier golpe crítico contra ti cuenta como un golpe normal, salvo que estés {@condition Incapacitated|PHB}."
 								]
 							}
 						]
@@ -2331,7 +2331,7 @@
 								"source": "Himo",
 								"page": "??",
 								"entries": [
-									"Una vez al día, como acción, puedes emitir un aullido terrorífico que podrá ser oído a una milla a la redonda. Toda criatura de tu elección a 120 pies debe superar una salvación de Sabiduría —las plantas y los muertos vivientes tienen desventaja— o recibir {@dice 10d6} de daño psíquico; con una salvación exitosa recibe la mitad. Toda criatura Grande o más pequeña que falle la salvación queda asustada de ti y forzada a huir mientras pueda verte y siga asustada. Una criatura asustada de esta forma puede hacer la salvación cuando esté a 60 pies de ti. Si la criatura era inmune al daño psíquico, es inmune a todo este rasgo."
+									"Una vez al día, como acción, puedes emitir un aullido terrorífico que podrá ser oído a una milla a la redonda. Toda criatura de tu elección a 120 pies debe superar una salvación de Sabiduría —las plantas y los muertos vivientes tienen desventaja— o recibir {@dice 10d6} de daño psíquico; con una salvación exitosa recibe la mitad. Toda criatura Grande o más pequeña que falle la salvación queda {@condition Frightened|PHB} de ti y forzada a huir mientras pueda verte y siga {@condition Frightened|PHB}. Una criatura {@condition Frightened|PHB} de esta forma puede hacer la salvación cuando esté a 60 pies de ti. Si la criatura era inmune al daño psíquico, es inmune a todo este rasgo."
 								]
 							}
 						]
@@ -2440,7 +2440,7 @@
 								"source": "Himo",
 								"page": "??",
 								"entries": [
-									"Si resultas sorprendido al inicio de un combate y no estás incapacitado, puedes entrar en Wild Shape y actuar normalmente en tu turno."
+									"Si resultas sorprendido al inicio de un combate y no estás {@condition Incapacitated|PHB}, puedes entrar en Wild Shape y actuar normalmente en tu turno."
 								]
 							}
 						]
@@ -2491,7 +2491,7 @@
 													],
 													[
 														"4",
-														"Se enamora de una criatura elegida por ti y queda hechizada por ella durante un minuto."
+														"Se enamora de una criatura elegida por ti y queda {@condition Charmed|PHB} por ella durante un minuto."
 													],
 													[
 														"5",
@@ -2503,7 +2503,7 @@
 													],
 													[
 														"7",
-														"Miedo irracional a algo de su visión elegido por ti; durante un minuto debe huir, cubrirse o esquivar."
+														"{@condition Frightened|PHB} irracional a algo de su visión elegido por ti; durante un minuto debe huir, cubrirse o esquivar."
 													],
 													[
 														"8",
@@ -2519,7 +2519,7 @@
 													],
 													[
 														"11",
-														"Queda paralizada durante un minuto."
+														"Queda {@condition Paralyzed|PHB} durante un minuto."
 													],
 													[
 														"12",
@@ -2578,7 +2578,7 @@
 								"source": "Himo",
 								"page": "??",
 								"entries": [
-									"Recuperación Arcana se mantiene y el truco adicional puede ser de druida o mago. Cada terreno añade conjuros y formas exclusivas de Wild Shape.",
+									"Recuperación {@skill Arcana} se mantiene y el truco adicional puede ser de druida o mago. Cada terreno añade conjuros y formas exclusivas de Wild Shape.",
 									{
 										"type": "table",
 										"caption": "Conjuros y formas por terreno",
@@ -2599,66 +2599,66 @@
 										"rows": [
 											[
 												"Ártico",
-												"{@spell Rime's Binding Ice}; {@spell Blur}; {@creature Black Bear|MM}",
+												"{@spell Rime's Binding Ice|FTD}; {@spell Blur}; {@creature Black Bear|MM}",
 												"{@spell Hypnotic Pattern}; {@spell Slow}; Snow Leopard",
 												"{@spell Greater Invisibility}; {@spell Compulsion}; {@creature Polar Bear|MM} y Sabertooth",
-												"{@spell Steel Wind Strike}; {@spell Hold Monster}; {@creature Killer Whale|MM} y Spotted Lion"
+												"{@spell Steel Wind Strike|XGE}; {@spell Hold Monster}; {@creature Killer Whale|MM} y Spotted Lion"
 											],
 											[
 												"Bosque",
 												"{@spell Silence}; {@spell Spider Climb}; {@creature Ape|MM}",
 												"{@spell Clairvoyance}; {@spell Conjure Barrage}; {@creature Brown Bear|MM}",
-												"{@spell Aura of Purity}; {@spell Find Greater Steed}; {@creature Giant Boar|MM}",
+												"{@spell Aura of Purity}; {@spell Find Greater Steed|XGE}; {@creature Giant Boar|MM}",
 												"{@spell Conjure Volley}; {@spell Seeming}; Juvenile Forest Prowler"
 											],
 											[
 												"Ciénaga",
-												"{@spell Melf's Arrow}; {@spell Web}; {@creature Crocodile|MM}",
+												"{@spell Melf's Acid Arrow|PHB|Melf's Arrow}; {@spell Web}; {@creature Crocodile|MM}",
 												"{@spell Stinking Cloud}; {@spell Hunger of Hadar}; {@creature Giant Toad|MM}",
-												"{@spell Vitriolic Sphere}; {@spell Evard's Black Tentacles}; River Serpent",
-												"{@spell Nudo de Nyx}; {@spell Enervation}; Amphisbaena"
+												"{@spell Vitriolic Sphere|XGE}; {@spell Evard's Black Tentacles}; River Serpent",
+												"{@spell Nudo de Nyx|GdR}; {@spell Enervation|XGE}; Amphisbaena"
 											],
 											[
 												"Costa",
-												"{@spell Maximilian's Earthen Grasp}; {@spell Misty Step}; {@creature Giant Crab|MM}",
-												"{@spell Wall of Sand}; {@spell Catnap}; Snapping Turtle",
-												"{@spell Storm Sphere}; {@spell Evard's Black Tentacles}; Giant Crayfish",
-												"{@spell Creation}; {@spell Dawn}; Giant Snapping Turtle y {@creature Killer Whale|MM}"
+												"{@spell Maximilian's Earthen Grasp|XGE}; {@spell Misty Step}; {@creature Giant Crab|MM}",
+												"{@spell Wall of Sand|XGE}; {@spell Catnap|XGE}; Snapping Turtle",
+												"{@spell Storm Sphere|XGE}; {@spell Evard's Black Tentacles}; Giant Crayfish",
+												"{@spell Creation}; {@spell Dawn|XGE}; Giant Snapping Turtle y {@creature Killer Whale|MM}"
 											],
 											[
 												"Desierto",
 												"{@spell Phantasmal Force}; {@spell Mirror Image}; Camel (FM!)",
-												"{@spell Gaseous Form}; {@spell Wall of Sand}; Dogmole",
-												"{@spell Sickening Radiance}; {@spell Compulsion}; Relic Sloth",
+												"{@spell Gaseous Form}; {@spell Wall of Sand|XGE}; Dogmole",
+												"{@spell Sickening Radiance|XGE}; {@spell Compulsion}; Relic Sloth",
 												"{@spell Flame Strike}; {@spell Dream}; {@creature Giant Scorpion|MM}"
 											],
 											[
 												"Montaña",
-												"{@spell Spider Climb}; {@spell Snilloc's Snowball Swarm}; {@creature Giant Goat|MM}",
-												"{@spell Thunder Step}; {@spell Peter's Lanza}; Mountain Lion",
-												"{@spell Dimension Door}; {@spell Storm Sphere}; Quetzalcoatlus",
+												"{@spell Spider Climb}; {@spell Snilloc's Snowball Swarm|XGE}; {@creature Giant Goat|MM}",
+												"{@spell Thunder Step|XGE}; {@spell Peter's Lanza}; Mountain Lion",
+												"{@spell Dimension Door}; {@spell Storm Sphere|XGE}; Quetzalcoatlus",
 												"{@spell Passwall}; {@spell Animate Objects}; Dire Bird of Prey sin flyby y 60 ft de vuelo"
 											],
 											[
 												"Pradera",
 												"{@spell Find Steed}; {@spell Invisibility}; {@creature Warhorse|MM}",
 												"{@spell Fly}; {@spell Haste}; {@creature Dire Wolf|MM}",
-												"{@spell Find Greater Steed}; {@spell Greater Invisibility}; {@creature Giant Elk|MM}",
-												"{@spell Dream}; {@spell Far Step}; Dire Bird of Prey sin flyby y 60 ft de vuelo"
+												"{@spell Find Greater Steed|XGE}; {@spell Greater Invisibility}; {@creature Giant Elk|MM}",
+												"{@spell Dream}; {@spell Far Step|XGE}; Dire Bird of Prey sin flyby y 60 ft de vuelo"
 											],
 											[
 												"Underdark",
 												"{@spell Spider Climb}; {@spell Web}; Fiendish Giant Spider",
 												"{@spell Gaseous Form}; {@spell Stinking Cloud}; {@creature Giant Spider|MM} y Dragón de Komodo",
-												"{@spell Greater Invisibility}; {@spell Shadow of Moil}; Young Bulette",
+												"{@spell Greater Invisibility}; {@spell Shadow of Moil|XGE}; Young Bulette",
 												"{@spell Mislead}; {@spell Passwall}; Night Scorpion"
 											],
 											[
 												"Subacuático",
 												"{@spell Shatter}; {@spell Invisibility}; {@creature Reef Shark|MM}",
-												"{@spell Hypnotic Pattern}; {@spell Thunder Step}; {@creature Giant Octopus|MM} y Snapping Turtle",
-												"{@spell Evard's Black Tentacles}; {@spell Storm Sphere}; {@creature Plesiosaurus|MM}",
-												"{@spell Dominate Person}; {@spell Nudo de Nyx}; Giant Lightning Eel"
+												"{@spell Hypnotic Pattern}; {@spell Thunder Step|XGE}; {@creature Giant Octopus|MM} y Snapping Turtle",
+												"{@spell Evard's Black Tentacles}; {@spell Storm Sphere|XGE}; {@creature Plesiosaurus|MM}",
+												"{@spell Dominate Person}; {@spell Nudo de Nyx|GdR}; Giant Lightning Eel"
 											]
 										]
 									}
@@ -2681,7 +2681,7 @@
 								"source": "Himo",
 								"page": "??",
 								"entries": [
-									"Inmune a hechizo y miedo de bestias, plantas, monstruosidades, fey y elementales, además de veneno y enfermedades."
+									"Inmune a hechizo y {@condition Frightened|PHB} de bestias, plantas, monstruosidades, fey y elementales, además de veneno y enfermedades."
 								]
 							}
 						],
@@ -2691,7 +2691,7 @@
 								"source": "Himo",
 								"page": "??",
 								"entries": [
-									"Bestias y plantas de VD hasta la mitad de tu nivel quedan automáticamente hechizadas y te ven como aliado. Contra VD superior tienes ventaja para hechizarlas por otros medios."
+									"Bestias y plantas de VD hasta la mitad de tu nivel quedan automáticamente {@condition Charmed|PHB} y te ven como aliado. Contra VD superior tienes ventaja para hechizarlas por otros medios."
 								]
 							}
 						]

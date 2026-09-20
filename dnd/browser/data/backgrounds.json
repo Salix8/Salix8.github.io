@@ -18966,17 +18966,17 @@
 						{
 							"type": "item",
 							"name": "Skill Proficiencies",
-							"entry": "{@skill Medicine}, {@skill Nature} (variante Chamán: {@skill Deception} en vez de Naturaleza)"
+							"entry": "{@skill Medicine}, {@skill Nature} (variante Chamán: {@skill Deception} en vez de {@skill Nature})"
 						},
 						{
 							"type": "item",
 							"name": "Tool Proficiencies",
-							"entry": "{@item healer's kit|phb}, herramientas de herborista o suministros de alquimista"
+							"entry": "{@item healer's kit|phb}, {@item Herbalism Kit|PHB} o {@item Alchemist's Supplies|PHB}"
 						},
 						{
 							"type": "item",
 							"name": "Equipment",
-							"entry": "Botiquín, vendas, bisturí, tijeras quirúrgicas, alcohol antiséptico, 3 hierbas analgésicas, 3 hierbas energéticas, aguja, 5 pies de hilo, sierra pequeña, una muda de viaje, kit elegido, libro de medicina y una {@item pouch|phb} con 15 po"
+							"entry": "Botiquín, vendas, bisturí, tijeras quirúrgicas, alcohol antiséptico, 3 hierbas analgésicas, 3 hierbas energéticas, aguja, 5 pies de hilo, sierra pequeña, una muda de viaje, kit elegido, libro de {@skill Medicine} y una {@item pouch|phb} con 15 po"
 						}
 					]
 				},
@@ -18984,7 +18984,7 @@
 					"name": "Feature: Atención Médica",
 					"type": "entries",
 					"entries": [
-						"Las hierbas analgésicas anulan el dolor, pero no el daño, durante operaciones. Las energéticas reaniman con 3 puntos de golpe si superas Medicina CD 10. Cada una tiene tres usos y puede reponerse en tiendas."
+						"Las hierbas analgésicas anulan el dolor, pero no el daño, durante operaciones. Las energéticas reaniman con 3 puntos de golpe si superas {@skill Medicine} CD 10. Cada una tiene tres usos y puede reponerse en tiendas."
 					],
 					"data": {
 						"isFeature": true

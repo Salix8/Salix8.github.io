@@ -293,7 +293,7 @@
 						"Una criatura sujeta a sangrado recibe un daño necrótico fijo al inicio de cada turno, pudiendo salvar al final. Este daño no puede ser reducido y nunca afecta a los HPT. Además, reduce los HP máximos del sujeto mientras dure el sangrado.",
 						"La salvación siempre es de Constitución, y la CD puede ser o 8+Modificador de ataque de la criatura que lo provocó; o la CD del rasgo que lo provocó.",
 						"Si la fuente de sangrado no especifica daño, este será igual a un dado de daño utilizado en el ataque de alguno de los daños mencionados (si hay más de uno, siempre el más pequeño). Si el efecto solo metía sangrado pero no hacía daño, este será de {@dice 1d4}.",
-						"El sangrado se cura con Medicina con la CD del sangrado o curando mágicamente al objetivo hasta llegar al máximo actual."
+						"El sangrado se cura con {@skill Medicine} con la CD del sangrado o curando mágicamente al objetivo hasta llegar al máximo actual."
 					]
 				}
 			],
@@ -439,7 +439,7 @@
 					"type": "entries",
 					"name": "Tratamiento",
 					"entries": [
-						"Limpiar la herida durante el primer día concede ventaja a las salvaciones. Las hierbas antisépticas también otorgan ventaja. Extirpar tejido muerto requiere Medicina CD 15; un éxito reduce la CD de las salvaciones en 2 hasta el final de la enfermedad."
+						"Limpiar la herida durante el primer día concede ventaja a las salvaciones. Las hierbas antisépticas también otorgan ventaja. Extirpar tejido muerto requiere {@skill Medicine} CD 15; un éxito reduce la CD de las salvaciones en 2 hasta el final de la enfermedad."
 					]
 				},
 				{
@@ -525,16 +525,16 @@
 						{
 							"type": "list",
 							"items": [
-								"Primeras 12 horas: desventaja en las pruebas de Atletismo y Acrobacias que impliquen esfuerzo abdominal.",
+								"Primeras 12 horas: desventaja en las pruebas de {@skill Athletics} y {@skill Acrobatics} que impliquen esfuerzo abdominal.",
 								"12-24 horas: velocidad reducida en 3 m (10 pies). Tras cada combate debe superar una salvación de Constitución CD 12 o gana 1 ptA.",
-								"24-48 horas: desventaja en las tiradas de ataque cuerpo a cuerpo y en las pruebas de Fuerza. Al inicio de cada combate salva Constitución CD 13 o queda Envenenado durante 1 minuto debido al dolor.",
+								"24-48 horas: desventaja en las tiradas de ataque cuerpo a cuerpo y en las pruebas de Fuerza. Al inicio de cada combate salva Constitución CD 13 o queda {@condition Poisoned|PHB} durante 1 minuto debido al dolor.",
 								"48-72 horas: al amanecer de cada día realiza una salvación de Constitución CD 15.",
 								"Éxito: el apéndice aún no se rompe.",
 								"Fracaso: el apéndice se perfora y comienza una peritonitis.",
 								"Tras la perforación: al amanecer realiza una salvación de Constitución CD 16.",
 								"Éxito: recibe 1 ptA.",
 								"Fracaso: recibe 2 ptA.",
-								"Cuando alcance 4 ptA por esta enfermedad, además queda Envenenado permanentemente hasta ser tratado.",
+								"Cuando alcance 4 ptA por esta enfermedad, además queda {@condition Poisoned|PHB} permanentemente hasta ser tratado.",
 								"Si alcanza 6 ptA debido a la enfermedad, muere por septicemia."
 							]
 						}
@@ -557,7 +557,7 @@
 								"Reposo absoluto concede ventaja a las salvaciones anteriores a la perforación.",
 								"Los analgésicos reducen el dolor (ignoran las penalizaciones a las pruebas), pero no retrasan la enfermedad.",
 								"Apendicectomía (cirugía):",
-								"Medicina CD 15 con instrumental quirúrgico y un ayudante competente.",
+								"{@skill Medicine} CD 15 con instrumental quirúrgico y un ayudante competente.",
 								"CD 18 si solo se dispone de herramientas improvisadas.",
 								"CD 22/25 si el apéndice ya se ha perforado.",
 								"Éxito: El objetivo recibe 1d6 penalizadores de -1 a todos los checks, eliminando uno con cada descanso largo o con Restauración Mayor. Cuando se queda sin, la enfermedad remite.",
@@ -592,7 +592,7 @@
 					"type": "entries",
 					"name": "Contagio",
 					"entries": [
-						"Por fallar estrepitosamente varias tiradas de miedo o tras un acto traumático de gran embergadura"
+						"Por fallar estrepitosamente varias tiradas de {@condition Frightened|PHB} o tras un acto traumático de gran embergadura"
 					]
 				},
 				{
@@ -615,14 +615,14 @@
 					"type": "entries",
 					"name": "Curación",
 					"entries": [
-						"Cada diez minutos puede repetir una última salvación de Wisdom cuya CD es igual a la última salvación de miedo que realizó. Con un éxito se calma. Con un error recibe 1d12 de daño psíquico."
+						"Cada diez minutos puede repetir una última salvación de Wisdom cuya CD es igual a la última salvación de {@condition Frightened|PHB} que realizó. Con un éxito se calma. Con un error recibe 1d12 de daño psíquico."
 					]
 				},
 				{
 					"type": "entries",
 					"name": "Tratamiento",
 					"entries": [
-						"Si alguien intenta calmarle o está en un lugar tranquilo o que fomenta su relajación, puede obtener ventaja en las salvaciones. Por contra, exponerse a la fuente de miedo o estar bajo una gran cantidad de estrés puede dar desventaja."
+						"Si alguien intenta calmarle o está en un lugar tranquilo o que fomenta su relajación, puede obtener ventaja en las salvaciones. Por contra, exponerse a la fuente de {@condition Frightened|PHB} o estar bajo una gran cantidad de estrés puede dar desventaja."
 					]
 				},
 				{
@@ -731,7 +731,7 @@
 								"1 pt de Agotamiento",
 								"de recibir más de otra fuente, se sobreescriben a este",
 								"desventaja a salvaciones de Wisdom",
-								"Las de miedo reciben ventaja.",
+								"Las de {@condition Frightened|PHB} reciben ventaja.",
 								"Al inicio de cada combate hace una tirada de Wisdom base CD 10. Si supera la tirada, pierde los dos puntos de agotamiento hasta el final del combate.",
 								"Cuando esto ocurra, salvación de Wisdom CD 10 antes de recuperar los ptA, de salvar, no los recupera hasta el día siguiente.",
 								"Tampoco podrá ser curado hasta entonces",
@@ -913,7 +913,7 @@
 					"type": "entries",
 					"name": "Curación",
 					"entries": [
-						"Con Medicina CD 15 puede limpiarse la herida. Debe limpiarse la herida cada 6 horas y mantener reposo. Pasadas las primeras 18 horas, el paciente puede repetir la salvación de Constitución cada hora. Con un éxito, recibe dos puntos de agotamiento y la enfermedad acaba."
+						"Con {@skill Medicine} CD 15 puede limpiarse la herida. Debe limpiarse la herida cada 6 horas y mantener reposo. Pasadas las primeras 18 horas, el paciente puede repetir la salvación de Constitución cada hora. Con un éxito, recibe dos puntos de agotamiento y la enfermedad acaba."
 					]
 				},
 				{
@@ -1056,10 +1056,10 @@
 						{
 							"type": "list",
 							"items": [
-								"Falla automáticamente Insight en tiradas que envuelvan tesoros.",
-								"Esta charmed como en Incite Greed, pero además sentirá la necesidad de quedarselo.",
+								"Falla automáticamente {@skill Insight} en tiradas que envuelvan tesoros.",
+								"Esta {@condition Charmed|PHB} como en Incite Greed, pero además sentirá la necesidad de quedarselo.",
 								"Es hostil hacia cualquier criatura que intente quitarle o pedirle el tesoro.",
-								"Si no lleva su tesoro encima o está a 60 ft de él, tiene desventaja en tiradas de percepción y salvaciones de Inteligencia y Carisma"
+								"Si no lleva su tesoro encima o está a 60 ft de él, tiene desventaja en tiradas de {@skill Perception} y salvaciones de Inteligencia y Carisma"
 							]
 						}
 					]
@@ -1107,7 +1107,7 @@
 							"type": "list",
 							"items": [
 								"El miembro afectado queda inutilizado para cualquier acción que requiera un esfuerzo considerable.",
-								"Cada vez que la criatura utilice voluntariamente el miembro fracturado debe superar una salvación de Constitución CD 13 o recibir la condición Envenenado hasta el final de su siguiente turno por el dolor.",
+								"Cada vez que la criatura utilice voluntariamente el miembro fracturado debe superar una salvación de Constitución CD 13 o recibir la condición {@condition Poisoned|PHB} hasta el final de su siguiente turno por el dolor.",
 								"Si una fractura de una pierna soporta peso durante un combate completo, realiza una salvación de Constitución CD 15. Si falla, el tiempo de recuperación aumenta en 1d4 días."
 							]
 						}
@@ -1124,7 +1124,7 @@
 					"type": "entries",
 					"name": "Tratamiento",
 					"entries": [
-						"Colocar correctamente el hueso requiere Medicina CD 14. Un éxito reduce el tiempo de recuperación a la mitad. Un fracaso por 5 o más aumenta el tiempo de recuperación en 1d6 días."
+						"Colocar correctamente el hueso requiere {@skill Medicine} CD 14. Un éxito reduce el tiempo de recuperación a la mitad. Un fracaso por 5 o más aumenta el tiempo de recuperación en 1d6 días."
 					]
 				},
 				{
@@ -1165,12 +1165,12 @@
 								"Inutilización total de la zona gangrenada, cuyos efectos mecánicos difieren según dónde se dé el caso.",
 								"Brazo/mano:",
 								"La criatura pierde la capacidad de usar interacciones físicas o bonus actions. Si hace una de las dos, pierde la posibilidad de hacer la otra.",
-								"Desventaja en salvaciones de Fuerza y tiradas de Juego de Manos",
+								"Desventaja en salvaciones de Fuerza y tiradas de {@skill Sleight of Hand}",
 								"Pie:",
 								"movilidad reducida a la mitad.",
-								"Desventaja en salvaciones de Destreza y tiradas de acrobacias",
+								"Desventaja en salvaciones de Destreza y tiradas de {@skill Acrobatics}",
 								"Pierna: movilidad reducida a un tercio.",
-								"Desventaja en salvaciones de Destreza y tiradas de acrobacias y sigilo",
+								"Desventaja en salvaciones de Destreza y tiradas de {@skill Acrobatics} y {@skill Stealth}",
 								"Ala/aleta: pierde la movilidad para la que se requiere la extremidad",
 								"Órgano interno",
 								"-2 a Constitución y desventaja a salvaciones de constitución",
@@ -1190,7 +1190,7 @@
 					"type": "entries",
 					"name": "Tratamiento",
 					"entries": [
-						"Puede frenarse con tres tiradas exitosas de Medicina CD 19 que envuelvan limpiezas de sangre, como el uso de sanguijuelas, larvas de mosca u otros parásitos, creación de úlceras controladas o apertura de hemorragias. Solo puede repetir la tirada una vez cada hora. Un conjuro de Restauración Menor limpia la sangre durante 6 horas, deteniendo el avance por la duración, pero no acabando con la enfermedad. Restauración Mayor acaba con la dolencia."
+						"Puede frenarse con tres tiradas exitosas de {@skill Medicine} CD 19 que envuelvan limpiezas de sangre, como el uso de sanguijuelas, larvas de mosca u otros parásitos, creación de úlceras controladas o apertura de hemorragias. Solo puede repetir la tirada una vez cada hora. Un conjuro de Restauración Menor limpia la sangre durante 6 horas, deteniendo el avance por la duración, pero no acabando con la enfermedad. Restauración Mayor acaba con la dolencia."
 					]
 				},
 				{
@@ -1225,7 +1225,7 @@
 					"type": "entries",
 					"name": "Efectos",
 					"entries": [
-						"inconsciente hasta que se reduzca su temperatura corporal y desventaja a salvaciones de calor extremo hasta que pierda los PtA. De recibir daño por fuego salva de nuevo para calor extremo."
+						"{@condition Unconscious|PHB} hasta que se reduzca su temperatura corporal y desventaja a salvaciones de calor extremo hasta que pierda los PtA. De recibir daño por fuego salva de nuevo para calor extremo."
 					]
 				},
 				{
@@ -1272,7 +1272,7 @@
 							"items": [
 								"Aparición 1d10 minutos.",
 								"Cada vez que vas a lanzar un conjuro de lv1 o superior, tira 1d20, con un 7 o menos, tira en la tabla*",
-								"Las burbujas que flotan a tu alrededor incomodan a la gente. Tienes desventaja en persuasión."
+								"Las burbujas que flotan a tu alrededor incomodan a la gente. Tienes desventaja en {@skill Persuasion}."
 							]
 						}
 					]
@@ -1301,14 +1301,14 @@
 								"Si el afectado falla la tirada para curarse, las burbujas remiten hasta que recupera sus espacios de conjuro.",
 								"* Velocidad = 10 pies y desventaja en Fue, Dex y Con",
 								"** Desventaja a tiradas de Constitución hasta que coma",
-								"*** Eres incapaz de mantener cualquier tipo de concentración"
+								"*** Eres incapaz de mantener cualquier tipo de {@status Concentration|PHB}"
 							]
 						}
 					]
 				},
 				{
 					"type": "table",
-					"caption": "Efectos del Hipo Arcano",
+					"caption": "Efectos del {@disease Hipo Arcano|Himo}",
 					"colLabels": [
 						"d20",
 						"Efecto"
@@ -1332,7 +1332,7 @@
 						],
 						[
 							"4",
-							"Vomitas arcoíris (aturdido 1 rnd)"
+							"Vomitas arcoíris ({@condition Stunned|PHB} 1 rnd)"
 						],
 						[
 							"5",
@@ -1463,8 +1463,8 @@
 							"items": [
 								"Movilidad reducida a la mitad y un punto de agotamiento que solo puede perderse al curarse de esta enfermedad.",
 								"Desventaja en salvaciones y habilidades de Destreza y ataques a melé.",
-								"Cuando recive un ataque físico o realiza una acción para saltar, correr o esquivar; debe hacer una salvación de Constitución CD 10 o pasar el siguiente turno vomitando o teniendo arcadas (aturdido)",
-								"Una vez por hora, repite la tirada. De fallar, siente unas ganas apremiantes de cagar. Si en un minuto no ha ido, debe hacer salvaciones de Constitución CD 14 cada turno o cagarse encima (movilidad a la mitad y aturdido ese turno).",
+								"Cuando recive un ataque físico o realiza una acción para saltar, correr o esquivar; debe hacer una salvación de Constitución CD 10 o pasar el siguiente turno vomitando o teniendo arcadas ({@condition Stunned|PHB})",
+								"Una vez por hora, repite la tirada. De fallar, siente unas ganas apremiantes de cagar. Si en un minuto no ha ido, debe hacer salvaciones de Constitución CD 14 cada turno o cagarse encima (movilidad a la mitad y {@condition Stunned|PHB} ese turno).",
 								"Si no tiene qué kgar, caga líquido. Si no bebe lo suficiente como para contrarrestarlo adquiere un punto de agotamiento."
 							]
 						}
@@ -1516,7 +1516,7 @@
 					"type": "entries",
 					"name": "Efectos",
 					"entries": [
-						"Pasadas 2d4 decanas. Los HP máximos se reducen en 1 cada día, hasta llegar al 25% del máximo. Desventaja en Checks y Salvaciones de Atletismo y Fuerza."
+						"Pasadas 2d4 decanas. Los HP máximos se reducen en 1 cada día, hasta llegar al 25% del máximo. Desventaja en Checks y Salvaciones de {@skill Athletics} y Fuerza."
 					]
 				},
 				{
@@ -1620,7 +1620,7 @@
 					"type": "entries",
 					"name": "Efectos",
 					"entries": [
-						"Aparecen pasadas 1d12 horas. 2 ptA, desventaja a ataques, conjuros y salvaciones de Fuerza y Destreza y 30% de posibilidad de parálisis cuando intente hacer grandes esfuerzos."
+						"Aparecen pasadas 1d12 horas. 2 ptA, desventaja a ataques, conjuros y salvaciones de Fuerza y Destreza y 30% de posibilidad de {@condition Paralyzed|PHB} cuando intente hacer grandes esfuerzos."
 					]
 				},
 				{
@@ -1672,7 +1672,7 @@
 						{
 							"type": "list",
 							"items": [
-								"Desventaja en tiradas de costitución, destreza y fuerza falla automáticamente pruebas de Atletismo y Acrobacias.",
+								"Desventaja en tiradas de costitución, destreza y fuerza falla automáticamente pruebas de {@skill Athletics} y {@skill Acrobatics}.",
 								"Velocidad reducida a la mitad",
 								"Capacidad de carga reducida a la mitad",
 								"Velocidad reducida a 0 si lleva arma o armadura pesada.",
@@ -1739,9 +1739,9 @@
 							"type": "list",
 							"items": [
 								"Varían por fase",
-								"1 ptA y la posibilidad de perder 1 turno (aturdido) vomitando en cualquier momento.",
-								"El estado de parálisis y/o debilidad al daño radiante y/o por trueno cuando sea necesario.",
-								"Parálisis e incapaz de respirar al entrar en contacto con agua."
+								"1 ptA y la posibilidad de perder 1 turno ({@condition Stunned|PHB}) vomitando en cualquier momento.",
+								"El estado de {@condition Paralyzed|PHB} y/o debilidad al daño radiante y/o por trueno cuando sea necesario.",
+								"{@condition Paralyzed|PHB} e incapaz de respirar al entrar en contacto con agua."
 							]
 						}
 					]
@@ -1939,7 +1939,7 @@
 								"Fase 1 (nervios)",
 								"Desventaja a tiradas de ataque.",
 								"Desventaja en checks y salvaciones de Wisdom y Carisma.",
-								"Salva concentración con desventaja",
+								"Salva {@status Concentration|PHB} con desventaja",
 								"Al ir a dormir (se mantiene en las siguientes fases)",
 								"Salvación de Wisdom CD 15. De fallar:",
 								"Si el número sacado fue par, no logra dormir en toda la noche. Gana un ptA que solo se va durmiendo.",
@@ -2009,7 +2009,7 @@
 						[
 							"1",
 							"Feliz",
-							"Desventaja en habilidades de inteligencia y sigilo"
+							"Desventaja en habilidades de inteligencia y {@skill Stealth}"
 						],
 						[
 							"2",
@@ -2034,7 +2034,7 @@
 						[
 							"6",
 							"Pletórico",
-							"Desventaja en habilidades de inteligencia y sigilo y ventaja en ataques"
+							"Desventaja en habilidades de inteligencia y {@skill Stealth} y ventaja en ataques"
 						],
 						[
 							"7",
@@ -2083,7 +2083,7 @@
 					"type": "entries",
 					"name": "Efectos",
 					"entries": [
-						"Tras 1d10 días el personaje puede recibir parálisis aleatorias que durarán 1d10 minutos."
+						"Tras 1d10 días el personaje puede recibir {@condition Paralyzed|PHB} aleatorias que durarán 1d10 minutos."
 					]
 				},
 				{
@@ -2132,7 +2132,7 @@
 					"type": "entries",
 					"name": "Efectos",
 					"entries": [
-						"Desventaja en pruebas y salvaciones de inteligencia, en percepción delante de fuentes intensas de luz o del día y un pt de agotamiento permanente."
+						"Desventaja en pruebas y salvaciones de inteligencia, en {@skill Perception} delante de fuentes intensas de luz o del día y un pt de agotamiento permanente."
 					]
 				},
 				{
@@ -2194,7 +2194,7 @@
 								"Depende de la fase",
 								"1 ptA",
 								"Escrófula",
-								"Desventaja en tiradas de costitución, destreza y fuerza falla automáticamente pruebas de Atletismo y Acrobacias.",
+								"Desventaja en tiradas de costitución, destreza y fuerza falla automáticamente pruebas de {@skill Athletics} y {@skill Acrobatics}.",
 								"Velocidad reducida a la mitad",
 								"Capacidad de carga reducida a la mitad",
 								"Velocidad reducida a 0 si lleva arma o armadura pesada.",
@@ -2294,6 +2294,56 @@
 			],
 			"source": "Himo",
 			"page": "??"
+		}
+	],
+	"status": [
+		{
+			"name": "Concentration",
+			"source": "PHB",
+			"page": 203,
+			"srd": true,
+			"entries": [
+				"Some spells require you to maintain {@status Concentration|PHB} in order to keep their magic active. If you lose {@status Concentration|PHB}, such a spell ends.",
+				"If a spell must be maintained with {@status Concentration|PHB}, that fact appears in its Duration entry, and the spell specifies how long you can concentrate on it. You can end {@status Concentration|PHB} at any time (no action required).",
+				"Normal activity, such as moving and attacking, doesn't interfere with {@status Concentration|PHB}. The following factors can break {@status Concentration|PHB}:",
+				{
+					"type": "list",
+					"items": [
+						{
+							"type": "entries",
+							"name": "Casting another spell that requires concentration",
+							"entries": [
+								"You lose {@status Concentration|PHB} on a spell if you cast another spell that requires {@status Concentration|PHB}. You can't concentrate on two spells at once."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Taking damage",
+							"entries": [
+								"Whenever you take damage while you are concentrating on a spell, you must make a Constitution saving throw to maintain your {@status Concentration|PHB}. The DC equals 10 or half the damage you take, whichever number is higher. If you take damage from multiple sources, such as an arrow and a dragon's breath, you make a separate saving throw for each source of damage."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Being incapacitated or killed",
+							"entries": [
+								"You lose {@status Concentration|PHB} on a spell if you are {@condition Incapacitated|PHB} or if you die."
+							]
+						}
+					]
+				},
+				"The DM might also decide that certain environmental phenomena require you to succeed on a Constitution saving throw to maintain your {@status Concentration|PHB} on a spell."
+			]
+		},
+		{
+			"name": "Surprised",
+			"source": "PHB",
+			"page": 189,
+			"srd": true,
+			"entries": [
+				"The DM determines who might be surprised. If neither side tries to be stealthy, they automatically notice each other. Otherwise, the DM compares the Dexterity ({@skill Stealth}) checks of anyone hiding with the passive Wisdom ({@skill Perception}) score of each creature on the opposing side. Any character or monster that doesn't notice a threat is {@status Surprised|PHB} at the start of the encounter.",
+				"If you're surprised, you can't move or take an action on your first turn of combat, and you can't take a reaction until that turn ends. A member of a group can be {@status Surprised|PHB} even if the other members aren't."
+			]
 		}
 	]
 }

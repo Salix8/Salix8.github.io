@@ -5,7 +5,7 @@ class ConditionsDiseasesPage extends ListPage {
 		const sourceFilter = SourceFilter.getInstance();
 		const typeFilter = new Filter({
 			header: "Type",
-			items: ["condition", "disease"],
+			items: ["condition", "disease", "status"],
 			displayFn: StrUtil.uppercaseFirst
 		});
 		const miscFilter = new Filter({header: "Miscellaneous", items: ["SRD"]});
@@ -24,7 +24,7 @@ class ConditionsDiseasesPage extends ListPage {
 
 			sublistClass: "subconditions",
 
-			dataProps: ["condition", "disease"]
+			dataProps: ["condition", "disease", "status"]
 		});
 
 		this._sourceFilter = sourceFilter;

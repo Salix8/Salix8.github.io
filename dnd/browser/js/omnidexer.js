@@ -708,6 +708,13 @@ Omnidexer.TO_INDEX = [
 		hover: true
 	},
 	{
+		category: Parser.CAT_ID_STATUS,
+		file: "conditionsdiseases.json",
+		listProp: "status",
+		baseUrl: "conditionsdiseases.html",
+		hover: true
+	},
+	{
 		category: Parser.CAT_ID_TABLE,
 		file: "generated/gendata-tables.json",
 		listProp: "table",

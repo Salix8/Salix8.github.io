@@ -1082,7 +1082,7 @@
 				{
 					"name": "Aura de Azufre",
 					"entries": [
-						"Puede activar un aura de {@spell daylight} y calor a 60-30 ft que dura 1 minuto sin concentración. Todo enemigo dentro del área tiene desventaja en conjuros de Tezca que hagan daño radiante o por fuego."
+						"Puede activar un aura de {@spell daylight} y calor a 60-30 ft que dura 1 minuto sin {@status Concentration|PHB}. Todo enemigo dentro del área tiene desventaja en conjuros de Tezca que hagan daño radiante o por fuego."
 					]
 				}
 			],
@@ -2382,7 +2382,7 @@
 				{
 					"name": "Aplastar",
 					"entries": [
-						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}17 ({@damage 2d10 + 6}) bludgeoning damage. El objetivo está {@condition prone} y {@condition dazed|FleeMortals}."
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}17 ({@damage 2d10 + 6}) bludgeoning damage. El objetivo está {@condition prone} y {@condition dazed|Himo}."
 					]
 				}
 			],
@@ -2594,7 +2594,7 @@
 				{
 					"name": "Parry (Rodela)",
 					"entries": [
-						"Hace una tirada de Atletismo contra la tirada de ataque que vaya a recibir a melé. Con un éxito no recibe el ataque y no puede ser targeteado por la criatura que le atacó hasta el inicio del próximo turno de Plutoq."
+						"Hace una tirada de {@skill Athletics} contra la tirada de ataque que vaya a recibir a melé. Con un éxito no recibe el ataque y no puede ser targeteado por la criatura que le atacó hasta el inicio del próximo turno de Plutoq."
 					]
 				}
 			],
@@ -3562,7 +3562,7 @@
 						"+11 to hit, CD 19",
 						"4 dados al cantrip",
 						"*Puede targetear una criatura extra.",
-						"Los conjuros y efectos de charm (sugestión incluido) provocados por Kiltzi son imperceptibles para los objetivos. Kiltzi puede elegir que los objetivos no recuerden ciertas cosas que ella les haya hecho hacer mientras estaban charmeados."
+						"Los conjuros y efectos de {@condition Charmed|PHB} (sugestión incluido) provocados por Kiltzi son imperceptibles para los objetivos. Kiltzi puede elegir que los objetivos no recuerden ciertas cosas que ella les haya hecho hacer mientras estaban charmeados."
 					],
 					"spells": {
 						"0": {
@@ -3624,7 +3624,7 @@
 				{
 					"name": "Countercharm",
 					"entries": [
-						"Cuando una criatura a 60 ft de Kiltzi vaya a ser charmeada o asustada, Kiltzi puede bloquear el efecto y devolverlo a la criatura que lo provocó. La salvación ahora es de CD 19."
+						"Cuando una criatura a 60 ft de Kiltzi vaya a ser charmeada o {@condition Frightened|PHB}, Kiltzi puede bloquear el efecto y devolverlo a la criatura que lo provocó. La salvación ahora es de CD 19."
 					]
 				},
 				{
@@ -4126,7 +4126,7 @@
 					"entries": [
 						"Nula puede regular su altura entre los 20 cm y los 12 metros (huge). Por cada talla que aumente adquiere un +4 a fuerza y constitución (+20 HP) y +15 ft a sus movilidades; pero pierde -4 a destreza y -1 a la CA.",
 						"Cada talla, además, aumenta en 1 el número de dados de daño de cada ataque y el rango de sus ataques en 5 ft a melé a partir del mediano.",
-						"Mientras sea Tiny o small tiene ventaja a sigilo y triplica su velocidad al dashear. Tiene Flyby.",
+						"Mientras sea Tiny o small tiene ventaja a {@skill Stealth} y triplica su velocidad al dashear. Tiene Flyby.",
 						"{@b Esta ficha tiene en cuenta que es tiny.}"
 					]
 				}
@@ -4252,7 +4252,7 @@
 					"entries": [
 						"Nula puede regular su altura entre los 20 cm y los 12 metros (huge). Por cada talla que aumente adquiere un +4 a fuerza y constitución (+20 HP) y +15 ft a sus movilidades; pero pierde -4 a destreza y -1 a la CA.",
 						"Cada talla, además, aumenta en 1 el número de dados de daño de cada ataque y el rango de sus ataques en 5 ft a melé a partir del mediano.",
-						"Mientras sea Tiny o small tiene ventaja a sigilo y triplica su velocidad al dashear. Tiene Flyby.",
+						"Mientras sea Tiny o small tiene ventaja a {@skill Stealth} y triplica su velocidad al dashear. Tiene Flyby.",
 						"{@b Esta ficha tiene en cuenta que es small.}"
 					]
 				}
@@ -4711,7 +4711,7 @@
 				{
 					"name": "Rugido Intimidante (Recarga 4-6)",
 					"entries": [
-						"Toda criatura a 60 ft de Nula salva Wisdom CD 15 o están asustados de ella."
+						"Toda criatura a 60 ft de Nula salva Wisdom CD 15 o están {@condition Frightened|PHB} de ella."
 					]
 				},
 				{
@@ -5046,7 +5046,7 @@
 				{
 					"name": "Movimiento libre",
 					"entries": [
-						"Tiene ventaja a sigilo y puede moverse sigilosamente sin perder movilidad. Además puede moverse por superficies líquidas como si fuera terreno sólido."
+						"Tiene ventaja a {@skill Stealth} y puede moverse sigilosamente sin perder movilidad. Además puede moverse por superficies líquidas como si fuera terreno sólido."
 					]
 				}
 			],
@@ -5057,7 +5057,7 @@
 				{
 					"name": "Ataque desarmado / bo",
 					"entries": [
-						"{@atk mw} {@hit 15} to hit, reach 5 ft., one target. {@h}14 ({@damage 1d12 + 8}) bludgeoning damage. Puede elegir empujar al enemigo 15 ft y dejarlo {@condition prone} y dazed.",
+						"{@atk mw} {@hit 15} to hit, reach 5 ft., one target. {@h}14 ({@damage 1d12 + 8}) bludgeoning damage. Puede elegir empujar al enemigo 15 ft y dejarlo {@condition prone} y {@condition Dazed|Himo}.",
 						"Puede elegir no hacer daño y {@condition stunned|PHB|aturdir}."
 					]
 				},

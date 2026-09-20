@@ -57,7 +57,7 @@
 				"Tres grandes ojos místicos aparecen alrededor de tu cabeza y te ayudan a centrar tu mente y tu visión en lo que te rodea, pudiendo ver las cosas tal y como son. Puedes elegir uno de los siguientes efectos:",
 				"- Determinas dónde está el norte",
 				"- Eres consciente de si estás en un plano o semiplano y cuál es exactamente (solo si conocías su existencia, sino, averiguas su naturaleza alineamiento)",
-				"- Agregas un bonificador de +2 a una habilidad pasiva a elegir entre Percepción, Investigación o Insight. Este efecto acaba antes si vuelves a castear este conjuro o si realizas una tirada con dicha habilidad, y lo harás con ventaja.",
+				"- Agregas un bonificador de +2 a una habilidad pasiva a elegir entre {@skill Perception}, {@skill Investigation} o {@skill Insight}. Este efecto acaba antes si vuelves a castear este conjuro o si realizas una tirada con dicha habilidad, y lo harás con ventaja.",
 				"- Eres capaz de sentir si un objeto que estás tocando esconde un secreto o ha sido manipulado mágicamente, si bien no sabes cuál es la naturaleza de esa extrañeza.",
 				"Solo puedes tener un efecto cada vez."
 			],
@@ -314,8 +314,8 @@
 				]
 			},
 			"entries": [
-				"Imbuyes un regalo floral en un aroma embriagador y en un aura encantadora. Si una criatura acepta voluntariamente el regalo y entra en contacto con él, adquieres {@dice 1d4} a las tiradas de persuasión o interpretación hechas para agradar a dicha criatura. Si el objetivo es inmune al encantamiento, no acepta el regalo o no lo toca, el cantrip no tiene efecto sobre el objetivo.",
-				"Una criatura que sospeche puede discernir la naturaleza del encantamiento con una tirada de Arcana o Investigación contra tu CD de salvación de conjuros. La criatura solo es consciente del encantamiento si ha superado una tirada."
+				"Imbuyes un regalo floral en un aroma embriagador y en un aura encantadora. Si una criatura acepta voluntariamente el regalo y entra en contacto con él, adquieres {@dice 1d4} a las tiradas de {@skill Persuasion} o {@skill Performance} hechas para agradar a dicha criatura. Si el objetivo es inmune a {@condition Charmed|PHB}, no acepta el regalo o no lo toca, el cantrip no tiene efecto sobre el objetivo.",
+				"Una criatura que sospeche puede discernir la naturaleza del encantamiento con una tirada de {@skill Arcana} o {@skill Investigation} contra tu CD de salvación de conjuros. La criatura solo es consciente del encantamiento si ha superado una tirada."
 			],
 			"source": "GdR",
 			"components": {
@@ -367,7 +367,7 @@
 			},
 			"entries": [
 				"Calientas mágicamente el metal mientras lo imbuyes en magia curativa hasta que se encienda al rojo vivo y lo aplicas en la herida. El objetivo aliado recupera {@dice 6d4} + tu modificador de spellcasting. Si tenía una herida abierta o alguna mecánica de {@condition Sangrado|Himo|sangrado} activa, esta finaliza, dejando una cicatriz muy fea.",
-				"Al ser un método de curación tan doloroso la criatura se verá afectada. Durante 1 minuto, la criatura tendrá desventaja en tiradas de ataque, Fuerza y Destreza y no podrá mantener la concentración de conjuros.",
+				"Al ser un método de curación tan doloroso la criatura se verá afectada. Durante 1 minuto, la criatura tendrá desventaja en tiradas de ataque, Fuerza y Destreza y no podrá mantener la {@status Concentration|PHB} de conjuros.",
 				"Este conjuro no tiene efecto en constructos."
 			],
 			"source": "GdR",
@@ -440,7 +440,7 @@
 				]
 			},
 			"entries": [
-				"Arrojas una onda de choque que se estrella contra el objetivo. Haz un spell attack contra el objetivo. Si impacta, recibe {@dice 2d6} de daño por fuerza. Si el objetivo cae a 0 HP o debiera morir al instante, quedará en cambio inconsciente y estable."
+				"Arrojas una onda de choque que se estrella contra el objetivo. Haz un spell attack contra el objetivo. Si impacta, recibe {@dice 2d6} de daño por fuerza. Si el objetivo cae a 0 HP o debiera morir al instante, quedará en cambio {@condition Unconscious|PHB} y estable."
 			],
 			"source": "GdR",
 			"components": {
@@ -686,7 +686,7 @@
 				]
 			},
 			"entries": [
-				"Te llevas el dedo a los labios y chistas suavemente hasta dos criaturas voluntarias dentro del rango. Mientras dure el conjuro son incapaces de provocar sonidos anémicamente. Tienen ventaja en sigilo, pero no puede castear conjuros con componente verbal. Si una armadura les imponía desventaja a sigilo, este conjuro funciona como si no la llevaran."
+				"Te llevas el dedo a los labios y chistas suavemente hasta dos criaturas voluntarias dentro del rango. Mientras dure el conjuro son incapaces de provocar sonidos anémicamente. Tienen ventaja en {@skill Stealth}, pero no puede castear conjuros con componente verbal. Si una armadura les imponía desventaja a {@skill Stealth}, este conjuro funciona como si no la llevaran."
 			],
 			"source": "GdR",
 			"components": {
@@ -876,7 +876,7 @@
 					"name": "At Higher Levels",
 					"entries": [
 						"Si lanzas este conjuro entre los niveles 2 y 4 el conjuro obstruirá también los brazos, evitando las tiradas de ataque y los conjuros somáticos.",
-						"Lanzado al lv5 o superior, se sumará +1 por cada lv extra a la CD de salvación. Además, afectará a las criaturas voladoras, que caerán al suelo y quedarán paralizadas. Además, harán la tirada de salvación con desventaja."
+						"Lanzado al lv5 o superior, se sumará +1 por cada lv extra a la CD de salvación. Además, afectará a las criaturas voladoras, que caerán al suelo y quedarán {@condition Paralyzed|PHB}. Además, harán la tirada de salvación con desventaja."
 					]
 				}
 			],
@@ -1987,7 +1987,7 @@
 			},
 			"entries": [
 				"Canalizas tu magia y tu fé para devolver la mente del objetivo a su estado natural. Este conjuro puede tener dos efectos diferentes dependiendo de la duración:",
-				"Como acción, tocas a una criatura mientras le dedicas unas palabras de ánimo, acabando una condición a elegir entre charm, miedo o aturdimiento. Además, obtiene ventaja las salvaciones de Wisdom en el próximo minuto.",
+				"Como acción, tocas a una criatura mientras le dedicas unas palabras de ánimo, acabando una condición a elegir entre {@condition Charmed|PHB}, {@condition Frightened|PHB} o {@condition Stunned|PHB}. Además, obtiene ventaja las salvaciones de Wisdom en el próximo minuto.",
 				"Manteniendo 8 horas de conversación ininterrumpidas, puedes aportar suficiente apoyo moral al objetivo como para curar un trauma leve, una manía o una fobia menor."
 			],
 			"source": "GdR",
@@ -2040,7 +2040,7 @@
 				"fromClassList": []
 			},
 			"entries": [
-				"El usuario se arrodilla frente al cadáver del objetivo (durante este tiempo su percepción pasiva desciende a 1, su CA a 5 y cualquier tirada de salvación fallará automáticamente) y ora por su alma a los espíritus de la naturaleza y a las antiguas hadas arcaicas para que velen por el alma del difunto. La oración durará 5 minutos, y deberá ejecutarse en una de las lenguas que el difunto pudiese comprender, independientemente de cuál. Tras esto, el cuerpo empezará a arder junto con todas sus posesiones, estén o no con él (para esto, sus posesiones deben estar en el mismo plano, o de lo contrario no desaparecerán. Solo cuentan las que el difunto considere como propias). La llama será de un color que represente la personalidad, carácter y esencia vital del objetivo, y consumirá el cuerpo hasta no dejar ningún tipo de rastro. Esta llama no puede apagarse, a menos que se utilice el conjuro Wish o Disipar Magia a nivel 7 o superior. ",
+				"El usuario se arrodilla frente al cadáver del objetivo (durante este tiempo su {@skill Perception} pasiva desciende a 1, su CA a 5 y cualquier tirada de salvación fallará automáticamente) y ora por su alma a los espíritus de la naturaleza y a las antiguas hadas arcaicas para que velen por el alma del difunto. La oración durará 5 minutos, y deberá ejecutarse en una de las lenguas que el difunto pudiese comprender, independientemente de cuál. Tras esto, el cuerpo empezará a arder junto con todas sus posesiones, estén o no con él (para esto, sus posesiones deben estar en el mismo plano, o de lo contrario no desaparecerán. Solo cuentan las que el difunto considere como propias). La llama será de un color que represente la personalidad, carácter y esencia vital del objetivo, y consumirá el cuerpo hasta no dejar ningún tipo de rastro. Esta llama no puede apagarse, a menos que se utilice el conjuro Wish o Disipar Magia a nivel 7 o superior. ",
 				"Pasados los 15 minutos, el cuerpo habrá desaparecido, independientemente de su tamaño, y las llamas tomarán la forma del difunto, representando el alma de este. El objetivo será invulnerable para siempre, pero estará ligado al lugar que más haya amado en vida. Además, no podrá comunicarse verbal ni mentalmente. El DM (o el jugador que interpretaba el personaje) decide si su alma decide despedirse o si se va directamente. A partir de entonces, una luz flotará alrededor del lugar al que se dirija, en forma de aurora boreal, destello, estrella, luciérnaga o cualquier otra forma de luz a juicio del DM. ",
 				"Los difuntos afectados por este conjuro nunca podrán resucitar o ser poseídos, sino que deambularán por su lugar más amado para siempre o hasta que ellos decidan desaparecer. Nada puede dañarlos (salvo Wish a juicio del DM) ni afectarles positiva o negativamente. Una vez hayan puesto rumbo al lugar, adoptarán la forma luminosa que tendrán más adelante, y perderán la capacidad de interactuar con los vivos, si bien podrán observarles e interactuar entre sí en caso de que dos almas afectadas por este conjuro coincidan en un mismo lugar. ",
 				"En ningún caso un alma podrá pasar más de 1 minuto estática antes de partir, por lo que si pasado ese tiempo aún no ha terminado de despedirse, será arrastrado al lugar pertinente.",
@@ -2190,8 +2190,8 @@
 				]
 			},
 			"entries": [
-				"Dejas caer una mota de magia concentrada de tu canalizador sobre una superficie sólida y haces crecer un sauce llorón de tamaño grande y 10 pies de altura con 30 HP y 12 de CA cuya copa ocupa 20 pies desde el centro del tronco. Cada vez que una criatura pase bajo la copa, puedes elegir usar tu reacción para curar {@dice 3d8} más tu habilidad de conjuros. Además, con tu acción adicional puedes acabar con uno de los siguientes efectos a elegir entre ceguera, sordera, parálisis, envenenamiento o una enfermedad a una sola criatura.",
-				"Cuando el conjuro acaba las hojas del árbol empiezan a brillar con una luz amarilla casi dorada mientras se elevan hacia el cielo como luciérnagas. Entonces, puedes elegir en qué dirección cae el tronco del árbol, que permanecerá ahí hasta que se descomponga de manera natural. Cualquier criatura en la trayectoria del tronco deberá hacer una salvación de Destreza o recibir {@dice 2d6} de daño contundente y quedar atrapado. Para liberarse debe superar una tirada de Atletismo CD 16."
+				"Dejas caer una mota de magia concentrada de tu canalizador sobre una superficie sólida y haces crecer un sauce llorón de tamaño grande y 10 pies de altura con 30 HP y 12 de CA cuya copa ocupa 20 pies desde el centro del tronco. Cada vez que una criatura pase bajo la copa, puedes elegir usar tu reacción para curar {@dice 3d8} más tu habilidad de conjuros. Además, con tu acción adicional puedes acabar con uno de los siguientes efectos a elegir entre {@condition Blinded|PHB}, {@condition Deafened|PHB}, {@condition Paralyzed|PHB}, {@condition Poisoned|PHB} o una enfermedad a una sola criatura.",
+				"Cuando el conjuro acaba las hojas del árbol empiezan a brillar con una luz amarilla casi dorada mientras se elevan hacia el cielo como luciérnagas. Entonces, puedes elegir en qué dirección cae el tronco del árbol, que permanecerá ahí hasta que se descomponga de manera natural. Cualquier criatura en la trayectoria del tronco deberá hacer una salvación de Destreza o recibir {@dice 2d6} de daño contundente y quedar atrapado. Para liberarse debe superar una tirada de {@skill Athletics} CD 16."
 			],
 			"source": "GdR",
 			"components": {
@@ -2267,8 +2267,8 @@
 				"Haces brotar un árbol de la nada en un espacio de suelo sólido que puedas ver. Este ocupa una superficie de 3x3 casillas y mide 20 pies de alto. Una criatura que ocupe un espacio dentro de este área debe superar una tirada de salvación de Destreza o recibir {@dice 3d6} de daño contundente y caer tumbado. El conjurador puede decidir qué árbol conjura para decidir qué efecto tiene:",
 				"{@b Un Sauce Llorón}, cada vez que una criatura pase a 10 pies del árbol, el usuario puede utilizar su acción o reacción para propinar un latigazo, {@dice 4d8} de daño contundente, con tu bono de lanzamiento de conjuros; inmovilizar a un enemigo si no supera una tirada de salvación de Destreza sobre tu CD de salvación de conjuros, el objetivo quedará apresado hasta que logre superar la tirada; o lanzar a un objetivo a 15 pies en la dirección que elijas y caer tumbado, haciéndole recibir {@dice 3d6} de daño contundente en caso de fallar una tirada de salvación de Destreza. Solo puede atrapar a 4 criaturas a la vez. De hacerlo no podrá usarse para atacar hasta que no se libere al menos a una. Una criatura apresada puede ser lanzada.",
 				"{@b Un Roble} hueco por dentro con aberturas finas y recubiertas de hojarasca. Las criaturas en el área ignoran la salvación de Destreza y el daño resultante al brotar el árbol. En su lugar, cualquier criatura en el área de crecimiento queda protegida y cubierta por una cobertura total. El árbol tiene 80 HP y una CA de 14 y será débil al fuego y frío mágicos, pero inmune al veneno, al psíquico y al sónico. Dentro de este habrá luz normal debido a sabia bioluminiscente, y podrán disparar conjuros o proyectiles a través de las aberturas.",
-				"{@b Un Cerezo}, cada vez que un spellcaster a tu elección mantenga la concentración en un rango de 30 casillas desde él, tendrá ventaja en las tiradas de salvación para mantenerla. Además, el conjurador, como acción o reacción, puede brindar frutos del tamaño de un puño a cualquier criatura que pase bajo la copa. Estos frutos recuperarán {@dice 2d8} al ingerirlos como acción adicional. Además, inmunizará a las criaturas escogidas en el rango contra ceguera y envenenamiento y arrojará luz brillante dentro del área.",
-				"{@b Una Seta Gigante}, proporciona amortiguación frente a caídas de menos de 100 pies. De usarse en combate extiende una nube de gas de 2x2 que el conjurador puede controlar. Esa nube puede paralizar al objetivo que no supere una tirada de salvación de Constitución sobre tu CD de salvación de Conjuros. Una vez se salve, estará envenenado hasta que finalice el conjuro o muera la seta. Una ráfaga de viento puede disipar la nube de humo, y cualquier criatura, hostil o no, que la respire sufrirá sus efectos.",
+				"{@b Un Cerezo}, cada vez que un spellcaster a tu elección mantenga la {@status Concentration|PHB} en un rango de 30 casillas desde él, tendrá ventaja en las tiradas de salvación para mantenerla. Además, el conjurador, como acción o reacción, puede brindar frutos del tamaño de un puño a cualquier criatura que pase bajo la copa. Estos frutos recuperarán {@dice 2d8} al ingerirlos como acción adicional. Además, inmunizará a las criaturas escogidas en el rango contra {@condition Blinded|PHB} y {@condition Poisoned|PHB} y arrojará luz brillante dentro del área.",
+				"{@b Una Seta Gigante}, proporciona amortiguación frente a caídas de menos de 100 pies. De usarse en combate extiende una nube de gas de 2x2 que el conjurador puede controlar. Esa nube puede paralizar al objetivo que no supere una tirada de salvación de Constitución sobre tu CD de salvación de Conjuros. Una vez se salve, estará {@condition Poisoned|PHB} hasta que finalice el conjuro o muera la seta. Una ráfaga de viento puede disipar la nube de humo, y cualquier criatura, hostil o no, que la respire sufrirá sus efectos.",
 				"{@i El árbol puede treparse con una tirada de Acrobacias 14 o Atletismo 17. Cada 5 pies subidos gastarán 10 a la movilidad. El árbol, a excepción del Roble, tendrá 30 HP y una CA de 12. Tendrá inmunidad al daño psíquico, sónico y por veneno de ataques mágicos y no mágicos, pero será vulnerable al fuego y frío mágico. El árbol no podrá crecer si no dispone de espacio suficiente. Cuando el conjuro acaba, el conjurador puede elegir en qué dirección cae el árbol y causar daño contundente equivalente a {@dice 4d6} en un área de 3 casillas de ancho por 4 de largo desde la base del árbol. A continuación el árbol desaparecerá.}"
 			],
 			"source": "GdR",
@@ -2427,7 +2427,7 @@
 				]
 			},
 			"entries": [
-				"Valiéndote de tu fe, vinculas el alma de una criatura a su propio cuerpo, impidiéndole morir. Durante la duración de conjuro, el objetivo no puede caer inconsciente, incluso cuando esté a 0 HP o haya muerto. La criatura puede moverse y realizar su turno de forma normal, pero aún deben aplicarse las normas de las tiradas de muerte. ",
+				"Valiéndote de tu fe, vinculas el alma de una criatura a su propio cuerpo, impidiéndole morir. Durante la duración de conjuro, el objetivo no puede caer {@condition Unconscious|PHB}, incluso cuando esté a 0 HP o haya muerto. La criatura puede moverse y realizar su turno de forma normal, pero aún deben aplicarse las normas de las tiradas de muerte. ",
 				"Mientras siga haciendo tiradas de muerte, podrá ser curado de forma normal, lo cual acabará con este conjuro. Sin embargo, si muere, solo podrá ser blanco de conjuros que revivan cadáveres, acabando también con este conjuro. Mientras dure, el cuerpo no se descompondrá, por lo que el tiempo bajo este conjuro no afectará para el lapso de tiempo de dichos conjuros.",
 				"La criatura aún entiende la situación y está en pleno uso de sus capacidades mentales y físicas, pero siente un insoportable dolor en todo el cuerpo, así como un cansancio pesado. Su capacidad de carga se reduce a la mitad.",
 				"No afecta a Undeads."
@@ -2499,7 +2499,7 @@
 			"entries": [
 				"Una gran cantidad de serpientes negras sale de tu mano y avanza hasta un objetivo a 15 pies. Si falla una tirada de salvación de Fuerza, será arrastrado tantas casillas como alcance tenga este conjuro, estará atrapado (si la criatura es del tamaño del usuario o uno mayor) y recibirá {@dice 2d6} de daño contundente, {@dice 2d6} de daño perforante y {@dice 2d6} de daño por veneno. Si la supera, no será arrastrado ni atrapado. Además, recibirá la mitad del daño. ",
 				"Cuando el objetivo está atrapado, el usuario puede moverse la mitad de su movilidad y arrastrar al objetivo. Con una tirada de spellcasting (CD 8 diminuto, 10 pequeño, 14 mediano, 18 grande) podrá lanzar al objetivo un numero de casillas igual a {@dice 1d6}. Recibirá tantos {@dice d4} de daño por fuerza como casillas recorridas y acabará el conjuro.",
-				"Al final de cada turno, el objetivo puede repetir la tirada de Fuerza para liberarse, pero no recibirá más daño. Mientras esté atrapado estará paralizado. Si no has atrapado a nadie, puedes usar tu acción para volver a intentarlo mientras dure el conjuro."
+				"Al final de cada turno, el objetivo puede repetir la tirada de Fuerza para liberarse, pero no recibirá más daño. Mientras esté atrapado estará {@condition Paralyzed|PHB}. Si no has atrapado a nadie, puedes usar tu acción para volver a intentarlo mientras dure el conjuro."
 			],
 			"source": "GdR",
 			"components": {
@@ -2534,7 +2534,7 @@
 				{
 					"name": "At Higher Levels",
 					"entries": [
-						"A niveles superiores se añade {@dice 1d6} al daño a elegir. Además, estará también envenenado hasta que supere una tirada de salvación de Constitución sobre tu CD de lanzamiento de conjuros."
+						"A niveles superiores se añade {@dice 1d6} al daño a elegir. Además, estará también {@condition Poisoned|PHB} hasta que supere una tirada de salvación de Constitución sobre tu CD de lanzamiento de conjuros."
 					]
 				}
 			]
@@ -2640,7 +2640,7 @@
 				]
 			},
 			"entries": [
-				"Lanzas una pequeña esfera alargada de un color negro tan puro que ni la mismísima luz del sol se atreve a atravesarlo. El objetivo deberá superar una tirada de Sabiduría sobre tu CD de conjuros o quedar inconsciente {@dice 1d6 + 2} turnos. La criatura despertará si recibe un daño proporcional al 50% de los HP del usuario del conjuro. Cuando lo haga, independientemente del motivo, la criatura habrá perdido todos sus recuerdos, pero conservará todos sus atributos. Si algún rasgo depende, de alguna forma, de las memorias del objetivo, este las conservará, pero no recordará cómo las obtuvo. La criatura no podrá recuperar sus recuerdos de formas mundanas, pero estará en pleno uso de sus facultades mentales.",
+				"Lanzas una pequeña esfera alargada de un color negro tan puro que ni la mismísima luz del sol se atreve a atravesarlo. El objetivo deberá superar una tirada de Sabiduría sobre tu CD de conjuros o quedar {@condition Unconscious|PHB} {@dice 1d6 + 2} turnos. La criatura despertará si recibe un daño proporcional al 50% de los HP del usuario del conjuro. Cuando lo haga, independientemente del motivo, la criatura habrá perdido todos sus recuerdos, pero conservará todos sus atributos. Si algún rasgo depende, de alguna forma, de las memorias del objetivo, este las conservará, pero no recordará cómo las obtuvo. La criatura no podrá recuperar sus recuerdos de formas mundanas, pero estará en pleno uso de sus facultades mentales.",
 				"Un conjuro de Restauración Mayor o Eliminar Maldición a lv7 o Wish le devuelven sus recuerdos automáticamente."
 			],
 			"source": "GdR",
@@ -2690,7 +2690,7 @@
 				]
 			},
 			"entries": [
-				"El usuario se eleva 50 pies (10 casillas) sobre el suelo y el cielo se cubre de un manto de nubes negras durante el primer turno. Durante este tiempo cuenta como paralizado. En el segundo turno, un pequeño rayo aparecerá entre las manos del usuario, y lo clavará en tierra con ambos brazos. Entonces, un enorme trueno caerá en un área redonda de 20 casillas de diámetro y obligará a todas las víctimas en el área o por encima o a 20 pies por debajo a hacer una tirada de salvación de constitución o sufrir {@dice 25d6} de daño por relámpago y {@dice 25d6} por trueno, o la mitad si se supera. Después, el usuario volverá a tierra sin recibir daño (levitará por electricidad estática) y la zona afectada se habrá convertido en un cráter de escombro de 100 pies (20 casillas) de profundidad. Será terreno difícil. Todos los objetivos, salven o no, estarán aturdidos y tumbados."
+				"El usuario se eleva 50 pies (10 casillas) sobre el suelo y el cielo se cubre de un manto de nubes negras durante el primer turno. Durante este tiempo cuenta como {@condition Paralyzed|PHB}. En el segundo turno, un pequeño rayo aparecerá entre las manos del usuario, y lo clavará en tierra con ambos brazos. Entonces, un enorme trueno caerá en un área redonda de 20 casillas de diámetro y obligará a todas las víctimas en el área o por encima o a 20 pies por debajo a hacer una tirada de salvación de constitución o sufrir {@dice 25d6} de daño por relámpago y {@dice 25d6} por trueno, o la mitad si se supera. Después, el usuario volverá a tierra sin recibir daño (levitará por electricidad estática) y la zona afectada se habrá convertido en un cráter de escombro de 100 pies (20 casillas) de profundidad. Será terreno difícil. Todos los objetivos, salven o no, estarán {@condition Stunned|PHB} y {@condition Prone|PHB}."
 			],
 			"source": "GdR",
 			"components": {

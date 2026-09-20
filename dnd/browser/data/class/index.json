@@ -17,6 +17,7 @@
 	"planeswalker": "class-planeswalker.json",
 	"ranger": "class-ranger.json",
 	"rogue": "class-rogue.json",
+	"sidekick": "class-sidekick.json",
 	"sorcerer": "class-sorcerer.json",
 	"warlock": "class-warlock.json",
 	"wizard": "class-wizard.json"

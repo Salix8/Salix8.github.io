@@ -2191,7 +2191,7 @@
 								"page": 84,
 								"header": 2,
 								"entries": [
-									"Starting at 9th level, Utilizando tus Herramientas de Carpintero, puedes crear recipientes mágicos para guardar tus conjuros. Con un ritual de una hora, que puede coincidir con un descanso corto, puedes gastar un espacio de conjuro que tengas disponible y castear un conjuro dentro de un objeto. Una criatura que no seas necesariamente tú puede usar su acción para castear el conjuro desde el objeto, utilizándolo como foco arcano, valiéndose de tu bono de lanzamiento de conjuros o tu CD de salvación de conjuros. Si el conjuro requiere concentración, deberá ser la criatura que castee el conjuro quien la mantenga. Para poder meter el conjuro dentro del objeto, este debe poder ser casteado en al menos 1 hora.",
+									"Starting at 9th level, Utilizando tus Herramientas de Carpintero, puedes crear recipientes mágicos para guardar tus conjuros. Con un ritual de una hora, que puede coincidir con un descanso corto, puedes gastar un espacio de conjuro que tengas disponible y castear un conjuro dentro de un objeto. Una criatura que no seas necesariamente tú puede usar su acción para castear el conjuro desde el objeto, utilizándolo como foco arcano, valiéndose de tu bono de lanzamiento de conjuros o tu CD de salvación de conjuros. Si el conjuro requiere {@status Concentration|PHB}, deberá ser la criatura que castee el conjuro quien la mantenga. Para poder meter el conjuro dentro del objeto, este debe poder ser casteado en al menos 1 hora.",
 									"Recuperarás el espacio de conjuro en el próximo descanso largo tras su utilización. No puedes usar este rasgo más veces que tu BC. Si superas esa cantidad, el más antiguo se pierde."
 								]
 							}
@@ -2243,10 +2243,10 @@
 												"colStyles": ["col-2 text-center", "col-10"],
 												"rows": [
 													["3rd", "{@spell compelled duel}, {@spell wrathful smite}"],
-													["5th", "{@spell kinetic jaunt}, {@spell spiritual weapon}"],
+													["5th", "{@spell kinetic jaunt|SCC}, {@spell spiritual weapon}"],
 													["9th", "{@spell crusader's mantle}, {@spell elemental weapon}"],
 													["13th", "{@spell staggering smite}, {@spell fire shield}"],
-													["17th", "{@spell steel wind strike}, {@spell holy weapon}"]
+													["17th", "{@spell steel wind strike|XGE}, {@spell holy weapon|XGE}"]
 												]
 											}
 										]
@@ -2289,7 +2289,7 @@
 								"source": "Himo",
 								"page": "??",
 								"entries": [
-									"Cuando uses tu acción adicional para cambiar de arma, puedes atacar una vez con la nueva. Si cambias a escudo, puedes atacar para dejar al objetivo aturdido. Si el escudo tenía un modificador mágico a tu CA, lo añade al ataque."
+									"Cuando uses tu acción adicional para cambiar de arma, puedes atacar una vez con la nueva. Si cambias a escudo, puedes atacar para dejar al objetivo {@condition Stunned|PHB}. Si el escudo tenía un modificador mágico a tu CA, lo añade al ataque."
 								]
 							}
 						]

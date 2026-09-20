@@ -101,7 +101,7 @@
 			"entries": [
 				"Este conjuro crea un sirviente Undead a partir de un cadáver o una pila de huesos perteneciente a una criatura no humanoide de CR 1/8 o inferior. Esta debe ser de tamaño mediano o inferior. Independientemente de si la criatura se alza como esqueleto o como zombie, usa su propia ficha como si estuviera vivo, pero con algunas diferencias:",
 				"- Su modificador de Fuerza baja 2 puntos y el de Constitución aumenta en 2.",
-				"- Es inmune a veneno y a ser envenenado.",
+				"- Es inmune a veneno y a ser {@condition Poisoned|PHB}.",
 				"- No tiene necesidades básicas.",
 				"- Gana Undead Fortitude.",
 				"- Sus HP máximos son la mitad de los de la criatura base redondeada hacia arriba.",
@@ -411,7 +411,7 @@
 				]
 			},
 			"entries": [
-				"Tú y una criatura voluntaria estáis bajo los efectos de Zona de la Verdad, tenéis desventaja en checks de Carisma y ventaja en Insight para tiradas hacia el otro.",
+				"Tú y una criatura voluntaria estáis bajo los efectos de Zona de la Verdad, tenéis desventaja en checks de Carisma y ventaja en {@skill Insight} para tiradas hacia el otro.",
 				"Si el conjuro acaba para uno de los dos, acaba también para el otro. Ambos saben cuándo el conjuro está activo."
 			],
 			"source": "GPNM",
@@ -541,7 +541,7 @@
 			"entries": [
 				"Conjuras una lanza evanescente de dos metros que ilumina a 10 pies y 10 pies ténue y la lanzas a un enemigo en el rango. Haz un ranged spell attack con un impacto recibe {@dice 2d10} de daño por fuerza y es empujado hasta impactar con un objeto u obstáculo o hasta que acabe la distancia, momento en el cual se clava en el suelo.",
 				"La criatura recibe daño por caída en función de la distancia que haya sido arrastrada. Si por el camino impacta en otro objetivo, uno de los {@dice d6} se lo llevará dicho objetivo, que salvará fuerza o caerá {@condition prone} y será empujado 5 pies en perpendicular a la trayectoria.",
-				"La criatura atrapada está {@condition restrained} y puede usar su acción para tirar atletismo contra tu CD y liberarse."
+				"La criatura atrapada está {@condition restrained} y puede usar su acción para tirar {@skill Athletics} contra tu CD y liberarse."
 			],
 			"source": "GPNM",
 			"components": {
@@ -736,7 +736,7 @@
 			},
 			"entries": [
 				"Una cúpula de fuerza de 10 pies de radio surge a tu alrededor y permanece centrada en ti durante todo el tiempo. Emite luz a 10 pies y ténue a otros 10.",
-				"Si una criatura queda en medio del borde, puedes elegir protegerla o no, dejándola dentro o fuera. Dejarla dentro la empuja hacia dentro, potencialmente tirando a esa y otras criaturas al suelo (Acrobacias CD 10). Si la criatura no cabía, el conjuro falla.",
+				"Si una criatura queda en medio del borde, puedes elegir protegerla o no, dejándola dentro o fuera. Dejarla dentro la empuja hacia dentro, potencialmente tirando a esa y otras criaturas al suelo ({@skill Acrobatics} CD 10). Si la criatura no cabía, el conjuro falla.",
 				"Las criaturas y los objetos dentro de la cúpula cuando lanzas este hechizo pueden moverse libremente a través de ella. Todas las demás criaturas y objetos tienen prohibido pasar a través de él. Los hechizos y otros efectos mágicos no pueden extenderse a través de la cúpula ni lanzarse a través de ella. El ambiente dentro del espacio es cómodo y seco, independientemente del clima exterior.",
 				"Tiene 30 HP, es inmune al daño por trueno, por veneno y psíquico, vulnerable al daño por fuerza, y resistente al resto de daños. Si el conjuro es destruido, el caster cae al suelo y pierde su reacción esa ronda.",
 				"El caster puede usar su acción para regenerar el escudo o para volverlo a poner."
@@ -807,7 +807,7 @@
 				]
 			},
 			"entries": [
-				"Con una plegaria desesperada, pides ayuda a los dioses para proteger a tus aliados a cambio de un sacrificio purificador. Cada vez que una criatura a 30 ft. de ti vaya a recibir daño, puedes interponer un escudo divino y recibir tú ese daño. El tipo de daño ahora es necrótico e ignora resistencias e inmunidades, y no se ve afectado por HP Temporales. Este daño no te hace salvar concentración."
+				"Con una plegaria desesperada, pides ayuda a los dioses para proteger a tus aliados a cambio de un sacrificio purificador. Cada vez que una criatura a 30 ft. de ti vaya a recibir daño, puedes interponer un escudo divino y recibir tú ese daño. El tipo de daño ahora es necrótico e ignora resistencias e inmunidades, y no se ve afectado por HP Temporales. Este daño no te hace salvar {@status Concentration|PHB}."
 			],
 			"source": "GPNM",
 			"components": {
@@ -870,7 +870,7 @@
 			},
 			"entries": [
 				"Con una palabra de poder, proteges a un aliado que puedas ver hasta el final de su próxima ronda. Una burbuja naranja aparece a su alrededor y le sigue si se mueve. Es inmune a todo daño excepto psíquico, tiene ventaja en todas las salvaciones y es inmune al resto de conjuros de Power Word.",
-				"Si el objetivo estaba envenenado y/o en llamas, el/los efecto/s acaban."
+				"Si el objetivo estaba {@condition Poisoned|PHB} y/o en llamas, el/los efecto/s acaban."
 			],
 			"source": "GPNM",
 			"components": {
@@ -2136,7 +2136,7 @@
 				"- Sus HP pasan a ser su Modificador de Constitución + su lv/CR",
 				"- Su movilidad es 10 y solo puede moverse gateando ({@condition prone})",
 				"Mientras dure, la criatura está {@condition incapacitated|PHB|incapacitada} y solo puede hablar mediante balbueos. Conjuros y efectos de comprensión idiomática como {@spell Comprehend Languages} o {@spell Tongues} solo son capaces de discernir una idea general de las intenciones del bebé. Además, su equipo no se transforma ni se adapta con él. Potencialmente caerá al suelo debido a la diferencia de tamaño.",
-				"Si el bebé es reducido a 0 HP, el objetivo volverá a su forma original y perderá cualquier cantidad de HP que hayan sobrado del ataque. El objetivo estará dazed hasta el final de su próximo turno."
+				"Si el bebé es reducido a 0 HP, el objetivo volverá a su forma original y perderá cualquier cantidad de HP que hayan sobrado del ataque. El objetivo estará {@condition Dazed|Himo} hasta el final de su próximo turno."
 			],
 			"source": "GPNM",
 			"subschools": [
@@ -2442,7 +2442,7 @@
 			},
 			"entries": [
 				"Eres capaz de rebobinar el físico de un objeto o criatura que puedas ver sin sacarlo del presente. El objetivo vuelve al estado en el que se encontraba al principio de tu turno anterior, lo cual incluye sus HP y cualquier efecto que tuviera activo y hubiera acabado en el momento de lanzar este conjuro, como puede ser {@spell haste} o {@spell slow}. Del mismo modo, cualquier efecto que hubiese ganado en el lapso perdido desaparece también, pero sigue gastado para su usuario (i.e. si un paladín se curó 40 HP usando toda su imposición de manos y luego lo rebobinas, no tiene ni los 40 HP ni su imposición de manos). {@b Un objetivo que haya muerto puede volver a la vida si al principio de tu turno anterior estaba vivo.} Funciona igual si el objetivo era un objeto destruido.",
-				"Este conjuro no mueve a los objetivos a la posición a la que estaban antes, pero sí podría afectar a otros objetos o criaturas. Si se anuló un empalamiento por lanza o un {@condition grapple}, la lanza estará en el suelo y la criatura ya no le estará grappleando.",
+				"Este conjuro no mueve a los objetivos a la posición a la que estaban antes, pero sí podría afectar a otros objetos o criaturas. Si se anuló un empalamiento por lanza o un {@condition Grappled|PHB|grapple}, la lanza estará en el suelo y la criatura ya no le estará grappleando.",
 				"Si el objetivo es una criatura, mantiene los recuerdos de lo que se ha anulado. "
 			],
 			"source": "GPNM",
@@ -2644,7 +2644,7 @@
 			},
 			"entries": [
 				"Creas una ilusión de ti mismo realizando una acción que ya ocurrió en el pasado. Elige un punto que puedas ver dentro del rango en el que ya hubieras estado en los últimos 10 meses. Durante la duración, una ilusión de ti aparece en ese punto repitiendo las acciones que realizaste allí, pero no emite sonido ni es tangible.",
-				"La ilusión es ligeramente traslúcida durante el primer turno de casteo. Una criatura que vea la ilusión a partir del segundo turno deberá hacer un check de investigación contra tu CD para determinar si eres tú de verdad o no, aunque solo si sospechaba.",
+				"La ilusión es ligeramente traslúcida durante el primer turno de casteo. Una criatura que vea la ilusión a partir del segundo turno deberá hacer un check de {@skill Investigation} contra tu CD para determinar si eres tú de verdad o no, aunque solo si sospechaba.",
 				"Puedes decidir qué acción se muestra en la ilusión, pero no puedes alterarla."
 			],
 			"source": "GPNM",
@@ -2773,7 +2773,7 @@
 				]
 			},
 			"entries": [
-				"Adelantas la percepción del tiempo de un objetivo que puedas ver en el rango, dificultando sus respuestas. El objetivo salva Inteligencia sobre tu CD. Con un fallo recibe {@dice 2d6} de daño psíquico y pierde las reacciones mientras dure el conjuro. Puede repetir la salvación cada vez que vaya a usar una reacción y no lo consiga. Con un éxito solo recibe la mitad del daño."
+				"Adelantas la {@skill Perception} del tiempo de un objetivo que puedas ver en el rango, dificultando sus respuestas. El objetivo salva Inteligencia sobre tu CD. Con un fallo recibe {@dice 2d6} de daño psíquico y pierde las reacciones mientras dure el conjuro. Puede repetir la salvación cada vez que vaya a usar una reacción y no lo consiga. Con un éxito solo recibe la mitad del daño."
 			],
 			"source": "GPNM",
 			"subschools": [
@@ -3250,7 +3250,7 @@
 			},
 			"entries": [
 				"Creas una copia perfecta de tu yo actual a 5 ft de ti. Este clon tiene los mismos HP que tú y tus mismas habilidades. Además actúa en tu turno de iniciativa junto a ti y cuenta como una criatura independiente a la hora de contabilizar objetivos para conjuros y efectos. Tu mente se divide en ambos cuerpos, por lo que la sincronización es tan perfecta que ni siquiera requiere comunicación.",
-				"Mientras el conjuro se mantenga y el clon viva, tienes ventaja en salvaciones de inteligencia y carisma y tienes dos turnos en vez de uno en tu iniciativa, uno con cada cuerpo. Ambos cuerpos comparten rasgos, por lo que cualquier conjuro casteado por el clon se te gasta a ti también y viceversa. Si cualquiera de los dos cuerpos castea un conjuro de concentración, ambos se concentran y tienes desventaja a la salvación. Cuentan como criaturas separadas para la concentración, por lo que si ambos reciben daño de un mismo efecto salvarás dos veces.",
+				"Mientras el conjuro se mantenga y el clon viva, tienes ventaja en salvaciones de inteligencia y carisma y tienes dos turnos en vez de uno en tu iniciativa, uno con cada cuerpo. Ambos cuerpos comparten rasgos, por lo que cualquier conjuro casteado por el clon se te gasta a ti también y viceversa. Si cualquiera de los dos cuerpos castea un conjuro de {@status Concentration|PHB}, ambos se concentran y tienes desventaja a la salvación. Cuentan como criaturas separadas para la {@status Concentration|PHB}, por lo que si ambos reciben daño de un mismo efecto salvarás dos veces.",
 				"Si el clon cae a 0 HP, recibes la mitad de tus HP totales en daño psíquico y 3 PtA. Si tú caes a 0 o mueres, puedes seguir actuando desde el clon. Si el conjuro acaba y sigues muert@, el clon pasa a ser tu nuevo cuerpo, pero no puedes restaurar HP ni recuperar tus rasgos consumibles.",
 				"Tú y el clon recibís el daño independientemente del otro, excepto por el daño psíquico. Si cualquiera de los dos recibe daño psíquico, cada cuerpo se llevará la mitad de ese daño."
 			],
