@@ -22,15 +22,24 @@ assert.deepStrictEqual(
 	planeswalker.cantripProgression,
 	[2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4]
 );
-assert.deepStrictEqual(planeswalker.classTableGroups[0].colLabels, ["Lv 0", "Lv 1", "Lv 2", "Lv 3", "Lv 4", "Lv 5"]);
+const cantripTable = planeswalker.classTableGroups[0];
+const spellSlotTable = planeswalker.classTableGroups[1];
+assert.strictEqual(cantripTable.title, undefined);
+assert.deepStrictEqual(cantripTable.colLabels, ["Cantrips Known"]);
 assert.deepStrictEqual(
-	planeswalker.classTableGroups[0].rows,
+	cantripTable.rows.map(it => it[0]),
+	planeswalker.cantripProgression
+);
+assert.strictEqual(spellSlotTable.title, "Spell Slots per Spell Level");
+assert.deepStrictEqual(spellSlotTable.colLabels, ["Lv 1", "Lv 2", "Lv 3", "Lv 4", "Lv 5"]);
+assert.deepStrictEqual(
+	spellSlotTable.rows,
 	[
-		[2, 2, "-", "-", "-", "-"], [2, 2, "-", "-", "-", "-"], [2, 3, "-", "-", "-", "-"], [2, 3, "-", "-", "-", "-"],
-		[2, 4, 2, "-", "-", "-"], [2, 4, 2, "-", "-", "-"], [2, 4, 3, "-", "-", "-"], [2, 4, 3, "-", "-", "-"],
-		[3, 4, 3, 2, "-", "-"], [3, 4, 3, 2, "-", "-"], [3, 4, 3, 3, "-", "-"], [3, 4, 3, 3, "-", "-"],
-		[4, 4, 3, 3, 1, "-"], [4, 4, 3, 3, 1, "-"], [4, 4, 3, 3, 2, "-"], [4, 4, 3, 3, 2, "-"],
-		[4, 4, 3, 3, 3, 1], [4, 4, 3, 3, 3, 1], [4, 4, 3, 3, 3, 2], [4, 4, 3, 3, 3, 2]
+		[2, "-", "-", "-", "-"], [2, "-", "-", "-", "-"], [3, "-", "-", "-", "-"], [3, "-", "-", "-", "-"],
+		[4, 2, "-", "-", "-"], [4, 2, "-", "-", "-"], [4, 3, "-", "-", "-"], [4, 3, "-", "-", "-"],
+		[4, 3, 2, "-", "-"], [4, 3, 2, "-", "-"], [4, 3, 3, "-", "-"], [4, 3, 3, "-", "-"],
+		[4, 3, 3, 1, "-"], [4, 3, 3, 1, "-"], [4, 3, 3, 2, "-"], [4, 3, 3, 2, "-"],
+		[4, 3, 3, 3, 1], [4, 3, 3, 3, 1], [4, 3, 3, 3, 2], [4, 3, 3, 3, 2]
 	]
 );
 

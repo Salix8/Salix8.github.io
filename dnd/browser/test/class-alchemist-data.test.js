@@ -21,25 +21,32 @@ assert.deepStrictEqual(
 		"Carbonero, Competencia en pociones",
 		"Sabiduría Alquímica",
 		"Piedra Filosofal",
-		"Mejora de puntuación de característica",
+		"Ability Score Improvement",
 		"Especialización",
 		"Recolector Filosofal-Ritual",
 		"Mejora de la Piedra",
-		"Mejora de puntuación de característica",
+		"Ability Score Improvement",
 		"Especialización",
 		"Cinturón de Conservación",
 		"Mejora de la Piedra",
-		"Mejora de puntuación de característica",
+		"Ability Score Improvement",
 		"Especialización",
 		"Uno con la Naturaleza",
 		"Mejora de la Piedra",
-		"Mejora de puntuación de característica",
+		"Ability Score Improvement",
 		"Especialización",
 		"Invocación Favorita",
-		"Mejora de puntuación de característica",
+		"Ability Score Improvement",
 		"Avatar Filosofal"
 	]
 );
+
+for (const level of [4, 8, 12, 16, 19]) {
+	const feature = alchemist.classFeatures[level - 1][0];
+	assert.strictEqual(feature.name, "Ability Score Improvement");
+	assert(feature.entries[0].includes(`When you reach ${level}th level`));
+	assert(feature.entries[1].includes("{@5etools feat|feats.html}"));
+}
 
 assert.strictEqual(alchemist.subclasses.length, 7);
 assert(alchemist.subclasses.every(subclass => subclass.subclassFeatures.length === 4));

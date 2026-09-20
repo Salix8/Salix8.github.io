@@ -19,12 +19,16 @@ assert.strictEqual(clown.casterProgression, "artificer");
 assert.strictEqual(clown.spellcastingAbility, "cha");
 assert.deepStrictEqual(clown.cantripProgression, [1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3]);
 
-const spellTable = clown.classTableGroups.find(it => it.title === "Spellcasting");
-assert(spellTable, "Payaso must contain its spellcasting table.");
-assert.deepStrictEqual(spellTable.colLabels, ["Known", "Lv 1", "Lv 2", "Lv 3", "Lv 4", "Lv 5"]);
-assert.deepStrictEqual(spellTable.rows.map(it => it[0]), [2, 2, 3, 3, 5, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 12, 12, 13, 14]);
+const jokeTable = clown.classTableGroups[0];
+const spellTable = clown.classTableGroups[1];
+assert.strictEqual(jokeTable.title, undefined);
+assert.deepStrictEqual(jokeTable.colLabels, ["Bromas", "Cantrips Known"]);
+assert.deepStrictEqual(jokeTable.rows.map(it => it[0]), [2, 2, 3, 3, 5, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 12, 12, 13, 14]);
+assert.deepStrictEqual(jokeTable.rows.map(it => it[1]), clown.cantripProgression);
+assert.strictEqual(spellTable.title, "Spell Slots per Spell Level");
+assert.deepStrictEqual(spellTable.colLabels, ["Lv 1", "Lv 2", "Lv 3", "Lv 4", "Lv 5"]);
 assert.deepStrictEqual(
-	spellTable.rows.map(it => it.slice(1)),
+	spellTable.rows,
 	[
 		[2, "-", "-", "-", "-"], [2, "-", "-", "-", "-"], [3, "-", "-", "-", "-"], [3, "-", "-", "-", "-"],
 		[4, 2, "-", "-", "-"], [4, 2, "-", "-", "-"], [4, 3, "-", "-", "-"], [4, 3, "-", "-", "-"],

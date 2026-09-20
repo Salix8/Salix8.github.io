@@ -479,6 +479,14 @@ Omnidexer.TO_INDEX = [
 		include: (it) => Omnidexer.arrIncludesOrEquals(it.featureType, "POT")
 	},
 	{
+		category: Parser.CAT_ID_POWER_WORD,
+		file: "optionalfeatures.json",
+		listProp: "optionalfeature",
+		baseUrl: "optionalfeatures.html",
+		hover: true,
+		include: (it) => Omnidexer.arrIncludesOrEquals(it.featureType, "PW")
+	},
+	{
 		category: Parser.CAT_ID_MANEUVER,
 		file: "optionalfeatures.json",
 		listProp: "optionalfeature",

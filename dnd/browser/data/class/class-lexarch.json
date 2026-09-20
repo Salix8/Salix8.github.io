@@ -1,0 +1,125 @@
+{
+	"class": [
+		{
+			"name": "Lexarca",
+			"source": "Himo",
+			"page": "??",
+			"hd": {"number": 1, "faces": 6},
+			"proficiency": ["wis", "cha"],
+			"spellcastingAbility": "cha",
+			"casterProgression": "full",
+			"cantripProgression": [3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5],
+			"classSpells": [
+				"Adivinación Menor|GdR","Dancing Lights","Encode Thoughts|GGR","Friends","Guidance","Light","Message","Mind Sliver|TCE","Resistance","Thaumaturgy","Thunderclap|XGE","Vicious Mockery","Word of Radiance|XGE",
+				"Abrir Mente|CdS","Bane","Bless","Cause Fear|XGE","Charm Person","Command","Comprehend Languages","Dissonant Whispers","Healing Word","Hellish Rebuke","Heroism","Hush|GdR","Identify","Magic Missile","Magnify Gravity|EGW","Minor Bird Charm|GMAM","Postrar|GPNM","Protection from Evil and Good","Silvery Barbs|SCC","Speak with Animals","Tasha's Hideous Laughter","Thunderwave","Vértigo|GPNM","Witch Bolt",
+				"Amplificación|GdR","Animal Messenger","Augury","Borrowed Knowledge|SCC","Buscador de Sueños|CdS","Crown of Madness","Desconcierto|GMAM","Detect Thoughts","Eco de Combate|GPNM","Enhance Ability","Enthrall","Gift of Gab|AI","Hipnosis|GMAM","Hold Person","Knock","Magic Mouth","Mind Spike|XGE","Ojos de Oghma|GdR","Pacto de Verdad|GPNM","Suggestion","Tasha's Mind Whip|TCE","Zone of Truth",
+				"Anonimato|CdS","Antagonize|BMT","Atar Consciencia|CdS","Bestow Curse","Enemies Abound|XGE","Fast Friends|AI","Fear","Glyph of Warding","Incite Greed|AI","Intellect Fortress|TCE","Magic Circle","Mass Healing Word","Motivational Speech|AI","Remove Curse","Sending","Speak with Dead","Speak with Plants","Summon Fey|TCE","Summon Lesser Demons|XGE","Summon Shadowspawn|TCE","Summon Undead|TCE","Tongues",
+				"Banishment","Bloqueo Onírico|CdS","Caminante de Sueños|CdS","Charm Monster|XGE","Compulsion","Confusion","Conjure Minor Elementals","Conjure Woodland Beings","Control Water","Dimension Door","Dominate Beast","Envejecer|GPNM","Fabricate","Gravity Sinkhole|EGW","Major Bird Charm|GMAM","Pesadilla|CdS","Phantasmal Killer","Otiluke's Resilient Sphere","Raulothim's Psychic Lance|FTD","Robar Pensamientos|CdS","Sending (Hishna)|GMAM","Summon Aberration|TCE","Summon Construct|TCE","Summon Elemental|TCE","Summon Greater Demon|XGE",
+				"Circle of Power","Conjure Elemental","Contact Other Plane","Creation","Dispel Evil and Good","Dominate Person","Geas","Hallow","Hold Monster","Infernal Calling|XGE","Legend Lore","Modify Memory","Planar Binding","Skill Empowerment|XGE","Synaptic Static|XGE","Summon Celestial|TCE","Summon Draconic Spirit|FTD","Telekinesis","Teleportation Circle",
+				"Bones of the Earth|XGE","Conjure Fey","Create Undead","Eyebite","Flesh to Stone","Forbiddance","Fusionar Parajes Oníricos|CdS","Heal","Harm","Magic Jar","Mass Suggestion","Paraje Onírico|CdS","Planar Ally","Soul Cage|XGE","Summon Fiend|TCE","True Seeing",
+				"Amnesia Negra|GdR","Conjure Celestial","Divine Word","Dream of the Blue Veil|TCE","Forcecage","Plane Shift","Power Word Pain|XGE","Power Word Shield|GPNM","Resurrection","Reverse Gravity","Symbol","Teleport",
+				"Antimagic Field","Antipathy/Sympathy","Control Weather","Dominate Monster","Earthquake","Feeblemind","Maze","Power Word Stun","Reality Break|EGW","Tsunami",
+				"Gate","Imprisonment","Invulnerability|XGE","Power Word Heal","Power Word Kill","Proyección Onírica|CdS","Psychic Scream|XGE","Ravenous Void|EGW","Time Stop","Wish"
+			],
+			"startingProficiencies": {
+				"armor": ["-"],
+				"weapons": ["Básicas (ver mago)"],
+				"tools": ["Suministros de Calígrafo", "Herramientas de Falsificador"],
+				"skills": [{"choose": {"from": ["arcana","history","investigation","nature","religion","animal handling","insight","medicine","perception","survival","deception","intimidation","performance","persuasion"], "count": 3}}]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": ["(a) Scholar Pack o (b) 2 Diplomat’s Pack.","(a) Ropa de Noble o (b) 2 traveler's Clothes (una de clima frío y otra de cálido).","(a) Pack de Explorador o (b) 20 raciones imperecederas.","Suministros de Calígrafo y un libro de nombres."]
+			},
+			"multiclassing": {
+				"requirements": {"cha": 13},
+				"proficienciesGained": {"tools": ["Suministros de Calígrafo", "Herramientas de Falsificador"], "skills": [{"choose": {"from": ["arcana","history","investigation","nature","religion","animal handling","insight","medicine","perception","survival","deception","intimidation","performance","persuasion"], "count": 1}}]}
+			},
+			"fluff": [{"name":"Lexarca","source":"Himo","page":"??","entries":["CD = 8 + BC + Carisma para conjuros y palabras de poder"]}],
+			"classTableGroups": [
+				{
+					"colLabels": ["Words","Cantrips Known","Spells Known"],
+					"rows": [[0,3,2],[2,3,3],[2,3,4],[2,4,5],[4,4,6],[4,4,7],[4,4,8],[6,4,9],[6,4,10],[7,5,11],[7,5,12],[7,5,12],[9,5,13],[9,5,13],[9,5,14],[12,5,14],[12,5,15],[12,5,15],[14,5,15],[16,5,15]]
+				},
+				{
+					"title": "Spell Slots per Spell Level",
+					"colLabels": ["Lv 1","Lv 2","Lv 3","Lv 4","Lv 5","Lv 6","Lv 7","Lv 8","Lv 9"],
+					"rowsSpellProgression": [[2,0,0,0,0,0,0,0,0],[3,0,0,0,0,0,0,0,0],[4,2,0,0,0,0,0,0,0],[4,3,0,0,0,0,0,0,0],[4,3,2,0,0,0,0,0,0],[4,3,3,0,0,0,0,0,0],[4,3,3,1,0,0,0,0,0],[4,3,3,2,0,0,0,0,0],[4,3,3,3,1,0,0,0,0],[4,3,3,3,2,0,0,0,0],[4,3,3,3,2,1,0,0,0],[4,3,3,3,2,1,0,0,0],[4,3,3,3,2,1,1,0,0],[4,3,3,3,2,1,1,0,0],[4,3,3,3,2,1,1,1,0],[4,3,3,3,2,1,1,1,0],[4,3,3,3,2,1,1,1,1],[4,3,3,3,3,1,1,1,1],[4,3,3,3,3,2,1,1,1],[4,3,3,3,3,2,2,1,1]],
+					"rows": [[2,0,0,0,0,0,0,0,0],[3,0,0,0,0,0,0,0,0],[4,2,0,0,0,0,0,0,0],[4,3,0,0,0,0,0,0,0],[4,3,2,0,0,0,0,0,0],[4,3,3,0,0,0,0,0,0],[4,3,3,1,0,0,0,0,0],[4,3,3,2,0,0,0,0,0],[4,3,3,3,1,0,0,0,0],[4,3,3,3,2,0,0,0,0],[4,3,3,3,2,1,0,0,0],[4,3,3,3,2,1,0,0,0],[4,3,3,3,2,1,1,0,0],[4,3,3,3,2,1,1,0,0],[4,3,3,3,2,1,1,1,0],[4,3,3,3,2,1,1,1,0],[4,3,3,3,2,1,1,1,1],[4,3,3,3,3,1,1,1,1],[4,3,3,3,3,2,1,1,1],[4,3,3,3,3,2,2,1,1]]
+				}
+			],
+			"classFeatures": [
+				[
+					{"name":"Supernal","source":"Himo","page":"??","entries":["Eres capaz de hablar la protolengua de la Creación. Puedes entender y hacerte entender con cualquier criatura que hable dracónido, celestial e infernal al mismo tiempo. Cada una escuchará su propio idioma. Además sabes escribir y leer en las tres escrituras de esos idiomas."]},
+					{"name":"Spellcasting","source":"Himo","page":"??","entries":["Tiene el mismo tipo de spellcasting que el hechicero en cuanto a slots y conjuros conocidos, no puede castear rituales por sí mismo y tiene la misma cantidad de cantrips que el clérigo. Usa el Supernal como componente verbal y el Libro de Nombres como foco arcano."]},
+					{"name":"Ente Imponente","source":"Himo","page":"??","entries":["Mientras no lleves armadura, escudo ni armas, añades tu modificador de Carisma a la CA."]}
+				],
+				[
+					{"name":"Palabras de Poder","source":"Himo","page":"??","entries":["Has descubierto un enorme pozo de poder escondido en las palabras de poder. Tienes una cantidad de palabras de poder al día igual al máximo establecido en la tabla. Puedes gastar las palabras para los efectos explicados a continuación y recuperas todas las palabras cuando acabes un descanso largo. Conoces tantas palabras de poder como modificador de Inteligencia. Cada día puedes cambiar 1 de tus palabras de poder por otra y ganarás más opciones a niveles superiores.","Si no especifica lo contrario, usas las palabras como acción y el rango es a vista, siempre y cuando el objetivo sea capaz de oírte y tu seas capaz de verle el rostro. Cada vez que uses una palabra de poder, tu voz se modifica para estar bajo el efecto de taumaturgia, potenciándola al máximo. Ninguna palabra de poder requiere concentración.","Elige entre las {@filter Palabras de Poder|optionalfeatures|feature type=PW|source=Himo} disponibles:",{"type":"list","items":["{@optfeature Condición|Himo}","{@optfeature Empujar|Himo}","{@optfeature Quieto|Himo}","{@optfeature Dolor|Himo}","{@optfeature Obediencia|Himo}","{@optfeature Verdad/Mentira|Himo}"]}]},
+					{"name":"Variación de Poder","source":"Himo","page":"??","entries":["Una vez al día, como acción puedes gastar slots de conjuro con un sumatorio no superior al máximo de Palabras de Poder que puedes lanzar. Recuperas esa cantidad de palabras de poder."]}
+				],
+				[{"name":"Especialización de Lengua","source":"Himo","page":"??","gainSubclassFeature":true,"entries":["Elige una Especialización de Lengua. Tu elección te otorga rasgos en el nivel 3 y de nuevo en los niveles 6, 9, 14 y 18."]}],
+				[{"name":"Ability Score Improvement","source":"Himo","page":"??","entries":["When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.","If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]}],
+				[],
+				[{"name":"Especialización de Lengua","source":"Himo","page":"??","gainSubclassFeature":true,"entries":["Obtienes un nuevo rasgo de tu Especialización de Lengua."]}],
+				[{"name":"Palabras de Poder","source":"Himo","page":"??","entries":["Ahora puedes cambiar 2 palabras de poder por descanso largo, conoces palabras de poder igual a la suma de tus modificadores de Inteligencia y Wisdom y desbloqueas las siguientes opciones:",{"type":"list","items":["{@optfeature Antimagia|Himo}","{@optfeature Viento|Himo}","{@optfeature Resistencia|Himo}","{@optfeature Desarmar|Himo}","{@optfeature Levitar|Himo}"]},"Consulta todas las {@filter Palabras de Poder|optionalfeatures|feature type=PW|source=Himo} disponibles."]}],
+				[{"name":"Ability Score Improvement","source":"Himo","page":"??","entries":["When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.","If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]}],
+				[{"name":"Especialización de Lengua","source":"Himo","page":"??","gainSubclassFeature":true,"entries":["Obtienes un nuevo rasgo de tu Especialización de Lengua."]}],
+				[{"name":"Nombres de Poder","source":"Himo","page":"??","entries":["Aprendes el conjuro de True Name de lv10, que puedes usar gastando slots con un sumatorio de slots de lv10, solo si tienes acceso al true name del objetivo. El DM te propondrá un statblock de Fiend, Celestial, Dragón o Undead (depende de tu subclase) de CR máximo igual a la mitad de tu lv redondeado hacia abajo (bajo su juicio puede levelear contigo). Este NPC está a tu servicio y conoces su true name. Si cae a 0 HP vuelve a su plano de origen, pero no es destruido. Si la criatura muere en su plano de origen, es destruida para siempre o hasta que se recupere con el conjuro de {@spell Wish}.","También conoces tu propio True Name.","El DM puede ayudarte a ganar nuevos true names durante la campaña, pero no tiene la obligación. Háblalo con él si creéis que llegaréis a este lv.","Además, si conoces el nombre de la criatura objetivo (el normal, no el true name), puedes decirlo como parte del componente verbal de un conjuro. Si ibas a atacarle o a hacerle salvar, gastas un uso de tus Palabras de Poder y el objetivo salva con desventaja o le atacas con ventaja. Si el conjuro hacía objetivo a una criatura pero no requería de salvaciones ni ataques, puedes gastar igual el uso y extender la duración al doble. Solo puedes decir un nombre de esta forma, aunque el conjuro targetease a más de una criatura."]}],
+				[],
+				[{"name":"Ability Score Improvement","source":"Himo","page":"??","entries":["When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.","If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]}],
+				[{"name":"Palabras de Poder","source":"Himo","page":"??","entries":["Ahora puedes cambiar 3 palabras de poder por descanso largo, conoces palabras de poder igual a la suma de tus modificadores de Inteligencia y Wisdom y desbloqueas las siguientes opciones:",{"type":"list","items":["{@optfeature Inconsciencia|Himo}","{@optfeature Paz|Himo}","{@optfeature Guerra|Himo}","{@optfeature Muerte|Himo}","{@optfeature Locura|Himo}"]},"Consulta todas las {@filter Palabras de Poder|optionalfeatures|feature type=PW|source=Himo} disponibles."]}],
+				[{"name":"Especialización de Lengua","source":"Himo","page":"??","gainSubclassFeature":true,"entries":["Obtienes un nuevo rasgo de tu Especialización de Lengua."]}],
+				[],
+				[{"name":"Ability Score Improvement","source":"Himo","page":"??","entries":["When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.","If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]}],
+				[{"name":"Palabras de Poder","source":"Himo","page":"??","entries":["Ahora puedes cambiar 4 palabras de poder por descanso largo, conoces palabras de poder igual a la suma de tus modificadores de Inteligencia, Wisdom y Carisma y desbloqueas las siguientes opciones, que son más poderosas que las anteriores. Cada una vale el equivalente a 5 palabras de poder:",{"type":"list","items":["{@optfeature Abismo|Himo}","{@optfeature Antagonizar|Himo}","{@optfeature Perdición|Himo}"]},"Consulta todas las {@filter Palabras de Poder|optionalfeatures|feature type=PW|source=Himo} disponibles."]}],
+				[{"name":"Especialización de Lengua","source":"Himo","page":"??","gainSubclassFeature":true,"entries":["Obtienes un nuevo rasgo de tu Especialización de Lengua."]}],
+				[{"name":"Ability Score Improvement","source":"Himo","page":"??","entries":["When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.","If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]}],
+				[{"name":"True Name","source":"Himo","page":"??","entries":["Ganas un slot de conjuro de lv10 que solo puedes usar para castear True Name. Puedes seguir casteandolo como antes."]}]
+			],
+			"subclassTitle": "Especializaciones de Lengua",
+			"subclasses": [
+				{
+					"name":"Lengua de Plata","shortName":"Plata","source":"Himo","page":"??",
+					"subclassFeatures":[
+						[{"name":"Lengua de Plata","source":"Himo","page":"??","entries":["Tu voz resuena con el eco de los Nueve Infiernos. Tus estudios te han llevado por las vías infernales, donde las almas son monedas de cambio y las vidas importan únicamente mientras puedan ser útiles como esclavos. Aceptar este camino supone hundirse en el más profundo de los males. Serán muchas las criaturas de bien que te perseguirán para darte caza, pero tu voz y tu lengua de plata de abrirán el camino hacia la victoria.",{"type":"entries","name":"Palabra de Poder: Alma","entries":["Aprendes {@optfeature Alma|Himo}. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]},{"type":"entries","name":"Lengua de Plata","entries":["Tienes expertise en Engaño y Persuasión."]}]}],
+						[{"name":"Erradicar Almas","source":"Himo","page":"??","entries":["Como bonus entras en un éxtasis infernal que refuerza tu voluntad. Durante 1 minuto, cada vez que una criatura muera por uno de tus conjuros, palabras de poder o invocaciones, ganas HPT iguales a tu Carisma. Si usaste tu palabra de poder Alma, los añades al total. Si vuelves a ganar temporales de esta forma, stackean con los que ya tenías.","Al final del minuto recuperas Palabras de Poder iguales a la cantidad de criaturas que habías matado en ese minuto.","Una vez uses este rasgo, debes esperar al próximo descanso largo para volver a usarlo. Pierdes todos los HPT al final de un descanso corto o largo."]}],
+						[{"name":"Invocaciones impías","source":"Himo","page":"??","entries":["Cada vez que invoques una criatura con el tipo Fiend mediante cualquiera de tus rasgos o conjuros de Lexarca, este gana HPT iguales a la suma de tus modificadores de Carisma, Wisdom e Inteligencia cuando lo invoques y gana HPT cada vez que tú lo hagas. Sus HPT no stackean."]}],
+						[{"name":"Resistencia Infernal","source":"Himo","page":"??","entries":["Como reacción cuando una criatura muera a 60 ft de ti, puedes gastar 1 Palabra de Poder para ganar la resistencia de los demonios. Durante 1 hora eres resistente al daño de fuego, frío y veneno."]}],
+						[{"name":"Palabra de Poder: Infierno","source":"Himo","page":"??","entries":["Aprendes {@optfeature Infierno|Himo}. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]}]
+					]
+				},
+				{
+					"name":"Lengua de Oro","shortName":"Oro","source":"Himo","page":"??",
+					"subclassFeatures":[
+						[{"name":"Lengua de Oro","source":"Himo","page":"??","entries":["Tu voz resuena con el eco del Olimpo. Has reforzado tus conocimientos para luchar como un heraldo contra las huestes malvadas, buscando defender a los justos y a los desamparados. Tus enemigos conocerán la derrota no solo en el momento de su muerte, sino mientras luchen bajo tu yugo contra el mal que ellos mismos provocaron.",{"type":"entries","name":"Palabra de Poder: Vida","entries":["Aprendes {@optfeature Vida|Himo}. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]},{"type":"entries","name":"Lengua de Oro","entries":["Tienes expertise en Insight y Religión."]}]}],
+						[{"name":"Palabra de Poder: Curación","source":"Himo","page":"??","entries":["Aprendes {@optfeature Curación|Himo}. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]}],
+						[{"name":"Invocación Sagrada","source":"Himo","page":"??","entries":["Cuando invoques una criatura con el tipo Celestial o Bestia, esta aparece con HPT iguales a tus modificadores de Inteligencia, Wisdom y Carisma. Cada vez que cures a una criatura usando tus conjuros o tus palabras de poder, de tu invocación emana un pulso de curación que cura HP iguales a la mitad de tu lv a cualquier criatura de tu elección a 20 ft de tu invocación."]}],
+						[{"name":"Resistencia Celestial","source":"Himo","page":"??","entries":["Como bonus puedes gastar una Palabra de Poder en otorgarle resistencia a los daños radiante, veneno y necrótico durante 1 hora a una criatura de tu elección a 30 ft de ti."]}],
+						[{"name":"Palabra de Poder: Revivir","source":"Himo","page":"??","entries":["Aprendes {@optfeature Revivir|Himo}. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]}]
+					]
+				},
+				{
+					"name":"Lengua de Serpiente","shortName":"Serpiente","source":"Himo","page":"??",
+					"subclassFeatures":[
+						[{"name":"Lengua de Serpiente","source":"Himo","page":"??","entries":["Tu voz resuena con el eco de los dragones. Tu conocimiento de lo arcaico te acerca a la verdadera naturaleza de la creación. Los elementos de los dragones fortalecen tu voluntad para que puedas imponerla sobre tus enemigos. Al final de un campo de muertos, tú serás el único en pie, blandiendo únicamente tu voz.",{"type":"entries","name":"Variación Elemental","entries":["Cada vez que uses una palabra de poder para afectar a una criatura con un efecto negativo, la criatura recibe tu BC en daño de fuego, frío, ácido, veneno o rayo. Eliges el daño al mismo tiempo que usas la palabra."]},{"type":"entries","name":"Lengua de Serpiente","entries":["Tienes expertise en Intimidación y Naturaleza."]}]}],
+						[{"name":"Entereza Dracónica","source":"Himo","page":"??","entries":["Como bonus entras en un clímax elemental en comunión con el poder de los dragones. Elige uno de los elementos de tu variación elemental. Durante un minuto, cada vez que recibas daño de ese elemento, devuelves una cantidad de daño igual a tu modificador de carisma (tú no recibes el daño y tu atacante sí). Además, cada vez que hagas el daño de tu elemento con tus palabras de poder, añade la mitad de tu nivel al daño."]}],
+						[{"name":"Invocación Ancestral","source":"Himo","page":"??","entries":["Cuando invoques una criatura con el tipo Elemental o Dragón, esta aparece con HPT iguales a tus modificadores de Inteligencia, Wisdom y Carisma. Una vez por turno, cuando hagas daño elemental con tus palabras de poder, tu invocación emitirá un aliento del mismo elemento. El aliento es un cono de 15 ft que se salva a Constitución. Las criaturas objetivo reciben tu lv en el daño del elemento o la mitad."]}],
+						[{"name":"Escamas de Dragón","source":"Himo","page":"??","entries":["Como reacción al recibir un tipo de daño dentro de tu variación elemental, puedes gastar una palabra de poder para adquirir resistencia en ese tipo de daño gastando 1 Palabra de Poder. Tienes esta resistencia durante una hora, pero como acción puedes cambiarla al de otro tipo de tu variación elemental."]}],
+						[{"name":"Palabra de Poder: Rugido","source":"Himo","page":"??","entries":["Aprendes {@optfeature Rugido|Himo}. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]}]
+					]
+				},
+				{
+					"name":"Lengua de Sangre","shortName":"Sangre","source":"Himo","page":"??",
+					"subclassFeatures":[
+						[{"name":"Lengua de Sangre","source":"Himo","page":"??","entries":["Tu voz resuena con los alaridos de los muertos. Cuando la vida se escapa, eres capaz de encerrar de nuevo las almas de tus enemigos y aliados para que sigan a tu lado. La vida es un trámite, y la muerte no es siquiera la liberación, sino la herramienta necesaria para que tu voluntad permanezca por el paso de los siglos.",{"type":"entries","name":"Palabra de Poder: Jaula","entries":["Aprendes {@optfeature Jaula|Himo}. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]},{"type":"entries","name":"Lengua de Plata","entries":["Tienes expertise en Arcana y Medicina."]}]}],
+						[{"name":"Palabra de Poder: ghoul","source":"Himo","page":"??","entries":["Aprendes {@optfeature ghoul|Himo}. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]}],
+						[{"name":"Invocación Desacrada","source":"Himo","page":"??","entries":["Cuando invoques una criatura con el tipo Undead, esta aparece con HPT iguales a tus modificadores de Inteligencia, Wisdom y Carisma. Cada vez que tus undead hagan daño a una criatura, se curan HP igual a tu BC. Si no usaban ya tu bono de spellcasting para atacar, ahora lo hacen."]}],
+						[{"name":"No muerto","source":"Himo","page":"??","entries":["Tus estudios te han llevado al estado perfecto: ni vivo ni muerto. La adivinación ahora te detecta como no muerto, no necesitas comer, beber, respirar ni dormir, puedes hacer un descanso largo manteniéndote completamente inmóvil pero consciente durante 6 horas y adquieres resistencia al daño necrótico y ventaja a las salvaciones de muerte."]}],
+						[{"name":"Palabra de Poder: Lichdom","source":"Himo","page":"??","entries":["Aprendes {@optfeature Lichdom|Himo}. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]}]
+					]
+				}
+			]
+		}
+	]
+}

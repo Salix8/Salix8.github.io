@@ -18,7 +18,7 @@ class OptionalFeaturesPage extends ListPage {
 		const sourceFilter = SourceFilter.getInstance();
 		const typeFilter = new Filter({
 			header: "Feature Type",
-			items: ["AI", "ED", "EI", "MM", "MV", "MV:B", "OTH", "FS:F", "FS:B", "FS:P", "FS:R", "PB", "POT"],
+			items: ["AI", "ED", "EI", "MM", "MV", "MV:B", "OTH", "FS:F", "FS:B", "FS:P", "FS:R", "PB", "POT", "PW"],
 			displayFn: Parser.optFeatureTypeToFull,
 			itemSortFn: filterFeatureTypeSort
 		});
@@ -136,7 +136,7 @@ class OptionalFeaturesPage extends ListPage {
 			it.featureType.sort((a, b) => SortUtil.ascSortLower(Parser.optFeatureTypeToFull(a), Parser.optFeatureTypeToFull(b)));
 		} else {
 			it._dFeatureType = Parser.optFeatureTypeToFull(it.featureType);
-			it._lFeatureType = it.potion ? it._dFeatureType : it.featureType;
+			it._lFeatureType = it.potion || it.featureType === "PW" ? it._dFeatureType : it.featureType;
 		}
 
 		if (!isExcluded) {

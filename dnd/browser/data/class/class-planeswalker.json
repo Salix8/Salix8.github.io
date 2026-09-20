@@ -49,35 +49,32 @@
 			],
 			"classTableGroups": [
 				{
-					"title": "Spellcasting",
-					"colLabels": ["Lv 0", "Lv 1", "Lv 2", "Lv 3", "Lv 4", "Lv 5"],
+					"colLabels": ["Cantrips Known"],
 					"rows": [
-						[2, 2, "-", "-", "-", "-"],
-						[2, 2, "-", "-", "-", "-"],
-						[2, 3, "-", "-", "-", "-"],
-						[2, 3, "-", "-", "-", "-"],
-						[2, 4, 2, "-", "-", "-"],
-						[2, 4, 2, "-", "-", "-"],
-						[2, 4, 3, "-", "-", "-"],
-						[2, 4, 3, "-", "-", "-"],
-						[3, 4, 3, 2, "-", "-"],
-						[3, 4, 3, 2, "-", "-"],
-						[3, 4, 3, 3, "-", "-"],
-						[3, 4, 3, 3, "-", "-"],
-						[4, 4, 3, 3, 1, "-"],
-						[4, 4, 3, 3, 1, "-"],
-						[4, 4, 3, 3, 2, "-"],
-						[4, 4, 3, 3, 2, "-"],
-						[4, 4, 3, 3, 3, 1],
-						[4, 4, 3, 3, 3, 1],
-						[4, 4, 3, 3, 3, 2],
-						[4, 4, 3, 3, 3, 2]
+						[2], [2], [2], [2], [2], [2], [2], [2], [3], [3],
+						[3], [3], [4], [4], [4], [4], [4], [4], [4], [4]
+					]
+				},
+				{
+					"title": "Spell Slots per Spell Level",
+					"colLabels": ["Lv 1", "Lv 2", "Lv 3", "Lv 4", "Lv 5"],
+					"rows": [
+						[2, "-", "-", "-", "-"], [2, "-", "-", "-", "-"],
+						[3, "-", "-", "-", "-"], [3, "-", "-", "-", "-"],
+						[4, 2, "-", "-", "-"], [4, 2, "-", "-", "-"],
+						[4, 3, "-", "-", "-"], [4, 3, "-", "-", "-"],
+						[4, 3, 2, "-", "-"], [4, 3, 2, "-", "-"],
+						[4, 3, 3, "-", "-"], [4, 3, 3, "-", "-"],
+						[4, 3, 3, 1, "-"], [4, 3, 3, 1, "-"],
+						[4, 3, 3, 2, "-"], [4, 3, 3, 2, "-"],
+						[4, 3, 3, 3, 1], [4, 3, 3, 3, 1],
+						[4, 3, 3, 3, 2], [4, 3, 3, 3, 2]
 					]
 				}
 			],
 			"classFeatures": [
 				[
-					{"name": "Spellcasting", "source": "Himo", "page": "??", "entries": ["Preparas una cantidad de conjuros igual a la mitad de tu lv + INT. Puedes usar tus herramientas de cartógrafo o de navegador como foco. Usas INT. Puedes hacer rituales. (Mira en {@filter 5etools|spells|class=Wizard} para más info). Puedes cambiar conjuros al final de un descanso largo mediante una meditación de 1 minuto por lv."]},
+					{"name": "Spellcasting", "source": "Himo", "page": "??", "entries": ["Preparas una cantidad de conjuros igual a la mitad de tu lv + INT. Puedes usar tus herramientas de cartógrafo o de navegador como foco. Usas INT. Puedes hacer rituales. Puedes cambiar conjuros al final de un descanso largo mediante una meditación de 1 minuto por lv."]},
 					{"name": "Consciencia Planar", "source": "Himo", "page": "??", "entries": ["Elige un plano material en el que no se desarrolle la campaña. Has estado allí y tienes conocimiento de ese plano y las criaturas que viven allí. Elige un idioma que sea común allí para tu tipo de gente. Además, tienes ventaja en checks de habilidad respecto a ese plano. Más adelante podrás usar este conocimiento con otros rasgos.", "A lv5, 10, 14 y 18 puedes elegir otro plano material y otro plano de la Rueda Planar. Si el plano tiene realms, pisos o capas, puedes elegir una solamente."]},
 					{"name": "Vía de Exploración", "source": "Himo", "page": "??", "gainSubclassFeature": true, "entries": ["En el nivel 1, eliges una Vía de Exploración de la lista de vías disponibles. Tu elección te otorga rasgos en el nivel 1 y de nuevo en los niveles 3, 7 y 14."]}
 				],
