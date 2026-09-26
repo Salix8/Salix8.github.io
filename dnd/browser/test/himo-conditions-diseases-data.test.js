@@ -14,7 +14,7 @@ const himoDiseaseNames = [
 	"Aeromonosis", "Anemia", "Apendicitis", "Ataque de Ansiedad", "Caosfágia", "Depresión", "Escorbuto",
 	"Fiebre de las Alcantarillas", "Fiebre de Infección", "Fiebre Ghoul", "Fiebres Invernales", "Fiebre del Oro",
 	"Fractura", "Gangrena", "Golpe de Calor", "Hipo Arcano", "Hipotermia", "Indigestión", "Lepra", "Malaria",
-	"Peste", "Pulmones Sucios", "Rabia", "Salmonela", "Sarna", "Sida", "Síndrome de Abstinencia", "Tetano",
+	"Peste", "Pulmones Sucios", "Rabia", "Salmonela", "Sarna", "Sida", "Síndrome de Abstinencia", "Tétanos",
 	"Tifus", "Tuberculosis", "Viruela"
 ];
 const himoConditionNames = ["Dazed", "Sangrado"];

@@ -3803,6 +3803,23 @@ ContextUtil = {
 
 // LIST AND SEARCH =====================================================================================================
 SearchUtil = {
+	getNormalizedText (text) {
+		return (text || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim().replace(/\s+/g, " ");
+	},
+
+	getCompactText (text) {
+		return SearchUtil.getNormalizedText(text).replace(/\s/g, "");
+	},
+
+	addNormalizer (elasticSearch) {
+		const normalize = SearchUtil.getNormalizedText;
+		if (!elasticlunr.Pipeline.getRegisteredFunction("normalizeSearchText")) {
+			elasticlunr.Pipeline.registerFunction(normalize, "normalizeSearchText");
+		}
+		// Normalize before the ASCII trimmer can discard accented boundary characters.
+		elasticSearch.pipeline.before(elasticlunr.trimmer, normalize);
+	},
+
 	removeStemmer (elasticSearch) {
 		const stemmer = elasticlunr.Pipeline.getRegisteredFunction("stemmer");
 		elasticSearch.pipeline.remove(stemmer);

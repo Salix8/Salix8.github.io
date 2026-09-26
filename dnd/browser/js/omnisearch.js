@@ -3,6 +3,7 @@
 const Omnisearch = {
 	_PLACEHOLDER_TEXT: "Search everywhere...",
 	_searchIndex: null,
+	_compactNames: new Map(),
 	_pLoadSearch: null,
 	_CATEGORY_COUNTS: {},
 	highestId: -1,
@@ -83,42 +84,8 @@ const Omnisearch = {
 		async function pDoSearch () {
 			await Omnisearch.pInit();
 
-			const srch = $searchIn.val();
-
-			const tokens = elasticlunr.tokenizer(srch);
-			const tokensIsCat = tokens.map(t => {
-				const category = Object.keys(Omnisearch._CATEGORY_COUNTS).map(k => k.toLowerCase()).find(k => (`in:${k}` === t.toLowerCase().trim() || `in:${k}s` === t.toLowerCase().trim()));
-				return {
-					t: t,
-					isCat: !!category,
-					c: category
-				};
-			});
-
 			let page = 0;
-
-			const catTokens = tokensIsCat.filter(tc => tc.isCat);
-			let results;
-			if (catTokens.length === 1) {
-				const noCatTokens = tokensIsCat.filter(tc => !tc.isCat).map(tc => tc.t);
-				results = Omnisearch._searchIndex.search(noCatTokens.join(" "), {
-					fields: {
-						n: {boost: 5, expand: true},
-						s: {expand: true}
-					},
-					bool: "AND",
-					expand: true
-				}).filter(r => catTokens[0].c && r.doc.cf.toLowerCase() === catTokens[0].c.toLowerCase());
-			} else {
-				results = Omnisearch._searchIndex.search(srch, {
-					fields: {
-						n: {boost: 5, expand: true},
-						s: {expand: true}
-					},
-					bool: "AND",
-					expand: true
-				});
-			}
+			let results = Omnisearch.getSearchResults($searchIn.val());
 
 			if (!doShowUaEtc()) {
 				results = results.filter(r => r.doc.s && !SourceUtil._isNonstandardSourceWiz(r.doc.s));
@@ -279,6 +246,8 @@ const Omnisearch = {
 			this.setRef("id");
 		});
 		SearchUtil.removeStemmer(Omnisearch._searchIndex);
+		SearchUtil.addNormalizer(Omnisearch._searchIndex);
+		Omnisearch._compactNames.clear();
 
 		data.forEach(Omnisearch._addToIndex);
 		Omnisearch.highestId = data.last().id;
@@ -307,11 +276,44 @@ const Omnisearch = {
 		if (toAdd.length) Omnisearch.highestId = toAdd.last().id
 	},
 
+	getSearchResults (searchTerm) {
+		const term = SearchUtil.getNormalizedText(searchTerm);
+		if (!term) return [];
+		const categories = Object.keys(Omnisearch._CATEGORY_COUNTS);
+		const tokens = elasticlunr.tokenizer(term).map(token => ({
+			token,
+			category: categories.find(category => {
+				const normalized = SearchUtil.getNormalizedText(category);
+				return token === `in:${normalized}` || token === `in:${normalized}s`;
+			})
+		}));
+		const categoryTokens = tokens.filter(it => it.category);
+		const category = categoryTokens.length === 1 ? categoryTokens[0].category : null;
+		const text = category ? tokens.filter(it => !it.category).map(it => it.token).join(" ") : term;
+		const results = Omnisearch._searchIndex.search(text, {
+			fields: {n: {boost: 5, expand: true}, s: {expand: true}},
+			bool: "AND",
+			expand: true
+		});
+		const compactTerm = SearchUtil.getCompactText(text);
+		const seen = new Set(results.map(it => String(it.doc.id)));
+		// Preserve engine ranking, then append extra name matches without merging distinct entries.
+		if (compactTerm) {
+			for (const [id, entry] of Omnisearch._compactNames) {
+				if (seen.has(id) || !entry.name.includes(compactTerm)) continue;
+				results.push({ref: id, doc: entry.doc, score: 0});
+				seen.add(id);
+			}
+		}
+		return category ? results.filter(it => it.doc.cf === category) : results;
+	},
+
 	_addToIndex (d) {
 		d.cf = Parser.pageCategoryToFull(d.c);
 		if (!Omnisearch._CATEGORY_COUNTS[d.cf]) Omnisearch._CATEGORY_COUNTS[d.cf] = 1;
 		else Omnisearch._CATEGORY_COUNTS[d.cf]++;
 		Omnisearch._searchIndex.addDoc(d);
+		Omnisearch._compactNames.set(String(d.id), {doc: d, name: SearchUtil.getCompactText(d.n)});
 	},
 
 	handleLinkKeyDown (e, $ele, $searchIn, $searchOut) {
@@ -374,4 +376,5 @@ const Omnisearch = {
 	}
 };
 
-window.addEventListener("load", Omnisearch.init);
+if (typeof window !== "undefined") window.addEventListener("load", Omnisearch.init);
+if (typeof module !== "undefined") module.exports = Omnisearch;

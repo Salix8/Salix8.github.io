@@ -19,7 +19,8 @@ class ListItem {
 			if (!v) continue;
 			searchText += `${v} - `;
 		}
-		this.searchText = searchText.toLowerCase();
+		this.searchText = SearchUtil.getNormalizedText(searchText);
+		this.searchNameCompact = SearchUtil.getCompactText(this.name);
 
 		this._isSelected = false;
 	}
@@ -105,7 +106,10 @@ class List {
 	}
 
 	_doSearch () {
-		if (this._searchTerm) this._searchedItems = this._items.filter(it => it.searchText.includes(this._searchTerm));
+		if (this._searchTerm) {
+			const compactTerm = SearchUtil.getCompactText(this._searchTerm);
+			this._searchedItems = this._items.filter(it => it.searchText.includes(this._searchTerm) || it.searchNameCompact.includes(compactTerm));
+		}
 		else this._searchedItems = [...this._items];
 
 		// Never show excluded items
@@ -364,7 +368,7 @@ class List {
 	// endregion
 
 	static _getCleanSearchTerm (str) {
-		return (str || "").trim().toLowerCase().split(/\s+/g).join(" ");
+		return SearchUtil.getNormalizedText(str);
 	}
 }
 List._DEFAULTS = {
