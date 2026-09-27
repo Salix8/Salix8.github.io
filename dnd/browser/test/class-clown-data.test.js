@@ -1,8 +1,11 @@
 "use strict";
+async function main () {
 
 const assert = require("assert");
 const fs = require("fs");
 const path = require("path");
+require("../js/omnidexer.js");
+DataUtil.loadJSON = async url => JSON.parse(fs.readFileSync(path.join(__dirname, "..", url), "utf8"));
 const {Omnidexer} = require("../js/omnidexer.js");
 
 const classIndex = require("../data/class/index.json");
@@ -107,7 +110,7 @@ const collectByType = (value, type) => {
 };
 
 for (const subclass of clown.subclasses) {
-	assert.strictEqual(subclass.subclassSpells.length, 10, `${subclass.name} must grant ten spells.`);
+	assert.strictEqual(subclass.subclassSpells, undefined);
 	assert.deepStrictEqual(Object.keys(subclass.additionalSpells[0].prepared), ["3", "5", "9", "13", "17"]);
 	const tables = collectByType(subclass, "table");
 	assert.strictEqual(tables.length, 1, `${subclass.name} must contain one spell table.`);
@@ -116,28 +119,14 @@ for (const subclass of clown.subclasses) {
 	for (const trick of expectedTricks[subclass.name]) assert(serialized.includes(trick), `${subclass.name} must include the ${trick} trick.`);
 }
 
-const spellsDir = path.join(__dirname, "..", "data", "spells");
-const availableSpells = new Set();
-for (const filename of fs.readdirSync(spellsDir).filter(it => /^spells-.*\.json$/.test(it))) {
-	const data = JSON.parse(fs.readFileSync(path.join(spellsDir, filename), "utf8"));
-	for (const spell of data.spell || []) availableSpells.add(`${spell.name.toLowerCase()}|${spell.source.toLowerCase()}`);
-}
-const normalizeSpell = value => {
-	if (typeof value === "string") {
-		const [name, source = "PHB"] = value.split("|");
-		return `${name.toLowerCase()}|${source.toLowerCase()}`;
-	}
-	return `${value.name.toLowerCase()}|${(value.source || "PHB").toLowerCase()}`;
-};
-
-assert.strictEqual(clown.classSpells.length, 92);
-assert.strictEqual(new Set(clown.classSpells.map(normalizeSpell)).size, clown.classSpells.length, "The Payaso spell list must not contain duplicates.");
-for (const spell of clown.classSpells) assert(availableSpells.has(normalizeSpell(spell)), `Unknown class spell: ${normalizeSpell(spell)}`);
+const spells = await DataUtil.spell.pLoadAll();
+const clownSpells = spells.filter(sp => sp.classes?.fromClassList?.some(c => c.name === "Payaso" && c.source === "Himo"));
+assert.strictEqual(clown.classSpells, undefined);
+for (const name of ["Dispel Magic", "Otiluke's Resilient Sphere"]) assert(clownSpells.some(sp => sp.name === name && sp.source === "PHB"));
 for (const subclass of clown.subclasses) {
-	for (const spell of subclass.subclassSpells) assert(availableSpells.has(normalizeSpell(spell)), `Unknown ${subclass.name} spell: ${normalizeSpell(spell)}`);
+ const granted = spells.filter(sp => sp.classes?.fromSubclass?.some(it => it.class.name === "Payaso" && it.class.source === "Himo" && it.subclass.name === (subclass.shortName || subclass.name)));
+ assert.strictEqual(granted.length, 10, `${subclass.name}: complete the declared spell list`);
 }
-assert(clown.classSpells.some(it => it.name === "Otiluke's Resilient Sphere" && it.source === "PHB"));
-assert(clown.classSpells.flat().some(it => it.name === "Otiluke's Resilient Sphere" && it.source === "PHB"));
 
 for (const [category, name] of [[5, "Payaso"], ...expectedSubclasses.map(name => [40, `${name} (Payaso)`])]) {
 	const matches = searchIndex.filter(it => it.c === category && it.s === "Himo" && it.n === name);
@@ -145,3 +134,6 @@ for (const [category, name] of [[5, "Payaso"], ...expectedSubclasses.map(name =>
 }
 
 console.log("PASS: Payaso class, spell progression, Bromas, and Circos are valid.");
+
+}
+main().catch(error => { console.error(error); process.exitCode = 1; });

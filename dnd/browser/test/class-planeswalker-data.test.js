@@ -1,8 +1,11 @@
 "use strict";
+async function main () {
 
 const assert = require("assert");
 const fs = require("fs");
 const path = require("path");
+require("../js/omnidexer.js");
+DataUtil.loadJSON = async url => JSON.parse(fs.readFileSync(path.join(__dirname, "..", url), "utf8"));
 const {Omnidexer} = require("../js/omnidexer.js");
 
 const classIndex = require("../data/class/index.json");
@@ -15,7 +18,7 @@ assert(planeswalker, "The Himo Planeswalker class must exist.");
 assert.strictEqual(classIndex.planeswalker, "class-planeswalker.json");
 assert.strictEqual(planeswalker.classFeatures.length, 20);
 assert.strictEqual(Object.hasOwn(planeswalker, "proficiencyBonusProgression"), false);
-assert.deepStrictEqual(planeswalker.classSpells, [{class: "Wizard", source: "PHB"}]);
+assert.strictEqual(planeswalker.classSpells, undefined);
 assert.strictEqual(planeswalker.spellcastingAbility, "int");
 assert.strictEqual(planeswalker.casterProgression, "artificer");
 assert.deepStrictEqual(
@@ -102,7 +105,7 @@ for (const label of ["Fuego:", "Agua:", "Tierra:", "Aire:"]) {
 
 for (const shortName of ["Oscuridad", "Luz", "Caos"]) {
 	const subclass = planeswalker.subclasses.find(it => it.shortName === shortName);
-	assert.strictEqual(subclass.subclassSpells.length, 10, `${shortName} must grant ten spells.`);
+	assert.strictEqual(subclass.subclassSpells, undefined);
 	assert.deepStrictEqual(Object.keys(subclass.additionalSpells[0].prepared), ["1", "5", "9", "13", "17"]);
 	const tables = [];
 	const visit = value => {
@@ -116,12 +119,9 @@ for (const shortName of ["Oscuridad", "Luz", "Caos"]) {
 	assert.strictEqual(tables[0].rows.length, 5);
 }
 
-const filterScript = fs.readFileSync(path.join(__dirname, "..", "js", "filter-spells.js"), "utf8");
-const spellsScript = fs.readFileSync(path.join(__dirname, "..", "js", "spells.js"), "utf8");
-assert(filterScript.includes("populateClassLookup (classData)"));
-assert(filterScript.includes("typeof it === \"string\" ? it : it.name"), "Explicit spell entries must remain supported.");
-assert(filterScript.includes("if (it.class)"), "Inherited class spell lists must remain supported.");
-assert(spellsScript.includes("DataUtil.class.loadJSON()"), "The spell page must load built-in class spell configuration.");
+const spells = await DataUtil.spell.pLoadAll();
+const dispelMagic = spells.find(it => it.name === "Dispel Magic" && it.source === "PHB");
+assert(dispelMagic.classes.fromClassList.some(it => it.name === "Planeswalker" && it.source === "Himo"));
 
 for (const [category, name] of [[5, "Planeswalker"], [40, "Vía Elemental (Planeswalker)"], [40, "Vía de la Oscuridad (Planeswalker)"], [40, "Vía de la Luz (Planeswalker)"], [40, "Vía del Caos (Planeswalker)"]]) {
 	const matches = searchIndex.filter(it => it.c === category && it.s === "Himo" && it.n === name);
@@ -129,3 +129,6 @@ for (const [category, name] of [[5, "Planeswalker"], [40, "Vía Elemental (Plane
 }
 
 console.log("PASS: Planeswalker class, paths, spell progression, and configurable spell list are valid.");
+
+}
+main().catch(error => { console.error(error); process.exitCode = 1; });

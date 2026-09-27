@@ -1292,9 +1292,11 @@ Parser._spSubclassItem = function (fromSubclass, textOnly, subclassLookup) {
 	const sc = fromSubclass.subclass;
 	const text = `${sc.name}${sc.subSubclass ? ` (${sc.subSubclass})` : ""}`;
 	if (textOnly) return text;
-	const classPart = `<a href="${UrlUtil.PG_CLASSES}#${UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES](c)}" title="Source: ${Parser.sourceJsonToFull(c.source)}">${c.name}</a>`;
 	const fromLookup = subclassLookup ? MiscUtil.get(subclassLookup, c.source, c.name, sc.source, sc.name) : null;
-	if (fromLookup) return `<a class="italic" href="${UrlUtil.PG_CLASSES}#${UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES](c)}${HASH_PART_SEP}${UrlUtil.getClassesPageStatePart({subclass: {shortName: sc.name, source: sc.source}})}" title="Source: ${Parser.sourceJsonToFull(fromSubclass.subclass.source)}">${text}</a> ${classPart}`;
+	const linkedClass = fromLookup?.linkClassSource ? {...c, source: fromLookup.linkClassSource} : c;
+	const linkNote = fromLookup?.linkClassSource ? `; Available printing: ${Parser.sourceJsonToFull(linkedClass.source)}` : "";
+	const classPart = `<a href="${UrlUtil.PG_CLASSES}#${UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES](linkedClass)}" title="Source: ${Parser.sourceJsonToFull(c.source)}${linkNote}">${c.name}</a>`;
+	if (fromLookup) return `<a class="italic" href="${UrlUtil.PG_CLASSES}#${UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES](linkedClass)}${HASH_PART_SEP}${UrlUtil.getClassesPageStatePart({subclass: {shortName: sc.name, source: fromLookup.linkSubclassSource || sc.source}})}" title="Source: ${Parser.sourceJsonToFull(fromSubclass.subclass.source)}${linkNote}">${text}</a> ${classPart}`;
 	else return `<span class="italic" title="Source: ${Parser.sourceJsonToFull(fromSubclass.subclass.source)}">${text}</span> ${classPart}`;
 };
 
@@ -5888,13 +5890,163 @@ DataUtil = {
 			return DataUtil.generic._pMergeCopy(DataUtil.spell, UrlUtil.PG_SPELLS, spellList, spell, options);
 		},
 
-		async pLoadAll () {
-			const index = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/spells/index.json`);
-			const allData = await Promise.all(Object.entries(index).map(async ([source, file]) => {
-				const data = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/spells/${file}`);
-				return data.spell.filter(it => it.source === source);
+		getSpellKey (spell) {
+			return `${spell.name}|${spell.source || SRC_PHB}`.toLowerCase();
+		},
+
+		getAdditionalSpellRefs (blocks, spells = []) {
+			const refs = [];
+			const fromQuery = query => spells.filter(spell => query.split("|").every(part => {
+				const [field, raw] = part.toLowerCase().split("=");
+				const values = (raw || "").split(";");
+				switch (field) {
+					case "level": return values.includes(`${spell.level}`);
+					case "class": return (spell.classes?.fromClassList || []).some(c => values.includes(c.name.toLowerCase()));
+					case "school": return values.includes(spell.school.toLowerCase());
+					case "source": return values.includes(spell.source.toLowerCase());
+					default: throw new Error(`Unsupported additionalSpells selector: ${query}`);
+				}
 			}));
-			return allData.flat();
+			const visit = (value, block) => {
+				if (typeof value === "string") {
+					const [name, source] = value.split("#")[0].split("|");
+					refs.push({name, source: source || SRC_PHB, block});
+				} else if (Array.isArray(value)) value.forEach(it => visit(it, block));
+				else if (value && typeof value === "object") {
+					if (value.choose) {
+						if (typeof value.choose === "string") fromQuery(value.choose).forEach(it => refs.push({...it, block}));
+						else visit(value.choose.from || value.choose, block);
+					} else if (value.all) fromQuery(value.all).forEach(it => refs.push({...it, block}));
+					else Object.values(value).forEach(it => visit(it, block));
+				}
+			};
+			for (const block of blocks || []) for (const mode of ["known", "prepared", "innate", "expanded"]) if (block[mode]) visit(block[mode], block);
+			return refs;
+		},
+
+		getAssociationIndex (data, spells = [], {isHomebrew = false} = {}) {
+			const index = new Map();
+			const add = (ref, type, relation) => {
+				const key = DataUtil.spell.getSpellKey(ref);
+				if (!index.has(key)) index.set(key, {});
+				const record = index.get(key);
+				(record[type] = record[type] || []).push(MiscUtil.copy(relation));
+			};
+			const addEntity = (entity, type, relation) => {
+				for (const ref of DataUtil.spell.getAdditionalSpellRefs(entity.additionalSpells, spells)) {
+					const resolved = MiscUtil.copy(ref.block.association || relation);
+					if (type === "fromSubclass" && ref.block.subSubclass) resolved.subclass.subSubclass = ref.block.subSubclass;
+					add(ref, type, resolved);
+				}
+			};
+			const addSubclass = (subclass, parent) => addEntity(subclass, "fromSubclass", {
+				class: {name: parent.name, source: parent.source || SRC_PHB},
+				subclass: {name: subclass.shortName || subclass.name, source: subclass.source || parent.source || SRC_PHB}
+			});
+			// Legacy visitor declarations are adapted into the same reverse index.
+			const addLegacy = (entries, type, relation) => {
+				for (const entry of entries || []) {
+					if (typeof entry === "string" || entry.name) {
+						const [name, source] = typeof entry === "string" ? entry.split("|") : [entry.name, entry.source];
+						add({name, source: source || SRC_PHB}, type, relation);
+					} else {
+						const filter = entry.filter || {class: {name: entry.class, source: entry.source || SRC_PHB}};
+						for (const spell of spells) if (Renderer.spell.isClassSpellFilterMatch(spell, filter, spell.classes)) add(spell, type, relation);
+					}
+				}
+			};
+			const visitSubclass = (sc, parent) => {
+				addSubclass(sc, parent);
+				if (!isHomebrew) return;
+				const relation = {class: {name: parent.name, source: parent.source || SRC_PHB}, subclass: {name: sc.shortName || sc.name, source: sc.source || parent.source || SRC_PHB}};
+				addLegacy(sc.subclassSpells, "fromSubclass", relation);
+				for (const [name, entries] of Object.entries(sc.subSubclassSpells || {})) addLegacy(entries, "fromSubclass", {...relation, subclass: {...relation.subclass, subSubclass: name}});
+			};
+			for (const cls of data.class || []) {
+				if (isHomebrew) addLegacy(cls.classSpells, "fromClassList", {name: cls.name, source: cls.source || SRC_PHB});
+				for (const sc of cls.subclasses || []) visitSubclass(sc, cls);
+			}
+			for (const sc of data.subclass || []) visitSubclass(sc, {name: sc.className || sc.class, source: sc.classSource || SRC_PHB});
+			for (const race of data.race || []) {
+				const relation = {name: race.name, source: race.source};
+				if (race._baseName) { relation.baseName = race._baseName; relation.baseSource = race._baseSource; }
+				addEntity(race, "races", relation);
+			}
+			for (const background of data.background || []) addEntity(background, "backgrounds", {name: background.name, source: background.source});
+			return index;
+		},
+
+		getCopyWithAssociations (spell, index = DataUtil.spell._associationIndex) {
+			const out = MiscUtil.copy(spell);
+			const isHomebrew = (BrewUtil.homebrew?.spell || []).some(it => it.name === spell.name && it.source === spell.source);
+			Renderer.spell.initClasses(out, {isHomebrew});
+			const relation = index?.get(DataUtil.spell.getSpellKey(spell));
+			if (!relation) return out;
+			out.classes = out.classes || {};
+			for (const field of ["fromClassList", "fromSubclass", "races", "backgrounds"]) {
+				if (!relation[field]?.length) continue;
+				const target = field.startsWith("from") ? out.classes : out;
+				target[field] = [...(target[field] || []), ...MiscUtil.copy(relation[field])];
+			}
+			Renderer.spell._deduplicateAssociations(out);
+			return out;
+		},
+
+		getRaceAssociationLink (race) {
+			return DataUtil.spell._raceAssociationLinks?.get(DataUtil.spell.getSpellKey(race)) || race;
+		},
+
+		async pInitAssociations () {
+			await BrewUtil.pAddBrewData();
+			if (!DataUtil.spell._pAssociationData) DataUtil.spell._pAssociationData = Promise.all([
+				DataUtil.class.loadJSON(),
+				DataUtil.loadJSON(`${Renderer.get().baseUrl}data/races.json`),
+				DataUtil.loadJSON(`${Renderer.get().baseUrl}data/backgrounds.json`),
+				DataUtil.spell.pLoadRaw()
+			]).catch(error => { DataUtil.spell._pAssociationData = null; throw error; });
+			const [classes, races, backgrounds, spells] = await DataUtil.spell._pAssociationData;
+			const brew = BrewUtil.homebrew || {};
+			// Invalidate when the visitor imports, removes, or edits homebrew; published data is loaded once.
+			const revision = JSON.stringify([brew.class, brew.subclass, brew.race, brew.background, brew.spell]);
+			if (DataUtil.spell._associationIndex && DataUtil.spell._associationRevision === revision) return;
+			const data = {
+				class: classes.class,
+				subclass: classes.subclass || [],
+				race: Renderer.race.mergeSubraces(MiscUtil.copy(races.race || [])),
+				background: backgrounds.background || []
+			};
+			DataUtil.spell._raceAssociationLinks = new Map();
+			for (const race of data.race) for (const printing of race.otherSources || []) {
+				DataUtil.spell._raceAssociationLinks.set(DataUtil.spell.getSpellKey({name: race.name, source: printing.source}), {name: race.name, source: race.source});
+			}
+			// A real edition always takes precedence over an alias to a declared reprint.
+			for (const race of data.race) DataUtil.spell._raceAssociationLinks.set(DataUtil.spell.getSpellKey(race), {name: race.name, source: race.source});
+			DataUtil.spell._associationIndex = DataUtil.spell.getAssociationIndex(data, [...spells, ...(brew.spell || [])]);
+			const personal = DataUtil.spell.getAssociationIndex({...brew, race: Renderer.race.mergeSubraces(MiscUtil.copy(brew.race || []))}, [...spells, ...(brew.spell || [])], {isHomebrew: true});
+			for (const [key, relations] of personal) {
+				if (!DataUtil.spell._associationIndex.has(key)) DataUtil.spell._associationIndex.set(key, {});
+				const target = DataUtil.spell._associationIndex.get(key);
+				for (const [field, values] of Object.entries(relations)) target[field] = [...(target[field] || []), ...values];
+			}
+			DataUtil.spell._associationRevision = revision;
+		},
+
+		async pLoadAll () {
+			await DataUtil.spell.pInitAssociations();
+			return (await DataUtil.spell.pLoadRaw()).map(spell => DataUtil.spell.getCopyWithAssociations(spell));
+		},
+
+		async pLoadRaw () {
+			if (DataUtil.spell._pRawSpells) return DataUtil.spell._pRawSpells;
+			DataUtil.spell._pRawSpells = (async () => {
+				const index = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/spells/index.json`);
+				const allData = await Promise.all([...new Set(Object.values(index))].map(async file => {
+					const data = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/spells/${file}`);
+					return data.spell;
+				}));
+				return allData.flat();
+			})().catch(error => { DataUtil.spell._pRawSpells = null; throw error; });
+			return DataUtil.spell._pRawSpells;
 		}
 	},
 
@@ -6035,6 +6187,27 @@ DataUtil = {
 			delete data.subclassFeature;
 			return data;
 		},
+		_mutResolveSubclassReferences: function (data) {
+			(data.class || []).filter(cls => cls.subclassesFrom).forEach(cls => {
+				const ref = cls.subclassesFrom;
+				const refSource = ref.source || SRC_PHB;
+				if (cls.name.toLowerCase() === ref.class.toLowerCase() && cls.source.toLowerCase() === refSource.toLowerCase()) {
+					throw new Error(`Class "${cls.name}" (${cls.source}) cannot inherit subclasses from itself.`);
+				}
+
+				const sourceClass = data.class.find(it => it.name.toLowerCase() === ref.class.toLowerCase() && it.source.toLowerCase() === refSource.toLowerCase());
+				if (!sourceClass) throw new Error(`Could not inherit subclasses for "${cls.name}" (${cls.source}); class "${ref.class}" (${refSource}) was not found.`);
+
+				cls.subclasses = cls.subclasses || [];
+				(sourceClass.subclasses || []).forEach(sc => {
+					const shortName = (sc.shortName || sc.name).toLowerCase();
+					const source = (sc.source || sourceClass.source).toLowerCase();
+					if (cls.subclasses.some(it => (it.shortName || it.name).toLowerCase() === shortName && (it.source || cls.source).toLowerCase() === source)) return;
+					cls.subclasses.push(MiscUtil.copy(sc));
+				});
+			});
+			return data;
+		},
 		loadJSON: async function (baseUrl = "") {
 			if (DataUtil.class._loadedJson) return DataUtil.class._loadedJson;
 
@@ -6050,6 +6223,7 @@ DataUtil = {
 				}));
 
 				DataUtil.class._loadedJson = allData.reduce((a, b) => ({class: a.class.concat(b.class || []), subclass: a.subclass.concat(b.subclass || [])}), {class: [], subclass: []});
+				DataUtil.class._mutResolveSubclassReferences(DataUtil.class._loadedJson);
 				if (!DataUtil.class._loadedJson.class.length) throw new Error(`Class data loaded but produced zero class entries.`);
 			})();
 			await DataUtil.class._pLoadingJson;

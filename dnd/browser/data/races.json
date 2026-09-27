@@ -143,6 +143,16 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"ability": "con",
+							"known": {
+								"1": [
+									"Levitate|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -170,6 +180,16 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"ability": "con",
+							"known": {
+								"1": [
+									"Pass without Trace|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -206,6 +226,25 @@
 					"traitTags": [
 						"Damage Resistance",
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Burning Hands|PHB"
+										]
+									}
+								}
+							},
+							"ability": "con",
+							"known": {
+								"1": [
+									"Produce Flame|PHB#c"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -253,6 +292,25 @@
 						"Damage Resistance",
 						"Amphibious",
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Create or Destroy Water|PHB#2"
+										]
+									}
+								}
+							},
+							"ability": "con",
+							"known": {
+								"1": [
+									"Shape Water|XGE#c"
+								]
+							}
+						}
 					]
 				}
 			],
@@ -380,6 +438,32 @@
 					"traitTags": [
 						"Spellcasting",
 						"Weapon Proficiency"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Faerie Fire|PHB"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"Darkness|PHB"
+										]
+									}
+								}
+							},
+							"ability": "cha",
+							"known": {
+								"1": [
+									"Dancing Lights|PHB#c"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -410,6 +494,20 @@
 					"traitTags": [
 						"Weapon Proficiency",
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"ability": "cha",
+							"known": {
+								"1": {
+									"rest": {
+										"1": [
+											"Misty Step|PHB"
+										]
+									}
+								}
+							}
+						}
 					]
 				},
 				{
@@ -447,7 +545,74 @@
 						"Weapon Proficiency",
 						"Spellcasting"
 					],
-					"srd": true
+					"srd": true,
+					"additionalSpells": [
+						{
+							"ability": "int",
+							"known": {
+								"1": {
+									"_": [
+										{
+											"choose": {
+												"from": [
+													"Sapping Sting|EGW",
+													"Encode Thoughts|GGR",
+													"Acid Splash|PHB",
+													"Blade Ward|PHB",
+													"Chill Touch|PHB",
+													"Dancing Lights|PHB",
+													"Fire Bolt|PHB",
+													"Friends|PHB",
+													"Light|PHB",
+													"Mage Hand|PHB",
+													"Mending|PHB",
+													"Message|PHB",
+													"Minor Illusion|PHB",
+													"Poison Spray|PHB",
+													"Prestidigitation|PHB",
+													"Ray of Frost|PHB",
+													"Shocking Grasp|PHB",
+													"True Strike|PHB",
+													"Booming Blade|SCAG",
+													"Green-Flame Blade|SCAG",
+													"Lightning Lure|SCAG",
+													"Sword Burst|SCAG",
+													"Mind Sliver|UAFighterRogueWizard",
+													"On/Off (UA)|UAModernMagic",
+													"Mind Sliver|UASorcererAndWarlock",
+													"Infestation (UA)|UAStarterSpells",
+													"Control Flames|XGE",
+													"Create Bonfire|XGE",
+													"Frostbite|XGE",
+													"Gust|XGE",
+													"Infestation|XGE",
+													"Mold Earth|XGE",
+													"Shape Water|XGE",
+													"Thunderclap|XGE",
+													"Toll the Dead|XGE",
+													"Booming Blade|TCE",
+													"Green-Flame Blade|TCE",
+													"Lightning Lure|TCE",
+													"Mind Sliver|TCE",
+													"Sword Burst|TCE",
+													"Adivinación Menor|GdR",
+													"Graffiti Arcano|GdR",
+													"Herir|GdR",
+													"Impulso|GdR",
+													"Disparo Ilusorio|GPNM",
+													"Cronotruco|GPNM",
+													"Eco del Presente|GPNM",
+													"Latido del Tiempo|GPNM",
+													"Featherweaving|GMAM"
+												],
+												"count": 1
+											}
+										}
+									]
+								}
+							}
+						}
+					]
 				},
 				{
 					"name": "Wood",
@@ -548,6 +713,19 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s0": [
+									"Chill Touch|PHB",
+									"Fire Bolt|PHB",
+									"Friends|PHB",
+									"Minor Illusion|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -716,6 +894,18 @@
 							"common": true,
 							"elvish": true,
 							"anyStandard": 1
+						}
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s0": [
+									"Chill Touch|PHB",
+									"Spare the Dying|PHB",
+									"Thaumaturgy|PHB"
+								]
+							}
 						}
 					]
 				},
@@ -1070,6 +1260,46 @@
 					"traitTags": [
 						"Spellcasting",
 						"Dragonmark"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Invisibility|PHB"
+										]
+									}
+								}
+							},
+							"expanded": {
+								"s1": [
+									"Disguise Self|PHB",
+									"Silent Image|PHB"
+								],
+								"s2": [
+									"Darkness|PHB",
+									"Pass without Trace|PHB"
+								],
+								"s3": [
+									"Clairvoyance|PHB",
+									"Major Image|PHB"
+								],
+								"s4": [
+									"Greater Invisibility|PHB",
+									"Hallucinatory Terrain|PHB"
+								],
+								"s5": [
+									"Mislead|PHB"
+								]
+							},
+							"ability": "cha",
+							"known": {
+								"1": [
+									"Minor Illusion|PHB#c"
+								]
+							}
+						}
 					]
 				}
 			],
@@ -1233,6 +1463,32 @@
 					"traitTags": [
 						"Spellcasting",
 						"Weapon Proficiency"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Hex|PHB"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"Darkness|PHB"
+										]
+									}
+								}
+							},
+							"ability": "wis",
+							"known": {
+								"1": [
+									"Chill Touch|PHB#c"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1610,6 +1866,16 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"ability": "int",
+							"known": {
+								"1": [
+									"Minor Illusion|PHB#c"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1817,6 +2083,53 @@
 					"traitTags": [
 						"Spellcasting",
 						"Dragonmark"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"1": {
+									"rest": {
+										"1": [
+											"Comprehend Languages|PHB"
+										]
+									}
+								},
+								"3": {
+									"daily": {
+										"1": [
+											"Magic Mouth|PHB"
+										]
+									}
+								}
+							},
+							"expanded": {
+								"s1": [
+									"Comprehend Languages|PHB",
+									"Illusory Script|PHB"
+								],
+								"s2": [
+									"Animal Messenger|PHB",
+									"Silence|PHB"
+								],
+								"s3": [
+									"Sending|PHB",
+									"Tongues|PHB"
+								],
+								"s4": [
+									"Arcane Eye|PHB",
+									"Confusion|PHB"
+								],
+								"s5": [
+									"Dream|PHB"
+								]
+							},
+							"ability": "int",
+							"known": {
+								"1": [
+									"Message|PHB#c"
+								]
+							}
+						}
 					]
 				}
 			],
@@ -2307,7 +2620,21 @@
 					],
 					"overwrite": {
 						"skillProficiencies": true
-					}
+					},
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s0": [
+									"Booming Blade|TCE",
+									"Green-Flame Blade|TCE",
+									"Lightning Lure|TCE",
+									"Mind Sliver|TCE",
+									"Sword Burst|TCE"
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Drow Descent",
@@ -2378,7 +2705,23 @@
 					],
 					"overwrite": {
 						"skillProficiencies": true
-					}
+					},
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s0": [
+									"Dancing Lights|PHB"
+								],
+								"s2": [
+									"Darkness|PHB"
+								],
+								"s1": [
+									"Faerie Fire|PHB"
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Aquatic Elf Descent",
@@ -2545,7 +2888,35 @@
 					],
 					"overwrite": {
 						"ability": true
-					}
+					},
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s4": [
+									"Arcane Eye|PHB",
+									"Divination|PHB"
+								],
+								"s3": [
+									"Clairvoyance|PHB",
+									"Nondetection|PHB"
+								],
+								"s1": [
+									"Detect Evil and Good|PHB",
+									"Detect Magic|PHB",
+									"Detect Poison and Disease|PHB"
+								],
+								"s2": [
+									"Detect Thoughts|PHB",
+									"Find Traps|PHB",
+									"See Invisibility|PHB"
+								],
+								"s5": [
+									"Legend Lore|PHB"
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Mark of Storm",
@@ -2637,7 +3008,36 @@
 					],
 					"overwrite": {
 						"ability": true
-					}
+					},
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s5": [
+									"Conjure Elemental|PHB"
+								],
+								"s4": [
+									"Conjure Minor Elementals|PHB",
+									"Control Water|PHB"
+								],
+								"s1": [
+									"Feather Fall|PHB",
+									"Fog Cloud|PHB"
+								],
+								"s2": [
+									"Gust of Wind|PHB",
+									"Levitate|PHB"
+								],
+								"s3": [
+									"Sleet Storm|PHB",
+									"Wind Wall|PHB"
+								],
+								"s0": [
+									"Gust|XGE"
+								]
+							}
+						}
+					]
 				}
 			],
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/259/half-elf.mp3",
@@ -2871,6 +3271,33 @@
 							"common": true,
 							"goblin": true
 						}
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s3": [
+									"Clairvoyance|PHB",
+									"Speak with Plants|PHB"
+								],
+								"s5": [
+									"Commune with Nature|PHB"
+								],
+								"s4": [
+									"Divination|PHB",
+									"Locate Creature|PHB"
+								],
+								"s1": [
+									"Faerie Fire|PHB",
+									"Hunter's Mark|PHB",
+									"Longstrider|PHB"
+								],
+								"s2": [
+									"Locate Animals or Plants|PHB",
+									"Locate Object|PHB"
+								]
+							}
+						}
 					]
 				}
 			],
@@ -3077,6 +3504,42 @@
 							"dwarvish": true,
 							"undercommon": true
 						}
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Enlarge/Reduce|PHB"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"Invisibility|PHB"
+										]
+									}
+								}
+							},
+							"ability": "int"
+						},
+						{
+							"name": "Catalog access",
+							"association": {
+								"name": "Dwarf (Duergar)",
+								"source": "SCAG",
+								"baseName": "Dwarf",
+								"baseSource": "PHB"
+							},
+							"expanded": {
+								"s2": [
+									"Enlarge/Reduce|PHB",
+									"Invisibility|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -3154,6 +3617,38 @@
 					"traitTags": [
 						"Spellcasting",
 						"Dragonmark"
+					],
+					"additionalSpells": [
+						{
+							"expanded": {
+								"s1": [
+									"Alarm|PHB",
+									"Armor of Agathys|PHB"
+								],
+								"s2": [
+									"Arcane Lock|PHB",
+									"Knock|PHB"
+								],
+								"s3": [
+									"Glyph of Warding|PHB",
+									"Magic Circle|PHB"
+								],
+								"s4": [
+									"Leomund's Secret Chest|PHB",
+									"Mordenkainen's Faithful Hound|PHB"
+								],
+								"s5": [
+									"Antilife Shell|PHB"
+								]
+							},
+							"ability": "int",
+							"known": {
+								"1": [
+									"Alarm|PHB",
+									"Mage Armor|PHB"
+								]
+							}
+						}
 					]
 				}
 			],
@@ -3474,6 +3969,33 @@
 							"common": true,
 							"goblin": true
 						}
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s3": [
+									"Clairvoyance|PHB",
+									"Speak with Plants|PHB"
+								],
+								"s5": [
+									"Commune with Nature|PHB"
+								],
+								"s4": [
+									"Divination|PHB",
+									"Locate Creature|PHB"
+								],
+								"s1": [
+									"Faerie Fire|PHB",
+									"Hunter's Mark|PHB",
+									"Longstrider|PHB"
+								],
+								"s2": [
+									"Locate Animals or Plants|PHB",
+									"Locate Object|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -3568,6 +4090,42 @@
 					"traitTags": [
 						"Spellcasting",
 						"Dragonmark"
+					],
+					"additionalSpells": [
+						{
+							"expanded": {
+								"s1": [
+									"Animal Friendship|PHB",
+									"Speak with Animals|PHB"
+								],
+								"s2": [
+									"Beast Sense|PHB",
+									"Calm Emotions|PHB"
+								],
+								"s3": [
+									"Beacon of Hope|PHB",
+									"Conjure Animals|PHB"
+								],
+								"s4": [
+									"Aura of Life|PHB",
+									"Dominate Beast|PHB"
+								],
+								"s5": [
+									"Awaken|PHB"
+								]
+							},
+							"ability": "wis",
+							"known": {
+								"1": {
+									"rest": {
+										"1": [
+											"Animal Friendship|PHB",
+											"Speak with Animals|PHB"
+										]
+									}
+								}
+							}
+						}
 					]
 				},
 				{
@@ -3667,6 +4225,38 @@
 						{
 							"tool": true
 						}
+					],
+					"additionalSpells": [
+						{
+							"expanded": {
+								"s1": [
+									"Identify|PHB",
+									"Tenser's Floating Disk|PHB"
+								],
+								"s2": [
+									"Continual Flame|PHB",
+									"Magic Weapon|PHB"
+								],
+								"s3": [
+									"Conjure Barrage|PHB",
+									"Elemental Weapon|PHB"
+								],
+								"s4": [
+									"Fabricate|PHB",
+									"Stone Shape|PHB"
+								],
+								"s5": [
+									"Creation|PHB"
+								]
+							},
+							"ability": "int",
+							"known": {
+								"1": [
+									"Mending|PHB#c",
+									"Magic Weapon|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -3762,6 +4352,37 @@
 					"traitTags": [
 						"Spellcasting",
 						"Dragonmark"
+					],
+					"additionalSpells": [
+						{
+							"expanded": {
+								"s1": [
+									"Expeditious Retreat|PHB",
+									"Jump|PHB"
+								],
+								"s2": [
+									"Misty Step|PHB",
+									"Pass without Trace|PHB"
+								],
+								"s3": [
+									"Blink|PHB",
+									"Phantom Steed|PHB"
+								],
+								"s4": [
+									"Dimension Door|PHB",
+									"Freedom of Movement|PHB"
+								],
+								"s5": [
+									"Teleportation Circle|PHB"
+								]
+							},
+							"ability": "dex",
+							"known": {
+								"1": [
+									"Misty Step|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -3847,6 +4468,37 @@
 					"traitTags": [
 						"Spellcasting",
 						"Dragonmark"
+					],
+					"additionalSpells": [
+						{
+							"expanded": {
+								"s1": [
+									"Compelled Duel|PHB",
+									"Shield of Faith|PHB"
+								],
+								"s2": [
+									"Warding Bond|PHB",
+									"Zone of Truth|PHB"
+								],
+								"s3": [
+									"Counterspell|PHB",
+									"Protection from Energy|PHB"
+								],
+								"s4": [
+									"Death Ward|PHB",
+									"Guardian of Faith|PHB"
+								],
+								"s5": [
+									"Bigby's Hand|PHB"
+								]
+							},
+							"ability": "wis",
+							"known": {
+								"1": [
+									"Shield|PHB"
+								]
+							}
+						}
 					]
 				}
 			],
@@ -4053,6 +4705,44 @@
 					"traitTags": [
 						"Dragonmark",
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"1": [
+									"Cure Wounds|PHB"
+								],
+								"3": {
+									"daily": {
+										"1": [
+											"Lesser Restoration|PHB"
+										]
+									}
+								}
+							},
+							"expanded": {
+								"s1": [
+									"Cure Wounds|PHB",
+									"Healing Word|PHB"
+								],
+								"s2": [
+									"Lesser Restoration|PHB",
+									"Prayer of Healing|PHB"
+								],
+								"s3": [
+									"Aura of Vitality|PHB",
+									"Mass Healing Word|PHB"
+								],
+								"s4": [
+									"Aura of Purity|PHB",
+									"Aura of Life|PHB"
+								],
+								"s5": [
+									"Greater Restoration|PHB"
+								]
+							},
+							"ability": "wis"
+						}
 					]
 				},
 				{
@@ -4130,6 +4820,39 @@
 					"traitTags": [
 						"Spellcasting",
 						"Dragonmark"
+					],
+					"additionalSpells": [
+						{
+							"expanded": {
+								"s1": [
+									"Goodberry|PHB",
+									"Sleep|PHB"
+								],
+								"s2": [
+									"Aid|PHB",
+									"Calm Emotions|PHB"
+								],
+								"s3": [
+									"Create Food and Water|PHB",
+									"Leomund's Tiny Hut|PHB"
+								],
+								"s4": [
+									"Aura of Purity|PHB",
+									"Mordenkainen's Private Sanctum|PHB"
+								],
+								"s5": [
+									"Hallow|PHB"
+								]
+							},
+							"ability": "cha",
+							"known": {
+								"1": [
+									"Prestidigitation|PHB#c",
+									"Purify Food and Drink|PHB",
+									"Unseen Servant|PHB"
+								]
+							}
+						}
 					]
 				}
 			],
@@ -4373,7 +5096,23 @@
 					"traitTags": [
 						"Spellcasting"
 					],
-					"srd": true
+					"srd": true,
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Darkness|PHB"
+								],
+								"s1": [
+									"Hellish Rebuke|PHB"
+								],
+								"s0": [
+									"Thaumaturgy|PHB"
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Variant",
@@ -4437,6 +5176,26 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Burning Hands|PHB",
+									"Charm Person|PHB",
+									"Hellish Rebuke|PHB"
+								],
+								"s2": [
+									"Darkness|PHB",
+									"Enthrall|PHB"
+								],
+								"s0": [
+									"Thaumaturgy|PHB",
+									"Vicious Mockery|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4545,6 +5304,37 @@
 							"common": true,
 							"abyssal": true
 						}
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Alter Self|PHB",
+									"Darkness|PHB",
+									"Invisibility|PHB",
+									"Levitate|PHB",
+									"Mirror Image|PHB",
+									"Spider Climb|PHB"
+								],
+								"s1": [
+									"Burning Hands|PHB",
+									"Charm Person|PHB",
+									"Cure Wounds|PHB",
+									"Magic Missile|PHB",
+									"Tasha's Hideous Laughter|PHB",
+									"Thunderwave|PHB"
+								],
+								"s0": [
+									"Dancing Lights|PHB",
+									"Light|PHB",
+									"Message|PHB",
+									"Prestidigitation|PHB",
+									"Spare the Dying|PHB",
+									"True Strike|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4568,6 +5358,22 @@
 					"page": 1,
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Darkness|PHB"
+								],
+								"s1": [
+									"Hellish Rebuke|PHB"
+								],
+								"s0": [
+									"Thaumaturgy|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4591,6 +5397,22 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Crown of Madness|PHB"
+								],
+								"s1": [
+									"Ray of Sickness|PHB"
+								],
+								"s0": [
+									"Thaumaturgy|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4614,6 +5436,22 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Disguise Self|PHB"
+								],
+								"s2": [
+									"Invisibility|PHB"
+								],
+								"s0": [
+									"Thaumaturgy|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4637,6 +5475,22 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Charm Person|PHB"
+								],
+								"s0": [
+									"Friends|PHB"
+								],
+								"s2": [
+									"Suggestion|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4660,6 +5514,22 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Disguise Self|PHB"
+								],
+								"s2": [
+									"Invisibility|PHB"
+								],
+								"s0": [
+									"Minor Illusion|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4683,6 +5553,22 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Armor of Agathys|PHB"
+								],
+								"s2": [
+									"Darkness|PHB"
+								],
+								"s0": [
+									"Ray of Frost|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4706,6 +5592,22 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Arcane Lock|PHB"
+								],
+								"s0": [
+									"Mage Hand|PHB"
+								],
+								"s1": [
+									"Tenser's Floating Disk|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4728,6 +5630,22 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s0": [
+									"Mage Hand|PHB"
+								],
+								"s1": [
+									"Magic Missile|PHB"
+								],
+								"s2": [
+									"Web|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4750,6 +5668,22 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Branding Smite|PHB"
+								],
+								"s1": [
+									"Searing Smite|PHB"
+								],
+								"s0": [
+									"Thaumaturgy|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4773,6 +5707,22 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Darkness|PHB"
+								],
+								"s1": [
+									"Hellish Rebuke|PHB"
+								],
+								"s0": [
+									"Thaumaturgy|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4796,6 +5746,32 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Ray of Sickness|PHB#2"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"Crown of Madness|PHB"
+										]
+									}
+								}
+							},
+							"ability": "cha",
+							"known": {
+								"1": [
+									"Thaumaturgy|PHB#c"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4819,6 +5795,32 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Disguise Self|PHB"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"Detect Thoughts|PHB"
+										]
+									}
+								}
+							},
+							"ability": "cha",
+							"known": {
+								"1": [
+									"Thaumaturgy|PHB#c"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4842,6 +5844,32 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Charm Person|PHB#2"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"Suggestion|PHB"
+										]
+									}
+								}
+							},
+							"ability": "cha",
+							"known": {
+								"1": [
+									"Friends|PHB#c"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4865,6 +5893,32 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Disguise Self|PHB"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"Invisibility|PHB"
+										]
+									}
+								}
+							},
+							"ability": "cha",
+							"known": {
+								"1": [
+									"Minor Illusion|PHB#c"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4888,6 +5942,32 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Armor of Agathys|PHB#2"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"Darkness|PHB"
+										]
+									}
+								}
+							},
+							"ability": "cha",
+							"known": {
+								"1": [
+									"Ray of Frost|PHB#c"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4911,6 +5991,32 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Tenser's Floating Disk|PHB"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"Arcane Lock|PHB"
+										]
+									}
+								}
+							},
+							"ability": "cha",
+							"known": {
+								"1": [
+									"Mage Hand|PHB#c"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4934,6 +6040,32 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Burning Hands|PHB#2"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"Flame Blade|PHB"
+										]
+									}
+								}
+							},
+							"ability": "cha",
+							"known": {
+								"1": [
+									"Mage Hand|PHB#c"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4957,6 +6089,32 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Searing Smite|PHB#2"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"Branding Smite|PHB"
+										]
+									}
+								}
+							},
+							"ability": "cha",
+							"known": {
+								"1": [
+									"Thaumaturgy|PHB#c"
+								]
+							}
+						}
 					]
 				}
 			],
@@ -5187,6 +6345,16 @@
 							],
 							"type": "entries"
 						}
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s0": [
+									"Light|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -5206,6 +6374,16 @@
 							],
 							"type": "entries"
 						}
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s0": [
+									"Light|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -5224,6 +6402,16 @@
 								"Once you use this trait, you can't use it again until you finish a long rest."
 							],
 							"type": "entries"
+						}
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s0": [
+									"Light|PHB"
+								]
+							}
 						}
 					]
 				}
@@ -5320,6 +6508,21 @@
 					"common": true,
 					"elvish": true,
 					"giant": true
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "wis",
+					"known": {
+						"1": {
+							"rest": {
+								"1": [
+									"Detect Magic|PHB",
+									"Disguise Self|PHB"
+								]
+							}
+						}
+					}
 				}
 			]
 		},
@@ -6250,6 +7453,34 @@
 					"common": true,
 					"primordial": true
 				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"1": {
+							"daily": {
+								"1": [
+									"Fog Cloud|PHB"
+								]
+							}
+						},
+						"3": {
+							"daily": {
+								"1": [
+									"Gust of Wind|PHB"
+								]
+							}
+						},
+						"5": {
+							"daily": {
+								"1": [
+									"Wall of Water|XGE"
+								]
+							}
+						}
+					},
+					"ability": "cha"
+				}
 			]
 		},
 		{
@@ -6332,6 +7563,28 @@
 					"common": true,
 					"abyssal": true,
 					"draconic": true
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"1": [
+							"Animal Friendship|PHB"
+						],
+						"3": {
+							"daily": {
+								"1": [
+									"Suggestion|PHB"
+								]
+							}
+						}
+					},
+					"ability": "cha",
+					"known": {
+						"1": [
+							"Poison Spray|PHB#c"
+						]
+					}
 				}
 			]
 		},
@@ -6793,6 +8046,20 @@
 					"skillProficiencies": [
 						{
 							"survival": true
+						}
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s0": [
+									"Booming Blade|TCE",
+									"Green-Flame Blade|TCE",
+									"Lightning Lure|TCE",
+									"Mind Sliver|TCE",
+									"Sword Burst|TCE"
+								]
+							}
 						}
 					]
 				}
@@ -7659,6 +8926,32 @@
 					"common": true,
 					"celestial": true
 				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"3": {
+							"daily": {
+								"1": [
+									"Lesser Restoration|PHB"
+								]
+							}
+						},
+						"5": {
+							"daily": {
+								"1": [
+									"Daylight|PHB"
+								]
+							}
+						}
+					},
+					"ability": "cha",
+					"known": {
+						"1": [
+							"Light|PHB#c"
+						]
+					}
+				}
 			]
 		},
 		{
@@ -8259,6 +9552,22 @@
 								]
 							}
 						}
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Jump|PHB"
+								],
+								"s0": [
+									"Mage Hand|PHB"
+								],
+								"s2": [
+									"Misty Step|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -8295,6 +9604,22 @@
 					"traitTags": [
 						"Natural Armor",
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Detect Thoughts|PHB"
+								],
+								"s0": [
+									"Mage Hand|PHB"
+								],
+								"s1": [
+									"Shield|PHB"
+								]
+							}
+						}
 					]
 				}
 			],
@@ -8413,6 +9738,32 @@
 								]
 							}
 						}
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Jump|PHB"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"Misty Step|PHB"
+										]
+									}
+								}
+							},
+							"ability": "int",
+							"known": {
+								"1": [
+									"Mage Hand|PHB#c"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -8449,6 +9800,32 @@
 					],
 					"traitTags": [
 						"Spellcasting"
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"daily": {
+										"1": [
+											"Shield|PHB"
+										]
+									}
+								},
+								"5": {
+									"daily": {
+										"1": [
+											"Detect Thoughts|PHB"
+										]
+									}
+								}
+							},
+							"ability": "wis",
+							"known": {
+								"1": [
+									"Mage Hand|PHB#c"
+								]
+							}
+						}
 					]
 				}
 			],
@@ -9439,6 +10816,15 @@
 					"common": true,
 					"other": true
 				}
+			],
+			"additionalSpells": [
+				{
+					"known": {
+						"1": [
+							"Friends|PHB#c"
+						]
+					}
+				}
 			]
 		},
 		{
@@ -9557,6 +10943,20 @@
 						{
 							"history": true,
 							"nature": true
+						}
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s0": [
+									"Booming Blade|TCE",
+									"Green-Flame Blade|TCE",
+									"Lightning Lure|TCE",
+									"Mind Sliver|TCE",
+									"Sword Burst|TCE"
+								]
+							}
 						}
 					]
 				}
@@ -9892,6 +11292,19 @@
 					"gnomish": true,
 					"primordial": true,
 					"undercommon": true
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "int",
+					"known": {
+						"1": [
+							"Nondetection|PHB",
+							"Blindness/Deafness|PHB",
+							"Blur|PHB",
+							"Disguise Self|PHB"
+						]
+					}
 				}
 			]
 		},
@@ -12586,6 +13999,203 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "Kobold",
+			"source": "MPMM",
+			"page": 25,
+			"lineage": "VRGR",
+			"size": [
+				"S"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"skillProficiencies": [
+				{
+					"choose": {
+						"from": [
+							"arcana",
+							"investigation",
+							"medicine",
+							"sleight of hand",
+							"survival"
+						]
+					}
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "races/kobold.opus"
+			},
+			"additionalSpells": [
+				{
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"known": {
+						"_": [
+							{
+								"choose": {
+									"from": [
+										"Acid Splash|PHB",
+										"Blade Ward|PHB",
+										"Chill Touch|PHB",
+										"Dancing Lights|PHB",
+										"Fire Bolt|PHB",
+										"Friends|PHB",
+										"Light|PHB",
+										"Mage Hand|PHB",
+										"Mending|PHB",
+										"Message|PHB",
+										"Minor Illusion|PHB",
+										"Poison Spray|PHB",
+										"Prestidigitation|PHB",
+										"Ray of Frost|PHB",
+										"Shocking Grasp|PHB",
+										"True Strike|PHB",
+										"Booming Blade|SCAG",
+										"Green-Flame Blade|SCAG",
+										"Lightning Lure|SCAG",
+										"Sword Burst|SCAG",
+										"Mind Sliver|UAFighterRogueWizard",
+										"On/Off (UA)|UAModernMagic",
+										"Mind Sliver|UASorcererAndWarlock",
+										"Infestation (UA)|UAStarterSpells",
+										"Control Flames|XGE",
+										"Create Bonfire|XGE",
+										"Frostbite|XGE",
+										"Gust|XGE",
+										"Infestation|XGE",
+										"Mold Earth|XGE",
+										"Shape Water|XGE",
+										"Thunderclap|XGE",
+										"Booming Blade|TCE",
+										"Green-Flame Blade|TCE",
+										"Lightning Lure|TCE",
+										"Mind Sliver|TCE",
+										"Sword Burst|TCE",
+										"Adivinación Menor|GdR",
+										"Impulso|GdR",
+										"Disparo Ilusorio|GPNM",
+										"Cronotruco|GPNM",
+										"Eco del Presente|GPNM",
+										"Latido del Tiempo|GPNM"
+									],
+									"count": 1
+								},
+								"count": 1
+							}
+						]
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were in dim light. You discern colors in that darkness only as shades of gray."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Draconic Cry",
+					"entries": [
+						"As a bonus action, you let out a cry at your enemies within 10 feet of you. Until the start of your next turn, you and your allies have advantage on attack rolls against any of those enemies who could hear you. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Kobold Legacy",
+					"entries": [
+						"Kobold's connections to dragons can manifest in unpredictable ways in an individual kobold. Choose one of the following legacy options for your kobold.",
+						{
+							"type": "list",
+							"items": [
+								{
+									"type": "item",
+									"name": "Craftiness",
+									"entry": "You have proficiency in one of the following skills of your choice: {@skill Arcana}, {@skill Investigation}, {@skill Medicine}, {@skill Sleight of Hand}, or {@skill Survival}."
+								},
+								{
+									"type": "item",
+									"name": "Defiance",
+									"entry": "You have advantage on saving throws to avoid or end the {@condition frightened} condition on yourself."
+								},
+								{
+									"type": "item",
+									"name": "Draconic Sorcery",
+									"entry": "You know one {@filter cantrip of your choice from the sorcerer spell list|spells|level=0|class=Sorcerer}. Intelligence, Wisdom, or Charisma is your spellcasting ability for that cantrip (choose when you select this race)."
+								}
+							],
+							"style": "list-hang-notitle"
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Kobold; Craftiness",
+					"source": "MPMM",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "Kobold Legacy",
+							"items": {
+								"name": "Kobold Legacy (Craftiness)",
+								"type": "entries",
+								"entries": [
+									"You have proficiency in one of the following skills of your choice: {@skill Arcana}, {@skill Investigation}, {@skill Medicine}, {@skill Sleight of Hand}, or {@skill Survival}."
+								]
+							}
+						}
+					},
+					"additionalSpells": null
+				},
+				{
+					"name": "Kobold; Defiance",
+					"source": "MPMM",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "Kobold Legacy",
+							"items": {
+								"name": "Kobold Legacy (Defiance)",
+								"type": "entries",
+								"entries": [
+									"You have advantage on saving throws to avoid or end the {@condition frightened} condition on yourself."
+								]
+							}
+						}
+					},
+					"skillProficiencies": null,
+					"additionalSpells": null
+				},
+				{
+					"name": "Kobold; Draconic Sorcery",
+					"source": "MPMM",
+					"_mod": {
+						"entries": {
+							"mode": "replaceArr",
+							"replace": "Kobold Legacy",
+							"items": {
+								"name": "Kobold Legacy (Draconic Sorcery)",
+								"type": "entries",
+								"entries": [
+									"You know one {@filter cantrip of your choice from the sorcerer spell list|spells|level=0|class=Sorcerer}. Intelligence, Wisdom, or Charisma is your spellcasting ability for that cantrip (choose when you select this race)."
+								]
+							}
+						}
+					},
+					"skillProficiencies": null
+				}
+			]
 		}
 	]
 }

@@ -69,6 +69,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			}

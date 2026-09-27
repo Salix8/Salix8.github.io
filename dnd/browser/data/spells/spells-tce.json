@@ -62,7 +62,27 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Booming Blade",
@@ -140,7 +160,31 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Dream of the Blue Veil",
@@ -187,7 +231,31 @@
 				"PS",
 				"TP"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Green-Flame Blade",
@@ -263,7 +331,31 @@
 			"areaTags": [
 				"MT",
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Intellect Fortress",
@@ -317,7 +409,35 @@
 				"SCT",
 				"SGT"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Lightning Lure",
@@ -378,7 +498,31 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Mind Sliver",
@@ -440,7 +584,27 @@
 			"areaTags": [
 				"ST"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Spirit Shroud",
@@ -496,7 +660,35 @@
 			"miscTags": [
 				"AAD",
 				"SGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Desangrador",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Aberration",
@@ -554,7 +746,23 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Beast",
@@ -612,7 +820,23 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Celestial",
@@ -671,7 +895,19 @@
 				"SGT",
 				"SMN"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Construct",
@@ -729,7 +965,23 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Elemental",
@@ -787,7 +1039,27 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Fey",
@@ -845,7 +1117,31 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Fiend",
@@ -903,7 +1199,23 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Shadowspawn",
@@ -959,7 +1271,23 @@
 				"SGT",
 				"SMN"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Undead",
@@ -1017,7 +1345,27 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Desangrador",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Sword Burst",
@@ -1076,7 +1424,31 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Tasha's Caustic Brew",
@@ -1129,7 +1501,27 @@
 			],
 			"savingThrow": [
 				"dexterity"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Tasha's Mind Whip",
@@ -1187,7 +1579,23 @@
 			"areaTags": [
 				"ST"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Tasha's Otherworldly Guise",
@@ -1251,7 +1659,27 @@
 			],
 			"miscTags": [
 				"MAC"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		}
 	]
 }

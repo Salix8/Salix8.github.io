@@ -39,6 +39,10 @@
 					{
 						"name": "Sorcerer",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -118,6 +122,10 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -186,6 +194,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Desangrador",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -260,6 +276,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Desangrador",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -348,6 +372,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -425,6 +457,10 @@
 					{
 						"name": "Warlock",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -491,19 +527,10 @@
 					{
 						"name": "Bard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
+					},
 					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Salvaje",
-							"shortName": "Savage",
-							"source": "PHB"
-						}
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -598,52 +625,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Trickery Domain",
-							"shortName": "Trickery",
-							"source": "PHB"
-						}
 					},
 					{
-						"class": {
-							"name": "Fighter",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Eldritch Knight",
-							"shortName": "Eldritch Knight",
-							"source": "PHB"
-						}
+						"name": "Payaso",
+						"source": "Himo"
 					},
 					{
-						"class": {
-							"name": "Ranger",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Fey Wanderer",
-							"shortName": "Fey Wanderer",
-							"source": "TCE"
-						}
-					},
-					{
-						"class": {
-							"name": "Rogue",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Arcane Trickster",
-							"shortName": "Arcane Trickster",
-							"source": "PHB"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -771,6 +760,10 @@
 					{
 						"name": "Cleric",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -859,6 +852,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -920,6 +917,10 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -994,6 +995,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1062,6 +1067,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1141,6 +1154,10 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1211,6 +1228,10 @@
 					{
 						"name": "Paladin",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1296,6 +1317,10 @@
 					{
 						"name": "Bard",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1385,6 +1410,10 @@
 					{
 						"name": "Cleric",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1448,6 +1477,10 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1524,6 +1557,10 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1652,6 +1689,10 @@
 					{
 						"name": "Warlock",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1716,6 +1757,10 @@
 					{
 						"name": "Sorcerer",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1797,6 +1842,10 @@
 					{
 						"name": "Cleric",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1891,6 +1940,10 @@
 					{
 						"name": "Cleric",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1979,6 +2032,10 @@
 					{
 						"name": "Cleric",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2050,19 +2107,10 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
+					},
 					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Great old one",
-							"shortName": "Great old one",
-							"source": "PHB"
-						}
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2137,6 +2185,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2278,6 +2330,10 @@
 					{
 						"name": "Bard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2358,6 +2414,10 @@
 					{
 						"name": "Sorcerer",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2434,6 +2494,10 @@
 					{
 						"name": "Warlock",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2512,6 +2576,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},

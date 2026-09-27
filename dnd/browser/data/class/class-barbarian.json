@@ -503,7 +503,7 @@
 							{
 								"name": "Path of the Berserker",
 								"entries": [
-									"For some barbarians, rage is a means to an end\u2014that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker's rage, you thrill in the chaos of battle, heedless of your own health or well-being.",
+									"For some barbarians, rage is a means to an end—that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker's rage, you thrill in the chaos of battle, heedless of your own health or well-being.",
 									{
 										"type": "entries",
 										"name": "Frenzy",
@@ -578,7 +578,7 @@
 										"type": "entries",
 										"name": "Totem Spirit",
 										"entries": [
-											"At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object\u2014an amulet or similar adornment\u2014that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thick-skinned, or if your totem is the eagle, your eyes turn bright yellow.",
+											"At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object—an amulet or similar adornment—that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thick-skinned, or if your totem is the eagle, your eyes turn bright yellow.",
 											"Your totem animal might be an animal related to those listed here but more appropriate to your homeland. For example, you could choose a hawk or vulture in place of an eagle.",
 											{
 												"type": "entries",
@@ -816,6 +816,23 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": {
+									"ritual": [
+										"Beast Sense|PHB",
+										"Speak with Animals|PHB"
+									]
+								},
+								"10": {
+									"ritual": [
+										"Commune with Nature|PHB"
+									]
+								}
+							}
+						}
 					]
 				},
 				{
@@ -1198,7 +1215,7 @@
 							{
 								"name": "Path of the Zealot",
 								"entries": [
-									"Some deities inspire their followers to pitch themselves into a ferocious battle fury. These barbarians are zealots\u2014warriors who channel their rage into powerful displays of divine power.",
+									"Some deities inspire their followers to pitch themselves into a ferocious battle fury. These barbarians are zealots—warriors who channel their rage into powerful displays of divine power.",
 									"A variety of gods across the worlds of D&D inspire their followers to embrace this path. Tempus from the Forgotten Realms and Hextor and Erythnul of Greyhawk are all prime examples. In general, the gods who inspire zealots are deities of combat, destruction, and violence. Not all are evil, but few are good.",
 									{
 										"type": "entries",
@@ -1323,6 +1340,16 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"innate": {
+								"10": [
+									"Augury|PHB",
+									"Clairvoyance|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1476,7 +1503,7 @@
 							{
 								"name": "Path of the Zealot",
 								"entries": [
-									"Some deities inspire their followers to pitch themselves into a ferocious battle fury. These barbarians are zealots\u2014warriors who channel their rage into powerful displays of divine power.",
+									"Some deities inspire their followers to pitch themselves into a ferocious battle fury. These barbarians are zealots—warriors who channel their rage into powerful displays of divine power.",
 									"A variety of gods across the worlds of D&D inspire their followers to embrace this path. Tempus from the Forgotten Realms and Hextor and Erythnul of Greyhawk are all prime examples. In general, the gods who inspire zealots are deities of combat, destruction, and violence. Not all are evil, but few are good.",
 									{
 										"type": "entries",
@@ -1799,21 +1826,171 @@
 					]
 				},
 				{
-					"name": "Camino Filosofal", "shortName": "Filosofal", "source": "Himo", "page": "??",
+					"name": "Camino Filosofal",
+					"shortName": "Filosofal",
+					"source": "Himo",
+					"page": "??",
 					"subclassFeatures": [
-						[{"name": "Camino Filosofal", "source": "Himo", "page": "??", "entries": ["Una vez pereciste y un alquimista te ofreció una segunda oportunidad: tu corazón es ahora una piedra filosofal y eres poco más que un gólem.", {"name": "Construcción Filosofal", "source": "Himo", "page": "??", "entries": ["Adquieres el tipo constructo. No necesitas comer ni respirar, pero puedes ser curado como un humanoide normal. Eres inmune al veneno y a la condición {@condition Poisoned|PHB}."]}, {"name": "Regeneración Filosofal", "source": "Himo", "page": "??", "entries": ["Al entrar en furia te envuelve el poder de la Piedra Filosofal. Mientras dure, eres vulnerable a las curaciones: cuando fueras a recuperar puntos de golpe de cualquier fuente, recuperas el doble. Con un ritual de dos horas, que puede coincidir con un descanso prolongado, puedes regenerar un miembro."]}]}],
-						[{"name": "Resistencia Mágica", "source": "Himo", "page": "??", "entries": ["Tienes ventaja en salvaciones contra conjuros que hagan daño y resistencia al daño de estos."]}],
-						[{"name": "Forzar Regeneración", "source": "Himo", "page": "??", "entries": ["Como acción gastas un dado de golpe, añades el doble de tu modificador de Constitución y recuperas esa cantidad de puntos de golpe. Una vez al día, al terminar un descanso corto, recuperas una cantidad de dados de golpe igual a tu bonificador de competencia."]}],
-						[{"name": "Destello Desmedido", "source": "Himo", "page": "??", "entries": ["Cada vez que restaures puntos de golpe con Forzar Regeneración, curas la mitad a una criatura elegida a 5 pies de ti."]}]
+						[
+							{
+								"name": "Camino Filosofal",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Una vez pereciste y un alquimista te ofreció una segunda oportunidad: tu corazón es ahora una piedra filosofal y eres poco más que un gólem.",
+									{
+										"name": "Construcción Filosofal",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Adquieres el tipo constructo. No necesitas comer ni respirar, pero puedes ser curado como un humanoide normal. Eres inmune al veneno y a la condición {@condition Poisoned|PHB}."
+										]
+									},
+									{
+										"name": "Regeneración Filosofal",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Al entrar en furia te envuelve el poder de la Piedra Filosofal. Mientras dure, eres vulnerable a las curaciones: cuando fueras a recuperar puntos de golpe de cualquier fuente, recuperas el doble. Con un ritual de dos horas, que puede coincidir con un descanso prolongado, puedes regenerar un miembro."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Resistencia Mágica",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Tienes ventaja en salvaciones contra conjuros que hagan daño y resistencia al daño de estos."
+								]
+							}
+						],
+						[
+							{
+								"name": "Forzar Regeneración",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Como acción gastas un dado de golpe, añades el doble de tu modificador de Constitución y recuperas esa cantidad de puntos de golpe. Una vez al día, al terminar un descanso corto, recuperas una cantidad de dados de golpe igual a tu bonificador de competencia."
+								]
+							}
+						],
+						[
+							{
+								"name": "Destello Desmedido",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Cada vez que restaures puntos de golpe con Forzar Regeneración, curas la mitad a una criatura elegida a 5 pies de ti."
+								]
+							}
+						]
 					]
 				},
 				{
-					"name": "Camino del Berserker (Reworked)", "shortName": "Berserker (Reworked)", "source": "Himo", "page": "??",
+					"name": "Camino del Berserker (Himo)",
+					"shortName": "Berserker (Himo)",
+					"source": "Himo",
+					"page": "??",
 					"subclassFeatures": [
-						[{"name": "Camino del Berserker", "source": "Himo", "page": "??", "entries": ["El camino del berserker es una senda de furia desenfrenada y violencia.", {"name": "Frenesí", "source": "Himo", "page": "??", "entries": ["Mientras estés en furia, puedes usar una acción adicional para hacer un ataque cuerpo a cuerpo adicional o lanzar un objeto o criatura contra un enemigo. Puedes aplicar Reckless Attack y furia a ambos. Lanzar un objeto no destinado a ser arma o una criatura cuenta como arma improvisada.", {"type": "table", "colLabels": ["Tamaño", "Daño", "Alcance", "Extra"], "colStyles": ["col-2", "col-3", "col-4", "col-3"], "rows": [["Diminuto", "{@dice 1d4} + Fue", "Mod. de Fuerza × 15 pies", "—"], ["Pequeño", "{@dice 1d6} + Fue", "Mod. de Fuerza × 10 pies", "Salvación de Fuerza o {@condition Prone|PHB}"], ["Mediano", "{@dice 1d8} + Fue", "Mod. de Fuerza × 5 pies", "Desventaja si supera la mitad del alcance"], ["Grande", "{@dice 2d10} + Fue", "Mod. de Fuerza × 2 pies", "Con desventaja"], ["Enorme", "{@dice 4d10} + Fue", "Mod. de Fuerza en pies", "Con desventaja"]]}, "Si lanzaste una criatura, esta siempre cae {@condition Prone|PHB} después de este ataque. Si el objetivo es golpeado por un objeto mediano o más grande, este también cae {@condition Prone|PHB}. La criatura lanzada puede evitar ser arrojada con un check de {@skill Athletics} o {@skill Acrobatics} contra tu {@skill Athletics}. Si el objeto es Mediano o mayor, el objetivo también queda {@condition Prone|PHB}."]}]}],
-						[{"name": "Fuerza Irracional", "source": "Himo", "page": "??", "entries": ["Eres inmune a quedar {@condition Charmed|PHB} o {@condition Frightened|PHB} mientras estés en furia; esos efectos se suprimen si ya los tenías al entrar. Además, cuando uses Reckless Attack en tu turno, haces crítico con 19."]}],
-						[{"name": "Presencia Intimidante", "source": "Himo", "page": "??", "entries": ["Como acción eliges una criatura que puedas ver a menos de 30 pies. Si puede verte u oírte, debe superar una salvación de Sabiduría contra tu Constitución o temerte hasta el final de tu siguiente turno. En turnos posteriores puedes prolongarlo con tu acción; termina si acaba su turno sin línea de visión o a más de 60 pies. Con éxito, es inmune a este rasgo durante 24 horas."]}],
-						[{"name": "Represalia", "source": "Himo", "page": "??", "entries": ["Mientras estés en furia, cuando una criatura te ataque cuerpo a cuerpo, puedes usar tu reacción para hacer un ataque contra ella."]}]
+						[
+							{
+								"name": "Camino del Berserker",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"El camino del berserker es una senda de furia desenfrenada y violencia.",
+									{
+										"name": "Frenesí",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Mientras estés en furia, puedes usar una acción adicional para hacer un ataque cuerpo a cuerpo adicional o lanzar un objeto o criatura contra un enemigo. Puedes aplicar Reckless Attack y furia a ambos. Lanzar un objeto no destinado a ser arma o una criatura cuenta como arma improvisada.",
+											{
+												"type": "table",
+												"colLabels": [
+													"Tamaño",
+													"Daño",
+													"Alcance",
+													"Extra"
+												],
+												"colStyles": [
+													"col-2",
+													"col-3",
+													"col-4",
+													"col-3"
+												],
+												"rows": [
+													[
+														"Diminuto",
+														"{@dice 1d4} + Fue",
+														"Mod. de Fuerza × 15 pies",
+														"—"
+													],
+													[
+														"Pequeño",
+														"{@dice 1d6} + Fue",
+														"Mod. de Fuerza × 10 pies",
+														"Salvación de Fuerza o {@condition Prone|PHB}"
+													],
+													[
+														"Mediano",
+														"{@dice 1d8} + Fue",
+														"Mod. de Fuerza × 5 pies",
+														"Desventaja si supera la mitad del alcance"
+													],
+													[
+														"Grande",
+														"{@dice 2d10} + Fue",
+														"Mod. de Fuerza × 2 pies",
+														"Con desventaja"
+													],
+													[
+														"Enorme",
+														"{@dice 4d10} + Fue",
+														"Mod. de Fuerza en pies",
+														"Con desventaja"
+													]
+												]
+											},
+											"Si lanzaste una criatura, esta siempre cae {@condition Prone|PHB} después de este ataque. Si el objetivo es golpeado por un objeto mediano o más grande, este también cae {@condition Prone|PHB}. La criatura lanzada puede evitar ser arrojada con un check de {@skill Athletics} o {@skill Acrobatics} contra tu {@skill Athletics}. Si el objeto es Mediano o mayor, el objetivo también queda {@condition Prone|PHB}."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Fuerza Irracional",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Eres inmune a quedar {@condition Charmed|PHB} o {@condition Frightened|PHB} mientras estés en furia; esos efectos se suprimen si ya los tenías al entrar. Además, cuando uses Reckless Attack en tu turno, haces crítico con 19."
+								]
+							}
+						],
+						[
+							{
+								"name": "Presencia Intimidante",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Como acción eliges una criatura que puedas ver a menos de 30 pies. Si puede verte u oírte, debe superar una salvación de Sabiduría contra tu Constitución o temerte hasta el final de tu siguiente turno. En turnos posteriores puedes prolongarlo con tu acción; termina si acaba su turno sin línea de visión o a más de 60 pies. Con éxito, es inmune a este rasgo durante 24 horas."
+								]
+							}
+						],
+						[
+							{
+								"name": "Represalia",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Mientras estés en furia, cuando una criatura te ataque cuerpo a cuerpo, puedes usar tu reacción para hacer un ataque contra ella."
+								]
+							}
+						]
 					]
 				}
 			],
@@ -1829,7 +2006,7 @@
 							"type": "entries",
 							"name": "Primal Instinct",
 							"entries": [
-								"People of towns and cities take pride in how their civilized ways set them apart from animals, as if denying one's own nature was a mark of superiority. To a barbarian, though, civilization is no virtue, but a sign of weakness. The strong embrace their animal nature\u2014keen instincts, primal physicality, and ferocious rage. Barbarians are uncomfortable when hedged in by walls and crowds. They thrive in the wilds of their homelands: the tundra, jungle, or grasslands where their tribes live and hunt.",
+								"People of towns and cities take pride in how their civilized ways set them apart from animals, as if denying one's own nature was a mark of superiority. To a barbarian, though, civilization is no virtue, but a sign of weakness. The strong embrace their animal nature—keen instincts, primal physicality, and ferocious rage. Barbarians are uncomfortable when hedged in by walls and crowds. They thrive in the wilds of their homelands: the tundra, jungle, or grasslands where their tribes live and hunt.",
 								"Barbarians come alive in the chaos of combat. They can enter a berserk state where rage takes over, giving them superhuman strength and resilience. A barbarian can draw on this reservoir of fury only a few times without resting, but those few rages are usually sufficient to defeat whatever threats arise."
 							]
 						},
@@ -1870,14 +2047,14 @@
 							"by": "Seret, archwizard"
 						},
 						"The anger felt by a normal person resembles the rage of a barbarian in the same way that a gentle breeze is akin to a furious thunderstorm. The barbarian's driving force comes from a place that transcends mere emotion, making its manifestation all the more terrible. Whether the impetus for the fury comes entirely from within or from forging a link with a spirit animal, a raging barbarian becomes able to perform supernatural feats of strength and endurance. The outburst is temporary, but while it lasts, it takes over body and mind, driving the barbarian on despite peril and injury, until the last enemy falls.",
-						"It can be tempting to play a barbarian character that is a straightforward application of the classic archetype\u2014a brute, and usually a dimwitted one at that, who rushes in where others fear to tread. But not all the barbarians in the world are cut from that cloth, so you can certainly put your own spin on things. Either way, consider adding some flourishes to make your barbarian stand out from all others; see the following sections for some ideas.",
+						"It can be tempting to play a barbarian character that is a straightforward application of the classic archetype—a brute, and usually a dimwitted one at that, who rushes in where others fear to tread. But not all the barbarians in the world are cut from that cloth, so you can certainly put your own spin on things. Either way, consider adding some flourishes to make your barbarian stand out from all others; see the following sections for some ideas.",
 						{
 							"type": "entries",
 							"name": "Personal Totems",
 							"entries": [
-								"Barbarians tend to travel light, carrying little in the way of personal effects or other unnecessary gear. The few possessions they do carry often include small items that have special significance. A personal totem is significant because it has a mystical origin or is tied to an important moment in the character's life\u2014perhaps a remembrance from the barbarian's past or a harbinger of what lies ahead.",
+								"Barbarians tend to travel light, carrying little in the way of personal effects or other unnecessary gear. The few possessions they do carry often include small items that have special significance. A personal totem is significant because it has a mystical origin or is tied to an important moment in the character's life—perhaps a remembrance from the barbarian's past or a harbinger of what lies ahead.",
 								"A personal totem of this sort might be associated with a barbarian's spirit animal, or might actually be the totem object for the animal, but such a connection is not essential. One who has a bear totem spirit, for instance, could still carry an eagle's feather as a personal totem.",
-								"Consider creating one or more personal totems for your character\u2014objects that hold a special link to your character's past or future. Think about how a totem might affect your character's actions.",
+								"Consider creating one or more personal totems for your character—objects that hold a special link to your character's past or future. Think about how a totem might affect your character's actions.",
 								{
 									"type": "table",
 									"caption": "Personal Totems",

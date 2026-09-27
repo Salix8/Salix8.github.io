@@ -2748,7 +2748,7 @@ Renderer.spell = {
 		return renderStack.join("");
 	},
 
-	initClasses (spell, brewSpellClasses) {
+	initClasses (spell, {isHomebrew = false} = {}) {
 		if (spell._isInitClasses) return;
 		spell._isInitClasses = true;
 		Object.defineProperty(spell, "_classSpellFilterOriginalClasses", {
@@ -2756,6 +2756,11 @@ Renderer.spell = {
 			configurable: true
 		});
 
+		if (isHomebrew) Renderer.spell._addLegacyHomebrewAssociations(spell);
+
+		Renderer.spell._deduplicateAssociations(spell);
+	},
+	_addLegacyHomebrewAssociations (spell) {
 		// add eldritch knight and arcane trickster
 		if (spell.classes && spell.classes.fromClassList && spell.classes.fromClassList.filter(c => c.name === Renderer.spell.STR_WIZARD && c.source === SRC_PHB).length) {
 			if (!spell.classes.fromSubclass) spell.classes.fromSubclass = [];
@@ -2767,9 +2772,6 @@ Renderer.spell = {
 				class: {name: Renderer.spell.STR_ROGUE, source: SRC_PHB},
 				subclass: {name: Renderer.spell.STR_ARC_TCKER, source: SRC_PHB}
 			});
-			if (spell.level > 4) {
-				spell._scrollNote = true;
-			}
 		}
 
 		// add divine soul, favored soul v2, favored soul v3
@@ -2833,67 +2835,27 @@ Renderer.spell = {
 			}
 		}
 
-		// add homebrew class/subclass
-		if (brewSpellClasses) {
-			const lowName = spell.name.toLowerCase();
-			const addClassListItems = (items) => {
-				if (!items || !items.length) return;
-				spell.classes = spell.classes || {};
-				spell.classes.fromClassList = spell.classes.fromClassList || [];
-				items.forEach(toAdd => {
-					if (spell.classes.fromClassList.some(it => it.name === toAdd.name && it.source === toAdd.source)) return;
-					spell.classes.fromClassList.push(MiscUtil.copy(toAdd));
-				});
-			};
-			const addSubclassItems = (items) => {
-				if (!items || !items.length) return;
-				spell.classes = spell.classes || {};
-				spell.classes.fromSubclass = spell.classes.fromSubclass || [];
-				items.forEach(toAdd => {
-					if (spell.classes.fromSubclass.some(it => it.class.name === toAdd.class.name
-						&& it.class.source === toAdd.class.source
-						&& it.subclass.name === toAdd.subclass.name
-						&& it.subclass.source === toAdd.subclass.source
-						&& it.subclass.subSubclass === toAdd.subclass.subSubclass)) return;
-					spell.classes.fromSubclass.push(MiscUtil.copy(toAdd));
-				});
-			};
-
-			if (brewSpellClasses.filter) {
-				brewSpellClasses.filter.forEach(filterDetails => {
-					if (!Renderer.spell.isClassSpellFilterMatch(spell, filterDetails.filter, spell._classSpellFilterOriginalClasses)) return;
-					addClassListItems(filterDetails.fromClassList);
-					addSubclassItems(filterDetails.fromSubclass);
-				});
-			}
-
-			if (brewSpellClasses.spell) {
-				if (brewSpellClasses.spell[spell.source] && brewSpellClasses.spell[spell.source][lowName]) {
-					addClassListItems(brewSpellClasses.spell[spell.source][lowName].fromClassList);
-					addSubclassItems(brewSpellClasses.spell[spell.source][lowName].fromSubclass);
-				}
-			}
-
-			if (brewSpellClasses.class && spell.classes && spell.classes.fromClassList) {
-				// speed over safety
-				outer: for (const src in brewSpellClasses.class) {
-					const searchForClasses = brewSpellClasses.class[src];
-
-					for (const clsLowName in searchForClasses) {
-						const spellHasClass = spell.classes.fromClassList.some(cls => cls.source === src && cls.name.toLowerCase() === clsLowName);
-						if (!spellHasClass) continue;
-
-						const fromDetails = searchForClasses[clsLowName];
-
-						addClassListItems(fromDetails.fromClassList);
-						addSubclassItems(fromDetails.fromSubclass);
-
-						// Only add it once regardless of how many classes match
-						break outer;
-					}
-				}
-			}
+	},
+	_deduplicateAssociations (spell) {
+		// Imported associations and inferred access can describe the same entity.
+		// Keep the first entry (including its metadata), identifying entities by source as well as name.
+		const unique = (items, getKey) => {
+			const seen = new Set();
+			return items.filter(item => {
+				const key = getKey(item);
+				if (seen.has(key)) return false;
+				seen.add(key);
+				return true;
+			});
+		};
+		const entityKey = it => JSON.stringify([it.name, it.source]);
+		if (spell.classes) {
+			if (spell.classes.fromClassList) spell.classes.fromClassList = unique(spell.classes.fromClassList, entityKey);
+			if (spell.classes.fromSubclass) spell.classes.fromSubclass = unique(spell.classes.fromSubclass,
+				it => JSON.stringify([it.class.name, it.class.source, it.subclass.name, it.subclass.source, it.subclass.subSubclass]));
 		}
+		if (spell.races) spell.races = unique(spell.races, entityKey);
+		if (spell.backgrounds) spell.backgrounds = unique(spell.backgrounds, entityKey);
 	},
 	isClassSpellFilterMatch (spell, filter, originalClasses) {
 		if (!filter) return false;
@@ -5923,7 +5885,11 @@ Renderer.hover = {
 
 				return Renderer.hover._getFromCache(page, source, hash, opts);
 			}
-			case UrlUtil.PG_SPELLS: return pLoadMultiSource(page, `data/spells/`, "spell");
+			case UrlUtil.PG_SPELLS: {
+				await DataUtil.spell.pInitAssociations();
+				const spell = await pLoadMultiSource(page, `data/spells/`, "spell");
+				return opts.isRaw || !spell ? spell : DataUtil.spell.getCopyWithAssociations(spell);
+			}
 			case UrlUtil.PG_BESTIARY: return pLoadMultiSource(page, `data/bestiary/`, "monster");
 			case UrlUtil.PG_ITEMS: {
 				const loadKey = UrlUtil.PG_ITEMS;

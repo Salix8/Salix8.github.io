@@ -9,18 +9,6 @@
 			"spellcastingAbility": "cha",
 			"casterProgression": "full",
 			"cantripProgression": [3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5],
-			"classSpells": [
-				"Adivinación Menor|GdR","Dancing Lights","Encode Thoughts|GGR","Friends","Guidance","Light","Message","Mind Sliver|TCE","Resistance","Thaumaturgy","Thunderclap|XGE","Vicious Mockery","Word of Radiance|XGE",
-				"Abrir Mente|CdS","Bane","Bless","Cause Fear|XGE","Charm Person","Command","Comprehend Languages","Dissonant Whispers","Healing Word","Hellish Rebuke","Heroism","Hush|GdR","Identify","Magic Missile","Magnify Gravity|EGW","Minor Bird Charm|GMAM","Postrar|GPNM","Protection from Evil and Good","Silvery Barbs|SCC","Speak with Animals","Tasha's Hideous Laughter","Thunderwave","Vértigo|GPNM","Witch Bolt",
-				"Amplificación|GdR","Animal Messenger","Augury","Borrowed Knowledge|SCC","Buscador de Sueños|CdS","Crown of Madness","Desconcierto|GMAM","Detect Thoughts","Eco de Combate|GPNM","Enhance Ability","Enthrall","Gift of Gab|AI","Hipnosis|GMAM","Hold Person","Knock","Magic Mouth","Mind Spike|XGE","Ojos de Oghma|GdR","Pacto de Verdad|GPNM","Suggestion","Tasha's Mind Whip|TCE","Zone of Truth",
-				"Anonimato|CdS","Antagonize|BMT","Atar Consciencia|CdS","Bestow Curse","Enemies Abound|XGE","Fast Friends|AI","Fear","Glyph of Warding","Incite Greed|AI","Intellect Fortress|TCE","Magic Circle","Mass Healing Word","Motivational Speech|AI","Remove Curse","Sending","Speak with Dead","Speak with Plants","Summon Fey|TCE","Summon Lesser Demons|XGE","Summon Shadowspawn|TCE","Summon Undead|TCE","Tongues",
-				"Banishment","Bloqueo Onírico|CdS","Caminante de Sueños|CdS","Charm Monster|XGE","Compulsion","Confusion","Conjure Minor Elementals","Conjure Woodland Beings","Control Water","Dimension Door","Dominate Beast","Envejecer|GPNM","Fabricate","Gravity Sinkhole|EGW","Major Bird Charm|GMAM","Pesadilla|CdS","Phantasmal Killer","Otiluke's Resilient Sphere","Raulothim's Psychic Lance|FTD","Robar Pensamientos|CdS","Sending (Hishna)|GMAM","Summon Aberration|TCE","Summon Construct|TCE","Summon Elemental|TCE","Summon Greater Demon|XGE",
-				"Circle of Power","Conjure Elemental","Contact Other Plane","Creation","Dispel Evil and Good","Dominate Person","Geas","Hallow","Hold Monster","Infernal Calling|XGE","Legend Lore","Modify Memory","Planar Binding","Skill Empowerment|XGE","Synaptic Static|XGE","Summon Celestial|TCE","Summon Draconic Spirit|FTD","Telekinesis","Teleportation Circle",
-				"Bones of the Earth|XGE","Conjure Fey","Create Undead","Eyebite","Flesh to Stone","Forbiddance","Fusionar Parajes Oníricos|CdS","Heal","Harm","Magic Jar","Mass Suggestion","Paraje Onírico|CdS","Planar Ally","Soul Cage|XGE","Summon Fiend|TCE","True Seeing",
-				"Amnesia Negra|GdR","Conjure Celestial","Divine Word","Dream of the Blue Veil|TCE","Forcecage","Plane Shift","Power Word Pain|XGE","Power Word Shield|GPNM","Resurrection","Reverse Gravity","Symbol","Teleport",
-				"Antimagic Field","Antipathy/Sympathy","Control Weather","Dominate Monster","Earthquake","Feeblemind","Maze","Power Word Stun","Reality Break|EGW","Tsunami",
-				"Gate","Imprisonment","Invulnerability|XGE","Power Word Heal","Power Word Kill","Proyección Onírica|CdS","Psychic Scream|XGE","Ravenous Void|EGW","Time Stop","Wish"
-			],
 			"startingProficiencies": {
 				"armor": ["-"],
 				"weapons": ["Básicas (ver mago)"],

@@ -1,0 +1,147 @@
+{
+	"spell": [
+		{
+			"name": "True Name",
+			"level": 10,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "unlimited"
+				}
+			},
+			"duration": [
+				{
+					"type": "special"
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Monk",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Rogue",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			},
+			"entries": [
+				"Toda criatura tiene un True Name creado a partir de las Palabras de la Creación, el idioma solo conocido por algunos dioses y que su mera pronunciación puede tener un poder inconmensurable.",
+				"Una criatura que conozca el verdadero nombre de otra criatura puede decirlo en voz alta para tener poder sobre la criatura. Como acción, el orador debe pronunciar el nombre de la criatura haciendo una salvación de Carisma cuya CD es igual al CR o LVx1,5 de la criatura. Con un éxito, la criatura salva también Carisma, pero con desventaja, CD {@b 12+BC+Modificador de Carisma}. Si el orador tenía habilidad de Spellcasting, puede utilizarse esta en vez de la original.",
+				"Si el orador falla la salvación, el objetivo aún debe salvar, pero no recibe la desventaja. Además el orador recibe 1 PtA.",
+				"Si el objetivo salva, él y el orador reciben {@dice 4d10} de daño psíquico, están dazed, el efecto acaba y es inmune a su propio True Name durante 24 horas si lo pronuncia el orador. Si el orador falló su salvación, recibirá daño máximo.",
+				"Si el objetivo falla, el orador puede elegir uno de los siguientes efectos (debe decirse antes de ver las salvaciones):",
+				"- {@b Control total}. Durante una hora la criatura está bajo los efectos de {@spell Dominate Monster}, pero el orador puede hacer actuar al objetivo como desee sin gastar nada de su curso de acción propio (todo free action). Mientras se mantenga este efecto la criatura objetivo está mecánicamente {@condition unconscious|PHB|inconsciente}, es inmune a {@condition frightened|PHB|miedo} y {@condition charmed|PHB|charm} y no puede actuar en contra de los designios de su amo, ni siquiera por medio del conjuro {@spell Wish}.",
+				"- {@b Invocación}. El objetivo es invocado a un punto a 15 ft del orador que este pueda ver. Aparece incluso si estaba en otro plano y lo hace de rodillas ({@condition prone}) y {@condition paralyzed|PHB|paralizado}. El orador puede castear {@spell Geas} lv5 en el objetivo aunque no conozca el conjuro o tenga aptitud mágica. El objetivo falla automáticamente la tirada. Pasados diez minutos o cuando el orador castee {@spell Geas}, el objetivo es liberado de su parálisis. Si el orador podía castear este conjuro y tiene slots para upcastearlo, puede hacerlo.",
+				"- {@b Conocimiento total}. Durante las próximas 24 horas sabes todo lo que el objetivo piensa, su ubicación exacta, incluso si está en otro plano y tienes ventaja en ataques y checks contra él y salvaciones por su parte; y él tiene desventaja en ataques y checks contra ti y en salvaciones para efectos hechos por ti. Este efecto ignora cualquier protección contra la adivinación o similares.",
+				"- {@b Banishment}. El orador trae a la criatura hasta su plano, a 5 ft de él o lo manda de vuelta a su plano de origen. Como alternativa, si el orador es capaz de castear {@spell Plane Shift|PHB}, puede castearlo en la criatura.",
+				"- {@b Destrucción}. El orador fuerza a la criatura a recibir daño. La criatura recibe un daño igual a una tirada de todos los dados de golpe del orador más su modificador de constitución por cada uno. El daño es necrótico e ignora resistencias e inmunidades. Si el objetivo cae a 0 HP, el orador puede elegir dejarlo a 1 HP, a 0 HP pero estable o desintegrarlo de la existencia.",
+				"Solo puedes usar los True Name un número de veces al día igual a tu BC, y no puedes usar dos veces el mismo mientras siga habiendo un efecto activo en la criatura (nota que {@i invocación} dura 30 días). Sí puedes, sin embargo, usar los usos de {@i Banishment} y {@i Destrucción} aunque haya otro efecto activo.",
+				"Usar un True Name es un acto divino, más allá de la propia magia, voluntad, ki, psiónica y cualquier otra cosa. Por ello, no pueden ser utilizados en sigilo o de forma sutil. Al utilizarlos, el usuario levita a 2 ft, emite luz a través de ojos y boca y su voz se amplifica como si utilizara {@spell thaumaturgy|PHB|taumaturgia} al máximo. Además, su voz se distorsiona para sonar ominosamente grave y con un eco sobrenatural.",
+				"Los True Name pueden usarse en {@spell antimagic field|PHB|campos antimagia} y no pueden ser dispeleados con {@spell dispel magic}, {@spell greater restoration}, {@spell remove curse} ni similares. {@spell Wish} no puede revertir el efecto de un True Name. El True Name es la forma más perfecta de encantamiento, por lo que ningún conjuro de encantamiento es capaz de {@i robar} a un objetivo controlado por su True Name",
+				"Cuando dos usuarios de True Name entren en conflicto por una criatura, ganan control del objetivo en orden de iniciativa, de modo que el primero intenta controlarlo y el resto a partir del segundo intenta robarlo.",
+				"\tPara robar un objetivo mediante el True Name el segundo orador hace la misma salvación que si intentara controlarlo y, luego, hace otra sobre la CD de True Name del orador que ha conseguido controlar al objetivo.",
+				"\t\tPrimera salvación",
+				"\t\t\tÉxito --> El segundo orador hará la tirada enfrentada con ventaja.",
+				"\t\t\tFallo --> El segundo orador tiene 1 PtA.",
+				"\t\tSegunda Salvación",
+				"\t\t\tÉxito --> El primer orador hará la tirada enfrentada con desventaja.",
+				"\t\t\tFallo --> Recibe {@dice 4d10} y pierde la oportunidad de controlar a esa criatura por 24 horas. Si falló la primera recibe el daño máximo.",
+				"\tSi el segundo orador llega hasta este punto, ahora se hace una tirada enfrentada de Carisma. El ganador gana o mantiene el control de la criatura objetivo y el perdedor recibe {@dice 4d10} psíquicos y está dazed.",
+				"Cuando un usuario de True Name nombra un True Name delante de otro usuario, pueden pasar dos cosas:",
+				"\tQue el otro no supiera que era un usuario, por lo que pierde la primera oportunidad.",
+				"\tQue el otro sí supiera que era un usuario de True Name. Un usuario que sepa que está frente a otro usuario puede usar su reacción cuando el otro pronuncie un True Name para tratar de aprenderlo.",
+				"\t\tPara ello el orador que use la reacción (X), salva Carisma sobre la CD de True Name del orador que pronunció el nombre (Y). Con un éxito, X es capaz de escribir dicho nombre una vez. Hacerlo es un proceso de un minuto. Si no lo escribe pasada 1 hora, lo olvida.",
+				"Los usuarios de True Name son cualquier criatura que utilice True Names. Para ello, debe cumplirse al menos uno de los siguientes requisitos:",
+				"- Conocer al menos 1 True Name",
+				"- Haber estudiado las Palabras de la Creación durante al menos 100 horas.",
+				"\t- Por cada hora de estudio el usuario debe salvar Carisma CD 10+1 por cada hora que lleve estudiando desde las últimas 24 horas. Con un fallo recibe {@dice 2d10} y está inconsciente 1 hora.",
+				"- Recibir esta cualidad de un usuario de True Names especialmente poderoso",
+				"Un usuario de True Name puede escribir cualquier True Name que conozca, pero solo el propio usuario puede leerlo. Además, no puede pronunciarlo sin usarlo. Cualquier efecto que trate de buscar un True Name en la mente de una criatura falla y la criatura que buscó recibe {@dice 4d10} psíquicos. Un usuario de True Name puede elegir que un efecto que lea su mente pueda ver el True Name o que una criatura concreta pueda leer un True Name que haya escrito 1 vez. Tras esto la otra criatura salva Carisma sobre la CD del usuario o recibe {@dice 4d10} psíquicos y 3 PtA. Con un éxito tiene 10 minutos para escribirlo y aprenderlo.",
+				"{@b Nótese que una gran variedad de fiends o casters son capaces de sumonear a otros fiends. Este tipo de cosas casi siempre utilizan el True Name de cada individuo invocado de esta forma.}"
+			],
+			"source": "DiablonomicndeValafar",
+			"components": {
+				"v": true,
+				"m": "El True Name del objetivo"
+			},
+			"meta": {
+				"ritual": true
+			},
+			"damageInflict": [
+				"necrotic",
+				"psychic"
+			],
+			"conditionInflict": [
+				"charmed",
+				"paralyzed",
+				"prone",
+				"unconscious"
+			],
+			"spellAttack": [
+				"O"
+			],
+			"savingThrow": [
+				"charisma"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SMN",
+				"TP",
+				"RO",
+				"PS",
+				"ADV"
+			]
+		}
+	]
+}

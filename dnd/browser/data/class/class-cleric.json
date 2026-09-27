@@ -444,7 +444,7 @@
 								"type": "entries",
 								"name": "Domain Spells",
 								"entries": [
-									"Each domain has a list of spells\u2014its domain spells\u2014that you gain at the cleric levels noted in the domain description. Once you gain a domain spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day.",
+									"Each domain has a list of spells—its domain spells—that you gain at the cleric levels noted in the domain description. Once you gain a domain spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day.",
 									"If you have a domain spell that doesn't appear on the cleric spell list, the spell is nonetheless a cleric spell for you."
 								]
 							}
@@ -843,6 +843,244 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"known": {
+								"1": {
+									"_": [
+										{
+											"choose": {
+												"from": [
+													"Sapping Sting|EGW",
+													"Encode Thoughts|GGR",
+													"Acid Splash|PHB",
+													"Blade Ward|PHB",
+													"Chill Touch|PHB",
+													"Dancing Lights|PHB",
+													"Fire Bolt|PHB",
+													"Friends|PHB",
+													"Light|PHB",
+													"Mage Hand|PHB",
+													"Mending|PHB",
+													"Message|PHB",
+													"Minor Illusion|PHB",
+													"Poison Spray|PHB",
+													"Prestidigitation|PHB",
+													"Ray of Frost|PHB",
+													"Shocking Grasp|PHB",
+													"True Strike|PHB",
+													"Booming Blade|SCAG",
+													"Green-Flame Blade|SCAG",
+													"Lightning Lure|SCAG",
+													"Sword Burst|SCAG",
+													"Mind Sliver|UAFighterRogueWizard",
+													"On/Off (UA)|UAModernMagic",
+													"Mind Sliver|UASorcererAndWarlock",
+													"Infestation (UA)|UAStarterSpells",
+													"Control Flames|XGE",
+													"Create Bonfire|XGE",
+													"Frostbite|XGE",
+													"Gust|XGE",
+													"Infestation|XGE",
+													"Mold Earth|XGE",
+													"Shape Water|XGE",
+													"Thunderclap|XGE",
+													"Toll the Dead|XGE",
+													"Booming Blade|TCE",
+													"Green-Flame Blade|TCE",
+													"Lightning Lure|TCE",
+													"Mind Sliver|TCE",
+													"Sword Burst|TCE",
+													"Adivinación Menor|GdR",
+													"Graffiti Arcano|GdR",
+													"Herir|GdR",
+													"Impulso|GdR",
+													"Disparo Ilusorio|GPNM",
+													"Cronotruco|GPNM",
+													"Eco del Presente|GPNM",
+													"Latido del Tiempo|GPNM",
+													"Featherweaving|GMAM"
+												],
+												"count": 2
+											},
+											"count": 2
+										}
+									]
+								}
+							},
+							"prepared": {
+								"1": [
+									"Detect Magic|PHB",
+									"Magic Missile|PHB"
+								],
+								"3": [
+									"Magic Weapon|PHB",
+									"Nystul's Magic Aura|PHB"
+								],
+								"5": [
+									"Dispel Magic|PHB",
+									"Magic Circle|PHB"
+								],
+								"7": [
+									"Arcane Eye|PHB",
+									"Leomund's Secret Chest|PHB"
+								],
+								"9": [
+									"Planar Binding|PHB",
+									"Teleportation Circle|PHB"
+								],
+								"17": [
+									{
+										"choose": {
+											"from": [
+												"Gravity Fissure|EGW",
+												"Fizban's Platinum Shield|FTD",
+												"Arcane Gate|PHB",
+												"Chain Lightning|PHB",
+												"Circle of Death|PHB",
+												"Contingency|PHB",
+												"Create Undead|PHB",
+												"Disintegrate|PHB",
+												"Drawmij's Instant Summons|PHB",
+												"Eyebite|PHB",
+												"Flesh to Stone|PHB",
+												"Globe of Invulnerability|PHB",
+												"Guards and Wards|PHB",
+												"Magic Jar|PHB",
+												"Mass Suggestion|PHB",
+												"Move Earth|PHB",
+												"Otiluke's Freezing Sphere|PHB",
+												"Otto's Irresistible Dance|PHB",
+												"Programmed Illusion|PHB",
+												"Sunbeam|PHB",
+												"True Seeing|PHB",
+												"Wall of Ice|PHB",
+												"Psychic Crush|UAFighterRogueWizard",
+												"Create Homunculus|XGE",
+												"Investiture of Flame|XGE",
+												"Investiture of Ice|XGE",
+												"Investiture of Stone|XGE",
+												"Investiture of Wind|XGE",
+												"Mental Prison|XGE",
+												"Scatter|XGE",
+												"Soul Cage|XGE",
+												"Tenser's Transformation|XGE",
+												"Summon Fiend|TCE",
+												"Tasha's Otherworldly Guise|TCE",
+												"Nube Voladora|GPNM",
+												"Anomalía Espaciotemporal de Molly|GPNM",
+												"Clon Temporal|GPNM",
+												"Fusionar Parajes Oníricos|CdS",
+												"Paraje Onírico|CdS"
+											],
+											"count": 1
+										}
+									},
+									{
+										"choose": {
+											"from": [
+												"Tether Essence|EGW",
+												"Draconic Transformation|FTD",
+												"Create Magen|IDRotF",
+												"Delayed Blast Fireball|PHB",
+												"Etherealness|PHB",
+												"Finger of Death|PHB",
+												"Forcecage|PHB",
+												"Mirage Arcane|PHB",
+												"Mordenkainen's Magnificent Mansion|PHB",
+												"Mordenkainen's Sword|PHB",
+												"Plane Shift|PHB",
+												"Prismatic Spray|PHB",
+												"Project Image|PHB",
+												"Reverse Gravity|PHB",
+												"Sequester|PHB",
+												"Simulacrum|PHB",
+												"Symbol|PHB",
+												"Teleport|PHB",
+												"Conjure Hezrou (UA)|UAThatOldBlackMagic",
+												"Crown of Stars|XGE",
+												"Power Word Pain|XGE",
+												"Whirlwind|XGE",
+												"Dream of the Blue Veil|TCE",
+												"Power Word Shield|GPNM",
+												"Rebobinar|GPNM",
+												"Ciclo de Estasis|GPNM",
+												"Ecos Alternativos|GPNM"
+											],
+											"count": 1
+										}
+									},
+									{
+										"choose": {
+											"from": [
+												"Dark Star|EGW",
+												"Reality Break|EGW",
+												"Antimagic Field|PHB",
+												"Antipathy/Sympathy|PHB",
+												"Clone|PHB",
+												"Control Weather|PHB",
+												"Demiplane|PHB",
+												"Dominate Monster|PHB",
+												"Feeblemind|PHB",
+												"Incendiary Cloud|PHB",
+												"Maze|PHB",
+												"Mind Blank|PHB",
+												"Power Word Stun|PHB",
+												"Sunburst|PHB",
+												"Telepathy|PHB",
+												"Abi-Dalzim's Horrid Wilting|XGE",
+												"Illusory Dragon|XGE",
+												"Maddening Darkness|XGE",
+												"Mighty Fortress|XGE",
+												"Divergencia Temporal|GPNM"
+											],
+											"count": 1
+										}
+									},
+									{
+										"choose": {
+											"from": [
+												"Ravenous Void|EGW",
+												"Time Ravage|EGW",
+												"Astral Projection|PHB",
+												"Foresight|PHB",
+												"Gate|PHB",
+												"Imprisonment|PHB",
+												"Meteor Swarm|PHB",
+												"Power Word Kill|PHB",
+												"Prismatic Wall|PHB",
+												"Shapechange|PHB",
+												"Time Stop|PHB",
+												"True Polymorph|PHB",
+												"Weird|PHB",
+												"Wish|PHB",
+												"Invulnerability|XGE",
+												"Mass Polymorph|XGE",
+												"Psychic Scream|XGE",
+												"Blade of Disaster|TCE",
+												"Trueno de los Dioses|GdR",
+												"Obra Maestra|GPNM",
+												"Time travel|GPNM",
+												"Proyección Onírica|CdS"
+											],
+											"count": 1
+										}
+									}
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s10": [
+									"Filacteria|GdR",
+									"Muro de Frontera|GdR",
+									"Domo Impenetrable|GdR",
+									"True Name|DiablonomicndeValafar"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -979,6 +1217,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Comprehend Languages|PHB",
+									"Remote Access (UA)|UAModernMagic"
+								],
+								"s2": [
+									"Heat Metal|PHB",
+									"Find Vehicle (UA)|UAModernMagic"
+								],
+								"s3": [
+									"Lightning Bolt|PHB",
+									"Protection from Ballistics (UA)|UAModernMagic"
+								],
+								"s4": [
+									"Locate Creature|PHB",
+									"Synchronicity (UA)|UAModernMagic"
+								],
+								"s5": [
+									"Commune with City (UA)|UAModernMagic",
+									"Shutdown (UA)|UAModernMagic"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1106,6 +1371,52 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"known": {
+								"1": {
+									"_": [
+										{
+											"choose": {
+												"from": [
+													"Sapping Sting|EGW",
+													"Chill Touch|PHB",
+													"Spare the Dying|PHB",
+													"Toll the Dead (UA)|UAStarterSpells",
+													"Toll the Dead|XGE",
+													"Herir|GdR"
+												],
+												"count": 1
+											},
+											"count": 1
+										}
+									]
+								}
+							},
+							"prepared": {
+								"1": [
+									"False Life|PHB",
+									"Ray of Sickness|PHB"
+								],
+								"3": [
+									"Blindness/Deafness|PHB",
+									"Ray of Enfeeblement|PHB"
+								],
+								"5": [
+									"Animate Dead|PHB",
+									"Vampiric Touch|PHB"
+								],
+								"7": [
+									"Blight|PHB",
+									"Death Ward|PHB"
+								],
+								"9": [
+									"Antilife Shell|PHB",
+									"Cloudkill|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1117,7 +1428,7 @@
 							{
 								"name": "Knowledge Domain",
 								"entries": [
-									"The gods of knowledge\u2014including Oghma, Boccob, Gilean, Aureon, and Thoth\u2014value learning and understanding above all. Some teach that knowledge is to be gathered and shared in libraries and universities, or promote the practical knowledge of craft and invention. Some deities hoard knowledge and keep its secrets to themselves. And some promise their followers that they will gain tremendous power if they unlock the secrets of the multiverse. Followers of these gods study esoteric lore, collect old tomes, delve into the secret places of the earth, and learn all they can. Some gods of knowledge promote the practical knowledge of craft and invention, including smith deities like Gond, Reorx, Onatar, Moradin, Hephaestus, and Goibhniu.",
+									"The gods of knowledge—including Oghma, Boccob, Gilean, Aureon, and Thoth—value learning and understanding above all. Some teach that knowledge is to be gathered and shared in libraries and universities, or promote the practical knowledge of craft and invention. Some deities hoard knowledge and keep its secrets to themselves. And some promise their followers that they will gain tremendous power if they unlock the secrets of the multiverse. Followers of these gods study esoteric lore, collect old tomes, delve into the secret places of the earth, and learn all they can. Some gods of knowledge promote the practical knowledge of craft and invention, including smith deities like Gond, Reorx, Onatar, Moradin, Hephaestus, and Goibhniu.",
 									"At each indicated cleric level, you add the listed spells to your spells prepared.",
 									{
 										"type": "table",
@@ -1254,6 +1565,32 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"prepared": {
+								"1": [
+									"Command|PHB",
+									"Identify|PHB"
+								],
+								"3": [
+									"Augury|PHB",
+									"Suggestion|PHB"
+								],
+								"5": [
+									"Nondetection|PHB",
+									"Speak with Dead|PHB"
+								],
+								"7": [
+									"Arcane Eye|PHB",
+									"Confusion|PHB"
+								],
+								"9": [
+									"Legend Lore|PHB",
+									"Scrying|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1324,6 +1661,32 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"prepared": {
+								"1": [
+									"Command|PHB",
+									"Identify|PHB"
+								],
+								"3": [
+									"Augury|PHB",
+									"Suggestion|PHB"
+								],
+								"5": [
+									"Nondetection|PHB",
+									"Speak with Dead|PHB"
+								],
+								"7": [
+									"Arcane Eye|PHB",
+									"Confusion|PHB"
+								],
+								"9": [
+									"Legend Lore|PHB",
+									"Scrying|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1336,7 +1699,7 @@
 							{
 								"name": "Life Domain",
 								"entries": [
-									"The Life domain focuses on the vibrant positive energy\u2014one of the fundamental forces of the universe\u2014that sustains all life. The gods of life promote vitality and health through healing the sick and wounded, caring for those in need, and driving away the forces of death and undeath. Almost any non-evil deity can claim influence over this domain, particularly agricultural deities (such as Chauntea, Arawai, and Demeter), sun gods (such as Lathander, Pelor, and Re-Horakhty), gods of healing or endurance (such as Ilmater, Mishakal, Apollo, and Diancecht), and gods of home and community (such as Hestia, Hathor, and Boldrei).",
+									"The Life domain focuses on the vibrant positive energy—one of the fundamental forces of the universe—that sustains all life. The gods of life promote vitality and health through healing the sick and wounded, caring for those in need, and driving away the forces of death and undeath. Almost any non-evil deity can claim influence over this domain, particularly agricultural deities (such as Chauntea, Arawai, and Demeter), sun gods (such as Lathander, Pelor, and Re-Horakhty), gods of healing or endurance (such as Ilmater, Mishakal, Apollo, and Diancecht), and gods of home and community (such as Hestia, Hathor, and Boldrei).",
 									"At each indicated cleric level, you add the listed spells to your spells prepared.",
 									{
 										"type": "table",
@@ -1452,6 +1815,40 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"prepared": {
+								"1": [
+									"Bless|PHB",
+									"Cure Wounds|PHB"
+								],
+								"3": [
+									"Lesser Restoration|PHB",
+									"Spiritual Weapon|PHB"
+								],
+								"5": [
+									"Beacon of Hope|PHB",
+									"Revivify|PHB"
+								],
+								"7": [
+									"Death Ward|PHB",
+									"Guardian of Faith|PHB"
+								],
+								"9": [
+									"Mass Cure Wounds|PHB",
+									"Raise Dead|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s5": [
+									"Espíritu del Sauce|GdR"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1463,7 +1860,7 @@
 							{
 								"name": "Light Domain",
 								"entries": [
-									"Gods of light\u2014including Helm, Lathander, Pholtus, Branchala, the Silver Flame, Belenus, Apollo, and Re-Horakhty\u2014promote the ideals of rebirth and renewal, truth, vigilance, and beauty, often using the symbol of the sun. Some of these gods are portrayed as the sun itself or as a charioteer who guides the sun across the sky. Others are tireless sentinels whose eyes pierce every shadow and see through every deception. Some are deities of beauty and artistry, who teach that art is a vehicle for the soul's improvement. Clerics of a god of light are enlightened souls infused with radiance and the power of their gods' discerning vision, charged with chasing away lies and burning away darkness.",
+									"Gods of light—including Helm, Lathander, Pholtus, Branchala, the Silver Flame, Belenus, Apollo, and Re-Horakhty—promote the ideals of rebirth and renewal, truth, vigilance, and beauty, often using the symbol of the sun. Some of these gods are portrayed as the sun itself or as a charioteer who guides the sun across the sky. Others are tireless sentinels whose eyes pierce every shadow and see through every deception. Some are deities of beauty and artistry, who teach that art is a vehicle for the soul's improvement. Clerics of a god of light are enlightened souls infused with radiance and the power of their gods' discerning vision, charged with chasing away lies and burning away darkness.",
 									"At each indicated cleric level, you add the listed spells to your spells prepared.",
 									{
 										"type": "table",
@@ -1580,6 +1977,45 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"prepared": {
+								"1": [
+									"Burning Hands|PHB",
+									"Faerie Fire|PHB"
+								],
+								"3": [
+									"Flaming Sphere|PHB",
+									"Scorching Ray|PHB"
+								],
+								"5": [
+									"Daylight|PHB",
+									"Fireball|PHB"
+								],
+								"7": [
+									"Guardian of Faith|PHB",
+									"Wall of Fire|PHB"
+								],
+								"9": [
+									"Flame Strike|PHB",
+									"Scrying|PHB"
+								]
+							},
+							"known": {
+								"1": [
+									"Light|PHB#c"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s5": [
+									"Control Fire|GPNM"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1707,6 +2143,68 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"known": {
+								"1": {
+									"_": [
+										{
+											"choose": {
+												"from": [
+													"Hunter Sense|GHLoE",
+													"Druidcraft|PHB",
+													"Guidance|PHB",
+													"Mending|PHB",
+													"Poison Spray|PHB",
+													"Produce Flame|PHB",
+													"Resistance|PHB",
+													"Shillelagh|PHB",
+													"Thorn Whip|PHB",
+													"Infestation (UA)|UAStarterSpells",
+													"Primal Savagery (UA)|UAStarterSpells",
+													"Control Flames|XGE",
+													"Create Bonfire|XGE",
+													"Frostbite|XGE",
+													"Gust|XGE",
+													"Infestation|XGE",
+													"Magic Stone|XGE",
+													"Mold Earth|XGE",
+													"Primal Savagery|XGE",
+													"Shape Water|XGE",
+													"Thunderclap|XGE",
+													"Cronotruco|GPNM",
+													"Featherweaving|GMAM"
+												],
+												"count": 1
+											}
+										}
+									]
+								}
+							},
+							"prepared": {
+								"1": [
+									"Animal Friendship|PHB",
+									"Speak with Animals|PHB"
+								],
+								"3": [
+									"Barkskin|PHB",
+									"Spike Growth|PHB"
+								],
+								"5": [
+									"Plant Growth|PHB",
+									"Wind Wall|PHB"
+								],
+								"7": [
+									"Dominate Beast|PHB",
+									"Grasping Vine|PHB"
+								],
+								"9": [
+									"Insect Plague|PHB",
+									"Tree Stride|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1718,7 +2216,7 @@
 							{
 								"name": "Tempest Domain",
 								"entries": [
-									"Gods whose portfolios include the Tempest domain\u2014including Talos, Umberlee, Kord, Zeboim, the Devourer, Zeus, and Thor\u2014govern storms, sea, and sky. They include gods of lightning and thunder, gods of earthquakes, some fire gods, and certain gods of violence, physical strength, and courage. In some pantheons, a god of this domain rules over other deities and is known for swift justice delivered by thunderbolts. In the pantheons of seafaring people, gods of this domain are ocean deities and the patrons of sailors. Tempest gods send their clerics to inspire fear in the common folk, either to keep those folk on the path of righteousness or to encourage them to offer sacrifices of propitiation to ward off divine wrath.",
+									"Gods whose portfolios include the Tempest domain—including Talos, Umberlee, Kord, Zeboim, the Devourer, Zeus, and Thor—govern storms, sea, and sky. They include gods of lightning and thunder, gods of earthquakes, some fire gods, and certain gods of violence, physical strength, and courage. In some pantheons, a god of this domain rules over other deities and is known for swift justice delivered by thunderbolts. In the pantheons of seafaring people, gods of this domain are ocean deities and the patrons of sailors. Tempest gods send their clerics to inspire fear in the common folk, either to keep those folk on the path of righteousness or to encourage them to offer sacrifices of propitiation to ward off divine wrath.",
 									"At each indicated cleric level, you add the listed spells to your spells prepared.",
 									{
 										"type": "table",
@@ -1835,6 +2333,32 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"prepared": {
+								"1": [
+									"Fog Cloud|PHB",
+									"Thunderwave|PHB"
+								],
+								"3": [
+									"Gust of Wind|PHB",
+									"Shatter|PHB"
+								],
+								"5": [
+									"Call Lightning|PHB",
+									"Sleet Storm|PHB"
+								],
+								"7": [
+									"Control Water|PHB",
+									"Ice Storm|PHB"
+								],
+								"9": [
+									"Destructive Wave|PHB",
+									"Insect Plague|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1846,7 +2370,7 @@
 							{
 								"name": "Trickery Domain",
 								"entries": [
-									"Gods of trickery\u2014such as Tymora, Beshaba, Olidammara, the Traveler, Garl Glittergold, and Loki\u2014are mischief-makers and instigators who stand as a constant challenge to the accepted order among both gods and mortals. They're patrons of thieves, scoundrels, gamblers, rebels, and liberators. Their clerics are a disruptive force in the world, puncturing pride, mocking tyrants, stealing from the rich, freeing captives, and flouting hollow traditions. They prefer subterfuge, pranks, deception, and theft rather than direct confrontation.",
+									"Gods of trickery—such as Tymora, Beshaba, Olidammara, the Traveler, Garl Glittergold, and Loki—are mischief-makers and instigators who stand as a constant challenge to the accepted order among both gods and mortals. They're patrons of thieves, scoundrels, gamblers, rebels, and liberators. Their clerics are a disruptive force in the world, puncturing pride, mocking tyrants, stealing from the rich, freeing captives, and flouting hollow traditions. They prefer subterfuge, pranks, deception, and theft rather than direct confrontation.",
 									"At each indicated cleric level, you add the listed spells to your spells prepared.",
 									{
 										"type": "table",
@@ -1928,7 +2452,7 @@
 										"type": "entries",
 										"name": "Divine Strike",
 										"entries": [
-											"At 8th level, you gain the ability to infuse your weapon strikes with poison\u2014a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@dice 1d8} poison damage to the target. When you reach 14th level, the extra damage increases to {@dice 2d8}."
+											"At 8th level, you gain the ability to infuse your weapon strikes with poison—a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@dice 1d8} poison damage to the target. When you reach 14th level, the extra damage increases to {@dice 2d8}."
 										]
 									},
 									{
@@ -1957,6 +2481,40 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"prepared": {
+								"1": [
+									"Charm Person|PHB",
+									"Disguise Self|PHB"
+								],
+								"3": [
+									"Mirror Image|PHB",
+									"Pass without Trace|PHB"
+								],
+								"5": [
+									"Blink|PHB",
+									"Dispel Magic|PHB"
+								],
+								"7": [
+									"Dimension Door|PHB",
+									"Polymorph|PHB"
+								],
+								"9": [
+									"Dominate Person|PHB",
+									"Modify Memory|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Hipnosis|GMAM"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2083,6 +2641,32 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"prepared": {
+								"1": [
+									"Divine Favor|PHB",
+									"Shield of Faith|PHB"
+								],
+								"3": [
+									"Magic Weapon|PHB",
+									"Spiritual Weapon|PHB"
+								],
+								"5": [
+									"Crusader's Mantle|PHB",
+									"Spirit Guardians|PHB"
+								],
+								"7": [
+									"Freedom of Movement|PHB",
+									"Stoneskin|PHB"
+								],
+								"9": [
+									"Flame Strike|PHB",
+									"Hold Monster|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2221,6 +2805,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s5": [
+									"Animate Objects|PHB",
+									"Creation|PHB"
+								],
+								"s3": [
+									"Elemental Weapon|PHB",
+									"Protection from Energy|PHB"
+								],
+								"s4": [
+									"Fabricate|PHB",
+									"Wall of Fire|PHB"
+								],
+								"s2": [
+									"Heat Metal|PHB",
+									"Magic Weapon|PHB"
+								],
+								"s1": [
+									"Searing Smite|PHB",
+									"Shield|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2364,6 +2975,32 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"prepared": {
+								"1": [
+									"Identify|PHB",
+									"Searing Smite|PHB"
+								],
+								"3": [
+									"Heat Metal|PHB",
+									"Magic Weapon|PHB"
+								],
+								"5": [
+									"Elemental Weapon|PHB",
+									"Protection from Energy|PHB"
+								],
+								"7": [
+									"Fabricate|PHB",
+									"Wall of Fire|PHB"
+								],
+								"9": [
+									"Animate Objects|PHB",
+									"Creation|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2502,6 +3139,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s5": [
+									"Antilife Shell|PHB",
+									"Raise Dead|PHB"
+								],
+								"s1": [
+									"Bane|PHB",
+									"False Life|PHB"
+								],
+								"s4": [
+									"Blight|PHB",
+									"Death Ward|PHB"
+								],
+								"s2": [
+									"Gentle Repose|PHB",
+									"Ray of Enfeeblement|PHB"
+								],
+								"s3": [
+									"Revivify|PHB",
+									"Vampiric Touch|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2630,6 +3294,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Aid|PHB",
+									"Protection from Poison|PHB"
+								],
+								"s5": [
+									"Antilife Shell|PHB",
+									"Wall of Force|PHB"
+								],
+								"s1": [
+									"Compelled Duel|PHB",
+									"Protection from Evil and Good|PHB"
+								],
+								"s4": [
+									"Guardian of Faith|PHB",
+									"Otiluke's Resilient Sphere|PHB"
+								],
+								"s3": [
+									"Protection from Energy|PHB",
+									"Slow|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2758,6 +3449,32 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"prepared": {
+								"1": [
+									"Bless|PHB",
+									"Guiding Bolt|PHB"
+								],
+								"3": [
+									"Aid|PHB",
+									"Warding Bond|PHB"
+								],
+								"5": [
+									"Beacon of Hope|PHB",
+									"Crusader's Mantle|PHB"
+								],
+								"7": [
+									"Aura of Life|PHB",
+									"Guardian of Faith|PHB"
+								],
+								"9": [
+									"Circle of Power|PHB",
+									"Mass Cure Wounds|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2770,7 +3487,7 @@
 								"name": "Strength Domain (PSA)",
 								"entries": [
 									"\"The worthy shall hone a strong body that can withstand the boundless energies of the afterlife.\"",
-									"It falls to Rhonas to instill this teaching in those who would enter the afterlife\u2014but to his mind, the words themselves don't matter. Strength can't be taught. It must be built through practice and training. Rhonas demonstrates his teachings by his example, rather than by giving his students any kind of academic instruction. He welcomes the people of Naktamun to stand by the Hekma and watch him as he storms into the desert to battle the greatest horrors. He encourages them to observe his indomitable strength, for though they will never equal it, they can aspire to mimicry. He invites them to scrutinize every move and practice what they see.",
+									"It falls to Rhonas to instill this teaching in those who would enter the afterlife—but to his mind, the words themselves don't matter. Strength can't be taught. It must be built through practice and training. Rhonas demonstrates his teachings by his example, rather than by giving his students any kind of academic instruction. He welcomes the people of Naktamun to stand by the Hekma and watch him as he storms into the desert to battle the greatest horrors. He encourages them to observe his indomitable strength, for though they will never equal it, they can aspire to mimicry. He invites them to scrutinize every move and practice what they see.",
 									"At each indicated cleric level, add the listed spells to your spells prepared.",
 									{
 										"type": "table",
@@ -2885,6 +3602,68 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"known": {
+								"1": {
+									"_": [
+										{
+											"choose": {
+												"from": [
+													"Hunter Sense|GHLoE",
+													"Druidcraft|PHB",
+													"Guidance|PHB",
+													"Mending|PHB",
+													"Poison Spray|PHB",
+													"Produce Flame|PHB",
+													"Resistance|PHB",
+													"Shillelagh|PHB",
+													"Thorn Whip|PHB",
+													"Infestation (UA)|UAStarterSpells",
+													"Primal Savagery (UA)|UAStarterSpells",
+													"Control Flames|XGE",
+													"Create Bonfire|XGE",
+													"Frostbite|XGE",
+													"Gust|XGE",
+													"Infestation|XGE",
+													"Magic Stone|XGE",
+													"Mold Earth|XGE",
+													"Primal Savagery|XGE",
+													"Shape Water|XGE",
+													"Thunderclap|XGE",
+													"Cronotruco|GPNM",
+													"Featherweaving|GMAM"
+												],
+												"count": 1
+											}
+										}
+									]
+								}
+							},
+							"prepared": {
+								"1": [
+									"Divine Favor|PHB",
+									"Shield of Faith|PHB"
+								],
+								"3": [
+									"Enhance Ability|PHB",
+									"Protection from Poison|PHB"
+								],
+								"5": [
+									"Haste|PHB",
+									"Protection from Energy|PHB"
+								],
+								"7": [
+									"Dominate Beast|PHB",
+									"Stoneskin|PHB"
+								],
+								"9": [
+									"Destructive Wave|PHB",
+									"Insect Plague|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2896,8 +3675,8 @@
 							{
 								"name": "Ambition Domain (PSA)",
 								"entries": [
-									"\"The worthy shall strive for greatness\u2014supremacy in life leads to supremacy in the afterlife.\"",
-									"Bontu has fully embraced this dictum, and though she expends little effort in teaching it, she surely leads by example. Her viziers subtly plant the seeds that flower into the ambition the God-Pharaoh desires. Through insinuation, they remind acolytes and initiates alike that achieving one's place in the afterlife at the expense of others is not shameful, but is proof of the initiate's determination and drive. Nothing is more important than that drive, they suggest\u2014not the bonds of a crop, not friendship or love. Not even devotion to a deity.",
+									"\"The worthy shall strive for greatness—supremacy in life leads to supremacy in the afterlife.\"",
+									"Bontu has fully embraced this dictum, and though she expends little effort in teaching it, she surely leads by example. Her viziers subtly plant the seeds that flower into the ambition the God-Pharaoh desires. Through insinuation, they remind acolytes and initiates alike that achieving one's place in the afterlife at the expense of others is not shameful, but is proof of the initiate's determination and drive. Nothing is more important than that drive, they suggest—not the bonds of a crop, not friendship or love. Not even devotion to a deity.",
 									"At each indicated cleric level, add the listed spells to your spells prepared.",
 									{
 										"type": "table",
@@ -3008,6 +3787,32 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"prepared": {
+								"1": [
+									"Bane|PHB",
+									"Disguise Self|PHB"
+								],
+								"3": [
+									"Mirror Image|PHB",
+									"Ray of Enfeeblement|PHB"
+								],
+								"5": [
+									"Bestow Curse|PHB",
+									"Vampiric Touch|PHB"
+								],
+								"7": [
+									"Death Ward|PHB",
+									"Dimension Door|PHB"
+								],
+								"9": [
+									"Dominate Person|PHB",
+									"Modify Memory|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -3139,6 +3944,32 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"prepared": {
+								"1": [
+									"Searing Smite|PHB",
+									"Thunderous Smite|PHB"
+								],
+								"3": [
+									"Magic Weapon|PHB",
+									"Shatter|PHB"
+								],
+								"5": [
+									"Haste|PHB",
+									"Fireball|PHB"
+								],
+								"7": [
+									"Fire Shield|PHB",
+									"Freedom of Movement|PHB"
+								],
+								"9": [
+									"Destructive Wave|PHB",
+									"Flame Strike|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -3268,6 +4099,37 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"prepared": {
+								"1": [
+									"Bane|PHB",
+									"False Life|PHB"
+								],
+								"3": [
+									"Gentle Repose|PHB",
+									"Ray of Enfeeblement|PHB"
+								],
+								"5": [
+									"Revivify|PHB",
+									"Vampiric Touch|PHB"
+								],
+								"7": [
+									"Blight|PHB",
+									"Death Ward|PHB"
+								],
+								"9": [
+									"Antilife Shell|PHB",
+									"Raise Dead|PHB"
+								]
+							},
+							"known": {
+								"1": [
+									"Spare the Dying|PHB#c"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -3280,7 +4142,7 @@
 							{
 								"name": "Order Domain (UA)",
 								"entries": [
-									"The Order domain represents discipline, as well as service to a society or an institution, whether that service is rendered in obedience to or enforcement of the law\u2014civil, religious, or both. Gods on many worlds grant access to this domain, including Bane, Tyr, Majere, Erathis, Pholtus, Wee Jas, Aureon, Maglubiyet, Nuada, Athena, Anubis, Forseti, and Asmodeus.",
+									"The Order domain represents discipline, as well as service to a society or an institution, whether that service is rendered in obedience to or enforcement of the law—civil, religious, or both. Gods on many worlds grant access to this domain, including Bane, Tyr, Majere, Erathis, Pholtus, Wee Jas, Aureon, Maglubiyet, Nuada, Athena, Anubis, Forseti, and Asmodeus.",
 									"The ideal of order is obedience to the law above all else, rather than to a specific individual or the passing influence of emotion or popular rule. Clerics of order are typically concerned with how things are done, rather than whether an action's results are just. Following the law and obeying its edicts is critical, especially when it benefits these clerics and their deities.",
 									"More importantly, law establishes hierarchies. Those selected by the law to lead must be obeyed. Those who obey must do so to the best of their ability. In this manner, law creates an intricate web of obligations that allows society to forge order and security in a chaotic multiverse.",
 									"At each indicated cleric level, you add the listed spells to your spells prepared.",
@@ -3399,6 +4261,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Command|PHB",
+									"Heroism|PHB"
+								],
+								"s5": [
+									"Commune|PHB",
+									"Dominate Person|PHB"
+								],
+								"s4": [
+									"Compulsion|PHB",
+									"Locate Creature|PHB"
+								],
+								"s2": [
+									"Enhance Ability|PHB",
+									"Hold Person|PHB"
+								],
+								"s3": [
+									"Mass Healing Word|PHB",
+									"Slow|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -3410,7 +4299,7 @@
 							{
 								"name": "Darkness Domain (Twitter)",
 								"entries": [
-									"{@i [{@b Note: this subclass is likely not intended as official content:} \"For the curious, when building stuff for my own campaign I kind of don't care about balance. Anything I can break in design I can counterbreak five times as bad during a session, as needed. Plus, IMO stuff going sideways and weird is why I play the game.\"\u2014{@link Mike Mearls|https://twitter.com/mikemearls/status/1015752965213204480}]}",
+									"{@i [{@b Note: this subclass is likely not intended as official content:} \"For the curious, when building stuff for my own campaign I kind of don't care about balance. Anything I can break in design I can counterbreak five times as bad during a session, as needed. Plus, IMO stuff going sideways and weird is why I play the game.\"—{@link Mike Mearls|https://twitter.com/mikemearls/status/1015752965213204480}]}",
 									"Custom built for clerics of Zehir, and perhaps Lolth.",
 									"At each indicated cleric level, you add the listed spells to your spells prepared.",
 									{
@@ -3518,6 +4407,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Arms of Hadar|PHB",
+									"Hex|PHB"
+								],
+								"s4": [
+									"Blight|PHB",
+									"Evard's Black Tentacles|PHB"
+								],
+								"s2": [
+									"Blindness/Deafness|PHB",
+									"Darkness|PHB"
+								],
+								"s5": [
+									"Contagion|PHB",
+									"Enervation|XGE"
+								],
+								"s3": [
+									"Fear|PHB",
+									"Vampiric Touch|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -3529,7 +4445,7 @@
 							{
 								"name": "Destruction Domain (Twitter)",
 								"entries": [
-									"{@i [{@b Note: this subclass is likely not intended as official content:} \"For the curious, when building stuff for my own campaign I kind of don't care about balance. Anything I can break in design I can counterbreak five times as bad during a session, as needed. Plus, IMO stuff going sideways and weird is why I play the game.\"\u2014{@link Mike Mearls|https://twitter.com/mikemearls/status/1015752965213204480}]}",
+									"{@i [{@b Note: this subclass is likely not intended as official content:} \"For the curious, when building stuff for my own campaign I kind of don't care about balance. Anything I can break in design I can counterbreak five times as bad during a session, as needed. Plus, IMO stuff going sideways and weird is why I play the game.\"—{@link Mike Mearls|https://twitter.com/mikemearls/status/1015752965213204480}]}",
 									"Custom built for clerics of Gruumsh, and perhaps Tiamat.",
 									"At each indicated cleric level, you add the listed spells to your spells prepared.",
 									{
@@ -3648,6 +4564,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s5": [
+									"Cloudkill|PHB",
+									"Destructive Wave|PHB"
+								],
+								"s2": [
+									"Enlarge/Reduce|PHB",
+									"Shatter|PHB"
+								],
+								"s3": [
+									"Fireball|PHB",
+									"Lightning Bolt|PHB"
+								],
+								"s4": [
+									"Ice Storm|PHB",
+									"Staggering Smite|PHB"
+								],
+								"s1": [
+									"Inflict Wounds|PHB",
+									"Wrathful Smite|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -3659,7 +4602,7 @@
 							{
 								"name": "Beauty Domain (Twitter)",
 								"entries": [
-									"{@i [{@b Note: this subclass is likely not intended as official content:} \"For the curious, when building stuff for my own campaign I kind of don't care about balance. Anything I can break in design I can counterbreak five times as bad during a session, as needed. Plus, IMO stuff going sideways and weird is why I play the game.\"\u2014{@link Mike Mearls|https://twitter.com/mikemearls/status/1015752965213204480}]}",
+									"{@i [{@b Note: this subclass is likely not intended as official content:} \"For the curious, when building stuff for my own campaign I kind of don't care about balance. Anything I can break in design I can counterbreak five times as bad during a session, as needed. Plus, IMO stuff going sideways and weird is why I play the game.\"—{@link Mike Mearls|https://twitter.com/mikemearls/status/1015752965213204480}]}",
 									"Beauty can both bend minds and inspire hearts. It is the force that compels others to lose control and give in to their impulses, but it can also awaken strength and determination to steel a forlorn heart.",
 									"Clerics of Beauty bring joy and hope to the world. They are the beacon of light that reminds us that some things are worth fighting for. They seek to bring peace and amity among the world's folk. They fight only when they must, and prefer to use their magic to end fights with as little bloodshed as possible.",
 									"At each indicated cleric level, you add the listed spells to your spells prepared.",
@@ -3772,6 +4715,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s3": [
+									"Beacon of Hope|PHB",
+									"Hypnotic Pattern|PHB"
+								],
+								"s1": [
+									"Charm Person|PHB",
+									"Heroism|PHB"
+								],
+								"s4": [
+									"Compulsion|PHB",
+									"Charm Monster|XGE"
+								],
+								"s5": [
+									"Dominate Person|PHB",
+									"Hold Monster|PHB"
+								],
+								"s2": [
+									"Enthrall|PHB",
+									"Suggestion|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -3905,6 +4875,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Command|PHB",
+									"Heroism|PHB"
+								],
+								"s5": [
+									"Commune|PHB",
+									"Dominate Person|PHB"
+								],
+								"s4": [
+									"Compulsion|PHB",
+									"Locate Creature|PHB"
+								],
+								"s2": [
+									"Hold Person|PHB",
+									"Zone of Truth|PHB"
+								],
+								"s3": [
+									"Mass Healing Word|PHB",
+									"Slow|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4062,6 +5059,32 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s4": [
+									"Aura of Life|PHB",
+									"Greater Invisibility|PHB"
+								],
+								"s3": [
+									"Aura of Vitality|PHB"
+								],
+								"s5": [
+									"Circle of Power|PHB",
+									"Dream|PHB"
+								],
+								"s2": [
+									"Darkness|PHB",
+									"Invisibility|PHB"
+								],
+								"s1": [
+									"Faerie Fire|PHB",
+									"Sleep|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4076,7 +5099,7 @@
 								"name": "Love Domain (UA)",
 								"entries": [
 									"{@note Note: The Love domain was included in a leaked pre-release version of {@i Unearthed Arcana 2020 Subclasses, Part 2}, and superseded by the Unity domain for the final release.}",
-									"Love exists in many forms\u2014compassion, infatuation, friendly affection, and passionate love as a few facets. Whatever form these feelings take, the gods of love deepen the bonds between individuals.",
+									"Love exists in many forms—compassion, infatuation, friendly affection, and passionate love as a few facets. Whatever form these feelings take, the gods of love deepen the bonds between individuals.",
 									{
 										"type": "table",
 										"caption": "Love Deities",
@@ -4270,6 +5293,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s4": [
+									"Aura of Purity|PHB",
+									"Confusion|PHB"
+								],
+								"s3": [
+									"Beacon of Hope|PHB",
+									"Hypnotic Pattern|PHB"
+								],
+								"s1": [
+									"Charm Person|PHB",
+									"Heroism|PHB"
+								],
+								"s2": [
+									"Enthrall|PHB",
+									"Warding Bond|PHB"
+								],
+								"s5": [
+									"Greater Restoration|PHB",
+									"Hold Monster|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -4460,29 +5510,368 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Aid|PHB",
+									"Warding Bond|PHB"
+								],
+								"s4": [
+									"Aura of Purity|PHB",
+									"Guardian of Faith|PHB"
+								],
+								"s3": [
+									"Beacon of Hope|PHB",
+									"Sending|PHB"
+								],
+								"s5": [
+									"Greater Restoration|PHB",
+									"Rary's Telepathic Bond|PHB"
+								],
+								"s1": [
+									"Heroism|PHB",
+									"Shield of Faith|PHB"
+								]
+							}
+						}
 					]
 				},
-				{"name":"Dominio Shintoísta","shortName":"Shintoísta","source":"Himo","page":"??","subclassFeatures":[
-					[{"name":"Dominio Shintoísta","source":"Himo","page":"??","entries":["Los clérigos shintoístas veneran la naturaleza, sus espíritus y los yokai.",{"name":"Compañero Yokai","source":"Himo","page":"??","entries":["Una vez al día puedes lanzar {@spell find familiar} sin componente material para invocar un Yokai Menor. Con componente material puedes invocar uno de VD 1/2 o inferior; si gastas además un espacio y 10 po por nivel, uno de VD igual al nivel del conjuro. Solo puedes tener uno a la vez y el mismo yokai conserva recursos gastados entre invocaciones." ]},{"name":"Competencias adicionales","source":"Himo","page":"??","entries":["Eres competente con armaduras pesadas, katanas, tantos, bastones de todo tipo y kanabos."]},{"name":"Conjuros de Dominio","source":"Himo","page":"??","entries":[{"type":"table","colLabels":["Nivel","Conjuros"],"colStyles":["col-2 text-center","col-10"],"rows":[["1st","{@spell dissonant whispers}, {@spell silvery barbs|SCC}"],["3rd","{@spell invisibility}, {@spell phantasmal force}"],["5th","{@spell fear}, {@spell blink}"],["7th","Perrete del Morde, {@spell confusion}"],["9th","{@spell mislead}, {@spell telekinesis}"]]}]}]}],
-					[{"name":"Canalizar Divinidad: Puente Etéreo","source":"Himo","page":"??","entries":["Como acción, durante 10 minutos ves criaturas {@condition Invisible|PHB} o en el Plano Etéreo y puedes elegir como objetivo a las etéreas como si estuvieras en dicho plano."]}],
-					[{"name":"Evasión Etérea","source":"Himo","page":"??","entries":["Un número de veces igual a tu bonificador de competencia, cuando recibas daño puedes usar tu reacción para pasar al Plano Etéreo hasta el final de tu próximo turno."]}],
-					[{"name":"Golpe Divino","source":"Himo","page":"??","entries":["Una vez por turno, cuando una criatura reciba daño de uno de tus trucos o armas, añades {@dice 1d8} de daño radiante."]}],
-					[{"name":"Visión del Más Allá","source":"Himo","page":"??","entries":["Ganas visión verdadera a 60 pies."]}]
-				]},
-				{"name":"Dominio del Vacío","shortName":"Vacío","source":"Himo","page":"??","subclassFeatures":[
-					[{"name":"Dominio del Vacío","source":"Himo","page":"??","entries":["Estos clérigos veneran dioses de otros mundos, seres primigenios u Obyriths, llevando el vacío y sus horrores allá donde van.",{"name":"Tocado por el Vacío","source":"Himo","page":"??","entries":["Ganas telepatía a 60 pies; las criaturas pueden responder si compartís al menos un idioma. Ganas competencia en dos opciones entre Deep Speech y Qualith, Abisal, {@skill Arcana}, {@skill Investigation}, Perspicacia, {@item Alchemist's Supplies|PHB} o vehículos de agua, espacio o aire."]},{"name":"Conjuros de Dominio","source":"Himo","page":"??","entries":[{"type":"table","colLabels":["Nivel","Conjuros"],"colStyles":["col-2 text-center","col-10"],"rows":[["1st","{@spell dissonant whispers}, {@spell feather fall}"],["3rd","{@spell levitate}, {@spell silence}"],["5th","{@spell fly}, {@spell magic circle}"],["7th","{@spell banishment}, {@spell dimension door}"],["9th","{@spell contact other plane}, {@spell planar binding}"]]}]}]}],
-					[{"name":"Canalizar Divinidad: Empuje Gravitacional","source":"Himo","page":"??","entries":["Como acción creas un campo gravitatorio de 15 pies durante un minuto. Los objetos no asegurados se acercan 5 pies por turno y las criaturas elegidas lo tratan como terreno difícil y usan toda su velocidad para levantarse. Como acción, puedes atraer hasta 5 pies o derribar a una criatura con una salvación de Fuerza, o coger un objeto del área al vuelo."]}],
-					[{"name":"Liberar el Horror","source":"Himo","page":"??","entries":["Cuando una criatura te fuerce una salvación de Inteligencia, Sabiduría o Carisma, puedes usar tu reacción para obligarla a hacer una salvación de Carisma contra tu CD. Con un fallo recibe {@dice 2d6} psíquico y te teme. Criaturas inmunes al {@condition Frightened|PHB} o con Inteligencia inferior a 5 son inmunes."]}],
-					[{"name":"Golpe Divino","source":"Himo","page":"??","entries":["Al dañar con un truco, añades {@dice 1d8} psíquico; aumenta a {@dice 2d8} a nivel 14."]}],
-					[{"name":"Maestro del Vacío","source":"Himo","page":"??","entries":["Ganas resistencia al daño de fuerza y psíquico. Empuje Gravitacional se extiende a 30 pies y, mientras esté activo, ganas velocidad de vuelo con flotación igual a tu velocidad a pie."]}]
-				]},
-				{"name":"Dominio del Viaje","shortName":"Viaje","source":"Himo","page":"??","subclassFeatures":[
-					[{"name":"Dominio del Viaje","source":"Himo","page":"??","entries":[{"name":"Competencias extra","source":"Himo","page":"??","entries":["Ganas competencia con armas marciales, {@skill Persuasion} y dos idiomas a tu elección."]},{"name":"Vagabundo Escurridizo","source":"Himo","page":"??","entries":["Añades Sabiduría a la iniciativa. Durante el primer turno de combate recibes ataques con desventaja y tienes ventaja en salvaciones de Destreza."]},{"name":"Conjuros de Dominio","source":"Himo","page":"??","entries":[{"type":"table","colLabels":["Nivel","Conjuros"],"colStyles":["col-2 text-center","col-10"],"rows":[["1st","{@spell disguise self}, {@spell zephyr strike|XGE}"],["3rd","{@spell find steed}, {@spell vortex warp|SCC}"],["5th","{@spell Leomund's Tiny Hut|PHB|tiny hut}, {@spell thunder step|XGE}"],["7th","{@spell dimension door}, {@spell Sending (Hishna)|GMAM}"],["9th","{@spell passwall}, {@spell teleportation circle}"]]}]}]}],
-					[{"name":"Canalizar Divinidad: Huida Cortante","source":"Himo","page":"??","entries":["Como acción, una criatura voluntaria a 5 pies puede moverse inmediatamente su velocidad más tu nivel de clérigo dividido entre 5, sin ataques de oportunidad ni terreno difícil. Puede atravesar criaturas y, al final, elige hasta tu bonificador de competencia de las atravesadas: salvación de Destreza o {@dice 10} + tu nivel de daño cortante, la mitad con éxito; si falla por 7 o más sufre {@condition Sangrado|Himo|sangrado} {@dice 1d4}."]}],
-					[{"name":"Paso Sagrado","source":"Himo","page":"??","entries":["Estás permanentemente bajo los efectos de {@spell feather fall}, {@spell spider climb} y {@spell water walk}, salvo que no quieras. Las criaturas que viajen a pie o montadas a 60 pies de ti, incluido tú, doblan su velocidad de viaje."]}],
-					[{"name":"Golpe Divino","source":"Himo","page":"??","entries":["Tus ataques de arma añaden {@dice 1d8} del tipo del arma, aumentado a {@dice 2d8} a nivel 14."]}],
-					[{"name":"Godspeed","source":"Himo","page":"??","entries":["Siempre tienes preparados {@spell arcane gate}, {@spell teleport}, {@spell demiplane} y {@spell gate}. Si gastas Canalizar Divinidad al lanzar {@spell teleportation circle}, se vuelve permanente e {@condition Invisible|PHB} para cualquiera salvo ti."]}]
-				]}
+				{
+					"name": "Dominio Shintoísta",
+					"shortName": "Shintoísta",
+					"source": "Himo",
+					"page": "??",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Dominio Shintoísta",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Los clérigos shintoístas veneran la naturaleza, sus espíritus y los yokai.",
+									{
+										"name": "Compañero Yokai",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Una vez al día puedes lanzar {@spell find familiar} sin componente material para invocar un Yokai Menor. Con componente material puedes invocar uno de VD 1/2 o inferior; si gastas además un espacio y 10 po por nivel, uno de VD igual al nivel del conjuro. Solo puedes tener uno a la vez y el mismo yokai conserva recursos gastados entre invocaciones."
+										]
+									},
+									{
+										"name": "Competencias adicionales",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Eres competente con armaduras pesadas, katanas, tantos, bastones de todo tipo y kanabos."
+										]
+									},
+									{
+										"name": "Conjuros de Dominio",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											{
+												"type": "table",
+												"colLabels": [
+													"Nivel",
+													"Conjuros"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"1st",
+														"{@spell dissonant whispers}, {@spell silvery barbs|SCC}"
+													],
+													[
+														"3rd",
+														"{@spell invisibility}, {@spell phantasmal force}"
+													],
+													[
+														"5th",
+														"{@spell fear}, {@spell blink}"
+													],
+													[
+														"7th",
+														"Perrete del Morde, {@spell confusion}"
+													],
+													[
+														"9th",
+														"{@spell mislead}, {@spell telekinesis}"
+													]
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Canalizar Divinidad: Puente Etéreo",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Como acción, durante 10 minutos ves criaturas {@condition Invisible|PHB} o en el Plano Etéreo y puedes elegir como objetivo a las etéreas como si estuvieras en dicho plano."
+								]
+							}
+						],
+						[
+							{
+								"name": "Evasión Etérea",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Un número de veces igual a tu bonificador de competencia, cuando recibas daño puedes usar tu reacción para pasar al Plano Etéreo hasta el final de tu próximo turno."
+								]
+							}
+						],
+						[
+							{
+								"name": "Golpe Divino",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Una vez por turno, cuando una criatura reciba daño de uno de tus trucos o armas, añades {@dice 1d8} de daño radiante."
+								]
+							}
+						],
+						[
+							{
+								"name": "Visión del Más Allá",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Ganas visión verdadera a 60 pies."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Dominio del Vacío",
+					"shortName": "Vacío",
+					"source": "Himo",
+					"page": "??",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Dominio del Vacío",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Estos clérigos veneran dioses de otros mundos, seres primigenios u Obyriths, llevando el vacío y sus horrores allá donde van.",
+									{
+										"name": "Tocado por el Vacío",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Ganas telepatía a 60 pies; las criaturas pueden responder si compartís al menos un idioma. Ganas competencia en dos opciones entre Deep Speech y Qualith, Abisal, {@skill Arcana}, {@skill Investigation}, Perspicacia, {@item Alchemist's Supplies|PHB} o vehículos de agua, espacio o aire."
+										]
+									},
+									{
+										"name": "Conjuros de Dominio",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											{
+												"type": "table",
+												"colLabels": [
+													"Nivel",
+													"Conjuros"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"1st",
+														"{@spell dissonant whispers}, {@spell feather fall}"
+													],
+													[
+														"3rd",
+														"{@spell levitate}, {@spell silence}"
+													],
+													[
+														"5th",
+														"{@spell fly}, {@spell magic circle}"
+													],
+													[
+														"7th",
+														"{@spell banishment}, {@spell dimension door}"
+													],
+													[
+														"9th",
+														"{@spell contact other plane}, {@spell planar binding}"
+													]
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Canalizar Divinidad: Empuje Gravitacional",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Como acción creas un campo gravitatorio de 15 pies durante un minuto. Los objetos no asegurados se acercan 5 pies por turno y las criaturas elegidas lo tratan como terreno difícil y usan toda su velocidad para levantarse. Como acción, puedes atraer hasta 5 pies o derribar a una criatura con una salvación de Fuerza, o coger un objeto del área al vuelo."
+								]
+							}
+						],
+						[
+							{
+								"name": "Liberar el Horror",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Cuando una criatura te fuerce una salvación de Inteligencia, Sabiduría o Carisma, puedes usar tu reacción para obligarla a hacer una salvación de Carisma contra tu CD. Con un fallo recibe {@dice 2d6} psíquico y te teme. Criaturas inmunes al {@condition Frightened|PHB} o con Inteligencia inferior a 5 son inmunes."
+								]
+							}
+						],
+						[
+							{
+								"name": "Golpe Divino",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Al dañar con un truco, añades {@dice 1d8} psíquico; aumenta a {@dice 2d8} a nivel 14."
+								]
+							}
+						],
+						[
+							{
+								"name": "Maestro del Vacío",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Ganas resistencia al daño de fuerza y psíquico. Empuje Gravitacional se extiende a 30 pies y, mientras esté activo, ganas velocidad de vuelo con flotación igual a tu velocidad a pie."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Dominio del Viaje",
+					"shortName": "Viaje",
+					"source": "Himo",
+					"page": "??",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Dominio del Viaje",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									{
+										"name": "Competencias extra",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Ganas competencia con armas marciales, {@skill Persuasion} y dos idiomas a tu elección."
+										]
+									},
+									{
+										"name": "Vagabundo Escurridizo",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Añades Sabiduría a la iniciativa. Durante el primer turno de combate recibes ataques con desventaja y tienes ventaja en salvaciones de Destreza."
+										]
+									},
+									{
+										"name": "Conjuros de Dominio",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											{
+												"type": "table",
+												"colLabels": [
+													"Nivel",
+													"Conjuros"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"1st",
+														"{@spell disguise self}, {@spell zephyr strike|XGE}"
+													],
+													[
+														"3rd",
+														"{@spell find steed}, {@spell vortex warp|SCC}"
+													],
+													[
+														"5th",
+														"{@spell Leomund's Tiny Hut|PHB|tiny hut}, {@spell thunder step|XGE}"
+													],
+													[
+														"7th",
+														"{@spell dimension door}, {@spell Sending (Hishna)|GMAM}"
+													],
+													[
+														"9th",
+														"{@spell passwall}, {@spell teleportation circle}"
+													]
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Canalizar Divinidad: Huida Cortante",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Como acción, una criatura voluntaria a 5 pies puede moverse inmediatamente su velocidad más tu nivel de clérigo dividido entre 5, sin ataques de oportunidad ni terreno difícil. Puede atravesar criaturas y, al final, elige hasta tu bonificador de competencia de las atravesadas: salvación de Destreza o {@dice 10} + tu nivel de daño cortante, la mitad con éxito; si falla por 7 o más sufre {@condition Sangrado|Himo|sangrado} {@dice 1d4}."
+								]
+							}
+						],
+						[
+							{
+								"name": "Paso Sagrado",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Estás permanentemente bajo los efectos de {@spell feather fall}, {@spell spider climb} y {@spell water walk}, salvo que no quieras. Las criaturas que viajen a pie o montadas a 60 pies de ti, incluido tú, doblan su velocidad de viaje."
+								]
+							}
+						],
+						[
+							{
+								"name": "Golpe Divino",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Tus ataques de arma añaden {@dice 1d8} del tipo del arma, aumentado a {@dice 2d8} a nivel 14."
+								]
+							}
+						],
+						[
+							{
+								"name": "Godspeed",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Siempre tienes preparados {@spell arcane gate}, {@spell teleport}, {@spell demiplane} y {@spell gate}. Si gastas Canalizar Divinidad al lanzar {@spell teleportation circle}, se vuelve permanente e {@condition Invisible|PHB} para cualquiera salvo ti."
+								]
+							}
+						]
+					]
+				}
 			],
 			"fluff": [
 				{
@@ -4537,7 +5926,7 @@
 							],
 							"by": "Riggby the patriarch"
 						},
-						"Almost all the folk in the world who revere a deity live their lives without ever being directly touched by a divine being. As such, they can never know what it feels like to be a cleric\u2014someone who is not only a devout worshiper, but who has also been invested with a measure of a deity's power.",
+						"Almost all the folk in the world who revere a deity live their lives without ever being directly touched by a divine being. As such, they can never know what it feels like to be a cleric—someone who is not only a devout worshiper, but who has also been invested with a measure of a deity's power.",
 						"The question has long been debated: Does a mortal become a cleric as a consequence of deep devotion to one's deity, thereby attracting the god's favor? Or is it the deity who sees the potential in a person and calls that individual into service? Ultimately, perhaps, the answer doesn't matter. However clerics come into being, the world needs clerics as much as clerics and deities need each other.",
 						"If you're playing a cleric character, the following sections offer ways to add some detail to that character's history and personality.",
 						{

@@ -39,6 +39,10 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},

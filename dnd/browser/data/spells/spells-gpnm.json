@@ -39,6 +39,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -95,6 +99,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Desangrador",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -175,6 +187,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -262,6 +278,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -319,19 +339,14 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
+					},
 					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "The Celestial",
-							"shortName": "Celestial",
-							"source": "XGE"
-						}
+						"name": "Desangrador",
+						"source": "Himo"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -407,6 +422,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -467,18 +486,22 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
 			"entries": [
 				"Colocas un totem protector en una superficie estable en un punto que puedas ver dentro del rango que emite luz a 10 pies y ténue a otros 10. Toda criatura de tu elección a 10 pies del totem adquiere una resistencia de tu elección. Eliges esta resistencia al castear el conjuro y no lo puedes cambiar. Esta resistencia no puede ser ni perforante, ni cortante ni contundente.",
-				"El totem tiene 15 HP, CA 10+tu modificador de Spellcasting, inmunidad al daño que protege y puede ser transportado por una criatura mediana que use ambas manos o una grande a una mano. Si tu no quieres que alguien lo mueva, deben salvar fuerza para levantarlo, y contará como sobrecargado."
+				"El totem tiene 25 HP, CA 10+tu modificador de Spellcasting, inmunidad al daño que protege y puede ser transportado por una criatura mediana que use ambas manos o una grande a una mano. Si tu no quieres que alguien lo mueva, deben salvar fuerza para levantarlo, y contará como sobrecargado. Si los HP del totem se reducen a 0, el totem es destruido. Si no, puede ser reparado con {@spell Mending}."
 			],
 			"source": "GPNM",
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "Un pequeño totem dedicado a un espíritu de la naturaleza"
+				"m": "Un pequeño totem dedicado a un espíritu de la naturaleza por valor de 100 GP"
 			},
 			"savingThrow": [
 				"strength"
@@ -535,6 +558,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -616,6 +643,10 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -670,6 +701,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -731,6 +766,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -865,6 +904,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -977,6 +1020,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1097,6 +1144,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1170,6 +1221,10 @@
 					{
 						"name": "Sorcerer",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1235,6 +1290,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1319,6 +1378,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1389,6 +1456,10 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1473,6 +1544,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1554,6 +1633,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1625,52 +1712,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
-					{
-						"class": {
-							"name": "Artificer",
-							"source": "TCE"
-						},
-						"subclass": {
-							"name": "Armorer",
-							"shortName": "Armorer",
-							"source": "TCE"
-						}
 					},
 					{
-						"class": {
-							"name": "Artificer",
-							"source": "TCE"
-						},
-						"subclass": {
-							"name": "Artillerist",
-							"shortName": "Artillerist",
-							"source": "TCE"
-						}
+						"name": "Payaso",
+						"source": "Himo"
 					},
 					{
-						"class": {
-							"name": "Paladin",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Oath of Redemption",
-							"shortName": "Redemption",
-							"source": "XGE"
-						}
-					},
-					{
-						"class": {
-							"name": "Sorcerer",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Clockwork Soul",
-							"shortName": "Clockwork Soul",
-							"source": "TCE"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1735,6 +1784,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1802,6 +1855,10 @@
 					{
 						"name": "Bard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1868,6 +1925,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1995,6 +2060,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2048,6 +2117,14 @@
 					{
 						"name": "Warlock",
 						"source": "PHB"
+					},
+					{
+						"name": "Desangrador",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2126,6 +2203,10 @@
 					{
 						"name": "Warlock",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2206,6 +2287,10 @@
 					{
 						"name": "Druid",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2288,6 +2373,14 @@
 					{
 						"name": "Bard",
 						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2365,6 +2458,10 @@
 					{
 						"name": "Sorcerer",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2437,6 +2534,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2493,6 +2594,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2639,6 +2744,10 @@
 					{
 						"name": "Sorcerer",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2705,6 +2814,10 @@
 					{
 						"name": "Sorcerer",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2769,6 +2882,10 @@
 					{
 						"name": "Bard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2845,6 +2962,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2912,6 +3033,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2985,6 +3110,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -3060,6 +3189,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -3119,6 +3252,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -3183,6 +3320,10 @@
 					{
 						"name": "Bard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -3245,6 +3386,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -3321,6 +3466,10 @@
 					{
 						"name": "Sorcerer",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -3387,6 +3536,10 @@
 					{
 						"name": "Sorcerer",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -3458,6 +3611,10 @@
 					{
 						"name": "Warlock",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -3516,19 +3673,6 @@
 					{
 						"name": "Warlock",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
-					{
-						"class": {
-							"name": "Wizard",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Chronurgy",
-							"shortName": "Chronurgy",
-							"source": "EGW"
-						}
 					}
 				]
 			},
@@ -3592,6 +3736,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -3670,6 +3818,10 @@
 					{
 						"name": "Bard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -3740,6 +3892,10 @@
 					{
 						"name": "Warlock",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -3827,6 +3983,10 @@
 					{
 						"name": "Sorcerer",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -3941,30 +4101,10 @@
 					{
 						"name": "Sorcerer",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Light Domain",
-							"shortName": "Light",
-							"source": "PHB"
-						}
 					},
 					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "The Fiend",
-							"shortName": "Fiend",
-							"source": "PHB"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},

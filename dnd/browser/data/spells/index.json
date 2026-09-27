@@ -10,7 +10,6 @@
 	"LLK": "spells-llk.json",
 	"PHB": "spells-phb.json",
 	"SatO": "spells-sato.json",
-	"SCAG": "spells-scag.json",
 	"Stream": "spells-stream.json",
 	"UAArtificerRevisited": "spells-ua-ar.json",
 	"UAFighterRogueWizard": "spells-ua-frw.json",
@@ -24,5 +23,6 @@
 	"GdR": "spells-gdr.json",
 	"GPNM": "spells-gpnm.json",
 	"GMAM": "spells-gmam.json",
-	"CdS": "spells-cds.json"
+	"CdS": "spells-cds.json",
+	"DdV": "spells-ddv.json"
 }

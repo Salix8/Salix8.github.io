@@ -49,7 +49,35 @@
 			"miscTags": [
 				"SGT"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Create Spelljamming Helm",
@@ -85,7 +113,23 @@
 			],
 			"entries": [
 				"Holding the rod used in the casting of the spell, you touch a Large or smaller chair that is unoccupied. The rod disappears, and the chair is transformed into a {@item spelljamming helm|AAG}."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		}
 	]
 }

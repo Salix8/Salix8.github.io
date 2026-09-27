@@ -64,18 +64,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
+					},
 					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Ghost in the Machine (UA)",
-							"source": "UAModernMagic"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			}
@@ -138,18 +130,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
+					},
 					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "City (UA)",
-							"source": "UAModernMagic"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			}
@@ -189,7 +173,7 @@
 				"technomagic": true
 			},
 			"entries": [
-				"You touch a single computerized device or computer system to conjure a knowbot\u2014a partially sentient piece of software imprinted with vestiges of your own skills and computer abilities. For the duration of the spell, you can use a bonus action to have the knowbot execute a computer-related task that would normally require an action. The knowbot makes Intelligence ability checks using your ability score and proficiency bonuses (including your proficiency with hacking tools, if applicable).",
+				"You touch a single computerized device or computer system to conjure a knowbot—a partially sentient piece of software imprinted with vestiges of your own skills and computer abilities. For the duration of the spell, you can use a bonus action to have the knowbot execute a computer-related task that would normally require an action. The knowbot makes Intelligence ability checks using your ability score and proficiency bonuses (including your proficiency with hacking tools, if applicable).",
 				"You have a limited telepathic bond with the knowbot, out to a range of 500 feet from the device or system where the knowbot was conjured. If you move beyond this range, the knowbot disappears in {@dice 2d4} rounds, as if the duration of the spell had expired. Moving within range again immediately reestablishes the bond.",
 				"The knowbot is bound to the system in which it was created, and it stays there until it is dismissed or the spell's duration expires."
 			],
@@ -218,18 +202,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
+					},
 					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Ghost in the Machine (UA)",
-							"source": "UAModernMagic"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			}
@@ -286,18 +262,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
+					},
 					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Ghost in the Machine (UA)",
-							"source": "UAModernMagic"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			}
@@ -362,18 +330,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
+					},
 					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "City (UA)",
-							"source": "UAModernMagic"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			}
@@ -500,18 +460,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
+					},
 					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Ghost in the Machine (UA)",
-							"source": "UAModernMagic"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			}
@@ -572,18 +524,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
+					},
 					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Ghost in the Machine (UA)",
-							"source": "UAModernMagic"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			}
@@ -644,18 +588,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
+					},
 					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Ghost in the Machine (UA)",
-							"source": "UAModernMagic"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			}
@@ -707,6 +643,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			}
@@ -760,18 +700,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
+					},
 					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "City (UA)",
-							"source": "UAModernMagic"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			}
@@ -827,28 +759,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "City (UA)",
-							"source": "UAModernMagic"
-						}
 					},
 					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Ghost in the Machine (UA)",
-							"source": "UAModernMagic"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			}
@@ -908,28 +822,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "City (UA)",
-							"source": "UAModernMagic"
-						}
 					},
 					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Ghost in the Machine (UA)",
-							"source": "UAModernMagic"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			}
@@ -987,28 +883,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "City (UA)",
-							"source": "UAModernMagic"
-						}
 					},
 					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Ghost in the Machine (UA)",
-							"source": "UAModernMagic"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			}
@@ -1075,18 +953,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
+					},
 					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Ghost in the Machine (UA)",
-							"source": "UAModernMagic"
-						}
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			}

@@ -1461,6 +1461,205 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s3": [
+									"Fast Friends|AI",
+									"Incite Greed|AI",
+									"Motivational Speech|AI",
+									"Animate Dead|PHB",
+									"Beacon of Hope|PHB",
+									"Bestow Curse|PHB",
+									"Clairvoyance|PHB",
+									"Create Food and Water|PHB",
+									"Daylight|PHB",
+									"Dispel Magic|PHB",
+									"Feign Death|PHB",
+									"Glyph of Warding|PHB",
+									"Magic Circle|PHB",
+									"Mass Healing Word|PHB",
+									"Meld into Stone|PHB",
+									"Protection from Energy|PHB",
+									"Remove Curse|PHB",
+									"Revivify|PHB",
+									"Sending|PHB",
+									"Speak with Dead|PHB",
+									"Spirit Guardians|PHB",
+									"Tongues|PHB",
+									"Water Walk|PHB",
+									"Life Transference|XGE",
+									"Spirit Shroud|TCE",
+									"Restaurar Mente|GdR",
+									"Ritual Funerario de Zackie|GdR",
+									"Sequía|GMAM",
+									"Invocar Plaga|GMAM",
+									"Forma de Jaguar|GMAM",
+									"Forma de Águila|GMAM",
+									"Invocar Agua|GMAM",
+									"Elevar Mayor|GMAM",
+									"Atar Consciencia|CdS"
+								],
+								"s2": [
+									"Aid|PHB",
+									"Augury|PHB",
+									"Blindness/Deafness|PHB",
+									"Calm Emotions|PHB",
+									"Continual Flame|PHB",
+									"Enhance Ability|PHB",
+									"Find Traps|PHB",
+									"Gentle Repose|PHB",
+									"Hold Person|PHB",
+									"Lesser Restoration|PHB",
+									"Locate Object|PHB",
+									"Prayer of Healing|PHB",
+									"Protection from Poison|PHB",
+									"Silence|PHB",
+									"Spiritual Weapon|PHB",
+									"Warding Bond|PHB",
+									"Zone of Truth|PHB",
+									"Borrowed Knowledge|SCC",
+									"Covering|GdR",
+									"Mano de Gond|GdR",
+									"Sueño de Selûne|GdR",
+									"Restaurar Juventud|GPNM",
+									"Heartsense|GMAM",
+									"Visión de Papiro|GMAM",
+									"Desconcierto|GMAM",
+									"Breathsense|GMAM"
+								],
+								"s8": [
+									"Antimagic Field|PHB",
+									"Control Weather|PHB",
+									"Earthquake|PHB",
+									"Holy Aura|PHB",
+									"Divergencia Temporal|GPNM"
+								],
+								"s9": [
+									"Astral Projection|PHB",
+									"Gate|PHB",
+									"Mass Heal|PHB",
+									"True Resurrection|PHB",
+									"Rapto|GPNM"
+								],
+								"s1": [
+									"Bane|PHB",
+									"Bless|PHB",
+									"Command|PHB",
+									"Create or Destroy Water|PHB",
+									"Cure Wounds|PHB",
+									"Detect Evil and Good|PHB",
+									"Detect Magic|PHB",
+									"Detect Poison and Disease|PHB",
+									"Guiding Bolt|PHB",
+									"Healing Word|PHB",
+									"Inflict Wounds|PHB",
+									"Protection from Evil and Good|PHB",
+									"Purify Food and Drink|PHB",
+									"Sanctuary|PHB",
+									"Shield of Faith|PHB",
+									"Ceremony (UA)|UAStarterSpells",
+									"Guiding Hand (UA)|UAStarterSpells",
+									"Ceremony|XGE",
+									"Toque de Sune|GdR",
+									"Banerjee's Undead Minion|GPNM",
+									"Postrar|GPNM",
+									"Protección|GMAM",
+									"Espolón de Roca|GMAM",
+									"Vuelo de proyectil|GMAM",
+									"Elevar Menor|GMAM",
+									"Abrir Mente|CdS"
+								],
+								"s4": [
+									"Banishment|PHB",
+									"Control Water|PHB",
+									"Death Ward|PHB",
+									"Divination|PHB",
+									"Freedom of Movement|PHB",
+									"Guardian of Faith|PHB",
+									"Locate Creature|PHB",
+									"Stone Shape|PHB",
+									"Juicio de Selûne|GdR",
+									"Paso Elevado|GPNM",
+									"Marca Pasada|GPNM",
+									"Sincronía|GPNM",
+									"Ver Ramificación Temporal|GPNM",
+									"Sending (Hishna)|GMAM",
+									"Cambiar Cauce|GMAM",
+									"Bloqueo Onírico|CdS"
+								],
+								"s6": [
+									"Blade Barrier|PHB",
+									"Create Undead|PHB",
+									"Find the Path|PHB",
+									"Forbiddance|PHB",
+									"Harm|PHB",
+									"Heal|PHB",
+									"Heroes' Feast|PHB",
+									"Planar Ally|PHB",
+									"True Seeing|PHB",
+									"Word of Recall|PHB",
+									"Fusionar Parajes Oníricos|CdS"
+								],
+								"s5": [
+									"Commune|PHB",
+									"Contagion|PHB",
+									"Dispel Evil and Good|PHB",
+									"Flame Strike|PHB",
+									"Geas|PHB",
+									"Greater Restoration|PHB",
+									"Hallow|PHB",
+									"Insect Plague|PHB",
+									"Legend Lore|PHB",
+									"Mass Cure Wounds|PHB",
+									"Planar Binding|PHB",
+									"Raise Dead|PHB",
+									"Scrying|PHB",
+									"Dawn|XGE",
+									"Holy Weapon|XGE",
+									"Summon Celestial|TCE",
+									"Negar la Muerte|GdR",
+									"Precio del Alma|GdR",
+									"Plegaria del Martir|GPNM"
+								],
+								"s7": [
+									"Conjure Celestial|PHB",
+									"Divine Word|PHB",
+									"Etherealness|PHB",
+									"Fire Storm|PHB",
+									"Plane Shift|PHB",
+									"Regenerate|PHB",
+									"Resurrection|PHB",
+									"Symbol|PHB",
+									"Temple of the Gods|XGE"
+								],
+								"s0": [
+									"Guidance|PHB",
+									"Light|PHB",
+									"Mending|PHB",
+									"Resistance|PHB",
+									"Sacred Flame|PHB",
+									"Spare the Dying|PHB",
+									"Thaumaturgy|PHB",
+									"Hand of Radiance (UA)|UAStarterSpells",
+									"Toll the Dead (UA)|UAStarterSpells",
+									"Virtue (UA)|UAStarterSpells",
+									"Toll the Dead|XGE",
+									"Word of Radiance|XGE",
+									"Adivinación Menor|GdR",
+									"Herir|GdR",
+									"Featherweaving|GMAM"
+								],
+								"s10": [
+									"Filacteria|GdR",
+									"Muro de Frontera|GdR",
+									"Domo Impenetrable|GdR",
+									"True Name|DiablonomicndeValafar"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1536,6 +1735,205 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s3": [
+									"Fast Friends|AI",
+									"Incite Greed|AI",
+									"Motivational Speech|AI",
+									"Animate Dead|PHB",
+									"Beacon of Hope|PHB",
+									"Bestow Curse|PHB",
+									"Clairvoyance|PHB",
+									"Create Food and Water|PHB",
+									"Daylight|PHB",
+									"Dispel Magic|PHB",
+									"Feign Death|PHB",
+									"Glyph of Warding|PHB",
+									"Magic Circle|PHB",
+									"Mass Healing Word|PHB",
+									"Meld into Stone|PHB",
+									"Protection from Energy|PHB",
+									"Remove Curse|PHB",
+									"Revivify|PHB",
+									"Sending|PHB",
+									"Speak with Dead|PHB",
+									"Spirit Guardians|PHB",
+									"Tongues|PHB",
+									"Water Walk|PHB",
+									"Life Transference|XGE",
+									"Spirit Shroud|TCE",
+									"Restaurar Mente|GdR",
+									"Ritual Funerario de Zackie|GdR",
+									"Sequía|GMAM",
+									"Invocar Plaga|GMAM",
+									"Forma de Jaguar|GMAM",
+									"Forma de Águila|GMAM",
+									"Invocar Agua|GMAM",
+									"Elevar Mayor|GMAM",
+									"Atar Consciencia|CdS"
+								],
+								"s2": [
+									"Aid|PHB",
+									"Augury|PHB",
+									"Blindness/Deafness|PHB",
+									"Calm Emotions|PHB",
+									"Continual Flame|PHB",
+									"Enhance Ability|PHB",
+									"Find Traps|PHB",
+									"Gentle Repose|PHB",
+									"Hold Person|PHB",
+									"Lesser Restoration|PHB",
+									"Locate Object|PHB",
+									"Prayer of Healing|PHB",
+									"Protection from Poison|PHB",
+									"Silence|PHB",
+									"Spiritual Weapon|PHB",
+									"Warding Bond|PHB",
+									"Zone of Truth|PHB",
+									"Borrowed Knowledge|SCC",
+									"Covering|GdR",
+									"Mano de Gond|GdR",
+									"Sueño de Selûne|GdR",
+									"Restaurar Juventud|GPNM",
+									"Heartsense|GMAM",
+									"Visión de Papiro|GMAM",
+									"Desconcierto|GMAM",
+									"Breathsense|GMAM"
+								],
+								"s8": [
+									"Antimagic Field|PHB",
+									"Control Weather|PHB",
+									"Earthquake|PHB",
+									"Holy Aura|PHB",
+									"Divergencia Temporal|GPNM"
+								],
+								"s9": [
+									"Astral Projection|PHB",
+									"Gate|PHB",
+									"Mass Heal|PHB",
+									"True Resurrection|PHB",
+									"Rapto|GPNM"
+								],
+								"s1": [
+									"Bane|PHB",
+									"Bless|PHB",
+									"Command|PHB",
+									"Create or Destroy Water|PHB",
+									"Cure Wounds|PHB",
+									"Detect Evil and Good|PHB",
+									"Detect Magic|PHB",
+									"Detect Poison and Disease|PHB",
+									"Guiding Bolt|PHB",
+									"Healing Word|PHB",
+									"Inflict Wounds|PHB",
+									"Protection from Evil and Good|PHB",
+									"Purify Food and Drink|PHB",
+									"Sanctuary|PHB",
+									"Shield of Faith|PHB",
+									"Ceremony (UA)|UAStarterSpells",
+									"Guiding Hand (UA)|UAStarterSpells",
+									"Ceremony|XGE",
+									"Toque de Sune|GdR",
+									"Banerjee's Undead Minion|GPNM",
+									"Postrar|GPNM",
+									"Protección|GMAM",
+									"Espolón de Roca|GMAM",
+									"Vuelo de proyectil|GMAM",
+									"Elevar Menor|GMAM",
+									"Abrir Mente|CdS"
+								],
+								"s4": [
+									"Banishment|PHB",
+									"Control Water|PHB",
+									"Death Ward|PHB",
+									"Divination|PHB",
+									"Freedom of Movement|PHB",
+									"Guardian of Faith|PHB",
+									"Locate Creature|PHB",
+									"Stone Shape|PHB",
+									"Juicio de Selûne|GdR",
+									"Paso Elevado|GPNM",
+									"Marca Pasada|GPNM",
+									"Sincronía|GPNM",
+									"Ver Ramificación Temporal|GPNM",
+									"Sending (Hishna)|GMAM",
+									"Cambiar Cauce|GMAM",
+									"Bloqueo Onírico|CdS"
+								],
+								"s6": [
+									"Blade Barrier|PHB",
+									"Create Undead|PHB",
+									"Find the Path|PHB",
+									"Forbiddance|PHB",
+									"Harm|PHB",
+									"Heal|PHB",
+									"Heroes' Feast|PHB",
+									"Planar Ally|PHB",
+									"True Seeing|PHB",
+									"Word of Recall|PHB",
+									"Fusionar Parajes Oníricos|CdS"
+								],
+								"s5": [
+									"Commune|PHB",
+									"Contagion|PHB",
+									"Dispel Evil and Good|PHB",
+									"Flame Strike|PHB",
+									"Geas|PHB",
+									"Greater Restoration|PHB",
+									"Hallow|PHB",
+									"Insect Plague|PHB",
+									"Legend Lore|PHB",
+									"Mass Cure Wounds|PHB",
+									"Planar Binding|PHB",
+									"Raise Dead|PHB",
+									"Scrying|PHB",
+									"Dawn|XGE",
+									"Holy Weapon|XGE",
+									"Summon Celestial|TCE",
+									"Negar la Muerte|GdR",
+									"Precio del Alma|GdR",
+									"Plegaria del Martir|GPNM"
+								],
+								"s7": [
+									"Conjure Celestial|PHB",
+									"Divine Word|PHB",
+									"Etherealness|PHB",
+									"Fire Storm|PHB",
+									"Plane Shift|PHB",
+									"Regenerate|PHB",
+									"Resurrection|PHB",
+									"Symbol|PHB",
+									"Temple of the Gods|XGE"
+								],
+								"s0": [
+									"Guidance|PHB",
+									"Light|PHB",
+									"Mending|PHB",
+									"Resistance|PHB",
+									"Sacred Flame|PHB",
+									"Spare the Dying|PHB",
+									"Thaumaturgy|PHB",
+									"Hand of Radiance (UA)|UAStarterSpells",
+									"Toll the Dead (UA)|UAStarterSpells",
+									"Virtue (UA)|UAStarterSpells",
+									"Toll the Dead|XGE",
+									"Word of Radiance|XGE",
+									"Adivinación Menor|GdR",
+									"Herir|GdR",
+									"Featherweaving|GMAM"
+								],
+								"s10": [
+									"Filacteria|GdR",
+									"Muro de Frontera|GdR",
+									"Domo Impenetrable|GdR",
+									"True Name|DiablonomicndeValafar"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1907,7 +2305,7 @@
 										"type": "entries",
 										"name": "Ignite",
 										"entries": [
-											"At 1st level, you gain the ability to start fires with a touch. As an action, you can magically ignite a flammable object you touch with your hand\u2014an object such as a torch, a piece of tinder, or the hem of drapes."
+											"At 1st level, you gain the ability to start fires with a touch. As an action, you can magically ignite a flammable object you touch with your hand—an object such as a torch, a piece of tinder, or the hem of drapes."
 										]
 									},
 									{
@@ -2207,6 +2605,30 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s3": [
+									"Blinding Smite|PHB",
+									"Elemental Weapon|PHB"
+								],
+								"s2": [
+									"Branding Smite|PHB",
+									"Magic Weapon|PHB"
+								],
+								"s1": [
+									"Compelled Duel|PHB",
+									"Searing Smite|PHB",
+									"Thunderous Smite|PHB",
+									"Wrathful Smite|PHB"
+								],
+								"s4": [
+									"Staggering Smite|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2375,6 +2797,1089 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Good",
+							"known": {
+								"1": [
+									"Cure Wounds|PHB"
+								]
+							},
+							"expanded": {
+								"1": [
+									[
+										"Guidance|PHB",
+										"Light|PHB",
+										"Mending|PHB",
+										"Resistance|PHB",
+										"Sacred Flame|PHB",
+										"Spare the Dying|PHB",
+										"Thaumaturgy|PHB",
+										"Hand of Radiance (UA)|UAStarterSpells",
+										"Toll the Dead (UA)|UAStarterSpells",
+										"Virtue (UA)|UAStarterSpells",
+										"Toll the Dead|XGE",
+										"Word of Radiance|XGE",
+										"Adivinación Menor|GdR",
+										"Herir|GdR",
+										"Featherweaving|GMAM"
+									],
+									[
+										"Bane|PHB",
+										"Bless|PHB",
+										"Command|PHB",
+										"Create or Destroy Water|PHB",
+										"Cure Wounds|PHB",
+										"Detect Evil and Good|PHB",
+										"Detect Magic|PHB",
+										"Detect Poison and Disease|PHB",
+										"Guiding Bolt|PHB",
+										"Healing Word|PHB",
+										"Inflict Wounds|PHB",
+										"Protection from Evil and Good|PHB",
+										"Purify Food and Drink|PHB",
+										"Sanctuary|PHB",
+										"Shield of Faith|PHB",
+										"Ceremony (UA)|UAStarterSpells",
+										"Guiding Hand (UA)|UAStarterSpells",
+										"Ceremony|XGE",
+										"Toque de Sune|GdR",
+										"Banerjee's Undead Minion|GPNM",
+										"Postrar|GPNM",
+										"Protección|GMAM",
+										"Espolón de Roca|GMAM",
+										"Vuelo de proyectil|GMAM",
+										"Elevar Menor|GMAM",
+										"Abrir Mente|CdS"
+									]
+								],
+								"3": [
+									[
+										"Aid|PHB",
+										"Augury|PHB",
+										"Blindness/Deafness|PHB",
+										"Calm Emotions|PHB",
+										"Continual Flame|PHB",
+										"Enhance Ability|PHB",
+										"Find Traps|PHB",
+										"Gentle Repose|PHB",
+										"Hold Person|PHB",
+										"Lesser Restoration|PHB",
+										"Locate Object|PHB",
+										"Prayer of Healing|PHB",
+										"Protection from Poison|PHB",
+										"Silence|PHB",
+										"Spiritual Weapon|PHB",
+										"Warding Bond|PHB",
+										"Zone of Truth|PHB",
+										"Borrowed Knowledge|SCC",
+										"Covering|GdR",
+										"Mano de Gond|GdR",
+										"Sueño de Selûne|GdR",
+										"Restaurar Juventud|GPNM",
+										"Heartsense|GMAM",
+										"Visión de Papiro|GMAM",
+										"Desconcierto|GMAM",
+										"Breathsense|GMAM"
+									]
+								],
+								"5": [
+									[
+										"Fast Friends|AI",
+										"Incite Greed|AI",
+										"Motivational Speech|AI",
+										"Animate Dead|PHB",
+										"Beacon of Hope|PHB",
+										"Bestow Curse|PHB",
+										"Clairvoyance|PHB",
+										"Create Food and Water|PHB",
+										"Daylight|PHB",
+										"Dispel Magic|PHB",
+										"Feign Death|PHB",
+										"Glyph of Warding|PHB",
+										"Magic Circle|PHB",
+										"Mass Healing Word|PHB",
+										"Meld into Stone|PHB",
+										"Protection from Energy|PHB",
+										"Remove Curse|PHB",
+										"Revivify|PHB",
+										"Sending|PHB",
+										"Speak with Dead|PHB",
+										"Spirit Guardians|PHB",
+										"Tongues|PHB",
+										"Water Walk|PHB",
+										"Life Transference|XGE",
+										"Spirit Shroud|TCE",
+										"Restaurar Mente|GdR",
+										"Ritual Funerario de Zackie|GdR",
+										"Sequía|GMAM",
+										"Invocar Plaga|GMAM",
+										"Forma de Jaguar|GMAM",
+										"Forma de Águila|GMAM",
+										"Invocar Agua|GMAM",
+										"Elevar Mayor|GMAM",
+										"Atar Consciencia|CdS"
+									]
+								],
+								"7": [
+									[
+										"Banishment|PHB",
+										"Control Water|PHB",
+										"Death Ward|PHB",
+										"Divination|PHB",
+										"Freedom of Movement|PHB",
+										"Guardian of Faith|PHB",
+										"Locate Creature|PHB",
+										"Stone Shape|PHB",
+										"Juicio de Selûne|GdR",
+										"Paso Elevado|GPNM",
+										"Marca Pasada|GPNM",
+										"Sincronía|GPNM",
+										"Ver Ramificación Temporal|GPNM",
+										"Sending (Hishna)|GMAM",
+										"Cambiar Cauce|GMAM",
+										"Bloqueo Onírico|CdS"
+									]
+								],
+								"9": [
+									[
+										"Commune|PHB",
+										"Contagion|PHB",
+										"Dispel Evil and Good|PHB",
+										"Flame Strike|PHB",
+										"Geas|PHB",
+										"Greater Restoration|PHB",
+										"Hallow|PHB",
+										"Insect Plague|PHB",
+										"Legend Lore|PHB",
+										"Mass Cure Wounds|PHB",
+										"Planar Binding|PHB",
+										"Raise Dead|PHB",
+										"Scrying|PHB",
+										"Dawn|XGE",
+										"Holy Weapon|XGE",
+										"Summon Celestial|TCE",
+										"Negar la Muerte|GdR",
+										"Precio del Alma|GdR",
+										"Plegaria del Martir|GPNM"
+									]
+								],
+								"11": [
+									[
+										"Blade Barrier|PHB",
+										"Create Undead|PHB",
+										"Find the Path|PHB",
+										"Forbiddance|PHB",
+										"Harm|PHB",
+										"Heal|PHB",
+										"Heroes' Feast|PHB",
+										"Planar Ally|PHB",
+										"True Seeing|PHB",
+										"Word of Recall|PHB",
+										"Fusionar Parajes Oníricos|CdS"
+									]
+								],
+								"13": [
+									[
+										"Conjure Celestial|PHB",
+										"Divine Word|PHB",
+										"Etherealness|PHB",
+										"Fire Storm|PHB",
+										"Plane Shift|PHB",
+										"Regenerate|PHB",
+										"Resurrection|PHB",
+										"Symbol|PHB",
+										"Temple of the Gods|XGE"
+									]
+								],
+								"15": [
+									[
+										"Antimagic Field|PHB",
+										"Control Weather|PHB",
+										"Earthquake|PHB",
+										"Holy Aura|PHB",
+										"Divergencia Temporal|GPNM"
+									]
+								],
+								"17": [
+									[
+										"Astral Projection|PHB",
+										"Gate|PHB",
+										"Mass Heal|PHB",
+										"True Resurrection|PHB",
+										"Rapto|GPNM"
+									]
+								]
+							}
+						},
+						{
+							"name": "Evil",
+							"known": {
+								"1": [
+									"Inflict Wounds|PHB"
+								]
+							},
+							"expanded": {
+								"1": [
+									[
+										"Guidance|PHB",
+										"Light|PHB",
+										"Mending|PHB",
+										"Resistance|PHB",
+										"Sacred Flame|PHB",
+										"Spare the Dying|PHB",
+										"Thaumaturgy|PHB",
+										"Hand of Radiance (UA)|UAStarterSpells",
+										"Toll the Dead (UA)|UAStarterSpells",
+										"Virtue (UA)|UAStarterSpells",
+										"Toll the Dead|XGE",
+										"Word of Radiance|XGE",
+										"Adivinación Menor|GdR",
+										"Herir|GdR",
+										"Featherweaving|GMAM"
+									],
+									[
+										"Bane|PHB",
+										"Bless|PHB",
+										"Command|PHB",
+										"Create or Destroy Water|PHB",
+										"Cure Wounds|PHB",
+										"Detect Evil and Good|PHB",
+										"Detect Magic|PHB",
+										"Detect Poison and Disease|PHB",
+										"Guiding Bolt|PHB",
+										"Healing Word|PHB",
+										"Inflict Wounds|PHB",
+										"Protection from Evil and Good|PHB",
+										"Purify Food and Drink|PHB",
+										"Sanctuary|PHB",
+										"Shield of Faith|PHB",
+										"Ceremony (UA)|UAStarterSpells",
+										"Guiding Hand (UA)|UAStarterSpells",
+										"Ceremony|XGE",
+										"Toque de Sune|GdR",
+										"Banerjee's Undead Minion|GPNM",
+										"Postrar|GPNM",
+										"Protección|GMAM",
+										"Espolón de Roca|GMAM",
+										"Vuelo de proyectil|GMAM",
+										"Elevar Menor|GMAM",
+										"Abrir Mente|CdS"
+									]
+								],
+								"3": [
+									[
+										"Aid|PHB",
+										"Augury|PHB",
+										"Blindness/Deafness|PHB",
+										"Calm Emotions|PHB",
+										"Continual Flame|PHB",
+										"Enhance Ability|PHB",
+										"Find Traps|PHB",
+										"Gentle Repose|PHB",
+										"Hold Person|PHB",
+										"Lesser Restoration|PHB",
+										"Locate Object|PHB",
+										"Prayer of Healing|PHB",
+										"Protection from Poison|PHB",
+										"Silence|PHB",
+										"Spiritual Weapon|PHB",
+										"Warding Bond|PHB",
+										"Zone of Truth|PHB",
+										"Borrowed Knowledge|SCC",
+										"Covering|GdR",
+										"Mano de Gond|GdR",
+										"Sueño de Selûne|GdR",
+										"Restaurar Juventud|GPNM",
+										"Heartsense|GMAM",
+										"Visión de Papiro|GMAM",
+										"Desconcierto|GMAM",
+										"Breathsense|GMAM"
+									]
+								],
+								"5": [
+									[
+										"Fast Friends|AI",
+										"Incite Greed|AI",
+										"Motivational Speech|AI",
+										"Animate Dead|PHB",
+										"Beacon of Hope|PHB",
+										"Bestow Curse|PHB",
+										"Clairvoyance|PHB",
+										"Create Food and Water|PHB",
+										"Daylight|PHB",
+										"Dispel Magic|PHB",
+										"Feign Death|PHB",
+										"Glyph of Warding|PHB",
+										"Magic Circle|PHB",
+										"Mass Healing Word|PHB",
+										"Meld into Stone|PHB",
+										"Protection from Energy|PHB",
+										"Remove Curse|PHB",
+										"Revivify|PHB",
+										"Sending|PHB",
+										"Speak with Dead|PHB",
+										"Spirit Guardians|PHB",
+										"Tongues|PHB",
+										"Water Walk|PHB",
+										"Life Transference|XGE",
+										"Spirit Shroud|TCE",
+										"Restaurar Mente|GdR",
+										"Ritual Funerario de Zackie|GdR",
+										"Sequía|GMAM",
+										"Invocar Plaga|GMAM",
+										"Forma de Jaguar|GMAM",
+										"Forma de Águila|GMAM",
+										"Invocar Agua|GMAM",
+										"Elevar Mayor|GMAM",
+										"Atar Consciencia|CdS"
+									]
+								],
+								"7": [
+									[
+										"Banishment|PHB",
+										"Control Water|PHB",
+										"Death Ward|PHB",
+										"Divination|PHB",
+										"Freedom of Movement|PHB",
+										"Guardian of Faith|PHB",
+										"Locate Creature|PHB",
+										"Stone Shape|PHB",
+										"Juicio de Selûne|GdR",
+										"Paso Elevado|GPNM",
+										"Marca Pasada|GPNM",
+										"Sincronía|GPNM",
+										"Ver Ramificación Temporal|GPNM",
+										"Sending (Hishna)|GMAM",
+										"Cambiar Cauce|GMAM",
+										"Bloqueo Onírico|CdS"
+									]
+								],
+								"9": [
+									[
+										"Commune|PHB",
+										"Contagion|PHB",
+										"Dispel Evil and Good|PHB",
+										"Flame Strike|PHB",
+										"Geas|PHB",
+										"Greater Restoration|PHB",
+										"Hallow|PHB",
+										"Insect Plague|PHB",
+										"Legend Lore|PHB",
+										"Mass Cure Wounds|PHB",
+										"Planar Binding|PHB",
+										"Raise Dead|PHB",
+										"Scrying|PHB",
+										"Dawn|XGE",
+										"Holy Weapon|XGE",
+										"Summon Celestial|TCE",
+										"Negar la Muerte|GdR",
+										"Precio del Alma|GdR",
+										"Plegaria del Martir|GPNM"
+									]
+								],
+								"11": [
+									[
+										"Blade Barrier|PHB",
+										"Create Undead|PHB",
+										"Find the Path|PHB",
+										"Forbiddance|PHB",
+										"Harm|PHB",
+										"Heal|PHB",
+										"Heroes' Feast|PHB",
+										"Planar Ally|PHB",
+										"True Seeing|PHB",
+										"Word of Recall|PHB",
+										"Fusionar Parajes Oníricos|CdS"
+									]
+								],
+								"13": [
+									[
+										"Conjure Celestial|PHB",
+										"Divine Word|PHB",
+										"Etherealness|PHB",
+										"Fire Storm|PHB",
+										"Plane Shift|PHB",
+										"Regenerate|PHB",
+										"Resurrection|PHB",
+										"Symbol|PHB",
+										"Temple of the Gods|XGE"
+									]
+								],
+								"15": [
+									[
+										"Antimagic Field|PHB",
+										"Control Weather|PHB",
+										"Earthquake|PHB",
+										"Holy Aura|PHB",
+										"Divergencia Temporal|GPNM"
+									]
+								],
+								"17": [
+									[
+										"Astral Projection|PHB",
+										"Gate|PHB",
+										"Mass Heal|PHB",
+										"True Resurrection|PHB",
+										"Rapto|GPNM"
+									]
+								]
+							}
+						},
+						{
+							"name": "Law",
+							"known": {
+								"1": [
+									"Bless|PHB"
+								]
+							},
+							"expanded": {
+								"1": [
+									[
+										"Guidance|PHB",
+										"Light|PHB",
+										"Mending|PHB",
+										"Resistance|PHB",
+										"Sacred Flame|PHB",
+										"Spare the Dying|PHB",
+										"Thaumaturgy|PHB",
+										"Hand of Radiance (UA)|UAStarterSpells",
+										"Toll the Dead (UA)|UAStarterSpells",
+										"Virtue (UA)|UAStarterSpells",
+										"Toll the Dead|XGE",
+										"Word of Radiance|XGE",
+										"Adivinación Menor|GdR",
+										"Herir|GdR",
+										"Featherweaving|GMAM"
+									],
+									[
+										"Bane|PHB",
+										"Bless|PHB",
+										"Command|PHB",
+										"Create or Destroy Water|PHB",
+										"Cure Wounds|PHB",
+										"Detect Evil and Good|PHB",
+										"Detect Magic|PHB",
+										"Detect Poison and Disease|PHB",
+										"Guiding Bolt|PHB",
+										"Healing Word|PHB",
+										"Inflict Wounds|PHB",
+										"Protection from Evil and Good|PHB",
+										"Purify Food and Drink|PHB",
+										"Sanctuary|PHB",
+										"Shield of Faith|PHB",
+										"Ceremony (UA)|UAStarterSpells",
+										"Guiding Hand (UA)|UAStarterSpells",
+										"Ceremony|XGE",
+										"Toque de Sune|GdR",
+										"Banerjee's Undead Minion|GPNM",
+										"Postrar|GPNM",
+										"Protección|GMAM",
+										"Espolón de Roca|GMAM",
+										"Vuelo de proyectil|GMAM",
+										"Elevar Menor|GMAM",
+										"Abrir Mente|CdS"
+									]
+								],
+								"3": [
+									[
+										"Aid|PHB",
+										"Augury|PHB",
+										"Blindness/Deafness|PHB",
+										"Calm Emotions|PHB",
+										"Continual Flame|PHB",
+										"Enhance Ability|PHB",
+										"Find Traps|PHB",
+										"Gentle Repose|PHB",
+										"Hold Person|PHB",
+										"Lesser Restoration|PHB",
+										"Locate Object|PHB",
+										"Prayer of Healing|PHB",
+										"Protection from Poison|PHB",
+										"Silence|PHB",
+										"Spiritual Weapon|PHB",
+										"Warding Bond|PHB",
+										"Zone of Truth|PHB",
+										"Borrowed Knowledge|SCC",
+										"Covering|GdR",
+										"Mano de Gond|GdR",
+										"Sueño de Selûne|GdR",
+										"Restaurar Juventud|GPNM",
+										"Heartsense|GMAM",
+										"Visión de Papiro|GMAM",
+										"Desconcierto|GMAM",
+										"Breathsense|GMAM"
+									]
+								],
+								"5": [
+									[
+										"Fast Friends|AI",
+										"Incite Greed|AI",
+										"Motivational Speech|AI",
+										"Animate Dead|PHB",
+										"Beacon of Hope|PHB",
+										"Bestow Curse|PHB",
+										"Clairvoyance|PHB",
+										"Create Food and Water|PHB",
+										"Daylight|PHB",
+										"Dispel Magic|PHB",
+										"Feign Death|PHB",
+										"Glyph of Warding|PHB",
+										"Magic Circle|PHB",
+										"Mass Healing Word|PHB",
+										"Meld into Stone|PHB",
+										"Protection from Energy|PHB",
+										"Remove Curse|PHB",
+										"Revivify|PHB",
+										"Sending|PHB",
+										"Speak with Dead|PHB",
+										"Spirit Guardians|PHB",
+										"Tongues|PHB",
+										"Water Walk|PHB",
+										"Life Transference|XGE",
+										"Spirit Shroud|TCE",
+										"Restaurar Mente|GdR",
+										"Ritual Funerario de Zackie|GdR",
+										"Sequía|GMAM",
+										"Invocar Plaga|GMAM",
+										"Forma de Jaguar|GMAM",
+										"Forma de Águila|GMAM",
+										"Invocar Agua|GMAM",
+										"Elevar Mayor|GMAM",
+										"Atar Consciencia|CdS"
+									]
+								],
+								"7": [
+									[
+										"Banishment|PHB",
+										"Control Water|PHB",
+										"Death Ward|PHB",
+										"Divination|PHB",
+										"Freedom of Movement|PHB",
+										"Guardian of Faith|PHB",
+										"Locate Creature|PHB",
+										"Stone Shape|PHB",
+										"Juicio de Selûne|GdR",
+										"Paso Elevado|GPNM",
+										"Marca Pasada|GPNM",
+										"Sincronía|GPNM",
+										"Ver Ramificación Temporal|GPNM",
+										"Sending (Hishna)|GMAM",
+										"Cambiar Cauce|GMAM",
+										"Bloqueo Onírico|CdS"
+									]
+								],
+								"9": [
+									[
+										"Commune|PHB",
+										"Contagion|PHB",
+										"Dispel Evil and Good|PHB",
+										"Flame Strike|PHB",
+										"Geas|PHB",
+										"Greater Restoration|PHB",
+										"Hallow|PHB",
+										"Insect Plague|PHB",
+										"Legend Lore|PHB",
+										"Mass Cure Wounds|PHB",
+										"Planar Binding|PHB",
+										"Raise Dead|PHB",
+										"Scrying|PHB",
+										"Dawn|XGE",
+										"Holy Weapon|XGE",
+										"Summon Celestial|TCE",
+										"Negar la Muerte|GdR",
+										"Precio del Alma|GdR",
+										"Plegaria del Martir|GPNM"
+									]
+								],
+								"11": [
+									[
+										"Blade Barrier|PHB",
+										"Create Undead|PHB",
+										"Find the Path|PHB",
+										"Forbiddance|PHB",
+										"Harm|PHB",
+										"Heal|PHB",
+										"Heroes' Feast|PHB",
+										"Planar Ally|PHB",
+										"True Seeing|PHB",
+										"Word of Recall|PHB",
+										"Fusionar Parajes Oníricos|CdS"
+									]
+								],
+								"13": [
+									[
+										"Conjure Celestial|PHB",
+										"Divine Word|PHB",
+										"Etherealness|PHB",
+										"Fire Storm|PHB",
+										"Plane Shift|PHB",
+										"Regenerate|PHB",
+										"Resurrection|PHB",
+										"Symbol|PHB",
+										"Temple of the Gods|XGE"
+									]
+								],
+								"15": [
+									[
+										"Antimagic Field|PHB",
+										"Control Weather|PHB",
+										"Earthquake|PHB",
+										"Holy Aura|PHB",
+										"Divergencia Temporal|GPNM"
+									]
+								],
+								"17": [
+									[
+										"Astral Projection|PHB",
+										"Gate|PHB",
+										"Mass Heal|PHB",
+										"True Resurrection|PHB",
+										"Rapto|GPNM"
+									]
+								]
+							}
+						},
+						{
+							"name": "Chaos",
+							"known": {
+								"1": [
+									"Bane|PHB"
+								]
+							},
+							"expanded": {
+								"1": [
+									[
+										"Guidance|PHB",
+										"Light|PHB",
+										"Mending|PHB",
+										"Resistance|PHB",
+										"Sacred Flame|PHB",
+										"Spare the Dying|PHB",
+										"Thaumaturgy|PHB",
+										"Hand of Radiance (UA)|UAStarterSpells",
+										"Toll the Dead (UA)|UAStarterSpells",
+										"Virtue (UA)|UAStarterSpells",
+										"Toll the Dead|XGE",
+										"Word of Radiance|XGE",
+										"Adivinación Menor|GdR",
+										"Herir|GdR",
+										"Featherweaving|GMAM"
+									],
+									[
+										"Bane|PHB",
+										"Bless|PHB",
+										"Command|PHB",
+										"Create or Destroy Water|PHB",
+										"Cure Wounds|PHB",
+										"Detect Evil and Good|PHB",
+										"Detect Magic|PHB",
+										"Detect Poison and Disease|PHB",
+										"Guiding Bolt|PHB",
+										"Healing Word|PHB",
+										"Inflict Wounds|PHB",
+										"Protection from Evil and Good|PHB",
+										"Purify Food and Drink|PHB",
+										"Sanctuary|PHB",
+										"Shield of Faith|PHB",
+										"Ceremony (UA)|UAStarterSpells",
+										"Guiding Hand (UA)|UAStarterSpells",
+										"Ceremony|XGE",
+										"Toque de Sune|GdR",
+										"Banerjee's Undead Minion|GPNM",
+										"Postrar|GPNM",
+										"Protección|GMAM",
+										"Espolón de Roca|GMAM",
+										"Vuelo de proyectil|GMAM",
+										"Elevar Menor|GMAM",
+										"Abrir Mente|CdS"
+									]
+								],
+								"3": [
+									[
+										"Aid|PHB",
+										"Augury|PHB",
+										"Blindness/Deafness|PHB",
+										"Calm Emotions|PHB",
+										"Continual Flame|PHB",
+										"Enhance Ability|PHB",
+										"Find Traps|PHB",
+										"Gentle Repose|PHB",
+										"Hold Person|PHB",
+										"Lesser Restoration|PHB",
+										"Locate Object|PHB",
+										"Prayer of Healing|PHB",
+										"Protection from Poison|PHB",
+										"Silence|PHB",
+										"Spiritual Weapon|PHB",
+										"Warding Bond|PHB",
+										"Zone of Truth|PHB",
+										"Borrowed Knowledge|SCC",
+										"Covering|GdR",
+										"Mano de Gond|GdR",
+										"Sueño de Selûne|GdR",
+										"Restaurar Juventud|GPNM",
+										"Heartsense|GMAM",
+										"Visión de Papiro|GMAM",
+										"Desconcierto|GMAM",
+										"Breathsense|GMAM"
+									]
+								],
+								"5": [
+									[
+										"Fast Friends|AI",
+										"Incite Greed|AI",
+										"Motivational Speech|AI",
+										"Animate Dead|PHB",
+										"Beacon of Hope|PHB",
+										"Bestow Curse|PHB",
+										"Clairvoyance|PHB",
+										"Create Food and Water|PHB",
+										"Daylight|PHB",
+										"Dispel Magic|PHB",
+										"Feign Death|PHB",
+										"Glyph of Warding|PHB",
+										"Magic Circle|PHB",
+										"Mass Healing Word|PHB",
+										"Meld into Stone|PHB",
+										"Protection from Energy|PHB",
+										"Remove Curse|PHB",
+										"Revivify|PHB",
+										"Sending|PHB",
+										"Speak with Dead|PHB",
+										"Spirit Guardians|PHB",
+										"Tongues|PHB",
+										"Water Walk|PHB",
+										"Life Transference|XGE",
+										"Spirit Shroud|TCE",
+										"Restaurar Mente|GdR",
+										"Ritual Funerario de Zackie|GdR",
+										"Sequía|GMAM",
+										"Invocar Plaga|GMAM",
+										"Forma de Jaguar|GMAM",
+										"Forma de Águila|GMAM",
+										"Invocar Agua|GMAM",
+										"Elevar Mayor|GMAM",
+										"Atar Consciencia|CdS"
+									]
+								],
+								"7": [
+									[
+										"Banishment|PHB",
+										"Control Water|PHB",
+										"Death Ward|PHB",
+										"Divination|PHB",
+										"Freedom of Movement|PHB",
+										"Guardian of Faith|PHB",
+										"Locate Creature|PHB",
+										"Stone Shape|PHB",
+										"Juicio de Selûne|GdR",
+										"Paso Elevado|GPNM",
+										"Marca Pasada|GPNM",
+										"Sincronía|GPNM",
+										"Ver Ramificación Temporal|GPNM",
+										"Sending (Hishna)|GMAM",
+										"Cambiar Cauce|GMAM",
+										"Bloqueo Onírico|CdS"
+									]
+								],
+								"9": [
+									[
+										"Commune|PHB",
+										"Contagion|PHB",
+										"Dispel Evil and Good|PHB",
+										"Flame Strike|PHB",
+										"Geas|PHB",
+										"Greater Restoration|PHB",
+										"Hallow|PHB",
+										"Insect Plague|PHB",
+										"Legend Lore|PHB",
+										"Mass Cure Wounds|PHB",
+										"Planar Binding|PHB",
+										"Raise Dead|PHB",
+										"Scrying|PHB",
+										"Dawn|XGE",
+										"Holy Weapon|XGE",
+										"Summon Celestial|TCE",
+										"Negar la Muerte|GdR",
+										"Precio del Alma|GdR",
+										"Plegaria del Martir|GPNM"
+									]
+								],
+								"11": [
+									[
+										"Blade Barrier|PHB",
+										"Create Undead|PHB",
+										"Find the Path|PHB",
+										"Forbiddance|PHB",
+										"Harm|PHB",
+										"Heal|PHB",
+										"Heroes' Feast|PHB",
+										"Planar Ally|PHB",
+										"True Seeing|PHB",
+										"Word of Recall|PHB",
+										"Fusionar Parajes Oníricos|CdS"
+									]
+								],
+								"13": [
+									[
+										"Conjure Celestial|PHB",
+										"Divine Word|PHB",
+										"Etherealness|PHB",
+										"Fire Storm|PHB",
+										"Plane Shift|PHB",
+										"Regenerate|PHB",
+										"Resurrection|PHB",
+										"Symbol|PHB",
+										"Temple of the Gods|XGE"
+									]
+								],
+								"15": [
+									[
+										"Antimagic Field|PHB",
+										"Control Weather|PHB",
+										"Earthquake|PHB",
+										"Holy Aura|PHB",
+										"Divergencia Temporal|GPNM"
+									]
+								],
+								"17": [
+									[
+										"Astral Projection|PHB",
+										"Gate|PHB",
+										"Mass Heal|PHB",
+										"True Resurrection|PHB",
+										"Rapto|GPNM"
+									]
+								]
+							}
+						},
+						{
+							"name": "Neutrality",
+							"known": {
+								"1": [
+									"Protection from Evil and Good|PHB"
+								]
+							},
+							"expanded": {
+								"1": [
+									[
+										"Guidance|PHB",
+										"Light|PHB",
+										"Mending|PHB",
+										"Resistance|PHB",
+										"Sacred Flame|PHB",
+										"Spare the Dying|PHB",
+										"Thaumaturgy|PHB",
+										"Hand of Radiance (UA)|UAStarterSpells",
+										"Toll the Dead (UA)|UAStarterSpells",
+										"Virtue (UA)|UAStarterSpells",
+										"Toll the Dead|XGE",
+										"Word of Radiance|XGE",
+										"Adivinación Menor|GdR",
+										"Herir|GdR",
+										"Featherweaving|GMAM"
+									],
+									[
+										"Bane|PHB",
+										"Bless|PHB",
+										"Command|PHB",
+										"Create or Destroy Water|PHB",
+										"Cure Wounds|PHB",
+										"Detect Evil and Good|PHB",
+										"Detect Magic|PHB",
+										"Detect Poison and Disease|PHB",
+										"Guiding Bolt|PHB",
+										"Healing Word|PHB",
+										"Inflict Wounds|PHB",
+										"Protection from Evil and Good|PHB",
+										"Purify Food and Drink|PHB",
+										"Sanctuary|PHB",
+										"Shield of Faith|PHB",
+										"Ceremony (UA)|UAStarterSpells",
+										"Guiding Hand (UA)|UAStarterSpells",
+										"Ceremony|XGE",
+										"Toque de Sune|GdR",
+										"Banerjee's Undead Minion|GPNM",
+										"Postrar|GPNM",
+										"Protección|GMAM",
+										"Espolón de Roca|GMAM",
+										"Vuelo de proyectil|GMAM",
+										"Elevar Menor|GMAM",
+										"Abrir Mente|CdS"
+									]
+								],
+								"3": [
+									[
+										"Aid|PHB",
+										"Augury|PHB",
+										"Blindness/Deafness|PHB",
+										"Calm Emotions|PHB",
+										"Continual Flame|PHB",
+										"Enhance Ability|PHB",
+										"Find Traps|PHB",
+										"Gentle Repose|PHB",
+										"Hold Person|PHB",
+										"Lesser Restoration|PHB",
+										"Locate Object|PHB",
+										"Prayer of Healing|PHB",
+										"Protection from Poison|PHB",
+										"Silence|PHB",
+										"Spiritual Weapon|PHB",
+										"Warding Bond|PHB",
+										"Zone of Truth|PHB",
+										"Borrowed Knowledge|SCC",
+										"Covering|GdR",
+										"Mano de Gond|GdR",
+										"Sueño de Selûne|GdR",
+										"Restaurar Juventud|GPNM",
+										"Heartsense|GMAM",
+										"Visión de Papiro|GMAM",
+										"Desconcierto|GMAM",
+										"Breathsense|GMAM"
+									]
+								],
+								"5": [
+									[
+										"Fast Friends|AI",
+										"Incite Greed|AI",
+										"Motivational Speech|AI",
+										"Animate Dead|PHB",
+										"Beacon of Hope|PHB",
+										"Bestow Curse|PHB",
+										"Clairvoyance|PHB",
+										"Create Food and Water|PHB",
+										"Daylight|PHB",
+										"Dispel Magic|PHB",
+										"Feign Death|PHB",
+										"Glyph of Warding|PHB",
+										"Magic Circle|PHB",
+										"Mass Healing Word|PHB",
+										"Meld into Stone|PHB",
+										"Protection from Energy|PHB",
+										"Remove Curse|PHB",
+										"Revivify|PHB",
+										"Sending|PHB",
+										"Speak with Dead|PHB",
+										"Spirit Guardians|PHB",
+										"Tongues|PHB",
+										"Water Walk|PHB",
+										"Life Transference|XGE",
+										"Spirit Shroud|TCE",
+										"Restaurar Mente|GdR",
+										"Ritual Funerario de Zackie|GdR",
+										"Sequía|GMAM",
+										"Invocar Plaga|GMAM",
+										"Forma de Jaguar|GMAM",
+										"Forma de Águila|GMAM",
+										"Invocar Agua|GMAM",
+										"Elevar Mayor|GMAM",
+										"Atar Consciencia|CdS"
+									]
+								],
+								"7": [
+									[
+										"Banishment|PHB",
+										"Control Water|PHB",
+										"Death Ward|PHB",
+										"Divination|PHB",
+										"Freedom of Movement|PHB",
+										"Guardian of Faith|PHB",
+										"Locate Creature|PHB",
+										"Stone Shape|PHB",
+										"Juicio de Selûne|GdR",
+										"Paso Elevado|GPNM",
+										"Marca Pasada|GPNM",
+										"Sincronía|GPNM",
+										"Ver Ramificación Temporal|GPNM",
+										"Sending (Hishna)|GMAM",
+										"Cambiar Cauce|GMAM",
+										"Bloqueo Onírico|CdS"
+									]
+								],
+								"9": [
+									[
+										"Commune|PHB",
+										"Contagion|PHB",
+										"Dispel Evil and Good|PHB",
+										"Flame Strike|PHB",
+										"Geas|PHB",
+										"Greater Restoration|PHB",
+										"Hallow|PHB",
+										"Insect Plague|PHB",
+										"Legend Lore|PHB",
+										"Mass Cure Wounds|PHB",
+										"Planar Binding|PHB",
+										"Raise Dead|PHB",
+										"Scrying|PHB",
+										"Dawn|XGE",
+										"Holy Weapon|XGE",
+										"Summon Celestial|TCE",
+										"Negar la Muerte|GdR",
+										"Precio del Alma|GdR",
+										"Plegaria del Martir|GPNM"
+									]
+								],
+								"11": [
+									[
+										"Blade Barrier|PHB",
+										"Create Undead|PHB",
+										"Find the Path|PHB",
+										"Forbiddance|PHB",
+										"Harm|PHB",
+										"Heal|PHB",
+										"Heroes' Feast|PHB",
+										"Planar Ally|PHB",
+										"True Seeing|PHB",
+										"Word of Recall|PHB",
+										"Fusionar Parajes Oníricos|CdS"
+									]
+								],
+								"13": [
+									[
+										"Conjure Celestial|PHB",
+										"Divine Word|PHB",
+										"Etherealness|PHB",
+										"Fire Storm|PHB",
+										"Plane Shift|PHB",
+										"Regenerate|PHB",
+										"Resurrection|PHB",
+										"Symbol|PHB",
+										"Temple of the Gods|XGE"
+									]
+								],
+								"15": [
+									[
+										"Antimagic Field|PHB",
+										"Control Weather|PHB",
+										"Earthquake|PHB",
+										"Holy Aura|PHB",
+										"Divergencia Temporal|GPNM"
+									]
+								],
+								"17": [
+									[
+										"Astral Projection|PHB",
+										"Gate|PHB",
+										"Mass Heal|PHB",
+										"True Resurrection|PHB",
+										"Rapto|GPNM"
+									]
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s10": [
+									"Filacteria|GdR",
+									"Muro de Frontera|GdR",
+									"Domo Impenetrable|GdR",
+									"True Name|DiablonomicndeValafar"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2495,6 +4000,15 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"known": {
+								"3": [
+									"Darkness|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2714,7 +4228,7 @@
 										"type": "entries",
 										"name": "Rage of Fallen Ostoria",
 										"entries": [
-											"Starting at 14th level, you gain the ability to channel the souls of your ancestors into your physical form. When you start casting a sorcerer spell on your turn and expend a spell slot, you can increase your size by one category\u2014from Medium to Large, for example.",
+											"Starting at 14th level, you gain the ability to channel the souls of your ancestors into your physical form. When you start casting a sorcerer spell on your turn and expend a spell slot, you can increase your size by one category—from Medium to Large, for example.",
 											"This increase lasts for 1 minute. It ends early if you die or are incapacitated. Until it ends, you enjoy the following benefits:",
 											{
 												"type": "list",
@@ -2746,6 +4260,98 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"subSubclass": "Frost",
+							"expanded": {
+								"s1": [
+									"Armor of Agathys|PHB"
+								],
+								"s2": [
+									"Hold Person|PHB"
+								],
+								"s0": [
+									"Ray of Frost|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"subSubclass": "Fire",
+							"expanded": {
+								"s1": [
+									"Burning Hands|PHB"
+								],
+								"s0": [
+									"Fire Bolt|PHB"
+								],
+								"s2": [
+									"Flaming Sphere|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"subSubclass": "Hill",
+							"expanded": {
+								"s2": [
+									"Enlarge/Reduce|PHB"
+								],
+								"s1": [
+									"Heroism|PHB"
+								],
+								"s0": [
+									"Shillelagh|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"subSubclass": "Stone",
+							"expanded": {
+								"s1": [
+									"Entangle|PHB"
+								],
+								"s0": [
+									"Resistance|PHB"
+								],
+								"s2": [
+									"Spike Growth|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"subSubclass": "Cloud",
+							"expanded": {
+								"s1": [
+									"Fog Cloud|PHB"
+								],
+								"s2": [
+									"Invisibility|PHB"
+								],
+								"s0": [
+									"Minor Illusion|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"subSubclass": "Storm",
+							"expanded": {
+								"s2": [
+									"Gust of Wind|PHB"
+								],
+								"s0": [
+									"Shocking Grasp|PHB"
+								],
+								"s1": [
+									"Thunderwave|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2758,7 +4364,7 @@
 							{
 								"name": "Aberrant Mind",
 								"entries": [
-									"An alien influence has wrapped its tendrils around you, warping you in both body and mind. Perhaps a psychic splinter lodged in your psyche after you suffered domination by an aboleth. Maybe you were born somewhere tainted by the Far Realm, a planar blot that changed you forever. Or perhaps mind flayers kidnapped you, subjecting you to the nightmarish process of ceremorphosis\u2014but the transformation failed and left you altered.",
+									"An alien influence has wrapped its tendrils around you, warping you in both body and mind. Perhaps a psychic splinter lodged in your psyche after you suffered domination by an aboleth. Maybe you were born somewhere tainted by the Far Realm, a planar blot that changed you forever. Or perhaps mind flayers kidnapped you, subjecting you to the nightmarish process of ceremorphosis—but the transformation failed and left you altered.",
 									{
 										"type": "inset",
 										"name": "Unique Disturbance",
@@ -2887,6 +4493,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Arms of Hadar|PHB",
+									"Dissonant Whispers|PHB"
+								],
+								"s2": [
+									"Calm Emotions|PHB",
+									"Detect Thoughts|PHB"
+								],
+								"s4": [
+									"Compulsion|PHB",
+									"Evard's Black Tentacles|PHB"
+								],
+								"s3": [
+									"Hunger of Hadar|PHB",
+									"Sending|PHB"
+								],
+								"s5": [
+									"Modify Memory|PHB",
+									"Rary's Telepathic Bond|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -3046,14 +4679,532 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Alarm|PHB",
+									"Protection from Evil and Good|PHB"
+								],
+								"s5": [
+									"Animate Objects|PHB",
+									"Wall of Force|PHB"
+								],
+								"s4": [
+									"Arcane Eye|PHB",
+									"Otiluke's Resilient Sphere|PHB"
+								],
+								"s3": [
+									"Counterspell|PHB",
+									"Glyph of Warding|PHB"
+								],
+								"s2": [
+									"Find Traps|PHB",
+									"Heat Metal|PHB"
+								]
+							}
+						}
 					]
 				},
-				{"name":"Linaje Vampírico","shortName":"Vampírico","source":"Himo","page":"??","subclassFeatures":[
-					[{"name":"Linaje Vampírico","source":"Himo","page":"??","entries":["Tu maldición vampírica ha corrompido tu vínculo con la Onda, haciéndote un depredador nocturno sin necesidad de ser un muerto viviente.",{"name":"Trepar como Araña","source":"Himo","page":"??","entries":["Tienes velocidad de escalada igual a tu velocidad andando, puedes adherirte a paredes y techos y moverte por ellos sin usar las manos."]},{"name":"Conjuros de Linaje","source":"Himo","page":"??","entries":["Estos conjuros cuentan como de hechicero y no para tu límite de conjuros conocidos. Al ganar un nivel de hechicero, puedes cambiar uno por un conjuro de Encantamiento o Nigromancia de las listas de hechicero, mago o brujo.",{"type":"table","colLabels":["Nivel","Conjuros"],"colStyles":["col-2 text-center","col-10"],"rows":[["1st","{@spell charm person}, {@spell sleep}"],["3rd","{@spell hold person}, {@spell wither and bloom|SCC}"],["5th","{@spell vampiric touch}, {@spell speak with dead}"],["7th","{@spell charm monster|XGE}, {@spell shadow of moil|XGE}"],["9th","{@spell geas}, {@spell enervation|XGE}"]]}]}]}],
-					[{"name":"Cambio de Forma","source":"Himo","page":"??","entries":["Como acción adicional puedes transformarte en un {@creature bat} durante 10 minutos un número de veces igual a tu bonificador de competencia por descanso prolongado; después puedes gastar 1 punto de hechicería para repetirlo. Alternativamente, puedes gastar 2 usos o 2 puntos de hechicería para lanzar {@spell gaseous form} durante 10 minutos."]}],
-					[{"name":"Mordisco de Vampiro","source":"Himo","page":"??","entries":["Como acción haces un ataque de conjuro cuerpo a cuerpo. Si el objetivo no está {@condition Grappled|PHB}, apresado, {@condition Incapacitated|PHB} o {@condition Paralyzed|PHB}, atacas con desventaja. Al impactar puedes gastar de 1 a 5 puntos de hechicería: recibe {@dice 1d6} necrótico por punto, se reduce su máximo de puntos de golpe y recuperas la mitad. Tras gastar 5 puntos con este rasgo, lo recuperas tras un descanso prolongado."]}],
-					[{"name":"Regeneración Vampírica","source":"Himo","page":"??","entries":["Como acción puedes gastar puntos de hechicería para recuperar 5 puntos de golpe por punto. Si gastas al menos 3, también regeneras miembros perdidos y heridas abiertas."]}]
-				]}
+				{
+					"name": "Linaje Vampírico",
+					"shortName": "Vampírico",
+					"source": "Himo",
+					"page": "??",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Linaje Vampírico",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Tu maldición vampírica ha corrompido tu vínculo con la Onda, haciéndote un depredador nocturno sin necesidad de ser un muerto viviente.",
+									{
+										"name": "Trepar como Araña",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Tienes velocidad de escalada igual a tu velocidad andando, puedes adherirte a paredes y techos y moverte por ellos sin usar las manos."
+										]
+									},
+									{
+										"name": "Conjuros de Linaje",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Estos conjuros cuentan como de hechicero y no para tu límite de conjuros conocidos. Al ganar un nivel de hechicero, puedes cambiar uno por un conjuro de Encantamiento o Nigromancia de las listas de hechicero, mago o brujo.",
+											{
+												"type": "table",
+												"colLabels": [
+													"Nivel",
+													"Conjuros"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"1st",
+														"{@spell charm person}, {@spell sleep}"
+													],
+													[
+														"3rd",
+														"{@spell hold person}, {@spell wither and bloom|SCC}"
+													],
+													[
+														"5th",
+														"{@spell vampiric touch}, {@spell speak with dead}"
+													],
+													[
+														"7th",
+														"{@spell charm monster|XGE}, {@spell shadow of moil|XGE}"
+													],
+													[
+														"9th",
+														"{@spell geas}, {@spell enervation|XGE}"
+													]
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Cambio de Forma",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Como acción adicional puedes transformarte en un {@creature bat} durante 10 minutos un número de veces igual a tu bonificador de competencia por descanso prolongado; después puedes gastar 1 punto de hechicería para repetirlo. Alternativamente, puedes gastar 2 usos o 2 puntos de hechicería para lanzar {@spell gaseous form} durante 10 minutos."
+								]
+							}
+						],
+						[
+							{
+								"name": "Mordisco de Vampiro",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Como acción haces un ataque de conjuro cuerpo a cuerpo. Si el objetivo no está {@condition Grappled|PHB}, apresado, {@condition Incapacitated|PHB} o {@condition Paralyzed|PHB}, atacas con desventaja. Al impactar puedes gastar de 1 a 5 puntos de hechicería: recibe {@dice 1d6} necrótico por punto, se reduce su máximo de puntos de golpe y recuperas la mitad. Tras gastar 5 puntos con este rasgo, lo recuperas tras un descanso prolongado."
+								]
+							}
+						],
+						[
+							{
+								"name": "Regeneración Vampírica",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Como acción puedes gastar puntos de hechicería para recuperar 5 puntos de golpe por punto. Si gastas al menos 3, también regeneras miembros perdidos y heridas abiertas."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Aberrant Mind",
+					"shortName": "Aberrant Mind",
+					"source": "TCE",
+					"page": 66,
+					"additionalSpells": [
+						{
+							"known": {
+								"1": [
+									"Mind Sliver|TCE#c",
+									"Arms of Hadar|PHB",
+									"Dissonant Whispers|PHB"
+								],
+								"3": [
+									"Calm Emotions|PHB",
+									"Detect Thoughts|PHB"
+								],
+								"5": [
+									"Hunger of Hadar|PHB",
+									"Sending|PHB"
+								],
+								"7": [
+									"Evard's Black Tentacles|PHB",
+									"Summon Aberration|TCE"
+								],
+								"9": [
+									"Rary's Telepathic Bond|PHB",
+									"Telekinesis|PHB"
+								]
+							}
+						}
+					],
+					"subclassFeatures": [
+						[
+							{
+								"name": "Aberrant Mind",
+								"source": "TCE",
+								"page": 66,
+								"entries": [
+									"An alien influence has wrapped its tendrils around your mind, giving you psionic power. You can now touch other minds with that power and alter the world around you by using it to control the magical energy of the multiverse. Will this power shine from you as a hopeful beacon to others? Or will you be a source of terror to those who feel the stab of your mind and witness the strange manifestations of your might?",
+									"As an Aberrant Mind sorcerer, you decide how you acquired your powers. Were you born with them? Or did an event later in life leave you shining with psionic awareness? Consult the Aberrant Origins table for a possible origin of your power.",
+									{
+										"type": "table",
+										"caption": "Aberrant Origins",
+										"colLabels": [
+											"d6",
+											"Origin"
+										],
+										"colStyles": [
+											"col-2 text-center",
+											"col-10"
+										],
+										"rows": [
+											[
+												"1",
+												"You were exposed to the Far Realm's warping influence. You are convinced that a tentacle is now growing on you, but no one else can see it."
+											],
+											[
+												"2",
+												"A psychic wind from the Astral Plane carried psionic energy to you. When you use your powers, faint motes of light sparkle around you."
+											],
+											[
+												"3",
+												"You once suffered the dominating powers of an aboleth, leaving a psychic splinter in your mind."
+											],
+											[
+												"4",
+												"You were implanted with a mind flayer tadpole, but the ceremorphosis never completed. And now its psionic power is yours. When you use it, your flesh shines with a strange mucus."
+											],
+											[
+												"5",
+												"As a child, you had an imaginary friend that looked like a flumph or a strange platypus-like creature. One day, it gifted you with psionic powers, which have ended up being not so imaginary."
+											],
+											[
+												"6",
+												"Your nightmares whisper the truth to you: your psionic powers are not your own. You draw them from your parasitic twin!"
+											]
+										]
+									},
+									{
+										"name": "Psionic Spells",
+										"source": "TCE",
+										"page": 66,
+										"header": 1,
+										"entries": [
+											"{@i 1st-level Aberrant Mind feature}",
+											"You learn additional spells when you reach certain levels in this class, as shown on the Psionic Spells table. Each of these spells counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.",
+											"Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be a {@filter divination or an enchantment spell from the sorcerer, warlock, or wizard spell list|spells|class=sorcerer;warlock;wizard|school=D;E|level=1;2;3;4;5}.",
+											{
+												"type": "table",
+												"caption": "Psionic Spells",
+												"colLabels": [
+													"Sorcerer Level",
+													"Spells"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"1st",
+														"{@spell arms of Hadar}, {@spell dissonant whispers}, {@spell mind sliver|tce}"
+													],
+													[
+														"3rd",
+														"{@spell calm emotions}, {@spell detect thoughts}"
+													],
+													[
+														"5th",
+														"{@spell hunger of Hadar}, {@spell sending}"
+													],
+													[
+														"7th",
+														"{@spell Evard's black tentacles}, {@spell summon aberration|TCE}"
+													],
+													[
+														"9th",
+														"{@spell Rary's telepathic bond}, {@spell telekinesis}"
+													]
+												]
+											}
+										],
+										"type": "entries"
+									},
+									{
+										"name": "Telepathic Speech",
+										"source": "TCE",
+										"page": 66,
+										"header": 1,
+										"entries": [
+											"{@i 1st-level Aberrant Mind feature}",
+											"You can form a telepathic connection between your mind and the mind of another. As a bonus action, choose one creature you can see within 30 feet of you. You and the chosen creature can speak telepathically with each other while the two of you are within a number of miles of each other equal to your Charisma modifier (minimum of 1 mile). To understand each other, you each must speak mentally in a language the other knows.",
+											"The telepathic connection lasts for a number of minutes equal to your sorcerer level. It ends early if you are {@condition incapacitated} or die or if you use this ability to form a connection with a different creature."
+										],
+										"type": "entries"
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Psionic Sorcery",
+								"source": "TCE",
+								"page": 66,
+								"header": 2,
+								"entries": [
+									"{@i 6th-level Aberrant Mind feature}",
+									"When you cast any spell of 1st level or higher from your Psionic Spells feature, you can cast it by expending a spell slot as normal or by spending a number of sorcery points equal to the spell's level.",
+									"If you cast the spell using sorcery points, it requires no verbal or somatic components, and it requires no material components, unless they are consumed by the spell."
+								]
+							},
+							{
+								"name": "Psychic Defenses",
+								"source": "TCE",
+								"page": 66,
+								"header": 2,
+								"entries": [
+									"{@i 6th-level Aberrant Mind feature}",
+									"You gain resistance to psychic damage, and you have advantage on saving throws against being {@condition charmed} or {@condition frightened}."
+								]
+							}
+						],
+						[
+							{
+								"name": "Revelation in Flesh",
+								"source": "TCE",
+								"page": 66,
+								"header": 2,
+								"entries": [
+									"{@i 14th-level Aberrant Mind feature}",
+									"You can unleash the aberrant truth hidden within yourself. As a bonus action, you can spend 1 or more sorcery points to magically transform your body for 10 minutes. For each sorcery point you spend, you can gain one of the following benefits of your choice, the effects of which last until the transformation ends:",
+									{
+										"type": "list",
+										"items": [
+											"You can see any {@condition invisible} creature within 60 feet of you, provided it isn't behind {@quickref Cover||3||total cover}. Your eyes also turn black or become writhing sensory tendrils.",
+											"You gain a flying speed equal to your walking speed, and you can hover. As you fly, your skin glistens with mucus or shines with an otherworldly light.",
+											"You gain a swimming speed equal to twice your walking speed, and you can breathe underwater. Moreover, gills grow from your neck or fan out from behind your ears, your fingers become webbed, or you grow writhing cilia that extend through your clothing.",
+											"Your body, along with any equipment you are wearing or carrying, becomes slimy and pliable. You can move through any space as narrow as 1 inch without squeezing, and you can spend 5 feet of movement to escape from nonmagical restraints or being {@condition grappled}."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Warping Implosion",
+								"source": "TCE",
+								"page": 66,
+								"header": 2,
+								"entries": [
+									"{@i 18th-level Aberrant Mind feature}",
+									"You can unleash your aberrant power as a space-warping anomaly. As an action, you can teleport to an unoccupied space you can see within 120 feet of you. Immediately after you disappear, each creature within 30 feet of the space you left must make a Strength saving throw against your spell save DC. On a failed save, a creature takes {@damage 3d10} force damage and is pulled straight toward the space you left, ending in an unoccupied space as close to your former space as possible. On a successful save, the creature takes half as much damage and isn't pulled.",
+									"Once you use this feature, you can't do so again until you finish a long rest, unless you spend 5 sorcery points to use it again."
+								]
+							}
+						]
+					],
+					"hasFluffImages": true
+				},
+				{
+					"name": "Clockwork Soul",
+					"shortName": "Clockwork Soul",
+					"source": "TCE",
+					"page": 68,
+					"additionalSpells": [
+						{
+							"known": {
+								"1": [
+									"Alarm|PHB",
+									"Protection from Evil and Good|PHB"
+								],
+								"3": [
+									"Aid|PHB",
+									"Lesser Restoration|PHB"
+								],
+								"5": [
+									"Dispel Magic|PHB",
+									"Protection from Energy|PHB"
+								],
+								"7": [
+									"Freedom of Movement|PHB",
+									"Summon Construct|TCE"
+								],
+								"9": [
+									"Greater Restoration|PHB",
+									"Wall of Force|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Barrera|GPNM"
+								]
+							}
+						}
+					],
+					"subclassFeatures": [
+						[
+							{
+								"name": "Clockwork Soul",
+								"source": "TCE",
+								"page": 68,
+								"entries": [
+									"The cosmic force of order has suffused you with magic. That power arises from Mechanus or a realm like it-a plane of existence shaped entirely by clockwork efficiency. You, or someone from your lineage, might have become entangled in the machinations of the modrons, the orderly beings who inhabit Mechanus. Perhaps your ancestor even took part in the Great Modron March. Whatever its origin within you, the power of order can seem strange to others, but for you, it is part of a vast and glorious system.",
+									{
+										"name": "Clockwork Magic",
+										"source": "TCE",
+										"page": 68,
+										"header": 1,
+										"entries": [
+											"{@i 1st-level Clockwork Soul feature}",
+											"You learn additional spells when you reach certain levels in this class, as shown on the Clockwork Spells table. Each of these spells counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.",
+											"Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an {@filter abjuration or a transmutation spell from the sorcerer, warlock, or wizard spell list|spells|class=sorcerer;warlock;wizard|school=A;T|level=1;2;3;4;5}.",
+											{
+												"type": "table",
+												"caption": "Clockwork Spells",
+												"colLabels": [
+													"Sorcerer Level",
+													"Spells"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"1st",
+														"{@spell alarm}, {@spell protection from evil and good}"
+													],
+													[
+														"3rd",
+														"{@spell aid}, {@spell lesser restoration}"
+													],
+													[
+														"5th",
+														"{@spell dispel magic}, {@spell protection from energy}"
+													],
+													[
+														"7th",
+														"{@spell freedom of movement}, {@spell summon construct|TCE}"
+													],
+													[
+														"9th",
+														"{@spell greater restoration}, {@spell wall of force}"
+													]
+												]
+											},
+											"In addition, consult the Manifestations of Order table and choose or randomly determine a way your connection to order manifests while you are casting any of your sorcerer spells.",
+											{
+												"type": "table",
+												"caption": "Manifestations of Order",
+												"colLabels": [
+													"d6",
+													"Manifestation"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"1",
+														"Spectral cogwheels hover behind you."
+													],
+													[
+														"2",
+														"The hands of a clock spin in your eyes."
+													],
+													[
+														"3",
+														"Your skin glows with a brassy sheen."
+													],
+													[
+														"4",
+														"Floating equations and geometric objects overlay your body."
+													],
+													[
+														"5",
+														"Your spellcasting focus temporarily takes the form of a Tiny clockwork mechanism."
+													],
+													[
+														"6",
+														"The ticking of gears or ringing of a clock can be heard by you and those affected by your magic."
+													]
+												]
+											}
+										],
+										"type": "entries"
+									},
+									{
+										"name": "Restore Balance",
+										"source": "TCE",
+										"page": 68,
+										"header": 1,
+										"entries": [
+											"{@i 1st-level Clockwork Soul feature}",
+											"Your connection to the plane of absolute order allows you to equalize chaotic moments. When a creature you can see within 60 feet of you is about to roll a {@dice d20} with advantage or disadvantage, you can use your reaction to prevent the roll from being affected by advantage and disadvantage.",
+											"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+										],
+										"type": "entries"
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Bastion of Law",
+								"source": "TCE",
+								"page": 68,
+								"header": 2,
+								"consumes": {
+									"name": "Sorcery Point"
+								},
+								"entries": [
+									"{@i 6th-level Clockwork Soul feature}",
+									"You can tap into the grand equation of existence to imbue a creature with a shimmering shield of order. As an action, you can expend 1 to 5 sorcery points to create a magical ward around yourself or another creature you can see within 30 feet of you. The ward lasts until you finish a long rest or until you use this feature again.",
+									"The ward is represented by a number of {@dice d8}s equal to the number of sorcery points spent to create it. When the warded creature takes damage, it can expend a number of those dice, roll them, and reduce the damage taken by the total rolled on those dice."
+								]
+							}
+						],
+						[
+							{
+								"name": "Trance of Order",
+								"source": "TCE",
+								"page": 68,
+								"header": 2,
+								"entries": [
+									"{@i 14th-level Clockwork Soul feature}",
+									"You gain the ability to align your consciousness to the endless calculations of Mechanus. As a bonus action, you can enter this state for 1 minute. For the duration, attack rolls against you can't benefit from advantage, and whenever you make an attack roll, an ability check, or a saving throw, you can treat a roll of 9 or lower on the {@dice d20} as a 10.",
+									"Once you use this bonus action, you can't use it again until you finish a long rest, unless you spend 5 sorcery points to use it again."
+								]
+							}
+						],
+						[
+							{
+								"name": "Clockwork Cavalcade",
+								"source": "TCE",
+								"page": 68,
+								"header": 2,
+								"entries": [
+									"{@i 18th-level Clockwork Soul feature}",
+									"You summon spirits of order to expunge disorder around you. As an action, you summon the spirits in a 30-foot cube originating from you. The spirits look like modrons or other constructs of your choice. The spirits are intangible and invulnerable, and they create the following effects within the cube before vanishing:",
+									{
+										"type": "list",
+										"items": [
+											"The spirits restore up to 100 hit points, divided as you choose among any number of creatures of your choice in the cube.",
+											"Any damaged objects entirely in the cube are repaired instantly.",
+											"Every spell of 6th level or lower ends on creatures and objects of your choice in the cube."
+										]
+									},
+									"Once you use this action, you can't use it again until you finish a long rest, unless you spend 7 sorcery points to use it again."
+								]
+							}
+						]
+					],
+					"hasFluffImages": true
+				}
 			],
 			"fluff": [
 				{
@@ -3084,7 +5235,7 @@
 							"name": "Creating a Sorcerer",
 							"entries": [
 								"The most important question to consider when creating your sorcerer is the origin of your power. As a starting character, you'll choose an origin that ties to a draconic bloodline or the influence of wild magic, but the exact source of your power is up to you to decide. Is it a family curse, passed down to you from distant ancestors? Or did some extraordinary event leave you blessed with inherent magic but perhaps scarred as well?",
-								"How do you feel about the magical power coursing through you? Do you embrace it, try to master it, or revel in its unpredictable nature? Is it a blessing or a curse? Did you seek it out, or did it find you? Did you have the option to refuse it, and do you wish you had? What do you intend to do with it? Perhaps you feel like you've been given this power for some lofty purpose. Or you might decide that the power gives you the right to do what you want, to take what you want from those who lack such power. Perhaps your power links you to a powerful individual in the world\u2014the fey creature that blessed you at birth, the dragon who put a drop of its blood into your veins, the lich who created you as an experiment, or the deity who chose you to carry this power.",
+								"How do you feel about the magical power coursing through you? Do you embrace it, try to master it, or revel in its unpredictable nature? Is it a blessing or a curse? Did you seek it out, or did it find you? Did you have the option to refuse it, and do you wish you had? What do you intend to do with it? Perhaps you feel like you've been given this power for some lofty purpose. Or you might decide that the power gives you the right to do what you want, to take what you want from those who lack such power. Perhaps your power links you to a powerful individual in the world—the fey creature that blessed you at birth, the dragon who put a drop of its blood into your veins, the lich who created you as an experiment, or the deity who chose you to carry this power.",
 								{
 									"type": "entries",
 									"name": "Quick Build",

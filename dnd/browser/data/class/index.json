@@ -16,9 +16,11 @@
 	"paladin": "class-paladin.json",
 	"planeswalker": "class-planeswalker.json",
 	"ranger": "class-ranger.json",
+	"ranger-himo": "class-ranger-himo.json",
 	"rogue": "class-rogue.json",
 	"sidekick": "class-sidekick.json",
 	"sorcerer": "class-sorcerer.json",
 	"warlock": "class-warlock.json",
-	"wizard": "class-wizard.json"
+	"wizard": "class-wizard.json",
+	"artificer-revisited": "class-artificer-revisited.json"
 }

@@ -51,7 +51,35 @@
 			"miscTags": [
 				"OBJ"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Draconic Transformation",
@@ -128,7 +156,27 @@
 			"miscTags": [
 				"SGT",
 				"UBA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Fizban's Platinum Shield",
@@ -200,7 +248,23 @@
 			],
 			"miscTags": [
 				"UBA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Nathair's Mischief",
@@ -275,7 +339,31 @@
 			"miscTags": [
 				"RO",
 				"SGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Raulothim's Psychic Lance",
@@ -331,7 +419,31 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Rime's Binding Ice",
@@ -382,7 +494,23 @@
 			"areaTags": [
 				"N"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Draconic Spirit",
@@ -443,7 +571,27 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		}
 	]
 }

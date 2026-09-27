@@ -467,7 +467,7 @@
 												"type": "entries",
 												"name": "Replacing the Book",
 												"entries": [
-													"You can copy a spell from your own spellbook into another book\u2014for example, if you want to make a backup copy of your spellbook. This is just like copying a new spell into your spellbook, but faster and easier, since you understand your own notation and already know how to cast the spell. You need spend only 1 hour and 10 gp for each level of the copied spell.",
+													"You can copy a spell from your own spellbook into another book—for example, if you want to make a backup copy of your spellbook. This is just like copying a new spell into your spellbook, but faster and easier, since you understand your own notation and already know how to cast the spell. You need spend only 1 hour and 10 gp for each level of the copied spell.",
 													"If you lose your spellbook, you can use the same procedure to transcribe the spells that you have prepared into a new spellbook. Filling out the remainder of your spellbook requires you to find new spells to do so, as normal. For this reason, many wizards keep backup spellbooks in a safe place."
 												]
 											}
@@ -1072,6 +1072,16 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Covering|GdR"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1534,7 +1544,7 @@
 							{
 								"name": "School of Illusion",
 								"entries": [
-									"You focus your studies on magic that dazzles the senses, befuddles the mind, and tricks even the wisest folk. Your magic is subtle, but the illusions crafted by your keen mind make the impossible seem real. Some illusionists\u2014including many gnome wizards\u2014are benign tricksters who use their spells to entertain. Others are more sinister masters of deception, using their illusions to frighten and fool others for their personal gain.",
+									"You focus your studies on magic that dazzles the senses, befuddles the mind, and tricks even the wisest folk. Your magic is subtle, but the illusions crafted by your keen mind make the impossible seem real. Some illusionists—including many gnome wizards—are benign tricksters who use their spells to entertain. Others are more sinister masters of deception, using their illusions to frighten and fool others for their personal gain.",
 									{
 										"type": "entries",
 										"name": "Illusion Savant",
@@ -1594,6 +1604,15 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"known": {
+								"1": [
+									"Minor Illusion|PHB#c"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1912,7 +1931,7 @@
 														"type": "entries",
 														"name": "Major Transformation",
 														"entries": [
-															"You can transmute one nonmagical object\u2014no larger than a 5-foot cube\u2014into another nonmagical object of similar size and mass and of equal or lesser value. You must spend 10 minutes handling the object to transform it."
+															"You can transmute one nonmagical object—no larger than a 5-foot cube—into another nonmagical object of similar size and mass and of equal or lesser value. You must spend 10 minutes handling the object to transform it."
 														]
 													}
 												]
@@ -2204,7 +2223,7 @@
 							{
 								"name": "School of Invention",
 								"entries": [
-									"The School of Invention claims credit for inventing the other schools of magic\u2014a claim other wizards find absurd. Wizards of this school push magic to its limits. They stretch the known laws of arcane power and strive to reveal important truths about the nature of the multiverse.",
+									"The School of Invention claims credit for inventing the other schools of magic—a claim other wizards find absurd. Wizards of this school push magic to its limits. They stretch the known laws of arcane power and strive to reveal important truths about the nature of the multiverse.",
 									"Adherents of this school believe that innovation is best served through experimentation. They have a reputation for acting first, thinking second. Most wizards are scholars who have mastered their craft through careful study, rigorous practice, and endless hours of repetition. These wizards would rather throw spells together and see what happens.",
 									"Many wizards of this tradition are gnomes, alchemists, or both, and they take pride in the magic-infused armor they don. The armor not only provides protection, but it is also designed to help the wizard channel magic in unpredictable ways.",
 									"Wizards of this tradition are regarded as savants to their faces, but wizards of other traditions often think of them as lunatics.",
@@ -2220,7 +2239,7 @@
 										"name": "Arcanomechanical Armor",
 										"entries": [
 											"Innovation is a dangerous practice, at least as far as members of this school practice it. As a shield against this risk, you have developed a suit of arcane armor.",
-											"Starting at 2nd level, you gain proficiency with light armor and gain a suit of arcanomechanical armor\u2014a magic item that only you can attune to. While you are attuned to it and wearing it, it grants you resistance to force damage.",
+											"Starting at 2nd level, you gain proficiency with light armor and gain a suit of arcanomechanical armor—a magic item that only you can attune to. While you are attuned to it and wearing it, it grants you resistance to force damage.",
 											"The armor is light armor and provides an AC of 12 + your Dexterity modifier. It weighs 8 pounds.",
 											"You can create a new suit of it at the end of a long rest by touching a nonmagical suit of studded leather armor, which magically transforms it. Doing so removes the magic from your previous arcanomechanical armor, turning it in to nonmagical studded leather."
 										]
@@ -2754,6 +2773,17 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Bane|PHB",
+									"Bless|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2915,20 +2945,269 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s5": [
+									"Dominate Person|PHB",
+									"Scrying|PHB",
+									"Telekinesis|PHB"
+								],
+								"s0": [
+									"Friends|PHB",
+									"Mage Hand|PHB",
+									"Message|PHB"
+								]
+							}
+						}
 					]
 				},
-				{"name":"Lich","shortName":"Lich","source":"Himo","page":"??","subclassFeatures":[
-					[{"name":"Lich","source":"Himo","page":"??","entries":["Has ido más allá de la Escuela de Nigromancia y buscas comprender la muerte como herramienta, vasallo o juguete.",{"name":"Magia Oscura","source":"Himo","page":"??","entries":["Al preparar trucos o conjuros, puedes escoger conjuros de Nigromancia de cualquier lista."]},{"name":"Heraldo de la Muerte","source":"Himo","page":"??","entries":["Cuando hagas daño necrótico con un conjuro de nivel 1 o superior, añade tu modificador de Inteligencia al daño total."]}]}],
-					[{"name":"Levantar No Muertos","source":"Himo","page":"??","entries":["Como acción, con una mano libre y tu foco arcano, puedes levantar un esqueleto o zombi durante una hora. Puedes liberarlo con una acción. Puedes invocar un máximo de criaturas igual a tu bonificador de competencia, pero solo tener una a la vez; después debes terminar un descanso prolongado para recuperar los usos. No puedes usar el mismo cadáver dos veces."]}],
-					[{"name":"Muerto entre los Vivos","source":"Himo","page":"??","entries":["Ganas resistencia al daño necrótico, tu máximo de puntos de golpe no puede reducirse y ya no necesitas comer, dormir ni respirar. No envejeces y tienes ventaja en salvaciones de muerte."]}],
-					[{"name":"Guía de Almas","source":"Himo","page":"??","entries":["Cuando una criatura muera por tu mano, vuelve como un no muerto leal hasta {@dice 1d6} horas, hasta que la liberes o llegue a 0 puntos de golpe. Usa un espíritu no muerto de nivel 3 como zombi, esqueleto o forma fantasmal según el estado del cuerpo. Solo puedes tener uno, no cuenta para Levantar No Muertos y recuperas el rasgo tras un descanso prolongado."]}]
-				]},
-				{"name":"Oniromante","shortName":"Oniromante","source":"Himo","page":"??","subclassFeatures":[
-					[{"name":"Oniromante","source":"Himo","page":"??","entries":["Los oniromantes investigan la magia de los sueños y el Plano Onírico, un mundo de posibilidades ilimitadas y peligroso.",{"name":"Erudito Oniromante","source":"Himo","page":"??","entries":["Copiar conjuros de oniromancia cuesta la mitad de tiempo y dinero, al igual que los conjuros indicados de sueño, {@condition Frightened|PHB}, ilusión, adivinación y magia psíquica de la lista proporcionada."]},{"name":"Consciencia Onírica","source":"Himo","page":"??","entries":["Concentrarte en conjuros de oniromancia no perturba los descansos mientras permanezcas dormido o en actividades relajadas y no lances otros conjuros. Al lanzar Abrir Mente sobre ti mismo, obtienes consciencia del Plano Material similar al Trance élfico."]}]}],
-					[{"name":"Sueño Intrusivo","source":"Himo","page":"??","entries":["Añades 2 dados extra cada vez que lances {@spell sleep} y puedes acceder involuntariamente a la mente de criaturas {@condition Unconscious|PHB} si conoces su nombre."]}],
-					[{"name":"Mente Afilada","source":"Himo","page":"??","entries":["Al lanzar {@spell detect thoughts} en una Burbuja Onírica ajena, no necesitas {@status Concentration|PHB} y dura una hora. En el Plano Material puedes profundizar sin que la criatura sepa que lees su mente."]}],
-					[{"name":"Destructor de Mentes","source":"Himo","page":"??","entries":["Si lanzas en el Plano Onírico un truco o conjuro que ya haga daño psíquico, el objetivo recibe ese daño tanto en su mente como en su cuerpo."]}]
-				]}
+				{
+					"name": "Lich",
+					"shortName": "Lich",
+					"source": "Himo",
+					"page": "??",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Lich",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Has ido más allá de la Escuela de Nigromancia y buscas comprender la muerte como herramienta, vasallo o juguete.",
+									{
+										"name": "Magia Oscura",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Al preparar trucos o conjuros, puedes escoger conjuros de Nigromancia de cualquier lista."
+										]
+									},
+									{
+										"name": "Heraldo de la Muerte",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Cuando hagas daño necrótico con un conjuro de nivel 1 o superior, añade tu modificador de Inteligencia al daño total."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Levantar No Muertos",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Como acción, con una mano libre y tu foco arcano, puedes levantar un esqueleto o zombi durante una hora. Puedes liberarlo con una acción. Puedes invocar un máximo de criaturas igual a tu bonificador de competencia, pero solo tener una a la vez; después debes terminar un descanso prolongado para recuperar los usos. No puedes usar el mismo cadáver dos veces."
+								]
+							}
+						],
+						[
+							{
+								"name": "Muerto entre los Vivos",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Ganas resistencia al daño necrótico, tu máximo de puntos de golpe no puede reducirse y ya no necesitas comer, dormir ni respirar. No envejeces y tienes ventaja en salvaciones de muerte."
+								]
+							}
+						],
+						[
+							{
+								"name": "Guía de Almas",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Cuando una criatura muera por tu mano, vuelve como un no muerto leal hasta {@dice 1d6} horas, hasta que la liberes o llegue a 0 puntos de golpe. Usa un espíritu no muerto de nivel 3 como zombi, esqueleto o forma fantasmal según el estado del cuerpo. Solo puedes tener uno, no cuenta para Levantar No Muertos y recuperas el rasgo tras un descanso prolongado."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Oniromante",
+					"shortName": "Oniromante",
+					"source": "Himo",
+					"page": "??",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Oniromante",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Los oniromantes investigan la magia de los sueños y el Plano Onírico, un mundo de posibilidades ilimitadas y peligroso.",
+									{
+										"name": "Erudito Oniromante",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Copiar conjuros de oniromancia cuesta la mitad de tiempo y dinero, al igual que los conjuros indicados de sueño, {@condition Frightened|PHB}, ilusión, adivinación y magia psíquica de la lista proporcionada."
+										]
+									},
+									{
+										"name": "Consciencia Onírica",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Concentrarte en conjuros de oniromancia no perturba los descansos mientras permanezcas dormido o en actividades relajadas y no lances otros conjuros. Al lanzar Abrir Mente sobre ti mismo, obtienes consciencia del Plano Material similar al Trance élfico."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Sueño Intrusivo",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Añades 2 dados extra cada vez que lances {@spell sleep} y puedes acceder involuntariamente a la mente de criaturas {@condition Unconscious|PHB} si conoces su nombre."
+								]
+							}
+						],
+						[
+							{
+								"name": "Mente Afilada",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Al lanzar {@spell detect thoughts} en una Burbuja Onírica ajena, no necesitas {@status Concentration|PHB} y dura una hora. En el Plano Material puedes profundizar sin que la criatura sepa que lees su mente."
+								]
+							}
+						],
+						[
+							{
+								"name": "Destructor de Mentes",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Si lanzas en el Plano Onírico un truco o conjuro que ya haga daño psíquico, el objetivo recibe ese daño tanto en su mente como en su cuerpo."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Chronurgy Magic",
+					"shortName": "Chronurgy",
+					"source": "EGW",
+					"page": 184,
+					"additionalSpells": [
+						{
+							"expanded": {
+								"1": [
+									[
+										"Dark Star|EGW",
+										"Fortune's Favor|EGW",
+										"Gift of Alacrity|EGW",
+										"Gravity Fissure|EGW",
+										"Gravity Sinkhole|EGW",
+										"Immovable Object|EGW",
+										"Magnify Gravity|EGW",
+										"Pulse Wave|EGW",
+										"Ravenous Void|EGW",
+										"Reality Break|EGW",
+										"Sapping Sting|EGW",
+										"Temporal Shunt|EGW",
+										"Tether Essence|EGW",
+										"Time Ravage|EGW",
+										"Wristpocket|EGW"
+									]
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s9": [
+									"Singularidad Cronológica|GPNM"
+								]
+							}
+						}
+					],
+					"subclassFeatures": [
+						[
+							{
+								"name": "Chronurgy Magic",
+								"source": "EGW",
+								"page": 184,
+								"entries": [
+									"Focusing on the manipulation of time, those who follow the Chronurgy tradition learn to alter the pace of reality to their liking. Using the ramping of anticipatory dunamis energy, these mages can bend the flow of time as adroitly as a skilled musician plays an instrument, lending themselves and their allies an advantage in the blink of an eye.",
+									"{@note Note: This subclass has access to {@book Dunamancy Spells|EGW|5|Dunamancy Spells}}.",
+									{
+										"name": "Chronal Shift",
+										"source": "EGW",
+										"page": 184,
+										"header": 1,
+										"entries": [
+											"{@i 2nd-level Chronurgy Magic feature}",
+											"You can magically exert limited control over the flow of time around a creature. As a reaction, after you or a creature you can see within 30 feet of you makes an attack roll, an ability check, or a saving throw, you can force the creature to reroll. You make this decision after you see whether the roll succeeds or fails. The target must use the result of the second roll.",
+											"You can use this ability twice, and you regain any expended uses when you finish a long rest."
+										],
+										"type": "entries"
+									},
+									{
+										"name": "Temporal Awareness",
+										"source": "EGW",
+										"page": 184,
+										"header": 1,
+										"entries": [
+											"{@i 2nd-level Chronurgy Magic feature}",
+											"You can add your Intelligence modifier to your initiative rolls."
+										],
+										"type": "entries"
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Momentary Stasis",
+								"source": "EGW",
+								"page": 184,
+								"header": 2,
+								"entries": [
+									"{@i 6th-level Chronurgy Magic feature}",
+									"As an action, you can magically force a Large or smaller creature you can see within 60 feet of you to make a Constitution saving throw against your spell save DC. Unless the saving throw is a success, the creature is encased in a field of magical energy until the end of your next turn or until the creature takes any damage. While encased in this way, the creature is {@condition incapacitated} and has a speed of 0.",
+									"You can use this feature a number of times equal to your Intelligence modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+								]
+							}
+						],
+						[
+							{
+								"name": "Arcane Abeyance",
+								"source": "EGW",
+								"page": 184,
+								"header": 2,
+								"entries": [
+									"{@i 10th-level Chronurgy Magic feature}",
+									"When you cast a spell using a spell slot of 4th level or lower, you can condense the spell's magic into a mote. The spell is frozen in time at the moment of casting and held within a gray bead for 1 hour. This bead is a Tiny object with AC 15 and 1 hit point, and it is immune to poison and psychic damage. When the duration ends, or if the bead is destroyed, it vanishes in a flash of light, and the spell is lost.",
+									"A creature holding the bead can use its action to release the spell within, whereupon the bead disappears. The spell uses your spell attack bonus and save DC, and the spell treats the creature who released it as the caster for all other purposes.",
+									"Once you create a bead with this feature, you can't do so again until you finish a short or long rest."
+								]
+							}
+						],
+						[
+							{
+								"name": "Convergent Future",
+								"source": "EGW",
+								"page": 184,
+								"header": 2,
+								"entries": [
+									"{@i 14th-level Chronurgy Magic feature}",
+									"You can peer through possible futures and magically pull one of them into events around you, ensuring a particular outcome. When you or a creature you can see within 60 feet of you makes an attack roll, an ability check, or a saving throw, you can use your reaction to ignore the die roll and decide whether the number rolled is the minimum needed to succeed or one less than that number (your choice).",
+									"When you use this feature, you gain one level of {@condition exhaustion}. Only by finishing a long rest can you remove a level of {@condition exhaustion} gained in this way."
+								]
+							}
+						]
+					],
+					"hasFluffImages": true
+				}
 			],
 			"fluff": [
 				{
@@ -2988,7 +3267,7 @@
 							"type": "entries",
 							"name": "Spellbook",
 							"entries": [
-								"Your wizard character's most prized possession\u2014your spellbook\u2014might be an innocuous-looking volume whose covers show no hint of what's inside. Or you might display some flair, as many wizards do, by carrying a spellbook of an unusual sort. If you don't own such an item already, one of your goals might be to find a spellbook that sets you apart by its appearance or its means of manufacture.",
+								"Your wizard character's most prized possession—your spellbook—might be an innocuous-looking volume whose covers show no hint of what's inside. Or you might display some flair, as many wizards do, by carrying a spellbook of an unusual sort. If you don't own such an item already, one of your goals might be to find a spellbook that sets you apart by its appearance or its means of manufacture.",
 								{
 									"type": "table",
 									"caption": "Spellbooks",

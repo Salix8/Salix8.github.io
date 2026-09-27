@@ -50,6 +50,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -114,6 +118,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -179,6 +191,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -253,6 +269,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -310,6 +334,10 @@
 					{
 						"name": "Bard",
 						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
 					}
 				]
 			},
@@ -362,6 +390,10 @@
 					{
 						"name": "Paladin",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -436,6 +468,10 @@
 					{
 						"name": "Bard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -508,6 +544,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -575,6 +619,14 @@
 					{
 						"name": "Warlock",
 						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -622,6 +674,10 @@
 					{
 						"name": "Bard",
 						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
 					}
 				]
 			},
@@ -682,6 +738,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -753,6 +813,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -864,6 +928,10 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -921,18 +989,6 @@
 					{
 						"name": "Cleric",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Celestial",
-							"source": "XGE"
-						}
 					}
 				]
 			},
@@ -1008,6 +1064,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1072,28 +1136,6 @@
 					{
 						"name": "Cleric",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
-					{
-						"class": {
-							"name": "Wizard",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Abjuration",
-							"source": "PHB"
-						}
-					},
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Celestial",
-							"source": "XGE"
-						}
 					}
 				]
 			},
@@ -1163,6 +1205,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1330,6 +1376,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1394,6 +1444,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1464,6 +1518,10 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1586,19 +1644,6 @@
 						"name": "Paladin",
 						"source": "PHB"
 					}
-				],
-				"fromSubclass": [
-					{
-						"class": {
-							"name": "Warlock",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Celestial",
-							"shortName": "Celestial",
-							"source": "XGE"
-						}
-					}
 				]
 			},
 			"entries": [
@@ -1658,6 +1703,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1726,6 +1775,14 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Desangrador",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -1852,7 +1909,20 @@
 				}
 			],
 			"classes": {
-				"fromClassList": []
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Desangrador",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
 			},
 			"entries": [
 				"Se requieren de 1 a 5 spellcasters con al menos un espacio de conjuro de lv3. Los recipientes se llenan de agua con sal, se sumerge la lácrima y se concentra poder mágico. Se repite esto con cada recipiente, gastando un espacio de conjuro de nivel 3 por cada uno, luego se añade ADN del enlazado en cada recipiente (uno en cada uno) y se concentra el poder en la Lácrima, gastando un último espacio de conjuro de lv3. Si no se cargan los cuatro recipientes con magia y ADN ni el tanque de la lágrima, el conjuro falla. Al final del ritual todos los Spellcasters que hayan participado adquieren tres puntos de Agotamiento. Entonces, dos cables de esencia mágica brotarán de la lácrima hacia cada ataúd y se conectarán.",
@@ -1918,6 +1988,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2037,7 +2111,72 @@
 				}
 			],
 			"classes": {
-				"fromClassList": []
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Desangrador",
+						"source": "Himo"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger (Revised)",
+						"source": "UATheRangerRevised"
+					},
+					{
+						"name": "Ranger (Himo)",
+						"source": "Himo"
+					},
+					{
+						"name": "Spellcaster Sidekick",
+						"source": "TCE"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
 			},
 			"entries": [
 				"El usuario se arrodilla frente al cadáver del objetivo (durante este tiempo su {@skill Perception} pasiva desciende a 1, su CA a 5 y cualquier tirada de salvación fallará automáticamente) y ora por su alma a los espíritus de la naturaleza y a las antiguas hadas arcaicas para que velen por el alma del difunto. La oración durará 5 minutos, y deberá ejecutarse en una de las lenguas que el difunto pudiese comprender, independientemente de cuál. Tras esto, el cuerpo empezará a arder junto con todas sus posesiones, estén o no con él (para esto, sus posesiones deben estar en el mismo plano, o de lo contrario no desaparecerán. Solo cuentan las que el difunto considere como propias). La llama será de un color que represente la personalidad, carácter y esencia vital del objetivo, y consumirá el cuerpo hasta no dejar ningún tipo de rastro. Esta llama no puede apagarse, a menos que se utilice el conjuro Wish o Disipar Magia a nivel 7 o superior. ",
@@ -2173,19 +2312,6 @@
 					{
 						"name": "Druid",
 						"source": "PHB"
-					}
-				],
-				"fromSubclass": [
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Life",
-							"shortName": "Life",
-							"source": "PHB"
-						}
 					}
 				]
 			},
@@ -2348,6 +2474,10 @@
 					{
 						"name": "Bard",
 						"source": "PHB"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2423,6 +2553,10 @@
 					{
 						"name": "Paladin",
 						"source": "PHB"
+					},
+					{
+						"name": "Desangrador",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2493,6 +2627,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2686,6 +2824,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2754,6 +2896,10 @@
 					{
 						"name": "Cleric",
 						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
 					}
 				]
 			},
@@ -2806,7 +2952,28 @@
 				}
 			],
 			"classes": {
-				"fromClassList": []
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
 			},
 			"entries": [
 				"Crea un muro mágico de 1/4 pulgadas infundido en un gran poder y que puede flotar libremente o descansar sobre una superficie sólida, pudiendo colocarse por debajo de esta sin atravesarla. Tiene una longitud de hasta 63 Km y 20 Km de altura, aunque se puede moldear la superficie de la misma para crear aberturas, curvas o para cerrar un perímetro si así se requiere. Si la pared atraviesa el espacio de una criatura cuando aparece, es empujada hacia un lado de la pared (tú eliges de qué lado). Nada puede atravesar físicamente la pared. Es inmune a todo daño y no se puede disipar con Disipar magia o el Campo antimagia. También se extiende hacia el Plano Etéreo.",
@@ -2861,7 +3028,28 @@
 				}
 			],
 			"classes": {
-				"fromClassList": []
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
 			},
 			"entries": [
 				"Crea un aura mágica segura que es infundida con un gran poder mágico. Moldeas y das forma a esa energía mágica de forma que creas una esfera que puede flotar libremente o descansar sobre una superficie sólida pudiendo colocarse por debajo de esta sin atravesarla pero proporcionando los beneficios de esta energía. La esfera tiene un diámetro de hasta 200 Km2, aunque se puede moldear la superficie de la misma para crear aberturas si así se requiere. El grosor de esta esfera es de 1/4 pulgadas. Si la pared atraviesa el espacio de una criatura cuando aparece, la criatura es empujada hacia un lado de la pared (tú eliges de qué lado). Nada puede atravesar físicamente la pared. Es inmune a todo daño y no se puede disipar con Disipar Magia o el Campo Antimagia. La esfera también se extiende hacia el Plano Etéreo, bloqueando el viaje etéreo a través de la esfera. El ambiente dentro del espacio es cómodo y seco, independientemente del clima exterior.",

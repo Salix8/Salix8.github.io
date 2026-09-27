@@ -25,9 +25,14 @@ class ClassesPage extends BaseComponent {
 		sc.source = sc.source || cls.source; // default subclasses to same source as parent
 		sc.shortName = sc.shortName || sc.name; // ensure shortName
 
-		sc._fMisc = [];
+		sc._fMisc = ClassesPage.getClassContextMisc(cls);
 		if (sc.srd) sc._fMisc.push("SRD");
 		if (sc.isReprinted) sc._fMisc.push("Reprinted");
+	}
+
+	static getClassContextMisc (cls) {
+		// Features and subclasses inherit the owning class's Sidekick filter context.
+		return cls?.isSidekick ? ["Sidekick"] : [];
 	}
 
 	constructor () {
@@ -50,8 +55,8 @@ class ClassesPage extends BaseComponent {
 		});
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
-			items: ["Reprinted", "SRD"],
-			deselFn: (it) => { return it === "Reprinted" },
+			items: ["Reprinted", "SRD", "Sidekick"],
+			deselFn: (it) => { return it === "Reprinted" || it === "Sidekick" },
 			displayFnMini: it => it === "Reprinted" ? "Repr." : it,
 			displayFnTitle: it => it === "Reprinted" ? it : ""
 		});
@@ -111,6 +116,8 @@ class ClassesPage extends BaseComponent {
 			isCompact: true
 		});
 
+		// Populate search results before checking whether saved filters produce an empty list.
+		this._list.init();
 		this._addData(data);
 
 		BrewUtil.bind({
@@ -129,8 +136,6 @@ class ClassesPage extends BaseComponent {
 		RollerUtil.addListRollButton(true);
 
 		window.onhashchange = this._handleHashChange.bind(this);
-
-		this._list.init();
 
 		// Silently prepare our initial state
 		this._setClassFromHash(Hist.initialLoad);
@@ -419,7 +424,7 @@ class ClassesPage extends BaseComponent {
 	}
 
 	getListItem (cls, clsI, isExcluded) {
-		cls._fMisc = [];
+		cls._fMisc = ClassesPage.getClassContextMisc(cls);
 		if (cls.isReprinted) cls._fMisc.push("Reprinted");
 		if (cls.srd) cls._fMisc.push("SRD");
 
@@ -489,7 +494,7 @@ class ClassesPage extends BaseComponent {
 		this._$trsContent.forEach($tr => {
 			$tr.find(`[data-source]`).each((i, e) => {
 				const source = e.dataset.source;
-				$(e).toggleClass("hidden", !this._filterBox.toDisplay(f, source, []));
+				$(e).toggleClass("hidden", !this._filterBox.toDisplay(f, source, ClassesPage.getClassContextMisc(this.activeClass)));
 			})
 		});
 
@@ -762,7 +767,7 @@ class ClassesPage extends BaseComponent {
 			metasTblRows.forEach(metaTblRow => {
 				metaTblRow.metasFeatureLinks.forEach(metaFeatureLink => {
 					if (metaFeatureLink.source) {
-						const isHidden = !this._filterBox.toDisplay(filterValues, metaFeatureLink.source, []);
+						const isHidden = !this._filterBox.toDisplay(filterValues, metaFeatureLink.source, ClassesPage.getClassContextMisc(cls));
 						metaFeatureLink.isHidden = isHidden;
 						metaFeatureLink.$wrpLink.toggleClass("hidden", isHidden);
 					}
@@ -1180,7 +1185,7 @@ class ClassesPage extends BaseComponent {
 				// Skip inline entries
 				if (depthData.depth >= 2) return;
 				// Skip filtered sources
-				if (depthData.source && !this._filterBox.toDisplay(filterValues, depthData.source, [])) return;
+				if (depthData.source && !this._filterBox.toDisplay(filterValues, depthData.source, ClassesPage.getClassContextMisc(this.activeClass))) return;
 
 				// If there was not a class specified, then this is not a subclass item, so we can color it with grellow as required
 				cssClass = cssClass || (depthData.source && SourceUtil.isNonstandardSource(depthData.source) ? `cls-nav__item--spicy` : "");
@@ -1560,7 +1565,7 @@ ClassesPage.ClassBookView = class {
 			const $tr = $(e);
 			$tr.find(`[data-source]`).each((i, e) => {
 				const source = e.dataset.source;
-				$(e).toggleClass("hidden", !this._classPage.filterBox.toDisplay(f, source, []));
+				$(e).toggleClass("hidden", !this._classPage.filterBox.toDisplay(f, source, ClassesPage.getClassContextMisc(cls)));
 			})
 		})
 

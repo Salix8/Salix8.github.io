@@ -1132,6 +1132,36 @@
 				{
 					"anyStandard": 2
 				}
+			],
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s0": [
+							"Friends|PHB#c",
+							"Message|PHB#c"
+						],
+						"s1": [
+							"Command|PHB",
+							"Ensnaring Strike|PHB"
+						],
+						"s2": [
+							"Arcane Lock|PHB",
+							"Calm Emotions|PHB",
+							"Hold Person|PHB"
+						],
+						"s3": [
+							"Clairvoyance|PHB",
+							"Counterspell|PHB"
+						],
+						"s4": [
+							"Compulsion|PHB",
+							"Divination|PHB"
+						],
+						"s5": [
+							"Dominate Person|PHB"
+						]
+					}
+				}
 			]
 		},
 		{
@@ -2407,6 +2437,35 @@
 			"toolProficiencies": [
 				{
 					"gaming set": true
+				}
+			],
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s0": [
+							"Fire Bolt|PHB#c",
+							"Sacred Flame|PHB#c"
+						],
+						"s1": [
+							"Guiding Bolt|PHB",
+							"Heroism|PHB"
+						],
+						"s2": [
+							"Aid|PHB",
+							"Scorching Ray|PHB"
+						],
+						"s3": [
+							"Beacon of Hope|PHB",
+							"Blinding Smite|PHB"
+						],
+						"s4": [
+							"Death Ward|PHB",
+							"Wall of Fire|PHB"
+						],
+						"s5": [
+							"Flame Strike|PHB"
+						]
+					}
 				}
 			]
 		},
@@ -4247,6 +4306,36 @@
 			"toolProficiencies": [
 				{
 					"disguise kit": true
+				}
+			],
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s0": [
+							"Encode Thoughts|GGR#c",
+							"Mage Hand|PHB#c"
+						],
+						"s1": [
+							"Disguise Self|PHB",
+							"Sleep|PHB"
+						],
+						"s2": [
+							"Detect Thoughts|PHB",
+							"Pass without Trace|PHB"
+						],
+						"s3": [
+							"Gaseous Form|PHB",
+							"Meld into Stone|PHB",
+							"Nondetection|PHB"
+						],
+						"s4": [
+							"Arcane Eye|PHB",
+							"Freedom of Movement|PHB"
+						],
+						"s5": [
+							"Modify Memory|PHB"
+						]
+					}
 				}
 			]
 		},
@@ -7399,6 +7488,37 @@
 				{
 					"poisoner's kit": true
 				}
+			],
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s0": [
+							"Dancing Lights|PHB#c",
+							"Spare the Dying|PHB#c"
+						],
+						"s1": [
+							"Entangle|PHB",
+							"Ray of Sickness|PHB"
+						],
+						"s2": [
+							"Protection from Poison|PHB",
+							"Ray of Enfeeblement|PHB",
+							"Spider Climb|PHB"
+						],
+						"s3": [
+							"Animate Dead|PHB",
+							"Plant Growth|PHB"
+						],
+						"s4": [
+							"Giant Insect|PHB",
+							"Grasping Vine|PHB"
+						],
+						"s5": [
+							"Cloudkill|PHB",
+							"Insect Plague|PHB"
+						]
+					}
+				}
 			]
 		},
 		{
@@ -7795,6 +7915,36 @@
 			"toolProficiencies": [
 				{
 					"herbalism kit": true
+				}
+			],
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s0": [
+							"Fire Bolt|PHB#c",
+							"Produce Flame|PHB#c"
+						],
+						"s1": [
+							"Compelled Duel|PHB",
+							"Speak with Animals|PHB",
+							"Thunderwave|PHB"
+						],
+						"s2": [
+							"Beast Sense|PHB",
+							"Shatter|PHB"
+						],
+						"s3": [
+							"Conjure Animals|PHB",
+							"Conjure Barrage|PHB"
+						],
+						"s4": [
+							"Dominate Beast|PHB",
+							"Stoneskin|PHB"
+						],
+						"s5": [
+							"Destructive Wave|PHB"
+						]
+					}
 				}
 			]
 		},
@@ -10820,6 +10970,39 @@
 				{
 					"artisan's tools": true
 				}
+			],
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s0": [
+							"Produce Flame|PHB#c",
+							"Shocking Grasp|PHB#c"
+						],
+						"s1": [
+							"Chaos Bolt|XGE",
+							"Create or Destroy Water|PHB",
+							"Unseen Servant|PHB"
+						],
+						"s2": [
+							"Heat Metal|PHB",
+							"Rope Trick|PHB"
+						],
+						"s3": [
+							"Call Lightning|PHB",
+							"Elemental Weapon|PHB",
+							"Glyph of Warding|PHB"
+						],
+						"s4": [
+							"Conjure Minor Elementals|PHB",
+							"Divination|PHB",
+							"Otiluke's Resilient Sphere|PHB"
+						],
+						"s5": [
+							"Animate Objects|PHB",
+							"Conjure Elemental|PHB"
+						]
+					}
+				}
 			]
 		},
 		{
@@ -12045,6 +12228,38 @@
 			"languageProficiencies": [
 				{
 					"anyStandard": 2
+				}
+			],
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s0": [
+							"Friends|PHB#c",
+							"Guidance|PHB#c"
+						],
+						"s1": [
+							"Command|PHB",
+							"Illusory Script|PHB"
+						],
+						"s2": [
+							"Enthrall|PHB",
+							"Ray of Enfeeblement|PHB",
+							"Zone of Truth|PHB"
+						],
+						"s3": [
+							"Bestow Curse|PHB",
+							"Speak with Dead|PHB",
+							"Spirit Guardians|PHB"
+						],
+						"s4": [
+							"Blight|PHB",
+							"Death Ward|PHB",
+							"Leomund's Secret Chest|PHB"
+						],
+						"s5": [
+							"Geas|PHB"
+						]
+					}
 				}
 			]
 		},
@@ -13526,6 +13741,37 @@
 				{
 					"musical instrument": true
 				}
+			],
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s0": [
+							"Fire Bolt|PHB#c",
+							"Vicious Mockery|PHB#c"
+						],
+						"s1": [
+							"Burning Hands|PHB",
+							"Dissonant Whispers|PHB",
+							"Hellish Rebuke|PHB"
+						],
+						"s2": [
+							"Crown of Madness|PHB",
+							"Enthrall|PHB",
+							"Flaming Sphere|PHB"
+						],
+						"s3": [
+							"Fear|PHB",
+							"Haste|PHB"
+						],
+						"s4": [
+							"Confusion|PHB",
+							"Wall of Fire|PHB"
+						],
+						"s5": [
+							"Dominate Person|PHB"
+						]
+					}
+				}
 			]
 		},
 		{
@@ -14852,6 +15098,38 @@
 						]
 					}
 				}
+			],
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s0": [
+							"Druidcraft|PHB#c",
+							"Friends|PHB#c"
+						],
+						"s1": [
+							"Animal Friendship|PHB",
+							"Charm Person|PHB"
+						],
+						"s2": [
+							"Aid|PHB",
+							"Animal Messenger|PHB",
+							"Calm Emotions|PHB",
+							"Warding Bond|PHB"
+						],
+						"s3": [
+							"Plant Growth|PHB",
+							"Speak with Plants|PHB"
+						],
+						"s4": [
+							"Aura of Life|PHB",
+							"Conjure Minor Elementals|PHB"
+						],
+						"s5": [
+							"Awaken|PHB",
+							"Commune with Nature|PHB"
+						]
+					}
+				}
 			]
 		},
 		{
@@ -15773,6 +16051,38 @@
 			"languageProficiencies": [
 				{
 					"anyStandard": 2
+				}
+			],
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s0": [
+							"Acid Splash|PHB#c",
+							"Druidcraft|PHB#c"
+						],
+						"s1": [
+							"Detect Poison and Disease|PHB",
+							"Expeditious Retreat|PHB",
+							"Jump|PHB"
+						],
+						"s2": [
+							"Alter Self|PHB",
+							"Enhance Ability|PHB",
+							"Enlarge/Reduce|PHB"
+						],
+						"s3": [
+							"Gaseous Form|PHB",
+							"Water Breathing|PHB",
+							"Wind Wall|PHB"
+						],
+						"s4": [
+							"Freedom of Movement|PHB",
+							"Polymorph|PHB"
+						],
+						"s5": [
+							"Creation|PHB"
+						]
+					}
 				}
 			]
 		},
@@ -17937,24 +18247,24 @@
 				{
 					"expanded": {
 						"s1": [
-							"comprehend languages",
-							"identify"
+							"Comprehend Languages|PHB",
+							"Identify|PHB"
 						],
 						"s2": [
-							"borrowed knowledge|scc",
-							"locate object"
+							"Borrowed Knowledge|SCC",
+							"Locate Object|PHB"
 						],
 						"s3": [
-							"speak with dead",
-							"spirit guardians"
+							"Speak with Dead|PHB",
+							"Spirit Guardians|PHB"
 						],
 						"s4": [
-							"arcane eye",
-							"stone shape"
+							"Arcane Eye|PHB",
+							"Stone Shape|PHB"
 						],
 						"s5": [
-							"flame strike",
-							"legend lore"
+							"Flame Strike|PHB",
+							"Legend Lore|PHB"
 						]
 					}
 				}
@@ -18159,24 +18469,24 @@
 				{
 					"expanded": {
 						"s1": [
-							"chromatic orb",
-							"thunderwave"
+							"Chromatic Orb|PHB",
+							"Thunderwave|PHB"
 						],
 						"s2": [
-							"flaming sphere",
-							"kinetic jaunt|scc"
+							"Flaming Sphere|PHB",
+							"Kinetic Jaunt|SCC"
 						],
 						"s3": [
-							"haste",
-							"water walk"
+							"Haste|PHB",
+							"Water Walk|PHB"
 						],
 						"s4": [
-							"freedom of movement",
-							"wall of fire"
+							"Freedom of Movement|PHB",
+							"Wall of Fire|PHB"
 						],
 						"s5": [
-							"cone of cold",
-							"conjure elemental"
+							"Cone of Cold|PHB",
+							"Conjure Elemental|PHB"
 						]
 					}
 				}
@@ -18370,24 +18680,24 @@
 				{
 					"expanded": {
 						"s1": [
-							"entangle",
-							"guiding bolt"
+							"Entangle|PHB",
+							"Guiding Bolt|PHB"
 						],
 						"s2": [
-							"enlarge/reduce",
-							"vortex warp|scc"
+							"Enlarge/Reduce|PHB",
+							"Vortex Warp|SCC"
 						],
 						"s3": [
-							"aura of vitality",
-							"haste"
+							"Aura of Vitality|PHB",
+							"Haste|PHB"
 						],
 						"s4": [
-							"control water",
-							"freedom of movement"
+							"Control Water|PHB",
+							"Freedom of Movement|PHB"
 						],
 						"s5": [
-							"circle of power",
-							"passwall"
+							"Circle of Power|PHB",
+							"Passwall|PHB"
 						]
 					}
 				}
@@ -18575,24 +18885,24 @@
 				{
 					"expanded": {
 						"s1": [
-							"dissonant whispers",
-							"silvery barbs|scc"
+							"Dissonant Whispers|PHB",
+							"Silvery Barbs|SCC"
 						],
 						"s2": [
-							"calm emotions",
-							"darkness"
+							"Calm Emotions|PHB",
+							"Darkness|PHB"
 						],
 						"s3": [
-							"beacon of hope",
-							"daylight"
+							"Beacon of Hope|PHB",
+							"Daylight|PHB"
 						],
 						"s4": [
-							"compulsion",
-							"confusion"
+							"Compulsion|PHB",
+							"Confusion|PHB"
 						],
 						"s5": [
-							"dominate person",
-							"rary's telepathic bond"
+							"Dominate Person|PHB",
+							"Rary's Telepathic Bond|PHB"
 						]
 					}
 				}
@@ -18781,24 +19091,24 @@
 				{
 					"expanded": {
 						"s1": [
-							"cure wounds",
-							"inflict wounds"
+							"Cure Wounds|PHB",
+							"Inflict Wounds|PHB"
 						],
 						"s2": [
-							"lesser restoration",
-							"wither and bloom|scc"
+							"Lesser Restoration|PHB",
+							"Wither and Bloom|SCC"
 						],
 						"s3": [
-							"revivify",
-							"vampiric touch"
+							"Revivify|PHB",
+							"Vampiric Touch|PHB"
 						],
 						"s4": [
-							"blight",
-							"death ward"
+							"Blight|PHB",
+							"Death Ward|PHB"
 						],
 						"s5": [
-							"antilife shell",
-							"greater restoration"
+							"Antilife Shell|PHB",
+							"Greater Restoration|PHB"
 						]
 					}
 				}
@@ -18976,7 +19286,7 @@
 						{
 							"type": "item",
 							"name": "Equipment",
-							"entry": "Botiquín, vendas, bisturí, tijeras quirúrgicas, alcohol antiséptico, 3 hierbas analgésicas, 3 hierbas energéticas, aguja, 5 pies de hilo, sierra pequeña, una muda de viaje, kit elegido, libro de {@skill Medicine} y una {@item pouch|phb} con 15 po"
+							"entry": "Botiquín, vendas, bisturí, tijeras quirúrgicas, alcohol antiséptico, 3 hierbas analgésicas, 3 hierbas energéticas, aguja, 5 pies de hilo, sierra pequeña, una muda de viaje, kit elegido, libro de medicina y una {@item pouch|phb} con 15 po"
 						}
 					]
 				},

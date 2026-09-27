@@ -655,6 +655,32 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"expanded": {
+								"s1": [
+									"Faerie Fire|PHB",
+									"Sleep|PHB"
+								],
+								"s2": [
+									"Calm Emotions|PHB",
+									"Phantasmal Force|PHB"
+								],
+								"s3": [
+									"Blink|PHB",
+									"Plant Growth|PHB"
+								],
+								"s4": [
+									"Dominate Beast|PHB",
+									"Greater Invisibility|PHB"
+								],
+								"s5": [
+									"Dominate Person|PHB",
+									"Seeming|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -761,6 +787,40 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"expanded": {
+								"s1": [
+									"Burning Hands|PHB",
+									"Command|PHB"
+								],
+								"s2": [
+									"Blindness/Deafness|PHB",
+									"Scorching Ray|PHB"
+								],
+								"s3": [
+									"Fireball|PHB",
+									"Stinking Cloud|PHB"
+								],
+								"s4": [
+									"Fire Shield|PHB",
+									"Wall of Fire|PHB"
+								],
+								"s5": [
+									"Flame Strike|PHB",
+									"Hallow|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s5": [
+									"Control Fire|GPNM"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -874,6 +934,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Arcane Hacking (UA)|UAModernMagic",
+									"Digital Phantom (UA)|UAModernMagic"
+								],
+								"s4": [
+									"Conjure Knowbot (UA)|UAModernMagic",
+									"Synchronicity (UA)|UAModernMagic",
+									"System Backdoor (UA)|UAModernMagic"
+								],
+								"s3": [
+									"Haywire (UA)|UAModernMagic",
+									"Invisibility to Cameras (UA)|UAModernMagic"
+								],
+								"s1": [
+									"Infallible Relay (UA)|UAModernMagic",
+									"Remote Access (UA)|UAModernMagic"
+								],
+								"s5": [
+									"Shutdown (UA)|UAModernMagic"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -978,6 +1065,40 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"expanded": {
+								"s1": [
+									"Dissonant Whispers|PHB",
+									"Tasha's Hideous Laughter|PHB"
+								],
+								"s2": [
+									"Detect Thoughts|PHB",
+									"Phantasmal Force|PHB"
+								],
+								"s3": [
+									"Clairvoyance|PHB",
+									"Sending|PHB"
+								],
+								"s4": [
+									"Dominate Beast|PHB",
+									"Evard's Black Tentacles|PHB"
+								],
+								"s5": [
+									"Dominate Person|PHB",
+									"Telekinesis|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Suerte del Pescador|GMAM"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -989,7 +1110,7 @@
 							{
 								"name": "The Undying",
 								"entries": [
-									"Death holds no sway over your patron, who has unlocked the secrets of everlasting life, although such a prize\u2014like all power\u2014comes at a price. Once mortal, the Undying has seen mortal lifetimes pass like the seasons, like the flicker of endless days and nights. It has the secrets of the ages to share, secrets of life and death. Beings of this sort include Vecna, Lord of the Hand and the Eye; the dread Iuz; the lich-queen Vol; the Undying Court of Aerenal; Vlaakith, lich-queen of the githyanki; and the deathless wizard Fistandantalus.",
+									"Death holds no sway over your patron, who has unlocked the secrets of everlasting life, although such a prize—like all power—comes at a price. Once mortal, the Undying has seen mortal lifetimes pass like the seasons, like the flicker of endless days and nights. It has the secrets of the ages to share, secrets of life and death. Beings of this sort include Vecna, Lord of the Hand and the Eye; the dread Iuz; the lich-queen Vol; the Undying Court of Aerenal; Vlaakith, lich-queen of the githyanki; and the deathless wizard Fistandantalus.",
 									"In the Realms, Undying patrons include Larloch the Shadow King, legendary master of Warlock's Crypt, and Gilgeam, the God-King of Unther.",
 									{
 										"type": "entries",
@@ -1085,6 +1206,37 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"known": {
+								"1": [
+									"Spare the Dying|PHB#c"
+								]
+							},
+							"expanded": {
+								"s1": [
+									"False Life|PHB",
+									"Ray of Sickness|PHB"
+								],
+								"s2": [
+									"Blindness/Deafness|PHB",
+									"Silence|PHB"
+								],
+								"s3": [
+									"Feign Death|PHB",
+									"Speak with Dead|PHB"
+								],
+								"s4": [
+									"Aura of Life|PHB",
+									"Death Ward|PHB"
+								],
+								"s5": [
+									"Contagion|PHB",
+									"Legend Lore|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1230,6 +1382,32 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Burning Hands|PHB"
+								],
+								"s3": [
+									"Daylight|PHB"
+								],
+								"s4": [
+									"Fire Shield|PHB"
+								],
+								"s5": [
+									"Flame Strike|PHB"
+								],
+								"s2": [
+									"Flaming Sphere|PHB"
+								],
+								"s0": [
+									"Light|PHB",
+									"Sacred Flame|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1344,6 +1522,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Burning Hands|PHB",
+									"Cure Wounds|PHB"
+								],
+								"s3": [
+									"Daylight|PHB",
+									"Revivify|PHB"
+								],
+								"s5": [
+									"Flame Strike|PHB",
+									"Greater Restoration|PHB"
+								],
+								"s2": [
+									"Flaming Sphere|PHB",
+									"Lesser Restoration|PHB"
+								],
+								"s4": [
+									"Guardian of Faith|PHB",
+									"Wall of Fire|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1451,6 +1656,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s4": [
+									"Arcane Eye|PHB",
+									"Locate Creature|PHB"
+								],
+								"s3": [
+									"Clairvoyance|PHB",
+									"Sending|PHB"
+								],
+								"s1": [
+									"Feather Fall|PHB",
+									"Jump|PHB"
+								],
+								"s5": [
+									"Legend Lore|PHB",
+									"Passwall|PHB"
+								],
+								"s2": [
+									"Levitate|PHB",
+									"Locate Object|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1513,7 +1745,7 @@
 											"While the raven is perched on your shoulder, you gain darkvision with a range of 30 feet and a bonus to your passive Wisdom ({@skill Perception}) score and to Wisdom ({@skill Perception}) checks. The bonus equals your Charisma modifier. While perched on your shoulder, the raven can't be targeted by any attack or other harmful effect; only you can cast spells on it; it can't take damage; and it is {@condition incapacitated}.",
 											"You can see through the raven's eyes and hear what it hears while it is within 100 feet of you. In combat, you roll initiative for the raven and control how it acts. If it is slain by a creature, you gain advantage on all attack rolls against the killer for the next 24 hours.",
 											"The raven doesn't require sleep. While it is within 100 feet of you, it can awaken you from sleep as a bonus action. The raven vanishes when it dies, if you die, or if the two of you are separated by more than 5 miles.",
-											"At the end of a short or long rest, you can call the raven back to you\u2014no matter where it is or whether it died\u2014and it reappears within 5 feet of you."
+											"At the end of a short or long rest, you can call the raven back to you—no matter where it is or whether it died—and it reappears within 5 feet of you."
 										]
 									}
 								]
@@ -1558,6 +1790,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s5": [
+									"Commune|PHB",
+									"Cone of Cold|PHB"
+								],
+								"s1": [
+									"False Life|PHB",
+									"Sanctuary|PHB"
+								],
+								"s3": [
+									"Feign Death|PHB",
+									"Speak with Dead|PHB"
+								],
+								"s4": [
+									"Ice Storm|PHB",
+									"Locate Creature|PHB"
+								],
+								"s2": [
+									"Silence|PHB",
+									"Spiritual Weapon|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1678,6 +1937,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s3": [
+									"Blink|PHB",
+									"Elemental Weapon|PHB"
+								],
+								"s2": [
+									"Branding Smite|PHB",
+									"Magic Weapon|PHB"
+								],
+								"s5": [
+									"Cone of Cold|PHB",
+									"Destructive Wave|PHB"
+								],
+								"s4": [
+									"Phantasmal Killer|PHB",
+									"Staggering Smite|PHB"
+								],
+								"s1": [
+									"Shield|PHB",
+									"Wrathful Smite|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1791,6 +2077,51 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"known": {
+								"1": [
+									"Sacred Flame|PHB#c",
+									"Light|PHB#c"
+								]
+							},
+							"expanded": {
+								"s1": [
+									"Cure Wounds|PHB",
+									"Guiding Bolt|PHB"
+								],
+								"s2": [
+									"Flaming Sphere|PHB",
+									"Lesser Restoration|PHB"
+								],
+								"s3": [
+									"Daylight|PHB",
+									"Revivify|PHB"
+								],
+								"s4": [
+									"Guardian of Faith|PHB",
+									"Wall of Fire|PHB"
+								],
+								"s5": [
+									"Flame Strike|PHB",
+									"Greater Restoration|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Toque de Sune|GdR"
+								],
+								"s2": [
+									"Covering|GdR",
+									"Sueño de Selûne|GdR",
+									"Corte Espiritual|GPNM"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1802,7 +2133,7 @@
 							{
 								"name": "The Hexblade",
 								"entries": [
-									"You have made your pact with a mysterious entity from the Shadowfell\u2014a force that manifests in sentient magic weapons carved from the stuff of shadow. The mighty sword Blackrazor is the most notable of these weapons, which have been spread across the multiverse over the ages. The shadowy force behind these weapons can offer power to warlocks who form pacts with it. Many hexblade warlocks create weapons that emulate those formed in the Shadowfell. Others forgo such arms, content to weave the dark magic of that plane into their spellcasting.",
+									"You have made your pact with a mysterious entity from the Shadowfell—a force that manifests in sentient magic weapons carved from the stuff of shadow. The mighty sword Blackrazor is the most notable of these weapons, which have been spread across the multiverse over the ages. The shadowy force behind these weapons can offer power to warlocks who form pacts with it. Many hexblade warlocks create weapons that emulate those formed in the Shadowfell. Others forgo such arms, content to weave the dark magic of that plane into their spellcasting.",
 									"Because the Raven Queen is known to have forged the first of these weapons, many sages speculate that she and the force are one and that the weapons, along with hexblade warlocks, are tools she uses to manipulate events on the Material Plane to her inscrutable ends.",
 									{
 										"type": "entries",
@@ -1913,6 +2244,32 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"expanded": {
+								"s1": [
+									"Shield|PHB",
+									"Wrathful Smite|PHB"
+								],
+								"s2": [
+									"Blur|PHB",
+									"Branding Smite|PHB"
+								],
+								"s3": [
+									"Blink|PHB",
+									"Elemental Weapon|PHB"
+								],
+								"s4": [
+									"Phantasmal Killer|PHB",
+									"Staggering Smite|PHB"
+								],
+								"s5": [
+									"Banishing Smite|PHB",
+									"Cone of Cold|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2047,6 +2404,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Augury|PHB",
+									"Gust of Wind|PHB"
+								],
+								"s3": [
+									"Call Lightning|PHB",
+									"Water Breathing|PHB"
+								],
+								"s5": [
+									"Commune with Nature|PHB",
+									"Cone of Cold|PHB"
+								],
+								"s4": [
+									"Control Water|PHB",
+									"Evard's Black Tentacles|PHB"
+								],
+								"s1": [
+									"Create or Destroy Water|PHB",
+									"Thunderwave|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2119,15 +2503,15 @@
 												],
 												"rows": [
 													[
-														"1st\u20144th",
+														"1st—4th",
 														"{@dice 1d10} poison"
 													],
 													[
-														"5th\u201410th",
+														"5th—10th",
 														"{@dice 2d10} poison"
 													],
 													[
-														"11th\u201416th",
+														"11th—16th",
 														"{@dice 3d10} poison"
 													],
 													[
@@ -2180,6 +2564,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s5": [
+									"Cloudkill|PHB",
+									"Hold Monster|PHB"
+								],
+								"s2": [
+									"Darkness|PHB",
+									"Web|PHB"
+								],
+								"s4": [
+									"Dimension Door|PHB",
+									"Giant Insect|PHB"
+								],
+								"s1": [
+									"Faerie Fire|PHB",
+									"Jump|PHB"
+								],
+								"s3": [
+									"Fear|PHB",
+									"Vampiric Touch|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2335,6 +2746,33 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s5": [
+									"Commune with Nature|PHB",
+									"Cone of Cold|PHB"
+								],
+								"s4": [
+									"Control Water|PHB",
+									"Evard's Black Tentacles|PHB"
+								],
+								"s1": [
+									"Create or Destroy Water|PHB",
+									"Thunderwave|PHB"
+								],
+								"s2": [
+									"Gust of Wind|PHB",
+									"Shatter|PHB"
+								],
+								"s3": [
+									"Lightning Bolt|PHB",
+									"Sleet Storm|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2521,40 +2959,567 @@
 					]
 				},
 				{
-					"name": "El Parásito", "shortName": "Parásito", "source": "Himo", "page": "??",
+					"name": "El Parásito",
+					"shortName": "Parásito",
+					"source": "Himo",
+					"page": "??",
 					"subclassFeatures": [
-						[{"name": "El Parásito", "source": "Himo", "page": "??", "entries": ["Has permitido que una entidad acceda parcialmente a tu mente. Vives en simbiosis con un parásito o espíritu simbionte que obtiene beneficio de tus actos y, a cambio, te ofrece poder mental.", {"name": "Conjuros Ampliados", "source": "Himo", "page": "??", "entries": [{"type": "table", "colLabels": ["Nivel de conjuro", "Conjuros"], "colStyles": ["col-2 text-center", "col-10"], "rows": [["1st", "{@spell dissonant whispers}, {@spell identify}"], ["3rd", "{@spell detect thoughts}, {@spell enhance ability}"], ["5th", "{@spell pulse wave|EGW}, {@spell sending}"], ["7th", "{@spell compulsion}, {@spell confusion}"], ["9th", "{@spell modify memory}, {@spell telekinesis}"]]}]}, {"name": "Mente Ampliada", "source": "Himo", "page": "??", "entries": ["Eres competente con un kit de herramientas y una habilidad de tu elección, puedes hablar Deep Speech y leer Qualith. Además, tienes telepatía a 60 pies con una criatura que puedas ver y con la que compartas al menos un idioma; la criatura no puede responderte."]}]}],
-						[{"name": "Protección Mental", "source": "Himo", "page": "??", "entries": ["Eres resistente al daño psíquico y ninguna criatura puede leer tu mente si no quieres."]}],
-						[{"name": "Voluntad Compartida", "source": "Himo", "page": "??", "entries": ["Eres inmune a quedar {@condition Charmed|PHB} y no pueden hacerte actuar mágicamente en contra de tu voluntad."]}],
-						[{"name": "Disruptor Psiónico", "source": "Himo", "page": "??", "entries": ["Como acción puedes sobrecargar la mente de una criatura que veas a 60 pies. Debe superar una salvación de Inteligencia o recibir {@dice 5d8} de daño psíquico, caer {@condition Unconscious|PHB} y ganar un nivel de agotamiento. Despierta al recibir daño o tras una hora. Recuperas este rasgo tras un descanso prolongado."]}]
+						[
+							{
+								"name": "El Parásito",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Has permitido que una entidad acceda parcialmente a tu mente. Vives en simbiosis con un parásito o espíritu simbionte que obtiene beneficio de tus actos y, a cambio, te ofrece poder mental.",
+									{
+										"name": "Conjuros Ampliados",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											{
+												"type": "table",
+												"colLabels": [
+													"Nivel de conjuro",
+													"Conjuros"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"1st",
+														"{@spell dissonant whispers}, {@spell identify}"
+													],
+													[
+														"3rd",
+														"{@spell detect thoughts}, {@spell enhance ability}"
+													],
+													[
+														"5th",
+														"{@spell pulse wave|EGW}, {@spell sending}"
+													],
+													[
+														"7th",
+														"{@spell compulsion}, {@spell confusion}"
+													],
+													[
+														"9th",
+														"{@spell modify memory}, {@spell telekinesis}"
+													]
+												]
+											}
+										]
+									},
+									{
+										"name": "Mente Ampliada",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Eres competente con un kit de herramientas y una habilidad de tu elección, puedes hablar Deep Speech y leer Qualith. Además, tienes telepatía a 60 pies con una criatura que puedas ver y con la que compartas al menos un idioma; la criatura no puede responderte."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Protección Mental",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Eres resistente al daño psíquico y ninguna criatura puede leer tu mente si no quieres."
+								]
+							}
+						],
+						[
+							{
+								"name": "Voluntad Compartida",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Eres inmune a quedar {@condition Charmed|PHB} y no pueden hacerte actuar mágicamente en contra de tu voluntad."
+								]
+							}
+						],
+						[
+							{
+								"name": "Disruptor Psiónico",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Como acción puedes sobrecargar la mente de una criatura que veas a 60 pies. Debe superar una salvación de Inteligencia o recibir {@dice 5d8} de daño psíquico, caer {@condition Unconscious|PHB} y ganar un nivel de agotamiento. Despierta al recibir daño o tras una hora. Recuperas este rasgo tras un descanso prolongado."
+								]
+							}
+						]
 					]
 				},
 				{
-					"name": "El Quori", "shortName": "Quori", "source": "Himo", "page": "??",
+					"name": "El Quori",
+					"shortName": "Quori",
+					"source": "Himo",
+					"page": "??",
 					"subclassFeatures": [
-						[{"name": "El Quori", "source": "Himo", "page": "??", "entries": ["Los quori, criaturas del Plano Onírico o Dal Quor, buscan humanoides a los que inspirar y dar poder. Muchos de sus oniromantes actúan como diplomáticos o espías.", {"name": "Inspiración Quori", "source": "Himo", "page": "??", "entries": ["Hablas quori. Al final de un descanso prolongado puedes elegir un idioma, habilidad o kit de herramientas y ganar competencia con él hasta tu próximo descanso prolongado. Entre tus opciones de Arcanum se encuentran Proyección Onírica de nivel 9 y Paraje Onírico de nivel 6."]}, {"name": "Conjuros Ampliados", "source": "Himo", "page": "??", "entries": [{"type": "table", "colLabels": ["Nivel de conjuro", "Conjuros"], "colStyles": ["col-2 text-center", "col-10"], "rows": [["1st", "Abrir Mente, {@spell sleep}"], ["3rd", "Buscador de Sueños, {@spell calm emotions}"], ["5th", "Atar Consciencia, {@spell clairvoyance}"], ["7th", "Caminante de Sueños, {@spell arcane eye}"], ["9th", "{@spell modify memory}, {@spell Rary's telepathic bond}"]]}]}]}],
-						[{"name": "Mente Abierta", "source": "Himo", "page": "??", "entries": ["Siempre que duermas eres consciente de tu burbuja onírica. Eres resistente al daño psíquico tanto en el Plano Material como en el Onírico."]}],
-						[{"name": "Imaginación Poderosa", "source": "Himo", "page": "??", "entries": ["Siempre que uses la acción de Modificar Paraje para crear o reparar una anomalía, causas o curas un número de {@dice d12} igual a tu bonificador de competencia."]}],
-						[{"name": "Moldear Pesadilla", "source": "Himo", "page": "??", "entries": ["Una vez por descanso prolongado puedes infundir los mayores miedos de una criatura que veas a 30 pies y cuya Inteligencia sea 5 o superior. Debe superar una salvación de Sabiduría contra tu CD de conjuros. Si está en el Plano Material o no es anfitrión de la burbuja actual, recibe todos los efectos de un ataque de ansiedad excepto el daño, que se sustituye por el de Imaginación Poderosa. Si era anfitrión de su propia burbuja en el Plano Onírico, entra automáticamente en Modo Pesadilla."]}]
+						[
+							{
+								"name": "El Quori",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Los quori, criaturas del Plano Onírico o Dal Quor, buscan humanoides a los que inspirar y dar poder. Muchos de sus oniromantes actúan como diplomáticos o espías.",
+									{
+										"name": "Inspiración Quori",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Hablas quori. Al final de un descanso prolongado puedes elegir un idioma, habilidad o kit de herramientas y ganar competencia con él hasta tu próximo descanso prolongado. Entre tus opciones de Arcanum se encuentran Proyección Onírica de nivel 9 y Paraje Onírico de nivel 6."
+										]
+									},
+									{
+										"name": "Conjuros Ampliados",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											{
+												"type": "table",
+												"colLabels": [
+													"Nivel de conjuro",
+													"Conjuros"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"1st",
+														"Abrir Mente, {@spell sleep}"
+													],
+													[
+														"3rd",
+														"Buscador de Sueños, {@spell calm emotions}"
+													],
+													[
+														"5th",
+														"Atar Consciencia, {@spell clairvoyance}"
+													],
+													[
+														"7th",
+														"Caminante de Sueños, {@spell arcane eye}"
+													],
+													[
+														"9th",
+														"{@spell modify memory}, {@spell Rary's telepathic bond}"
+													]
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Mente Abierta",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Siempre que duermas eres consciente de tu burbuja onírica. Eres resistente al daño psíquico tanto en el Plano Material como en el Onírico."
+								]
+							}
+						],
+						[
+							{
+								"name": "Imaginación Poderosa",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Siempre que uses la acción de Modificar Paraje para crear o reparar una anomalía, causas o curas un número de {@dice d12} igual a tu bonificador de competencia."
+								]
+							}
+						],
+						[
+							{
+								"name": "Moldear Pesadilla",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Una vez por descanso prolongado puedes infundir los mayores miedos de una criatura que veas a 30 pies y cuya Inteligencia sea 5 o superior. Debe superar una salvación de Sabiduría contra tu CD de conjuros. Si está en el Plano Material o no es anfitrión de la burbuja actual, recibe todos los efectos de un ataque de ansiedad excepto el daño, que se sustituye por el de Imaginación Poderosa. Si era anfitrión de su propia burbuja en el Plano Onírico, entra automáticamente en Modo Pesadilla."
+								]
+							}
+						]
 					]
 				},
 				{
-					"name": "El Archimago", "shortName": "Archimago", "source": "Himo", "page": "??",
+					"name": "El Archimago",
+					"shortName": "Archimago",
+					"source": "Himo",
+					"page": "??",
 					"subclassFeatures": [
-						[{"name": "El Archimago", "source": "Himo", "page": "??", "entries": ["Algunos magos ofrecen poder directamente a alumnos que necesitan prosperar en las artes arcanas, cerrando un pacto arcano.", {"name": "Aprendiz Arcano", "source": "Himo", "page": "??", "entries": ["Eres competente en tres habilidades de Inteligencia o Sabiduría y ganas un truco de la lista de mago que usa Carisma."]}, {"name": "Conjuros Ampliados", "source": "Himo", "page": "??", "entries": [{"type": "table", "colLabels": ["Nivel de conjuro", "Conjuros"], "colStyles": ["col-2 text-center", "col-10"], "rows": [["1st", "{@spell magic missile}, {@spell shield}"], ["3rd", "{@spell rope trick}, {@spell Leomund's Tiny Hut|PHB|tiny hut}"], ["5th", "{@spell lightning bolt}, {@spell tiny servant|XGE}"], ["7th", "{@spell arcane eye}, {@spell Otiluke's resilient sphere}"], ["9th", "{@spell Bigby's hand}, {@spell wall of force}"]]}]}]}],
-						[{"name": "Tropiezo Astral", "source": "Himo", "page": "??", "entries": ["Cuando seas golpeado por un ataque o efecto de área, puedes usar tu reacción para desaparecer en el Plano Astral sin recibir daño. Al final del turno reapareces en un espacio de tu elección a 30 pies del punto en que desapareciste. Recuperas este rasgo tras un descanso corto o prolongado." ]}, {"name": "Alumno Avanzado", "source": "Himo", "page": "??", "entries": ["Al final de un descanso prolongado puedes cambiar un conjuro de brujo de nivel 1 por otro de nivel 1 de la lista de brujo."]}],
-						[{"name": "Protección Mágica", "source": "Himo", "page": "??", "entries": ["Eres resistente al daño de fuerza y, cuando hagas una salvación para recibir daño mágico, puedes usar tu reacción para convertirla en una salvación de Carisma. Puedes hacerlo un número de veces al día igual a tu modificador de Carisma."]}],
-						[{"name": "Fuerza Atrapante", "source": "Himo", "page": "??", "entries": ["Una vez por descanso, al golpear a una criatura con un truco o arma que haga daño, puedes decidir no dañarla y transportarla a una dimensión de bolsillo creada por tu patrón. Permanece allí mientras mantengas la {@status Concentration|PHB} o hasta un minuto. Después debe superar una salvación de Carisma; vuelva o no al espacio del que se desvaneció, con un fallo recibe {@dice 5d10} de daño de fuerza y queda {@condition Prone|PHB}."]}]
+						[
+							{
+								"name": "El Archimago",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Algunos magos ofrecen poder directamente a alumnos que necesitan prosperar en las artes arcanas, cerrando un pacto arcano.",
+									{
+										"name": "Aprendiz Arcano",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Eres competente en tres habilidades de Inteligencia o Sabiduría y ganas un truco de la lista de mago que usa Carisma."
+										]
+									},
+									{
+										"name": "Conjuros Ampliados",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											{
+												"type": "table",
+												"colLabels": [
+													"Nivel de conjuro",
+													"Conjuros"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"1st",
+														"{@spell magic missile}, {@spell shield}"
+													],
+													[
+														"3rd",
+														"{@spell rope trick}, {@spell Leomund's Tiny Hut|PHB|tiny hut}"
+													],
+													[
+														"5th",
+														"{@spell lightning bolt}, {@spell tiny servant|XGE}"
+													],
+													[
+														"7th",
+														"{@spell arcane eye}, {@spell Otiluke's resilient sphere}"
+													],
+													[
+														"9th",
+														"{@spell Bigby's hand}, {@spell wall of force}"
+													]
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Tropiezo Astral",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Cuando seas golpeado por un ataque o efecto de área, puedes usar tu reacción para desaparecer en el Plano Astral sin recibir daño. Al final del turno reapareces en un espacio de tu elección a 30 pies del punto en que desapareciste. Recuperas este rasgo tras un descanso corto o prolongado."
+								]
+							},
+							{
+								"name": "Alumno Avanzado",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Al final de un descanso prolongado puedes cambiar un conjuro de brujo de nivel 1 por otro de nivel 1 de la lista de brujo."
+								]
+							}
+						],
+						[
+							{
+								"name": "Protección Mágica",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Eres resistente al daño de fuerza y, cuando hagas una salvación para recibir daño mágico, puedes usar tu reacción para convertirla en una salvación de Carisma. Puedes hacerlo un número de veces al día igual a tu modificador de Carisma."
+								]
+							}
+						],
+						[
+							{
+								"name": "Fuerza Atrapante",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Una vez por descanso, al golpear a una criatura con un truco o arma que haga daño, puedes decidir no dañarla y transportarla a una dimensión de bolsillo creada por tu patrón. Permanece allí mientras mantengas la {@status Concentration|PHB} o hasta un minuto. Después debe superar una salvación de Carisma; vuelva o no al espacio del que se desvaneció, con un fallo recibe {@dice 5d10} de daño de fuerza y queda {@condition Prone|PHB}."
+								]
+							}
+						]
 					]
 				},
 				{
-					"name": "El Dragón", "shortName": "Dragón", "source": "Himo", "page": "??",
+					"name": "El Dragón",
+					"shortName": "Dragón",
+					"source": "Himo",
+					"page": "??",
 					"subclassFeatures": [
-						[{"name": "El Dragón", "source": "Himo", "page": "??", "entries": ["Solo unos pocos cultistas de dragones logran el favor verdadero de su patrón, prometiendo ampliar su horda, luchar por sus intereses o llegar donde otros fieles no se atreven.", {"name": "Presencia Dracónica", "source": "Himo", "page": "??", "entries": ["Como acción puedes forzar a toda criatura de tu elección a 30 pies a hacer una salvación de Sabiduría contra tu CD de conjuros o quedar {@condition Frightened|PHB} de ti hasta el inicio de tu próximo turno. Con un éxito, es inmune a este efecto durante 24 horas."]}, {"name": "Conjuros Ampliados", "source": "Himo", "page": "??", "entries": [{"type": "table", "colLabels": ["Nivel de conjuro", "Conjuros"], "colStyles": ["col-2 text-center", "col-10"], "rows": [["1st", "{@spell absorb elements|XGE}, {@spell chromatic orb}"], ["3rd", "{@spell dragon's breath|XGE}, {@spell Rime's binding ice|FTD}"], ["5th", "{@spell lightning bolt}, {@spell Ashardalon's stride|FTD}"], ["7th", "{@spell fire shield}, {@spell ice storm}"], ["9th", "{@spell cone of cold}, {@spell immolation|XGE}"]]}]}]}],
-						[{"name": "Influencia Dracónica", "source": "Himo", "page": "??", "entries": ["Al final de un descanso prolongado, elige un tipo de dragón cromático o metálico. Ganas resistencia a su tipo de daño y puedes hacer que tu Eldritch Blast haga ese tipo de daño. El DM puede limitar la elección a un único tipo para conservar la consistencia del patrón."]}],
-						[{"name": "Transformación Ancestral", "source": "Himo", "page": "??", "entries": ["Una vez al día entras durante un minuto en un éxtasis influenciado por tu patrón. Eres inmune a tu tipo de daño; el daño que inflijas de ese tipo ignora resistencias y trata inmunidades como resistencias. Te crecen alas dracónidas y ganas velocidad de vuelo igual a la de caminar. Si el dragón elegido tiene velocidad de nado o excavación, también puedes ganarla; si solo te da vuelo, ganas 15 pies de velocidad."]}],
-						[{"name": "Resistencia Legendaria", "source": "Himo", "page": "??", "entries": ["Una vez al día, cuando falles una salvación, puedes elegir tener éxito. Puedes gastar un espacio de conjuro para volver a usar este rasgo."]}]
+						[
+							{
+								"name": "El Dragón",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Solo unos pocos cultistas de dragones logran el favor verdadero de su patrón, prometiendo ampliar su horda, luchar por sus intereses o llegar donde otros fieles no se atreven.",
+									{
+										"name": "Presencia Dracónica",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Como acción puedes forzar a toda criatura de tu elección a 30 pies a hacer una salvación de Sabiduría contra tu CD de conjuros o quedar {@condition Frightened|PHB} de ti hasta el inicio de tu próximo turno. Con un éxito, es inmune a este efecto durante 24 horas."
+										]
+									},
+									{
+										"name": "Conjuros Ampliados",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											{
+												"type": "table",
+												"colLabels": [
+													"Nivel de conjuro",
+													"Conjuros"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"1st",
+														"{@spell absorb elements|XGE}, {@spell chromatic orb}"
+													],
+													[
+														"3rd",
+														"{@spell dragon's breath|XGE}, {@spell Rime's binding ice|FTD}"
+													],
+													[
+														"5th",
+														"{@spell lightning bolt}, {@spell Ashardalon's stride|FTD}"
+													],
+													[
+														"7th",
+														"{@spell fire shield}, {@spell ice storm}"
+													],
+													[
+														"9th",
+														"{@spell cone of cold}, {@spell immolation|XGE}"
+													]
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Influencia Dracónica",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Al final de un descanso prolongado, elige un tipo de dragón cromático o metálico. Ganas resistencia a su tipo de daño y puedes hacer que tu Eldritch Blast haga ese tipo de daño. El DM puede limitar la elección a un único tipo para conservar la consistencia del patrón."
+								]
+							}
+						],
+						[
+							{
+								"name": "Transformación Ancestral",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Una vez al día entras durante un minuto en un éxtasis influenciado por tu patrón. Eres inmune a tu tipo de daño; el daño que inflijas de ese tipo ignora resistencias y trata inmunidades como resistencias. Te crecen alas dracónidas y ganas velocidad de vuelo igual a la de caminar. Si el dragón elegido tiene velocidad de nado o excavación, también puedes ganarla; si solo te da vuelo, ganas 15 pies de velocidad."
+								]
+							}
+						],
+						[
+							{
+								"name": "Resistencia Legendaria",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Una vez al día, cuando falles una salvación, puedes elegir tener éxito. Puedes gastar un espacio de conjuro para volver a usar este rasgo."
+								]
+							}
+						]
 					]
+				},
+				{
+					"name": "The Fathomless",
+					"shortName": "Fathomless",
+					"source": "TCE",
+					"page": 72,
+					"additionalSpells": [
+						{
+							"expanded": {
+								"s1": [
+									"Create or Destroy Water|PHB",
+									"Thunderwave|PHB"
+								],
+								"s2": [
+									"Gust of Wind|PHB",
+									"Silence|PHB"
+								],
+								"s3": [
+									"Lightning Bolt|PHB",
+									"Sleet Storm|PHB"
+								],
+								"s4": [
+									"Control Water|PHB",
+									"Summon Elemental|TCE"
+								],
+								"s5": [
+									"Bigby's Hand|PHB",
+									"Cone of Cold|PHB"
+								]
+							},
+							"known": {
+								"10": {
+									"daily": {
+										"1": [
+											"Evard's Black Tentacles|PHB"
+										]
+									}
+								}
+							}
+						}
+					],
+					"subclassFeatures": [
+						[
+							{
+								"name": "The Fathomless",
+								"source": "TCE",
+								"page": 72,
+								"entries": [
+									"You have plunged into a pact with the deeps. An entity of the ocean, the Elemental Plane of Water, or another otherworldly sea now allows you to draw on its thalassic power. Is it merely using you to learn about terrestrial realms, or does it want you to open cosmic floodgates and drown the world?",
+									"Perhaps you were born into a generational cult that venerates the Fathomless and its spawn. Or you might have been shipwrecked and on the brink of drowning when your patron's grasp offered you a chance at life. Whatever the reason for your pact, the sea and its unknown depths call to you.",
+									"Entities of the deep that might empower a warlock include krakens, ancient water elementals, godlike hallucinations dreamed into being by kuo-toa, merfolk demigods, and sea hag covens.",
+									{
+										"type": "entries",
+										"name": "Expanded Spell List",
+										"entries": [
+											"{@i 1st-level Fathomless feature}",
+											"The Fathomless lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
+											{
+												"type": "table",
+												"caption": "Fathomless Expanded Spells",
+												"colLabels": [
+													"Spell Level",
+													"Spells"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"1st",
+														"{@spell create or destroy water}, {@spell thunderwave}"
+													],
+													[
+														"2nd",
+														"{@spell gust of wind}, {@spell silence}"
+													],
+													[
+														"3rd",
+														"{@spell lightning bolt}, {@spell sleet storm}"
+													],
+													[
+														"4th",
+														"{@spell control water}, {@spell summon elemental|tce} (water only)"
+													],
+													[
+														"5th",
+														"{@spell Bigby's hand} (appears as a tentacle), {@spell cone of cold}"
+													]
+												]
+											}
+										]
+									},
+									{
+										"name": "Tentacle of the Deeps",
+										"source": "TCE",
+										"page": 72,
+										"header": 1,
+										"entries": [
+											"{@i 1st-level Fathomless feature}",
+											"You can magically summon a spectral tentacle that strikes at your foes. As a bonus action, you create a 10-foot-long tentacle at a point you can see within 60 feet of you. The tentacle lasts for 1 minute or until you use this feature to create another tentacle.",
+											"When you create the tentacle, you can make a melee spell attack against one creature within 10 feet of it. On a hit, the target takes {@damage 1d8} cold damage, and its speed is reduced by 10 feet until the start of your next turn. When you reach 10th level in this class, the damage increases to {@damage 2d8}.",
+											"As a bonus action on your turn, you can move the tentacle up to 30 feet and repeat the attack.",
+											"You can summon the tentacle a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+										],
+										"type": "entries"
+									},
+									{
+										"name": "Gift of the Sea",
+										"source": "TCE",
+										"page": 72,
+										"header": 1,
+										"entries": [
+											"{@i 1st-level Fathomless feature}",
+											"You gain a swimming speed of 40 feet, and you can breathe underwater."
+										],
+										"type": "entries"
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Oceanic Soul",
+								"source": "TCE",
+								"page": 72,
+								"header": 2,
+								"entries": [
+									"{@i 6th-level Fathomless feature}",
+									"You are now even more at home in the depths. You gain resistance to cold damage. In addition, when you are fully submerged, any creature that is also fully submerged can understand your speech, and you can understand theirs."
+								]
+							},
+							{
+								"name": "Guardian Coil",
+								"source": "TCE",
+								"page": 72,
+								"header": 2,
+								"entries": [
+									"{@i 6th-level Fathomless feature}",
+									"Your Tentacle of the Deeps can defend you and others, interposing itself between them and harm. When you or a creature you can see takes damage while within 10 feet of the tentacle, you can use your reaction to choose one of those creatures and reduce the damage to that creature by {@dice 1d8}. When you reach 10th level in this class, the damage reduced by the tentacle increases to {@dice 2d8}."
+								]
+							}
+						],
+						[
+							{
+								"name": "Grasping Tentacles",
+								"source": "TCE",
+								"page": 72,
+								"header": 2,
+								"entries": [
+									"{@i 10th-level Fathomless feature}",
+									"You learn the spell {@spell Evard's black tentacles}. It counts as a warlock spell for you, but it doesn't count against the number of spells you know. You can also cast it once without a spell slot, and you regain the ability to do so when you finish a long rest.",
+									"Whenever you cast this spell, your patron's magic bolsters you, granting you a number of temporary hit points equal to your warlock level. Moreover, damage can't break your {@status concentration} on this spell."
+								]
+							}
+						],
+						[
+							{
+								"name": "Fathomless Plunge",
+								"source": "TCE",
+								"page": 72,
+								"header": 2,
+								"entries": [
+									"{@i 14th-level Fathomless feature}",
+									"You can magically open temporary conduits to watery destinations. As an action, you can teleport yourself and up to five other willing creatures that you can see within 30 feet of you. Amid a whirl of tentacles, you all vanish and then reappear up to 1 mile away in a body of water you've seen (pond size or larger) or within 30 feet of it, each of you appearing in an unoccupied space within 30 feet of the others.",
+									"Once you use this feature, you can't use it again until you finish a short or long rest."
+								]
+							}
+						]
+					],
+					"hasFluffImages": true
 				}
 			],
 			"fluff": [
@@ -2568,7 +3533,7 @@
 							"type": "entries",
 							"name": "Sworn and Beholden",
 							"entries": [
-								"A warlock is defined by a pact with an otherworldly being. Sometimes the relationship between warlock and patron is like that of a cleric and a deity, though the beings that serve as patrons for warlocks are not gods. A warlock might lead a cult dedicated to a demon prince, an archdevil, or an utterly alien entity\u2014beings not typically served by clerics. More often, though, the arrangement is similar to that between a master and an apprentice. The warlock learns and grows in power, at the cost of occasional services performed on the patron's behalf.",
+								"A warlock is defined by a pact with an otherworldly being. Sometimes the relationship between warlock and patron is like that of a cleric and a deity, though the beings that serve as patrons for warlocks are not gods. A warlock might lead a cult dedicated to a demon prince, an archdevil, or an utterly alien entity—beings not typically served by clerics. More often, though, the arrangement is similar to that between a master and an apprentice. The warlock learns and grows in power, at the cost of occasional services performed on the patron's behalf.",
 								"The magic bestowed on a warlock ranges from minor but lasting alterations to the warlock's being (such as the ability to see in darkness or to read any language) to access to powerful spells. Unlike bookish wizards, warlocks supplement their magic with some facility at hand-to-hand combat. They are comfortable in light armor and know how to use simple weapons."
 							]
 						},
@@ -2588,7 +3553,7 @@
 								"As you make your warlock character, spend some time thinking about your patron and the obligations that your pact imposes upon you. What led you to make the pact, and how did you make contact with your patron? Were you seduced into summoning a devil, or did you seek out the ritual that would allow you to make contact with an alien elder god? Did you search for your patron, or did your patron find and choose you? Do you chafe under the obligations of your pact or serve joyfully in anticipation of the rewards promised to you?",
 								"Work with your DM to determine how big a part your pact will play in your character's adventuring career. Your patron's demands might drive you into adventures, or they might consist entirely of small favors you can do between adventures.",
 								"What kind of relationship do you have with your patron? Is it friendly, antagonistic, uneasy, or romantic? How important does your patron consider you to be? What part do you play in your patron's plans? Do you know other servants of your patron?",
-								"How does your patron communicate with you? If you have a familiar, it might occasionally speak with your patron's voice. Some warlocks find messages from their patrons etched on trees, mingled among tea leaves, or adrift in the clouds\u2014messages that only the warlock can see. Other warlocks converse with their patrons in dreams or waking visions, or deal only with intermediaries.",
+								"How does your patron communicate with you? If you have a familiar, it might occasionally speak with your patron's voice. Some warlocks find messages from their patrons etched on trees, mingled among tea leaves, or adrift in the clouds—messages that only the warlock can see. Other warlocks converse with their patrons in dreams or waking visions, or deal only with intermediaries.",
 								{
 									"type": "entries",
 									"name": "Quick Build",
@@ -2694,7 +3659,7 @@
 							"type": "entries",
 							"name": "Special Terms of the Pact",
 							"entries": [
-								"A pact can range from a loose agreement to a formal contract with lengthy, detailed clauses and lists of requirements. The terms of a pact\u2014what a warlock must do to receive a patron's favor\u2014are always dictated by the patron. On occasion, those terms include a special proviso that might seem odd or whimsical, but warlocks take these dictates as seriously as they do the other requirements of their pacts.",
+								"A pact can range from a loose agreement to a formal contract with lengthy, detailed clauses and lists of requirements. The terms of a pact—what a warlock must do to receive a patron's favor—are always dictated by the patron. On occasion, those terms include a special proviso that might seem odd or whimsical, but warlocks take these dictates as seriously as they do the other requirements of their pacts.",
 								"Does your character have a pact that requires you to change your behavior in an unusual or seemingly frivolous way? Even if your patron hasn't imposed such a duty on you already, that's not to say it couldn't still happen.",
 								{
 									"type": "table",
@@ -2770,7 +3735,7 @@
 							"type": "entries",
 							"name": "Binding Mark",
 							"entries": [
-								"Some patrons make a habit of, and often enjoy, marking the warlocks under their sway in some fashion. A binding mark makes it clear\u2014to those who know about such things\u2014that the individual in question is bound to the patron's service. A warlock might take advantage of such a mark, claiming it as proof of one's pact, or might want to keep it under wraps (if possible) to avoid the difficulties it might bring.",
+								"Some patrons make a habit of, and often enjoy, marking the warlocks under their sway in some fashion. A binding mark makes it clear—to those who know about such things—that the individual in question is bound to the patron's service. A warlock might take advantage of such a mark, claiming it as proof of one's pact, or might want to keep it under wraps (if possible) to avoid the difficulties it might bring.",
 								"If your warlock's pact comes with a binding mark, how you feel about displaying it probably depends on the nature of your relationship with the one who gave it to you. Is the mark a source of pride or something you are secretly ashamed of?",
 								{
 									"type": "table",

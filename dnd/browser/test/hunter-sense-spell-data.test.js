@@ -22,7 +22,7 @@ assert.deepStrictEqual(spell.time, [{number: 1, unit: "action"}]);
 assert.deepStrictEqual(spell.range, {type: "point", distance: {type: "touch"}});
 assert.deepStrictEqual(spell.components, {v: true, s: true});
 assert.strictEqual(spell.duration[0].concentration, true);
-assert.deepStrictEqual(spell.classes.fromClassList.map(it => it.name), ["Druid", "Ranger"]);
+assert.deepStrictEqual(spell.classes.fromClassList.map(it => it.name), ["Druid", "Ranger", "Ranger (Himo)"]);
 assert(spell.entries.length);
 
 const sourceUtils = fs.readFileSync(path.join(__dirname, "..", "js", "utils.js"), "utf8");

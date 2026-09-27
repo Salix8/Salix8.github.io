@@ -4,9 +4,19 @@ const JSON_DIR = "data/spells/";
 
 const SUBCLASS_LOOKUP = {};
 
-function handleBrew (homebrew) {
+async function handleBrew (homebrew) {
+	await DataUtil.spell.pInitAssociations();
 	RenderSpells.mergeHomebrewSubclassLookup(SUBCLASS_LOOKUP, homebrew);
 	addSpells(homebrew.spell);
+	for (const item of list.items) {
+		const spell = DataUtil.spell.getCopyWithAssociations(rawSpellList[item.ix]);
+		spellsPage._pageFilter.mutateAndAddToFilters(spell, item.data.isExcluded);
+		spellList[item.ix] = spell;
+		item.values.classes = Parser.spClassesToFull(spell.classes, true, SUBCLASS_LOOKUP);
+	}
+	spellsPage._pageFilter.filterBox.render();
+	spellsPage.handleFilterChange();
+	if (Hist.lastLoadedId != null) spellsPage.doLoadHash(Hist.lastLoadedId);
 	return Promise.resolve();
 }
 
@@ -337,18 +347,20 @@ async function pPageInit (loadedSources) {
 	BrewUtil.bind({pHandleBrew: () => {}}); // temporarily bind "do nothing" brew handler
 	await BrewUtil.pAddLocalBrewData(); // load local homebrew, so we can add any local spell classes
 	BrewUtil.bind({pHandleBrew: null}); // unbind temporary handler
-	spellsPage._pageFilter.populateClassLookup(classData);
-	spellsPage._pageFilter.populateHomebrewClassLookup(homebrew);
+	RenderSpells.mergeHomebrewSubclassLookup(SUBCLASS_LOOKUP, classData);
+	await DataUtil.spell.pInitAssociations();
 }
 
 let spellList = [];
+const rawSpellList = [];
 let spI = 0;
 
 const _addedHashes = new Set();
 function addSpells (data) {
 	if (!data || !data.length) return;
 
-	spellList.push(...data);
+	rawSpellList.push(...data.map(spell => MiscUtil.copy(spell)));
+	spellList.push(...data.map(spell => DataUtil.spell.getCopyWithAssociations(spell)));
 
 	for (; spI < spellList.length; spI++) {
 		const spell = spellList[spI];

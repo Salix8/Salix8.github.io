@@ -42,7 +42,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Frost Fingers",
@@ -93,7 +105,19 @@
 			],
 			"areaTags": [
 				"N"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		}
 	]
 }

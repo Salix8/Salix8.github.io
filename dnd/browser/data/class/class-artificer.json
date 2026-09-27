@@ -1106,24 +1106,60 @@
 						{
 							"prepared": {
 								"3": [
-									"healing word",
-									"ray of sickness"
+									"Healing Word|PHB",
+									"Ray of Sickness|PHB"
 								],
 								"5": [
-									"flaming sphere",
-									"melf's acid arrow"
+									"Flaming Sphere|PHB",
+									"Melf's Acid Arrow|PHB"
 								],
 								"9": [
-									"gaseous form",
-									"mass healing word"
+									"Gaseous Form|PHB",
+									"Mass Healing Word|PHB"
 								],
 								"13": [
-									"blight",
-									"death ward"
+									"Blight|PHB",
+									"Death Ward|PHB"
 								],
 								"17": [
-									"cloudkill",
-									"raise dead"
+									"Cloudkill|PHB",
+									"Raise Dead|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"association": {
+								"class": {
+									"name": "Artificer",
+									"source": "ERLW"
+								},
+								"subclass": {
+									"name": "Alchemist",
+									"source": "ERLW"
+								}
+							},
+							"expanded": {
+								"s2": [
+									"Alter Self|PHB",
+									"Flaming Sphere|PHB",
+									"Melf's Acid Arrow|PHB"
+								],
+								"s4": [
+									"Blight|PHB",
+									"Death Ward|PHB"
+								],
+								"s5": [
+									"Cloudkill|PHB",
+									"Raise Dead|PHB"
+								],
+								"s3": [
+									"Gaseous Form|PHB",
+									"Mass Healing Word|PHB"
+								],
+								"s1": [
+									"Healing Word|PHB",
+									"Ray of Sickness|PHB"
 								]
 							}
 						}
@@ -1346,24 +1382,32 @@
 						{
 							"prepared": {
 								"3": [
-									"magic missile",
-									"thunderwave"
+									"Magic Missile|PHB",
+									"Thunderwave|PHB"
 								],
 								"5": [
-									"mirror image",
-									"shatter"
+									"Mirror Image|PHB",
+									"Shatter|PHB"
 								],
 								"9": [
-									"hypnotic pattern",
-									"lightning bolt"
+									"Hypnotic Pattern|PHB",
+									"Lightning Bolt|PHB"
 								],
 								"13": [
-									"fire shield",
-									"greater invisibility"
+									"Fire Shield|PHB",
+									"Greater Invisibility|PHB"
 								],
 								"17": [
-									"passwall",
-									"wall of force"
+									"Passwall|PHB",
+									"Wall of Force|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Barrera|GPNM"
 								]
 							}
 						}
@@ -1618,24 +1662,70 @@
 						{
 							"prepared": {
 								"3": [
-									"shield",
-									"thunderwave"
+									"Shield|PHB",
+									"Thunderwave|PHB"
 								],
 								"5": [
-									"scorching ray",
-									"shatter"
+									"Scorching Ray|PHB",
+									"Shatter|PHB"
 								],
 								"9": [
-									"fireball",
-									"wind wall"
+									"Fireball|PHB",
+									"Wind Wall|PHB"
 								],
 								"13": [
-									"ice storm",
-									"wall of fire"
+									"Ice Storm|PHB",
+									"Wall of Fire|PHB"
 								],
 								"17": [
-									"cone of cold",
-									"wall of force"
+									"Cone of Cold|PHB",
+									"Wall of Force|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"association": {
+								"class": {
+									"name": "Artificer",
+									"source": "ERLW"
+								},
+								"subclass": {
+									"name": "Artillerist",
+									"source": "ERLW"
+								}
+							},
+							"expanded": {
+								"s5": [
+									"Cone of Cold|PHB",
+									"Wall of Force|PHB"
+								],
+								"s3": [
+									"Fireball|PHB",
+									"Wind Wall|PHB"
+								],
+								"s4": [
+									"Ice Storm|PHB",
+									"Wall of Fire|PHB"
+								],
+								"s0": [
+									"Mending|PHB"
+								],
+								"s2": [
+									"Scorching Ray|PHB",
+									"Shatter|PHB"
+								],
+								"s1": [
+									"Shield|PHB",
+									"Thunderwave|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Barrera|GPNM"
 								]
 							}
 						}
@@ -1854,24 +1944,62 @@
 						{
 							"prepared": {
 								"3": [
-									"heroism",
-									"shield"
+									"Heroism|PHB",
+									"Shield|PHB"
 								],
 								"5": [
-									"branding smite",
-									"warding bond"
+									"Branding Smite|PHB",
+									"Warding Bond|PHB"
 								],
 								"9": [
-									"aura of vitality",
-									"conjure barrage"
+									"Aura of Vitality|PHB",
+									"Conjure Barrage|PHB"
 								],
 								"13": [
-									"aura of purity",
-									"fire shield"
+									"Aura of Purity|PHB",
+									"Fire Shield|PHB"
 								],
 								"17": [
-									"banishing smite",
-									"mass cure wounds"
+									"Banishing Smite|PHB",
+									"Mass Cure Wounds|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"association": {
+								"class": {
+									"name": "Artificer",
+									"source": "ERLW"
+								},
+								"subclass": {
+									"name": "Battle Smith",
+									"source": "ERLW"
+								}
+							},
+							"expanded": {
+								"s4": [
+									"Aura of Purity|PHB",
+									"Fire Shield|PHB"
+								],
+								"s3": [
+									"Aura of Vitality|PHB",
+									"Conjure Barrage|PHB"
+								],
+								"s5": [
+									"Banishing Smite|PHB",
+									"Mass Cure Wounds|PHB"
+								],
+								"s2": [
+									"Branding Smite|PHB",
+									"Warding Bond|PHB"
+								],
+								"s1": [
+									"Heroism|PHB",
+									"Shield|PHB"
+								],
+								"s0": [
+									"Mending|PHB"
 								]
 							}
 						}
@@ -2078,24 +2206,24 @@
 						{
 							"prepared": {
 								"3": [
-									"color spray",
-									"distorsionar valor"
+									"Color Spray|PHB",
+									"Distort Value|AI"
 								],
 								"5": [
-									"scorching ray",
-									"shatter"
+									"Scorching Ray|PHB",
+									"Shatter|PHB"
 								],
 								"9": [
-									"fireball",
-									"wind wall"
+									"Fireball|PHB",
+									"Wind Wall|PHB"
 								],
 								"13": [
-									"ice storm",
-									"wall of fire"
+									"Ice Storm|PHB",
+									"Wall of Fire|PHB"
 								],
 								"17": [
-									"cone of cold",
-									"wall of force"
+									"Cone of Cold|PHB",
+									"Wall of Force|PHB"
 								]
 							}
 						}
@@ -2239,14 +2367,35 @@
 											"Siempre tienes preparados los siguientes conjuros. Cuentan como conjuros de artificiero para ti, pero no para el número que puedes preparar.",
 											{
 												"type": "table",
-												"colLabels": ["Nivel de artificiero", "Conjuros"],
-												"colStyles": ["col-2 text-center", "col-10"],
+												"colLabels": [
+													"Nivel de artificiero",
+													"Conjuros"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
 												"rows": [
-													["3rd", "{@spell compelled duel}, {@spell wrathful smite}"],
-													["5th", "{@spell kinetic jaunt|SCC}, {@spell spiritual weapon}"],
-													["9th", "{@spell crusader's mantle}, {@spell elemental weapon}"],
-													["13th", "{@spell staggering smite}, {@spell fire shield}"],
-													["17th", "{@spell steel wind strike|XGE}, {@spell holy weapon|XGE}"]
+													[
+														"3rd",
+														"{@spell compelled duel}, {@spell wrathful smite}"
+													],
+													[
+														"5th",
+														"{@spell kinetic jaunt|SCC}, {@spell spiritual weapon}"
+													],
+													[
+														"9th",
+														"{@spell crusader's mantle}, {@spell elemental weapon}"
+													],
+													[
+														"13th",
+														"{@spell staggering smite}, {@spell fire shield}"
+													],
+													[
+														"17th",
+														"{@spell steel wind strike|XGE}, {@spell holy weapon|XGE}"
+													]
 												]
 											}
 										]

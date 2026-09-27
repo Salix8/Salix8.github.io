@@ -1,0 +1,1534 @@
+{
+	"class": [
+		{
+			"name": "Artificer (Revisited)",
+			"source": "UAArtificerRevisited",
+			"page": 1,
+			"isReprinted": true,
+			"hd": {
+				"number": 1,
+				"faces": 8
+			},
+			"proficiency": [
+				"con",
+				"int"
+			],
+			"spellcastingAbility": "int",
+			"casterProgression": "artificer",
+			"preparedSpells": "<$level$> / 2 + <$int_mod$>",
+			"cantripProgression": [
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4
+			],
+			"optionalfeatureProgression": [
+				{
+					"name": "Infusions",
+					"featureType": [
+						"AI"
+					],
+					"progression": [
+						0,
+						3,
+						3,
+						4,
+						4,
+						4,
+						5,
+						5,
+						5,
+						5,
+						6,
+						6,
+						6,
+						6,
+						7,
+						7,
+						7,
+						7,
+						8,
+						8
+					]
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"light",
+					"medium",
+					"shield"
+				],
+				"weapons": [
+					"simple",
+					"{@item hand crossbow|phb|hand crossbows}",
+					"{@item heavy crossbow|phb|heavy crossbows}",
+					{
+						"proficiency": "firearms",
+						"optional": true
+					}
+				],
+				"tools": [
+					"{@item thieves' tools|PHB}",
+					"{@item tinker's tools|PHB}",
+					"one type of {@item artisan's tools|PHB} of your choice"
+				],
+				"toolProficiencies": [
+					{
+						"thieves' tools": true,
+						"tinker's tools": true,
+						"anyArtisansTool": 1
+					}
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"arcana",
+								"history",
+								"investigation",
+								"medicine",
+								"nature",
+								"perception",
+								"sleight of hand"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"any two {@filter simple weapons|items|source=phb|category=basic|type=simple weapon}",
+					"a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts}",
+					"(a) {@item studded leather armor|phb} or (b) {@item scale mail|phb}",
+					"{@item thieves' tools|phb} and a {@item dungeoneer's pack|phb}"
+				],
+				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
+				"defaultData": [
+					{
+						"_": [
+							{
+								"equipmentType": "weaponSimple",
+								"quantity": 2
+							}
+						]
+					},
+					{
+						"_": [
+							"light crossbow|phb",
+							"crossbow bolts (20)|phb"
+						]
+					},
+					{
+						"a": [
+							"studded leather armor|phb"
+						],
+						"b": [
+							"scale mail|phb"
+						]
+					},
+					{
+						"_": [
+							"thieves' tools|phb",
+							"dungeoneer's pack|phb"
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"requirements": {
+					"int": 13
+				},
+				"proficienciesGained": {
+					"armor": [
+						"light",
+						"medium",
+						"shield"
+					],
+					"tools": [
+						"{@item thieves' tools|PHB}",
+						"{@item tinker's tools|PHB}"
+					],
+					"toolProficiencies": [
+						{
+							"thieves' tools": true,
+							"tinker's tools": true
+						}
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"{@filter Infusions Known|optionalfeatures|feature type=ai|source=UAArtificerRevisited}",
+						"Infused Items",
+						"{@filter Cantrips Known|spells|level=0|class=artificer revisited (uaar)}"
+					],
+					"rows": [
+						[
+							0,
+							0,
+							2
+						],
+						[
+							3,
+							2,
+							2
+						],
+						[
+							3,
+							2,
+							2
+						],
+						[
+							4,
+							2,
+							2
+						],
+						[
+							4,
+							2,
+							2
+						],
+						[
+							4,
+							3,
+							2
+						],
+						[
+							5,
+							3,
+							2
+						],
+						[
+							5,
+							3,
+							2
+						],
+						[
+							5,
+							3,
+							2
+						],
+						[
+							5,
+							3,
+							3
+						],
+						[
+							6,
+							4,
+							3
+						],
+						[
+							6,
+							4,
+							3
+						],
+						[
+							6,
+							4,
+							3
+						],
+						[
+							6,
+							4,
+							4
+						],
+						[
+							7,
+							4,
+							4
+						],
+						[
+							7,
+							5,
+							4
+						],
+						[
+							7,
+							5,
+							4
+						],
+						[
+							7,
+							5,
+							4
+						],
+						[
+							8,
+							5,
+							4
+						],
+						[
+							8,
+							5,
+							4
+						]
+					]
+				},
+				{
+					"title": "Spell Slots per Spell Level",
+					"colLabels": [
+						"{@filter 1st|spells|level=1|class=Artificer Revisited (UAAR)}",
+						"{@filter 2nd|spells|level=2|class=Artificer Revisited (UAAR)}",
+						"{@filter 3rd|spells|level=3|class=Artificer Revisited (UAAR)}",
+						"{@filter 4th|spells|level=4|class=Artificer Revisited (UAAR)}",
+						"{@filter 5th|spells|level=5|class=Artificer Revisited (UAAR)}"
+					],
+					"rowsSpellProgression": [
+						[
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				[
+					{
+						"name": "Magical Tinkering",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"At 1st level, you learn how to invest a spark of magic in objects that would otherwise be mundane. To use this ability, you must have {@item thieves' tools|PHB}, {@item tinker's tools|PHB}, or other {@item artisan's tools|PHB} in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:",
+							{
+								"type": "list",
+								"items": [
+									"The object sheds bright light in a 5-foot radius and dim light for an additional 5 feet.",
+									"Whenever tapped by a creature, the object emits a recorded message that can be heard up to 10 feet away. You utter the message when you bestow this property on the object, and the recording can be no more than 6 seconds long.",
+									"The object continuously emits your choice of an odor or a nonverbal sound (wind, waves, chirping, or the like). The chosen phenomenon is perceivable up to 10 feet away.",
+									"A static visual effect appears on one of the object's surfaces. This effect can be a picture, up to 25 words of text, lines and shapes, or a mixture of these elements, as you like."
+								]
+							},
+							"The chosen property lasts indefinitely. As an action, you can touch the object and end the property early.",
+							"You can give the magic of this feature to multiple objects, touching one object each time you use the feature, and a single object can bear only one of the properties at a time. The maximum number of objects you can affect with the feature at one time is equal to your Intelligence modifier (minimum of one object). If you try to exceed your maximum, the oldest property immediately ends, and then the new property applies."
+						]
+					},
+					{
+						"name": "Spellcasting",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"You have studied the workings of magic, how to channel it through objects, and how to awaken it within them. As a result, you have gained a limited ability to cast spells. To observers, you don't appear to be casting spells in a conventional way; you look as if you're producing wonders through various items.",
+							{
+								"type": "entries",
+								"name": "Tools Required",
+								"entries": [
+									"You produce your artificer spell effects through your tools. You must have a spellcasting focus—specifically {@item thieves' tools|phb} or some kind of artisan's tool—in hand when you cast any spell with this Spellcasting feature. You must be proficient with the tool to use it in this way. See chapter 5, \"{@book Equipment|phb|5|tools},\" in the Player's Handbook for descriptions of these tools.",
+									"After you gain the Infuse Item feature at 2nd level, you can also use any item bearing one of your infusions as a spellcasting focus."
+								]
+							},
+							{
+								"type": "entries",
+								"name": "Cantrips",
+								"entries": [
+									"At 1st level, you know two cantrips of your choice from the {@filter artificer spell list|spells|class=artificer (uaar)}. At higher levels, you learn additional artificer cantrips of your choice, as shown in the Cantrips Known column of the Artificer table.",
+									"When you gain a level in this class, you can replace one of the artificer cantrips you know with another cantrip from the artificer spell list."
+								]
+							},
+							{
+								"type": "entries",
+								"name": "Preparing and Casting Spells",
+								"entries": [
+									"The Artificer table shows how many spell slots you have to cast your artificer spells. To cast one of your artificer spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
+									"You prepare the list of artificer spells that are available for you to cast, choosing from the {@filter artificer spell list|spells|class=artificer (uaar)}. When you do so, choose a number of artificer spells equal to your Intelligence modifier + half your artificer level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.",
+									"For example, if you are a 5th-level artificer, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell {@spell cure wounds}, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
+									"You can change your list of prepared spells when you finish a long rest. Preparing a new list of artificer spells requires time spent in tinkering with your spellcasting focuses: at least 1 minute per spell level for each spell on your list."
+								]
+							},
+							{
+								"type": "entries",
+								"name": "Spellcasting Ability",
+								"entries": [
+									"Intelligence is your spellcasting ability for your artificer spells; your understanding of the theory behind magic allows you to wield these spells with superior skill. You use your Intelligence whenever an artificer spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for an artificer spell you cast and when making an attack roll with one.",
+									{
+										"type": "abilityDc",
+										"name": "Spell",
+										"attributes": [
+											"int"
+										]
+									},
+									{
+										"type": "abilityAttackMod",
+										"name": "Spell",
+										"attributes": [
+											"int"
+										]
+									}
+								]
+							},
+							{
+								"type": "entries",
+								"name": "Ritual Casting",
+								"entries": [
+									"You can cast an artificer spell as a ritual if that spell has the ritual tag and you have the spell prepared."
+								]
+							},
+							{
+								"type": "inset",
+								"name": "The Magic of Artifice",
+								"entries": [
+									"As an artificer, you use tools when you cast your spells. When describing your spellcasting, think about how you're using a tool to perform the spell effect. If you cast {@spell cure wounds} using {@item alchemist's supplies|PHB}, you could be quickly producing a salve. If you cast it using {@item tinker's tools|phb}, you might have a miniature mechanical spider that binds wounds. When you cast {@spell poison spray}, you could fling foul chemicals or use a wand that spits venom. The effect of the spell is the same as for a spellcaster of any other class, but your method of spellcasting is special.",
+									"The same principle applies when you prepare your spells. As an artificer, you don't study a spellbook or pray to prepare your spells. Instead, you work with your tools and create the specialized items you'll use to produce your effects. If you replace {@spell cure wounds} with {@spell shocking grasp}, you might be breaking down the device you used to heal and creating an offensive item in its place—perhaps a gauntlet that lets you channel a surge of energy.",
+									"Such details don't limit you in any way or provide you with any benefit. You don't have to justify how you're using tools to cast a spell. But describing your spellcasting creatively is a fun way to distinguish yourself from other spellcasters."
+								]
+							}
+						]
+					}
+				],
+				[
+					{
+						"name": "Infuse Item",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"At 2nd level, you gain the ability to imbue mundane items with certain magical infusions. The magic items you create with this feature are effectively prototypes of permanent items.",
+							{
+								"type": "entries",
+								"name": "Infusions Known",
+								"entries": [
+									"When you gain this feature, pick three artificer infusions to learn, choosing from the \"{@filter Artificer Infusions|optionalfeatures|feature type=ai|source=UAArtificerRevisited}\" section at the end of the class's description. You learn additional infusions of your choice when you reach certain levels in this class, as shown in the Infusions Known column of the Artificer table.",
+									"Whenever you gain a level in this class, you can replace one of the artificer infusions you learned with a new one."
+								]
+							},
+							{
+								"type": "entries",
+								"name": "Infusing an Item",
+								"entries": [
+									"Whenever you finish a long rest, you can touch a nonmagical object and imbue it with one of your artificer infusions, turning it into a magic item. An infusion works on only certain kinds of objects, as specified in the infusion's description. If the item requires attunement, you can attune yourself to it the instant you infuse the item, or you can forgo attunement so that someone else can attune to the item. If you decide to attune to the item later, you must do so using the normal process for attunement (see \"{@book Attunement|dmg|7|attunement}\" in the Dungeon Master's Guide, page 136).",
+									"Your infusion remains in an item indefinitely, but when you die, the infusion vanishes after a number of days have passed equal to your Intelligence modifier (minimum of 1 day). The infusion also vanishes if you give up your knowledge of the infusion for another one.",
+									"You can infuse more than one nonmagical object at the end of a long rest; the maximum number of objects appears in the Infused Items column of the Artificer table. You must touch each of the objects, and each of your infusions can be in only one object at a time. If you try to exceed your maximum number of infusions, the oldest infusion immediately ends, and then the new infusion applies."
+								]
+							},
+							{
+								"type": "inset",
+								"name": "Artificer Infusions",
+								"entries": [
+									"Artificers have invented numerous magical infusions that rapidly create magic items. To the untrained, artificers seem like wonderworkers, accomplishing in hours what others need weeks to complete.",
+									"The description of each infusion tells you the type of item that can receive it. The description also tells you if the resulting magic item requires attunement.",
+									"Some infusions specify a minimum artificer level. You can't learn such an infusion until you are at least that level.",
+									"Unless an infusion's description says otherwise, you can't learn the infusion more than once.",
+									"See the {@filter Class Feature Options page|optionalfeatures|feature type=ai|source=UAArtificerRevisited} for the full list of infusions."
+								]
+							}
+						]
+					}
+				],
+				[
+					{
+						"name": "Artificer Specialist",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"At 3rd level, you choose the type of specialist you are: Alchemist, Archivist, or Artillerist, or Battle Smith, each of which is detailed at the end of the class's description. Your choice grants you features at 3rd level and again at 6th and 14th level.",
+							{
+								"type": "inset",
+								"name": "Variant: Crafting",
+								"entries": [
+									"An artificer subclass makes you more efficient at crafting certain items. The feature you get from your subclass works whether you're using the crafting rules in the {@book Player's Handbook|phb|8|crafting}, {@book Dungeon Master's Guide|dmg|6|crafting a magic item}, or {@book Xanathar's Guide to Everything|xge|2|crafting an item}."
+								]
+							}
+						],
+						"gainSubclassFeature": true
+					},
+					{
+						"name": "Tool Expertise",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"Starting at 3rd level, your proficiency bonus is doubled for any ability check you make that uses your proficiency with a tool."
+						]
+					}
+				],
+				[
+					{
+						"name": "Ability Score Improvement",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+						]
+					},
+					{
+						"name": "Proficiency Versatility",
+						"source": "UAClassFeatureVariants",
+						"page": 1,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 4th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						]
+					}
+				],
+				[
+					{
+						"name": "Arcane Armament",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"Starting at 5th level, you can attack twice, rather than once, whenever you take the {@action Attack} action on your turn, but one of the attacks must be made with a magic weapon, the magic of which you use to propel the attack."
+						]
+					}
+				],
+				[
+					{
+						"name": "Artificer Specialist Feature",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"At 6th level, you gain a feature granted by your Artificer Specialist choice."
+						],
+						"gainSubclassFeature": true
+					}
+				],
+				[],
+				[
+					{
+						"name": "Ability Score Improvement",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+						]
+					},
+					{
+						"name": "Proficiency Versatility",
+						"source": "UAClassFeatureVariants",
+						"page": 1,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 8th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						]
+					}
+				],
+				[],
+				[
+					{
+						"name": "The Right Cantrip for the Job",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"At 10th level, you gain the ability to make sure you have the right magical tool for a job. Whenever you finish a short or long rest, you can replace one of the artificer cantrips you know with another cantrip from the {@filter artificer spell list|spells|class=artificer (uaar)}."
+						]
+					}
+				],
+				[],
+				[
+					{
+						"name": "Ability Score Improvement",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+						]
+					},
+					{
+						"name": "Proficiency Versatility",
+						"source": "UAClassFeatureVariants",
+						"page": 1,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 12th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						]
+					}
+				],
+				[],
+				[
+					{
+						"name": "Artificer Specialist Feature",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"At 14th level, you gain a feature granted by your Artificer Specialist choice."
+						],
+						"gainSubclassFeature": true
+					}
+				],
+				[],
+				[
+					{
+						"name": "Ability Score Improvement",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+						]
+					},
+					{
+						"name": "Proficiency Versatility",
+						"source": "UAClassFeatureVariants",
+						"page": 1,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 16th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						]
+					}
+				],
+				[],
+				[
+					{
+						"name": "Spell-Storing Item",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"When you reach 18th level, you learn how to store a spell in an object for repeated use. Whenever you finish a long rest, you can touch one {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon;simple weapon} or an item that you can use as a spellcasting focus and store a spell in it, choosing one 1st- or 2nd-level spell from the {@filter artificer spell list|spells|class=artificer (uaar)|cast time=action|level=1;2} that requires 1 action to cast (you don't need to have the spell prepared). With the object in hand, a creature can take an action to produce the spell's effect from it, using your spellcasting ability modifier.",
+							"The spell stays in the object until it has been used a number of times equal to twice your Intelligence modifier (minimum of twice) or until you use this feature again."
+						]
+					}
+				],
+				[
+					{
+						"name": "Ability Score Improvement",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+						]
+					},
+					{
+						"name": "Proficiency Versatility",
+						"source": "UAClassFeatureVariants",
+						"page": 1,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 19th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						]
+					}
+				],
+				[
+					{
+						"name": "Soul of Artifice",
+						"source": "UAArtificerRevisited",
+						"page": 1,
+						"entries": [
+							"At 20th level, your understanding of magic items is unmatched, allowing you to mingle your soul with items linked to you. You can attune to up to six magic items at once. In addition, you gain a +1 bonus to all saving throws per magic item you are currently attuned to."
+						]
+					}
+				]
+			],
+			"subclassTitle": "Artificer Specialist",
+			"hasFluff": true,
+			"subclasses": [
+				{
+					"name": "Alchemist",
+					"shortName": "Alchemist",
+					"source": "UAArtificerRevisited",
+					"page": 6,
+					"additionalSpells": [
+						{
+							"prepared": {
+								"3": [
+									"Purify Food and Drink|PHB",
+									"Ray of Sickness|PHB"
+								],
+								"5": [
+									"Melf's Acid Arrow|PHB",
+									"Web|PHB"
+								],
+								"9": [
+									"Create Food and Water|PHB",
+									"Stinking Cloud|PHB"
+								],
+								"13": [
+									"Blight|PHB",
+									"Death Ward|PHB"
+								],
+								"17": [
+									"Cloudkill|PHB",
+									"Raise Dead|PHB"
+								]
+							}
+						}
+					],
+					"subclassFeatures": [
+						[
+							{
+								"name": "Alchemist",
+								"source": "UAArtificerRevisited",
+								"page": 6,
+								"entries": [
+									"An Alchemist is an expert at combining exotic reagents to produce mystical effects. Among artificers, members of this subclass are the greatest healers, as well as the ones most adept at wielding dangerous chemicals.",
+									{
+										"name": "Tools of the Trade",
+										"source": "UAArtificerRevisited",
+										"page": 6,
+										"header": 1,
+										"entries": [
+											"By the time you adopt this specialty at 3rd level, you're deeply familiar with employing its tools.",
+											{
+												"type": "entries",
+												"name": "Proficiencies",
+												"entries": [
+													"You gain proficiency with {@item alchemist's supplies|phb} and the {@item herbalism kit|phb}, assuming you don't already have them. You also gain {@item alchemist's supplies|phb} and an {@item herbalism kit|phb} for free—the result of tinkering you've done as you've prepared for this specialization."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Crafting",
+												"entries": [
+													"If you craft a magic item in the potion category, it takes you a quarter of the normal time, and it costs you half as much of the usual gold."
+												]
+											}
+										],
+										"type": "entries"
+									},
+									{
+										"name": "Alchemist Spells",
+										"source": "UAArtificerRevisited",
+										"page": 6,
+										"header": 1,
+										"entries": [
+											"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Alchemist Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+											{
+												"type": "table",
+												"caption": "Alchemist Spells",
+												"colLabels": [
+													"Artificer Level",
+													"Spell"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"3rd",
+														"{@spell purify food and drink}, {@spell ray of sickness}"
+													],
+													[
+														"5th",
+														"{@spell Melf's acid arrow}, {@spell web}"
+													],
+													[
+														"9th",
+														"{@spell create food and water}, {@spell stinking cloud}"
+													],
+													[
+														"13th",
+														"{@spell blight}, {@spell death ward}"
+													],
+													[
+														"17th",
+														"{@spell cloudkill}, {@spell raise dead}"
+													]
+												]
+											}
+										],
+										"type": "entries"
+									},
+									{
+										"name": "Alchemical Homunculus",
+										"source": "UAArtificerRevisited",
+										"page": 6,
+										"header": 1,
+										"entries": [
+											"At 3rd level, you learn ancient methods for magically creating a special homunculus that is formed by alchemical substances.",
+											"Whenever you finish a long rest and your {@item alchemist's supplies|PHB} are with you, you can form this homunculus in an unoccupied space within 5 feet of you. If you already have a homunculus from this feature, the first one immediately dies.",
+											"The homunculus is friendly to you and your companions, and it obeys your commands. See this creature's game statistics in the {@creature Alchemical Homunculus|uaartificerrevisited} stat block. You determine the homunculus's appearance, which includes wings and bits of alchemical equipment. Some alchemists prefer mechanical-looking birds, whereas others like winged vials or miniature cauldrons.",
+											"In combat, the homunculus shares your initiative count, but it takes its turn immediately after yours. The only action it takes on its turn is the {@action Dodge} action, unless you take a bonus action on your turn to command it to take one of the actions in its stat block or to take the {@action Dash}, {@action Disengage}, or {@action Help} action.",
+											"If the {@spell mending} spell is cast on it, it regains {@dice 2d6} hit points. If it has died within the last hour, you can use your {@item alchemist's supplies|PHB} as an action to revive it, provided you are within 5 feet of it and you expend a spell slot of 1st level or higher. The homunculus returns to life with all its hit points restored."
+										],
+										"type": "entries"
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Alchemical Mastery",
+								"source": "UAArtificerRevisited",
+								"page": 6,
+								"header": 2,
+								"entries": [
+									"At 6th level, your command of magical chemicals has become masterful, enhancing the healing and damage you create through them. When you cast a spell using your {@item alchemist's supplies|phb} as the spellcasting focus, you gain a bonus to one roll of the spell. That roll must restore hit points or be a damage roll that deals acid or poison damage, and the bonus equals your Intelligence modifier (minimum of +1).",
+									"In addition, you can cast {@spell lesser restoration} without expending a spell slot, provided you use {@item alchemist's supplies|phb} as the spellcasting focus. You can do so a number of times per day equal to your Intelligence modifier (minimum of once)."
+								]
+							}
+						],
+						[
+							{
+								"name": "Chemical Savant",
+								"source": "UAArtificerRevisited",
+								"page": 6,
+								"header": 2,
+								"entries": [
+									"By 14th level, you have been exposed to so many chemicals and unlocked their secrets that they pose little risk to you, and you can use them to quickly end certain ailments. You gain resistance to acid damage and poison damage, and you are now immune to the {@condition poisoned} condition.",
+									"In addition, you can cast {@spell greater restoration} once without expending a spell slot and without providing the material component, provided you use {@item alchemist's supplies|phb} as the spellcasting focus. You regain the ability to do so when you finish a long rest."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Archivist",
+					"shortName": "Archivist",
+					"source": "UAArtificerRevisited",
+					"page": 7,
+					"isReprinted": true,
+					"additionalSpells": [
+						{
+							"prepared": {
+								"3": [
+									"Comprehend Languages|PHB",
+									"Dissonant Whispers|PHB"
+								],
+								"5": [
+									"Detect Thoughts|PHB",
+									"Locate Object|PHB"
+								],
+								"9": [
+									"Hypnotic Pattern|PHB",
+									"Tongues|PHB"
+								],
+								"13": [
+									"Locate Creature|PHB",
+									"Phantasmal Killer|PHB"
+								],
+								"17": [
+									"Legend Lore|PHB",
+									"Modify Memory|PHB"
+								]
+							}
+						}
+					],
+					"subclassFeatures": [
+						[
+							{
+								"name": "Archivist",
+								"source": "UAArtificerRevisited",
+								"page": 7,
+								"entries": [
+									"What are the best ways to store vast amounts of information? That question has occupied chroniclers and librarians for centuries. Scrolls and books were the finest information-storing methods for a long time, but the first Archivists imagined something greater: storing information in a real or an artificial mind. What library could match a mental archive capable of accessing information in seconds? As they work towards this goal, Archivists have become masters of storing knowledge and creating artificial intelligences fueled by magic. These techniques have yet to be perfected and institutionalized, and of all artificers, archivists are on the cutting edge of arcane science.",
+									{
+										"name": "Tools of the Trade",
+										"source": "UAArtificerRevisited",
+										"page": 7,
+										"header": 1,
+										"entries": [
+											"By the time you adopt this specialty at 3rd level, you're deeply familiar with employing its tools.",
+											{
+												"type": "entries",
+												"name": "Proficiencies",
+												"entries": [
+													"You gain proficiency with {@item calligrapher's supplies|phb} and the {@item forgery kit|phb}, assuming you don't already have them. You also gain {@item calligrapher's supplies|PHB} and a {@item forgery kit|PHB} for free—the result of tinkering you've done as you've prepared for this specialization."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Crafting",
+												"entries": [
+													"If you craft a magic item in the scroll category, it takes you a quarter of the normal time, and it costs you half as much of the usual gold."
+												]
+											}
+										],
+										"type": "entries"
+									},
+									{
+										"name": "Archivist Spells",
+										"source": "UAArtificerRevisited",
+										"page": 7,
+										"header": 1,
+										"entries": [
+											"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Archivist Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+											{
+												"type": "table",
+												"caption": "Archivist Spells",
+												"colLabels": [
+													"Artificer Level",
+													"Spell"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"3rd",
+														"{@spell comprehend languages}, {@spell dissonant whispers}"
+													],
+													[
+														"5th",
+														"{@spell detect thoughts}, {@spell locate object}"
+													],
+													[
+														"9th",
+														"{@spell hypnotic pattern}, {@spell tongues}"
+													],
+													[
+														"13th",
+														"{@spell locate creature}, {@spell phantasmal killer}"
+													],
+													[
+														"17th",
+														"{@spell legend lore}, {@spell modify memory}"
+													]
+												]
+											}
+										],
+										"type": "entries"
+									},
+									{
+										"name": "Artificial Mind",
+										"source": "UAArtificerRevisited",
+										"page": 7,
+										"header": 1,
+										"entries": [
+											"At 3rd level, you discover how to awaken a mind inside an object. Whenever you finish a long rest and your {@item calligrapher's supplies|PHB} are with you, you can magically rouse a keen mind within a Tiny, nonmagical object on which you write mystical symbols. The object is a magic item while the mind is inside it, and you can use it as a spellcasting focus. If you already have an artificial mind from this feature, the first one immediately dissipates.",
+											"The magic item has the following properties.",
+											{
+												"type": "entries",
+												"name": "Telepathic Advisor",
+												"entries": [
+													"The artificial mind telepathically supplies you with advice and information about certain topics: while the item is on your person, you have proficiency in two skills of your choice; the item's main material determines which skills you can choose from, as shown on the Artificial Mind table in the Skill Proficiencies column, for the nature of the object affects the mind's knowledge."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Manifest Mind",
+												"entries": [
+													"As a bonus action while the item is on your person, you can cause the mind to manifest as a Tiny spectral presence, hovering in an unoccupied space of your choice within 60 feet of you. This presence is intangible and invulnerable, and it sheds dim light in a 10-foot radius. You determine its appearance; the Artificial Mind table offers suggested appearances based on the object's main material.",
+													"While manifested, the spectral mind can hear and see, and it has {@sense darkvision} with a range of 60 feet. As an action, you can hear and see using the mind's senses, instead of your own, until your {@status concentration} ends (as if {@status concentration||concentrating} on a spell).",
+													"As a bonus action, you can cause the spectral mind to hover up to 30 feet to an unoccupied space that you or it can see. It can pass through creatures but not objects. The spectral mind stops manifesting if it is ever more than 300 feet away from its magic item or if you dismiss it as a bonus action.",
+													"When you cast an artificer spell on your turn, you can cast it as if you were in the spectral mind's space, instead of your own, using its senses. You can do so a number of times per day equal to your Intelligence modifier (at least once), and you regain all expended uses when you finish a long rest."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Information Overload",
+												"entries": [
+													"As an action while the item is on your person, you can try to magically overload the thoughts of one creature you or the mind can see that is within 5 feet of the manifested mind, channeling a jumble of information from the artificial mind. Unless the target succeeds on an Intelligence saving throw against your spell save DC, the target takes {@damage 1d8} psychic damage, and the next attack roll against it before the end of your next turn has advantage, since it is temporarily too distracted to defend itself well. The damage increases by {@damage 1d8} when you reach 5th level ({@damage 2d8}), 11th level ({@damage 3d8}), and 17th level ({@damage 4d8}) in this class.",
+													"Whenever you deal damage with this feature, you can expend a spell slot to deal extra damage to the target. The extra damage is {@damage 2d8} for a 1st-level spell slot, plus {@damage 1d8} for each spell level higher than first."
+												]
+											},
+											{
+												"type": "table",
+												"caption": "Artificial Mind",
+												"colLabels": [
+													"Main Material",
+													"Skill Proficiencies",
+													"Suggested Appearance"
+												],
+												"colStyles": [
+													"col-3",
+													"col-5",
+													"col-4"
+												],
+												"rows": [
+													[
+														"Animal (parchment, leather, bone)",
+														"{@skill Animal Handling}, {@skill Insight}, {@skill Medicine}, {@skill Perception}, {@skill Survival}",
+														"A beast or a humanoid visage with antlers"
+													],
+													[
+														"Mineral (glass, stone, metal)",
+														"{@skill Deception}, {@skill Intimidation}, {@skill Performance}, {@skill Persuasion}",
+														"A robotic or golem-like face"
+													],
+													[
+														"Plant (paper, wood)",
+														"{@skill Arcana}, {@skill History}, {@skill Investigation}, {@skill Nature}, {@skill Religion}",
+														"A bespectacled visage or a treant"
+													]
+												]
+											}
+										],
+										"type": "entries"
+									},
+									{
+										"name": "The First Warforged Minds",
+										"source": "UAArtificerRevisited",
+										"page": 7,
+										"header": 1,
+										"type": "entries",
+										"entries": [
+											"Warforged were originally created by House Cannith to fight as subservient beings, having limited self-awareness. The development of the autonomous warforged consciousness has been presented as an accidental breakthrough. However, rumors abound that it was the work of pioneering archivist Aaren d'Cannith, who planted the seed of autonomy in the warforged mind. This fact is now difficult to verify, for the development team's records were destroyed and Aaren d'Cannith disappeared under mysterious circumstances. Many believe that Aaren is still determined to help the warforged evolve and that he might be working with the sinister Lord of Blades."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Mind Network",
+								"source": "UAArtificerRevisited",
+								"page": 7,
+								"header": 2,
+								"entries": [
+									"At 6th level, you've learned how to use your artifices to access minds, both to communicate and to harm.",
+									{
+										"type": "entries",
+										"name": "Magical Telephony",
+										"entries": [
+											"While you have your Artificial Mind item on your person, you can communicate telepathically with anyone carrying an item bearing one of your artificer infusions, as the mind transmits your thoughts to each other. That person can also communicate telepathically with you as long as they have the item. This two-way communication can even cross planar boundaries."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Psychic Damage",
+										"entries": [
+											"When you make a psychic damage roll for an artificer spell or for Information Overload, you gain a bonus to the damage roll equal to your Intelligence modifier (minimum bonus of +1)."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Pure Information",
+								"source": "UAArtificerRevisited",
+								"page": 7,
+								"header": 2,
+								"entries": [
+									"At 14th level, your Artificial Mind is able to receive and transmit more information than ever before.",
+									{
+										"type": "entries",
+										"name": "Mind Overload",
+										"entries": [
+											"When you expend a spell slot to increase the damage of Information Overload, the target must succeed on an Intelligence saving throw against your spell save DC or be {@condition stunned} until the end of your next turn."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Infoportation",
+										"entries": [
+											"As an action while your Artificial Mind magic item is on your person, you cause the mind to turn you into pure information, teleporting you to the unoccupied space nearest to the spectral mind or to an item bearing one of your artificer infusions, where you physically reappear.",
+											"You can teleport in this way once for free and must finish a long rest before doing so again. You can also use this special ability by expending a spell slot of 2nd level or higher."
+										]
+									}
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Artillerist",
+					"shortName": "Artillerist",
+					"source": "UAArtificerRevisited",
+					"page": 9,
+					"additionalSpells": [
+						{
+							"prepared": {
+								"3": [
+									"Shield|PHB",
+									"Thunderwave|PHB"
+								],
+								"5": [
+									"Scorching Ray|PHB",
+									"Shatter|PHB"
+								],
+								"9": [
+									"Fireball|PHB",
+									"Wind Wall|PHB"
+								],
+								"13": [
+									"Ice Storm|PHB",
+									"Wall of Fire|PHB"
+								],
+								"17": [
+									"Cone of Cold|PHB",
+									"Wall of Force|PHB"
+								]
+							}
+						}
+					],
+					"subclassFeatures": [
+						[
+							{
+								"name": "Artillerist",
+								"source": "UAArtificerRevisited",
+								"page": 9,
+								"entries": [
+									"An Artillerist specializes in using magic to create explosions and defensive positions, as well as magic-infused sidearms—especially wands—that can be used on the battlefield. Artillerists were valued by all the armies of the Last War.",
+									{
+										"name": "Tools of the Trade",
+										"source": "UAArtificerRevisited",
+										"page": 9,
+										"header": 1,
+										"entries": [
+											"By the time you adopt this specialty at 3rd level, you're deeply familiar with employing its tools.",
+											{
+												"type": "entries",
+												"name": "Proficiencies",
+												"entries": [
+													"You gain proficiency with {@item smith's tools|phb} and {@item woodcarver's tools|phb}, assuming you don't already have them. You also gain those tools for free—the result of tinkering you've done as you've prepared for this specialization.",
+													"In addition, you gain the ability to use rods, staffs, and wands as spellcasting focuses for your artificer spells. You also gain a nonmagical, wooden wand for free, which you've carved in your spare time."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Crafting",
+												"entries": [
+													"If you craft a magic item in the wand category, it takes you a quarter of the normal time, and it costs you half as much of the usual gold."
+												]
+											}
+										],
+										"type": "entries"
+									},
+									{
+										"name": "Artillerist Spells",
+										"source": "UAArtificerRevisited",
+										"page": 9,
+										"header": 1,
+										"entries": [
+											"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Alchemist Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+											{
+												"type": "table",
+												"caption": "Artillerist Spells",
+												"colLabels": [
+													"Artificer Level",
+													"Spell"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"3rd",
+														"{@spell shield}, {@spell thunderwave}"
+													],
+													[
+														"5th",
+														"{@spell scorching ray}, {@spell shatter}"
+													],
+													[
+														"9th",
+														"{@spell fireball}, {@spell wind wall}"
+													],
+													[
+														"13th",
+														"{@spell ice storm}, {@spell wall of fire}"
+													],
+													[
+														"17th",
+														"{@spell cone of cold}, {@spell wall of force}"
+													]
+												]
+											}
+										],
+										"type": "entries"
+									},
+									{
+										"name": "Arcane Turret",
+										"source": "UAArtificerRevisited",
+										"page": 9,
+										"header": 1,
+										"entries": [
+											"At 3rd level, you learn how to create a magical turret. With your {@item smith's tools|phb} in hand, you can take an action to magically summon a Medium turret in an unoccupied space on a horizontal surface within 5 feet of you.",
+											"The turret is a magical object that occupies its space and that has crablike legs. It has an AC of 18 and a number of hit points equal to five times your artificer level. It is immune to poison damage, psychic damage, and all conditions. If it is forced to make an ability check or a saving throw, treat all its ability scores as 10 (+0). If the {@spell mending} spell is cast on it, it regains {@dice 2d6} hit points. It disappears if it is reduced to 0 hit points or after 10 minutes. You can dismiss it early as an action.",
+											"When you summon the turret, you decide which type it is, choosing from the options on the Arcane Turrets table. On each of your turns, you can take a bonus action to cause the turret to activate if you are within 60 feet of it. As part of the same action, you can direct the turret to walk or climb up to 15 feet to an unoccupied space.",
+											"You can summon a turret once for free and must finish a long rest before doing so again. You can also summon the turret by expending a spell slot of 1st level or higher. If you summon a second turret, the first turret disappears.",
+											"As an action, you can command your turret to detonate if you are within 60 feet of it. Doing so destroys the turret and forces each creature within 10 feet of it to make a Dexterity saving throw against your spell save DC, taking {@damage 3d6} force damage on a failed save or half as much damage on a successful one.",
+											{
+												"type": "table",
+												"caption": "Arcane Turrets",
+												"colLabels": [
+													"Turret",
+													"Activation"
+												],
+												"colStyles": [
+													"col-2",
+													"col-10"
+												],
+												"rows": [
+													[
+														"Flamethrower",
+														"The turret exhales fire in an adjacent 15-foot cone that you designate. Each creature in that area must make a Dexterity saving throw against your spell save DC, taking {@damage 1d8} fire damage on a failed save or half as much damage on a successful one. The fire ignites any flammable objects in the area that aren't being worn or carried."
+													],
+													[
+														"Force Ballista",
+														"Make a ranged spell attack, originating from the turret, at one creature or object within 120 feet of it. On a hit, the target takes {@damage 2d8} force damage, and if the target is a creature, it is pushed up to 5 feet away from the turret."
+													],
+													[
+														"Defender",
+														"The turret emits a burst of positive energy that grants itself and each creature of your choice within 10 feet of it a number of temporary hit points equal to {@dice 1d8} + your Intelligence modifier (minimum of +1)."
+													]
+												]
+											}
+										],
+										"type": "entries"
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Wand Prototype",
+								"source": "UAArtificerRevisited",
+								"page": 9,
+								"header": 2,
+								"entries": [
+									"By 6th level, you now regularly experiment with channeling different types of magic through wands. Whenever you finish a long rest and your {@item woodcarver's tools|phb} are with you, you can touch a nonmagical, wooden wand and turn it into a magic item. When you do so, you invest it with one artificer cantrip of your choice—even one you don't know—that has a casting time of 1 action. As an action, you can cause the magic wand to produce the cantrip, using your spellcasting ability modifier (other creatures are unable to use the wand's magic). The wand loses this magic when you finish your next long rest.",
+									"Any damage roll you make for a cantrip in the wand gains a bonus equal to your Intelligence modifier (minimum of +1).",
+									"When you reach 14th level in this class, you can invest the wand with two cantrips at the end of a long rest."
+								]
+							}
+						],
+						[
+							{
+								"name": "Fortified Position",
+								"source": "UAArtificerRevisited",
+								"page": 9,
+								"header": 2,
+								"entries": [
+									"Starting at 14th level, you're a master at conjuring a well-defended emplacement. You and your allies have half cover while within 10 feet of a turret you create with Arcane Turret, as a result of a shimmering field of magical protection that the turret emits.",
+									"You can also now summon a second turret for free and must finish a long rest before doing so again. If you summon the second turret while the first is still present, the first one doesn't disappear, and each turret can be of a different type (if you summon a third turret, the first turret vanishes). Moreover, you can use one bonus action to activate both turrets."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Battle Smith",
+					"shortName": "Battle Smith",
+					"source": "UAArtificerRevisited",
+					"page": 11,
+					"additionalSpells": [
+						{
+							"prepared": {
+								"3": [
+									"Heroism|PHB",
+									"Searing Smite|PHB"
+								],
+								"5": [
+									"Branding Smite|PHB",
+									"Warding Bond|PHB"
+								],
+								"9": [
+									"Aura of Vitality|PHB",
+									"Blinding Smite|PHB"
+								],
+								"13": [
+									"Aura of Purity|PHB",
+									"Staggering Smite|PHB"
+								],
+								"17": [
+									"Banishing Smite|PHB",
+									"Mass Cure Wounds|PHB"
+								]
+							}
+						}
+					],
+					"subclassFeatures": [
+						[
+							{
+								"name": "Battle Smith",
+								"source": "UAArtificerRevisited",
+								"page": 11,
+								"entries": [
+									"Armies require protection, and someone has to put things back together if defenses fail. A combination of protector and medic, a Battle Smith is an expert at defending others and repairing both materiel and personnel. To aid in their work, Battle Smiths are usually accompanied by an iron defender, a protective companion of their own creation. Many soldiers tell stories of nearly dying before being saved by a Battle Smith and an iron defender.",
+									"Battle Smiths played a key role in House Cannith's work on battle constructs and the original warforged, and after the Last War, these artificers led efforts to aid those who were injured in the war's horrific battles.",
+									{
+										"name": "Tools of the Trade",
+										"source": "UAArtificerRevisited",
+										"page": 11,
+										"header": 1,
+										"entries": [
+											"By the time you adopt this specialty at 3rd level, you're deeply familiar with employing its tools.",
+											{
+												"type": "entries",
+												"name": "Proficiencies",
+												"entries": [
+													"You gain proficiency with {@item leatherworker's tools|phb} and {@item smith's tools|phb}, assuming you don't already have them. You also gain {@item leatherworker's tools|phb} and {@item smith's tools|phb} for free—the result of tinkering you've done as you've prepared for this specialization."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Crafting",
+												"entries": [
+													"If you craft a magic item in the armor category, it takes you a quarter of the normal time, and it costs you half as much of the usual gold."
+												]
+											}
+										],
+										"type": "entries"
+									},
+									{
+										"name": "Battle Smith Spells",
+										"source": "UAArtificerRevisited",
+										"page": 11,
+										"header": 1,
+										"entries": [
+											"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Battle Smith Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+											{
+												"type": "table",
+												"caption": "Battle Smith Spells",
+												"colLabels": [
+													"Artificer Level",
+													"Spell"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"3rd",
+														"{@spell heroism}, {@spell searing smite}"
+													],
+													[
+														"5th",
+														"{@spell branding smite}, {@spell warding bond}"
+													],
+													[
+														"9th",
+														"{@spell aura of vitality}, {@spell blinding smite}"
+													],
+													[
+														"13th",
+														"{@spell aura of purity}, {@spell staggering smite}"
+													],
+													[
+														"17th",
+														"{@spell banishing smite}, {@spell mass cure wounds}"
+													]
+												]
+											}
+										],
+										"type": "entries"
+									},
+									{
+										"name": "Battle Ready",
+										"source": "UAArtificerRevisited",
+										"page": 11,
+										"header": 1,
+										"entries": [
+											"When you reach 3rd level, your combat training and your experiments with magic and have paid off in two ways:",
+											{
+												"type": "list",
+												"items": [
+													"You gain proficiency with martial weapons.",
+													"When you attack with a magic weapon, you can use your Intelligence modifier, instead of Strength or Dexterity, for the attack and damage rolls."
+												]
+											}
+										],
+										"type": "entries"
+									},
+									{
+										"name": "Iron Defender",
+										"source": "UAArtificerRevisited",
+										"page": 11,
+										"header": 1,
+										"entries": [
+											"By 3rd level, the tinkering in your free time has borne you a faithful companion, an iron defender. This metallic creature resembles a hound, a cougar, a bear, or another four-legged creature of your choice. It is friendly to you and your companions, and it obeys your commands. See this creature's game statistics in the {@creature iron defender|uaartificerrevisited} stat block.",
+											"In combat, the iron defender shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the {@action Dodge} action, unless you take a bonus action on your turn to command it to take one of the actions in its stat block or the {@action Dash}, {@action Disengage}, or {@action Help} action.",
+											"If the {@spell mending} spell is cast on it, it regains {@dice 2d6} hit points. If it has died within the last hour, you can use your {@item smith's tools|phb} as an action to revive it, provided you are within 5 feet of it and you expend a spell slot of 1st level or higher. The iron defender returns to life after 1 minute with all its hit points restored.",
+											"At the end of a long rest, you can create a new iron defender if you have your {@item smith's tools|phb} with you. If you already have an iron defender from this feature, the first one immediately perishes."
+										],
+										"type": "entries"
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Arcane Jolt",
+								"source": "UAArtificerRevisited",
+								"page": 11,
+								"header": 2,
+								"entries": [
+									"At 6th level, you learn new ways to channel arcane energy through your weapon attacks and your iron defender.",
+									"First, your iron defender's bite attack is now considered magical for the purposes of bypassing resistances and immunities, thanks to enhancements you've made to the creature in your free time.",
+									"Second, when you or your iron defender hits a target with a magic weapon attack, you can channel magical energy through the strike to create one of the following effects:",
+									{
+										"type": "list",
+										"items": [
+											"The target takes an extra {@damage 2d4} force damage.",
+											"Choose one creature or object you can see within 30 feet of the target. Healing energy flows into the chosen recipient, restoring {@dice 2d4} hit points to it."
+										]
+									},
+									"You can channel this magical energy a number of times equal to your Intelligence modifier (minimum of once), but you can do so no more than once on a turn. You regain all expended uses of this feature when you finish a long rest."
+								]
+							}
+						],
+						[
+							{
+								"name": "Improved Defender",
+								"source": "UAArtificerRevisited",
+								"page": 11,
+								"header": 2,
+								"entries": [
+									"At 14th level, your Arcane Jolt and iron defender become more powerful:",
+									{
+										"type": "list",
+										"items": [
+											"The extra damage and the healing of your Arcane Jolt both increase to {@damage 4d4}.",
+											"Whenever your iron defender uses its Defensive Pounce, the attacker takes force damage equal to {@dice 1d4} + your Intelligence modifier."
+										]
+									}
+								]
+							}
+						]
+					]
+				}
+			]
+		}
+	]
+}

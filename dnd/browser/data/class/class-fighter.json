@@ -1520,7 +1520,7 @@
 							{
 								"name": "Eldritch Knight",
 								"entries": [
-									"The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their study on two of the eight schools of magic\u2014abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter's reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook.",
+									"The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their study on two of the eight schools of magic—abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter's reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook.",
 									{
 										"type": "entries",
 										"name": "Spellcasting",
@@ -1653,6 +1653,538 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"expanded": {
+								"3": [
+									[
+										"Sapping Sting|EGW",
+										"Encode Thoughts|GGR",
+										"Acid Splash|PHB",
+										"Blade Ward|PHB",
+										"Chill Touch|PHB",
+										"Dancing Lights|PHB",
+										"Fire Bolt|PHB",
+										"Friends|PHB",
+										"Light|PHB",
+										"Mage Hand|PHB",
+										"Mending|PHB",
+										"Message|PHB",
+										"Minor Illusion|PHB",
+										"Poison Spray|PHB",
+										"Prestidigitation|PHB",
+										"Ray of Frost|PHB",
+										"Shocking Grasp|PHB",
+										"True Strike|PHB",
+										"Booming Blade|SCAG",
+										"Green-Flame Blade|SCAG",
+										"Lightning Lure|SCAG",
+										"Sword Burst|SCAG",
+										"Mind Sliver|UAFighterRogueWizard",
+										"On/Off (UA)|UAModernMagic",
+										"Mind Sliver|UASorcererAndWarlock",
+										"Infestation (UA)|UAStarterSpells",
+										"Control Flames|XGE",
+										"Create Bonfire|XGE",
+										"Frostbite|XGE",
+										"Gust|XGE",
+										"Infestation|XGE",
+										"Mold Earth|XGE",
+										"Shape Water|XGE",
+										"Thunderclap|XGE",
+										"Toll the Dead|XGE",
+										"Booming Blade|TCE",
+										"Green-Flame Blade|TCE",
+										"Lightning Lure|TCE",
+										"Mind Sliver|TCE",
+										"Sword Burst|TCE",
+										"Adivinación Menor|GdR",
+										"Graffiti Arcano|GdR",
+										"Herir|GdR",
+										"Impulso|GdR",
+										"Disparo Ilusorio|GPNM",
+										"Cronotruco|GPNM",
+										"Eco del Presente|GPNM",
+										"Latido del Tiempo|GPNM",
+										"Featherweaving|GMAM"
+									],
+									[
+										"Distort Value|AI",
+										"Jim's Magic Missile|AI",
+										"Gift of Alacrity|EGW",
+										"Magnify Gravity|EGW",
+										"Frost Fingers|IDRotF",
+										"Alarm|PHB",
+										"Burning Hands|PHB",
+										"Charm Person|PHB",
+										"Chromatic Orb|PHB",
+										"Color Spray|PHB",
+										"Comprehend Languages|PHB",
+										"Detect Magic|PHB",
+										"Disguise Self|PHB",
+										"Expeditious Retreat|PHB",
+										"False Life|PHB",
+										"Feather Fall|PHB",
+										"Find Familiar|PHB",
+										"Fog Cloud|PHB",
+										"Grease|PHB",
+										"Identify|PHB",
+										"Illusory Script|PHB",
+										"Jump|PHB",
+										"Longstrider|PHB",
+										"Mage Armor|PHB",
+										"Magic Missile|PHB",
+										"Protection from Evil and Good|PHB",
+										"Ray of Sickness|PHB",
+										"Shield|PHB",
+										"Silent Image|PHB",
+										"Sleep|PHB",
+										"Tasha's Hideous Laughter|PHB",
+										"Tenser's Floating Disk|PHB",
+										"Thunderwave|PHB",
+										"Unseen Servant|PHB",
+										"Witch Bolt|PHB",
+										"Id Insinuation|UAFighterRogueWizard",
+										"Infallible Relay (UA)|UAModernMagic",
+										"Remote Access (UA)|UAModernMagic",
+										"Cause Fear (UA)|UAStarterSpells",
+										"Guiding Hand (UA)|UAStarterSpells",
+										"Healing Elixir (UA)|UAStarterSpells",
+										"Puppet (UA)|UAStarterSpells",
+										"Sense Emotion (UA)|UAStarterSpells",
+										"Snare (UA)|UAStarterSpells",
+										"Sudden Awakening (UA)|UAStarterSpells",
+										"Absorb Elements|XGE",
+										"Catapult|XGE",
+										"Cause Fear|XGE",
+										"Earth Tremor|XGE",
+										"Ice Knife|XGE",
+										"Snare|XGE",
+										"Tasha's Caustic Brew|TCE",
+										"Silvery Barbs|SCC",
+										"Conjuro no Letal|GdR",
+										"Danza de las Herramientas|GdR",
+										"Hush|GdR",
+										"Inscripción Diplomática|GdR",
+										"Banerjee's Undead Minion|GPNM",
+										"Conversación Codificada|GPNM",
+										"Postrar|GPNM",
+										"Vértigo|GPNM",
+										"Barrera|GPNM",
+										"Cápsula Temporal|GPNM",
+										"Retrasar Respuesta|GPNM",
+										"Catalepsis|GPNM",
+										"Protección|GMAM",
+										"Regulación Térmica|GMAM",
+										"Elevar Menor|GMAM",
+										"Abrir Mente|CdS"
+									]
+								],
+								"7": [
+									[
+										"Air Bubble|AAG",
+										"Gift of Gab|AI",
+										"Jim's Glowing Coin|AI",
+										"Spray of Cards|BMT",
+										"Fortune's Favor|EGW",
+										"Immovable Object|EGW",
+										"Wristpocket|EGW",
+										"Nathair's Mischief|FTD",
+										"Rime's Binding Ice|FTD",
+										"Flock of Familiars|LLK",
+										"Alter Self|PHB",
+										"Arcane Lock|PHB",
+										"Blindness/Deafness|PHB",
+										"Blur|PHB",
+										"Cloud of Daggers|PHB",
+										"Continual Flame|PHB",
+										"Crown of Madness|PHB",
+										"Darkness|PHB",
+										"Darkvision|PHB",
+										"Detect Thoughts|PHB",
+										"Enlarge/Reduce|PHB",
+										"Flaming Sphere|PHB",
+										"Gentle Repose|PHB",
+										"Gust of Wind|PHB",
+										"Hold Person|PHB",
+										"Invisibility|PHB",
+										"Knock|PHB",
+										"Levitate|PHB",
+										"Locate Object|PHB",
+										"Magic Mouth|PHB",
+										"Magic Weapon|PHB",
+										"Melf's Acid Arrow|PHB",
+										"Mirror Image|PHB",
+										"Misty Step|PHB",
+										"Nystul's Magic Aura|PHB",
+										"Phantasmal Force|PHB",
+										"Ray of Enfeeblement|PHB",
+										"Rope Trick|PHB",
+										"Scorching Ray|PHB",
+										"See Invisibility|PHB",
+										"Shatter|PHB",
+										"Spider Climb|PHB",
+										"Suggestion|PHB",
+										"Web|PHB",
+										"Warp Sense|SatO",
+										"Mental Barrier|UAFighterRogueWizard",
+										"Mind Thrust|UAFighterRogueWizard",
+										"Thought Shield|UAFighterRogueWizard",
+										"Arcane Hacking (UA)|UAModernMagic",
+										"Digital Phantom (UA)|UAModernMagic",
+										"Find Vehicle (UA)|UAModernMagic",
+										"Aganazzar's Scorcher|XGE",
+										"Dragon's Breath|XGE",
+										"Dust Devil|XGE",
+										"Earthbind|XGE",
+										"Maximilian's Earthen Grasp|XGE",
+										"Mind Spike|XGE",
+										"Pyrotechnics|XGE",
+										"Shadow Blade|XGE",
+										"Skywrite|XGE",
+										"Snilloc's Snowball Swarm|XGE",
+										"Warding Wind|XGE",
+										"Tasha's Mind Whip|TCE",
+										"Borrowed Knowledge|SCC",
+										"Kinetic Jaunt|SCC",
+										"Vortex Warp|SCC",
+										"Wither and Bloom|SCC",
+										"Amplificación|GdR",
+										"Domo de Protección|GdR",
+										"Ojos de Oghma|GdR",
+										"Protección Ácida|GdR",
+										"Pacto de Verdad|GPNM",
+										"Embestida Pírica|GPNM",
+										"Ancla Temporal|GPNM",
+										"Infinitas Posibilidades|GPNM",
+										"Eco de Combate|GPNM",
+										"Hipnosis|GMAM",
+										"Visión de Papiro|GMAM",
+										"Desconcierto|GMAM",
+										"Buscador de Sueños|CdS"
+									]
+								],
+								"13": [
+									[
+										"Fast Friends|AI",
+										"Incite Greed|AI",
+										"Antagonize|BMT",
+										"Pulse Wave|EGW",
+										"Ashardalon's Stride|FTD",
+										"Galder's Tower|LLK",
+										"Animate Dead|PHB",
+										"Bestow Curse|PHB",
+										"Blink|PHB",
+										"Clairvoyance|PHB",
+										"Counterspell|PHB",
+										"Dispel Magic|PHB",
+										"Fear|PHB",
+										"Feign Death|PHB",
+										"Fireball|PHB",
+										"Fly|PHB",
+										"Gaseous Form|PHB",
+										"Glyph of Warding|PHB",
+										"Haste|PHB",
+										"Hypnotic Pattern|PHB",
+										"Leomund's Tiny Hut|PHB",
+										"Lightning Bolt|PHB",
+										"Magic Circle|PHB",
+										"Major Image|PHB",
+										"Nondetection|PHB",
+										"Phantom Steed|PHB",
+										"Protection from Energy|PHB",
+										"Remove Curse|PHB",
+										"Sending|PHB",
+										"Sleet Storm|PHB",
+										"Slow|PHB",
+										"Stinking Cloud|PHB",
+										"Tongues|PHB",
+										"Vampiric Touch|PHB",
+										"Water Breathing|PHB",
+										"Psionic Blast|UAFighterRogueWizard",
+										"Haywire (UA)|UAModernMagic",
+										"Invisibility to Cameras (UA)|UAModernMagic",
+										"Protection from Ballistics (UA)|UAModernMagic",
+										"Conjure Lesser Demon (UA)|UAThatOldBlackMagic",
+										"Catnap|XGE",
+										"Enemies Abound|XGE",
+										"Erupting Earth|XGE",
+										"Flame Arrows|XGE",
+										"Life Transference|XGE",
+										"Melf's Minute Meteors|XGE",
+										"Summon Lesser Demons|XGE",
+										"Thunder Step|XGE",
+										"Tidal Wave|XGE",
+										"Tiny Servant|XGE",
+										"Wall of Sand|XGE",
+										"Wall of Water|XGE",
+										"Intellect Fortress|TCE",
+										"Spirit Shroud|TCE",
+										"Summon Fey|TCE",
+										"Summon Shadowspawn|TCE",
+										"Summon Undead|TCE",
+										"Cabaña Instantánea de Leomund|GdR",
+										"Hemorragia|GdR",
+										"Lacrim Vita|GdR",
+										"Ojo de Halcón|GdR",
+										"Ritual Funerario de Zackie|GdR",
+										"Lanza Atrapante de Claymore|GPNM",
+										"Flecha atemporal|GPNM",
+										"Sequía|GMAM",
+										"Elevar Mayor|GMAM",
+										"Navegante del Viento|GMAM",
+										"Anonimato|CdS",
+										"Atar Consciencia|CdS"
+									]
+								],
+								"19": [
+									[
+										"Spirit of Death|BMT",
+										"Gravity Sinkhole|EGW",
+										"Raulothim's Psychic Lance|FTD",
+										"Galder's Speedy Courier|LLK",
+										"Arcane Eye|PHB",
+										"Banishment|PHB",
+										"Blight|PHB",
+										"Confusion|PHB",
+										"Conjure Minor Elementals|PHB",
+										"Control Water|PHB",
+										"Dimension Door|PHB",
+										"Evard's Black Tentacles|PHB",
+										"Fabricate|PHB",
+										"Fire Shield|PHB",
+										"Greater Invisibility|PHB",
+										"Hallucinatory Terrain|PHB",
+										"Ice Storm|PHB",
+										"Leomund's Secret Chest|PHB",
+										"Locate Creature|PHB",
+										"Mordenkainen's Faithful Hound|PHB",
+										"Mordenkainen's Private Sanctum|PHB",
+										"Otiluke's Resilient Sphere|PHB",
+										"Phantasmal Killer|PHB",
+										"Polymorph|PHB",
+										"Stone Shape|PHB",
+										"Stoneskin|PHB",
+										"Wall of Fire|PHB",
+										"Gate Seal|SatO",
+										"Ego Whip|UAFighterRogueWizard",
+										"Conjure Knowbot (UA)|UAModernMagic",
+										"Synchronicity (UA)|UAModernMagic",
+										"System Backdoor (UA)|UAModernMagic",
+										"Conjure Barlgura (UA)|UAThatOldBlackMagic",
+										"Conjure Shadow Demon (UA)|UAThatOldBlackMagic",
+										"Charm Monster|XGE",
+										"Elemental Bane|XGE",
+										"Sickening Radiance|XGE",
+										"Storm Sphere|XGE",
+										"Summon Greater Demon|XGE",
+										"Vitriolic Sphere|XGE",
+										"Watery Sphere|XGE",
+										"Summon Aberration|TCE",
+										"Summon Construct|TCE",
+										"Summon Elemental|TCE",
+										"Criogénesis|GPNM",
+										"Maldición de Juventud|GPNM",
+										"Marca Pasada|GPNM",
+										"Cadéncia Sincrónica|GPNM",
+										"Sincronía|GPNM",
+										"Ver Ramificación Temporal|GPNM",
+										"Mirror Echo|GPNM",
+										"Wall of Acid|GPNM",
+										"Imagen Maldita|GMAM",
+										"Incendio|GMAM",
+										"Sending (Hishna)|GMAM",
+										"Cambiar Cauce|GMAM",
+										"Bloqueo Onírico|CdS",
+										"Caminante de Sueños|CdS",
+										"Pesadilla|CdS",
+										"Robar Pensamientos|CdS"
+									]
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s5": [
+									"Create Spelljamming Helm|AAG",
+									"Temporal Shunt|EGW",
+									"Summon Draconic Spirit|FTD",
+									"Animate Objects|PHB",
+									"Bigby's Hand|PHB",
+									"Cloudkill|PHB",
+									"Cone of Cold|PHB",
+									"Conjure Elemental|PHB",
+									"Contact Other Plane|PHB",
+									"Creation|PHB",
+									"Dominate Person|PHB",
+									"Dream|PHB",
+									"Geas|PHB",
+									"Hold Monster|PHB",
+									"Legend Lore|PHB",
+									"Mislead|PHB",
+									"Modify Memory|PHB",
+									"Passwall|PHB",
+									"Planar Binding|PHB",
+									"Rary's Telepathic Bond|PHB",
+									"Scrying|PHB",
+									"Seeming|PHB",
+									"Telekinesis|PHB",
+									"Teleportation Circle|PHB",
+									"Wall of Force|PHB",
+									"Wall of Stone|PHB",
+									"Intellect Fortress|UAFighterRogueWizard",
+									"Commune with City (UA)|UAModernMagic",
+									"Shutdown (UA)|UAModernMagic",
+									"Conjure Vrock (UA)|UAThatOldBlackMagic",
+									"Control Winds|XGE",
+									"Danse Macabre|XGE",
+									"Dawn|XGE",
+									"Enervation|XGE",
+									"Far Step|XGE",
+									"Immolation|XGE",
+									"Infernal Calling|XGE",
+									"Negative Energy Flood|XGE",
+									"Skill Empowerment|XGE",
+									"Steel Wind Strike|XGE",
+									"Synaptic Static|XGE",
+									"Transmute Rock|XGE",
+									"Wall of Light|XGE",
+									"Nudo de Nyx|GdR",
+									"Drenaje de Maná|GPNM",
+									"Molly's True Shield|GPNM",
+									"Kemiza's Elemental Cover|GPNM",
+									"Reflejos Predatorios|GPNM",
+									"Guarda Efímera|GPNM",
+									"Espiral de Dolor|GPNM",
+									"Control Fire|GPNM",
+									"Talismán de Pluma|GMAM"
+								],
+								"s8": [
+									"Dark Star|EGW",
+									"Reality Break|EGW",
+									"Antimagic Field|PHB",
+									"Antipathy/Sympathy|PHB",
+									"Clone|PHB",
+									"Control Weather|PHB",
+									"Demiplane|PHB",
+									"Dominate Monster|PHB",
+									"Feeblemind|PHB",
+									"Incendiary Cloud|PHB",
+									"Maze|PHB",
+									"Mind Blank|PHB",
+									"Power Word Stun|PHB",
+									"Sunburst|PHB",
+									"Telepathy|PHB",
+									"Abi-Dalzim's Horrid Wilting|XGE",
+									"Illusory Dragon|XGE",
+									"Maddening Darkness|XGE",
+									"Mighty Fortress|XGE",
+									"Divergencia Temporal|GPNM"
+								],
+								"s6": [
+									"Gravity Fissure|EGW",
+									"Fizban's Platinum Shield|FTD",
+									"Arcane Gate|PHB",
+									"Chain Lightning|PHB",
+									"Circle of Death|PHB",
+									"Contingency|PHB",
+									"Create Undead|PHB",
+									"Disintegrate|PHB",
+									"Drawmij's Instant Summons|PHB",
+									"Eyebite|PHB",
+									"Flesh to Stone|PHB",
+									"Globe of Invulnerability|PHB",
+									"Guards and Wards|PHB",
+									"Magic Jar|PHB",
+									"Mass Suggestion|PHB",
+									"Move Earth|PHB",
+									"Otiluke's Freezing Sphere|PHB",
+									"Otto's Irresistible Dance|PHB",
+									"Programmed Illusion|PHB",
+									"Sunbeam|PHB",
+									"True Seeing|PHB",
+									"Wall of Ice|PHB",
+									"Psychic Crush|UAFighterRogueWizard",
+									"Create Homunculus|XGE",
+									"Investiture of Flame|XGE",
+									"Investiture of Ice|XGE",
+									"Investiture of Stone|XGE",
+									"Investiture of Wind|XGE",
+									"Mental Prison|XGE",
+									"Scatter|XGE",
+									"Soul Cage|XGE",
+									"Tenser's Transformation|XGE",
+									"Summon Fiend|TCE",
+									"Tasha's Otherworldly Guise|TCE",
+									"Nube Voladora|GPNM",
+									"Anomalía Espaciotemporal de Molly|GPNM",
+									"Clon Temporal|GPNM",
+									"Fusionar Parajes Oníricos|CdS",
+									"Paraje Onírico|CdS"
+								],
+								"s9": [
+									"Ravenous Void|EGW",
+									"Time Ravage|EGW",
+									"Astral Projection|PHB",
+									"Foresight|PHB",
+									"Gate|PHB",
+									"Imprisonment|PHB",
+									"Meteor Swarm|PHB",
+									"Power Word Kill|PHB",
+									"Prismatic Wall|PHB",
+									"Shapechange|PHB",
+									"Time Stop|PHB",
+									"True Polymorph|PHB",
+									"Weird|PHB",
+									"Wish|PHB",
+									"Invulnerability|XGE",
+									"Mass Polymorph|XGE",
+									"Psychic Scream|XGE",
+									"Blade of Disaster|TCE",
+									"Trueno de los Dioses|GdR",
+									"Obra Maestra|GPNM",
+									"Time travel|GPNM",
+									"Proyección Onírica|CdS"
+								],
+								"s7": [
+									"Tether Essence|EGW",
+									"Draconic Transformation|FTD",
+									"Create Magen|IDRotF",
+									"Delayed Blast Fireball|PHB",
+									"Etherealness|PHB",
+									"Finger of Death|PHB",
+									"Forcecage|PHB",
+									"Mirage Arcane|PHB",
+									"Mordenkainen's Magnificent Mansion|PHB",
+									"Mordenkainen's Sword|PHB",
+									"Plane Shift|PHB",
+									"Prismatic Spray|PHB",
+									"Project Image|PHB",
+									"Reverse Gravity|PHB",
+									"Sequester|PHB",
+									"Simulacrum|PHB",
+									"Symbol|PHB",
+									"Teleport|PHB",
+									"Conjure Hezrou (UA)|UAThatOldBlackMagic",
+									"Crown of Stars|XGE",
+									"Power Word Pain|XGE",
+									"Whirlwind|XGE",
+									"Dream of the Blue Veil|TCE",
+									"Power Word Shield|GPNM",
+									"Rebobinar|GPNM",
+									"Ciclo de Estasis|GPNM",
+									"Ecos Alternativos|GPNM"
+								],
+								"s10": [
+									"Filacteria|GdR",
+									"Muro de Frontera|GdR",
+									"Domo Impenetrable|GdR",
+									"True Name|DiablonomicndeValafar"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2235,7 +2767,7 @@
 										"type": "entries",
 										"name": "Archer's Lore",
 										"entries": [
-											"At 3rd level, you learn magical theory or some of the secrets of nature\u2014typical for practitioners of this elven martial tradition. You gain proficiency in either the {@skill Arcana} or {@skill Nature} skill."
+											"At 3rd level, you learn magical theory or some of the secrets of nature—typical for practitioners of this elven martial tradition. You gain proficiency in either the {@skill Arcana} or {@skill Nature} skill."
 										]
 									},
 									{
@@ -2647,7 +3179,7 @@
 										"type": "entries",
 										"name": "Arcane Archer Lore",
 										"entries": [
-											"At 3rd level, you learn magical theory or some of the secrets of nature\u2014typical for practitioners of this elven martial tradition. You choose to gain proficiency in either the {@skill Arcana} or the {@skill Nature} skill, and you choose to learn either the {@spell prestidigitation} or the {@spell druidcraft} cantrip."
+											"At 3rd level, you learn magical theory or some of the secrets of nature—typical for practitioners of this elven martial tradition. You choose to gain proficiency in either the {@skill Arcana} or the {@skill Nature} skill, and you choose to learn either the {@spell prestidigitation} or the {@spell druidcraft} cantrip."
 										]
 									},
 									{
@@ -2819,6 +3351,22 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"known": {
+								"3": [
+									"Prestidigitation|PHB#c"
+								]
+							}
+						},
+						{
+							"known": {
+								"3": [
+									"Druidcraft|PHB#c"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -3246,7 +3794,7 @@
 														"type": "entries",
 														"name": "Advance",
 														"entries": [
-															"You and your allies can move 10 ft. in your tactical focus for every 5 feet of movement expended there. {@i [Changed during stream to \"You and your allies can basically teleport into your focus. Movement on allies turn.\" Specifically, the movement is not made as a reaction\u2014your allies can use their movement on their turn(s) to move towards the focus, and gain bonuses to speed or other effects (for example, ignoring difficult terrain, or movement does not provoke opportunity attacks) to aid and incentivize this. Additionally, this may replace \"Cover That Flank\" in future.]}"
+															"You and your allies can move 10 ft. in your tactical focus for every 5 feet of movement expended there. {@i [Changed during stream to \"You and your allies can basically teleport into your focus. Movement on allies turn.\" Specifically, the movement is not made as a reaction—your allies can use their movement on their turn(s) to move towards the focus, and gain bonuses to speed or other effects (for example, ignoring difficult terrain, or movement does not provoke opportunity attacks) to aid and incentivize this. Additionally, this may replace \"Cover That Flank\" in future.]}"
 														]
 													},
 													{
@@ -4313,26 +4861,182 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s0": [
+									"Mage Hand|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
-					"name": "Penitente", "shortName": "Penitente", "source": "Himo", "page": "??",
+					"name": "Penitente",
+					"shortName": "Penitente",
+					"source": "Himo",
+					"page": "??",
 					"subclassFeatures": [
-						[{"name": "Penitente", "source": "Himo", "page": "??", "entries": ["Los penitentes son guerreros expulsados de órdenes religiosas que perdieron sus poderes sagrados y buscan perdón divino.", {"name": "Mea Culpa", "source": "Himo", "page": "??", "entries": ["Tienes una reserva de Puntos de Penitencia igual a tu nivel y recuperas la mitad, redondeada hacia abajo, al final de cada descanso corto. El daño producido al gastarlos cuenta como mágico y plateado contra resistencias, pero no para antimagia. Solo puedes elegir una opción por turno.", {"type": "list", "items": ["Ira Pecaminosa: añade {@dice 1d6} al daño de un ataque por cada punto gastado, hasta tu bonificador de competencia.", "Puñalada Sacra: al usar Correr, gastas 1 PP para hacer un ataque con arma cuerpo a cuerpo.", "Sangre Fervorosa: gastas 1 PP para lanzar tu sangre como daga a 30 pies; ataque de arma de sutileza que hace {@dice 1d8}, sumando Constitución al ataque y daño."]}]}, {"name": "Ataque en Caída", "source": "Himo", "page": "??", "entries": ["Si caes al menos 10 pies antes de golpear a una criatura, añades todo el daño de caída al primer ataque cuerpo a cuerpo tras aterrizar. No recibes los primeros {@dice 3d6}, y la reducción solo se aplica si impactas."]}]}],
-						[{"name": "Cruz del Pecador", "source": "Himo", "page": "??", "entries": ["Puedes usar Dados de Golpe durante descansos cortos y Segundo Aliento fuera de ellos para recuperar PP. Con Segundo Aliento, añade el doble de tu modificador de Constitución en lugar de tu nivel."]}],
-						[{"name": "Mejora del Mea Culpa", "source": "Himo", "page": "??", "entries": ["Ira Sagrada usa {@dice d8}. Estocada Sacra permite gastar 1 PP extra para no provocar ataques de oportunidad. Sangre Sacra permite lanzar sangre extra por 1 PP cada una, hasta la mitad de tu bonificador de competencia.", "Peso de la Justicia: en un Ataque en Caída, gasta hasta tu bonificador de competencia en PP para lanzar {@spell earth tremor|XGE} centrado en ti a un nivel igual a los PP gastados. Saeta Dolorosa: al inicio de tu turno, gasta 5 PP; todo el daño que hagas hasta el inicio de tu próximo turno se regenera como puntos de golpe."]}],
-						[{"name": "Rezos", "source": "Himo", "page": "??", "entries": ["Una vez al día puedes gastar 10 PP para invocar un rezo, recuperándolo tras un descanso prolongado.", {"type": "list", "items": ["Zarabanda del Refugio Seguro: +4 a la CA y resistencia a todo daño durante 10 minutos.", "Debla de las Luces: criaturas elegidas a 30 pies hacen salvación de Sabiduría contra tu Constitución o reciben {@dice 10d12} radiante, o la mitad; eres inmune a todo daño hasta el final de tu próximo turno.", "Cante Jondo de las Tres Hermanas: criaturas elegidas a 120 pies hacen salvación de Constitución contra la tuya o reciben {@dice 10d4} necrótico.", "Tiento a tus Cabellos Espinados: durante una hora, quien te ataque cuerpo a cuerpo recibe daño perforante igual a tu modificador de Constitución."]}]}],
-						[{"name": "Mejora de Mea Culpa", "source": "Himo", "page": "??", "entries": ["Ira del Retorcido usa {@dice d10}. Embestida Sacra permite gastar hasta 5 PP extra para ampliar el rango de crítico en 1 por punto, hasta 15. Milagro Sangrante eleva el máximo a tu bonificador de competencia. Consagración: al gastar de 7 a 9 PP para subir el nivel del efecto de caída, su alcance aumenta 5 pies por punto extra."]}]
+						[
+							{
+								"name": "Penitente",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Los penitentes son guerreros expulsados de órdenes religiosas que perdieron sus poderes sagrados y buscan perdón divino.",
+									{
+										"name": "Mea Culpa",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Tienes una reserva de Puntos de Penitencia igual a tu nivel y recuperas la mitad, redondeada hacia abajo, al final de cada descanso corto. El daño producido al gastarlos cuenta como mágico y plateado contra resistencias, pero no para antimagia. Solo puedes elegir una opción por turno.",
+											{
+												"type": "list",
+												"items": [
+													"Ira Pecaminosa: añade {@dice 1d6} al daño de un ataque por cada punto gastado, hasta tu bonificador de competencia.",
+													"Puñalada Sacra: al usar Correr, gastas 1 PP para hacer un ataque con arma cuerpo a cuerpo.",
+													"Sangre Fervorosa: gastas 1 PP para lanzar tu sangre como daga a 30 pies; ataque de arma de sutileza que hace {@dice 1d8}, sumando Constitución al ataque y daño."
+												]
+											}
+										]
+									},
+									{
+										"name": "Ataque en Caída",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Si caes al menos 10 pies antes de golpear a una criatura, añades todo el daño de caída al primer ataque cuerpo a cuerpo tras aterrizar. No recibes los primeros {@dice 3d6}, y la reducción solo se aplica si impactas."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Cruz del Pecador",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Puedes usar Dados de Golpe durante descansos cortos y Segundo Aliento fuera de ellos para recuperar PP. Con Segundo Aliento, añade el doble de tu modificador de Constitución en lugar de tu nivel."
+								]
+							}
+						],
+						[
+							{
+								"name": "Mejora del Mea Culpa",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Ira Sagrada usa {@dice d8}. Estocada Sacra permite gastar 1 PP extra para no provocar ataques de oportunidad. Sangre Sacra permite lanzar sangre extra por 1 PP cada una, hasta la mitad de tu bonificador de competencia.",
+									"Peso de la Justicia: en un Ataque en Caída, gasta hasta tu bonificador de competencia en PP para lanzar {@spell earth tremor|XGE} centrado en ti a un nivel igual a los PP gastados. Saeta Dolorosa: al inicio de tu turno, gasta 5 PP; todo el daño que hagas hasta el inicio de tu próximo turno se regenera como puntos de golpe."
+								]
+							}
+						],
+						[
+							{
+								"name": "Rezos",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Una vez al día puedes gastar 10 PP para invocar un rezo, recuperándolo tras un descanso prolongado.",
+									{
+										"type": "list",
+										"items": [
+											"Zarabanda del Refugio Seguro: +4 a la CA y resistencia a todo daño durante 10 minutos.",
+											"Debla de las Luces: criaturas elegidas a 30 pies hacen salvación de Sabiduría contra tu Constitución o reciben {@dice 10d12} radiante, o la mitad; eres inmune a todo daño hasta el final de tu próximo turno.",
+											"Cante Jondo de las Tres Hermanas: criaturas elegidas a 120 pies hacen salvación de Constitución contra la tuya o reciben {@dice 10d4} necrótico.",
+											"Tiento a tus Cabellos Espinados: durante una hora, quien te ataque cuerpo a cuerpo recibe daño perforante igual a tu modificador de Constitución."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Mejora de Mea Culpa",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Ira del Retorcido usa {@dice d10}. Embestida Sacra permite gastar hasta 5 PP extra para ampliar el rango de crítico en 1 por punto, hasta 15. Milagro Sangrante eleva el máximo a tu bonificador de competencia. Consagración: al gastar de 7 a 9 PP para subir el nivel del efecto de caída, su alcance aumenta 5 pies por punto extra."
+								]
+							}
+						]
 					]
 				},
 				{
-					"name": "Guerrero Tribal", "shortName": "Tribal", "source": "Himo", "page": "??",
+					"name": "Guerrero Tribal",
+					"shortName": "Tribal",
+					"source": "Himo",
+					"page": "??",
 					"subclassFeatures": [
-						[{"name": "Guerrero Tribal", "source": "Himo", "page": "??", "entries": ["Guerreros de tribus de Chult, Cormanthor, Eversmoors y las Agujas del Mundo emboscan y rodean a sus enemigos mediante tácticas de {@skill Stealth}.", {"name": "Táctica Ligera", "source": "Himo", "page": "??", "entries": ["Tu defensa sin armadura se calcula con 13 en lugar de 10 y, con armadura media, tu modificador máximo de Destreza es 3 en lugar de 2."]}, {"name": "Experto Lancero", "source": "Himo", "page": "??", "entries": ["Al usar una jabalina, lanza, lanza de caballería o pica, añades 5 pies a su alcance cuerpo a cuerpo e ignoras la desventaja por alcance largo al arrojarlas. Cuando arrojes una de estas armas, reduces 10 pies la velocidad del objetivo."]}]}],
-						[{"name": "Camuflaje Preciso", "source": "Himo", "page": "??", "entries": ["Durante un descanso corto o prolongado puedes preparar un camuflaje para tu entorno. Hasta recibir daño, añades el doble de tu bonificador de Destreza a las pruebas de {@skill Stealth} y se te considera competente, o experto si ya lo eras."]}],
-						[{"name": "Tácticas Tribales", "source": "Himo", "page": "??", "entries": ["Flanquear te da +5 en lugar de +2 y puedes flanquear incluso con ataques a distancia. El aliado que flanquee contigo también obtiene este bono cuerpo a cuerpo y a distancia. Solo puedes flanquear con un aliado a la vez, pero puedes elegir cuál."]}],
-						[{"name": "Emboscada Sorpresa", "source": "Himo", "page": "??", "entries": ["Si sorprendes a una criatura al inicio de un combate, puedes cambiar todo tu multiataque por un único lanzazo con un arma de Experto Lancero. Con un impacto, recibe el daño que hubiera recibido de todo tu multiataque, más tu nivel."]}],
-						[{"name": "Golpe Fulminante", "source": "Himo", "page": "??", "entries": ["Mientras estés escondido, si superas la CA de una criatura por 6 o más al atacarla, el ataque es crítico. Si ya era crítico, sigues escondido para ella y para cualquier criatura que no te hubiera detectado antes."]}]
+						[
+							{
+								"name": "Guerrero Tribal",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Guerreros de tribus de Chult, Cormanthor, Eversmoors y las Agujas del Mundo emboscan y rodean a sus enemigos mediante tácticas de {@skill Stealth}.",
+									{
+										"name": "Táctica Ligera",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Tu defensa sin armadura se calcula con 13 en lugar de 10 y, con armadura media, tu modificador máximo de Destreza es 3 en lugar de 2."
+										]
+									},
+									{
+										"name": "Experto Lancero",
+										"source": "Himo",
+										"page": "??",
+										"entries": [
+											"Al usar una jabalina, lanza, lanza de caballería o pica, añades 5 pies a su alcance cuerpo a cuerpo e ignoras la desventaja por alcance largo al arrojarlas. Cuando arrojes una de estas armas, reduces 10 pies la velocidad del objetivo."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Camuflaje Preciso",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Durante un descanso corto o prolongado puedes preparar un camuflaje para tu entorno. Hasta recibir daño, añades el doble de tu bonificador de Destreza a las pruebas de {@skill Stealth} y se te considera competente, o experto si ya lo eras."
+								]
+							}
+						],
+						[
+							{
+								"name": "Tácticas Tribales",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Flanquear te da +5 en lugar de +2 y puedes flanquear incluso con ataques a distancia. El aliado que flanquee contigo también obtiene este bono cuerpo a cuerpo y a distancia. Solo puedes flanquear con un aliado a la vez, pero puedes elegir cuál."
+								]
+							}
+						],
+						[
+							{
+								"name": "Emboscada Sorpresa",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Si sorprendes a una criatura al inicio de un combate, puedes cambiar todo tu multiataque por un único lanzazo con un arma de Experto Lancero. Con un impacto, recibe el daño que hubiera recibido de todo tu multiataque, más tu nivel."
+								]
+							}
+						],
+						[
+							{
+								"name": "Golpe Fulminante",
+								"source": "Himo",
+								"page": "??",
+								"entries": [
+									"Mientras estés escondido, si superas la CA de una criatura por 6 o más al atacarla, el ataque es crítico. Si ya era crítico, sigues escondido para ella y para cualquier criatura que no te hubiera detectado antes."
+								]
+							}
+						]
 					]
 				}
 			],
@@ -4341,8 +5045,8 @@
 					"entries": [
 						"A human in clanging plate armor holds her shield before her as she runs toward the massed goblins. An elf behind her, clad in studded leather armor, peppers the goblins with arrows loosed from his exquisite bow. The half-orc nearby shouts orders, helping the two combatants coordinate their assault to the best advantage.",
 						"A dwarf in chain mail interposes his shield between the ogre's club and his companion, knocking the deadly blow aside. His companion, a half-elf in scale armor, swings two scimitars in a blinding whirl as she circles the ogre, looking for a blind spot in its defenses.",
-						"A gladiator fights for sport in an arena, a master with his trident and net, skilled at toppling foes and moving them around for the crowd's delight\u2014and his own tactical advantage. His opponent's sword flares with blue light an instant before she sends lightning flashing forth to smite him.",
-						"All of these heroes are fighters, perhaps the most diverse class of characters in the worlds of Dungeons & Dragons. Questing knights, conquering overlords, royal champions, elite foot soldiers, hardened mercenaries, and bandit kings\u2014as fighters, they all share an unparalleled mastery with weapons and armor, and a thorough knowledge of the skills of combat. And they are well acquainted with death, both meting it out and staring it defiantly in the face.",
+						"A gladiator fights for sport in an arena, a master with his trident and net, skilled at toppling foes and moving them around for the crowd's delight—and his own tactical advantage. His opponent's sword flares with blue light an instant before she sends lightning flashing forth to smite him.",
+						"All of these heroes are fighters, perhaps the most diverse class of characters in the worlds of Dungeons & Dragons. Questing knights, conquering overlords, royal champions, elite foot soldiers, hardened mercenaries, and bandit kings—as fighters, they all share an unparalleled mastery with weapons and armor, and a thorough knowledge of the skills of combat. And they are well acquainted with death, both meting it out and staring it defiantly in the face.",
 						{
 							"type": "entries",
 							"name": "Well-Rounded Specialists",
@@ -4355,7 +5059,7 @@
 							"name": "Trained for Danger",
 							"entries": [
 								"Not every member of the city watch, the village militia, or the queen's army is a fighter. Most of these troops are relatively untrained soldiers with only the most basic combat knowledge. Veteran soldiers, military officers, trained bodyguards, dedicated knights, and similar figures are fighters.",
-								"Some fighters feel drawn to use their training as adventurers. The dungeon delving, monster slaying, and other dangerous work common among adventurers is second nature for a fighter, not all that different from the life he or she left behind. There are greater risks, perhaps, but also much greater rewards\u2014few fighters in the city watch have the opportunity to discover a magic flame tongue sword, for example."
+								"Some fighters feel drawn to use their training as adventurers. The dungeon delving, monster slaying, and other dangerous work common among adventurers is second nature for a fighter, not all that different from the life he or she left behind. There are greater risks, perhaps, but also much greater rewards—few fighters in the city watch have the opportunity to discover a magic flame tongue sword, for example."
 							]
 						},
 						{
@@ -4363,7 +5067,7 @@
 							"name": "Creating a Fighter",
 							"entries": [
 								"As you build your fighter, think about two related elements of your character's background: Where did you get your combat training, and what set you apart from the mundane warriors around you? Were you particularly ruthless? Did you get extra help from a mentor, perhaps because of your exceptional dedication? What drove you to this training in the first place? A threat to your homeland, a thirst for revenge, or a need to prove yourself might all have been factors.",
-								"You might have enjoyed formal training in a noble's army or in a local militia. Perhaps you trained in a war academy, learning strategy, tactics, and military history. Or you might be self-taught\u2014unpolished but well tested. Did you take up the sword as a way to escape the limits of life on a farm, or are you following a proud family tradition? Where did you acquire your weapons and armor? They might have been military issue or family heirlooms, or perhaps you scrimped and saved for years to buy them. Your armaments are now among your most important possessions\u2014the only things that stand between you and death's embrace.",
+								"You might have enjoyed formal training in a noble's army or in a local militia. Perhaps you trained in a war academy, learning strategy, tactics, and military history. Or you might be self-taught—unpolished but well tested. Did you take up the sword as a way to escape the limits of life on a farm, or are you following a proud family tradition? Where did you acquire your weapons and armor? They might have been military issue or family heirlooms, or perhaps you scrimped and saved for years to buy them. Your armaments are now among your most important possessions—the only things that stand between you and death's embrace.",
 								{
 									"type": "entries",
 									"name": "Quick Build",
@@ -4546,7 +5250,7 @@
 							"type": "entries",
 							"name": "Style",
 							"entries": [
-								"Many fighters distinguish themselves from their peers by adopting and perfecting a particular style or method of waging combat. Although this style might be a natural outgrowth of a fighter's personality, that's not always the case\u2014someone's approach to the world in general does not necessarily dictate how that person operates when lives are on the line.",
+								"Many fighters distinguish themselves from their peers by adopting and perfecting a particular style or method of waging combat. Although this style might be a natural outgrowth of a fighter's personality, that's not always the case—someone's approach to the world in general does not necessarily dictate how that person operates when lives are on the line.",
 								"Do you have a combat style that mirrors your outlook on life, or is something else inside you unleashed when weapons are drawn?",
 								{
 									"type": "table",

@@ -1215,6 +1215,28 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Disguise Self|PHB"
+								],
+								"s3": [
+									"Glyph of Warding|PHB"
+								],
+								"s4": [
+									"Greater Invisibility|PHB"
+								],
+								"s2": [
+									"Rope Trick|PHB"
+								],
+								"s5": [
+									"Seeming|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1329,6 +1351,28 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Alter Self|PHB"
+								],
+								"s4": [
+									"Banishment|PHB"
+								],
+								"s3": [
+									"Protection from Energy|PHB"
+								],
+								"s1": [
+									"Protection from Evil and Good|PHB"
+								],
+								"s5": [
+									"Teleportation Circle|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1449,6 +1493,28 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s3": [
+									"Conjure Animals|PHB"
+								],
+								"s2": [
+									"Enhance Ability|PHB"
+								],
+								"s1": [
+									"Entangle|PHB"
+								],
+								"s4": [
+									"Giant Insect|PHB"
+								],
+								"s5": [
+									"Insect Plague|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1554,6 +1620,28 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s4": [
+									"Banishment|PHB"
+								],
+								"s3": [
+									"Magic Circle|PHB"
+								],
+								"s5": [
+									"Planar Binding|PHB"
+								],
+								"s1": [
+									"Protection from Evil and Good|PHB"
+								],
+								"s2": [
+									"Zone of Truth|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1665,6 +1753,27 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"known": {
+								"3": [
+									"Disguise Self|PHB"
+								],
+								"5": [
+									"Rope Trick|PHB"
+								],
+								"9": [
+									"Fear|PHB"
+								],
+								"13": [
+									"Greater Invisibility|PHB"
+								],
+								"17": [
+									"Seeming|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1676,7 +1785,7 @@
 							{
 								"name": "Horizon Walker",
 								"entries": [
-									"Horizon Walkers guard the world against threats that originate from other planes or that seek to ravage the mortal realm with otherworldly magic. They seek out planar portals and keep watch over them, venturing to the Inner Planes and the Outer Planes as needed to pursue their foes. These rangers are also friends to any forces in the multiverse\u2014especially benevolent dragons, fey, and elementals\u2014that work to preserve life and the order of the planes.",
+									"Horizon Walkers guard the world against threats that originate from other planes or that seek to ravage the mortal realm with otherworldly magic. They seek out planar portals and keep watch over them, venturing to the Inner Planes and the Outer Planes as needed to pursue their foes. These rangers are also friends to any forces in the multiverse—especially benevolent dragons, fey, and elementals—that work to preserve life and the order of the planes.",
 									{
 										"type": "entries",
 										"name": "Horizon Walker Magic",
@@ -1779,6 +1888,27 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"known": {
+								"3": [
+									"Protection from Evil and Good|PHB"
+								],
+								"5": [
+									"Misty Step|PHB"
+								],
+								"9": [
+									"Haste|PHB"
+								],
+								"13": [
+									"Banishment|PHB"
+								],
+								"17": [
+									"Teleportation Circle|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1891,6 +2021,35 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"known": {
+								"3": [
+									"Protection from Evil and Good|PHB"
+								],
+								"5": [
+									"Zone of Truth|PHB"
+								],
+								"9": [
+									"Magic Circle|PHB"
+								],
+								"13": [
+									"Banishment|PHB"
+								],
+								"17": [
+									"Hold Monster|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s5": [
+									"Planar Binding|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1902,7 +2061,7 @@
 							{
 								"name": "Swarmkeeper",
 								"entries": [
-									"Feeling a deep connection to the world around them, some rangers reach out through their magical connection to nature and gather a host of fey spirits, which take the form of swarming beasts\u2014be they buzzing insects, fluttering birds, slippery squids, or otherwise. The swarm becomes a potent force in battle, as well as helpful\u2014if potentially disturbing\u2014company for the ranger. Some Swarmkeepers are outcasts or hermits, keeping to themselves and their attendant swarms rather than dealing with the discomfort of others. Other Swarmkeepers enjoy building vibrant communities that work for the mutual benefit of all those they consider part of their swarm.",
+									"Feeling a deep connection to the world around them, some rangers reach out through their magical connection to nature and gather a host of fey spirits, which take the form of swarming beasts—be they buzzing insects, fluttering birds, slippery squids, or otherwise. The swarm becomes a potent force in battle, as well as helpful—if potentially disturbing—company for the ranger. Some Swarmkeepers are outcasts or hermits, keeping to themselves and their attendant swarms rather than dealing with the discomfort of others. Other Swarmkeepers enjoy building vibrant communities that work for the mutual benefit of all those they consider part of their swarm.",
 									{
 										"type": "entries",
 										"name": "Swarmkeeper Magic",
@@ -2021,7 +2180,224 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Faerie Fire|PHB"
+								],
+								"s3": [
+									"Gaseous Form|PHB"
+								],
+								"s4": [
+									"Giant Insect|PHB"
+								],
+								"s5": [
+									"Insect Plague|PHB"
+								],
+								"s2": [
+									"Web|PHB"
+								]
+							}
+						}
 					]
+				},
+				{
+					"name": "Fey Wanderer",
+					"shortName": "Fey Wanderer",
+					"source": "TCE",
+					"page": 58,
+					"additionalSpells": [
+						{
+							"known": {
+								"3": [
+									"Charm Person|PHB"
+								],
+								"5": [
+									"Misty Step|PHB"
+								],
+								"9": [
+									"Dispel Magic|PHB"
+								],
+								"13": [
+									"Dimension Door|PHB"
+								],
+								"17": [
+									"Mislead|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Hipnosis|GMAM"
+								]
+							}
+						}
+					],
+					"subclassFeatures": [
+						[
+							{
+								"name": "Fey Wanderer",
+								"source": "TCE",
+								"page": 58,
+								"entries": [
+									"A fey mystique surrounds you, thanks to the boon of an archfey, the shining fruit you ate from a talking tree, the magic spring you swam in, or some other auspicious event. However you acquired your fey magic, you are now a Fey Wanderer, a ranger who represents both the mortal and the fey realms. As you wander the multiverse, your joyful laughter brightens the hearts of the downtrodden, and your martial prowess strikes terror in your foes, for great is the mirth of the fey and dreadful is their fury.",
+									{
+										"name": "Dreadful Strikes",
+										"source": "TCE",
+										"page": 58,
+										"header": 1,
+										"entries": [
+											"{@i 3rd-level Fey Wanderer feature}",
+											"You can augment your weapon strikes with mind-scarring magic, drawn from the gloomy hollows of the Feywild. When you hit a creature with a weapon, you can deal an extra {@damage 1d4} psychic damage to the target, which can take this extra damage only once per turn.",
+											"The extra damage increases to {@damage 1d6} when you reach 11th level in this class."
+										],
+										"type": "entries"
+									},
+									{
+										"name": "Fey Wanderer Magic",
+										"source": "TCE",
+										"page": 58,
+										"header": 1,
+										"entries": [
+											"{@i 3rd-level Fey Wanderer feature}",
+											"You learn an additional spell when you reach certain levels in this class, as shown in the Fey Wanderer Spells table. Each spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
+											{
+												"type": "table",
+												"caption": "Fey Wanderer Spells",
+												"colLabels": [
+													"Ranger Level",
+													"Spells"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"3rd",
+														"{@spell charm person}"
+													],
+													[
+														"5th",
+														"{@spell misty step}"
+													],
+													[
+														"9th",
+														"{@spell dispel magic}"
+													],
+													[
+														"13th",
+														"{@spell dimension door}"
+													],
+													[
+														"17th",
+														"{@spell mislead}"
+													]
+												]
+											},
+											"You also possess a preternatural blessing from a fey ally or a place of fey power. Choose your blessing from the Feywild Gifts table or determine it randomly.",
+											{
+												"type": "table",
+												"caption": "Feywild Gifts",
+												"colLabels": [
+													"d6",
+													"Gift"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"1",
+														"Illusory butterflies flutter around you while you take a short or long rest."
+													],
+													[
+														"2",
+														"Fresh, seasonal flowers sprout from your hair each dawn."
+													],
+													[
+														"3",
+														"You faintly smell of cinnamon, lavender, nutmeg, or another comforting herb or spice."
+													],
+													[
+														"4",
+														"Your shadow dances while no one is looking directly at it."
+													],
+													[
+														"5",
+														"Horns or antlers sprout from your head."
+													],
+													[
+														"6",
+														"Your skin and hair change color to match the season at each dawn."
+													]
+												]
+											}
+										],
+										"type": "entries"
+									},
+									{
+										"name": "Otherworldly Glamour",
+										"source": "TCE",
+										"page": 58,
+										"header": 1,
+										"entries": [
+											"{@i 3rd-level Fey Wanderer feature}",
+											"Your fey qualities give you a supernatural charm. As a result, whenever you make a Charisma check, you gain a bonus to the check equal to your Wisdom modifier (minimum of +1).",
+											"In addition, you gain proficiency in one of the following skills of your choice: {@skill Deception}, {@skill Performance}, or {@skill Persuasion}."
+										],
+										"type": "entries"
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Beguiling Twist",
+								"source": "TCE",
+								"page": 58,
+								"header": 2,
+								"entries": [
+									"{@i 7th-level Fey Wanderer feature}",
+									"The magic of the Feywild guards your mind. You have advantage on saving throws against being {@condition charmed} or {@condition frightened}.",
+									"In addition, whenever you or a creature you can see within 120 feet of you succeeds on a saving throw against being {@condition charmed} or {@condition frightened}, you can use your reaction to force a different creature you can see within 120 feet of you to make a Wisdom saving throw against your spell save DC. If the save fails, the target is {@condition charmed} or {@condition frightened} by you (your choice) for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save."
+								]
+							}
+						],
+						[
+							{
+								"name": "Fey Reinforcements",
+								"source": "TCE",
+								"page": 58,
+								"header": 2,
+								"entries": [
+									"{@i 11th-level Fey Wanderer feature}",
+									"The royal courts of the Feywild have blessed you with the assistance of fey beings: you know {@spell summon fey|tce}. It doesn't count against the number of ranger spells you know, and you can cast it without a material component. You can also cast it once without a spell slot, and you regain the ability to do so when you finish a long rest.",
+									"Whenever you start casting the spell, you can modify it so that it doesn't require {@status concentration}. If you do so, the spell's duration becomes 1 minute for that casting."
+								]
+							}
+						],
+						[
+							{
+								"name": "Misty Wanderer",
+								"source": "TCE",
+								"page": 58,
+								"header": 2,
+								"entries": [
+									"{@i 15th-level Fey Wanderer feature}",
+									"You can slip in and out of the Feywild to move in a blink of an eye: you can cast {@spell misty step} without expending a spell slot. You can do so a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a long rest.",
+									"In addition, whenever you cast {@i misty step}, you can bring along one willing creature you can see within 5 feet of you. That creature teleports to an unoccupied space of your choice within 5 feet of your destination space."
+								]
+							}
+						]
+					],
+					"hasFluffImages": true
 				}
 			],
 			"fluff": [
@@ -2035,7 +2411,7 @@
 							"type": "entries",
 							"name": "Deadly Hunters",
 							"entries": [
-								"Warriors of the wilderness, rangers specialize in hunting the monsters that threaten the edges of civilization\u2014humanoid raiders, rampaging beasts and monstrosities, terrible giants, and deadly dragons. They learn to track their quarry as a predator does, moving stealthily through the wilds and hiding themselves in brush and rubble. Rangers focus their combat training on techniques that are particularly useful against their specific favored foes.",
+								"Warriors of the wilderness, rangers specialize in hunting the monsters that threaten the edges of civilization—humanoid raiders, rampaging beasts and monstrosities, terrible giants, and deadly dragons. They learn to track their quarry as a predator does, moving stealthily through the wilds and hiding themselves in brush and rubble. Rangers focus their combat training on techniques that are particularly useful against their specific favored foes.",
 								"Thanks to their familiarity with the wilds, rangers acquire the ability to cast spells that harness nature's power, much as a druid does. Their spells, like their combat abilities, emphasize speed, stealth, and the hunt. A ranger's talents and abilities are honed with deadly focus on the grim task of protecting the borderlands."
 							]
 						},
@@ -2043,7 +2419,7 @@
 							"type": "entries",
 							"name": "Independent Adventurers",
 							"entries": [
-								"Though a ranger might make a living as a hunter, a guide, or a tracker, a ranger's true calling is to defend the outskirts of civilization from the ravages of monsters and humanoid hordes that press in from the wild. In some places, rangers gather in secretive orders or join forces with druidic circles. Many rangers, though, are independent almost to a fault, knowing that, when a dragon or a band of orcs attacks, a ranger might be the first\u2014and possibly the last\u2014line of defense.",
+								"Though a ranger might make a living as a hunter, a guide, or a tracker, a ranger's true calling is to defend the outskirts of civilization from the ravages of monsters and humanoid hordes that press in from the wild. In some places, rangers gather in secretive orders or join forces with druidic circles. Many rangers, though, are independent almost to a fault, knowing that, when a dragon or a band of orcs attacks, a ranger might be the first—and possibly the last—line of defense.",
 								"This fierce independence makes rangers well suited to adventuring, since they are accustomed to life far from the comforts of a dry bed and a hot bath. Faced with city-bred adventurers who grouse and whine about the hardships of the wild, rangers respond with some mixture of amusement, frustration, and compassion. But they quickly learn that other adventurers who can carry their own weight in a fight against civilization's foes are worth any extra burden. Coddled city folk might not know how to feed themselves or find fresh water in the wild, but they make up for it in other ways."
 							]
 						},
@@ -2051,7 +2427,7 @@
 							"type": "entries",
 							"name": "Creating a Ranger",
 							"entries": [
-								"As you create your ranger character, consider the nature of the training that gave you your particular capabilities. Did you train with a single mentor, wandering the wilds together until you mastered the ranger's ways? Did you leave your apprenticeship, or was your mentor slain\u2014perhaps by the same kind of monster that became your favored enemy? Or perhaps you learned your skills as part of a band of rangers affiliated with a druidic circle, trained in mystic paths as well as wilderness lore. You might be self-taught, a recluse who learned combat skills, tracking, and even a magical connection to nature through the necessity of surviving in the wilds.",
+								"As you create your ranger character, consider the nature of the training that gave you your particular capabilities. Did you train with a single mentor, wandering the wilds together until you mastered the ranger's ways? Did you leave your apprenticeship, or was your mentor slain—perhaps by the same kind of monster that became your favored enemy? Or perhaps you learned your skills as part of a band of rangers affiliated with a druidic circle, trained in mystic paths as well as wilderness lore. You might be self-taught, a recluse who learned combat skills, tracking, and even a magical connection to nature through the necessity of surviving in the wilds.",
 								"What's the source of your particular hatred of a certain kind of enemy? Did a monster kill someone you loved or destroy your home village? Or did you see too much of the destruction these monsters cause and commit yourself to reining in their depredations? Is your adventuring career a continuation of your work in protecting the borderlands, or a significant change? What made you join up with a band of adventurers? Do you find it challenging to teach new allies the ways of the wild, or do you welcome the relief from solitude that they offer?",
 								{
 									"type": "entries",
@@ -2082,7 +2458,7 @@
 							"type": "entries",
 							"name": "View of the World",
 							"entries": [
-								"A ranger's view of the world begins (and sometimes ends) with that character's outlook toward civilized folk and the places they occupy. Some rangers have an attitude toward civilization that's deeply rooted in disdain, while others pity the people they have sworn to protect\u2014though on the battlefield, it's impossible to tell the difference between one ranger and another. Indeed, to those who have seen them operate and been the beneficiaries of their prowess, it scarcely matters why rangers do what they do. That said, no two rangers are likely to express their opinions on any matter in the same way.",
+								"A ranger's view of the world begins (and sometimes ends) with that character's outlook toward civilized folk and the places they occupy. Some rangers have an attitude toward civilization that's deeply rooted in disdain, while others pity the people they have sworn to protect—though on the battlefield, it's impossible to tell the difference between one ranger and another. Indeed, to those who have seen them operate and been the beneficiaries of their prowess, it scarcely matters why rangers do what they do. That said, no two rangers are likely to express their opinions on any matter in the same way.",
 								"If you haven't yet thought about the details of your character's worldview, consider putting a finer point on things by summarizing that viewpoint in a short statement (such as the entries on the following table). How might that feeling affect the way you conduct yourself?",
 								{
 									"type": "table",
@@ -3640,7 +4016,7 @@
 							{
 								"name": "Horizon Walker",
 								"entries": [
-									"Horizon Walkers guard the world against threats that originate from other planes or that seek to ravage the mortal realm with otherworldly magic. They seek out planar portals and keep watch over them, venturing to the Inner Planes and the Outer Planes as needed to pursue their foes. These rangers are also friends to any forces in the multiverse\u2014especially benevolent dragons, fey, and elementals\u2014that work to preserve life and the order of the planes.",
+									"Horizon Walkers guard the world against threats that originate from other planes or that seek to ravage the mortal realm with otherworldly magic. They seek out planar portals and keep watch over them, venturing to the Inner Planes and the Outer Planes as needed to pursue their foes. These rangers are also friends to any forces in the multiverse—especially benevolent dragons, fey, and elementals—that work to preserve life and the order of the planes.",
 									{
 										"type": "entries",
 										"name": "Detect Portal",
@@ -3784,7 +4160,7 @@
 							{
 								"name": "Swarmkeeper",
 								"entries": [
-									"Feeling a deep connection to the world around them, some rangers reach out through their magical connection to nature and gather a host of fey spirits, which take the form of swarming beasts\u2014be they buzzing insects, fluttering birds, slippery squids, or otherwise. The swarm becomes a potent force in battle, as well as helpful\u2014if potentially disturbing\u2014company for the ranger. Some Swarmkeepers are outcasts or hermits, keeping to themselves and their attendant swarms rather than dealing with the discomfort of others. Other Swarmkeepers enjoy building vibrant communities that work for the mutual benefit of all those they consider part of their swarm.",
+									"Feeling a deep connection to the world around them, some rangers reach out through their magical connection to nature and gather a host of fey spirits, which take the form of swarming beasts—be they buzzing insects, fluttering birds, slippery squids, or otherwise. The swarm becomes a potent force in battle, as well as helpful—if potentially disturbing—company for the ranger. Some Swarmkeepers are outcasts or hermits, keeping to themselves and their attendant swarms rather than dealing with the discomfort of others. Other Swarmkeepers enjoy building vibrant communities that work for the mutual benefit of all those they consider part of their swarm.",
 									{
 										"type": "entries",
 										"name": "Gathered Swarm",
@@ -3875,7 +4251,7 @@
 							"type": "entries",
 							"name": "Deadly Hunters",
 							"entries": [
-								"Warriors of the wilderness, rangers specialize in hunting the monsters that threaten the edges of civilization\u2014humanoid raiders, rampaging beasts and monstrosities, terrible giants, and deadly dragons. They learn to track their quarry as a predator does, moving stealthily through the wilds and hiding themselves in brush and rubble. Rangers focus their combat training on techniques that are particularly useful against their specific favored foes.",
+								"Warriors of the wilderness, rangers specialize in hunting the monsters that threaten the edges of civilization—humanoid raiders, rampaging beasts and monstrosities, terrible giants, and deadly dragons. They learn to track their quarry as a predator does, moving stealthily through the wilds and hiding themselves in brush and rubble. Rangers focus their combat training on techniques that are particularly useful against their specific favored foes.",
 								"Thanks to their familiarity with the wilds, rangers acquire the ability to cast spells that harness nature's power, much as a druid does. Their spells, like their combat abilities, emphasize speed, stealth, and the hunt. A ranger's talents and abilities are honed with deadly focus on the grim task of protecting the borderlands."
 							]
 						},
@@ -3883,7 +4259,7 @@
 							"type": "entries",
 							"name": "Independent Adventurers",
 							"entries": [
-								"Though a ranger might make a living as a hunter, a guide, or a tracker, a ranger's true calling is to defend the outskirts of civilization from the ravages of monsters and humanoid hordes that press in from the wild. In some places, rangers gather in secretive orders or join forces with druidic circles. Many rangers, though, are independent almost to a fault, knowing that, when a dragon or a band of orcs attacks, a ranger might be the first\u2014and possibly the last\u2014line of defense.",
+								"Though a ranger might make a living as a hunter, a guide, or a tracker, a ranger's true calling is to defend the outskirts of civilization from the ravages of monsters and humanoid hordes that press in from the wild. In some places, rangers gather in secretive orders or join forces with druidic circles. Many rangers, though, are independent almost to a fault, knowing that, when a dragon or a band of orcs attacks, a ranger might be the first—and possibly the last—line of defense.",
 								"This fierce independence makes rangers well suited to adventuring, since they are accustomed to life far from the comforts of a dry bed and a hot bath. Faced with city-bred adventurers who grouse and whine about the hardships of the wild, rangers respond with some mixture of amusement, frustration, and compassion. But they quickly learn that other adventurers who can carry their own weight in a fight against civilization's foes are worth any extra burden. Coddled city folk might not know how to feed themselves or find fresh water in the wild, but they make up for it in other ways."
 							]
 						},
@@ -3891,7 +4267,7 @@
 							"type": "entries",
 							"name": "Creating a Ranger",
 							"entries": [
-								"As you create your ranger character, consider the nature of the training that gave you your particular capabilities. Did you train with a single mentor, wandering the wilds together until you mastered the ranger's ways? Did you leave your apprenticeship, or was your mentor slain\u2014perhaps by the same kind of monster that became your favored enemy? Or perhaps you learned your skills as part of a band of rangers affiliated with a druidic circle, trained in mystic paths as well as wilderness lore. You might be self-taught, a recluse who learned combat skills, tracking, and even a magical connection to nature through the necessity of surviving in the wilds.",
+								"As you create your ranger character, consider the nature of the training that gave you your particular capabilities. Did you train with a single mentor, wandering the wilds together until you mastered the ranger's ways? Did you leave your apprenticeship, or was your mentor slain—perhaps by the same kind of monster that became your favored enemy? Or perhaps you learned your skills as part of a band of rangers affiliated with a druidic circle, trained in mystic paths as well as wilderness lore. You might be self-taught, a recluse who learned combat skills, tracking, and even a magical connection to nature through the necessity of surviving in the wilds.",
 								"What's the source of your particular hatred of a certain kind of enemy? Did a monster kill someone you loved or destroy your home village? Or did you see too much of the destruction these monsters cause and commit yourself to reining in their depredations? Is your adventuring career a continuation of your work in protecting the borderlands, or a significant change? What made you join up with a band of adventurers? Do you find it challenging to teach new allies the ways of the wild, or do you welcome the relief from solitude that they offer?",
 								{
 									"type": "entries",
@@ -3922,7 +4298,7 @@
 							"type": "entries",
 							"name": "View of the World",
 							"entries": [
-								"A ranger's view of the world begins (and sometimes ends) with that character's outlook toward civilized folk and the places they occupy. Some rangers have an attitude toward civilization that's deeply rooted in disdain, while others pity the people they have sworn to protect\u2014though on the battlefield, it's impossible to tell the difference between one ranger and another. Indeed, to those who have seen them operate and been the beneficiaries of their prowess, it scarcely matters why rangers do what they do. That said, no two rangers are likely to express their opinions on any matter in the same way.",
+								"A ranger's view of the world begins (and sometimes ends) with that character's outlook toward civilized folk and the places they occupy. Some rangers have an attitude toward civilization that's deeply rooted in disdain, while others pity the people they have sworn to protect—though on the battlefield, it's impossible to tell the difference between one ranger and another. Indeed, to those who have seen them operate and been the beneficiaries of their prowess, it scarcely matters why rangers do what they do. That said, no two rangers are likely to express their opinions on any matter in the same way.",
 								"If you haven't yet thought about the details of your character's worldview, consider putting a finer point on things by summarizing that viewpoint in a short statement (such as the entries on the following table). How might that feeling affect the way you conduct yourself?",
 								{
 									"type": "table",
@@ -5327,6 +5703,28 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Disguise Self|PHB"
+								],
+								"s3": [
+									"Glyph of Warding|PHB"
+								],
+								"s4": [
+									"Greater Invisibility|PHB"
+								],
+								"s2": [
+									"Rope Trick|PHB"
+								],
+								"s5": [
+									"Seeming|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -5454,6 +5852,28 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s2": [
+									"Alter Self|PHB"
+								],
+								"s4": [
+									"Banishment|PHB"
+								],
+								"s3": [
+									"Protection from Energy|PHB"
+								],
+								"s1": [
+									"Protection from Evil and Good|PHB"
+								],
+								"s5": [
+									"Teleportation Circle|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -5587,6 +6007,28 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s3": [
+									"Conjure Animals|PHB"
+								],
+								"s2": [
+									"Enhance Ability|PHB"
+								],
+								"s1": [
+									"Entangle|PHB"
+								],
+								"s4": [
+									"Giant Insect|PHB"
+								],
+								"s5": [
+									"Insect Plague|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -5705,6 +6147,28 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s4": [
+									"Banishment|PHB"
+								],
+								"s3": [
+									"Magic Circle|PHB"
+								],
+								"s5": [
+									"Planar Binding|PHB"
+								],
+								"s1": [
+									"Protection from Evil and Good|PHB"
+								],
+								"s2": [
+									"Zone of Truth|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -5829,6 +6293,28 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Disguise Self|PHB"
+								],
+								"s3": [
+									"Fear|PHB"
+								],
+								"s4": [
+									"Greater Invisibility|PHB"
+								],
+								"s2": [
+									"Rope Trick|PHB"
+								],
+								"s5": [
+									"Seeming|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -5840,7 +6326,7 @@
 							{
 								"name": "Horizon Walker",
 								"entries": [
-									"Horizon Walkers guard the world against threats that originate from other planes or that seek to ravage the mortal realm with otherworldly magic. They seek out planar portals and keep watch over them, venturing to the Inner Planes and the Outer Planes as needed to pursue their foes. These rangers are also friends to any forces in the multiverse\u2014especially benevolent dragons, fey, and elementals\u2014that work to preserve life and the order of the planes.",
+									"Horizon Walkers guard the world against threats that originate from other planes or that seek to ravage the mortal realm with otherworldly magic. They seek out planar portals and keep watch over them, venturing to the Inner Planes and the Outer Planes as needed to pursue their foes. These rangers are also friends to any forces in the multiverse—especially benevolent dragons, fey, and elementals—that work to preserve life and the order of the planes.",
 									{
 										"type": "entries",
 										"name": "Horizon Walker Magic",
@@ -5956,6 +6442,28 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s4": [
+									"Banishment|PHB"
+								],
+								"s3": [
+									"Haste|PHB"
+								],
+								"s2": [
+									"Misty Step|PHB"
+								],
+								"s1": [
+									"Protection from Evil and Good|PHB"
+								],
+								"s5": [
+									"Teleportation Circle|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -6081,6 +6589,28 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s4": [
+									"Banishment|PHB"
+								],
+								"s3": [
+									"Magic Circle|PHB"
+								],
+								"s5": [
+									"Planar Binding|PHB"
+								],
+								"s1": [
+									"Protection from Evil and Good|PHB"
+								],
+								"s2": [
+									"Zone of Truth|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -6092,7 +6622,7 @@
 							{
 								"name": "Swarmkeeper",
 								"entries": [
-									"Feeling a deep connection to the world around them, some rangers reach out through their magical connection to nature and gather a host of fey spirits, which take the form of swarming beasts\u2014be they buzzing insects, fluttering birds, slippery squids, or otherwise. The swarm becomes a potent force in battle, as well as helpful\u2014if potentially disturbing\u2014company for the ranger. Some Swarmkeepers are outcasts or hermits, keeping to themselves and their attendant swarms rather than dealing with the discomfort of others. Other Swarmkeepers enjoy building vibrant communities that work for the mutual benefit of all those they consider part of their swarm.",
+									"Feeling a deep connection to the world around them, some rangers reach out through their magical connection to nature and gather a host of fey spirits, which take the form of swarming beasts—be they buzzing insects, fluttering birds, slippery squids, or otherwise. The swarm becomes a potent force in battle, as well as helpful—if potentially disturbing—company for the ranger. Some Swarmkeepers are outcasts or hermits, keeping to themselves and their attendant swarms rather than dealing with the discomfort of others. Other Swarmkeepers enjoy building vibrant communities that work for the mutual benefit of all those they consider part of their swarm.",
 									{
 										"type": "entries",
 										"name": "Swarmkeeper Magic",
@@ -6224,6 +6754,28 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s1": [
+									"Faerie Fire|PHB"
+								],
+								"s3": [
+									"Gaseous Form|PHB"
+								],
+								"s4": [
+									"Giant Insect|PHB"
+								],
+								"s5": [
+									"Insect Plague|PHB"
+								],
+								"s2": [
+									"Web|PHB"
+								]
+							}
+						}
 					]
 				}
 			],
@@ -6238,7 +6790,7 @@
 							"type": "entries",
 							"name": "Deadly Hunters",
 							"entries": [
-								"Warriors of the wilderness, rangers specialize in hunting the monsters that threaten the edges of civilization\u2014humanoid raiders, rampaging beasts and monstrosities, terrible giants, and deadly dragons. They learn to track their quarry as a predator does, moving stealthily through the wilds and hiding themselves in brush and rubble. Rangers focus their combat training on techniques that are particularly useful against their specific favored foes.",
+								"Warriors of the wilderness, rangers specialize in hunting the monsters that threaten the edges of civilization—humanoid raiders, rampaging beasts and monstrosities, terrible giants, and deadly dragons. They learn to track their quarry as a predator does, moving stealthily through the wilds and hiding themselves in brush and rubble. Rangers focus their combat training on techniques that are particularly useful against their specific favored foes.",
 								"Thanks to their familiarity with the wilds, rangers acquire the ability to cast spells that harness nature's power, much as a druid does. Their spells, like their combat abilities, emphasize speed, stealth, and the hunt. A ranger's talents and abilities are honed with deadly focus on the grim task of protecting the borderlands."
 							]
 						},
@@ -6246,7 +6798,7 @@
 							"type": "entries",
 							"name": "Independent Adventurers",
 							"entries": [
-								"Though a ranger might make a living as a hunter, a guide, or a tracker, a ranger's true calling is to defend the outskirts of civilization from the ravages of monsters and humanoid hordes that press in from the wild. In some places, rangers gather in secretive orders or join forces with druidic circles. Many rangers, though, are independent almost to a fault, knowing that, when a dragon or a band of orcs attacks, a ranger might be the first\u2014and possibly the last\u2014line of defense.",
+								"Though a ranger might make a living as a hunter, a guide, or a tracker, a ranger's true calling is to defend the outskirts of civilization from the ravages of monsters and humanoid hordes that press in from the wild. In some places, rangers gather in secretive orders or join forces with druidic circles. Many rangers, though, are independent almost to a fault, knowing that, when a dragon or a band of orcs attacks, a ranger might be the first—and possibly the last—line of defense.",
 								"This fierce independence makes rangers well suited to adventuring, since they are accustomed to life far from the comforts of a dry bed and a hot bath. Faced with city-bred adventurers who grouse and whine about the hardships of the wild, rangers respond with some mixture of amusement, frustration, and compassion. But they quickly learn that other adventurers who can carry their own weight in a fight against civilization's foes are worth any extra burden. Coddled city folk might not know how to feed themselves or find fresh water in the wild, but they make up for it in other ways."
 							]
 						},
@@ -6254,7 +6806,7 @@
 							"type": "entries",
 							"name": "Creating a Ranger",
 							"entries": [
-								"As you create your ranger character, consider the nature of the training that gave you your particular capabilities. Did you train with a single mentor, wandering the wilds together until you mastered the ranger's ways? Did you leave your apprenticeship, or was your mentor slain\u2014perhaps by the same kind of monster that became your favored enemy? Or perhaps you learned your skills as part of a band of rangers affiliated with a druidic circle, trained in mystic paths as well as wilderness lore. You might be self-taught, a recluse who learned combat skills, tracking, and even a magical connection to nature through the necessity of surviving in the wilds.",
+								"As you create your ranger character, consider the nature of the training that gave you your particular capabilities. Did you train with a single mentor, wandering the wilds together until you mastered the ranger's ways? Did you leave your apprenticeship, or was your mentor slain—perhaps by the same kind of monster that became your favored enemy? Or perhaps you learned your skills as part of a band of rangers affiliated with a druidic circle, trained in mystic paths as well as wilderness lore. You might be self-taught, a recluse who learned combat skills, tracking, and even a magical connection to nature through the necessity of surviving in the wilds.",
 								"What's the source of your particular hatred of a certain kind of enemy? Did a monster kill someone you loved or destroy your home village? Or did you see too much of the destruction these monsters cause and commit yourself to reining in their depredations? Is your adventuring career a continuation of your work in protecting the borderlands, or a significant change? What made you join up with a band of adventurers? Do you find it challenging to teach new allies the ways of the wild, or do you welcome the relief from solitude that they offer?",
 								{
 									"type": "entries",
@@ -6285,7 +6837,7 @@
 							"type": "entries",
 							"name": "View of the World",
 							"entries": [
-								"A ranger's view of the world begins (and sometimes ends) with that character's outlook toward civilized folk and the places they occupy. Some rangers have an attitude toward civilization that's deeply rooted in disdain, while others pity the people they have sworn to protect\u2014though on the battlefield, it's impossible to tell the difference between one ranger and another. Indeed, to those who have seen them operate and been the beneficiaries of their prowess, it scarcely matters why rangers do what they do. That said, no two rangers are likely to express their opinions on any matter in the same way.",
+								"A ranger's view of the world begins (and sometimes ends) with that character's outlook toward civilized folk and the places they occupy. Some rangers have an attitude toward civilization that's deeply rooted in disdain, while others pity the people they have sworn to protect—though on the battlefield, it's impossible to tell the difference between one ranger and another. Indeed, to those who have seen them operate and been the beneficiaries of their prowess, it scarcely matters why rangers do what they do. That said, no two rangers are likely to express their opinions on any matter in the same way.",
 								"If you haven't yet thought about the details of your character's worldview, consider putting a finer point on things by summarizing that viewpoint in a short statement (such as the entries on the following table). How might that feeling affect the way you conduct yourself?",
 								{
 									"type": "table",

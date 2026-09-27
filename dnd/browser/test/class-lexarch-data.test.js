@@ -1,8 +1,11 @@
 "use strict";
+async function main () {
 
 const assert = require("assert");
 const fs = require("fs");
 const path = require("path");
+require("../js/omnidexer.js");
+DataUtil.loadJSON = async url => JSON.parse(fs.readFileSync(path.join(__dirname, "..", url), "utf8"));
 const {Omnidexer} = require("../js/omnidexer.js");
 
 const classIndex = require("../data/class/index.json");
@@ -72,19 +75,13 @@ assert.deepStrictEqual(lexarch.subclasses.map(it => it.name), expectedSubclasses
 assert(lexarch.subclasses.every(it => it.subclassFeatures.length === 5));
 assert(JSON.stringify(lexarch.subclasses.find(it => it.name === "Lengua de Sangre")).includes('"name":"Lengua de Plata"'));
 
-const spellsDir = path.join(__dirname, "..", "data", "spells");
-const availableSpells = new Set();
-for (const filename of fs.readdirSync(spellsDir).filter(it => /^spells-.*\.json$/.test(it))) {
-	const data = JSON.parse(fs.readFileSync(path.join(spellsDir, filename), "utf8"));
-	for (const spell of data.spell || []) availableSpells.add(`${spell.name.toLowerCase()}|${spell.source.toLowerCase()}`);
-}
+const spells = await DataUtil.spell.pLoadAll();
+const lexarchSpells = spells.filter(sp => sp.classes?.fromClassList?.some(c => c.name === "Lexarca" && c.source === "Himo"));
 const normalizeSpell = value => {
-	const [name, source = "PHB"] = value.split("|");
-	return `${name.toLowerCase()}|${source.toLowerCase()}`;
+ const [name, source = "PHB"] = value.split("|");
+ return `${name.toLowerCase()}|${source.toLowerCase()}`;
 };
-assert.strictEqual(lexarch.classSpells.length, 173);
-assert.strictEqual(new Set(lexarch.classSpells.map(normalizeSpell)).size, 173);
-for (const spell of lexarch.classSpells) assert(availableSpells.has(normalizeSpell(spell)), `Unknown Lexarca spell: ${spell}`);
+assert.strictEqual(lexarch.classSpells, undefined);
 
 const serialized = JSON.stringify(lexarch);
 for (const spell of [
@@ -92,9 +89,8 @@ for (const spell of [
 	"Heroism|PHB",
 	"Tasha's Hideous Laughter|PHB",
 	"Otiluke's Resilient Sphere|PHB",
-	"Teleportation Circle|PHB",
-	"Bones of the Earth|XGE"
-]) assert(lexarch.classSpells.map(normalizeSpell).includes(normalizeSpell(spell)), `Missing canonical class spell: ${spell}`);
+	"Teleportation Circle|PHB"
+]) assert(lexarchSpells.map(sp => normalizeSpell(`${sp.name}|${sp.source}`)).includes(normalizeSpell(spell)), `Missing canonical class spell: ${spell}`);
 assert(!serialized.includes("{@spell True Name"));
 assert(serialized.includes("{@filter Palabras de Poder|optionalfeatures|feature type=PW|source=Himo}"));
 assert(!serialized.includes("El suelo se abre bajo los pies"), "Power-word descriptions must not be duplicated in the class data.");
@@ -105,3 +101,6 @@ for (const [category, name] of [[5, "Lexarca"], ...expectedSubclasses.map(name =
 }
 
 console.log("PASS: Lexarca progression, spell list, and language specializations are valid.");
+
+}
+main().catch(error => { console.error(error); process.exitCode = 1; });

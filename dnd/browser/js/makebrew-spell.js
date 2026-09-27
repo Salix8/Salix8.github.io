@@ -17,7 +17,7 @@ class SpellBuilder extends Builder {
 	async pHandleSidebarLoadExistingClick () {
 		const result = await SearchWidget.pGetUserSpellSearch();
 		if (result) {
-			const spell = MiscUtil.copy(await Renderer.hover.pCacheAndGet(result.page, result.source, result.hash));
+			const spell = MiscUtil.copy(await Renderer.hover.pCacheAndGet(result.page, result.source, result.hash, {isRaw: true}));
 			spell.source = this._ui.source;
 			this.setStateFromLoaded({s: spell, m: this.getInitialMetaState()});
 
@@ -28,6 +28,7 @@ class SpellBuilder extends Builder {
 
 	async pInit () {
 		this._subclassLookup = await RenderSpells.pGetSubclassLookup();
+		await DataUtil.spell.pInitAssociations();
 	}
 
 	_getInitialState () {
@@ -145,6 +146,7 @@ class SpellBuilder extends Builder {
 		BuilderUi.$getStateIptEntries("&quot;At Higher Levels&quot; Text", cb, this._state, {nullable: true, withHeader: "At Higher Levels", fnPostProcess: BuilderUi.fnPostProcessDice}, "entriesHigherLevel").appendTo(detailsTab.$wrpTab);
 
 		// SOURCES
+		$(`<p class="text-muted">Estas asociaciones se guardan en tu conjuro personal. En el catálogo publicado, las clases se editan en el conjuro y el acceso por subclase, raza o trasfondo se edita en su propia ficha. Al copiar un conjuro, esas relaciones derivadas no se incorporan a la copia.</p>`).appendTo(sourcesTab.$wrpTab);
 		this.__$getClassesInputs(cb).forEach($e => $e.appendTo(sourcesTab.$wrpTab));
 		this.__$getRaces(cb).appendTo(sourcesTab.$wrpTab);
 		this.__$getBackgrounds(cb).appendTo(sourcesTab.$wrpTab);
@@ -979,8 +981,8 @@ class SpellBuilder extends Builder {
 
 		// Spell
 		const $tblSpell = $(`<table class="stats"/>`).appendTo(spellTab.$wrpTab);
-		// Make a copy of the spell, and add the data that would be displayed in the spells page
-		const procSpell = MiscUtil.copy(this._state);
+		// Preview the explicit associations without adding legacy inferred access.
+		const procSpell = DataUtil.spell.getCopyWithAssociations(this._state);
 		Renderer.spell.initClasses(procSpell);
 		RenderSpells.$getRenderedSpell(procSpell, this._subclassLookup).appendTo($tblSpell);
 

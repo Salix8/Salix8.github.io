@@ -1,11 +1,14 @@
 "use strict";
+async function main () {
 
 const assert = require("assert");
 const fs = require("fs");
 const path = require("path");
+require("../js/omnidexer.js");
+DataUtil.loadJSON = async url => JSON.parse(fs.readFileSync(path.join(__dirname, "..", url), "utf8"));
 const {Omnidexer} = require("../js/omnidexer.js");
 Object.assign(global, require("../js/utils-ui.js"));
-const PageFilterSpells = require("../js/filter-spells.js");
+
 
 const classIndex = require("../data/class/index.json");
 const desangradorData = require("../data/class/class-desangrador.json");
@@ -80,55 +83,19 @@ const boneTable = desangrador.subclasses
 	.subclassFeatures[2][0].entries.find(it => it.type === "table");
 assert.strictEqual(boneTable.rows.length, 8);
 
-assert.deepStrictEqual(desangrador.classSpells, [{filter: {schools: ["N"], levels: [1, 2, 3, 4, 5]}}]);
-const expectedSubclassFilters = {
-	Flagelante: {school: "V", className: "Cleric"},
-	Quebrantahuesos: {school: "V", className: "Paladin"},
-	Vampírico: {school: "E", className: "Wizard"},
-	Pagano: {school: "C", className: "Warlock"},
-	Delirante: {school: "D", className: "Cleric"}
-};
-for (const subclass of desangrador.subclasses) {
-	const filterEntry = subclass.subclassSpells.find(it => it.filter);
-	const expected = expectedSubclassFilters[subclass.shortName];
-	assert.deepStrictEqual(filterEntry.filter.schools, [expected.school]);
-	assert.deepStrictEqual(filterEntry.filter.levels, [1, 2, 3, 4, 5]);
-	assert.deepStrictEqual(filterEntry.filter.class, {name: expected.className, source: "PHB"});
-}
-
+assert.strictEqual(desangrador.classSpells, undefined);
 const pagan = desangrador.subclasses.find(it => it.shortName === "Pagano");
-assert(pagan.subclassSpells.includes("hex"));
-assert.deepStrictEqual(pagan.additionalSpells, [{prepared: {3: ["hex"]}}]);
+assert.strictEqual(pagan.subclassSpells, undefined);
+assert(pagan.additionalSpells.some(block => block.prepared?.[3]?.includes("Hex|PHB")));
 const serialized = JSON.stringify(desangrador);
 assert(serialized.includes("escuela de ncantamiento"));
 assert.strictEqual((serialized.match(/Con un éxito/g) || []).length >= 2, true);
 
-const pageFilter = Object.create(PageFilterSpells.prototype);
-pageFilter._brewSpellClasses = {};
-pageFilter.populateClassLookup(desangradorData);
-assert.strictEqual(pageFilter._brewSpellClasses.filter.length, 6);
-
 const futureNecromancySpell = {name: "Future Necromancy Spell", source: "TEST", school: "N", level: 5, classes: {fromClassList: []}};
-Renderer.spell.initClasses(futureNecromancySpell, pageFilter._brewSpellClasses);
-assert(futureNecromancySpell.classes.fromClassList.some(it => it.name === "Desangrador" && it.source === "Himo"));
+Renderer.spell.initClasses(futureNecromancySpell);
+assert.deepStrictEqual(futureNecromancySpell.classes.fromClassList, [], "New spells require explicit assignments");
 
-const futureClericEvocation = {name: "Future Cleric Evocation", source: "TEST", school: "V", level: 3, classes: {fromClassList: [{name: "Cleric", source: "PHB"}]}};
-Renderer.spell.initClasses(futureClericEvocation, pageFilter._brewSpellClasses);
-assert(futureClericEvocation.classes.fromSubclass.some(it => it.class.name === "Desangrador" && it.subclass.name === "Flagelante"));
-
-const futureAddedHomebrewRelation = {name: "Future Derived Spell", source: "TEST", school: "V", level: 3, classes: {fromClassList: [{name: "Other", source: "TEST"}]}};
-const originalClasses = MiscUtil.copy(futureAddedHomebrewRelation.classes);
-futureAddedHomebrewRelation.classes.fromClassList.push({name: "Cleric", source: "PHB"});
-const flagelanteFilter = desangrador.subclasses.find(it => it.shortName === "Flagelante").subclassSpells[0].filter;
-assert.strictEqual(Renderer.spell.isClassSpellFilterMatch(futureAddedHomebrewRelation, flagelanteFilter, originalClasses), false);
-
-for (const spell of [futureNecromancySpell, futureClericEvocation]) assert(spell.level >= 1 && spell.level <= 5);
-assert.strictEqual(Renderer.spell.isClassSpellFilterMatch({school: "N", level: 0}, desangrador.classSpells[0].filter, {}), false);
-assert.strictEqual(Renderer.spell.isClassSpellFilterMatch({school: "N", level: 6}, desangrador.classSpells[0].filter, {}), false);
-
-const spells = fs.readdirSync(path.join(__dirname, "..", "data", "spells"))
-	.filter(it => /^spells-.*\.json$/.test(it))
-	.flatMap(it => JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "spells", it), "utf8")).spell || []);
+const spells = await DataUtil.spell.pLoadAll();
 const actualSpellCases = [
 	{name: "Inflict Wounds", type: "class"},
 	{name: "Guiding Bolt", subclass: "Flagelante"},
@@ -140,7 +107,6 @@ const actualSpellCases = [
 for (const spellCase of actualSpellCases) {
 	const spell = MiscUtil.copy(spells.find(it => it.name === spellCase.name));
 	assert(spell, `Missing representative spell ${spellCase.name}.`);
-	Renderer.spell.initClasses(spell, pageFilter._brewSpellClasses);
 	if (spellCase.type === "class") assert(spell.classes.fromClassList.some(it => it.name === "Desangrador"));
 	else assert(spell.classes.fromSubclass.some(it => it.class.name === "Desangrador" && it.subclass.name === spellCase.subclass));
 }
@@ -150,4 +116,7 @@ for (const [category, name] of [[5, "Desangrador"], ...expectedSubclasses.map(na
 	assert.strictEqual(matches.length, 1, `${name} must appear once in the general search index.`);
 }
 
-console.log("PASS: Desangrador progression, Ritos de Sangre, and dynamic spell lists are valid.");
+console.log("PASS: Desangrador progression, Ritos de Sangre, and explicit spell associations are valid.");
+
+}
+main().catch(error => { console.error(error); process.exitCode = 1; });

@@ -499,7 +499,7 @@
 									[
 										"8th",
 										"{@filter 1|bestiary|challenge rating=[&0;&1]|type=beast|miscellaneous=!swarm}",
-										"\u2014",
+										"—",
 										"Giant eagle"
 									]
 								]
@@ -1027,6 +1027,493 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Arctic",
+							"known": {
+								"1": {
+									"_": [
+										{
+											"choose": {
+												"from": [
+													"Hunter Sense|GHLoE",
+													"Druidcraft|PHB",
+													"Guidance|PHB",
+													"Mending|PHB",
+													"Poison Spray|PHB",
+													"Produce Flame|PHB",
+													"Resistance|PHB",
+													"Shillelagh|PHB",
+													"Thorn Whip|PHB",
+													"Infestation (UA)|UAStarterSpells",
+													"Primal Savagery (UA)|UAStarterSpells",
+													"Control Flames|XGE",
+													"Create Bonfire|XGE",
+													"Frostbite|XGE",
+													"Gust|XGE",
+													"Infestation|XGE",
+													"Magic Stone|XGE",
+													"Mold Earth|XGE",
+													"Primal Savagery|XGE",
+													"Shape Water|XGE",
+													"Thunderclap|XGE",
+													"Cronotruco|GPNM",
+													"Featherweaving|GMAM"
+												],
+												"count": 1
+											}
+										}
+									]
+								}
+							},
+							"prepared": {
+								"3": [
+									"Hold Person|PHB",
+									"Spike Growth|PHB"
+								],
+								"5": [
+									"Sleet Storm|PHB",
+									"Slow|PHB"
+								],
+								"7": [
+									"Freedom of Movement|PHB",
+									"Ice Storm|PHB"
+								],
+								"9": [
+									"Commune with Nature|PHB",
+									"Cone of Cold|PHB"
+								]
+							},
+							"subSubclass": "Arctic"
+						},
+						{
+							"name": "Coast",
+							"known": {
+								"1": {
+									"_": [
+										{
+											"choose": {
+												"from": [
+													"Hunter Sense|GHLoE",
+													"Druidcraft|PHB",
+													"Guidance|PHB",
+													"Mending|PHB",
+													"Poison Spray|PHB",
+													"Produce Flame|PHB",
+													"Resistance|PHB",
+													"Shillelagh|PHB",
+													"Thorn Whip|PHB",
+													"Infestation (UA)|UAStarterSpells",
+													"Primal Savagery (UA)|UAStarterSpells",
+													"Control Flames|XGE",
+													"Create Bonfire|XGE",
+													"Frostbite|XGE",
+													"Gust|XGE",
+													"Infestation|XGE",
+													"Magic Stone|XGE",
+													"Mold Earth|XGE",
+													"Primal Savagery|XGE",
+													"Shape Water|XGE",
+													"Thunderclap|XGE",
+													"Cronotruco|GPNM",
+													"Featherweaving|GMAM"
+												],
+												"count": 1
+											}
+										}
+									]
+								}
+							},
+							"prepared": {
+								"3": [
+									"Mirror Image|PHB",
+									"Misty Step|PHB"
+								],
+								"5": [
+									"Water Breathing|PHB",
+									"Water Walk|PHB"
+								],
+								"7": [
+									"Control Water|PHB",
+									"Freedom of Movement|PHB"
+								],
+								"9": [
+									"Conjure Elemental|PHB",
+									"Scrying|PHB"
+								]
+							},
+							"subSubclass": "Coast"
+						},
+						{
+							"name": "Desert",
+							"known": {
+								"1": {
+									"_": [
+										{
+											"choose": {
+												"from": [
+													"Hunter Sense|GHLoE",
+													"Druidcraft|PHB",
+													"Guidance|PHB",
+													"Mending|PHB",
+													"Poison Spray|PHB",
+													"Produce Flame|PHB",
+													"Resistance|PHB",
+													"Shillelagh|PHB",
+													"Thorn Whip|PHB",
+													"Infestation (UA)|UAStarterSpells",
+													"Primal Savagery (UA)|UAStarterSpells",
+													"Control Flames|XGE",
+													"Create Bonfire|XGE",
+													"Frostbite|XGE",
+													"Gust|XGE",
+													"Infestation|XGE",
+													"Magic Stone|XGE",
+													"Mold Earth|XGE",
+													"Primal Savagery|XGE",
+													"Shape Water|XGE",
+													"Thunderclap|XGE",
+													"Cronotruco|GPNM",
+													"Featherweaving|GMAM"
+												],
+												"count": 1
+											}
+										}
+									]
+								}
+							},
+							"prepared": {
+								"3": [
+									"Blur|PHB",
+									"Silence|PHB"
+								],
+								"5": [
+									"Create Food and Water|PHB",
+									"Protection from Energy|PHB"
+								],
+								"7": [
+									"Blight|PHB",
+									"Hallucinatory Terrain|PHB"
+								],
+								"9": [
+									"Insect Plague|PHB",
+									"Wall of Stone|PHB"
+								]
+							},
+							"subSubclass": "Desert"
+						},
+						{
+							"name": "Forest",
+							"known": {
+								"1": {
+									"_": [
+										{
+											"choose": {
+												"from": [
+													"Hunter Sense|GHLoE",
+													"Druidcraft|PHB",
+													"Guidance|PHB",
+													"Mending|PHB",
+													"Poison Spray|PHB",
+													"Produce Flame|PHB",
+													"Resistance|PHB",
+													"Shillelagh|PHB",
+													"Thorn Whip|PHB",
+													"Infestation (UA)|UAStarterSpells",
+													"Primal Savagery (UA)|UAStarterSpells",
+													"Control Flames|XGE",
+													"Create Bonfire|XGE",
+													"Frostbite|XGE",
+													"Gust|XGE",
+													"Infestation|XGE",
+													"Magic Stone|XGE",
+													"Mold Earth|XGE",
+													"Primal Savagery|XGE",
+													"Shape Water|XGE",
+													"Thunderclap|XGE",
+													"Cronotruco|GPNM",
+													"Featherweaving|GMAM"
+												],
+												"count": 1
+											}
+										}
+									]
+								}
+							},
+							"prepared": {
+								"3": [
+									"Barkskin|PHB",
+									"Spider Climb|PHB"
+								],
+								"5": [
+									"Call Lightning|PHB",
+									"Plant Growth|PHB"
+								],
+								"7": [
+									"Divination|PHB",
+									"Freedom of Movement|PHB"
+								],
+								"9": [
+									"Commune with Nature|PHB",
+									"Tree Stride|PHB"
+								]
+							},
+							"subSubclass": "Forest"
+						},
+						{
+							"name": "Grassland",
+							"known": {
+								"1": {
+									"_": [
+										{
+											"choose": {
+												"from": [
+													"Hunter Sense|GHLoE",
+													"Druidcraft|PHB",
+													"Guidance|PHB",
+													"Mending|PHB",
+													"Poison Spray|PHB",
+													"Produce Flame|PHB",
+													"Resistance|PHB",
+													"Shillelagh|PHB",
+													"Thorn Whip|PHB",
+													"Infestation (UA)|UAStarterSpells",
+													"Primal Savagery (UA)|UAStarterSpells",
+													"Control Flames|XGE",
+													"Create Bonfire|XGE",
+													"Frostbite|XGE",
+													"Gust|XGE",
+													"Infestation|XGE",
+													"Magic Stone|XGE",
+													"Mold Earth|XGE",
+													"Primal Savagery|XGE",
+													"Shape Water|XGE",
+													"Thunderclap|XGE",
+													"Cronotruco|GPNM",
+													"Featherweaving|GMAM"
+												],
+												"count": 1
+											}
+										}
+									]
+								}
+							},
+							"prepared": {
+								"3": [
+									"Invisibility|PHB",
+									"Pass without Trace|PHB"
+								],
+								"5": [
+									"Daylight|PHB",
+									"Haste|PHB"
+								],
+								"7": [
+									"Divination|PHB",
+									"Freedom of Movement|PHB"
+								],
+								"9": [
+									"Dream|PHB",
+									"Insect Plague|PHB"
+								]
+							},
+							"subSubclass": "Grassland"
+						},
+						{
+							"name": "Mountain",
+							"known": {
+								"1": {
+									"_": [
+										{
+											"choose": {
+												"from": [
+													"Hunter Sense|GHLoE",
+													"Druidcraft|PHB",
+													"Guidance|PHB",
+													"Mending|PHB",
+													"Poison Spray|PHB",
+													"Produce Flame|PHB",
+													"Resistance|PHB",
+													"Shillelagh|PHB",
+													"Thorn Whip|PHB",
+													"Infestation (UA)|UAStarterSpells",
+													"Primal Savagery (UA)|UAStarterSpells",
+													"Control Flames|XGE",
+													"Create Bonfire|XGE",
+													"Frostbite|XGE",
+													"Gust|XGE",
+													"Infestation|XGE",
+													"Magic Stone|XGE",
+													"Mold Earth|XGE",
+													"Primal Savagery|XGE",
+													"Shape Water|XGE",
+													"Thunderclap|XGE",
+													"Cronotruco|GPNM",
+													"Featherweaving|GMAM"
+												],
+												"count": 1
+											}
+										}
+									]
+								}
+							},
+							"prepared": {
+								"3": [
+									"Spider Climb|PHB",
+									"Spike Growth|PHB"
+								],
+								"5": [
+									"Lightning Bolt|PHB",
+									"Meld into Stone|PHB"
+								],
+								"7": [
+									"Stone Shape|PHB",
+									"Stoneskin|PHB"
+								],
+								"9": [
+									"Passwall|PHB",
+									"Wall of Stone|PHB"
+								]
+							},
+							"subSubclass": "Mountain"
+						},
+						{
+							"name": "Swamp",
+							"known": {
+								"1": {
+									"_": [
+										{
+											"choose": {
+												"from": [
+													"Hunter Sense|GHLoE",
+													"Druidcraft|PHB",
+													"Guidance|PHB",
+													"Mending|PHB",
+													"Poison Spray|PHB",
+													"Produce Flame|PHB",
+													"Resistance|PHB",
+													"Shillelagh|PHB",
+													"Thorn Whip|PHB",
+													"Infestation (UA)|UAStarterSpells",
+													"Primal Savagery (UA)|UAStarterSpells",
+													"Control Flames|XGE",
+													"Create Bonfire|XGE",
+													"Frostbite|XGE",
+													"Gust|XGE",
+													"Infestation|XGE",
+													"Magic Stone|XGE",
+													"Mold Earth|XGE",
+													"Primal Savagery|XGE",
+													"Shape Water|XGE",
+													"Thunderclap|XGE",
+													"Cronotruco|GPNM",
+													"Featherweaving|GMAM"
+												],
+												"count": 1
+											}
+										}
+									]
+								}
+							},
+							"prepared": {
+								"3": [
+									"Darkness|PHB",
+									"Melf's Acid Arrow|PHB"
+								],
+								"5": [
+									"Water Walk|PHB",
+									"Stinking Cloud|PHB"
+								],
+								"7": [
+									"Freedom of Movement|PHB",
+									"Locate Creature|PHB"
+								],
+								"9": [
+									"Insect Plague|PHB",
+									"Scrying|PHB"
+								]
+							},
+							"subSubclass": "Swamp"
+						},
+						{
+							"name": "Underdark",
+							"known": {
+								"1": {
+									"_": [
+										{
+											"choose": {
+												"from": [
+													"Hunter Sense|GHLoE",
+													"Druidcraft|PHB",
+													"Guidance|PHB",
+													"Mending|PHB",
+													"Poison Spray|PHB",
+													"Produce Flame|PHB",
+													"Resistance|PHB",
+													"Shillelagh|PHB",
+													"Thorn Whip|PHB",
+													"Infestation (UA)|UAStarterSpells",
+													"Primal Savagery (UA)|UAStarterSpells",
+													"Control Flames|XGE",
+													"Create Bonfire|XGE",
+													"Frostbite|XGE",
+													"Gust|XGE",
+													"Infestation|XGE",
+													"Magic Stone|XGE",
+													"Mold Earth|XGE",
+													"Primal Savagery|XGE",
+													"Shape Water|XGE",
+													"Thunderclap|XGE",
+													"Cronotruco|GPNM",
+													"Featherweaving|GMAM"
+												],
+												"count": 1
+											}
+										}
+									]
+								}
+							},
+							"prepared": {
+								"3": [
+									"Spider Climb|PHB",
+									"Web|PHB"
+								],
+								"5": [
+									"Gaseous Form|PHB",
+									"Stinking Cloud|PHB"
+								],
+								"7": [
+									"Greater Invisibility|PHB",
+									"Stone Shape|PHB"
+								],
+								"9": [
+									"Cloudkill|PHB",
+									"Insect Plague|PHB"
+								]
+							},
+							"subSubclass": "Underdark"
+						},
+						{
+							"name": "Catalog access",
+							"subSubclass": "Forest",
+							"expanded": {
+								"s5": [
+									"Dream|PHB",
+									"Insect Plague|PHB"
+								]
+							}
+						},
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s4": [
+									"Stoneskin|PHB"
+								],
+								"s5": [
+									"Tree Stride|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1086,27 +1573,27 @@
 													[
 														"8th",
 														"{@filter 2|bestiary|challenge rating=[&0;&2]|type=beast|miscellaneous=!swarm}",
-														"\u2014"
+														"—"
 													],
 													[
 														"9th",
 														"{@filter 3|bestiary|challenge rating=[&0;&3]|type=beast|miscellaneous=!swarm}",
-														"\u2014"
+														"—"
 													],
 													[
 														"12th",
 														"{@filter 4|bestiary|challenge rating=[&0;&4]|type=beast|miscellaneous=!swarm}",
-														"\u2014"
+														"—"
 													],
 													[
 														"15th",
 														"{@filter 5|bestiary|challenge rating=[&0;&5]|type=beast|miscellaneous=!swarm}",
-														"\u2014"
+														"—"
 													],
 													[
 														"18th",
 														"{@filter 6|bestiary|challenge rating=[&0;&6]|type=beast|miscellaneous=!swarm}",
-														"\u2014"
+														"—"
 													]
 												]
 											}
@@ -1154,6 +1641,15 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"known": {
+								"14": [
+									"Alter Self|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1201,7 +1697,7 @@
 										"entries": [
 											"At 10th level, you can use the hidden, unpredictable magical pathways that some fey use to traverse space in a blink of an eye. On your turn, you can teleport up to 30 feet to a spot you can see. Each foot of this teleportation costs 1 foot of your movement.",
 											"You can also use this feature to teleport someone else. As an action, you can teleport a willing ally you touch up to 30 feet to a point you can see.",
-											"Once you use either option\u2014teleporting yourself or an ally\u2014you can't use that option again until {@dice 1d4} rounds have passed."
+											"Once you use either option—teleporting yourself or an ally—you can't use that option again until {@dice 1d4} rounds have passed."
 										]
 									}
 								]
@@ -1798,6 +2294,30 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s3": [
+									"Animate Dead|PHB",
+									"Gaseous Form|PHB"
+								],
+								"s4": [
+									"Blight|PHB",
+									"Confusion|PHB"
+								],
+								"s2": [
+									"Blindness/Deafness|PHB",
+									"Gentle Repose|PHB",
+									"Ray of Enfeeblement|PHB"
+								],
+								"s5": [
+									"Cloudkill|PHB",
+									"Contagion|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1926,6 +2446,29 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s3": [
+									"Animate Dead|PHB",
+									"Gaseous Form|PHB"
+								],
+								"s4": [
+									"Blight|PHB",
+									"Confusion|PHB"
+								],
+								"s2": [
+									"Blindness/Deafness|PHB",
+									"Gentle Repose|PHB"
+								],
+								"s5": [
+									"Cloudkill|PHB",
+									"Contagion|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2036,6 +2579,29 @@
 								]
 							}
 						]
+					],
+					"additionalSpells": [
+						{
+							"name": "Catalog access",
+							"expanded": {
+								"s4": [
+									"Aura of Life|PHB",
+									"Fire Shield|PHB"
+								],
+								"s3": [
+									"Fireball|PHB",
+									"Plant Growth|PHB"
+								],
+								"s5": [
+									"Flame Strike|PHB",
+									"Raise Dead|PHB"
+								],
+								"s2": [
+									"Locate Animals or Plants|PHB",
+									"Scorching Ray|PHB"
+								]
+							}
+						}
 					]
 				},
 				{
@@ -2710,14 +3276,14 @@
 							"name": "Power of Nature",
 							"entries": [
 								"Druids revere nature above all, gaining their spells and other magical powers either from the force of nature itself or from a nature deity. Many druids pursue a mystic spirituality of transcendent union with nature rather than devotion to a divine entity, while others serve gods of wild nature, animals, or elemental forces. The ancient druidic traditions are sometimes called the Old Faith, in contrast to the worship of gods in temples and shrines.",
-								"Druid spells are oriented toward nature and animals\u2014the power of tooth and claw, of sun and moon, of fire and storm. Druids also gain the ability to take on animal forms, and some druids make a particular study of this practice, even to the point where they prefer animal form to their natural form."
+								"Druid spells are oriented toward nature and animals—the power of tooth and claw, of sun and moon, of fire and storm. Druids also gain the ability to take on animal forms, and some druids make a particular study of this practice, even to the point where they prefer animal form to their natural form."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "Preserve the Balance",
 							"entries": [
-								"For druids, nature exists in a precarious balance. The four elements that make up a world\u2014air, earth, fire, and water\u2014must remain in equilibrium. If one element were to gain power over the others, the world could be destroyed, drawn into one of the elemental planes and broken apart into its component elements. Thus, druids oppose cults of Elemental Evil and others who promote one element to the exclusion of others.",
+								"For druids, nature exists in a precarious balance. The four elements that make up a world—air, earth, fire, and water—must remain in equilibrium. If one element were to gain power over the others, the world could be destroyed, drawn into one of the elemental planes and broken apart into its component elements. Thus, druids oppose cults of Elemental Evil and others who promote one element to the exclusion of others.",
 								"Druids are also concerned with the delicate ecological balance that sustains plant and animal life, and the need for civilized folk to live in harmony with nature, not in opposition to it. Druids accept that which is cruel in nature, and they hate that which is unnatural, including aberrations (such as beholders and mind flayers) and undead (such as zombies and vampires). Druids sometimes lead raids against such creatures, especially when the monsters encroach on the druids' territory.",
 								"Druids are often found guarding sacred sites or watching over regions of unspoiled nature. But when a significant danger arises, threatening nature's balance or the lands they protect, druids take on a more active role in combating the threat, as adventurers."
 							]
@@ -3019,7 +3585,7 @@
 										[
 											"1",
 											"{@creature Brown bear}",
-											"\u2014"
+											"—"
 										],
 										[
 											"2",
@@ -3029,12 +3595,12 @@
 										[
 											"2",
 											"{@creature Saber-toothed tiger}",
-											"\u2014"
+											"—"
 										],
 										[
 											"6",
 											"{@creature Mammoth}",
-											"\u2014"
+											"—"
 										]
 									]
 								},
@@ -3085,12 +3651,12 @@
 										[
 											"1/4",
 											"{@creature Giant lizard}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
 											"{@creature Giant wolf spider}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
@@ -3131,22 +3697,22 @@
 										[
 											"0",
 											"{@creature Cat}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
 											"{@creature Hyena}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
 											"{@creature Jackal}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
 											"{@creature Scorpion}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
@@ -3156,7 +3722,7 @@
 										[
 											"1/8",
 											"{@creature Camel}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/8",
@@ -3166,7 +3732,7 @@
 										[
 											"1/8",
 											"{@creature Mule}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/8",
@@ -3186,7 +3752,7 @@
 										[
 											"1/4",
 											"{@creature Giant lizard}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
@@ -3196,17 +3762,17 @@
 										[
 											"1/4",
 											"{@creature Giant wolf spider}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",
 											"{@creature Giant hyena}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",
 											"{@creature Giant spider}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",
@@ -3221,7 +3787,7 @@
 										[
 											"1",
 											"{@creature Lion}",
-											"\u2014"
+											"—"
 										],
 										[
 											"2",
@@ -3231,7 +3797,7 @@
 										[
 											"3",
 											"{@creature Giant scorpion}",
-											"\u2014"
+											"—"
 										]
 									]
 								},
@@ -3252,27 +3818,27 @@
 										[
 											"0",
 											"{@creature Baboon}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
 											"{@creature Badger}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
 											"{@creature Cat}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
 											"{@creature Deer}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
 											"{@creature Hyena}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
@@ -3292,12 +3858,12 @@
 										[
 											"1/8",
 											"{@creature Giant rat}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/8",
 											"{@creature Giant weasel}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/8",
@@ -3307,7 +3873,7 @@
 										[
 											"1/8",
 											"{@creature Mastiff}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/8",
@@ -3317,7 +3883,7 @@
 										[
 											"1/4",
 											"{@creature Boar}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
@@ -3327,12 +3893,12 @@
 										[
 											"1/4",
 											"{@creature Elk}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
 											"{@creature Giant badger}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
@@ -3347,7 +3913,7 @@
 										[
 											"1/4",
 											"{@creature Giant lizard}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
@@ -3362,27 +3928,27 @@
 										[
 											"1/4",
 											"{@creature Giant wolf spider}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
 											"{@creature Panther}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
 											"{@creature Wolf}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/2",
 											"{@creature Ape}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/2",
 											"{@creature Black bear}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/2",
@@ -3392,22 +3958,22 @@
 										[
 											"1",
 											"{@creature Brown bear}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",
 											"{@creature Dire wolf}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",
 											"{@creature Giant hyena}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",
 											"{@creature Giant spider}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",
@@ -3417,12 +3983,12 @@
 										[
 											"1",
 											"{@creature Tiger}",
-											"\u2014"
+											"—"
 										],
 										[
 											"2",
 											"{@creature Giant boar}",
-											"\u2014"
+											"—"
 										],
 										[
 											"2",
@@ -3432,7 +3998,7 @@
 										[
 											"2",
 											"{@creature Giant elk}",
-											"\u2014"
+											"—"
 										]
 									]
 								},
@@ -3453,12 +4019,12 @@
 										[
 											"0",
 											"{@creature Cat}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
 											"{@creature Deer}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
@@ -3468,17 +4034,17 @@
 										[
 											"0",
 											"{@creature Goat}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
 											"{@creature Hyena}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
 											"{@creature Jackal}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
@@ -3498,7 +4064,7 @@
 										[
 											"1/8",
 											"{@creature Giant weasel}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/8",
@@ -3513,17 +4079,17 @@
 										[
 											"1/4",
 											"{@creature Axe beak}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
 											"{@creature Boar}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
 											"{@creature Elk}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
@@ -3533,12 +4099,12 @@
 										[
 											"1/4",
 											"{@creature Giant wolf spider}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
 											"{@creature Panther} (leopard)",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
@@ -3548,17 +4114,17 @@
 										[
 											"1/4",
 											"{@creature Riding horse}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
 											"{@creature Wolf}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/2",
 											"{@creature Giant goat}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/2",
@@ -3573,7 +4139,7 @@
 										[
 											"1",
 											"{@creature Giant hyena}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",
@@ -3583,47 +4149,47 @@
 										[
 											"1",
 											"{@creature Lion}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",
 											"{@creature Tiger}",
-											"\u2014"
+											"—"
 										],
 										[
 											"2",
 											"{@creature Allosaurus}",
-											"\u2014"
+											"—"
 										],
 										[
 											"2",
 											"{@creature Giant boar}",
-											"\u2014"
+											"—"
 										],
 										[
 											"2",
 											"{@creature Giant elk}",
-											"\u2014"
+											"—"
 										],
 										[
 											"2",
 											"{@creature Rhinoceros}",
-											"\u2014"
+											"—"
 										],
 										[
 											"3",
 											"{@creature Ankylosaurus}",
-											"\u2014"
+											"—"
 										],
 										[
 											"4",
 											"{@creature Elephant}",
-											"\u2014"
+											"—"
 										],
 										[
 											"5",
 											"{@creature Triceratops}",
-											"\u2014"
+											"—"
 										]
 									]
 								},
@@ -3644,7 +4210,7 @@
 										[
 											"0",
 											"{@creature Baboon}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
@@ -3654,12 +4220,12 @@
 										[
 											"0",
 											"{@creature Goat}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
 											"{@creature Hyena}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
@@ -3679,17 +4245,17 @@
 										[
 											"1/8",
 											"{@creature Giant weasel}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/8",
 											"{@creature Mastiff}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/8",
 											"{@creature Mule}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/8",
@@ -3704,17 +4270,17 @@
 										[
 											"1/4",
 											"{@creature Axe beak}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
 											"{@creature Boar}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
 											"{@creature Elk}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
@@ -3724,32 +4290,32 @@
 										[
 											"1/4",
 											"{@creature Giant wolf spider}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
 											"{@creature Panther} (cougar)",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
 											"{@creature Wolf}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/2",
 											"{@creature Giant goat}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",
 											"{@creature Brown bear}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",
 											"{@creature Dire wolf}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",
@@ -3759,22 +4325,22 @@
 										[
 											"1",
 											"{@creature Giant hyena}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",
 											"{@creature Lion}",
-											"\u2014"
+											"—"
 										],
 										[
 											"2",
 											"{@creature Giant boar}",
-											"\u2014"
+											"—"
 										],
 										[
 											"2",
 											"{@creature Giant elk}",
-											"\u2014"
+											"—"
 										]
 									]
 								},
@@ -3800,7 +4366,7 @@
 										[
 											"0",
 											"{@creature Goat}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/8",
@@ -3820,7 +4386,7 @@
 										[
 											"1/2",
 											"{@creature Giant goat}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",
@@ -3830,17 +4396,17 @@
 										[
 											"1",
 											"{@creature Lion}",
-											"\u2014"
+											"—"
 										],
 										[
 											"2",
 											"{@creature Giant elk}",
-											"\u2014"
+											"—"
 										],
 										[
 											"2",
 											"{@creature Saber-toothed tiger}",
-											"\u2014"
+											"—"
 										]
 									]
 								},
@@ -3861,7 +4427,7 @@
 										[
 											"0",
 											"{@creature Rat}",
-											"\u2014"
+											"—"
 										],
 										[
 											"0",
@@ -3871,7 +4437,7 @@
 										[
 											"1/8",
 											"{@creature Giant rat}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/8",
@@ -3896,7 +4462,7 @@
 										[
 											"1/4",
 											"{@creature Giant lizard}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
@@ -3911,7 +4477,7 @@
 										[
 											"1",
 											"{@creature Giant spider}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",
@@ -3947,12 +4513,12 @@
 										[
 											"0",
 											"{@creature Giant fire beetle}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/8",
 											"{@creature Giant rat}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/8",
@@ -3967,12 +4533,12 @@
 										[
 											"1/4",
 											"{@creature Giant centipede}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
 											"{@creature Giant lizard}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1/4",
@@ -3982,7 +4548,7 @@
 										[
 											"1",
 											"{@creature Giant spider}",
-											"\u2014"
+											"—"
 										],
 										[
 											"1",

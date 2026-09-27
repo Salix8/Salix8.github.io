@@ -5783,7 +5783,7 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Lanzas un frasco que segrega una esencia que revitaliza a quien la huele con {@dice 1d6} (toda la fragancia expira al abrirse el frasco si no se bebe al instante, y el líquido pasa a ser agua amarilla), pero cuya potencia aumenta hasta {@dice 1d8} si se bebe. En ambos casos se suma el modificador de Sabiduría del alquimista."
+						"Lanzas un frasco que segrega una esencia que revitaliza a quien la huele con {@dice 1d6} + Wisdom (toda la fragancia expira al abrirse el frasco si no se bebe al instante, y el líquido pasa a ser agua amarilla), pero cuya potencia aumenta hasta {@dice 1d8} + Wisdom si se bebe."
 					]
 				},
 				{
@@ -5856,7 +5856,7 @@
 								"Arma u objeto. Recibe el daño. El DM determina su duración. Si cae a 0 HP se destruye. Mientras no caiga a 0, puede ser reparada fácilmente por cualquier herrero competente o con Mending. Piel.",
 								"Debe salvar Constitución. Con un fallo, recibe el daño y se vuelve vulnerable al daño por ácido durante 1 minuto o, en su defecto, pierde la resistencia. Ingesta.",
 								"Recibe el daño y contrae indigestión en {@dice 1d6} horas.",
-								"Hierro Líquido. Disuelve los efectos de esta poción sin dañar al portador ni a su equipo. Cada objeto u objetivo solo puede recibir los efectos de esta tirada una vez cada 8 horas, a partir del primer uso, sólo recibirá el daño. Si no se especifica o se pretende tirar en área, afecta solo a las armaduras."
+								"Hierro Líquido. Disuelve los efectos de esta poción sin dañar al portador ni a su equipo. Cada objeto u objetivo solo puede recibir los efectos de esta tirada una vez cada 8 horas, a partir del primer uso, sólo recibirá el daño. Si no se especifica o se pretende tirar en área, afecta solo a las armaduras/pieles."
 							]
 						}
 					]
@@ -5932,7 +5932,7 @@
 					"type": "entries",
 					"name": "Información Extra",
 					"entries": [
-						"Al lv3 el daño residual aumenta a {@dice 2d6}, al 7 descubres el veneno cutáneo, así que puedes arrojarlo hasta una distancia de 20 pies (tirada de ataque a Destreza) y al 12 el daño residual asciende a {@dice 4d8} y al 17 a {@dice 5d10}."
+						"Al lv3 el daño residual aumenta a {@dice 2d6}, al 7 descubres el veneno cutáneo, así que puedes arrojarlo hasta una distancia de 20 pies (tirada de ataque a Fuerza/Destreza) y al 12 el daño residual asciende a {@dice 4d8} y al 17 a {@dice 5d10}."
 					]
 				}
 			]
@@ -6218,6 +6218,13 @@
 					"entries": [
 						"Cuando este vial se rompa contra el suelo, una onda de choque arremeterá con todas las criaturas en un radio de 15 pies horizontalmente que estén tocando el suelo. Deben salvar fuerza sobre tu CD de pociones o ser empujadas 15 pies y caer {@condition Prone|PHB}. Si fallan por 7 o más, además estarán {@condition Dazed|Himo}. La criatura en el centro del área es inmune al efecto."
 					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"A partir del nivel 3 hará 1d8 de daño por trueno o la mitad con un éxito, haciendo el doble de daño a objetos y estructuras, al 7 la diferencia para quedar dazed será de 3, al 12 hará 2d8 y dejará dazed a los que fallen la salvación y a partir del 17 hará 4d8 y dejará stunned a quienes fallen por 7 o más."
+					]
 				}
 			]
 		},
@@ -6249,7 +6256,7 @@
 					"type": "entries",
 					"name": "Información Extra",
 					"entries": [
-						"A partir del nivel 3 hará {@dice 3d10}, al 7 {@dice 4d10}, al 11 {@dice 5d10} y a partir del 17 {@dice 6d10}."
+						"A partir del nivel 3 hará {@dice 3d10}, al 7 {@dice 4d10}, al 12 {@dice 5d10} y a partir del 17 {@dice 6d10}."
 					]
 				}
 			]
@@ -6488,7 +6495,7 @@
 					"type": "entries",
 					"name": "Información Extra",
 					"entries": [
-						"Si el objetivo se limpia o lo limpian con al menos cinco litros de agua, el efecto termina."
+						"Si el objetivo se limpia o lo limpian con al menos cinco litros de agua, el efecto termina. A nivel 12, efectos luminosos superiores a lv4 de conjuro te revelan, y a nivel 17, solo los de lv6.."
 					]
 				}
 			]
@@ -6749,6 +6756,13 @@
 					"entries": [
 						"Sacas un moco flácido del vial y lo arrojas a una criatura que pueda volar dentro del área. Haz una tirada de ataque. Con un éxito, el moco se pega en la criatura y se endurece. Uno solo de estos compuestos basta para que una criatura pequeña o diminuta pierda toda su velocidad de vuelo y una mediana la mitad. Para criaturas más grandes, deberá tirarse una por cada casilla que ocupe en el mapa (2 para las medianas). Pasados los 10 minutos, el compuesto se seca y se despega."
 					]
+				},
+				{
+					"type": "entries",
+					"name": "Información Extra",
+					"entries": [
+						"A lv12 esta poción puede dejar sin movilidad a una criatura mediana y a la mitad una grande. Cuenta como haber usado 2 pociones para criaturas más grandes. Al lv17 deja sin movilidad a una criatura grande y a la mitad una enorme. Cuenta como haber usado 4 pociones para criaturas gargantuescas."
+					]
 				}
 			]
 		},
@@ -6781,7 +6795,7 @@
 					"type": "entries",
 					"name": "Información Extra",
 					"entries": [
-						"Esta poción no necesita ser contenida con las herramientas de alquimia, pero en el descanso en el que se produzca no podrán crearse otros tipos de pociones."
+						"Esta poción no necesita ser contenida con las herramientas de alquimia, pero en el descanso en el que se produzca no podrán crearse otros tipos de pociones. La receta produce 1 litros (2 kg) de una sola vez y no permite hacer más pociones que no sean de este tipo. Si tienes un item, rasgo o dote que te permite hacer más pociones con los mismos ingredientes, aún afectan a la creación de esta poción. Esta poción no puede usarse con el trait de Pociones Instantáneas."
 					]
 				}
 			]
@@ -6892,7 +6906,8 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Puedes beber esta poción inmediatamente antes de lanzar iniciativa (sacar esta poción de donde la tengas forma parte de la reacción). Te garantizará ser el primero en iniciativa y, además, tendrás doblado el modificador de fuerza durante el primer turno (si es negativo o cero pasará a ser de +2). Además podrás moverte el doble de tu movilidad normal. Habrás gastado tu reacción de esa ronda. Durante este combate tienes ventaja en checks de fuerza contra ser grappleado o proneado, salvaciones de Fuerza, Destreza y Constitución y no pueden golpearte crítico mientras estés consciente y/o de pie."
+						"Puedes beber esta poción inmediatamente antes de lanzar iniciativa (sacar esta poción de donde la tengas forma parte de la reacción). Te garantizará ser el primero en iniciativa y, además, tendrás doblado el modificador de fuerza durante la primera ronda (si es negativo o cero pasará a ser de +2). Además podrás moverte el doble de tu movilidad normal. Habrás gastado tu reacción de esa ronda.",
+						"Durante este combate tienes ventaja en checks de fuerza contra ser grappleado o proneado, salvaciones de Fuerza, Destreza y Constitución y no pueden golpearte crítico mientras estés consciente y/o de pie."
 					]
 				}
 			]
@@ -6913,7 +6928,7 @@
 				],
 				"range": "untar en arma o en la piel/pieza de armadura con la que se pretende golpear",
 				"use": "Acción adicional",
-				"duration": "1 minuto"
+				"duration": "10 minutos"
 			},
 			"entries": [
 				{
@@ -6953,7 +6968,8 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Si una criatura bebe el contenido de este filtro, será {@condition Charmed|PHB} por la primera criatura que vea justo después hasta un lapso de diez minutos. Mientras esté {@condition Charmed|PHB}, la criatura considerará como su amor verdadero al encantador. Este tendrá éxito en cualquier tirada de habilidad de Carisma contra esta y tendrá ventaja en las de Sabiduría e Inteligencia. Además, el objetivo fallará automáticamente cualquier tirada de Salvación de Carisma o checks de {@skill Insight} contra esa criatura."
+						"Si una criatura bebe el contenido de este filtro, será {@condition Charmed|PHB} por la primera criatura que vea justo después hasta un lapso de diez minutos. Mientras esté {@condition Charmed|PHB}, la criatura considerará como su amor verdadero al encantador. Este tendrá éxito en cualquier tirada de habilidad de Carisma contra esta y tendrá ventaja en las de Sabiduría e Inteligencia. Además, el objetivo fallará automáticamente cualquier tirada de Salvación de Carisma o checks de {@skill Insight} contra esa criatura.",
+						"Si el objetivo no ve a ninguna otra criatura durante los primeros 10 minutos de duración, el efecto de la poción acaba y el objetivo recibe 2d10 psíquicos por la tristeza de estar solo en el mundo."
 					]
 				},
 				{
@@ -7233,7 +7249,7 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Si se da de beber esto a una quimera creada a través del Ritual de Transmutación que haya muerto en los últimos diez días, esta revivirá con 1 HP y sufre una penalización de -4 a todas las tiradas de ataque, tiros de salvación y pruebas de habilidad. Cada vez que el objetivo finaliza un descanso prolongado, la penalización se reduce en 1 hasta que desaparece. No recupera HP hasta haber acabado con las penalizaciones, y tampoco lo hará de ninguna otra forma."
+						"Si se da de beber esto a una quimera creada a través del Ritual de Transmutación que haya muerto en los últimos diez días, esta revivirá con 1 HP y sufre una penalización de -4 a todas las tiradas de ataque, tiradas de salvación y pruebas de habilidad. Cada vez que el objetivo finaliza un descanso largo, la penalización se reduce en 1 hasta que desaparece. No recupera HP hasta haber acabado con las penalizaciones, y tampoco lo hará de ninguna otra forma."
 					]
 				},
 				{
@@ -7266,7 +7282,8 @@
 					"type": "entries",
 					"name": "Descripción",
 					"entries": [
-						"Lanzas el frasco en un punto que puedas ver a 20 pies. Toda criatura a 60 pies salva constitución sobre tu CD de potis o queda cegada y stuneada por un minuto. Pueden salvar de nuevo al final del turno. Puedes usar la bonus para hacer un gesto o decir una contraseña que tus aliados entiendan como un aviso. Toda criatura de tu elección que vaya a verse afectada puede salvar con ventaja. De fallar solo estarán cegados."
+						"Lanzas el frasco en un punto que puedas ver a 20 pies. Toda criatura a 60 pies salva constitución sobre tu CD de potis o queda cegada y stuneada por un minuto. Pueden salvar de nuevo al final del turno.",
+						"Puedes usar la bonus para hacer un gesto o decir una contraseña que tus aliados entiendan como un aviso. Toda criatura de tu elección que vaya a verse afectada puede salvar con ventaja. De fallar solo estarán cegados. Alternativamente pueden gastar su reacción en cerrar los ojos y cegarse hasta el inicio de su próximo turno, salvando automáticamente la salvación."
 					]
 				}
 			]
@@ -7482,7 +7499,7 @@
 					"type": "entries",
 					"name": "Información Extra",
 					"entries": [
-						"A partir del lv11 el rango aumenta a 60 ft y podrás añadir otro ingrediente de alcohol para cambiar tremorsense por thermalsense o visión en el plano etéreo; luego tendrás 4 estadios en vez de 2. A partir del lv17 el rango aumenta a 90ft y puedes añadir otro alcohol para electricsense y 6 estadios. Alternativamente a este nivel, con un total 4 alcohol extra ganas truesight, pero ganas 8 estadios al final del efecto."
+						"A partir del lv12 el rango aumenta a 60 ft y podrás añadir otro ingrediente de alcohol para cambiar tremorsense por thermalsense o visión en el plano etéreo; luego tendrás 4 estadios en vez de 2. A partir del lv17 el rango aumenta a 90ft y puedes añadir un tercer alcohol para electricsense y 6 estadios. Alternativamente a este nivel, con un total 4 alcohol extra ganas truesight, pero ganas 8 estadios al final del efecto."
 					]
 				}
 			]
@@ -7515,7 +7532,7 @@
 					"type": "entries",
 					"name": "Información Extra",
 					"entries": [
-						"A partir del lv 7 puede controlar su movilidad mientras levita. Tiene una velocidad de 5 x tu modificador de Wisdom+BC. A partir de lv12 añade el wisdom al daño desviado y el área queda cargada 3 turnos. Toda criatura dentro del área recibe tu modificador de Wisdom en daño eléctrico si empieza su turno ahí. A lv17 el efecto de acción dura 10 minutos y el de reacción 5."
+						"A partir del lv 7 puede controlar su movilidad mientras levita. Tiene una velocidad de 5 x tu modificador de Wisdom+BC. A partir de lv12 añade el wisdom al daño desviado y el área queda cargada 3 turnos. Toda criatura dentro del área recibe tu modificador de Wisdom en daño eléctrico si empieza su turno ahí. A lv17 el efecto de acción dura 10 minutos y el de reacción 5 turnos."
 					]
 				}
 			]
@@ -7549,7 +7566,7 @@
 					"type": "entries",
 					"name": "Información Extra",
 					"entries": [
-						"El daño aumenta a {@dice 6d4} a lv 3, {@dice 9d4} a lv7 y a {@dice 12d4} a lv12 y {@dice 15d4} a lv17."
+						"El daño aumenta a {@dice 5d4} a lv 3, {@dice 7d4} a lv7 y a {@dice 9d4} a lv12 y {@dice 11d4} a lv17."
 					]
 				}
 			]
@@ -7710,171 +7727,580 @@
 		},
 		{
 			"name": "Condición",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 2, "class": {"name": "Lexarca"}}}],
-			"entries": ["En el momento en el que preparas esta palabra elige una de las siguientes condiciones: {@condition Blinded|PHB}, {@condition Deafened|PHB}, {@condition Dazed|Himo}, mudo, {@condition Charmed|PHB} o {@condition Frightened|PHB}. El objetivo salva Carisma o está bajo los efectos de esa condición. Puede salvar al final de cada turno para acabar con el efecto. Si no, dura un número de minutos igual a tu Modificador de Wisdom. Puedes preparar esta palabra más de una vez con distintos efectos."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"En el momento en el que preparas esta palabra elige una de las siguientes condiciones: {@condition Blinded|PHB}, {@condition Deafened|PHB}, {@condition Dazed|Himo}, mudo, {@condition Charmed|PHB} o {@condition Frightened|PHB}. El objetivo salva Carisma o está bajo los efectos de esa condición. Puede salvar al final de cada turno para acabar con el efecto. Si no, dura un número de minutos igual a tu Modificador de Wisdom. Puedes preparar esta palabra más de una vez con distintos efectos."
+			]
 		},
 		{
 			"name": "Empujar",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 2, "class": {"name": "Lexarca"}}}],
-			"entries": ["El objetivo salva Carisma o es empujado un número de casillas igual a tus modificadores de Inteligencia y Wisdom. Durante 1 minuto, al principio de cada turno salva Carisma o es empujado otra vez. Con un éxito acaba el efecto."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"El objetivo salva Carisma o es empujado un número de casillas igual a tus modificadores de Inteligencia y Wisdom. Durante 1 minuto, al principio de cada turno salva Carisma o es empujado otra vez. Con un éxito acaba el efecto."
+			]
 		},
 		{
 			"name": "Quieto",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 2, "class": {"name": "Lexarca"}}}],
-			"entries": ["El objetivo salva Carisma o su movilidad es reducida a 0 durante un número de minutos igual a tu modifcador de Wisdom, pudiendo salvar al final de cada turno."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"El objetivo salva Carisma o su movilidad es reducida a 0 durante un número de minutos igual a tu modifcador de Wisdom, pudiendo salvar al final de cada turno."
+			]
 		},
 		{
 			"name": "Dolor",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 2, "class": {"name": "Lexarca"}}}],
-			"entries": ["El objetivo salva Carisma o, durante un número de turnos igual a tu modificador de Wisdom, cada vez que reciba cualquier fuente de daño, recibe daño psíquico extra igual a tus modificadores de Wisdom e Inteligencia."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"El objetivo salva Carisma o, durante un número de turnos igual a tu modificador de Wisdom, cada vez que reciba cualquier fuente de daño, recibe daño psíquico extra igual a tus modificadores de Wisdom e Inteligencia."
+			]
 		},
 		{
 			"name": "Obediencia",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 2, "class": {"name": "Lexarca"}}}],
-			"entries": ["El objetivo salva Carisma. Con un fallo, puedes castear {@spell command} a esa criatura cada turno como free action. No necesitas concentrarte, la criatura falla automáticamente cada command y dura un número de minutos igual a tu modificador de Wisdom. La criatura salva de nuevo tras completar cada command."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"El objetivo salva Carisma. Con un fallo, puedes castear {@spell command} a esa criatura cada turno como free action. No necesitas concentrarte, la criatura falla automáticamente cada command y dura un número de minutos igual a tu modificador de Wisdom. La criatura salva de nuevo tras completar cada command."
+			]
 		},
 		{
 			"name": "Verdad/Mentira",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 2, "class": {"name": "Lexarca"}}}],
-			"entries": ["El objetivo salva Carisma. Con un fallo el objetivo está obligado a decir únicamente la verdad o únicamente mentiras durante un número de minutos igual a tus modificadores de Inteligencia y Wisdom. Preparar esta palabra vale para ambos efectos."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"El objetivo salva Carisma. Con un fallo el objetivo está obligado a decir únicamente la verdad o únicamente mentiras durante un número de minutos igual a tus modificadores de Inteligencia y Wisdom. Preparar esta palabra vale para ambos efectos."
+			]
 		},
 		{
 			"name": "Antimagia",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 7, "class": {"name": "Lexarca"}}}],
-			"entries": ["Al decir esta palabra targeteas un conjuro o efecto mágico. El caster original del conjuro salva Carisma si se estaba concentrando. Con un fallo el conjuro acaba. Si no se estaba concentrando o no hay caster original, haz un check de carisma añadiendo tu BC cuya CD siga las normas antimagia."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Al decir esta palabra targeteas un conjuro o efecto mágico. El caster original del conjuro salva Carisma si se estaba concentrando. Con un fallo el conjuro acaba. Si no se estaba concentrando o no hay caster original, haz un check de carisma añadiendo tu BC cuya CD siga las normas antimagia."
+			]
 		},
 		{
 			"name": "Viento",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 7, "class": {"name": "Lexarca"}}}],
-			"entries": ["Elige una dirección en la que empezará a soplar un viento fuerte (60 km/h si fuera relevante). Todos los ataques a rango en contra del viento tienen desventaja y pierden el rango largo, correr en contra del viento es terreno dificil y correr con el viento a favor hace que se gaste la mitad de movilidad. Pasado un minuto o cuando vuelvas a usar esta palabra de poder, el viento se disipa."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Elige una dirección en la que empezará a soplar un viento fuerte (60 km/h si fuera relevante). Todos los ataques a rango en contra del viento tienen desventaja y pierden el rango largo, correr en contra del viento es terreno dificil y correr con el viento a favor hace que se gaste la mitad de movilidad. Pasado un minuto o cuando vuelvas a usar esta palabra de poder, el viento se disipa."
+			]
 		},
 		{
 			"name": "Resistencia",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 7, "class": {"name": "Lexarca"}}}],
-			"entries": ["Esta palabra puede targetearte a ti o a un aliado. La criatura gana resistencia al tipo de daño de la palabra. Eliges el tipo de daño al preparar la palabra y puedes preparar esta palabra más de una vez."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Esta palabra puede targetearte a ti o a un aliado. La criatura gana resistencia al tipo de daño de la palabra. Eliges el tipo de daño al preparar la palabra y puedes preparar esta palabra más de una vez."
+			]
 		},
 		{
 			"name": "Desarmar",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 7, "class": {"name": "Lexarca"}}}],
-			"entries": ["Una criatura de tu elección salva Fuerza. Con un fallo el arma o escudo (eliges al usar la palabra) sale disparada un número de ft igual a tu modificador de wisdom x10 en dirección contraria a ti y cae al suelo."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Una criatura de tu elección salva Fuerza. Con un fallo el arma o escudo (eliges al usar la palabra) sale disparada un número de ft igual a tu modificador de wisdom x10 en dirección contraria a ti y cae al suelo."
+			]
 		},
 		{
 			"name": "Levitar",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 7, "class": {"name": "Lexarca"}}}],
-			"entries": ["La criatura objetivo salva Carisma o empieza a flotar a una altura de un número de ft igual a tu modificador de wisdom x5. Mientras se mantenga ahí está {@condition Restrained|PHB}. Puede salvar al final de cada turno. Al liberarse cae y punto (puede recibir daño)."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"La criatura objetivo salva Carisma o empieza a flotar a una altura de un número de ft igual a tu modificador de wisdom x5. Mientras se mantenga ahí está {@condition Restrained|PHB}. Puede salvar al final de cada turno. Al liberarse cae y punto (puede recibir daño)."
+			]
 		},
 		{
 			"name": "Inconsciencia",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 13, "class": {"name": "Lexarca"}}}],
-			"entries": ["El objetivo cae {@condition Unconscious|PHB} un número de minutos igual a tu modificador de Wisdom. Cada vez que reciba daño salva de nuevo. Con un éxito despierta."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 13,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"El objetivo cae {@condition Unconscious|PHB} un número de minutos igual a tu modificador de Wisdom. Cada vez que reciba daño salva de nuevo. Con un éxito despierta."
+			]
 		},
 		{
 			"name": "Paz",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 13, "class": {"name": "Lexarca"}}}],
-			"entries": ["Una criatura de tu elección salva Carisma o pasa a ser inmune a {@condition Frightened|PHB} y a {@condition Charmed|PHB} y pierde todas las ganas de luchar hasta que reciba daño de nuevo. Su iniciativa, si se había tirado, pasa a ser 0. Si recibe daño, el efecto acaba y rerolea la iniciativa."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 13,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Una criatura de tu elección salva Carisma o pasa a ser inmune a {@condition Frightened|PHB} y a {@condition Charmed|PHB} y pierde todas las ganas de luchar hasta que reciba daño de nuevo. Su iniciativa, si se había tirado, pasa a ser 0. Si recibe daño, el efecto acaba y rerolea la iniciativa."
+			]
 		},
 		{
 			"name": "Guerra",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 13, "class": {"name": "Lexarca"}}}],
-			"entries": ["Una criatura de tu elección rerolea iniciativa sumando tu Wisdom a la tirada y quedándose la opción más alta. Además gana HPT iguales a tu lv. Mientras duren los HPT, suma tu carisma al daño, tu Inteligencia a la CA y gana 15 ft de movilidad. Si es a un conjuro, solo lo suma una vez por casteo."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 13,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Una criatura de tu elección rerolea iniciativa sumando tu Wisdom a la tirada y quedándose la opción más alta. Además gana HPT iguales a tu lv. Mientras duren los HPT, suma tu carisma al daño, tu Inteligencia a la CA y gana 15 ft de movilidad. Si es a un conjuro, solo lo suma una vez por casteo."
+			]
 		},
 		{
 			"name": "Muerte",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 13, "class": {"name": "Lexarca"}}}],
-			"entries": ["El objetivo empieza a ahogarse y está mudo. Al final de cada uno de sus turnos salva Constitución para poder volver a respirar y acabar con el efecto. Al recibir el efecto el objetivo salva Carisma. Con un éxito logra coger aire antes de empezar a ahogarse."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 13,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"El objetivo empieza a ahogarse y está mudo. Al final de cada uno de sus turnos salva Constitución para poder volver a respirar y acabar con el efecto. Al recibir el efecto el objetivo salva Carisma. Con un éxito logra coger aire antes de empezar a ahogarse."
+			]
 		},
 		{
 			"name": "Locura",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 13, "class": {"name": "Lexarca"}}}],
-			"entries": ["El objetivo salva Carisma. Con un fallo tiene una locura permanente de tu elección."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 13,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"El objetivo salva Carisma. Con un fallo tiene una locura permanente de tu elección."
+			]
 		},
 		{
 			"name": "Abismo",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 17, "class": {"name": "Lexarca"}}}],
-			"entries": ["Esta palabra vale el equivalente a 5 palabras de poder.", "El suelo se abre bajo los pies del objetivo. Este salva Carisma o cae en un abismo sin fondo. Con un fallo el objetivo desaparece hasta que salve de nuevo al final de cada turno. Con cada fallo recibe {@damage 4d6} psíquicos, con un éxito el portal se abre en el cielo y cae {@condition Prone|PHB} donde estaba. El portal aparece a un número de ft de altura igual a tus modificadores de Inteligencia, wisdom y carisma multiplicados por 5 y recibe daño por caída."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 17,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Esta palabra vale el equivalente a 5 palabras de poder.",
+				"El suelo se abre bajo los pies del objetivo. Este salva Carisma o cae en un abismo sin fondo. Con un fallo el objetivo desaparece hasta que salve de nuevo al final de cada turno. Con cada fallo recibe {@damage 4d6} psíquicos, con un éxito el portal se abre en el cielo y cae {@condition Prone|PHB} donde estaba. El portal aparece a un número de ft de altura igual a tus modificadores de Inteligencia, wisdom y carisma multiplicados por 5 y recibe daño por caída."
+			]
 		},
 		{
 			"name": "Antagonizar",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 17, "class": {"name": "Lexarca"}}}],
-			"entries": ["Esta palabra vale el equivalente a 5 palabras de poder.", "La criatura objetivo y tu estáis vinculados, pero solo a tu favor. Cada vez que fueras a recibir daño, lo recibe la criatura objetivo. Cada vez que la criatura fuera a ser curada, tú recibes esa curación. El efecto acaba pasado un minuto o cuando la criatura salve Carisma. Puede salvar Carisma cada vez que se active este rasgo."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 17,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Esta palabra vale el equivalente a 5 palabras de poder.",
+				"La criatura objetivo y tu estáis vinculados, pero solo a tu favor. Cada vez que fueras a recibir daño, lo recibe la criatura objetivo. Cada vez que la criatura fuera a ser curada, tú recibes esa curación. El efecto acaba pasado un minuto o cuando la criatura salve Carisma. Puede salvar Carisma cada vez que se active este rasgo."
+			]
 		},
 		{
 			"name": "Perdición",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 17, "class": {"name": "Lexarca"}}}],
-			"entries": ["Esta palabra vale el equivalente a 5 palabras de poder.", "La criatura salva Carisma o queda ciega permanentemente. Solo un conjuro o efecto que cure la {@condition Blinded|PHB} puede devolverle la vista."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 17,
+						"class": {
+							"name": "Lexarca"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Esta palabra vale el equivalente a 5 palabras de poder.",
+				"La criatura salva Carisma o queda ciega permanentemente. Solo un conjuro o efecto que cure la {@condition Blinded|PHB} puede devolverle la vista."
+			]
 		},
 		{
 			"name": "Alma",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 3, "class": {"name": "Lexarca"}, "subclass": {"name": "Lengua de Plata", "source": "Himo"}}}],
-			"entries": ["Cuando una criatura muera a 120 ft de ti, puedes gastar una palabra de poder para apresar y consumir su alma. Ganas HPT iguales a la cantidad total de dados de golpe máximos de esa criatura. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Lexarca"
+						},
+						"subclass": {
+							"name": "Lengua de Plata",
+							"source": "Himo"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Cuando una criatura muera a 120 ft de ti, puedes gastar una palabra de poder para apresar y consumir su alma. Ganas HPT iguales a la cantidad total de dados de golpe máximos de esa criatura. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."
+			]
 		},
 		{
 			"name": "Infierno",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 18, "class": {"name": "Lexarca"}, "subclass": {"name": "Lengua de Plata", "source": "Himo"}}}],
-			"entries": ["Cuando acabes con la vida de una criatura usando un de tus rasgos o conjuros de Lexarca, puedes usar tu reacción para convertir a la criatura en un alma en pena. Gastas un número de Palabras de Poder iguales a la mitad del CR de la criatura objetivo y esta se convierte en un Fiend de CR igual o inferior al de la criatura objetivo. Puedes elegir cuál y está bajo tu control. Pasada una hora Baator reclama el alma que ahora es suya. Esa criatura solo puede ser revivida mediante el conjuro de {@spell Wish} o tras matar a la criatura que has creado.", "Si gastas 5 Palabras de Poder extra, puedes conocer su True Name.", "Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 18,
+						"class": {
+							"name": "Lexarca"
+						},
+						"subclass": {
+							"name": "Lengua de Plata",
+							"source": "Himo"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Cuando acabes con la vida de una criatura usando un de tus rasgos o conjuros de Lexarca, puedes usar tu reacción para convertir a la criatura en un alma en pena. Gastas un número de Palabras de Poder iguales a la mitad del CR de la criatura objetivo y esta se convierte en un Fiend de CR igual o inferior al de la criatura objetivo. Puedes elegir cuál y está bajo tu control. Pasada una hora Baator reclama el alma que ahora es suya. Esa criatura solo puede ser revivida mediante el conjuro de {@spell Wish} o tras matar a la criatura que has creado.",
+				"Si gastas 5 Palabras de Poder extra, puedes conocer su True Name.",
+				"Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."
+			]
 		},
 		{
 			"name": "Vida",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 3, "class": {"name": "Lexarca"}, "subclass": {"name": "Lengua de Oro", "source": "Himo"}}}],
-			"entries": ["Cuando una criatura caiga a 0 HP a 120 ft de ti, puedes gastar una palabra de poder como reacción para cerrar sus heridas. La criatura recupera HP iguales a tu lv. Si estaba {@condition Poisoned|PHB}, ya no lo está. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Lexarca"
+						},
+						"subclass": {
+							"name": "Lengua de Oro",
+							"source": "Himo"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Cuando una criatura caiga a 0 HP a 120 ft de ti, puedes gastar una palabra de poder como reacción para cerrar sus heridas. La criatura recupera HP iguales a tu lv. Si estaba {@condition Poisoned|PHB}, ya no lo está. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."
+			]
 		},
 		{
 			"name": "Curación",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 6, "class": {"name": "Lexarca"}, "subclass": {"name": "Lengua de Oro", "source": "Himo"}}}],
-			"entries": ["Acabas con una condición en una criatura de tu elección. La condiciones que puedes eliminar son {@condition Blinded|PHB}, {@condition Deafened|PHB}, {@condition Dazed|Himo}, mudo, {@condition Charmed|PHB}, {@condition Frightened|PHB}, {@condition Paralyzed|PHB}, {@condition Petrified|PHB}, veneno y enfermedades. Además la criatura puede gastar un dado de golpe para curarse le resultado más su modificador de constitución más tu modificador de carisma. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Lexarca"
+						},
+						"subclass": {
+							"name": "Lengua de Oro",
+							"source": "Himo"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Acabas con una condición en una criatura de tu elección. La condiciones que puedes eliminar son {@condition Blinded|PHB}, {@condition Deafened|PHB}, {@condition Dazed|Himo}, mudo, {@condition Charmed|PHB}, {@condition Frightened|PHB}, {@condition Paralyzed|PHB}, {@condition Petrified|PHB}, veneno y enfermedades. Además la criatura puede gastar un dado de golpe para curarse le resultado más su modificador de constitución más tu modificador de carisma. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."
+			]
 		},
 		{
 			"name": "Revivir",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 18, "class": {"name": "Lexarca"}, "subclass": {"name": "Lengua de Oro", "source": "Himo"}}}],
-			"entries": ["Puedes gastar 5 palabras de poder para revivir a una criatura con todos sus HP si esta llevaba menos de 1 día muerta. Las heridas de la criatura se cierran y regenera lo justo para no morir de nuevo por las heridas, pero nada más. Este rasgo también elimina enfermedades y condiciones, así como Maldiciones cuya CD antimagia sea inferior a tu lv. La criatura objetivo no puede ser revivida de esta forma hasta pasados 5 días. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 18,
+						"class": {
+							"name": "Lexarca"
+						},
+						"subclass": {
+							"name": "Lengua de Oro",
+							"source": "Himo"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Puedes gastar 5 palabras de poder para revivir a una criatura con todos sus HP si esta llevaba menos de 1 día muerta. Las heridas de la criatura se cierran y regenera lo justo para no morir de nuevo por las heridas, pero nada más. Este rasgo también elimina enfermedades y condiciones, así como Maldiciones cuya CD antimagia sea inferior a tu lv. La criatura objetivo no puede ser revivida de esta forma hasta pasados 5 días. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."
+			]
 		},
 		{
 			"name": "Rugido",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 18, "class": {"name": "Lexarca"}, "subclass": {"name": "Lengua de Serpiente", "source": "Himo"}}}],
-			"entries": ["Como acción, gastas 5 palabras de poder y todas las criaturas de tu elección cuyo rostro puedas ver y que puedan oírte salvan Carisma. Con un fallo, reciben tu lv de daño por trueno, tu lv de un daño de tu elección de tu variación elemental y están {@condition Dazed|Himo}, son empujados 15 ft y caen {@condition Prone|PHB}. Con un éxito, solo reciben la mitad del daño.", "Este trait es una Palabra de poder, por lo que triggerea tu variación elemental, tu entereza dracónida si estaba activa y tu Invocación Ancestral si estaba activa.", "Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 18,
+						"class": {
+							"name": "Lexarca"
+						},
+						"subclass": {
+							"name": "Lengua de Serpiente",
+							"source": "Himo"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción, gastas 5 palabras de poder y todas las criaturas de tu elección cuyo rostro puedas ver y que puedan oírte salvan Carisma. Con un fallo, reciben tu lv de daño por trueno, tu lv de un daño de tu elección de tu variación elemental y están {@condition Dazed|Himo}, son empujados 15 ft y caen {@condition Prone|PHB}. Con un éxito, solo reciben la mitad del daño.",
+				"Este trait es una Palabra de poder, por lo que triggerea tu variación elemental, tu entereza dracónida si estaba activa y tu Invocación Ancestral si estaba activa.",
+				"Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."
+			]
 		},
 		{
 			"name": "Jaula",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 3, "class": {"name": "Lexarca"}, "subclass": {"name": "Lengua de Sangre", "source": "Himo"}}}],
-			"entries": ["Cuando una criatura muera a 120 ft de ti, puedes gastar una palabra de poder como reacción para encerrar su alma de vuelta en su cuerpo. La criatura se levanta como un zombie bajo tus órdenes con iniciativa propia. Pasados 10 minutos el cadáver colapsa y el alma es liberada.", "Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Lexarca"
+						},
+						"subclass": {
+							"name": "Lengua de Sangre",
+							"source": "Himo"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Cuando una criatura muera a 120 ft de ti, puedes gastar una palabra de poder como reacción para encerrar su alma de vuelta en su cuerpo. La criatura se levanta como un zombie bajo tus órdenes con iniciativa propia. Pasados 10 minutos el cadáver colapsa y el alma es liberada.",
+				"Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."
+			]
 		},
 		{
 			"name": "ghoul",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 6, "class": {"name": "Lexarca"}, "subclass": {"name": "Lengua de Sangre", "source": "Himo"}}}],
-			"entries": ["Como acción puedes usar una palabra de poder para levantar a una criatura humanoide muerta bajo el aspecto de un Ghoul. El ghoul sigue tus comandos y te protege a toda costa. Pasada una hora el ghoul colapsa y el alma desaparece.", "Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Lexarca"
+						},
+						"subclass": {
+							"name": "Lengua de Sangre",
+							"source": "Himo"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción puedes usar una palabra de poder para levantar a una criatura humanoide muerta bajo el aspecto de un Ghoul. El ghoul sigue tus comandos y te protege a toda costa. Pasada una hora el ghoul colapsa y el alma desaparece.",
+				"Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."
+			]
 		},
 		{
 			"name": "Lichdom",
-			"source": "Himo", "page": "??", "featureType": "PW",
-			"prerequisite": [{"level": {"level": 18, "class": {"name": "Lexarca"}, "subclass": {"name": "Lengua de Sangre", "source": "Himo"}}}],
-			"entries": ["Como acción, elige un número de cadáveres que puedas ver. Puedes elegir gastar de 1 a 3 palabras de poder por cada uno. Por cada cadáver en la que gastaste 1, la levantas como ghoul, si gastaste 2, es una wight, y si gastaste 3 es un wraith (que no invoca espectros). Los no muertos siguen tus comandos y actúan en tu propia defensa si eres atacado y no recibieron otros comandos. Si al final de tu próximo descanso largo seguían vivos, los cadáveres colapsan y no pueden ser revividos de esta forma. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."]
+			"source": "Himo",
+			"page": "??",
+			"featureType": "PW",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 18,
+						"class": {
+							"name": "Lexarca"
+						},
+						"subclass": {
+							"name": "Lengua de Sangre",
+							"source": "Himo"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción, elige un número de cadáveres que puedas ver. Puedes elegir gastar de 1 a 3 palabras de poder por cada uno. Por cada cadáver en la que gastaste 1, la levantas como ghoul, si gastaste 2, es una wight, y si gastaste 3 es un wraith (que no invoca espectros). Los no muertos siguen tus comandos y actúan en tu propia defensa si eres atacado y no recibieron otros comandos. Si al final de tu próximo descanso largo seguían vivos, los cadáveres colapsan y no pueden ser revividos de esta forma. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."
+			]
 		}
 	]
 }
