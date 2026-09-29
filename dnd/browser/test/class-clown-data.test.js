@@ -25,11 +25,20 @@ assert.deepStrictEqual(clown.cantripProgression, [1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 
 const jokeTable = clown.classTableGroups[0];
 const spellTable = clown.classTableGroups[1];
 assert.strictEqual(jokeTable.title, undefined);
-assert.deepStrictEqual(jokeTable.colLabels, ["Bromas", "Cantrips Known"]);
-assert.deepStrictEqual(jokeTable.rows.map(it => it[0]), [2, 2, 3, 3, 5, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 12, 12, 13, 14]);
-assert.deepStrictEqual(jokeTable.rows.map(it => it[1]), clown.cantripProgression);
+assert.deepStrictEqual(jokeTable.colLabels, [
+	"{@filter Cantrips Known|spells|level=0|class=Payaso}",
+	"{@filter Spells Known|spells|class=Payaso}"
+]);
+assert.deepStrictEqual(jokeTable.rows.map(it => it[0]), clown.cantripProgression);
+assert.deepStrictEqual(jokeTable.rows.map(it => it[1]), [2, 2, 3, 3, 5, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 12, 12, 13, 14]);
 assert.strictEqual(spellTable.title, "Spell Slots per Spell Level");
-assert.deepStrictEqual(spellTable.colLabels, ["Lv 1", "Lv 2", "Lv 3", "Lv 4", "Lv 5"]);
+assert.deepStrictEqual(spellTable.colLabels, [
+	"{@filter Lv 1|spells|level=1|class=Payaso}",
+	"{@filter Lv 2|spells|level=2|class=Payaso}",
+	"{@filter Lv 3|spells|level=3|class=Payaso}",
+	"{@filter Lv 4|spells|level=4|class=Payaso}",
+	"{@filter Lv 5|spells|level=5|class=Payaso}"
+]);
 assert.deepStrictEqual(
 	spellTable.rows,
 	[

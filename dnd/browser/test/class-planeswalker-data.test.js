@@ -28,13 +28,19 @@ assert.deepStrictEqual(
 const cantripTable = planeswalker.classTableGroups[0];
 const spellSlotTable = planeswalker.classTableGroups[1];
 assert.strictEqual(cantripTable.title, undefined);
-assert.deepStrictEqual(cantripTable.colLabels, ["Cantrips Known"]);
+assert.deepStrictEqual(cantripTable.colLabels, ["{@filter Cantrips Known|spells|level=0|class=Planeswalker}"]);
 assert.deepStrictEqual(
 	cantripTable.rows.map(it => it[0]),
 	planeswalker.cantripProgression
 );
 assert.strictEqual(spellSlotTable.title, "Spell Slots per Spell Level");
-assert.deepStrictEqual(spellSlotTable.colLabels, ["Lv 1", "Lv 2", "Lv 3", "Lv 4", "Lv 5"]);
+assert.deepStrictEqual(spellSlotTable.colLabels, [
+	"{@filter Lv 1|spells|level=1|class=Planeswalker}",
+	"{@filter Lv 2|spells|level=2|class=Planeswalker}",
+	"{@filter Lv 3|spells|level=3|class=Planeswalker}",
+	"{@filter Lv 4|spells|level=4|class=Planeswalker}",
+	"{@filter Lv 5|spells|level=5|class=Planeswalker}"
+]);
 assert.deepStrictEqual(
 	spellSlotTable.rows,
 	[
@@ -93,9 +99,13 @@ for (const level of [5, 10, 14, 18]) {
 assert(planeswalker.classFeatures[7].find(it => it.name === "Wormhole Mejorado").entries[0].includes("60 pies"));
 assert(planeswalker.classFeatures[14].find(it => it.name === "Wormhole Mejorado").entries[0].includes("90 pies"));
 
-assert.strictEqual(planeswalker.subclasses.length, 4);
-assert.deepStrictEqual(planeswalker.subclasses.map(it => it.name), ["Vía Elemental", "Vía de la Oscuridad", "Vía de la Luz", "Vía del Caos"]);
-assert(planeswalker.subclasses.every(subclass => subclass.subclassFeatures.length === 4));
+const corePaths = ["Elemental", "Oscuridad", "Luz", "Caos"].map(shortName => {
+	const subclass = planeswalker.subclasses.find(it => it.source === "Himo" && it.shortName === shortName);
+	assert(subclass, `The ${shortName} path must exist.`);
+	return subclass;
+});
+assert.deepStrictEqual(corePaths.map(it => it.name), ["Vía Elemental", "Vía de la Oscuridad", "Vía de la Luz", "Vía del Caos"]);
+assert(corePaths.every(subclass => subclass.subclassFeatures.length === 4));
 
 const elemental = planeswalker.subclasses.find(it => it.shortName === "Elemental");
 const serializedElemental = JSON.stringify(elemental);

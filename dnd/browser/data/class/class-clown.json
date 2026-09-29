@@ -112,8 +112,8 @@
 				{
 					"colLabels": 
 					[
-						"Cantrips Known",
-						"Spells Known"
+						"{@filter Cantrips Known|spells|level=0|class=Payaso}",
+						"{@filter Spells Known|spells|class=Payaso}"
 					],
 					"rows": 
 					[
@@ -142,11 +142,11 @@
 				{
 					"title": "Spell Slots per Spell Level",
 					"colLabels": [
-						"Lv 1",
-						"Lv 2",
-						"Lv 3",
-						"Lv 4",
-						"Lv 5"
+						"{@filter Lv 1|spells|level=1|class=Payaso}",
+						"{@filter Lv 2|spells|level=2|class=Payaso}",
+						"{@filter Lv 3|spells|level=3|class=Payaso}",
+						"{@filter Lv 4|spells|level=4|class=Payaso}",
+						"{@filter Lv 5|spells|level=5|class=Payaso}"
 					],
 					"rows": [
 						[

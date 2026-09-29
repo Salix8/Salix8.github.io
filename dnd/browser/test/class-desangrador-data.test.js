@@ -26,7 +26,7 @@ assert.strictEqual(desangrador.spellcastingAbility, "con");
 assert.strictEqual(desangrador.preparedSpells, "<$level$>");
 
 const bloodMagicTable = desangrador.classTableGroups[0];
-assert.deepStrictEqual(bloodMagicTable.colLabels, ["Slot máx", "PtS máx"]);
+assert.deepStrictEqual(bloodMagicTable.colLabels, ["{@filter Slot máx|spells|class=Desangrador}", "PtS máx"]);
 assert.deepStrictEqual(bloodMagicTable.rows.map(it => it[0]), [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5]);
 assert.deepStrictEqual(bloodMagicTable.rows.map(it => it[1]), [2, 3, 4, 5, 7, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 22, 24, 26, 28]);
 

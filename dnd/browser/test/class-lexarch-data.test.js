@@ -22,14 +22,25 @@ assert.strictEqual(lexarch.casterProgression, "full");
 assert.strictEqual(lexarch.spellcastingAbility, "cha");
 assert.deepStrictEqual(lexarch.cantripProgression, [3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5]);
 
-const spellcasting = lexarch.classTableGroups.find(it => it.title === "Spellcasting");
+const spellcasting = lexarch.classTableGroups[0];
 const slots = lexarch.classTableGroups.find(it => it.title === "Spell Slots per Spell Level");
-assert.deepStrictEqual(spellcasting.colLabels, ["Words", "Cantrips Known", "Spells Known"]);
+assert.deepStrictEqual(spellcasting.colLabels, [
+	"Words",
+	"{@filter Cantrips Known|spells|level=0|class=Lexarca}",
+	"{@filter Spells Known|spells|class=Lexarca}"
+]);
 assert.deepStrictEqual(spellcasting.rows.map(it => it[0]), [0,2,2,2,4,4,4,6,6,7,7,7,9,9,9,12,12,12,14,16]);
 assert.deepStrictEqual(spellcasting.rows.map(it => it[1]), lexarch.cantripProgression);
 assert.deepStrictEqual(spellcasting.rows.map(it => it[2]), [2,3,4,5,6,7,8,9,10,11,12,12,13,13,14,14,15,15,15,15]);
 assert.deepStrictEqual(slots.rows, sorcerer.classTableGroups.find(it => it.title === "Spell Slots per Spell Level").rows);
 assert.deepStrictEqual(slots.rowsSpellProgression, slots.rows);
+assert.deepStrictEqual(slots.colLabels, [
+	"{@filter Lv 1|spells|level=1|class=Lexarca}", "{@filter Lv 2|spells|level=2|class=Lexarca}",
+	"{@filter Lv 3|spells|level=3|class=Lexarca}", "{@filter Lv 4|spells|level=4|class=Lexarca}",
+	"{@filter Lv 5|spells|level=5|class=Lexarca}", "{@filter Lv 6|spells|level=6|class=Lexarca}",
+	"{@filter Lv 7|spells|level=7|class=Lexarca}", "{@filter Lv 8|spells|level=8|class=Lexarca}",
+	"{@filter Lv 9|spells|level=9|class=Lexarca}"
+]);
 
 assert.deepStrictEqual(
 	lexarch.classFeatures.map(level => level.map(feature => feature.name)),

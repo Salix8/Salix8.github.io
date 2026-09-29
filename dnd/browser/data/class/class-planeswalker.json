@@ -109,7 +109,7 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"Cantrips Known"
+						"{@filter Cantrips Known|spells|level=0|class=Planeswalker}"
 					],
 					"rows": [
 						[
@@ -177,11 +177,11 @@
 				{
 					"title": "Spell Slots per Spell Level",
 					"colLabels": [
-						"Lv 1",
-						"Lv 2",
-						"Lv 3",
-						"Lv 4",
-						"Lv 5"
+						"{@filter Lv 1|spells|level=1|class=Planeswalker}",
+						"{@filter Lv 2|spells|level=2|class=Planeswalker}",
+						"{@filter Lv 3|spells|level=3|class=Planeswalker}",
+						"{@filter Lv 4|spells|level=4|class=Planeswalker}",
+						"{@filter Lv 5|spells|level=5|class=Planeswalker}"
 					],
 					"rows": [
 						[

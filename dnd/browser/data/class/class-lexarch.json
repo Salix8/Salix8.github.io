@@ -26,13 +26,12 @@
 			"fluff": [{"name":"Lexarca","source":"Himo","page":"??","entries":["CD = 8 + BC + Carisma para conjuros y palabras de poder"]}],
 			"classTableGroups": [
 				{
-					"title": "Spellcasting",
-					"colLabels": ["Words","Cantrips Known","Spells Known"],
+					"colLabels": ["Words","{@filter Cantrips Known|spells|level=0|class=Lexarca}","{@filter Spells Known|spells|class=Lexarca}"],
 					"rows": [[0,3,2],[2,3,3],[2,3,4],[2,4,5],[4,4,6],[4,4,7],[4,4,8],[6,4,9],[6,4,10],[7,5,11],[7,5,12],[7,5,12],[9,5,13],[9,5,13],[9,5,14],[12,5,14],[12,5,15],[12,5,15],[14,5,15],[16,5,15]]
 				},
 				{
 					"title": "Spell Slots per Spell Level",
-					"colLabels": ["Lv 1","Lv 2","Lv 3","Lv 4","Lv 5","Lv 6","Lv 7","Lv 8","Lv 9"],
+					"colLabels": ["{@filter Lv 1|spells|level=1|class=Lexarca}","{@filter Lv 2|spells|level=2|class=Lexarca}","{@filter Lv 3|spells|level=3|class=Lexarca}","{@filter Lv 4|spells|level=4|class=Lexarca}","{@filter Lv 5|spells|level=5|class=Lexarca}","{@filter Lv 6|spells|level=6|class=Lexarca}","{@filter Lv 7|spells|level=7|class=Lexarca}","{@filter Lv 8|spells|level=8|class=Lexarca}","{@filter Lv 9|spells|level=9|class=Lexarca}"],
 					"rowsSpellProgression": [[2,0,0,0,0,0,0,0,0],[3,0,0,0,0,0,0,0,0],[4,2,0,0,0,0,0,0,0],[4,3,0,0,0,0,0,0,0],[4,3,2,0,0,0,0,0,0],[4,3,3,0,0,0,0,0,0],[4,3,3,1,0,0,0,0,0],[4,3,3,2,0,0,0,0,0],[4,3,3,3,1,0,0,0,0],[4,3,3,3,2,0,0,0,0],[4,3,3,3,2,1,0,0,0],[4,3,3,3,2,1,0,0,0],[4,3,3,3,2,1,1,0,0],[4,3,3,3,2,1,1,0,0],[4,3,3,3,2,1,1,1,0],[4,3,3,3,2,1,1,1,0],[4,3,3,3,2,1,1,1,1],[4,3,3,3,3,1,1,1,1],[4,3,3,3,3,2,1,1,1],[4,3,3,3,3,2,2,1,1]],
 					"rows": [[2,0,0,0,0,0,0,0,0],[3,0,0,0,0,0,0,0,0],[4,2,0,0,0,0,0,0,0],[4,3,0,0,0,0,0,0,0],[4,3,2,0,0,0,0,0,0],[4,3,3,0,0,0,0,0,0],[4,3,3,1,0,0,0,0,0],[4,3,3,2,0,0,0,0,0],[4,3,3,3,1,0,0,0,0],[4,3,3,3,2,0,0,0,0],[4,3,3,3,2,1,0,0,0],[4,3,3,3,2,1,0,0,0],[4,3,3,3,2,1,1,0,0],[4,3,3,3,2,1,1,0,0],[4,3,3,3,2,1,1,1,0],[4,3,3,3,2,1,1,1,0],[4,3,3,3,2,1,1,1,1],[4,3,3,3,3,1,1,1,1],[4,3,3,3,3,2,1,1,1],[4,3,3,3,3,2,2,1,1]]
 				}

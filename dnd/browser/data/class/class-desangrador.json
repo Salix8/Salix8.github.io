@@ -83,7 +83,7 @@
 				{
 					"title": "Blood Magic",
 					"colLabels": [
-						"Slot máx",
+						"{@filter Slot máx|spells|class=Desangrador}",
 						"PtS máx"
 					],
 					"rows": [
