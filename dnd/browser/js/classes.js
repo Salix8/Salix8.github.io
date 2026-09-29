@@ -1,6 +1,15 @@
 "use strict";
 
+class ClassesDisplayOptionsFilter extends Filter {
+	// This filter stores display preferences, rather than filtering an entity itself.
+	toDisplay () { return true; }
+	isActive () { return false; }
+}
+
 class ClassesPage extends BaseComponent {
+	static _OPTION_DISPLAY_CLASS_IF_SUBCLASS_VISIBLE = "Display Class if Any Subclass is Visible";
+	static _OPTIONS_FILTER_HEADER = "Other/Text Options";
+
 	static _ascSortSubclasses (scA, scB) {
 		return SortUtil.ascSortLower(scA.name, scB.name);
 	}
@@ -35,6 +44,10 @@ class ClassesPage extends BaseComponent {
 		return cls?.isSidekick ? ["Sidekick"] : [];
 	}
 
+	static _getFilterSources (entity) {
+		return [entity.source, ...(entity.otherSources || []).map(it => it.source)].filter(Boolean);
+	}
+
 	constructor () {
 		super();
 		// Don't include classId in the main state/proxy, as we want special handling for it as the main hash part
@@ -60,7 +73,13 @@ class ClassesPage extends BaseComponent {
 			displayFnMini: it => it === "Reprinted" ? "Repr." : it,
 			displayFnTitle: it => it === "Reprinted" ? it : ""
 		});
-		this._filters = [this._sourceFilter, this._miscFilter];
+		this._optionsFilter = new ClassesDisplayOptionsFilter({
+			header: ClassesPage._OPTIONS_FILTER_HEADER,
+			items: [ClassesPage._OPTION_DISPLAY_CLASS_IF_SUBCLASS_VISIBLE],
+			displayFnMini: () => "Sc>C",
+			displayFnTitle: () => ClassesPage._OPTION_DISPLAY_CLASS_IF_SUBCLASS_VISIBLE
+		});
+		this._filters = [this._sourceFilter, this._miscFilter, this._optionsFilter];
 
 		// region subclass list/filter
 		this._listSubclass = null;
@@ -96,6 +115,54 @@ class ClassesPage extends BaseComponent {
 
 	get activeClass () { return this._dataList[this._classId._]; }
 	get filterBox () { return this._filterBox; }
+
+	_isDisplayClassIfSubclassVisible (filterValues) {
+		return filterValues?.[ClassesPage._OPTIONS_FILTER_HEADER]?.[ClassesPage._OPTION_DISPLAY_CLASS_IF_SUBCLASS_VISIBLE] === 1;
+	}
+
+	_isEntityVisible (filterValues, entity, misc) {
+		return this._filterBox.toDisplay(filterValues, ClassesPage._getFilterSources(entity), misc, null);
+	}
+
+	_isSubclassVisible (filterValues, subclass) {
+		return this._isEntityVisible(filterValues, subclass, subclass._fMisc);
+	}
+
+	_isClassNaturallyVisible (filterValues, cls) {
+		return this._isEntityVisible(filterValues, cls, cls._fMisc);
+	}
+
+	_isAnySubclassVisible (filterValues, cls) {
+		return this._isDisplayClassIfSubclassVisible(filterValues)
+			&& cls.subclasses.some(sc => this._isSubclassVisible(filterValues, sc));
+	}
+
+	_isClassVisible (filterValues, cls) {
+		return this._isClassNaturallyVisible(filterValues, cls)
+			|| this._isAnySubclassVisible(filterValues, cls);
+	}
+
+	_getVisibleSubclassSource (filterValues, cls) {
+		const visibleSubclass = cls.subclasses.find(sc => this._isSubclassVisible(filterValues, sc));
+		if (!visibleSubclass) return null;
+		return ClassesPage._getFilterSources(visibleSubclass)
+			.find(source => this._filterBox.toDisplay(filterValues, source, visibleSubclass._fMisc, null))
+			|| visibleSubclass.source;
+	}
+
+	_getDisplaySource (filterValues, cls, source) {
+		if (source !== cls.source || this._isClassNaturallyVisible(filterValues, cls) || !this._isAnySubclassVisible(filterValues, cls)) return source;
+		return this._getVisibleSubclassSource(filterValues, cls) || source;
+	}
+
+	_isClassContentSourceVisible (filterValues, cls, source) {
+		return this._filterBox.toDisplay(
+			filterValues,
+			this._getDisplaySource(filterValues, cls, source),
+			ClassesPage.getClassContextMisc(cls),
+			null
+		);
+	}
 
 	async pOnLoad () {
 		await ExcludeUtil.pInitialise();
@@ -462,11 +529,7 @@ class ClassesPage extends BaseComponent {
 
 		this._list.filter(li => {
 			const it = this._dataList[li.ix];
-			return this._filterBox.toDisplay(
-				f,
-				it.source,
-				it._fMisc
-			);
+			return this._isClassVisible(f, it);
 		});
 
 		if (
@@ -494,7 +557,7 @@ class ClassesPage extends BaseComponent {
 		this._$trsContent.forEach($tr => {
 			$tr.find(`[data-source]`).each((i, e) => {
 				const source = e.dataset.source;
-				$(e).toggleClass("hidden", !this._filterBox.toDisplay(f, source, ClassesPage.getClassContextMisc(this.activeClass)));
+				$(e).toggleClass("hidden", !this._isClassContentSourceVisible(f, this.activeClass, source));
 			})
 		});
 
@@ -507,7 +570,7 @@ class ClassesPage extends BaseComponent {
 			"_state",
 			"__state",
 			this.activeClass.subclasses
-				.filter(sc => !this._filterBox.toDisplay(f, sc.source, sc._fMisc))
+				.filter(sc => !this._isSubclassVisible(f, sc))
 				.map(sc => UrlUtil.getStateKeySubclass(sc))
 				.filter(stateKey => this._state[stateKey])
 				.mergeMap(stateKey => ({[stateKey]: false}))
@@ -767,7 +830,7 @@ class ClassesPage extends BaseComponent {
 			metasTblRows.forEach(metaTblRow => {
 				metaTblRow.metasFeatureLinks.forEach(metaFeatureLink => {
 					if (metaFeatureLink.source) {
-						const isHidden = !this._filterBox.toDisplay(filterValues, metaFeatureLink.source, ClassesPage.getClassContextMisc(cls));
+						const isHidden = !this._isClassContentSourceVisible(filterValues, cls, metaFeatureLink.source);
 						metaFeatureLink.isHidden = isHidden;
 						metaFeatureLink.$wrpLink.toggleClass("hidden", isHidden);
 					}
@@ -1085,11 +1148,7 @@ class ClassesPage extends BaseComponent {
 		this._listSubclass.filter(li => {
 			if (li.values.isAlwaysVisible) return true;
 			const it = cls.subclasses[li.ix];
-			return this._filterBox.toDisplay(
-				f,
-				it.source,
-				it._fMisc
-			);
+			return this._isSubclassVisible(f, it);
 		});
 	}
 
@@ -1185,7 +1244,7 @@ class ClassesPage extends BaseComponent {
 				// Skip inline entries
 				if (depthData.depth >= 2) return;
 				// Skip filtered sources
-				if (depthData.source && !this._filterBox.toDisplay(filterValues, depthData.source, ClassesPage.getClassContextMisc(this.activeClass))) return;
+				if (depthData.source && !this._isClassContentSourceVisible(filterValues, this.activeClass, depthData.source)) return;
 
 				// If there was not a class specified, then this is not a subclass item, so we can color it with grellow as required
 				cssClass = cssClass || (depthData.source && SourceUtil.isNonstandardSource(depthData.source) ? `cls-nav__item--spicy` : "");
@@ -1534,7 +1593,7 @@ ClassesPage.ClassBookView = class {
 
 				const $btnToggleSc = $(`<span class="cls-bkmv__btn-tab ${sc.isReprinted ? "cls__btn-sc--reprinted" : ""}" title="${ClassesPage.getBtnTitleSubclass(sc)}">${name}</span>`)
 					.on("click", () => this._parent.set(stateKey, !this._parent.get(stateKey)));
-				const isVisible = this._classPage.filterBox.toDisplay(filterValues, sc.source, sc._fMisc);
+				const isVisible = this._classPage._isSubclassVisible(filterValues, sc);
 				if (!isVisible) $btnToggleSc.addClass("hidden");
 
 				const hkShowHide = () => {
@@ -1565,7 +1624,7 @@ ClassesPage.ClassBookView = class {
 			const $tr = $(e);
 			$tr.find(`[data-source]`).each((i, e) => {
 				const source = e.dataset.source;
-				$(e).toggleClass("hidden", !this._classPage.filterBox.toDisplay(f, source, ClassesPage.getClassContextMisc(cls)));
+				$(e).toggleClass("hidden", !this._classPage._isClassContentSourceVisible(f, cls, source));
 			})
 		})
 

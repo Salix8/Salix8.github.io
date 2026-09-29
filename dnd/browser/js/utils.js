@@ -766,6 +766,39 @@ Parser.sourceJsonToColor = function (source) {
 	return `source${Parser.sourceJsonToAbv(source)}`;
 };
 
+Parser._pInitSourceColors = function () {
+	if (typeof document === "undefined" || document.getElementById("source-colors")) return;
+	// The classic source colours mirror 5etools' palette. Sources added after that
+	// catalogue retain a stable, distinct fallback instead of sharing the default text colour.
+	const overrides = {
+		PHB: "#609dd2", SCAG: "#76af76", XGE: "#d29a38", TTP: "#d29a38", HotDQ: "#cc5800", RoT: "#ff2900", PotA: "#57b6c6", LMoP: "#24ee79", EEPC: "#57b6c6",
+		Homebrew: "#8c3b96", ToA: "#666f30", MTF: "#1f6e7b", WDH: "#d4af37", GGR: "#bfa76c", KKW: "#bfa76c", WDMM: "#a2201f", LLK: "#6e7a71", GoS: "#3d695a",
+		AI: "#5baf04", ESK: "#6b909a", DIP: "#6b909a", DC: "#6b909a", SDW: "#6b909a", SLW: "#6b909a", BGDIA: "#752418", ERLW: "#983426", EFR: "#983426", RMR: "#5c7c27",
+		RMBRE: "#5c7c27", MFF: "#92817f", IMR: "#a19364", SADS: "#4f63f5", AL: "#ed1c24",
+		TCE: "#b07d62", FTD: "#d9534f", VRGR: "#a16cc4", BGG: "#69aa8c", EGW: "#63a5c6", DSotDQ: "#bc7dca", Himo: "#e6ab94",
+	};
+	const getColor = (source, abv) => {
+		if (overrides[source] || overrides[abv]) return overrides[source] || overrides[abv];
+		let hash = 0;
+		for (const char of `${source}${abv}`) hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
+		return `hsl(${hash % 360} 58% 62%)`;
+	};
+	const selectors = new Set();
+	Object.entries(Parser.SOURCE_JSON_TO_ABV).forEach(([source, abv]) => selectors.add(`[class~=${JSON.stringify(`source${abv}`)}]{color:${getColor(source, abv)}!important}`));
+	const style = document.createElement("style");
+	style.id = "source-colors";
+	style.textContent = `${[...selectors].join("")} .rd__title-link[class*="source"]{opacity:1}
+		.night-mode,.night-mode *{scrollbar-color:#555 #222}
+		.night-mode::-webkit-scrollbar,.night-mode ::-webkit-scrollbar{width:9px;height:9px}
+		body.night-mode::-webkit-scrollbar{width:15px}
+		.night-mode::-webkit-scrollbar-track,.night-mode ::-webkit-scrollbar-track{background:#222}
+		.night-mode::-webkit-scrollbar-thumb,.night-mode ::-webkit-scrollbar-thumb{background:#555;border:1px solid #222;border-radius:8px}
+		.night-mode::-webkit-scrollbar-thumb:hover,.night-mode ::-webkit-scrollbar-thumb:hover{background:#777}`;
+	document.head.append(style);
+};
+
+if (typeof document !== "undefined") document.addEventListener("DOMContentLoaded", () => Parser._pInitSourceColors(), {once: true});
+
 Parser.stringToSlug = function (str) {
 	return str.trim().toLowerCase().replace(/[^\w ]+/g, "").replace(/ +/g, "-");
 };

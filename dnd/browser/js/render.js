@@ -543,7 +543,7 @@ function Renderer () {
 
 	this._renderEntriesSubtypes = function (entry, textStack, meta, options, incDepth) {
 		const isInlineTitle = meta.depth >= 2;
-		const pagePart = !isInlineTitle && entry.page > 0 ? ` <span class="rd__title-link">${entry.source ? `<span class="help--subtle" title="${Parser.sourceJsonToFull(entry.source)}">${Parser.sourceJsonToAbv(entry.source)}</span> ` : ""}p${entry.page}</span>` : "";
+		const pagePart = !isInlineTitle && entry.page > 0 ? ` <span class="rd__title-link${entry.source ? ` ${Parser.sourceJsonToColor(entry.source)}` : ""}">${entry.source ? `<span class="help--subtle" title="${Parser.sourceJsonToFull(entry.source)}">${Parser.sourceJsonToAbv(entry.source)}</span> ` : ""}p${entry.page}</span>` : "";
 		const nextDepth = incDepth && meta.depth < 2 ? meta.depth + 1 : meta.depth;
 		const styleString = this._renderEntriesSubtypes_getStyleString(entry, meta, isInlineTitle);
 		const dataString = this._renderEntriesSubtypes_getDataString(entry);
