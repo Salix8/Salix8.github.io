@@ -5038,6 +5038,424 @@
 							}
 						]
 					]
+				},
+				{
+					"name": "Echo Knight",
+					"shortName": "Echo Knight",
+					"source": "EGW",
+					"page": 183,
+					"subclassFeatures": [
+						[
+							{
+								"name": "Echo Knight",
+								"source": "EGW",
+								"page": 183,
+								"entries": [
+									"A mysterious and feared frontline warrior of the Kryn Dynasty, the Echo Knight has mastered the art of using dunamis to summon the fading shades of unrealized timelines to aid them in battle. Surrounded by echoes of their own might, they charge into the fray as a cycling swarm of shadows and strikes.",
+									{
+										"type": "entries",
+										"name": "Manifest Echo",
+										"source": "EGW",
+										"page": 183,
+										"entries": [
+											"{@i 3rd-level Echo Knight feature}",
+											"You can use a bonus action to magically manifest an echo of yourself in an unoccupied space you can see within 15 feet of you. This echo is a magical, translucent, gray image of you that lasts until it is destroyed, until you dismiss it as a bonus action, until you manifest another echo, or until you're {@condition incapacitated}.",
+											"Your echo has AC 14 + your proficiency bonus, 1 hit point, and immunity to all conditions. If it has to make a saving throw, it uses your saving throw bonus for the roll. It is the same size as you, and it occupies its space. On your turn, you can mentally command the echo to move up to 30 feet in any direction (no action required). If your echo is ever more than 30 feet from you at the end of your turn, it is destroyed.",
+											"You can use the echo in the following ways:",
+											{
+												"type": "list",
+												"items": [
+													"As a bonus action, you can teleport, magically swapping places with your echo at a cost of 15 feet of your movement, regardless of the distance between the two of you.",
+													"When you take the {@action Attack} action on your turn, any attack you make with that action can originate from your space or the echo's space. You make this choice for each attack.",
+													"When a creature that you can see within 5 feet of your echo moves at least 5 feet away from it, you can use your reaction to make an opportunity attack against that creature as if you were in the echo's space."
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Unleash Incarnation",
+										"source": "EGW",
+										"page": 183,
+										"entries": [
+											"{@i 3rd-level Echo Knight feature}",
+											"You can heighten your echo's fury. Whenever you take the {@action Attack} action, you can make one additional melee attack from the echo's position.",
+											"You can use this feature a number of times equal to your Constitution modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Echo Avatar",
+								"source": "EGW",
+								"page": 183,
+								"entries": [
+									"{@i 7th-level Echo Knight feature}",
+									"You can temporarily transfer your consciousness to your echo. As an action, you can see through your echo's eyes and hear through its ears. During this time, you are {@condition deafened} and {@condition blinded}. You can sustain this effect for up to 10 minutes, and you can end it at any time (requires no action). While your echo is being used in this way, it can be up to 1,000 feet away from you without being destroyed."
+								]
+							}
+						],
+						[
+							{
+								"name": "Shadow Martyr",
+								"source": "EGW",
+								"page": 183,
+								"entries": [
+									"{@i 10th-level Echo Knight feature}",
+									"You can make your echo throw itself in front of an attack directed at another creature that you can see. Before the attack roll is made, you can use your reaction to teleport the echo to an unoccupied space within 5 feet of the targeted creature. The attack roll that triggered the reaction is instead made against your echo.",
+									"Once you use this feature, you can't use it again until you finish a short or long rest."
+								]
+							}
+						],
+						[
+							{
+								"name": "Reclaim Potential",
+								"source": "EGW",
+								"page": 183,
+								"entries": [
+									"{@i 15th-level Echo Knight feature}",
+									"You've learned to absorb the fleeting magic of your echo. When an echo of yours is destroyed by taking damage, you can gain a number of temporary hit points equal to {@dice 2d6} + your Constitution modifier, provided you don't already have temporary hit points.",
+									"You can use this feature a number of times equal to your Constitution modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+								]
+							}
+						],
+						[
+							{
+								"name": "Legion of One",
+								"source": "EGW",
+								"page": 183,
+								"entries": [
+									"{@i 18th-level Echo Knight feature}",
+									"You can use a bonus action to create two echoes with your Manifest Echo feature, and these echoes can coexist. If you try to create a third echo, the previous two echoes are destroyed. Anything you can do from one echo's position can be done from the other's instead.",
+									"In addition, when you roll initiative and have no uses of your Unleash Incarnation feature left, you regain one use of that feature."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Psi Warrior",
+					"shortName": "Psi Warrior",
+					"source": "TCE",
+					"page": 42,
+					"additionalSpells": [
+						{
+							"innate": {
+								"18": {
+									"daily": {
+										"1": [
+											"telekinesis"
+										]
+									}
+								}
+							}
+						}
+					],
+					"subclassFeatures": [
+						[
+							{
+								"name": "Psi Warrior",
+								"source": "TCE",
+								"page": 42,
+								"entries": [
+									"Awake to the psionic power within, a Psi Warrior is a fighter who augments their physical might with psi-infused weapon strikes, telekinetic lashes, and barriers of mental force. Many githyanki train to become such warriors, as do some of the most disciplined high elves. In the world of Eberron, many young kalashtar dream of becoming Psi Warriors.",
+									"As a Psi Warrior, you might have honed your psionic abilities through solo discipline, unlocked it under the tutelage of a master, or refined it at an academy dedicated to wielding the mind's power as both weapon and shield.",
+									{
+										"type": "entries",
+										"name": "Psionic Power",
+										"source": "TCE",
+										"page": 42,
+										"entries": [
+											"{@i 3rd-level Psi Warrior feature}",
+											"You harbor a wellspring of psionic energy within yourself. This energy is represented by your Psionic Energy dice, which are each a {@dice d6}. You have a number of these dice equal to twice your proficiency bonus, and they fuel various psionic powers you have, which are detailed below.",
+											"Some of your powers expend the Psionic Energy die they use, as specified in a power's description, and you can't use a power if it requires you to use a die when your dice are all expended. You regain all your expended Psionic Energy dice when you finish a long rest. In addition, as a bonus action, you can regain one expended Psionic Energy die, but you can't do so again until you finish a short or long rest.",
+											"When you reach certain levels in this class, the size of your Psionic Energy dice increases: at 5th level ({@dice d8}), 11th level ({@dice d10}), and 17th level ({@dice d12}).",
+											"The powers below use your Psionic Energy dice.",
+											{
+												"type": "options",
+												"style": "list-hang-notitle",
+												"entries": [
+													{
+														"type": "entries",
+														"name": "Protective Field",
+														"source": "TCE",
+														"page": 42,
+														"entries": [
+															"When you or another creature you can see within 30 feet of you takes damage, you can use your reaction to expend one Psionic Energy die, roll the die, and reduce the damage taken by the number rolled plus your Intelligence modifier (minimum reduction of 1), as you create a momentary shield of telekinetic force."
+														]
+													},
+													{
+														"type": "entries",
+														"name": "Psionic Strike",
+														"source": "TCE",
+														"page": 42,
+														"entries": [
+															"You can propel your weapons with psionic force. Once on each of your turns, immediately after you hit a target within 30 feet of you with an attack and deal damage to it with a weapon, you can expend one Psionic Energy die, rolling it and dealing force damage to the target equal to the number rolled plus your Intelligence modifier."
+														]
+													},
+													{
+														"type": "entries",
+														"name": "Telekinetic Movement",
+														"source": "TCE",
+														"page": 42,
+														"entries": [
+															"You can move an object or a creature with your mind. As an action, you target one loose object that is Large or smaller or one willing creature, other than yourself. If you can see the target and it is within 30 feet of you, you can move it up to 30 feet to an unoccupied space you can see. Alternatively, if it is a Tiny object, you can move it to or from your hand. Either way, you can move the target horizontally, vertically, or both. Once you take this action, you can't do so again until you finish a short or long rest, unless you expend a Psionic Energy die to take it again."
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Telekinetic Adept",
+								"source": "TCE",
+								"page": 42,
+								"entries": [
+									"{@i 7th-level Psi Warrior feature}",
+									"You have mastered new ways to use your telekinetic abilities, detailed below.",
+									{
+										"type": "options",
+										"style": "list-hang-notitle",
+										"entries": [
+											{
+												"type": "entries",
+												"name": "Psi-Powered Leap",
+												"source": "TCE",
+												"page": 42,
+												"entries": [
+													"As a bonus action, you can propel your body with your mind. You gain a flying speed equal to twice your walking speed until the end of the current turn. Once you take this bonus action, you can't do so again until you finish a short or long rest, unless you expend a Psionic Energy die to take it again."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Telekinetic Thrust",
+												"source": "TCE",
+												"page": 42,
+												"entries": [
+													"When you deal damage to a target with your Psionic Strike, you can force the target to make a Strength saving throw against a DC equal to 8 + your proficiency bonus + your Intelligence modifier. If the save fails, you can knock the target {@condition prone} or move it up to 10 feet in any direction horizontally."
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Guarded Mind",
+								"source": "TCE",
+								"page": 42,
+								"entries": [
+									"{@i 10th-level Psi Warrior feature}",
+									"The psionic energy flowing through you has bolstered your mind. You have resistance to psychic damage. Moreover, if you start your turn {@condition charmed} or {@condition frightened}, you can expend a Psionic Energy die and end every effect on yourself subjecting you to those conditions."
+								]
+							}
+						],
+						[
+							{
+								"name": "Bulwark of Force",
+								"source": "TCE",
+								"page": 42,
+								"entries": [
+									"{@i 15th-level Psi Warrior feature}",
+									"You can shield yourself and others with telekinetic force. As a bonus action, you can choose creatures, which can include you, that you can see within 30 feet of you, up to a number of creatures equal to your Intelligence modifier (minimum of one creature). Each of the chosen creatures is protected by {@quickref Cover||3||half cover} for 1 minute or until you're {@condition incapacitated}.",
+									"Once you take this bonus action, you can't do so again until you finish a long rest, unless you expend a Psionic Energy die to take it again."
+								]
+							}
+						],
+						[
+							{
+								"name": "Telekinetic Master",
+								"source": "TCE",
+								"page": 42,
+								"entries": [
+									"{@i 18th-level Psi Warrior feature}",
+									"Your ability to move creatures and objects with your mind is matched by few. You can cast the {@spell telekinesis} spell, requiring no components, and your spellcasting ability for the spell is Intelligence. On each of your turns while you concentrate on the spell, including the turn when you cast it, you can make one attack with a weapon as a bonus action.",
+									"Once you cast the spell with this feature, you can't do so again until you finish a long rest, unless you expend a Psionic Energy die to cast it again."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Rune Knight",
+					"shortName": "Rune Knight",
+					"source": "TCE",
+					"page": 44,
+					"subclassFeatures": [
+						[
+							{
+								"name": "Rune Knight",
+								"source": "TCE",
+								"page": 44,
+								"entries": [
+									"Rune Knights enhance their martial prowess using the supernatural power of runes, an ancient practice that originated with giants. Rune cutters can be found among any family of giants, and you likely learned your methods first or second hand from such a mystical artisan. Whether you found the giant's work carved into a hill or cave, learned of the runes from a sage, or met the giant in person, you studied the giant's craft and learned how to apply magic runes to empower your equipment.",
+									{
+										"type": "entries",
+										"name": "Bonus Proficiencies",
+										"source": "TCE",
+										"page": 44,
+										"entries": [
+											"{@i 3rd-level Rune Knight feature}",
+											"You gain proficiency with {@item smith's tools|PHB}, and you learn to speak, read, and write {@language Giant}."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Rune Carver",
+										"source": "TCE",
+										"page": 44,
+										"entries": [
+											"{@i 3rd-level Rune Knight feature}",
+											"You can use magic runes to enhance your gear. You learn two runes of your choice, from among the runes described below, and each time you gain a level in this class, you can replace one rune you know with a different one from this feature. When you reach certain levels in this class, you learn additional runes, as shown in the Runes Known table.",
+											"Whenever you finish a long rest, you can touch a number of objects equal to the number of runes you know, and you inscribe a different rune onto each of the objects. To be eligible, an object must be a weapon, a suit of armor, a shield, a piece of jewelry, or something else you can wear or hold in a hand. Your rune remains on an object until you finish a long rest, and an object can bear only one of your runes at a time.",
+											{
+												"type": "table",
+												"caption": "Runes Known",
+												"colLabels": [
+													"Fighter Level",
+													"Number of Runes"
+												],
+												"colStyles": [
+													"col-6 text-center",
+													"col-6 text-center"
+												],
+												"rows": [
+													[
+														"3rd",
+														"2"
+													],
+													[
+														"7th",
+														"3"
+													],
+													[
+														"10th",
+														"4"
+													],
+													[
+														"15th",
+														"5"
+													]
+												]
+											},
+											"The following runes are available to you when you learn a rune. If a rune has a level requirement, you must be at least that level in this class to learn the rune. If a rune requires a saving throw, your Rune Magic save DC equals 8 + your proficiency bonus + your Constitution modifier.",
+											{
+												"type": "options",
+												"count": 2,
+												"entries": [
+													"{@optfeature Cloud Rune|TCE|Cloud Rune}",
+													"{@optfeature Fire Rune|TCE|Fire Rune}",
+													"{@optfeature Frost Rune|TCE|Frost Rune}",
+													"{@optfeature Stone Rune|TCE|Stone Rune}",
+													"{@optfeature Hill Rune|TCE|Hill Rune (7th Level or Higher)}",
+													"{@optfeature Storm Rune|TCE|Storm Rune (7th Level or Higher)}"
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Giant's Might",
+										"source": "TCE",
+										"page": 44,
+										"entries": [
+											"{@i 3rd-level Rune Knight feature}",
+											"You have learned how to imbue yourself with the might of giants. As a bonus action, you magically gain the following benefits, which last for 1 minute:",
+											{
+												"type": "list",
+												"items": [
+													"If you are smaller than Large, you become Large, along with anything you are wearing. If you lack the room to become Large, your size doesn't change.",
+													"You have advantage on Strength checks and Strength saving throws.",
+													"Once on each of your turns, one of your attacks with a weapon or an unarmed strike can deal an extra {@damage 1d6} damage to a target on a hit."
+												]
+											},
+											"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses of it when you finish a long rest."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Runic Shield",
+								"source": "TCE",
+								"page": 44,
+								"entries": [
+									"{@i 7th-level Rune Knight feature}",
+									"You learn to invoke your rune magic to protect your allies. When another creature you can see within 60 feet of you is hit by an attack roll, you can use your reaction to force the attacker to reroll the {@dice d20} and use the new roll.",
+									"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+								]
+							},
+							{
+								"name": "Additional Rune Known",
+								"source": "TCE",
+								"page": 44,
+								"entries": [
+									"{@i 7th-level Rune Knight feature}",
+									"You learn an additional Rune."
+								]
+							}
+						],
+						[
+							{
+								"name": "Great Stature",
+								"source": "TCE",
+								"page": 44,
+								"entries": [
+									"{@i 10th-level Rune Knight feature}",
+									"The magic of your runes permanently alters you. When you gain this feature, roll {@dice 3d4}. You grow a number of inches in height equal to the roll.",
+									"Moreover, the extra damage you deal with your Giant's Might feature increases to {@dice 1d8}."
+								]
+							},
+							{
+								"name": "Additional Rune Known",
+								"source": "TCE",
+								"page": 44,
+								"entries": [
+									"{@i 10th-level Rune Knight feature}",
+									"You learn an additional Rune."
+								]
+							}
+						],
+						[
+							{
+								"name": "Master of Runes",
+								"source": "TCE",
+								"page": 44,
+								"entries": [
+									"{@i 15th-level Rune Knight feature}",
+									"You can invoke each rune you know from your Rune Carver feature twice, rather than once, and you regain all expended uses when you finish a short or long rest."
+								]
+							},
+							{
+								"name": "Additional Rune Known",
+								"source": "TCE",
+								"page": 44,
+								"entries": [
+									"{@i 15th-level Rune Knight feature}",
+									"You learn an additional Rune."
+								]
+							}
+						],
+						[
+							{
+								"name": "Runic Juggernaut",
+								"source": "TCE",
+								"page": 44,
+								"entries": [
+									"{@i 18th-level Rune Knight feature}",
+									"You learn how to amplify your rune-powered transformation. As a result, the extra damage you deal with the Giant's Might feature increases to {@dice 1d10}. Moreover, when you use that feature, your size can increase to Huge, and while you are that size, your reach increases by 5 feet."
+								]
+							}
+						]
+					]
 				}
 			],
 			"fluff": [

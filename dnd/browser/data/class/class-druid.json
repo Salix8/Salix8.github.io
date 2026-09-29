@@ -3262,6 +3262,326 @@
 							}
 						]
 					]
+				},
+				{
+					"name": "Circle of Stars",
+					"shortName": "Stars",
+					"source": "TCE",
+					"page": 38,
+					"additionalSpells": [
+						{
+							"known": {
+								"2": [
+									"guidance#c"
+								]
+							},
+							"prepared": {
+								"2": [
+									"guiding bolt"
+								]
+							}
+						}
+					],
+					"subclassFeatures": [
+						[
+							{
+								"name": "Circle of Stars",
+								"source": "TCE",
+								"page": 38,
+								"entries": [
+									"The Circle of Stars allows druids to draw on the power of starlight. These druids have tracked heavenly patterns since time immemorial, discovering secrets hidden amid the constellations. By revealing and understanding these secrets, the Circle of the Stars seeks to harness the powers of the cosmos.",
+									"Many druids of this circle keep records of the constellations and the stars' effects on the world. Some groups document these observations at megalithic sites, which serve as enigmatic libraries of lore. These repositories might take the form of stone circles, pyramids, petroglyphs, and underground temples-any construction durable enough to protect the circle's sacred knowledge even against a great cataclysm.",
+									{
+										"type": "entries",
+										"name": "Star Map",
+										"source": "TCE",
+										"page": 38,
+										"entries": [
+											"{@i 2nd-level Circle of the Stars feature}",
+											"You've created a star chart as part of your heavenly studies. It is a Tiny object and can serve as a spellcasting focus for your druid spells. You determine its form by rolling on the Star Map table or by choosing one.",
+											{
+												"type": "table",
+												"caption": "Star Map",
+												"colLabels": [
+													"d6",
+													"Map Form"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"1",
+														"A scroll covered with depictions of constellations"
+													],
+													[
+														"2",
+														"A stone tablet with fine holes drilled through it"
+													],
+													[
+														"3",
+														"A speckled owlbear hide, tooled with raised marks"
+													],
+													[
+														"4",
+														"A collection of maps bound in an ebony cover"
+													],
+													[
+														"5",
+														"A crystal that projects starry patterns when placed before a light"
+													],
+													[
+														"6",
+														"Glass disks that depict constellations"
+													]
+												]
+											},
+											"While holding this map, you have these benefits:",
+											{
+												"type": "list",
+												"items": [
+													"You know the {@spell guidance} cantrip.",
+													"You have the {@spell guiding bolt} spell prepared. It counts as a druid spell for you, and it doesn't count against the number of spells you can have prepared.",
+													"You can cast {@spell guiding bolt} without expending a spell slot. You can do so a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+												]
+											},
+											"If you lose the map, you can perform a 1-hour ceremony to magically create a replacement. This ceremony can be performed during a short or long rest, and it destroys the previous map."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Starry Form",
+										"source": "TCE",
+										"page": 38,
+										"entries": [
+											"{@i 2nd-level Circle of the Stars feature}",
+											"As a bonus action, you can expend a use of your Wild Shape feature to take on a starry form, rather than transforming into a beast.",
+											"While in your starry form, you retain your game statistics, but your body becomes luminous; your joints glimmer like stars, and glowing lines connect them as on a star chart. This form sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The form lasts for 10 minutes. It ends early if you dismiss it (no action required), are {@condition incapacitated}, die, or use this feature again.",
+											"Whenever you assume your starry form, choose which of the following constellations glimmers on your body; your choice gives you certain benefits while in the form:",
+											{
+												"type": "entries",
+												"name": "Archer",
+												"source": "TCE",
+												"page": 38,
+												"entries": [
+													"A constellation of an archer appears on you. When you activate this form, and as a bonus action on your subsequent turns while it lasts, you can make a ranged spell attack, hurling a luminous arrow that targets one creature within 60 feet of you. On a hit, the attack deals radiant damage equal to {@damage 1d8} + your Wisdom modifier."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Chalice",
+												"source": "TCE",
+												"page": 38,
+												"entries": [
+													"A constellation of a life-giving goblet appears on you. Whenever you cast a spell using a spell slot that restores hit points to a creature, you or another creature within 30 feet of you can regain hit points equal to {@dice 1d8} + your Wisdom modifier."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Dragon",
+												"source": "TCE",
+												"page": 38,
+												"entries": [
+													"A constellation of a wise dragon appears on you. When you make an Intelligence or a Wisdom check or a Constitution saving throw to maintain {@status concentration} on a spell, you can treat a roll of 9 or lower on the {@dice d20} as a 10."
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Cosmic Omen",
+								"source": "TCE",
+								"page": 38,
+								"entries": [
+									"{@i 6th-level Circle of the Stars feature}",
+									"Whenever you finish a long rest, you can consult your Star Map for omens. When you do so, roll a die. Until you finish your next long rest, you gain access to a special reaction based on whether you rolled an even or an odd number on the die:",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"type": "item",
+												"name": "Weal (even)",
+												"entry": "Whenever a creature you can see within 30 feet of you is about to make an attack roll, a saving throw, or an ability check, you can use your reaction to roll a {@dice d6} and add the number rolled to the total."
+											},
+											{
+												"type": "item",
+												"name": "Woe (odd)",
+												"entry": "Whenever a creature you can see within 30 feet of you is about to make an attack roll, a saving throw, or an ability check, you can use your reaction to roll a {@dice d6} and subtract the number rolled from the total."
+											}
+										]
+									},
+									"You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+								]
+							}
+						],
+						[
+							{
+								"name": "Twinkling Constellations",
+								"source": "TCE",
+								"page": 38,
+								"entries": [
+									"{@i 10th-level Circle of the Stars feature}",
+									"The constellations of your Starry Form improve. The {@damage 1d8} of the Archer and the Chalice becomes {@damage 2d8}, and while the Dragon is active, you have a flying speed of 20 feet and can hover.",
+									"Moreover, at the start of each of your turns while in your Starry Form, you can change which constellation glimmers on your body."
+								]
+							}
+						],
+						[
+							{
+								"name": "Full of Stars",
+								"source": "TCE",
+								"page": 38,
+								"entries": [
+									"{@i 14th-level Circle of the Stars feature}",
+									"While in your Starry Form, you become partially incorporeal, giving you resistance to bludgeoning, piercing, and slashing damage."
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Circle of Wildfire",
+					"shortName": "Wildfire",
+					"source": "TCE",
+					"page": 39,
+					"additionalSpells": [
+						{
+							"prepared": {
+								"2": [
+									"burning hands",
+									"cure wounds"
+								],
+								"3": [
+									"flaming sphere",
+									"scorching ray"
+								],
+								"5": [
+									"plant growth",
+									"revivify"
+								],
+								"7": [
+									"aura of life",
+									"fire shield"
+								],
+								"9": [
+									"flame strike",
+									"mass cure wounds"
+								]
+							}
+						}
+					],
+					"subclassFeatures": [
+						[
+							{
+								"name": "Circle of Wildfire",
+								"source": "TCE",
+								"page": 39,
+								"entries": [
+									"Druids within the Circle of Wildfire understand that destruction is sometimes the precursor of creation, such as when a forest fire promotes later growth. These druids bond with a primal spirit that harbors both destructive and creative power, allowing the druids to create controlled flames that burn away one thing but give life to another.",
+									{
+										"type": "entries",
+										"name": "Circle Spells",
+										"source": "TCE",
+										"page": 39,
+										"entries": [
+											"{@i 2nd-level Circle of Wildfire feature}",
+											"You have formed a bond with a wildfire spirit, a primal being of creation and destruction. Your link with this spirit grants you access to some spells when you reach certain levels in this class, as shown on the Circle of Wildfire Spells table.",
+											"Once you gain access to one of these spells, you always have it prepared, and it doesn't count against the number of spells you can prepare each day. If you gain access to a spell that doesn't appear on the druid spell list, the spell is nonetheless a druid spell for you.",
+											{
+												"type": "table",
+												"caption": "Circle of Wildfire Spells",
+												"colLabels": [
+													"Druid Level",
+													"Circle Spells"
+												],
+												"colStyles": [
+													"col-2 text-center",
+													"col-10"
+												],
+												"rows": [
+													[
+														"2nd",
+														"{@spell burning hands}, {@spell cure wounds}"
+													],
+													[
+														"3rd",
+														"{@spell flaming sphere}, {@spell scorching ray}"
+													],
+													[
+														"5th",
+														"{@spell plant growth}, {@spell revivify}"
+													],
+													[
+														"7th",
+														"{@spell aura of life}, {@spell fire shield}"
+													],
+													[
+														"9th",
+														"{@spell flame strike}, {@spell mass cure wounds}"
+													]
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Summon Wildfire Spirit",
+										"source": "TCE",
+										"page": 39,
+										"entries": [
+											"{@i 2nd-level Circle of Wildfire feature}",
+											"You can summon the primal spirit bound to your soul. As an action, you can expend one use of your Wild Shape feature to summon your wildfire spirit, rather than assuming a beast form.",
+											"The spirit appears in an unoccupied space of your choice that you can see within 30 feet of you. Each creature within 10 feet of the spirit (other than you) when it appears must succeed on a Dexterity saving throw against your spell save DC or take {@damage 2d6} fire damage.",
+											"The spirit is friendly to you and your companions and obeys your commands. See this creature's game statistics in the {@creature Wildfire Spirit|TCE} stat block, which uses your proficiency bonus (PB) in several places. You determine the spirit's appearance. Some spirits take the form of a humanoid figure made of gnarled branches covered in flame, while others look like beasts wreathed in fire.",
+											"In combat, the spirit shares your initiative count, but it takes its turn immediately after yours. The only action it takes on its turn is the {@action Dodge} action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are {@condition incapacitated}, the spirit can take any action of its choice, not just {@action Dodge}.",
+											"The spirit manifests for 1 hour, until it is reduced to 0 hit points, until you use this feature to summon the spirit again, or until you die."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"name": "Enhanced Bond",
+								"source": "TCE",
+								"page": 39,
+								"entries": [
+									"{@i 6th-level Circle of Wildfire feature}",
+									"The bond with your wildfire spirit enhances your destructive and restorative spells. Whenever you cast a spell that deals fire damage or restores hit points while your wildfire spirit is summoned, roll a {@dice d8}, and you gain a bonus equal to the number rolled to one damage or healing roll of the spell.",
+									"In addition, when you cast a spell with a range other than self, the spell can originate from you or your wildfire spirit."
+								]
+							}
+						],
+						[
+							{
+								"name": "Cauterizing Flames",
+								"source": "TCE",
+								"page": 39,
+								"entries": [
+									"{@i 10th-level Circle of Wildfire feature}",
+									"You gain the ability to turn death into magical flames that can heal or incinerate. When a Small or larger creature dies within 30 feet of you or your wildfire spirit, a harmless spectral flame springs forth in the dead creature's space and flickers there for 1 minute. When a creature you can see enters that space, you can use your reaction to extinguish the spectral flame there and either heal the creature or deal fire damage to it. The healing or damage equals {@dice 2d10} + your Wisdom modifier.",
+									"You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+								]
+							}
+						],
+						[
+							{
+								"name": "Blazing Revival",
+								"source": "TCE",
+								"page": 39,
+								"entries": [
+									"{@i 14th-level Circle of Wildfire feature}",
+									"The bond with your wildfire spirit can save you from death. If the spirit is within 120 feet of you when you are reduced to 0 hit points and thereby fall {@condition unconscious}, you can cause the spirit to drop to 0 hit points. You then regain half your hit points and immediately rise to your feet.",
+									"Once you use this feature, you can't use it again until you finish a long rest."
+								]
+							}
+						]
+					]
 				}
 			],
 			"fluff": [
