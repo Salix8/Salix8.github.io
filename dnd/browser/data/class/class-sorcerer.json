@@ -737,6 +737,23 @@
 						],
 						"source": "UAClassFeatureVariants",
 						"page": 10
+					},
+					{
+						"name": "Metamagic Options",
+						"source": "TCE",
+						"page": 65,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 3rd-level sorcerer {@variantrule optional class features|tce|optional feature}}",
+							"When you choose Metamagic options, you have access to the following additional options.",
+							{
+								"type": "options",
+								"entries": [
+									"{@optfeature Seeking Spell|TCE}",
+									"{@optfeature Transmuted Spell|TCE}"
+								]
+							}
+						]
 					}
 				],
 				[
@@ -757,9 +774,40 @@
 						],
 						"source": "UAClassFeatureVariants",
 						"page": 1
+					},
+					{
+						"name": "Sorcerous Versatility",
+						"source": "TCE",
+						"page": 65,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 4th-level sorcerer {@variantrule optional class features|tce|optional feature}}",
+							"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing the magic within you flowing in new ways:",
+							{
+								"type": "list",
+								"items": [
+									"Replace one of the options you chose for the Metamagic feature with a different {@filter Metamagic option|optionalfeatures|Feature Type=MM} available to you.",
+									"Replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the {@filter sorcerer spell list|spells|level=0|class=Sorcerer}."
+								]
+							}
+						]
 					}
 				],
-				[],
+				[
+					{
+						"name": "Magical Guidance",
+						"source": "TCE",
+						"page": 65,
+						"isClassFeatureVariant": true,
+						"consumes": {
+							"name": "Sorcery Point"
+						},
+						"entries": [
+							"{@i 5th-level sorcerer {@variantrule optional class features|tce|optional feature}}",
+							"You can tap into your inner wellspring of magic to try to conjure success from failure. When you make an ability check that fails, you can spend 1 sorcery point to reroll the {@dice d20}, and you must use the new roll, potentially turning the failure into a success."
+						]
+					}
+				],
 				[
 					{
 						"name": "Sorcerous Origin feature",

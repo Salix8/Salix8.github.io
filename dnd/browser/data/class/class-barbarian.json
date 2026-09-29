@@ -270,6 +270,16 @@
 							"At 3rd level, you choose a path that shapes the nature of your rage from the list of available paths. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels."
 						],
 						"gainSubclassFeature": true
+					},
+					{
+						"name": "Primal Knowledge",
+						"source": "TCE",
+						"page": 24,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 3rd-level barbarian {@variantrule optional class features|tce|optional feature}}",
+							"When you reach 3rd level and again at 10th level, you gain proficiency in one skill of your choice from the list of skills available to barbarians at 1st level."
+						]
 					}
 				],
 				[
@@ -330,6 +340,16 @@
 						"entries": [
 							"By 7th level, your instincts are so honed that you have advantage on initiative rolls.",
 							"Additionally, if you are surprised at the beginning of combat and aren't {@condition incapacitated}, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."
+						]
+					},
+					{
+						"name": "Instinctive Pounce",
+						"source": "TCE",
+						"page": 24,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 7th-level barbarian {@variantrule optional class features|tce|optional feature}}",
+							"As part of the bonus action you take to enter your rage, you can move up to half your speed."
 						]
 					}
 				],

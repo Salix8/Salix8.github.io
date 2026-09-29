@@ -385,6 +385,37 @@
 						],
 						"source": "UAClassFeatureVariants",
 						"page": 7
+					},
+					{
+						"name": "Deft Explorer",
+						"source": "TCE",
+						"page": 56,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 1st-level ranger {@variantrule optional class features|tce|optional feature}, which replaces the Natural Explorer feature}",
+							"You are an unsurpassed explorer and survivor, both in the wilderness and in dealing with others on your travels. You gain the Canny benefit below, and you gain an additional benefit below when you reach 6th level and 10th level in this class.",
+							{
+								"name": "Canny",
+								"type": "entries",
+								"entries": [
+									"Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses the chosen skill.",
+									"You can also speak, read, and write two additional languages of your choice."
+								]
+							}
+						]
+					},
+					{
+						"name": "Favored Foe",
+						"source": "TCE",
+						"page": 56,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 1st-level ranger {@variantrule optional class features|tce|optional feature}, which replaces the Favored Enemy feature and works with the Foe Slayer feature}",
+							"When you hit a creature with an attack roll, you can call on your mystical bond with nature to mark the target as your favored enemy for 1 minute or until you lose your {@status concentration} (as if you were {@status concentration||concentrating} on a spell).",
+							"The first time on each of your turns that you hit the favored enemy and deal damage to it, including when you mark it, you can increase that damage by {@damage 1d4}.",
+							"You can use this feature to mark a favored enemy a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
+							"This feature's extra damage increases when you reach certain levels in this class: to {@damage 1d6} at 6th level and to {@damage 1d8} at 14th level."
+						]
 					}
 				],
 				[
@@ -568,6 +599,16 @@
 						],
 						"source": "UAClassFeatureVariants",
 						"page": 8
+					},
+					{
+						"name": "Spellcasting Focus",
+						"source": "TCE",
+						"page": 56,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 2nd-level ranger {@variantrule optional class features|tce|optional feature}}",
+							"You can use a {@item druidic focus|phb} as a spellcasting focus for your ranger spells. A druidic focus might be a sprig of mistletoe or holly, a wand or rod made of yew or another special wood, a staff drawn whole from a living tree, or an object incorporating feathers, fur, bones, and teeth from sacred animals."
+						]
 					}
 				],
 				[
@@ -627,6 +668,51 @@
 						],
 						"source": "UAClassFeatureVariants",
 						"page": 8
+					},
+					{
+						"name": "Primal Awareness",
+						"source": "TCE",
+						"page": 56,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 3rd-level ranger {@variantrule optional class features|tce|optional feature}, which replaces the Primeval Awareness feature}",
+							"You can focus your awareness through the interconnections of nature: you learn additional spells when you reach certain levels in this class if you don't already know them, as shown in the Primal Awareness Spells table. These spells don't count against the number of ranger spells you know.",
+							{
+								"type": "table",
+								"caption": "Primal Awareness Spells",
+								"colLabels": [
+									"Ranger Level",
+									"Spell"
+								],
+								"colStyles": [
+									"col-2 text-center",
+									"col-10"
+								],
+								"rows": [
+									[
+										"3rd",
+										"{@spell speak with animals}"
+									],
+									[
+										"5th",
+										"{@spell beast sense}"
+									],
+									[
+										"9th",
+										"{@spell speak with plants}"
+									],
+									[
+										"13th",
+										"{@spell locate creature}"
+									],
+									[
+										"17th",
+										"{@spell commune with nature}"
+									]
+								]
+							},
+							"You can cast each of these spells once without expending a spell slot. Once you cast a spell in this way, you can't do so again until you finish a long rest."
+						]
 					}
 				],
 				[
@@ -647,6 +733,16 @@
 						],
 						"source": "UAClassFeatureVariants",
 						"page": 1
+					},
+					{
+						"name": "Martial Versatility",
+						"source": "TCE",
+						"page": 56,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 4th-level ranger {@variantrule optional class features|tce|optional feature}}",
+							"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to rangers. This replacement represents a shift of focus in your martial practice."
+						]
 					}
 				],
 				[
@@ -663,6 +759,22 @@
 						"entries": [
 							"At 6th level, you gain an additional favored terrain.",
 							"At 6th level, you choose one additional favored enemy, as well as an associated language. Your choice should reflect the types of monsters you have encountered on your adventures."
+						]
+					},
+					{
+						"name": "Deft Explorer Improvement",
+						"source": "TCE",
+						"page": 56,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"You gain an additional benefit when you reach 6th level in this class.",
+							{
+								"type": "entries",
+								"name": "Roving",
+								"entries": [
+									"Your walking speed increases by 5, and you gain a climbing speed and a swimming speed equal to your walking speed."
+								]
+							}
 						]
 					}
 				],
@@ -725,6 +837,34 @@
 						"name": "Natural Explorer improvement",
 						"entries": [
 							"You gain an additional favored terrain."
+						]
+					},
+					{
+						"name": "Deft Explorer Improvement",
+						"source": "TCE",
+						"page": 56,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"You gain an additional benefit when you reach 10th level in this class.",
+							{
+								"type": "entries",
+								"name": "Tireless",
+								"entries": [
+									"As an action, you can give yourself a number of temporary hit points equal to {@dice 1d8} + your Wisdom modifier (minimum of 1 temporary hit point). You can use this action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
+									"In addition, whenever you finish a short rest, your {@condition exhaustion} level, if any, is decreased by 1."
+								]
+							}
+						]
+					},
+					{
+						"name": "Nature's Veil",
+						"source": "TCE",
+						"page": 56,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 10th-level ranger {@variantrule optional class features|tce|optional feature}, which replaces the Hide in Plain Sight feature}",
+							"You draw on the powers of nature to hide yourself from view briefly. As a bonus action, you can magically become {@condition invisible}, along with any equipment you are wearing or carrying, until the start of your next turn.",
+							"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
 						]
 					}
 				],

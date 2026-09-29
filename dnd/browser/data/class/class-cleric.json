@@ -485,6 +485,19 @@
 							"At 2nd level, you gain a feature from your Divine Domain."
 						],
 						"gainSubclassFeature": true
+					},
+					{
+						"name": "Channel Divinity: Harness Divine Power",
+						"source": "TCE",
+						"page": 30,
+						"isClassFeatureVariant": true,
+						"consumes": {
+							"name": "Channel Divinity"
+						},
+						"entries": [
+							"{@i 2nd-level cleric {@variantrule optional class features|tce|optional feature}}",
+							"You can expend a use of your Channel Divinity to fuel your spells. As a bonus action, you touch your holy symbol, utter a prayer, and regain one expended spell slot, the level of which can be no higher than half your proficiency bonus (rounded up). The number of times you can use this feature is based on the level you've reached in this class: 2nd level, once; 6th level, twice; and 18th level, thrice. You regain all expended uses when you finish a long rest."
+						]
 					}
 				],
 				[],
@@ -506,6 +519,16 @@
 						],
 						"source": "UAClassFeatureVariants",
 						"page": 1
+					},
+					{
+						"name": "Cantrip Versatility",
+						"source": "TCE",
+						"page": 30,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 4th-level cleric {@variantrule optional class features|tce|optional feature}}",
+							"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the {@filter cleric spell list|spells|level=0|class=Cleric}."
+						]
 					}
 				],
 				[

@@ -534,6 +534,20 @@
 							"At 2nd level, you choose to identify with a circle of druids from the list of available circles. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
 						],
 						"gainSubclassFeature": true
+					},
+					{
+						"name": "Wild Companion",
+						"source": "TCE",
+						"page": 35,
+						"isClassFeatureVariant": true,
+						"consumes": {
+							"name": "Wild Shape"
+						},
+						"entries": [
+							"{@i 2nd-level druid {@variantrule optional class features|tce|optional feature}}",
+							"You gain the ability to summon a spirit that assumes an animal form: as an action, you can expend a use of your Wild Shape feature to cast the {@spell find familiar} spell, without material components.",
+							"When you cast the spell in this way, the familiar is a fey instead of a beast, and the familiar disappears after a number of hours equal to half your druid level."
+						]
 					}
 				],
 				[],
@@ -561,6 +575,16 @@
 						],
 						"source": "UAClassFeatureVariants",
 						"page": 1
+					},
+					{
+						"name": "Cantrip Versatility",
+						"source": "TCE",
+						"page": 35,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 4th-level druid {@variantrule optional class features|tce|optional feature}}",
+							"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the {@filter druid spell list|spells|level=0|class=Druid}."
+						]
 					}
 				],
 				[],

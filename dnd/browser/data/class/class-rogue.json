@@ -369,6 +369,16 @@
 							"At 3rd level, you choose an archetype that you emulate in the exercise of your rogue abilities from the list of available archetypes. Your archetype choice grants you features at 3rd level and then again at 9th, 13th, and 17th level."
 						],
 						"gainSubclassFeature": true
+					},
+					{
+						"name": "Steady Aim",
+						"source": "TCE",
+						"page": 62,
+						"isClassFeatureVariant": true,
+						"entries": [
+							"{@i 3rd-level rogue {@variantrule optional class features|tce|optional feature}}",
+							"As a bonus action, you give yourself advantage on your next attack roll on the current turn. You can use this bonus action only if you haven't moved during this turn, and after you use the bonus action, your speed is 0 until the end of the current turn."
+						]
 					}
 				],
 				[
