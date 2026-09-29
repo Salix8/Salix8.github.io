@@ -8301,6 +8301,1440 @@
 			"entries": [
 				"Como acción, elige un número de cadáveres que puedas ver. Puedes elegir gastar de 1 a 3 palabras de poder por cada uno. Por cada cadáver en la que gastaste 1, la levantas como ghoul, si gastaste 2, es una wight, y si gastaste 3 es un wraith (que no invoca espectros). Los no muertos siguen tus comandos y actúan en tu propia defensa si eres atacado y no recibieron otros comandos. Si al final de tu próximo descanso largo seguían vivos, los cadáveres colapsan y no pueden ser revividos de esta forma. Tienes esta palabra de poder siempre preparada y no cuenta para el máximo."
 			]
+		},
+		{
+			"name": "Shock",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Cuando una criatura que puedas ver y esté a rango de un ataque tuyo esté charmeada, puedes convertir el {@condition Charmed|PHB} en shock. Haz una tirada de ataque con tu arma contra la criatura, con un impacto la criatura recibe el daño normal de tu ataque y deja de estar charmeada. Ahora está {@condition Paralyzed|PHB} hasta el inicio de tu próximo turno.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				}
+			]
+		},
+		{
+			"name": "Cubo en la puerta",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Puedes usar 10 minutos para crear una trampa mágica en una ventana, puerta o pasaje. Cuando una criatura que no hayas designado antes pase por el pasaje, salva wisdom. Con un fallo, un cubo mágico cae en su cabeza, cegándole durante 1 minuto. El objetivo debe usar su acción en salvar fuerza y quitarse el cubo.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				}
+			]
+		},
+		{
+			"name": "Chorro de Agua",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Lanzas un chorro de agua a la cara de una criatura. Haz un spell attack a una criatura a 15 ft de ti o menos. Con un éxito, la criatura está {@condition Dazed|Himo}, pudiendo salvar inteligencia al final de cada turno.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				}
+			]
+		},
+		{
+			"name": "Zancadilla",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como reacción cuando una criatura se mueva a 5 ft de ti, puedes ponerle la zancadilla. La criatura salva destreza o cae {@condition Prone|PHB} y pierde el resto de su movilidad.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				}
+			]
+		},
+		{
+			"name": "Palmada Eléctrica",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Sueltas una descarga eléctrica a una criatura para realentizarla. Haz un melé spell attack. Con un impacto el objetivo recibe {@damage 1d8} eléctrico, pierde su reacción, su bonus y su velocidad se reduce a la mitad. Estas desventajas desaparecen al final de tu siguiente turno.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				}
+			]
+		},
+		{
+			"name": "Tartazo",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Eres capaz de crear tartas mágicas que dañen o curen a las criaturas a las que vayan dirigidas. Elige una criatura a 30 ft de ti y haz un spell attack contra ella. Con un impacto la criatura recibe {@damage 1d8}+Cha necróticos o {@dice 3d8}+Cha de curación. Independientemente del resultado, la criatura está ciega hasta el final de su siguiente turno. (Esta broma no puede prepararse con la acción).",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				}
+			]
+		},
+		{
+			"name": "Confeti",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como reacción, cuando una criatura vaya a castear un conjuro de lv 1 o superior, puedes hacer una tirada de spellcasting enfrentada contra el spellcasting del objetivo. Tú añades el BC dos veces a esta tirada, y el objetivo añade el lv de conjuro. Si tú ganas, en vez del conjuro, el objetivo lanza una nube de confeti con las mismas áreas y rango que el conjuro original, pero no afecta negativamente a nadie. El spell slot se pierde igualmente.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				}
+			]
+		},
+		{
+			"name": "Bolsillo Mágico",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Un objeto de hasta 1 metro cúbico desaparece mágicamente en alguna parte de tu cuerpo, incluso si no cabe de normal. Durante 1 hora puedes sacar y guardar ese objeto con la bonus y nadie, excepto tú, puede sacarlo de ahí. Tampoco cuenta para el peso que puedas cargar. Pasado el tiempo, si no sacaste el objeto, se cae cómicamente de tu bolsillo.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				}
+			]
+		},
+		{
+			"name": "Proporciones cómicas",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como reacción cuando una criatura que puedas ver a 60 ft de ti vaya a hacer daño contundente a otra criatura que puedas ver dentro del rango, puedes hacer crecer su arma hasta que sea 8 veces más grande. La criatura tiene ventaja en el ataque y, con un impacto, hace el doble del daño que fuera a hacer. Además el objetivo salva Constitución o está {@condition Stunned|PHB} hasta el final de su próximo turno. Puedes targetear dos veces a la misma arma, pero no puede targetear dos veces al mismo objetivo.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				}
+			]
+		},
+		{
+			"name": "Esquiva Ensayada",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como reacción al recibir un ataque, impones desventaja a la tirada. Con un fallo el ataque ahora targetea a una criatura de tu elección a 5 ft de ti que siga en el rango del arma.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				}
+			]
+		},
+		{
+			"name": "Hombre del Saco",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción elige una criatura a 5 ft de ti y oblígale a hacer una tirada enfrentada de Carisma vs fuerza o destreza. Si tú ganas, la criatura queda encerrada en tu bag of holding. La criatura puede usar su acción para hacer una salvación de Fuerza o Destreza sobre tu CD. Con un éxito, sale de la bag of holding {@condition Prone|PHB} a 5 ft de ti.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				}
+			]
+		},
+		{
+			"name": "Bruto",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Sangre",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Cuando hagas un ataque apta para el rasgo de experto e impactes, puedes gastar un uso de tus bromas para meter sangrado. La CD es tu CD de Payaso y el daño es un dado igual al del arma.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				},
+				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
+			]
+		},
+		{
+			"name": "Acoso",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Sangre",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Con tu acción puedes teletransportarte a 5 ft de una criatura que puedas ver pero que no te esté mirando directamente. No necesitas estar oculto para usar este rasgo. Si te teletransportas a la espalda del objetivo puedes hacer un check de {@skill Stealth} contra su {@skill Perception} pasiva. Con un éxito estás oculto para esa criatura.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				},
+				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
+			]
+		},
+		{
+			"name": "Mil y una risas",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Locura",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Nublas los sentidos de una criatura que puedas ver a 60 ft. Dicha criatura salva Carisma o te ve reflejado en cada otra criatura que pueda ver. Al inicio de su turno usa toda la movilidad necesaria para acercarse a una criatura aleatoria (puede decidirse al azar o puede elegir el DM). La criatura provoca ataques de oportunidad. Una vez llegue ataca a dicha criatura 1 vez y la ilusión acaba. Si la criatura aún tiene movilidad o ataques, aún puede usarlos. Las criaturas con blindsight o trueshight sí distinguen a las criaturas reales dentro de su rango, por lo que podrían ser inmunes.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				},
+				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
+			]
+		},
+		{
+			"name": "Repetidor de Locura",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Locura",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como reacción cuando sea targeteado por daño psíquico, {@condition Charmed|PHB} o {@condition Frightened|PHB}, puede hacer que un pulso salga de él a 30 ft. Todas las criaturas de su elección se curan o reciben daño psíquico igual a su modificador de Carisma, reciben o acaban con {@condition Charmed|PHB} o {@condition Frightened|PHB}, según el efecto original que fuera a recibir el payaso.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				},
+				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
+			]
+		},
+		{
+			"name": "¿Seguro?",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Bufones",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Puedes convencer a una persona de hacer una acción mediante verborrea. Cuando hables al menos 1 minuto con una criatura puedes hacer un check enfrentado de {@skill Persuasion} vs {@skill Insight}. Si fallas, la criatura no se da cuenta, pero si aciertas, logras que una criatura con inteligencia 6 o superior realice una acción o siga un curso de acción simple y específico. La criatura creerá que lo hace por voluntad propia.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				},
+				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
+			]
+		},
+		{
+			"name": "¡Que le corten la cabeza!",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Bufones",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción das ventaja a todas las criaturas que puedan verte y oirte para atacar a una criatura que puedas ver a 60 ft hasta el inicio de tu próximo turno.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				},
+				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
+			]
+		},
+		{
+			"name": "Pasar por el aro",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Maravillas",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como parte de la acción de dash puedes dar un salto en el que te encoges hasta el tamaño de una pulga. Puedes pasar por el espacio de cualquier criatura sin provocar ataques de oportunidad o por huecos de 1 mm sin apretarte. Una vez acabe el salto vuelves a tu tamaño original.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				},
+				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
+			]
+		},
+		{
+			"name": "Malabares",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "BRM",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Maravillas",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción empiezas un espectáculo de malabares con el que pretendes ofrecer apoyo en combate y que puede formar parte del rasgo *Miradas a Mi*. Escoge un número de objetos de tu inventario igual a tu BC. Si los objetos son armas ligeras/arrojadizas, proyectiles o consumibles, los tienes todos equipados. Mientras duren los malabares debes concentrarte como con un conjuro. En tu turno puedes usar tu acción para añadir dos objetos más a tus manos, y con la bonus puedes decidir lanzar cualquier número de ataques con las armas arrojadizas equipadas y/o lanzar pociones. Si el uso de la poción era arrojadizo, puedes hacerlo. Si no, puedes pasarlo a un aliado que puedas ver a 30 ft y que tenga una mano libre. Este puede usar su reacción para cogerlo al vuelo y usarlo. Si dejas de tener objetos en las manos y no tienes tu acción para reponerlos, la broma acaba. Si caes {@condition Prone|PHB} tu {@status Concentration|PHB} se rompe, y si eres empujado la CD de tu {@status Concentration|PHB} es igual al número de pies recorridos.",
+				{
+					"type": "entries",
+					"name": "Uso de las bromas",
+					"entries": [
+						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
+					]
+				},
+				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
+			]
+		},
+		{
+			"name": "Arena en el ojo",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción lanzas arena a los ojos de una criatura a 5 pies. Esta salva Dex o queda ciega hasta el final de tu siguiente turno."
+			]
+		},
+		{
+			"name": "Escupir",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción escupes a una criatura a la cara. Haz una tirada de ataque a melé contra el objetivo a un rango de hasta 10 pies. Con un éxito, el objetivo queda {@condition Dazed|Himo} y salva Wisdom. Con un fallo, pierde o, un ataque del multiataque, o su bonus a tu elección hasta el final de su próximo turno. Si solo atacaba una vez y no tenía bonus, tiene desventaja."
+			]
+		},
+		{
+			"name": "Patada en el estómago",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Si atacaste con la acción, puedes usar tu bonus para hacer un ataque desarmado a fuerza o destreza. Con un impacto, el objetivo recibe {@damage 1d4}+stat y queda {@condition Dazed|Himo} hasta el final de su próximo turno."
+			]
+		},
+		{
+			"name": "Momento incómodo",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como reacción gimes o dices algo incómodo al recibir un ataque en cualquiera de sus opciones. La criatura salva wisdom, de fallar: si te estaba grappleando, te suelta automáticamente; si te estaba atacando, te hace la mitad de daño y pierde el resto del multiataque si iba contra ti; si te estaba empujando, queda {@condition Dazed|Himo}; si te estaba proneando, cae contigo. El DM puede elegir usos adicionales para formas especiales de atacar."
+			]
+		},
+		{
+			"name": "Besar",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción, besas a una criatura a 5 pies de ti que tenga boca. La criatura salva destreza para intentar hacerte una cobra. Mientras dure el beso, debes usar tu acción cada turno para mantenerlo. La criatura salva wisdom al final de su turno o cada vez que reciba daño. Mientras dure, la criatura está {@condition Paralyzed|PHB} y charmeada por ti, y tu estás {@condition Restrained|PHB}. Puedes usar la otra acción del multiataque únicamente para atacar al objetivo y puedes intentar robarle con la bonus. Una vez salve o acabe el efecto, es inmune a este rasgo durante 24 horas. Una criatura inmune a {@condition Charmed|PHB} es inmune a este rasgo."
+			]
+		},
+		{
+			"name": "Dedo en el ojo",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Haces un ataque desarmado sutil a melé contra una criatura con, al menos, un ojo. Con un impacto recibe {@damage 1d8} y está cegado un minuto. Puede salvar consti al final de cada turno."
+			]
+		},
+		{
+			"name": "Brochazo",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Vándalo",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción aplicas una capa de barniz protector al arma de una criatura a 5 pies de ti. Reduce el daño del arma en una cantidad igual a tu BC+Carisma por cada ataque hasta el principio de tu próximo turno. No es stackeable."
+			]
+		},
+		{
+			"name": "Tintazo",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Vándalo",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción, tiras tinta a los ojos de una criatura a 10 pies de ti. Haz una tirada de ataque a distancia (sin desventaja por estar a melé). Con un impacto, el objetivo recibe {@damage 1d4} de daño por ácido y queda cegado un minuto, pudiendo salvar consti al final de cada turno."
+			]
+		},
+		{
+			"name": "Bomba de Tinta",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Vándalo",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción lanzas un vial de pintura que explota en una esfera de 5 pies en un punto a 20 pies de ti. Toda criatura en el área salva destreza o tiene desventaja en ataques hasta el final de tu próximo turno."
+			]
+		},
+		{
+			"name": "Cubo tras la puerta",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Vándalo",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como un ritual de 10 minutos puedes poner un cubo en una superficie de delicado equilibrio. Establece un trigger para la trampa. Cuando una criatura mediana o más pequeña triggeree la trampa, el cubo cae sobre su cabeza. Salva destreza o queda cegada, sorprendida y {@condition Dazed|Himo}. La sorpresa dura dos turnos en vez de uno, y el resto un minuto. Puede salvar wisdom y constitución al final de cada turno, acabando con {@condition Dazed|Himo} o {@condition Blinded|PHB} respectivamente."
+			]
+		},
+		{
+			"name": "Moneda al aire",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Ludópata",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción lanzas una moneda al aire y casteas {@spell Jim's Glowing Coin|AI|Jim’s Glowing Coin}, pero no es magia."
+			]
+		},
+		{
+			"name": "Lanzar 1d20",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Ludópata",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como reacción cuando una criatura se mueve a 30 pies de ti puedes lanzar un dado de 20 caras a sus pies como si fuera un caltrop. El objetivo debe salvar Dex o perder toda su movilidad y caer al suelo. Luego tiene que recoger lel dado para volver a hacerlo o pierde ese set. Si tiene más de un dado, puede hacerlo más veces."
+			]
+		},
+		{
+			"name": "Carta no deseada",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Ludópata",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción haces una tirada enfrentada de {@skill Sleight of Hand} con una criatura a melé. Si ganas, pones una carta en su mano mala. El objetivo no puede usar componentes somáticos ni atacar o utilizar objetos con la bonus. Debe usar una bonus para librarse de la carta."
+			]
+		},
+		{
+			"name": "Fajo de cartas",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Ludópata",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción lanzas cartas en un cono de 30 pies. Hasta el final de tu próximo turno las criaturas están {@condition Dazed|Himo}. Luego tiene que recoger las cartas para volver a hacerlo o pierde ese set. Si tiene más de un set de cartas, puede hacerlo más veces."
+			]
+		},
+		{
+			"name": "Choque de carrera",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Parkourista",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como parte de la acción de dash, puede pasar por el espacio de la criatura objetivo y se choca con ella. Hacen una tirada enfrentada de {@skill Acrobatics} o {@skill Athletics}. Si ganas, la criatura pierde la mitad de su movilidad hasta el final de su próximo turno y ganas 10 pies a la movilidad total de ese turno. Si pierdes, tu movilidad y la del objetivo se reducen a 0 hasta el inicio de tu próximo turno y estás {@condition Prone|PHB} a 5 ft del objetivo. Si el objetivo falló por 7 o más, puedes elegir entre dejarlo {@condition Dazed|Himo} o pronearlo."
+			]
+		},
+		{
+			"name": "Pasar por encima",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Parkourista",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como parte de la acción de desengancharte, elige a una criatura a melé. Esta tira {@skill Acrobatics} sobre tu CD o cae al suelo mientras le pasas por encima."
+			]
+		},
+		{
+			"name": "¿Por qué no te metes con alguien de tu tamaño?",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Parkourista",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como bonus, llamas la atención de una criatura a 60 pies de ti. Esta salva Wisdom o corre hacia ti en su próximo turno. Si no le llega la movilidad, debe dashear. A menos que un rasgo especifique lo contrario (como fly by), no puede evitar generar ataques de oportunidad."
+			]
+		},
+		{
+			"name": "Patada voladora",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Parkourista",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como parte de la acción de dash, si tu movilidad acaba a 5 pies de una criatura hostil, puedes hacer un ataque desarmado sutil contra ella. Con un impacto recibe {@damage 1d8} y queda {@condition Stunned|PHB}."
+			]
+		},
+		{
+			"name": "Empujón",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Matón",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Si has atacado a melé a una criatura, puedes empujarla con la bonus."
+			]
+		},
+		{
+			"name": "Sacar pecho",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Matón",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como bonus amedrentas a una criatura a 10 pies de ti. Salva wisdom o te tiene {@condition Frightened|PHB} hasta el final de su próximo turno."
+			]
+		},
+		{
+			"name": "Someter",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Matón",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Si has usado tu acción para grapplear, puedes usar la bonus para tumbar al objetivo grappleado."
+			]
+		},
+		{
+			"name": "¡Vamos chicos!",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Matón",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción ordenas el ataque a una criatura que puedas ver. Un aliado a 60 pies de ti que pueda atacar con armas o cantrips a la criatura puede usar su reacción para atacarle."
+			]
+		},
+		{
+			"name": "Dando la nota",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Virtuoso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Cuando una criatura a 60 ft. realice un ataque, puedes usar tu reacción para desafinar tu instrumento con un sonido estridente, imponiendo desventaja al ataque."
+			]
+		},
+		{
+			"name": "Nota de Distracción",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Virtuoso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Cuando una criatura que no seas tu haga un check de {@skill Stealth} o {@skill Sleight of Hand} para evitar ser visto haciendo algo, puedes usar tu reacción para sumar tu Carisma a su tirada, distrayendo al objetivo de su tirada con tu música. Tú estarás claramente expuesto."
+			]
+		},
+		{
+			"name": "El Super-estribillo",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Virtuoso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción tocas una canción extremadamente pegadiza para desconcentrar a un caster de tu elección a 60 ft. de ti. Este debe hacer una salvación de {@status Concentration|PHB} contra tu CD o perder la {@status Concentration|PHB}."
+			]
+		},
+		{
+			"name": "Sonata Multitudinaria",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Virtuoso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción tocas tu instrumento, llamando la atención de todas las criaturas a 60 ft. de ti. Toda criatura hostil hacia ti debe salvar Wisdom sobre tu CD. Con un fallo, concentran su aggro en ti."
+			]
+		},
+		{
+			"name": "Grito de Guerra",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Rioter",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción un número de aliados igual a tu Carisma que puedan oirte a 30 ft dejan de tener {@condition Frightened|PHB}."
+			]
+		},
+		{
+			"name": "Gas lacrimógeno",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Rioter",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción lanzas un proyectil mágico a 60 ft. Al impactar contra el suelo se extiende una nube de gas de 15 ft que oscurece ligeramente el área. Todas las criaturas dentro salvan Constitución al inicio de su turno o están {@condition Dazed|Himo} hasta el inicio de su próximo turno. La nube dura 1 minuto o hasta que la disperse una racha de aire fuerte."
+			]
+		},
+		{
+			"name": "Oleada",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Rioter",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como parte de la acción de dash, puedes lanzar una orden de avance. Todos los aliados que puedan verte usan su reacción para avanzar en la misma dirección que tú hasta 30 ft. Pueden sortear obstáculos."
+			]
+		},
+		{
+			"name": "¡A cubierto!",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Rioter",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como reacción cuando tú y/o otros aliados que puedas ver vayan a salvar destreza o constitución, puedes usar tu reacción para ordenarles que tengan cuidado. Tú y/o los aliados que designes ganan un bono a la salvación igual a tu modificador de Carisma y estáis {@condition Prone|PHB}. Una criatura puede elegir no ganar el bono y seguir de pie. Esta reacción se toma cuando se declare el efecto, antes de que todos salven."
+			]
+		},
+		{
+			"name": "Desarme",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 3,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Ratero",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción, haz un check enfrentado usando tu {@skill Sleight of Hand} contra una tirada de {@skill Athletics} o {@skill Acrobatics} del objetivo. Con un éxito, puedes robar un arma o poción que tenga equipado pero a vistas. Si ganas por 7 o más, puedes robar el arma que porte."
+			]
+		},
+		{
+			"name": "Navajazo",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Ratero",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como bonus tras robar a alguien con la acción, puede hacer un ataque con un arma ligera y añadir tanto tu stat de ataque como tu carisma al daño."
+			]
+		},
+		{
+			"name": "Manto Nocturno",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Ratero",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como parte de la acción de Hide, añade tu Carisma al check de {@skill Stealth}. Puedes añadir tu carisma al ataque y al daño del siguiente ataque que hagas contra una criatura que no pueda verte y el ataque se considera mágico para contabilizar las resistencias. Si en vez de atacar decides robar, añades tu carisma al check."
+			]
+		},
+		{
+			"name": "Correa Maestra",
+			"source": "Himo",
+			"page": "??",
+			"featureType": "JUG",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Canalla",
+							"source": "Himo",
+							"visible": true
+						},
+						"subclass": {
+							"name": "Ratero",
+							"source": "Himo",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción sueltas una correa de una armadura pesada o media que esté siendo equipada por una criatura que puedas ver. La criatura salva destreza o pierde un bonificador a su CA hasta tu modificador de carisma, pero no puede bajar de su CA sin armadura. Una criatura no puede recibir esta jugarreta más de una vez hasta que no se reajuste su armadura."
+			]
 		}
 	]
 }

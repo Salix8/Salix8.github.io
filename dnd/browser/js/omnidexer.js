@@ -487,6 +487,22 @@ Omnidexer.TO_INDEX = [
 		include: (it) => Omnidexer.arrIncludesOrEquals(it.featureType, "PW")
 	},
 	{
+		category: Parser.CAT_ID_PRANK,
+		file: "optionalfeatures.json",
+		listProp: "optionalfeature",
+		baseUrl: "optionalfeatures.html",
+		hover: true,
+		include: (it) => Omnidexer.arrIncludesOrEquals(it.featureType, "BRM")
+	},
+	{
+		category: Parser.CAT_ID_TRICK,
+		file: "optionalfeatures.json",
+		listProp: "optionalfeature",
+		baseUrl: "optionalfeatures.html",
+		hover: true,
+		include: (it) => Omnidexer.arrIncludesOrEquals(it.featureType, "JUG")
+	},
+	{
 		category: Parser.CAT_ID_MANEUVER,
 		file: "optionalfeatures.json",
 		listProp: "optionalfeature",

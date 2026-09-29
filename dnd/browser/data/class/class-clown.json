@@ -384,7 +384,7 @@
 						"source": "Himo",
 						"page": "??",
 						"entries": [
-							"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles.",
+							"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles.", "Ver todas las {@filter bromas|optionalfeatures|feature type=BRM|source=Himo}.",
 							{
 								"type": "entries",
 								"name": "Shock",
@@ -484,7 +484,7 @@
 						"source": "Himo",
 						"page": "??",
 						"entries": [
-							"Añade las siguientes bromas a tu lista de bromas conocidas:",
+							"Añade las siguientes bromas a tu lista de bromas conocidas:", "Ver todas las {@filter bromas|optionalfeatures|feature type=BRM|source=Himo}.",
 							{
 								"type": "entries",
 								"name": "Confeti",
@@ -587,7 +587,7 @@
 						"source": "Himo",
 						"page": "??",
 						"entries": [
-							"Añades estas bromas a tu lista de bromas conocidas:",
+							"Añades estas bromas a tu lista de bromas conocidas:", "Ver todas las {@filter bromas|optionalfeatures|feature type=BRM|source=Himo}.",
 							{
 								"type": "entries",
 								"name": "Proporciones cómicas",
@@ -751,7 +751,7 @@
 										"type": "entries",
 										"name": "Bromas Sangrientas",
 										"entries": [
-											"Añade las siguientes dos bromas a la lista de bromas que tienes preparadas. No cuentan para el máximo de bromas que puedes preparar.",
+											"Añade las siguientes dos bromas a la lista de bromas que tienes preparadas. No cuentan para el máximo de bromas que puedes preparar.", "Ver todas las {@filter bromas|optionalfeatures|feature type=BRM|source=Himo}.",
 											{
 												"type": "entries",
 												"name": "Bruto",
@@ -893,7 +893,7 @@
 										"type": "entries",
 										"name": "Bromas Mentales",
 										"entries": [
-											"Añade las siguientes dos bromas a la lista de bromas que tienes preparadas. No cuentan para el máximo de bromas que puedes preparar.",
+											"Añade las siguientes dos bromas a la lista de bromas que tienes preparadas. No cuentan para el máximo de bromas que puedes preparar.", "Ver todas las {@filter bromas|optionalfeatures|feature type=BRM|source=Himo}.",
 											{
 												"type": "entries",
 												"name": "Mil y una risas",
@@ -1038,7 +1038,7 @@
 										"type": "entries",
 										"name": "Bromas Reales",
 										"entries": [
-											"Añade las siguientes dos bromas a la lista de bromas que tienes preparadas. No cuentan para el máximo de bromas que puedes preparar.",
+											"Añade las siguientes dos bromas a la lista de bromas que tienes preparadas. No cuentan para el máximo de bromas que puedes preparar.", "Ver todas las {@filter bromas|optionalfeatures|feature type=BRM|source=Himo}.",
 											{
 												"type": "entries",
 												"name": "¿Seguro?",
@@ -1181,7 +1181,7 @@
 										"type": "entries",
 										"name": "Bromas Circenses",
 										"entries": [
-											"Añade las siguientes dos bromas a la lista de bromas que tienes preparadas. No cuentan para el máximo de bromas que puedes preparar.",
+											"Añade las siguientes dos bromas a la lista de bromas que tienes preparadas. No cuentan para el máximo de bromas que puedes preparar.", "Ver todas las {@filter bromas|optionalfeatures|feature type=BRM|source=Himo}.",
 											{
 												"type": "entries",
 												"name": "Pasar por el aro",

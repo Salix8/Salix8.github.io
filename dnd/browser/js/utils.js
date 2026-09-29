@@ -1572,7 +1572,9 @@ Parser.OPT_FEATURE_TYPE_TO_FULL = {
 	"RN": "Rune Knight Rune",
 	"AF": "Alchemical Formula",
 	"POT": "Poti",
-	"PW": "Palabra de Poder"
+	"PW": "Palabra de Poder",
+	"BRM": "Broma",
+	"JUG": "Jugarreta"
 };
 
 Parser.optFeatureTypeToFull = function (type) {
@@ -1708,6 +1710,8 @@ Parser.CAT_ID_ACTION = 42;
 Parser.CAT_ID_LANGUAGE = 43;
 Parser.CAT_ID_POTION = 44;
 Parser.CAT_ID_POWER_WORD = 45;
+Parser.CAT_ID_PRANK = 46;
+Parser.CAT_ID_TRICK = 47;
 Parser.CAT_ID_STATUS = 49;
 
 Parser.CAT_ID_TO_FULL = {};
@@ -1757,6 +1761,8 @@ Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ACTION] = "Action";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_LANGUAGE] = "Language";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_POTION] = "Poti";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_POWER_WORD] = "Palabra de Poder";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_PRANK] = "Broma";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_TRICK] = "Jugarreta";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_STATUS] = "Status";
 
 Parser.pageCategoryToFull = function (catId) {
@@ -1810,6 +1816,8 @@ Parser.CAT_ID_TO_PROP[Parser.CAT_ID_ACTION] = "action";
 Parser.CAT_ID_TO_PROP[Parser.CAT_ID_LANGUAGE] = "language";
 Parser.CAT_ID_TO_PROP[Parser.CAT_ID_POTION] = "optionalfeature";
 Parser.CAT_ID_TO_PROP[Parser.CAT_ID_POWER_WORD] = "optionalfeature";
+Parser.CAT_ID_TO_PROP[Parser.CAT_ID_PRANK] = "optionalfeature";
+Parser.CAT_ID_TO_PROP[Parser.CAT_ID_TRICK] = "optionalfeature";
 Parser.CAT_ID_TO_PROP[Parser.CAT_ID_STATUS] = "status";
 
 Parser.pageCategoryToProp = function (catId) {
@@ -5035,6 +5043,8 @@ UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_ACTION] = UrlUtil.PG_ACTIONS;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_LANGUAGE] = UrlUtil.PG_LANGUAGES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_POTION] = UrlUtil.PG_OPT_FEATURES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_POWER_WORD] = UrlUtil.PG_OPT_FEATURES;
+UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_PRANK] = UrlUtil.PG_OPT_FEATURES;
+UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_TRICK] = UrlUtil.PG_OPT_FEATURES;
 
 if (!IS_DEPLOYED && !IS_VTT && typeof window !== "undefined") {
 	// for local testing, hotkey to get a link to the current page on the main site

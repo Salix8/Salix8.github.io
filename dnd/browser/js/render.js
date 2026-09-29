@@ -2512,7 +2512,7 @@ Renderer.utils = {
 								if (isClassVisible && isSubclassVisible) classPart = ` ${v.class.name} (${v.subclass.name})`;
 								else if (isClassVisible) classPart = ` ${v.class.name}`;
 								else if (isSubclassVisible) classPart = ` &lt;remember to insert class name here&gt; (${v.subclass.name})`; // :^)
-								return `${Parser.getOrdinalForm(v.level)} level${isClassVisible ? ` ${v.class.name}` : ""}`
+								return `${Parser.getOrdinalForm(v.level)} level${classPart}`
 							}
 						}
 						case "pact": return Parser.prereqPactToFull(v);

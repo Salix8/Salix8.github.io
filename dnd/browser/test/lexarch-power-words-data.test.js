@@ -35,7 +35,7 @@ for (const name of ["Alma","Infierno","Vida","Curación","Revivir","Rugido","Jau
 }
 
 const jsRoot = path.join(__dirname, "..", "js");
-assert(fs.readFileSync(path.join(jsRoot, "optionalfeatures.js"), "utf8").includes('it.featureType === "PW" ? it._dFeatureType'));
+assert(fs.readFileSync(path.join(jsRoot, "optionalfeatures.js"), "utf8").includes('["PW", "BRM", "JUG"].includes(it.featureType) ? it._dFeatureType'));
 assert(fs.readFileSync(path.join(jsRoot, "utils.js"), "utf8").includes('"PW": "Palabra de Poder"'));
 assert(fs.readFileSync(path.join(jsRoot, "utils.js"), "utf8").includes("Parser.CAT_ID_POWER_WORD = 45"));
 assert(fs.readFileSync(path.join(jsRoot, "omnidexer.js"), "utf8").includes("Parser.CAT_ID_POWER_WORD"));
