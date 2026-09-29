@@ -1551,12 +1551,13 @@ class Filter extends FilterBase {
 					// this can be restored from a saved state, otherwise, initialise it
 					if (this._nestsHidden[nestName] == null) this._nestsHidden[nestName] = !!nestMeta.isHidden;
 
-					const $btnText = $(`<span>${nestName} [${this._nestsHidden[nestName] ? "+" : "\u2212"}]</span>`);
+					const displayName = nestMeta.displayName || nestName;
+					const $btnText = $(`<span>${displayName} [${this._nestsHidden[nestName] ? "+" : "\u2212"}]</span>`);
 					nestMeta._$btnNest = $$`<div class="fltr__btn_nest">${$btnText}</div>`
 						.click(() => this._nestsHidden[nestName] = !this._nestsHidden[nestName]);
 
 					const hook = () => {
-						$btnText.text(`${nestName} [${this._nestsHidden[nestName] ? "+" : "\u2212"}]`);
+						$btnText.text(`${displayName} [${this._nestsHidden[nestName] ? "+" : "\u2212"}]`);
 
 						const stats = {high: 0, low: 0, total: 0};
 						this._items
@@ -2271,6 +2272,7 @@ class MultiFilter extends FilterBase {
 		super(opts);
 		this._filters = opts.filters;
 		this._isAddDropdownToggle = !!opts.isAddDropdownToggle;
+		this._modeLocked = opts.isModeLocked ? (opts.mode || "and") : null;
 
 		Object.assign(
 			this.__state,
@@ -2304,6 +2306,7 @@ class MultiFilter extends FilterBase {
 			const toLoad = filterState[this.header];
 			this.setBaseStateFromLoaded(toLoad);
 			Object.assign(this._state, toLoad.state);
+			if (this._modeLocked) this._state.mode = this._modeLocked;
 			this._filters.forEach(it => it.setStateFromLoaded(filterState));
 		}
 	}
@@ -2341,6 +2344,7 @@ class MultiFilter extends FilterBase {
 		});
 
 		if (!hasState) this._reset();
+		if (this._modeLocked) this._state.mode = this._modeLocked;
 	}
 
 	setFromValues (values) {
@@ -2348,11 +2352,13 @@ class MultiFilter extends FilterBase {
 	}
 
 	$render (opts) {
-		const $btnAndOr = $(`<div class="fltr__group-comb-toggle text-muted"/>`)
+		const $btnAndOr = this._modeLocked ? null : $(`<div class="fltr__group-comb-toggle text-muted"/>`)
 			.click(() => this._state.mode = this._state.mode === "and" ? "or" : "and");
-		const hookAndOr = () => $btnAndOr.text(`(group ${this._state.mode.toUpperCase()})`);
-		this._addHook("state", "mode", hookAndOr);
-		hookAndOr();
+		if ($btnAndOr) {
+			const hookAndOr = () => $btnAndOr.text(`(group ${this._state.mode.toUpperCase()})`);
+			this._addHook("state", "mode", hookAndOr);
+			hookAndOr();
+		}
 
 		const $children = this._filters.map((it, i) => it.$render({...opts, isMulti: true, isFirst: i === 0}));
 		const $wrpChildren = $$`<div>${$children}</div>`;
@@ -2393,7 +2399,8 @@ class MultiFilter extends FilterBase {
 			$wrpChildren.toggle(!this._meta.isHidden);
 			$wrpSummary.toggle(this._meta.isHidden);
 
-			const numActive = this._filters.map(it => it.getValues()[it.header]._isActive).filter(Boolean).length;
+			const filterValues = this.getValues();
+			const numActive = this._filters.filter(it => it.isActive(filterValues)).length;
 			if (numActive) {
 				$wrpSummary
 					.title(`${numActive} hidden active filter${numActive === 1 ? "" : "s"}`)
@@ -2444,6 +2451,7 @@ class MultiFilter extends FilterBase {
 
 	_reset () {
 		Object.assign(this._state, this._baseState);
+		if (this._modeLocked) this._state.mode = this._modeLocked;
 	}
 
 	reset (isResetAll) {
@@ -2467,14 +2475,8 @@ class MultiFilter extends FilterBase {
 		const results = [];
 		for (let i = this._filters.length - 1; i >= 0; --i) {
 			const f = this._filters[i];
-			if (f instanceof RangeFilter) {
-				results.push(f.toDisplay(boxState, entryValArr[i]))
-			} else {
-				const totals = boxState[f.header]._totals;
-
-				if (totals.yes === 0 && totals.no === 0) results.push(null);
-				else results.push(f.toDisplay(boxState, entryValArr[i]));
-			}
+			if (!f.isActive(boxState)) results.push(null);
+			else results.push(f.toDisplay(boxState, entryValArr[i]));
 		}
 
 		const resultsActive = results.filter(r => r !== null);

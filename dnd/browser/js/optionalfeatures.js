@@ -13,7 +13,62 @@ function filterFeatureTypeSort (a, b) {
 	return SortUtil.ascSort(Parser.optFeatureTypeToFull(a.item), Parser.optFeatureTypeToFull(b.item))
 }
 
+class OptionalFeatureLevelRangeFilter extends RangeFilter {
+	setStateFromLoaded (filterState) {
+		const toLoad = filterState && filterState[this.header];
+		const state = toLoad && toLoad.state;
+		const isRangeState = state && ["min", "max", "curMin", "curMax"].some(prop => state[prop] != null);
+
+		if (!isRangeState) {
+			if (toLoad) this.setBaseStateFromLoaded(toLoad);
+			return;
+		}
+
+		super.setStateFromLoaded(filterState);
+	}
+
+	setFromSubHashState (state) {
+		const cleanedState = {};
+		Object.entries(state).forEach(([key, values]) => {
+			if (FilterBase.getProp(key) !== "state") {
+				cleanedState[key] = values;
+				return;
+			}
+
+			const rangeValues = values.filter(it => /^(min|max)=/.test(it));
+			if (rangeValues.length) cleanedState[key] = rangeValues;
+		});
+
+		if (!Object.keys(cleanedState).some(key => FilterBase.getProp(key) === "state")) {
+			this.setMetaFromSubHashState(cleanedState);
+			this.reset();
+			return;
+		}
+
+		super.setFromSubHashState(cleanedState);
+	}
+}
+
 class OptionalFeaturesPage extends ListPage {
+	static _getClassLevelFilterMeta (levelMeta) {
+		if (!levelMeta || !levelMeta.class || levelMeta.level == null) return null;
+
+		const className = levelMeta.class.name;
+		const classSource = levelMeta.class.source || SRC_PHB;
+		const subclassName = levelMeta.subclass && levelMeta.subclass.name;
+		const subclassSource = subclassName && (levelMeta.subclass.source || classSource);
+		const classKey = `${className}\u0000${classSource}`;
+		const subclassKey = subclassName ? `${classKey}\u0000${subclassName}\u0000${subclassSource}` : `${classKey}\u0000base`;
+
+		return {
+			classKey,
+			subclassKey,
+			className,
+			subclassName,
+			level: Number(levelMeta.level)
+		};
+	}
+
 	constructor () {
 		const sourceFilter = SourceFilter.getInstance();
 		const typeFilter = new Filter({
@@ -45,12 +100,20 @@ class OptionalFeaturesPage extends ListPage {
 			header: "Ingredients",
 			items: ["Animal", "Vegetal", "Mineral", "Otros", "Especial"]
 		});
-		const levelFilter = new Filter({
-			header: "Level",
-			itemSortFn: SortUtil.ascSortNumericalSuffix,
+		const classFilter = new Filter({
+			header: "Class / Subclass",
+			displayFn: item => item.endsWith("\u0000base") ? "Base" : item.split("\u0000")[2],
+			itemSortFn: (a, b) => SortUtil.ascSortLower(a.item.endsWith("\u0000base") ? "Base" : a.item.split("\u0000")[2], b.item.endsWith("\u0000base") ? "Base" : b.item.split("\u0000")[2]),
 			nests: []
 		});
-		const prerequisiteFilter = new MultiFilter({header: "Prerequisite", filters: [pactFilter, patronFilter, spellFilter, levelFilter, featureFilter, ingredientFilter]});
+		const levelFilter = new OptionalFeatureLevelRangeFilter({header: "Level", min: 1, max: 20});
+		const classAndLevelFilter = new MultiFilter({
+			header: "Class and Level",
+			filters: [classFilter, levelFilter],
+			mode: "and",
+			isModeLocked: true
+		});
+		const prerequisiteFilter = new MultiFilter({header: "Prerequisite", filters: [pactFilter, patronFilter, spellFilter, classAndLevelFilter, featureFilter, ingredientFilter]});
 
 		super({
 			dataSource: "data/optionalfeatures.json",
@@ -81,8 +144,20 @@ class OptionalFeaturesPage extends ListPage {
 		this._patronFilter = patronFilter;
 		this._spellFilter = spellFilter;
 		this._featureFilter = featureFilter;
+		this._classFilter = classFilter;
 		this._levelFilter = levelFilter;
+		this._classAndLevelFilter = classAndLevelFilter;
 		this._ingredientFilter = ingredientFilter;
+	}
+
+	_addClassLevelFilterItem (levelMeta) {
+		const meta = OptionalFeaturesPage._getClassLevelFilterMeta(levelMeta);
+		if (!meta) return null;
+
+		this._classFilter.addNest(meta.classKey, {isHidden: true, displayName: meta.className});
+		this._classFilter.addItem(new FilterItem({item: meta.subclassKey, nest: meta.classKey}));
+		this._levelFilter.addItem(meta.level);
+		return meta;
 	}
 
 	getListItem (it, ivI, isExcluded) {
@@ -106,28 +181,20 @@ class OptionalFeaturesPage extends ListPage {
 				this._featureFilter.addItem(it.feature);
 				return it.feature;
 			});
-			it._fPrereqLevel = it.prerequisite.filter(it => it.level).map(it => {
-				const lvlMeta = it.level;
-				const item = new FilterItem({
-					item: `${lvlMeta.class.name}${lvlMeta.subclass ? ` (${lvlMeta.subclass.name})` : ""} Level ${lvlMeta.level}`,
-					nest: lvlMeta.class.name
-				});
-				this._levelFilter.addNest(lvlMeta.class.name, {isHidden: true});
-				this._levelFilter.addItem(item);
-				return item;
-			});
+			const classLevelMetas = it.prerequisite.map(it => this._addClassLevelFilterItem(it.level)).filter(Boolean);
+			it._fPrereqClass = classLevelMetas.map(it => it.subclassKey);
+			it._fPrereqLevel = classLevelMetas.map(it => it.level);
 		}
 		if (it.potion) {
 			it._fPotionIngredients = it.potion.ingredientTypes || [];
 			this._ingredientFilter.addItem(it._fPotionIngredients);
 
-			const item = new FilterItem({
-				item: `Alquimista Level ${it.potion.level}`,
-				nest: "Alquimista"
+			const meta = this._addClassLevelFilterItem({
+				level: it.potion.level,
+				class: {name: "Alquimista", source: "Himo"}
 			});
-			this._levelFilter.addNest("Alquimista", {isHidden: true});
-			this._levelFilter.addItem(item);
-			it._fPrereqLevel = [item];
+			it._fPrereqClass = [meta.subclassKey];
+			it._fPrereqLevel = [meta.level];
 		}
 
 		if (it.featureType instanceof Array) {
@@ -196,7 +263,7 @@ class OptionalFeaturesPage extends ListPage {
 					it._fPrereqPact,
 					it._fPrereqPatron,
 					it._fprereqSpell,
-					it._fPrereqLevel,
+					[it._fPrereqClass, it._fPrereqLevel],
 					it._fprereqFeature,
 					it._fPotionIngredients
 				]
