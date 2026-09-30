@@ -1085,6 +1085,7 @@ class Filter extends FilterBase {
 		Filter._validateItemNests(this._items, this._nests);
 
 		this._filterBox = null;
+		this._isExternallyHidden = false;
 		this._items.forEach(it => this._defaultItemState(it));
 		this.__$wrpFilter = null;
 		this.__$wrpPills = null;
@@ -1194,6 +1195,11 @@ class Filter extends FilterBase {
 	}
 
 	setValue (k, v) { this._state[k] = v; }
+
+	setIsExternallyHidden (isHidden) {
+		this._isExternallyHidden = !!isHidden;
+		this.__$wrpFilter?.toggleClass("ve-hidden", this._isExternallyHidden);
+	}
 
 	_resetNestsHidden () {
 		if (this._nests) Object.entries(this._nests).forEach(([nestName, nestMeta]) => this._nestsHidden[nestName] = !!nestMeta.isHidden);
@@ -1409,6 +1415,7 @@ class Filter extends FilterBase {
 			${this.__$wrpPills}
 		</div>`;
 
+		this.setIsExternallyHidden(this._isExternallyHidden);
 		this._doToggleDisplay();
 
 		return this.__$wrpFilter;
@@ -2271,6 +2278,8 @@ class MultiFilter extends FilterBase {
 	constructor (opts) {
 		super(opts);
 		this._filters = opts.filters;
+		this._minimalUi = opts.minimalUi;
+		this._isHeaderHidden = !!opts.isHeaderHidden;
 		this._isAddDropdownToggle = !!opts.isAddDropdownToggle;
 		this._modeLocked = opts.isModeLocked ? (opts.mode || "and") : null;
 
@@ -2410,15 +2419,17 @@ class MultiFilter extends FilterBase {
 		this._addHook("meta", "isHidden", hookShowHide);
 		hookShowHide();
 
-		this.__$wrpFilter = $$`<div class="flex-col">
-			${opts.isFirst ? "" : `<div class="fltr__dropdown-divider mb-1"/>`}
-			<div class="split fltr__h fltr__h--multi ${this._minimalUi ? "fltr__minimal-hide" : ""} mb-1">
-				<div class="flex-v-center">
-					<div class="mr-2">${this.header}</div>
-					${$btnAndOr}
-				</div>
-				${$wrpControls}
+		const $header = this._isHeaderHidden ? "" : $$`<div class="split fltr__h fltr__h--multi ${this._minimalUi ? "fltr__minimal-hide" : ""} mb-1">
+			<div class="flex-v-center">
+				<div class="mr-2">${this.header}</div>
+				${$btnAndOr}
 			</div>
+			${$wrpControls}
+		</div>`;
+
+		this.__$wrpFilter = $$`<div class="flex-col">
+			${opts.isFirst || this._isHeaderHidden ? "" : `<div class="fltr__dropdown-divider mb-1"/>`}
+			${$header}
 			${$wrpChildren}
 		</div>`;
 

@@ -25,6 +25,13 @@ class OptionalFeatureLevelRangeFilter extends RangeFilter {
 		}
 
 		super.setStateFromLoaded(filterState);
+
+		// Version 1 of this filter ended at 18. A saved full-range state must grow
+		// with the catalogue instead of silently capping new level-20 options.
+		if (state.min === 1 && state.curMin === 1 && state.max === 18 && state.curMax === 18) {
+			this._state.max = 20;
+			this._state.curMax = 20;
+		}
 	}
 
 	setFromSubHashState (state) {
@@ -50,6 +57,12 @@ class OptionalFeatureLevelRangeFilter extends RangeFilter {
 }
 
 class OptionalFeaturesPage extends ListPage {
+	static _getClassKey (name, source) { return `${name}\u0000${source || SRC_PHB}`; }
+	static _getClassFilterDisplay (item) {
+		const [className, , subclassName] = item.split("\u0000");
+		return subclassName === "base" ? `${className} base` : subclassName;
+	}
+
 	static _getClassLevelFilterMeta (levelMeta) {
 		if (!levelMeta || !levelMeta.class || levelMeta.level == null) return null;
 
@@ -57,7 +70,7 @@ class OptionalFeaturesPage extends ListPage {
 		const classSource = levelMeta.class.source || SRC_PHB;
 		const subclassName = levelMeta.subclass && levelMeta.subclass.name;
 		const subclassSource = subclassName && (levelMeta.subclass.source || classSource);
-		const classKey = `${className}\u0000${classSource}`;
+		const classKey = OptionalFeaturesPage._getClassKey(className, classSource);
 		const subclassKey = subclassName ? `${classKey}\u0000${subclassName}\u0000${subclassSource}` : `${classKey}\u0000base`;
 
 		return {
@@ -102,8 +115,8 @@ class OptionalFeaturesPage extends ListPage {
 		});
 		const classFilter = new Filter({
 			header: "Class / Subclass",
-			displayFn: item => item.endsWith("\u0000base") ? "Base" : item.split("\u0000")[2],
-			itemSortFn: (a, b) => SortUtil.ascSortLower(a.item.endsWith("\u0000base") ? "Base" : a.item.split("\u0000")[2], b.item.endsWith("\u0000base") ? "Base" : b.item.split("\u0000")[2]),
+			displayFn: OptionalFeaturesPage._getClassFilterDisplay,
+			itemSortFn: (a, b) => SortUtil.ascSortLower(OptionalFeaturesPage._getClassFilterDisplay(a.item), OptionalFeaturesPage._getClassFilterDisplay(b.item)),
 			nests: []
 		});
 		const levelFilter = new OptionalFeatureLevelRangeFilter({header: "Level", min: 1, max: 20});
@@ -111,9 +124,14 @@ class OptionalFeaturesPage extends ListPage {
 			header: "Class and Level",
 			filters: [classFilter, levelFilter],
 			mode: "and",
-			isModeLocked: true
+			isModeLocked: true,
+			isHeaderHidden: true
 		});
-		const prerequisiteFilter = new MultiFilter({header: "Prerequisite", filters: [pactFilter, patronFilter, spellFilter, classAndLevelFilter, featureFilter, ingredientFilter]});
+		const prerequisiteFilter = new MultiFilter({
+			header: "Prerequisite",
+			filters: [pactFilter, patronFilter, spellFilter, classAndLevelFilter, featureFilter, ingredientFilter],
+			isHeaderHidden: true
+		});
 
 		super({
 			dataSource: "data/optionalfeatures.json",
@@ -148,6 +166,25 @@ class OptionalFeaturesPage extends ListPage {
 		this._levelFilter = levelFilter;
 		this._classAndLevelFilter = classAndLevelFilter;
 		this._ingredientFilter = ingredientFilter;
+		this._warlockPrerequisiteFilters = [pactFilter, patronFilter, spellFilter];
+
+		const warlockClassKey = OptionalFeaturesPage._getClassKey("Warlock", SRC_PHB);
+		this._classFilter._addHook("nestsHidden", warlockClassKey, () => this._setWarlockPrerequisiteFiltersHidden(this._classFilter._nestsHidden[warlockClassKey] !== false));
+		this._setWarlockPrerequisiteFiltersHidden(true);
+	}
+
+	_setWarlockPrerequisiteFiltersHidden (isHidden) {
+		this._warlockPrerequisiteFilters.forEach(filter => filter.setIsExternallyHidden(isHidden));
+	}
+
+	_positionWarlockPrerequisiteFilters () {
+		if (!this._classFilter.__$wrpFilter) return;
+		[...this._warlockPrerequisiteFilters].reverse().forEach(filter => filter.__$wrpFilter?.insertAfter(this._classFilter.__$wrpFilter));
+	}
+
+	_addData (data) {
+		super._addData(data);
+		this._positionWarlockPrerequisiteFilters();
 	}
 
 	_addClassLevelFilterItem (levelMeta) {

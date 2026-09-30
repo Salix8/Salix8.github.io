@@ -49,7 +49,17 @@ const canallaOptions = page._classFilter._items
 	.filter(it => it.nest === canallaKey)
 	.map(it => page._classFilter._displayFn(it.item))
 	.sort();
-assert.deepStrictEqual(canallaOptions, ["Base", "Ludópata", "Matón", "Parkourista", "Ratero", "Rioter", "Virtuoso", "Vándalo"], "Canalla has Base and the seven Experience subclasses");
+assert.deepStrictEqual(canallaOptions, ["Canalla base", "Ludópata", "Matón", "Parkourista", "Ratero", "Rioter", "Virtuoso", "Vándalo"], "Canalla has its base options and the seven Experience subclasses");
+
+const warlockKey = OptionalFeaturesPage._getClassKey("Warlock", "PHB");
+assert(page._warlockPrerequisiteFilters.every(filter => filter._isExternallyHidden), "Warlock-only prerequisites start hidden");
+page._classFilter._nestsHidden[warlockKey] = false;
+assert(page._warlockPrerequisiteFilters.every(filter => !filter._isExternallyHidden), "Opening Warlock reveals its prerequisites without selecting it");
+page._pactFilter.setValue("Blade", 1);
+page._classFilter._nestsHidden[warlockKey] = true;
+assert(page._warlockPrerequisiteFilters.every(filter => filter._isExternallyHidden), "Closing Warlock hides its prerequisites");
+assert.strictEqual(page._pactFilter.getValues()["Pact Boon"].Blade, 1, "Closing Warlock preserves active prerequisite selections");
+page._pactFilter.reset();
 
 selectOnly(baseTrick);
 setLevel(2, 9);
@@ -81,6 +91,10 @@ assert.strictEqual(restored._state.curMin, 1);
 assert.strictEqual(restored._state.curMax, 20, "Old discrete Level preferences are ignored safely");
 assert.strictEqual(page._levelFilter._state.min, 1);
 assert.strictEqual(page._levelFilter._state.max, 20, "The slider always covers the full character-level range");
+
+const upgradedRange = new OptionalFeaturesPage()._levelFilter;
+upgradedRange.setStateFromLoaded({Level: {state: {min: 1, max: 18, curMin: 1, curMax: 18}}});
+assert.strictEqual(upgradedRange._state.curMax, 20, "The former full 1-18 range expands to level 20");
 
 const nested = page._classAndLevelFilter;
 nested._state.mode = "or";
