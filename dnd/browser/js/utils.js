@@ -4806,6 +4806,15 @@ UrlUtil = {
 		return href;
 	},
 
+	getImageUrl (path) {
+		const encodedPath = `${path}`
+			.replace(/^\/+/, "")
+			.split("/")
+			.map(part => encodeURIComponent(part))
+			.join("/");
+		return `${UrlUtil.IMAGE_ROOT}${encodedPath}`;
+	},
+
 	unpackSubHash (subHash, unencode) {
 		// format is "key:value~list~sep~with~tilde"
 		if (subHash.includes(HASH_SUB_KV_SEP)) {
@@ -4980,6 +4989,8 @@ UrlUtil = {
 		return stateParts.length ? UrlUtil.packSubHash("state", stateParts) : "";
 	}
 };
+
+UrlUtil.IMAGE_ROOT = "https://raw.githubusercontent.com/Salix8/Salix8-assets/main/img/";
 
 UrlUtil.PG_BESTIARY = "bestiary.html";
 UrlUtil.PG_SPELLS = "spells.html";

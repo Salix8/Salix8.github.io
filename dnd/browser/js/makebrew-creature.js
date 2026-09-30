@@ -2705,7 +2705,7 @@ class CreatureBuilder extends Builder {
 			const href = ((image || {}).href || {});
 			if (href.url) $iptUrl.val(href.url);
 			else if (href.path) {
-				$iptUrl.val(`${window.location.origin.replace(/\/+$/, "")}/img/${href.path}`);
+				$iptUrl.val(UrlUtil.getImageUrl(href.path));
 			}
 		}
 

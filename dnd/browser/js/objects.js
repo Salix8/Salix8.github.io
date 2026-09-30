@@ -114,7 +114,7 @@ class ObjectsPage extends ListPage {
 
 		const $floatToken = $(`#float-token`).empty();
 		if (obj.tokenUrl || !obj.uniqueId) {
-			const imgLink = obj.tokenUrl || UrlUtil.link(`img/objects/${obj.name.replace(/"/g, "")}.png`);
+			const imgLink = obj.tokenUrl || UrlUtil.getImageUrl(`objects/${obj.name.replace(/"/g, "")}.png`);
 			$floatToken.append(`
 			<a href="${imgLink}" target="_blank" rel="noopener noreferrer">
 				<img src="${imgLink}" id="token_image" class="token" onerror="TokenUtil.imgError(this)" alt="${obj.name}">

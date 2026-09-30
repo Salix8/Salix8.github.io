@@ -97,7 +97,7 @@ class VehiclesPage extends ListPage {
 
 		function buildStatsTab () {
 			if (veh.tokenUrl || !veh.uniqueId) {
-				const imgLink = veh.tokenUrl || UrlUtil.link(`img/vehicles/tokens/${Parser.sourceJsonToAbv(veh.source)}/${veh.name.replace(/"/g, "")}.png`);
+				const imgLink = veh.tokenUrl || UrlUtil.getImageUrl(`vehicles/tokens/${Parser.sourceJsonToAbv(veh.source)}/${veh.name.replace(/"/g, "")}.png`);
 				$floatToken.append(`<a href="${imgLink}" target="_blank" rel="noopener noreferrer">
 					<img src="${imgLink}" id="token_image" class="token" onerror="TokenUtil.imgError(this)" alt="${veh.name}">
 				</a>`);

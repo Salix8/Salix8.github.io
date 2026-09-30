@@ -381,8 +381,7 @@ function Renderer () {
 	this._renderImage_getUrl = function (entry) {
 		let href;
 		if (entry.href.type === "internal") {
-			const imgPart = `img/${entry.href.path}`;
-			href = this.baseUrl !== "" ? `${this.baseUrl}${imgPart}` : UrlUtil.link(imgPart);
+			href = UrlUtil.getImageUrl(entry.href.path);
 		} else if (entry.href.type === "external") {
 			href = entry.href.url;
 		}
@@ -3787,7 +3786,7 @@ Renderer.monster = {
 	},
 
 	getTokenUrl (mon) {
-		return mon.tokenUrl || UrlUtil.link(`${Renderer.get().baseUrl}img/${Parser.sourceJsonToAbv(mon.source)}/${Parser.nameToTokenName(mon.name)}.png`);
+		return mon.tokenUrl || UrlUtil.getImageUrl(`${Parser.sourceJsonToAbv(mon.source)}/${Parser.nameToTokenName(mon.name)}.png`);
 	},
 
 	getFluff (mon, legendaryMeta, fluffJson) {
