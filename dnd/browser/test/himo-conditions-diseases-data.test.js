@@ -15,6 +15,7 @@ const himoDiseaseNames = [
 	"Fiebre de las Alcantarillas", "Fiebre de Infección", "Fiebre Ghoul", "Fiebres Invernales", "Fiebre del Oro",
 	"Fractura", "Gangrena", "Golpe de Calor", "Hipo Arcano", "Hipotermia", "Indigestión", "Lepra", "Malaria",
 	"Peste", "Pulmones Sucios", "Rabia", "Salmonela", "Sarna", "Sida", "Síndrome de Abstinencia", "Tétanos",
+	"Trastorno de Estrés Postraumático",
 	"Tifus", "Tuberculosis", "Viruela"
 ];
 const himoConditionNames = ["Dazed", "Sangrado"];
@@ -27,7 +28,7 @@ function findTable (name) {
 	return getHimoEntries(data.disease, name)[0].entries.find(it => it.type === "table");
 }
 
-assert.strictEqual(data.disease.length, 38, "El catálogo debe contener 38 enfermedades.");
+assert.strictEqual(data.disease.length, 39, "El catálogo debe contener 39 enfermedades.");
 assert.strictEqual(data.condition.length, 17, "El catálogo debe contener 17 condiciones.");
 assert.strictEqual(data.status.length, 2, "El catálogo debe contener los estados Concentration y Surprised.");
 for (const [label, collection] of [["enfermedades", data.disease], ["condiciones", data.condition], ["estados", data.status]]) {
@@ -76,7 +77,9 @@ for (const [category, names] of [[21, himoDiseaseNames], [6, himoConditionNames]
 		assert.strictEqual(matches.length, 1, `${name} debe aparecer una sola vez en el buscador general.`);
 	}
 }
+const postTraumaticStress = searchIndex.find(it => it.c === 21 && it.s === "Himo" && it.n === "Trastorno de Estrés Postraumático");
+assert.strictEqual(postTraumaticStress.u, "trastorno%20de%20estr%c3%a9s%20postraum%c3%a1tico_himo", "La enfermedad debe abrir su ficha desde el buscador general.");
 assert.strictEqual(new Set(searchIndex.map(it => it.id)).size, searchIndex.length, "El índice no debe contener identificadores duplicados.");
 assert.ok(!pageController.includes("deselFn: (it) => it === \"disease\""), "Las enfermedades no deben estar excluidas al abrir la página.");
 
-console.log("PASS: catálogo Himo (38 enfermedades, 17 condiciones, 2 estados, tablas, referencias e índice)");
+console.log("PASS: catálogo Himo (39 enfermedades, 17 condiciones, 2 estados, tablas, referencias e índice)");

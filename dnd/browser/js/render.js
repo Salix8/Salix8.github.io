@@ -2701,6 +2701,7 @@ Renderer.spell = {
 	getCompactRenderedString (spell) {
 		const renderer = Renderer.get();
 		const renderStack = [];
+		const price = typeof SpellPricingService === "undefined" ? "Sin tasar" : SpellPricingService.getFormattedPrice(spell);
 
 		renderStack.push(`
 			${Renderer.utils.getExcludedTr(spell, "spell")}
@@ -2711,20 +2712,22 @@ Renderer.spell = {
 						<th colspan="1">Level</th>
 						<th colspan="1">School</th>
 						<th colspan="2">Casting Time</th>
-						<th colspan="2">Range</th>
+						<th colspan="2">Price</th>
 					</tr>
 					<tr>
 						<td colspan="1">${Parser.spLevelToFull(spell.level)}${Parser.spMetaToFull(spell.meta)}</td>
 						<td colspan="1">${Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)}</td>
 						<td colspan="2">${Parser.spTimeListToFull(spell.time)}</td>
-						<td colspan="2">${Parser.spRangeToFull(spell.range)}</td>
+						<td colspan="2">${price}</td>
 					</tr>
 					<tr>
-						<th colspan="4">Components</th>
+						<th colspan="2">Range</th>
+						<th colspan="2">Components</th>
 						<th colspan="2">Duration</th>
 					</tr>
 					<tr>
-						<td colspan="4">${Parser.spComponentsToFull(spell.components, spell.level)}</td>
+						<td colspan="2">${Parser.spRangeToFull(spell.range)}</td>
+						<td colspan="2">${Parser.spComponentsToFull(spell.components, spell.level)}</td>
 						<td colspan="2">${Parser.spDurationToFull(spell.duration)}</td>
 					</tr>
 				</table>

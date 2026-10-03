@@ -530,6 +530,502 @@
 				]
 			],
 			"page": 196
+		},
+		{
+			"name": "Wild Magic",
+			"source": "Himo",
+			"caption": "Wild Magic",
+			"colLabels": [
+				"d100",
+				"Efecto"
+			],
+			"colStyles": [
+				"col-2 text-center",
+				"col-10"
+			],
+			"rows": [
+				[
+					"1-2",
+					"Tira en la tabla al principio de cada turno durante 1 minuto. Reroll 1-2"
+				],
+				[
+					"3",
+					"Puedes ver criaturas invisibles durante 1 minuto."
+				],
+				[
+					"4",
+					"Ganas truesight a 10 ft durante 1 minuto."
+				],
+				[
+					"5",
+					"Invocas un Modron* controlado por el DM a 5 ft. Desaparece en 1 minuto."
+				],
+				[
+					"6",
+					"Invocas un Slaad* controlado por el DM. Desaparece en 1 minuto"
+				],
+				[
+					"7",
+					"Bola de fuego centrado en ti."
+				],
+				[
+					"8",
+					"Watery sphere del tamaño de una bola de fuego centrado en ti"
+				],
+				[
+					"9",
+					"Misil Mágico a lv5"
+				],
+				[
+					"10",
+					"Mass Healing Word"
+				],
+				[
+					"11",
+					"Tira 1d10. Tu altura aumenta (par) o disminuye (impar) en pulgadas (2.54 cm)"
+				],
+				[
+					"12",
+					"Durante 24 horas eres del sexo opuesto (o ganas un sexo aleatorio si no tenías)"
+				],
+				[
+					"13",
+					"Confusión centrado en ti"
+				],
+				[
+					"14",
+					"Todas las criaturas a 10 ft de ti (tu incluido) tienen Blink"
+				],
+				[
+					"15",
+					"Recuperas 5 HP al principio del turno durante 1 minuto"
+				],
+				[
+					"16",
+					"Suma 5 al daño del primer ataque o salvación de daño que impacte cada turno durante 1 minuto"
+				],
+				[
+					"17",
+					"Te crece una barba de plumas que permanece hasta que estornudas"
+				],
+				[
+					"18",
+					"Invocas 300 ranas a 30 ft de ti. Es todo terreno dificil y algunas son venenosas. No hacen nada, pero no las lamas (o si, yo avisé)"
+				],
+				[
+					"19",
+					"Grasa centrado en ti"
+				],
+				[
+					"20",
+					"Web centrado en ti"
+				],
+				[
+					"21",
+					"Tu próximo conjuro en 1 minuto se salva con desventaja"
+				],
+				[
+					"22",
+					"Tu próximo spell attack en 1 min va con ventaja. Si el conjuro requiere más de un ataque, todos tienen ventaja el primer turno."
+				],
+				[
+					"23",
+					"Tu piel se vuelve azul. Se quita con Remove Curse"
+				],
+				[
+					"24",
+					"Durante 24 horas todo lo que tocas se vuelve azul 1 hora. Si ya era azul, ahora es amarillo/naranja"
+				],
+				[
+					"25",
+					"Un ojo aparece en tu frente durante 1 minuto, dándote ventaja a Percepción para ver"
+				],
+				[
+					"26",
+					"Te crecen orejas de burro que te dan ventaja a Percepción (oir) 1 min"
+				],
+				[
+					"27-28",
+					"Tus conjuros de acción se castean con la bonus 1 minuto"
+				],
+				[
+					"29",
+					"Te teletransportas hasta 60 ft a un espacio desocupado que puedas ver."
+				],
+				[
+					"30",
+					"Una persona aleatoria a 60 ft de ti se teletransporta a un lugar aleatorio a 5 ft de ti."
+				],
+				[
+					"31",
+					"Te teletransportas al plano astral hasta el final de tu próximo turno"
+				],
+				[
+					"32",
+					"Te teletransportas al plano etéreo hasta el final de tu próximo turno"
+				],
+				[
+					"33",
+					"Maxeas el daño del próximo conjuro que castees en 1 minuto"
+				],
+				[
+					"34",
+					"Duplicas la cantidad de dados de daño del próximo conjuro en 1 minuto"
+				],
+				[
+					"35",
+					"Tira 1d10. Envejeces (par) o rejuveneces (impar) esos años"
+				],
+				[
+					"36",
+					"Tira un dado. Par, tu voz se vuelve como la del doblador de Albion Online; Impar, tu voz se vuelve aguda y como distorsionada por helio. El efecto acaba pasadas 24 horas."
+				],
+				[
+					"37",
+					"Invocas 1d6 flumphs que te tienen miedo. Desaparecen en 1 minuto"
+				],
+				[
+					"38",
+					"Invocas 1d6 goblins controlados por el DM. No hacen nada, solo esquivan y te insultan. Desaparecen en 1 minuto."
+				],
+				[
+					"39-40",
+					"Recuperas 2d10 HP"
+				],
+				[
+					"41",
+					"Te transformas en planta hasta el inicio de tu próximo turno. Vulnerable a todo daño e incapacitado. Si caes a 0 HP, acaba el efecto."
+				],
+				[
+					"42",
+					"Eres un charco de agua durante 1 minuto. Estás incapacitado y no te puedes mover. Solo tienes 1 HP, pero eres inmune a todo daño que no drene agua específicamente. Si pierdes tu HP, vuelves a la normalidad, recibiendo 10 de daño."
+				],
+				[
+					"43",
+					"Te puedes tp 20 ft como bonus durante 1 minuto"
+				],
+				[
+					"44",
+					"Durante 1 minuto entras o sales del plano etéreo como bonus"
+				],
+				[
+					"45",
+					"Levitar self"
+				],
+				[
+					"46",
+					"Durante 10 minutos estás bajo los efectos de Jump y caída de pluma"
+				],
+				[
+					"47",
+					"Invocas un unicornio (el de Elfieran) a 5 ft y desaparece en 1 min"
+				],
+				[
+					"48",
+					"Invocas un Living Portent a 5 ft, te dice cualquier mierda y c va"
+				],
+				[
+					"49",
+					"Al hablar salen burbujas rosas de tu boca en vez de palabras"
+				],
+				[
+					"50",
+					"Te da Hipo Arcano"
+				],
+				[
+					"51",
+					"Aparece un escudo flotante espectral que te da +2 a la CA e inmunidad a Misil Mágico 1 minuto"
+				],
+				[
+					"52",
+					"Tenés Barkskin 1 minuto, suerte bro"
+				],
+				[
+					"53",
+					"Inmune al alcohol durante 5d6 días"
+				],
+				[
+					"54",
+					"El alcohol te aporta el doble de graduación durante 5d6 días"
+				],
+				[
+					"55",
+					"Caaaaaaaaaalvo 24 horas"
+				],
+				[
+					"56",
+					"Tio cosa 24 horas"
+				],
+				[
+					"57",
+					"Incendias cualquier objeto inflamable que toques (que no esté siendo equipado) durante 1 minuto"
+				],
+				[
+					"58",
+					"Estornudas hacia el suelo sin ponerte las manos en la boca. Todo a 20 ft de ti está congelado y es terreno díficil. Normas de hielo, te las sabes. Te dio covid, lo haces todo el rato durante 1 min. Puedes salvar consti con la acción para intentar parar"
+				],
+				[
+					"59",
+					"Recuperas tu slot gastado más chiquito"
+				],
+				[
+					"60",
+					"El conjuro que ha desencadenado este efecto no gasta slot"
+				],
+				[
+					"61",
+					"Durante 1 minuto no hablas, gritas"
+				],
+				[
+					"62",
+					"Durante 1 minuto no hablas, susurras"
+				],
+				[
+					"63",
+					"Fog Cloud centrado en ti"
+				],
+				[
+					"64",
+					"Stinking Cloud centrado en ti"
+				],
+				[
+					"65",
+					"Hasta 3 criaturas de tu elección a 30 ft de ti reciben 4d10 por rayo"
+				],
+				[
+					"66",
+					"Hasta 3 criaturas de tu elección a 30 ft de ti reciben 2d10 de un daño elemental aleatorio y su respectivo efecto secundario del Arcane Cannon (fuego y eléctrico hacen 1d6 por turno hasta que salven dex)"
+				],
+				[
+					"67",
+					"Estás asustado de la criatura más cercana a ti por 1 minuto"
+				],
+				[
+					"68",
+					"Estás charmed de la criatura más cercana a ti por 1 minuto"
+				],
+				[
+					"69",
+					"Cada criatura a 30 ft se vuelve invisible (lv2)"
+				],
+				[
+					"70",
+					"Cada criatura a 30 ft brilla como en fearie fire"
+				],
+				[
+					"71",
+					"Resistencia a todo daño 1 minuto"
+				],
+				[
+					"72",
+					"Magic Resistance 1 minuto. El daño se contabiliza como en Evasión"
+				],
+				[
+					"73",
+					"Una criatura random a 60 ft está envenenada 1d4 horas"
+				],
+				[
+					"74",
+					"Una criatura random a 60 ft tiene hipo arcano (o 4 estadios de borrachera si no puede castear conjuros) 1d4 horas"
+				],
+				[
+					"75",
+					"Luz brillante a 30 ft durante 1 min, cualquier criatura que acabe su turno a 5 ft se queda ciega"
+				],
+				[
+					"76",
+					"Hueles a qlo. toda criatura que acabe a 5 ft de ti está envenenada mientras siga ahí."
+				],
+				[
+					"77",
+					"Polymorph oveja self (puedes salvar)"
+				],
+				[
+					"78",
+					"6 paneles de 5 ft de muro de fuerza te atrapan. Sigue las normas de domo de protección para liberarte (si quieres xD). Tiene 50 HP."
+				],
+				[
+					"79",
+					"Mariposas ilusorias y pétalos de flor flotan a 10 ft de mi durante 1 minuto"
+				],
+				[
+					"80",
+					"Efectos ilusorios anime complementan tus acciones para que quede to épico"
+				],
+				[
+					"81",
+					"Puedes hacer otra acción inmediatamente (hazla pto)"
+				],
+				[
+					"82",
+					"El próximo turno puedes castear cualquier conjuro con la bonus incluso si ya lo hiciste con la acción"
+				],
+				[
+					"83",
+					"Cada criatura a 30 ft se lleva 1d10 necrótico. Te curas el total"
+				],
+				[
+					"84",
+					"Toda criatura a 30 ft se cura 1d10. Tu recibes daño necrótico igual a la mitad del total. No puedes caer por debajo de 1 HP."
+				],
+				[
+					"85",
+					"Mirror Image"
+				],
+				[
+					"86",
+					"Mirror Image pero es falsísismo porque es un Major image, entonces no se va cuando les pegan y todos están muy confusos"
+				],
+				[
+					"87",
+					"Fly en una criatura random a 60 ft"
+				],
+				[
+					"88",
+					"Invisibilidad mayor a una criatura random a 60 ft"
+				],
+				[
+					"89",
+					"Invisibilidad lv2, pero tampoco te oyen"
+				],
+				[
+					"90",
+					"Casteas silencio centrado en ti"
+				],
+				[
+					"91",
+					"Si mueres en el próximo minuto, reencarnas en guapo"
+				],
+				[
+					"92",
+					"Negar Muerte self si mueres en el próximo minuto"
+				],
+				[
+					"93",
+					"Tu talla aumenta 1 categoría 1 minuto"
+				],
+				[
+					"94",
+					"Tu talla disminuye 1 categoría 1 minuto"
+				],
+				[
+					"95",
+					"Tu y todos a 30 ft son vulnerables al piercing durante 1 min"
+				],
+				[
+					"96",
+					"Tu y todos a 30 ft son vulnerables al Bludgeoning durante 1 min"
+				],
+				[
+					"97",
+					"Música épica que se acopla al mood"
+				],
+				[
+					"98",
+					"Estás bajo el efecto de las opciones 80 y 97 a la vez, pero hay efectos de sonidos cartoon"
+				],
+				[
+					"99-100",
+					"Recupera todos tus pt de metamagia. Si los tenías todos, el conjuro que triggereó este efecto no gasta slot."
+				]
+			],
+			"footnotes": [
+				"* Hay más de una opción posible. Tira en la tabla de Modron o Slaad según corresponda."
+			]
+		},
+		{
+			"name": "Modron",
+			"source": "Himo",
+			"caption": "Modron",
+			"colLabels": [
+				"d20",
+				"Modron"
+			],
+			"colStyles": [
+				"col-2 text-center",
+				"col-10"
+			],
+			"rows": [
+				[
+					"1-8",
+					"Monodrone"
+				],
+				[
+					"9-11",
+					"Duodrone"
+				],
+				[
+					"12-13",
+					"Tridrone"
+				],
+				[
+					"14",
+					"Quadrone"
+				],
+				[
+					"15",
+					"Pentadrone"
+				],
+				[
+					"16",
+					"Hexton"
+				],
+				[
+					"17",
+					"Heptaton"
+				],
+				[
+					"18",
+					"Octon"
+				],
+				[
+					"19",
+					"Nonaton"
+				],
+				[
+					"20",
+					"Decaton"
+				]
+			]
+		},
+		{
+			"name": "Slaad",
+			"source": "Himo",
+			"caption": "Slaad",
+			"colLabels": [
+				"d6",
+				"Slaad"
+			],
+			"colStyles": [
+				"col-2 text-center",
+				"col-10"
+			],
+			"rows": [
+				[
+					"1",
+					"Tadpole"
+				],
+				[
+					"2",
+					"Rojo"
+				],
+				[
+					"3",
+					"Azul"
+				],
+				[
+					"4",
+					"Verde"
+				],
+				[
+					"5",
+					"Gris"
+				],
+				[
+					"6",
+					"Negro"
+				]
+			]
 		}
 	]
 }

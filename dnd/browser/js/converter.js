@@ -532,7 +532,8 @@ async function doPageInit () {
 	const [spellData, itemData] = await Promise.all([
 		SpellcastingTraitConvert.pGetSpellData(),
 		Renderer.item.pBuildList(),
-		BrewUtil.pAddBrewData() // init homebrew
+		BrewUtil.pAddBrewData(), // init homebrew
+		SpellPricingService.pInit()
 	]);
 	SpellcastingTraitConvert.init(spellData);
 	AcConvert.init(itemData);

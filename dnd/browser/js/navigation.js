@@ -82,6 +82,7 @@ class NavBar {
 		addLi(ulDms, "trapshazards.html", "Traps & Hazards");
 		addDivider(ulDms);
 		addLi(ulDms, "crcalculator.html", "CR Calculator");
+		addLi(ulDms, "spellpricer.html", "Tasador de conjuros");
 		addLi(ulDms, "encountergen.html", "Encounter Generator");
 		addLi(ulDms, "lootgen.html", "Loot Generator");
 

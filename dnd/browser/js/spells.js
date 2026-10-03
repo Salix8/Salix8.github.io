@@ -46,14 +46,17 @@ class SpellsPage {
 		const school = Parser.spSchoolAndSubschoolsAbvsShort(spell.school, spell.subschools);
 		const concentration = spell._isConc ? "×" : "";
 		const range = Parser.spRangeToFull(spell.range);
+		const price = SpellPricingService.getPrice(spell);
+		const priceText = SpellPricingService.formatPriceGp(price);
 
 		eleLi.innerHTML = `<a href="#${spHash}" class="lst--border">
-			<span class="bold col-2-9 pl-0">${spell.name}</span>
-			<span class="col-1-5 text-center">${Parser.spLevelToFull(spell.level)}${spell.meta && spell.meta.ritual ? " (rit.)" : ""}${spell.meta && spell.meta.technomagic ? " (tec.)" : ""}</span>
-			<span class="col-1-7 text-center">${time}</span>
-			<span class="col-1-2 school_${spell.school} text-center" title="${Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)}" ${Parser.spSchoolAbvToStyle(spell.school)}>${school}</span>
-			<span class="col-0-6 text-center" title="Concentration">${concentration}</span>
-			<span class="col-2-4 text-right">${range}</span>
+			<span class="bold col-2-5 pl-0">${spell.name}</span>
+			<span class="col-1-3 text-center">${Parser.spLevelToFull(spell.level)}${spell.meta && spell.meta.ritual ? " (rit.)" : ""}${spell.meta && spell.meta.technomagic ? " (tec.)" : ""}</span>
+			<span class="col-1-5 text-center">${time}</span>
+			<span class="col-1-1 school_${spell.school} text-center" title="${Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)}" ${Parser.spSchoolAbvToStyle(spell.school)}>${school}</span>
+			<span class="col-0-5 text-center" title="Concentration">${concentration}</span>
+			<span class="col-1-3 text-right">${priceText}</span>
+			<span class="col-2-1 text-right">${range}</span>
 			<span class="col-1-7 text-center ${Parser.sourceJsonToColor(spell.source)} pr-0" title="${Parser.sourceJsonToFull(spell.source)}" ${BrewUtil.sourceJsonToStyle(spell.source)}>${source}</span>
 		</a>`;
 
@@ -69,6 +72,7 @@ class SpellsPage {
 				school: Parser.spSchoolAbvToFull(spell.school),
 				classes: Parser.spClassesToFull(spell.classes, true, SUBCLASS_LOOKUP),
 				concentration,
+				price: price == null ? -1 : price,
 				normalisedTime: spell._normalisedTime,
 				normalisedRange: spell._normalisedRange
 			},
@@ -99,14 +103,17 @@ class SpellsPage {
 		const time = PageFilterSpells.getTblTimeStr(spell.time[0]);
 		const concentration = spell._isConc ? "×" : "";
 		const range = Parser.spRangeToFull(spell.range);
+		const price = SpellPricingService.getPrice(spell);
+		const priceText = SpellPricingService.formatPriceGp(price);
 
 		const $ele = $(`<li class="row">
 			<a href="#${UrlUtil.autoEncodeHash(spell)}" title="${spell.name}" class="lst--border">
-				<span class="bold col-3-2 pl-0">${spell.name}</span>
-				<span class="capitalise col-1-5 text-center">${Parser.spLevelToFull(spell.level)}</span>
-				<span class="col-1-8 text-center">${time}</span>
-				<span class="capitalise col-1-6 school_${spell.school} text-center" title="${Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)}" ${Parser.spSchoolAbvToStyle(spell.school)}>${school}</span>
-				<span class="concentration--sublist col-0-7 text-center" title="Concentration">${concentration}</span>
+				<span class="bold col-2-6 pl-0">${spell.name}</span>
+				<span class="capitalise col-1-3 text-center">${Parser.spLevelToFull(spell.level)}</span>
+				<span class="col-1-5 text-center">${time}</span>
+				<span class="capitalise col-1-3 school_${spell.school} text-center" title="${Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)}" ${Parser.spSchoolAbvToStyle(spell.school)}>${school}</span>
+				<span class="concentration--sublist col-0-6 text-center" title="Concentration">${concentration}</span>
+				<span class="col-1-5 text-right">${priceText}</span>
 				<span class="range col-3-2 pr-0 text-right">${range}</span>
 			</a>
 		</li>`).contextmenu(evt => ListUtil.openSubContextMenu(evt, listItem));
@@ -121,6 +128,7 @@ class SpellsPage {
 				level: spell.level,
 				time,
 				concentration,
+				price: price == null ? -1 : price,
 				range,
 				normalisedTime: spell._normalisedTime,
 				normalisedRange: spell._normalisedRange
@@ -191,7 +199,8 @@ class SpellsPage {
 
 		const [subclassLookup] = await Promise.all([
 			RenderSpells.pGetSubclassLookup(),
-			ExcludeUtil.pInitialise()
+			ExcludeUtil.pInitialise(),
+			SpellPricingService.pInit()
 		]);
 		Object.assign(SUBCLASS_LOOKUP, subclassLookup);
 		await spellsPage._multiSource.pMultisourceLoad(JSON_DIR, this._pageFilter.filterBox, pPageInit, addSpells, pPostLoad);
@@ -219,6 +228,7 @@ async function pPostLoad () {
 			name: {name: "Name", transform: true},
 			source: {name: "Source", transform: (it) => `<span class="${Parser.sourceJsonToColor(it)}" title="${Parser.sourceJsonToFull(it)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${Parser.sourceJsonToAbv(it)}</span>`},
 			level: {name: "Level", transform: (it) => Parser.spLevelToFull(it)},
+			_price: {name: "Price", transform: (spell) => SpellPricingService.getFormattedPrice(spell)},
 			time: {name: "Casting Time", transform: (it) => PageFilterSpells.getTblTimeStr(it[0])},
 			duration: {name: "Duration", transform: (it) => Parser.spDurationToFull(it)},
 			_school: {name: "School", transform: (sp) => `<span class="school_${sp.school}" ${Parser.spSchoolAbvToStyle(sp.school)}>${Parser.spSchoolAndSubschoolsAbvsToFull(sp.school, sp.subschools)}</span>`},

@@ -2161,6 +2161,73 @@
 			"page": "??"
 		},
 		{
+			"name": "Trastorno de Estrés Postraumático",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Síntomas",
+					"entries": [
+						"Pesadillas, insomnio, irritabilidad, hipervigilancia, sobresaltos repentinos, dificultad para concentrarse y recuerdos intrusivos del acontecimiento traumático."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Contagio",
+					"entries": [
+						"Puede aparecer después de experimentar o presenciar un acontecimiento que provoque un trauma psicológico grave, especialmente situaciones en las que la criatura haya temido por su vida o la de otra persona."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Efectos",
+					"entries": [
+						"La criatura o el DM debe determinar uno o varios desencadenantes relacionados con el acontecimiento que originó el trastorno en el momento en el que lo contrae. Pueden ser sonidos, lugares, criaturas, olores, situaciones o acontecimientos concretos.",
+						{
+							"type": "list",
+							"items": [
+								"Cuando se encuentre ante un desencadenante, debe superar una salvación de Sabiduría CD 13 (16 si está directamente linkeado con el evento que causó el trauma).",
+								"Éxito: consigue mantener el control.",
+								"Fracaso: sufre un episodio traumático durante 1 minuto. Durante este tiempo tiene desventaja en las pruebas de Sabiduría e Inteligencia, está bajo los efectos de {@spell enemies abound|XGE|Enemies Abound} y no puede realizar reacciones.",
+								"Al acabar un descanso largo, salva Sabiduría CD 13. Si falla, las pesadillas y el insomnio impiden que descanse del todo y recupera solo la mitad de los puntos de golpe que recuperaría normalmente.",
+								"Mientras padezca el trastorno, tiene desventaja en las pruebas de Sabiduría ({@skill Perception}) realizadas para detectar amenazas. Con un fallo, detecta amenazas aunque no las haya en realidad."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Curación",
+					"entries": [
+						"No existe un tiempo fijo de recuperación. El trastorno puede remitir gradualmente mediante tratamiento, apoyo y experiencias seguras.",
+						{
+							"type": "list",
+							"items": [
+								"Después de cada 2 semanas de tratamiento adecuado, la criatura puede realizar una salvación de Sabiduría CD 15. Tras 3 éxitos acumulados, la enfermedad remite.",
+								"Cualquier efecto que borre los recuerdos del objetivo en los que se incluya el trauma, acaba con este trastorno.",
+								"El conjuro Restaurar Mente casteado durante 8 horas, a juicio del DM, puede acabar con el conjuro. Dependiendo de la dureza del trauma, podría requerirse que upcastee."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tratamiento",
+					"entries": [
+						"Terapias con profesionales de la psique pueden reducir las CD para dormir o sobrellevar los desencadenantes. Una terapia de choque con un profesional presente puede remitir los síntomas durante 1 semana (permitiendo al paciente salvar esa vez con ventaja para eliminar el trasfondo), pero de salir mal, a juicio del DM puede aumentar las CD para dormir o para sobrellevar los desencadenantes o dar desventaja a estas tiradas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Notas",
+					"entries": [
+						"Una criatura que vuelva a experimentar un acontecimiento traumático mientras padece el trastorno puede sufrir una recaída. En ese caso, el DM puede aumentar la CD de los desencadenantes en 2 y/o reiniciar el número de éxitos necesarios para recuperarse."
+					]
+				}
+			],
+			"source": "Himo",
+			"page": "??"
+		},
+		{
 			"name": "Tuberculosis",
 			"entries": [
 				{

@@ -3,7 +3,7 @@
 class MakeCards extends BaseComponent {
 	static async pInit () {
 		MakeCards._ = new MakeCards();
-		await MakeCards.utils.pLoadReducedData();
+		await Promise.all([MakeCards.utils.pLoadReducedData(), SpellPricingService.pInit()]);
 		await MakeCards._.pInit();
 
 		window.dispatchEvent(new Event("toolsLoaded"));
@@ -465,6 +465,7 @@ class MakeCards extends BaseComponent {
 			this._ct_subtitle(Parser.spLevelSchoolMetaToFull(sp.level, sp.school, sp.meta, sp.subschools)),
 			this._ct_rule(),
 			this._ct_property("Casting Time", Parser.spTimeListToFull(sp.time)),
+			this._ct_property("Price", SpellPricingService.getFormattedPrice(sp)),
 			this._ct_property("Range", Parser.spRangeToFull(sp.range)),
 			this._ct_property("Components", Parser.spComponentsToFull(sp.components, sp.level)),
 			this._ct_property("Duration", Parser.spDurationToFull(sp.duration, {isPlainText: true})),

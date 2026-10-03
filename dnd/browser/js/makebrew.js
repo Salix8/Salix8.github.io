@@ -1006,6 +1006,7 @@ async function doPageInit () {
 	ExcludeUtil.pInitialise(); // don't await, as this is only used for search
 	await BrewUtil.pAddBrewData();
 	await BrewUtil.pAddLocalBrewData();
+	await SpellPricingService.pInit();
 	await SearchUiUtil.pDoGlobalInit();
 	// Do this asynchronously, to avoid blocking the load
 	SearchWidget.pDoGlobalInit();

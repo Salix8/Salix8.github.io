@@ -423,6 +423,7 @@ class RendererMarkdown {
 >*${Parser.spLevelSchoolMetaToFull(sp.level, sp.school, sp.meta, sp.subschools)}*
 >
 >###### **Casting Time** ${Parser.spTimeListToFull(sp.time)}
+>###### **Price** ${typeof SpellPricingService === "undefined" ? "Sin tasar" : SpellPricingService.getFormattedPrice(sp)}
 >###### **Range** ${Parser.spRangeToFull(sp.range)}
 >###### **Components** ${Parser.spComponentsToFull(sp.components, sp.level)}
 >###### **Duration** ${Parser.spDurationToFull(sp.duration, {isPlainText: true})}
