@@ -1,0 +1,23 @@
+.spricer__layout { display: grid; grid-template-columns: minmax(280px, 1fr) minmax(320px, 1fr); gap: 20px; align-items: start; }
+.spricer__panel { border: 1px solid #ccc; border-radius: 4px; padding: 16px; background: var(--rgb-bg); }
+.spricer__spell-picker { display: flex; gap: 8px; align-items: stretch; }
+.spricer__spell-name { flex: 1; min-height: 36px; display: flex; align-items: center; padding: 6px 10px; border: 1px solid #ccc; border-radius: 4px; background: var(--rgb-bg--alt); }
+.spricer__field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 16px; margin-top: 16px; }
+.spricer__field label { display: block; margin-bottom: 4px; font-weight: bold; }
+.spricer__price { font-size: 2.2rem; font-weight: bold; line-height: 1.2; margin: 8px 0 16px; }
+.spricer__price-meta { display: grid; grid-template-columns: 1fr auto; gap: 6px 16px; margin-bottom: 16px; }
+.spricer__breakdown { width: 100%; margin: 12px 0 16px; }
+.spricer__breakdown td, .spricer__breakdown th { padding: 5px 8px; border-bottom: 1px solid #ccc; }
+.spricer__breakdown th:first-child { text-align: left; }
+.spricer__breakdown th:last-child, .spricer__breakdown td:last-child { text-align: right; }
+.spricer__provisional { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin: -4px 0 16px; padding: 8px; background: var(--rgb-bg--alt); font-size: 1.1em; }
+.spricer__actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.spricer__save-note { min-height: 20px; margin-top: 8px; }
+.spricer__selector-results { max-height: 55vh; overflow: auto; border: 1px solid #ccc; }
+.spricer__selector-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; width: 100%; padding: 8px 10px; border: 0; border-bottom: 1px solid #ccc; background: transparent; text-align: left; color: inherit; }
+.spricer__selector-row:hover, .spricer__selector-row:focus { background: rgba(0, 107, 196, .14); }
+:root.ve-night-mode .spricer__panel { border-color: #555; }
+:root.ve-night-mode .spricer__spell-name { border-color: #555; }
+:root.ve-night-mode .spricer__breakdown td, :root.ve-night-mode .spricer__breakdown th, :root.ve-night-mode .spricer__selector-results, :root.ve-night-mode .spricer__selector-row { border-color: #555; }
+:root.ve-night-mode .spricer__selector-row:hover, :root.ve-night-mode .spricer__selector-row:focus { background: #383838; }
+@media (max-width: 767px) { .spricer__layout, .spricer__field-grid { grid-template-columns: 1fr; } .spricer__spell-picker { flex-direction: column; } }

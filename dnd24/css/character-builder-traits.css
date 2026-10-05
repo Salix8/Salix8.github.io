@@ -1,0 +1,33 @@
+.mon__trait-toggle {
+	margin: 0;
+}
+
+.mon__trait-toggle > summary {
+	cursor: pointer;
+	list-style: none;
+}
+
+.mon__trait-toggle > summary::-webkit-details-marker {
+	display: none;
+}
+
+.mon__trait-toggle__indicator {
+	font-family: monospace;
+	font-weight: bold;
+}
+
+.mon__trait-toggle__indicator--expanded {
+	display: none;
+}
+
+.mon__trait-toggle[open] .mon__trait-toggle__indicator--collapsed {
+	display: none;
+}
+
+.mon__trait-toggle[open] .mon__trait-toggle__indicator--expanded {
+	display: inline;
+}
+
+.mon__trait-toggle__detail > :first-child {
+	margin-top: 0.25rem;
+}

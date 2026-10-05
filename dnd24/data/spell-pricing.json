@@ -1,0 +1,1070 @@
+{
+	"config": {
+		"levelBaseGp": [
+			10,
+			25,
+			75,
+			150,
+			300,
+			750,
+			2500,
+			5000,
+			10000,
+			20000,
+			20000
+		],
+		"utilityMultiplier": {
+			"1": 1.25,
+			"2": 1.5,
+			"3": 1.75,
+			"4": 2
+		},
+		"academyMultiplier": 1.25,
+		"rarityMultiplier": 1.5,
+		"ritualMultiplier": 1.5,
+		"nonWizardMultiplier": 2,
+		"legalityMultiplier": {
+			"legal": 1,
+			"licensed": 1.5,
+			"illegal": 3
+		},
+		"paidComponentMultiplier": 1.2
+	},
+	"prices": [
+		{
+			"name": "Air Bubble",
+			"source": "AAG",
+			"priceGp": 197
+		},
+		{
+			"name": "Distort Value",
+			"source": "AI",
+			"priceGp": 197
+		},
+		{
+			"name": "Fast Friends",
+			"source": "AI",
+			"priceGp": 788
+		},
+		{
+			"name": "Gift of Gab",
+			"source": "AI",
+			"priceGp": 591
+		},
+		{
+			"name": "Abrir Mente",
+			"source": "CdS",
+			"priceGp": 203
+		},
+		{
+			"name": "Anonimato",
+			"source": "CdS",
+			"priceGp": 2835
+		},
+		{
+			"name": "Buscador de Sueños",
+			"source": "CdS",
+			"priceGp": 1350
+		},
+		{
+			"name": "Caminante de Sueños",
+			"source": "CdS",
+			"priceGp": 5400
+		},
+		{
+			"name": "Paraje Onírico",
+			"source": "CdS",
+			"priceGp": 45000
+		},
+		{
+			"name": "Pesadilla",
+			"source": "CdS",
+			"priceGp": 4050
+		},
+		{
+			"name": "Proyección Onírica",
+			"source": "CdS",
+			"priceGp": 432000
+		},
+		{
+			"name": "Robar Pensamientos",
+			"source": "CdS",
+			"priceGp": 4725
+		},
+		{
+			"name": "Gravity Sinkhole",
+			"source": "EGW",
+			"priceGp": 788
+		},
+		{
+			"name": "Immovable Object",
+			"source": "EGW",
+			"priceGp": 236
+		},
+		{
+			"name": "Pulse Wave",
+			"source": "EGW",
+			"priceGp": 394
+		},
+		{
+			"name": "Ashardalon's Stride",
+			"source": "FTD",
+			"priceGp": 506
+		},
+		{
+			"name": "Nathair's Mischief",
+			"source": "FTD",
+			"priceGp": 506
+		},
+		{
+			"name": "Raulothim's Psychic Lance",
+			"source": "FTD",
+			"priceGp": 675
+		},
+		{
+			"name": "Cabaña Instantánea de Leomund",
+			"source": "GdR",
+			"priceGp": 492
+		},
+		{
+			"name": "Conjuro no Letal",
+			"source": "GdR",
+			"priceGp": 47
+		},
+		{
+			"name": "Danza de las Herramientas",
+			"source": "GdR",
+			"priceGp": 141
+		},
+		{
+			"name": "Domo de Protección",
+			"source": "GdR",
+			"priceGp": 246
+		},
+		{
+			"name": "Filacteria",
+			"source": "GdR",
+			"priceGp": 4860000
+		},
+		{
+			"name": "Hemorragia",
+			"source": "GdR",
+			"priceGp": 1013
+		},
+		{
+			"name": "Hush",
+			"source": "GdR",
+			"priceGp": 56
+		},
+		{
+			"name": "Inscripción Diplomática",
+			"source": "GdR",
+			"priceGp": 169
+		},
+		{
+			"name": "Nudo de Nyx",
+			"source": "GdR",
+			"priceGp": 5906
+		},
+		{
+			"name": "Ojo de Halcón",
+			"source": "GdR",
+			"priceGp": 886
+		},
+		{
+			"name": "Ojos de Oghma",
+			"source": "GdR",
+			"priceGp": 281
+		},
+		{
+			"name": "Banerjee's Undead Minion",
+			"source": "GPNM",
+			"priceGp": 506
+		},
+		{
+			"name": "Conversación Codificada",
+			"source": "GPNM",
+			"priceGp": 98
+		},
+		{
+			"name": "Postrar",
+			"source": "GPNM",
+			"priceGp": 211
+		},
+		{
+			"name": "Frost Fingers",
+			"source": "IDRotF",
+			"priceGp": 56
+		},
+		{
+			"name": "Alarm",
+			"source": "PHB",
+			"priceGp": 94
+		},
+		{
+			"name": "Alter Self",
+			"source": "PHB",
+			"priceGp": 295
+		},
+		{
+			"name": "Animate Dead",
+			"source": "PHB",
+			"priceGp": 1181
+		},
+		{
+			"name": "Animate Objects",
+			"source": "PHB",
+			"priceGp": 1875
+		},
+		{
+			"name": "Arcane Eye",
+			"source": "PHB",
+			"priceGp": 1418
+		},
+		{
+			"name": "Arcane Lock",
+			"source": "PHB",
+			"priceGp": 270
+		},
+		{
+			"name": "Augury",
+			"source": "PHB",
+			"priceGp": 664
+		},
+		{
+			"name": "Bestow Curse",
+			"source": "PHB",
+			"priceGp": 788
+		},
+		{
+			"name": "Bigby's Hand",
+			"source": "PHB",
+			"priceGp": 2813
+		},
+		{
+			"name": "Blight",
+			"source": "PHB",
+			"priceGp": 2025
+		},
+		{
+			"name": "Blindness/Deafness",
+			"source": "PHB",
+			"priceGp": 591
+		},
+		{
+			"name": "Blink",
+			"source": "PHB",
+			"priceGp": 506
+		},
+		{
+			"name": "Blur",
+			"source": "PHB",
+			"priceGp": 141
+		},
+		{
+			"name": "Burning Hands",
+			"source": "PHB",
+			"priceGp": 70
+		},
+		{
+			"name": "Chain Lightning",
+			"source": "PHB",
+			"priceGp": 5625
+		},
+		{
+			"name": "Charm Person",
+			"source": "PHB",
+			"priceGp": 197
+		},
+		{
+			"name": "Chromatic Orb",
+			"source": "PHB",
+			"priceGp": 68
+		},
+		{
+			"name": "Circle of Death",
+			"source": "PHB",
+			"priceGp": 20250
+		},
+		{
+			"name": "Clairvoyance",
+			"source": "PHB",
+			"priceGp": 886
+		},
+		{
+			"name": "Cloud of Daggers",
+			"source": "PHB",
+			"priceGp": 169
+		},
+		{
+			"name": "Cloudkill",
+			"source": "PHB",
+			"priceGp": 5063
+		},
+		{
+			"name": "Comprehend Languages",
+			"source": "PHB",
+			"priceGp": 94
+		},
+		{
+			"name": "Cone of Cold",
+			"source": "PHB",
+			"priceGp": 3164
+		},
+		{
+			"name": "Confusion",
+			"source": "PHB",
+			"priceGp": 2025
+		},
+		{
+			"name": "Conjure Elemental",
+			"source": "PHB",
+			"priceGp": 3164
+		},
+		{
+			"name": "Contact Other Plane",
+			"source": "PHB",
+			"priceGp": 2250
+		},
+		{
+			"name": "Contagion",
+			"source": "PHB",
+			"priceGp": 5906
+		},
+		{
+			"name": "Control Water",
+			"source": "PHB",
+			"priceGp": 1125
+		},
+		{
+			"name": "Counterspell",
+			"source": "PHB",
+			"priceGp": 563
+		},
+		{
+			"name": "Create Undead",
+			"source": "PHB",
+			"priceGp": 23625
+		},
+		{
+			"name": "Crown of Madness",
+			"source": "PHB",
+			"priceGp": 506
+		},
+		{
+			"name": "Darkness",
+			"source": "PHB",
+			"priceGp": 113
+		},
+		{
+			"name": "Darkvision",
+			"source": "PHB",
+			"priceGp": 246
+		},
+		{
+			"name": "Detect Magic",
+			"source": "PHB",
+			"priceGp": 70
+		},
+		{
+			"name": "Detect Thoughts",
+			"source": "PHB",
+			"priceGp": 369
+		},
+		{
+			"name": "Dimension Door",
+			"source": "PHB",
+			"priceGp": 1181
+		},
+		{
+			"name": "Disguise Self",
+			"source": "PHB",
+			"priceGp": 197
+		},
+		{
+			"name": "Disintegrate",
+			"source": "PHB",
+			"priceGp": 14063
+		},
+		{
+			"name": "Dispel Magic",
+			"source": "PHB",
+			"priceGp": 563
+		},
+		{
+			"name": "Divination",
+			"source": "PHB",
+			"priceGp": 2658
+		},
+		{
+			"name": "Dominate Beast",
+			"source": "PHB",
+			"priceGp": 675
+		},
+		{
+			"name": "Dominate Person",
+			"source": "PHB",
+			"priceGp": 3938
+		},
+		{
+			"name": "Dream",
+			"source": "PHB",
+			"priceGp": 2953
+		},
+		{
+			"name": "Etherealness",
+			"source": "PHB",
+			"priceGp": 13125
+		},
+		{
+			"name": "Evard's Black Tentacles",
+			"source": "PHB",
+			"priceGp": 675
+		},
+		{
+			"name": "Expeditious Retreat",
+			"source": "PHB",
+			"priceGp": 31
+		},
+		{
+			"name": "Eyebite",
+			"source": "PHB",
+			"priceGp": 19688
+		},
+		{
+			"name": "Faerie Fire",
+			"source": "PHB",
+			"priceGp": 131
+		},
+		{
+			"name": "False Life",
+			"source": "PHB",
+			"priceGp": 66
+		},
+		{
+			"name": "Fear",
+			"source": "PHB",
+			"priceGp": 506
+		},
+		{
+			"name": "Feather Fall",
+			"source": "PHB",
+			"priceGp": 55
+		},
+		{
+			"name": "Feign Death",
+			"source": "PHB",
+			"priceGp": 591
+		},
+		{
+			"name": "Find Familiar",
+			"source": "PHB",
+			"priceGp": 169
+		},
+		{
+			"name": "Fireball",
+			"source": "PHB",
+			"priceGp": 422
+		},
+		{
+			"name": "Flaming Sphere",
+			"source": "PHB",
+			"priceGp": 169
+		},
+		{
+			"name": "Fly",
+			"source": "PHB",
+			"priceGp": 328
+		},
+		{
+			"name": "Fog Cloud",
+			"source": "PHB",
+			"priceGp": 38
+		},
+		{
+			"name": "Gaseous Form",
+			"source": "PHB",
+			"priceGp": 591
+		},
+		{
+			"name": "Geas",
+			"source": "PHB",
+			"priceGp": 6750
+		},
+		{
+			"name": "Gentle Repose",
+			"source": "PHB",
+			"priceGp": 295
+		},
+		{
+			"name": "Globe of Invulnerability",
+			"source": "PHB",
+			"priceGp": 5625
+		},
+		{
+			"name": "Glyph of Warding",
+			"source": "PHB",
+			"priceGp": 1013
+		},
+		{
+			"name": "Grease",
+			"source": "PHB",
+			"priceGp": 55
+		},
+		{
+			"name": "Greater Invisibility",
+			"source": "PHB",
+			"priceGp": 1969
+		},
+		{
+			"name": "Gust of Wind",
+			"source": "PHB",
+			"priceGp": 197
+		},
+		{
+			"name": "Hallucinatory Terrain",
+			"source": "PHB",
+			"priceGp": 1575
+		},
+		{
+			"name": "Haste",
+			"source": "PHB",
+			"priceGp": 328
+		},
+		{
+			"name": "Hold Monster",
+			"source": "PHB",
+			"priceGp": 2953
+		},
+		{
+			"name": "Hold Person",
+			"source": "PHB",
+			"priceGp": 295
+		},
+		{
+			"name": "Hypnotic Pattern",
+			"source": "PHB",
+			"priceGp": 788
+		},
+		{
+			"name": "Ice Storm",
+			"source": "PHB",
+			"priceGp": 1013
+		},
+		{
+			"name": "Identify",
+			"source": "PHB",
+			"priceGp": 94
+		},
+		{
+			"name": "Illusory Script",
+			"source": "PHB",
+			"priceGp": 98
+		},
+		{
+			"name": "Invisibility",
+			"source": "PHB",
+			"priceGp": 738
+		},
+		{
+			"name": "Jump",
+			"source": "PHB",
+			"priceGp": 56
+		},
+		{
+			"name": "Knock",
+			"source": "PHB",
+			"priceGp": 361
+		},
+		{
+			"name": "Legend Lore",
+			"source": "PHB",
+			"priceGp": 2363
+		},
+		{
+			"name": "Leomund's Tiny Hut",
+			"source": "PHB",
+			"priceGp": 675
+		},
+		{
+			"name": "Levitate",
+			"source": "PHB",
+			"priceGp": 246
+		},
+		{
+			"name": "Lightning Bolt",
+			"source": "PHB",
+			"priceGp": 281
+		},
+		{
+			"name": "Locate Creature",
+			"source": "PHB",
+			"priceGp": 788
+		},
+		{
+			"name": "Locate Object",
+			"source": "PHB",
+			"priceGp": 131
+		},
+		{
+			"name": "Longstrider",
+			"source": "PHB",
+			"priceGp": 38
+		},
+		{
+			"name": "Mage Armor",
+			"source": "PHB",
+			"priceGp": 55
+		},
+		{
+			"name": "Magic Circle",
+			"source": "PHB",
+			"priceGp": 1013
+		},
+		{
+			"name": "Magic Jar",
+			"source": "PHB",
+			"priceGp": 23625
+		},
+		{
+			"name": "Magic Missile",
+			"source": "PHB",
+			"priceGp": 47
+		},
+		{
+			"name": "Magic Mouth",
+			"source": "PHB",
+			"priceGp": 270
+		},
+		{
+			"name": "Major Image",
+			"source": "PHB",
+			"priceGp": 788
+		},
+		{
+			"name": "Mass Suggestion",
+			"source": "PHB",
+			"priceGp": 19688
+		},
+		{
+			"name": "Maze",
+			"source": "PHB",
+			"priceGp": 202500
+		},
+		{
+			"name": "Melf's Acid Arrow",
+			"source": "PHB",
+			"priceGp": 169
+		},
+		{
+			"name": "Mirror Image",
+			"source": "PHB",
+			"priceGp": 113
+		},
+		{
+			"name": "Mislead",
+			"source": "PHB",
+			"priceGp": 5906
+		},
+		{
+			"name": "Misty Step",
+			"source": "PHB",
+			"priceGp": 211
+		},
+		{
+			"name": "Modify Memory",
+			"source": "PHB",
+			"priceGp": 5906
+		},
+		{
+			"name": "Mordenkainen's Private Sanctum",
+			"source": "PHB",
+			"priceGp": 1688
+		},
+		{
+			"name": "Move Earth",
+			"source": "PHB",
+			"priceGp": 9844
+		},
+		{
+			"name": "Nondetection",
+			"source": "PHB",
+			"priceGp": 591
+		},
+		{
+			"name": "Nystul's Magic Aura",
+			"source": "PHB",
+			"priceGp": 295
+		},
+		{
+			"name": "Passwall",
+			"source": "PHB",
+			"priceGp": 1313
+		},
+		{
+			"name": "Phantasmal Force",
+			"source": "PHB",
+			"priceGp": 295
+		},
+		{
+			"name": "Phantom Steed",
+			"source": "PHB",
+			"priceGp": 591
+		},
+		{
+			"name": "Polymorph",
+			"source": "PHB",
+			"priceGp": 1125
+		},
+		{
+			"name": "Purify Food and Drink",
+			"source": "PHB",
+			"priceGp": 131
+		},
+		{
+			"name": "Raise Dead",
+			"source": "PHB",
+			"priceGp": 16200
+		},
+		{
+			"name": "Rary's Telepathic Bond",
+			"source": "PHB",
+			"priceGp": 3691
+		},
+		{
+			"name": "Ray of Enfeeblement",
+			"source": "PHB",
+			"priceGp": 506
+		},
+		{
+			"name": "Ray of Sickness",
+			"source": "PHB",
+			"priceGp": 56
+		},
+		{
+			"name": "Regenerate",
+			"source": "PHB",
+			"priceGp": 26250
+		},
+		{
+			"name": "Remove Curse",
+			"source": "PHB",
+			"priceGp": 300
+		},
+		{
+			"name": "Reverse Gravity",
+			"source": "PHB",
+			"priceGp": 39375
+		},
+		{
+			"name": "Revivify",
+			"source": "PHB",
+			"priceGp": 1620
+		},
+		{
+			"name": "Scorching Ray",
+			"source": "PHB",
+			"priceGp": 211
+		},
+		{
+			"name": "Scrying",
+			"source": "PHB",
+			"priceGp": 4430
+		},
+		{
+			"name": "Sending",
+			"source": "PHB",
+			"priceGp": 375
+		},
+		{
+			"name": "Shatter",
+			"source": "PHB",
+			"priceGp": 113
+		},
+		{
+			"name": "Shield",
+			"source": "PHB",
+			"priceGp": 47
+		},
+		{
+			"name": "Silent Image",
+			"source": "PHB",
+			"priceGp": 70
+		},
+		{
+			"name": "Sleep",
+			"source": "PHB",
+			"priceGp": 164
+		},
+		{
+			"name": "Slow",
+			"source": "PHB",
+			"priceGp": 328
+		},
+		{
+			"name": "Speak with Dead",
+			"source": "PHB",
+			"priceGp": 675
+		},
+		{
+			"name": "Stinking Cloud",
+			"source": "PHB",
+			"priceGp": 338
+		},
+		{
+			"name": "Stoneskin",
+			"source": "PHB",
+			"priceGp": 945
+		},
+		{
+			"name": "Suggestion",
+			"source": "PHB",
+			"priceGp": 591
+		},
+		{
+			"name": "Tasha's Hideous Laughter",
+			"source": "PHB",
+			"priceGp": 197
+		},
+		{
+			"name": "Telekinesis",
+			"source": "PHB",
+			"priceGp": 1641
+		},
+		{
+			"name": "Teleportation Circle",
+			"source": "PHB",
+			"priceGp": 5063
+		},
+		{
+			"name": "Tenser's Floating Disk",
+			"source": "PHB",
+			"priceGp": 141
+		},
+		{
+			"name": "Thunderwave",
+			"source": "PHB",
+			"priceGp": 84
+		},
+		{
+			"name": "Tongues",
+			"source": "PHB",
+			"priceGp": 375
+		},
+		{
+			"name": "True Polymorph",
+			"source": "PHB",
+			"priceGp": 105000
+		},
+		{
+			"name": "Unseen Servant",
+			"source": "PHB",
+			"priceGp": 94
+		},
+		{
+			"name": "Vampiric Touch",
+			"source": "PHB",
+			"priceGp": 1013
+		},
+		{
+			"name": "Wall of Fire",
+			"source": "PHB",
+			"priceGp": 525
+		},
+		{
+			"name": "Wall of Force",
+			"source": "PHB",
+			"priceGp": 2461
+		},
+		{
+			"name": "Wall of Ice",
+			"source": "PHB",
+			"priceGp": 5625
+		},
+		{
+			"name": "Water Breathing",
+			"source": "PHB",
+			"priceGp": 738
+		},
+		{
+			"name": "Water Walk",
+			"source": "PHB",
+			"priceGp": 473
+		},
+		{
+			"name": "Web",
+			"source": "PHB",
+			"priceGp": 141
+		},
+		{
+			"name": "Witch Bolt",
+			"source": "PHB",
+			"priceGp": 44
+		},
+		{
+			"name": "Borrowed Knowledge",
+			"source": "SCC",
+			"priceGp": 225
+		},
+		{
+			"name": "Silvery Barbs",
+			"source": "SCC",
+			"priceGp": 66
+		},
+		{
+			"name": "Vortex Warp",
+			"source": "SCC",
+			"priceGp": 197
+		},
+		{
+			"name": "Wither and Bloom",
+			"source": "SCC",
+			"priceGp": 246
+		},
+		{
+			"name": "Summon Elemental",
+			"source": "TCE",
+			"priceGp": 945
+		},
+		{
+			"name": "Summon Fiend",
+			"source": "TCE",
+			"priceGp": 23625
+		},
+		{
+			"name": "Tasha's Caustic Brew",
+			"source": "TCE",
+			"priceGp": 84
+		},
+		{
+			"name": "Tasha's Otherworldly Guise",
+			"source": "TCE",
+			"priceGp": 7875
+		},
+		{
+			"name": "Abi-Dalzim's Horrid Wilting",
+			"source": "XGE",
+			"priceGp": 67500
+		},
+		{
+			"name": "Absorb Elements",
+			"source": "XGE",
+			"priceGp": 38
+		},
+		{
+			"name": "Catnap",
+			"source": "XGE",
+			"priceGp": 394
+		},
+		{
+			"name": "Cause Fear",
+			"source": "XGE",
+			"priceGp": 31
+		},
+		{
+			"name": "Danse Macabre",
+			"source": "XGE",
+			"priceGp": 5063
+		},
+		{
+			"name": "Far Step",
+			"source": "XGE",
+			"priceGp": 1125
+		},
+		{
+			"name": "Ice Knife",
+			"source": "XGE",
+			"priceGp": 38
+		},
+		{
+			"name": "Investiture of Stone",
+			"source": "XGE",
+			"priceGp": 7500
+		},
+		{
+			"name": "Mass Polymorph",
+			"source": "XGE",
+			"priceGp": 120000
+		},
+		{
+			"name": "Maximilian's Earthen Grasp",
+			"source": "XGE",
+			"priceGp": 197
+		},
+		{
+			"name": "Melf's Minute Meteors",
+			"source": "XGE",
+			"priceGp": 492
+		},
+		{
+			"name": "Mind Spike",
+			"source": "XGE",
+			"priceGp": 295
+		},
+		{
+			"name": "Shadow Blade",
+			"source": "XGE",
+			"priceGp": 113
+		},
+		{
+			"name": "Sickening Radiance",
+			"source": "XGE",
+			"priceGp": 2025
+		},
+		{
+			"name": "Skywrite",
+			"source": "XGE",
+			"priceGp": 197
+		},
+		{
+			"name": "Soul Cage",
+			"source": "XGE",
+			"priceGp": 27000
+		},
+		{
+			"name": "Steel Wind Strike",
+			"source": "XGE",
+			"priceGp": 1688
+		},
+		{
+			"name": "Storm Sphere",
+			"source": "XGE",
+			"priceGp": 788
+		},
+		{
+			"name": "Summon Greater Demon",
+			"source": "XGE",
+			"priceGp": 2700
+		},
+		{
+			"name": "Summon Lesser Demons",
+			"source": "XGE",
+			"priceGp": 1181
+		},
+		{
+			"name": "Tenser's Transformation",
+			"source": "XGE",
+			"priceGp": 6563
+		},
+		{
+			"name": "Tiny Servant",
+			"source": "XGE",
+			"priceGp": 675
+		},
+		{
+			"name": "Transmute Rock",
+			"source": "XGE",
+			"priceGp": 3691
+		},
+		{
+			"name": "Vitriolic Sphere",
+			"source": "XGE",
+			"priceGp": 788
+		},
+		{
+			"name": "Wall of Water",
+			"source": "XGE",
+			"priceGp": 394
+		}
+	]
+}

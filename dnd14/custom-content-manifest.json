@@ -1,0 +1,10 @@
+{
+  "edition": "2014",
+  "entries": [
+    {"id": "character-builder", "type": "tool", "path": "characterbuilder.html", "status": "compatible"},
+    {"id": "spell-pricer", "type": "tool", "path": "spellpricer.html", "status": "compatible"},
+    {"id": "custom-classes", "type": "content", "path": "classes.html", "status": "compatible", "sources": ["alchemist", "canalla", "clown", "desangrador", "lexarch", "martial-expert", "planeswalker", "ranger-himo"]},
+    {"id": "custom-spell-pricing", "type": "data", "path": "data/spell-pricing.json", "status": "compatible"},
+    {"id": "custom-rules-and-tables", "type": "content", "path": "salix-content.html", "status": "compatible"}
+  ]
+}

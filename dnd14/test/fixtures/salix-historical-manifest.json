@@ -1,0 +1,1014 @@
+{
+	"edition": "2014",
+	"source": "Himo",
+	"entities": {
+		"feat": [
+			{
+				"name": "Apertura de Chakras",
+				"source": "Himo"
+			},
+			{
+				"name": "Arcane Fighting",
+				"source": "Himo"
+			},
+			{
+				"name": "Astral touched",
+				"source": "Himo"
+			},
+			{
+				"name": "Canalización Poderosa",
+				"source": "Himo"
+			},
+			{
+				"name": "Castle of Stone",
+				"source": "Himo"
+			},
+			{
+				"name": "Combatiente Arriesgado",
+				"source": "Himo"
+			},
+			{
+				"name": "Combatiente Ciego",
+				"source": "Himo"
+			},
+			{
+				"name": "Competente en Rituales",
+				"source": "Himo"
+			},
+			{
+				"name": "Consagrado",
+				"source": "Himo"
+			},
+			{
+				"name": "Curandero Protector",
+				"source": "Himo"
+			},
+			{
+				"name": "Enroque brumoso",
+				"source": "Himo"
+			},
+			{
+				"name": "Héroe Eficaz",
+				"source": "Himo"
+			},
+			{
+				"name": "Magia Armada",
+				"source": "Himo"
+			},
+			{
+				"name": "Médico de Combate",
+				"source": "Himo"
+			},
+			{
+				"name": "Placador Imparable",
+				"source": "Himo"
+			},
+			{
+				"name": "Spellcasting Demoníaco",
+				"source": "Himo"
+			},
+			{
+				"name": "Suave Defense",
+				"source": "Himo"
+			},
+			{
+				"name": "Trampero",
+				"source": "Himo"
+			},
+			{
+				"name": "Velocidad Versátil",
+				"source": "Himo"
+			},
+			{
+				"name": "War touched",
+				"source": "Himo"
+			}
+		],
+		"baseitem": [
+			{
+				"name": "Daga Larga",
+				"source": "Himo"
+			},
+			{
+				"name": "Cimitarra de Doble Filo",
+				"source": "Himo"
+			},
+			{
+				"name": "Sai",
+				"source": "Himo"
+			},
+			{
+				"name": "Diente de Hada",
+				"source": "Himo"
+			},
+			{
+				"name": "Atanor",
+				"source": "Himo"
+			},
+			{
+				"name": "Hierbas Analgésicas",
+				"source": "Himo"
+			},
+			{
+				"name": "Hierbas Energéticas",
+				"source": "Himo"
+			},
+			{
+				"name": "Incienso Onírico",
+				"source": "Himo"
+			}
+		],
+		"item": [
+			{
+				"name": "Rodela",
+				"source": "Himo"
+			},
+			{
+				"name": "Escudo de Guardia",
+				"source": "Himo"
+			},
+			{
+				"name": "Escudo de Torre",
+				"source": "Himo"
+			},
+			{
+				"name": "Katana",
+				"source": "Himo"
+			},
+			{
+				"name": "Tanto",
+				"source": "Himo"
+			},
+			{
+				"name": "Bō 1,5 m",
+				"source": "Himo"
+			},
+			{
+				"name": "Bō 1,8 m",
+				"source": "Himo"
+			},
+			{
+				"name": "Bō 2 m",
+				"source": "Himo"
+			},
+			{
+				"name": "Guadaña",
+				"source": "Himo"
+			},
+			{
+				"name": "Kanabō",
+				"source": "Himo"
+			},
+			{
+				"name": "Guante de Hilador",
+				"source": "Himo"
+			},
+			{
+				"name": "Trabuco",
+				"source": "Himo"
+			},
+			{
+				"name": "Naginata",
+				"source": "Himo"
+			},
+			{
+				"name": "Tessen (War Fan)",
+				"source": "Himo"
+			},
+			{
+				"name": "Kusarigama",
+				"source": "Himo"
+			},
+			{
+				"name": "Guan Dao",
+				"source": "Himo"
+			},
+			{
+				"name": "Meteor Hammer",
+				"source": "Himo"
+			},
+			{
+				"name": "Sansetsukon",
+				"source": "Himo"
+			},
+			{
+				"name": "Escudo de Bulette",
+				"source": "Himo"
+			},
+			{
+				"name": "Armadura de Remorhaz",
+				"source": "Himo"
+			},
+			{
+				"name": "Armadura de Cuero de Glabrezu",
+				"source": "Himo"
+			},
+			{
+				"name": "Bulbo de Planta Andante",
+				"source": "Himo"
+			},
+			{
+				"name": "Armadura de Carrion Crawler",
+				"source": "Himo"
+			},
+			{
+				"name": "Armadura de Bulette",
+				"source": "Himo"
+			},
+			{
+				"name": "Armadura de Xorn",
+				"source": "Himo"
+			},
+			{
+				"name": "Armadura de Barlgura",
+				"source": "Himo"
+			},
+			{
+				"name": "Armadura de Grick",
+				"source": "Himo"
+			},
+			{
+				"name": "Armadura de Aurumvorax",
+				"source": "Himo"
+			},
+			{
+				"name": "Armadura de Rust Monster",
+				"source": "Himo"
+			},
+			{
+				"name": "Botiquín",
+				"source": "Himo"
+			},
+			{
+				"name": "Kit de Tatuador",
+				"source": "Himo"
+			},
+			{
+				"name": "Figura Ilusoria",
+				"source": "Himo"
+			},
+			{
+				"name": "Herramientas de Cazador",
+				"source": "Himo"
+			},
+			{
+				"name": "Kit de Purificación de Toxinas",
+				"source": "Himo"
+			},
+			{
+				"name": "Kit de Embalsamador",
+				"source": "Himo"
+			},
+			{
+				"name": "Kit de Torturador",
+				"source": "Himo"
+			}
+		],
+		"optionalfeature": [
+			{
+				"name": "Poción Explosiva",
+				"source": "Himo"
+			},
+			{
+				"name": "Elixir curativo",
+				"source": "Himo"
+			},
+			{
+				"name": "Poción Energizante",
+				"source": "Himo"
+			},
+			{
+				"name": "Ácido de Mercurio",
+				"source": "Himo"
+			},
+			{
+				"name": "Elixir Animal",
+				"source": "Himo"
+			},
+			{
+				"name": "Frasco de Veneno",
+				"source": "Himo"
+			},
+			{
+				"name": "Antídoto",
+				"source": "Himo"
+			},
+			{
+				"name": "Hierro Líquido",
+				"source": "Himo"
+			},
+			{
+				"name": "Poción Famélica",
+				"source": "Himo"
+			},
+			{
+				"name": "Frasco de Amoníaco",
+				"source": "Himo"
+			},
+			{
+				"name": "Cubeta de Ácido",
+				"source": "Himo"
+			},
+			{
+				"name": "Bomba de Humo",
+				"source": "Himo"
+			},
+			{
+				"name": "Frasco de Velocidad",
+				"source": "Himo"
+			},
+			{
+				"name": "Vial de Crecimiento",
+				"source": "Himo"
+			},
+			{
+				"name": "Granada de Choque",
+				"source": "Himo"
+			},
+			{
+				"name": "Proyectil Efervescente",
+				"source": "Himo"
+			},
+			{
+				"name": "Cloroformo",
+				"source": "Himo"
+			},
+			{
+				"name": "Esencia Paralizante",
+				"source": "Himo"
+			},
+			{
+				"name": "Frasco de inmunidad",
+				"source": "Himo"
+			},
+			{
+				"name": "Elixir de Concentración",
+				"source": "Himo"
+			},
+			{
+				"name": "Poción de Fango",
+				"source": "Himo"
+			},
+			{
+				"name": "Poción Luminiscente",
+				"source": "Himo"
+			},
+			{
+				"name": "Cubierta de Invisibilidad",
+				"source": "Himo"
+			},
+			{
+				"name": "Broma Revienta-Tímpanos de Himo",
+				"source": "Himo"
+			},
+			{
+				"name": "Elixir de Quimerización",
+				"source": "Himo"
+			},
+			{
+				"name": "Cieno Transmutante",
+				"source": "Himo"
+			},
+			{
+				"name": "Aceite Alquímico",
+				"source": "Himo"
+			},
+			{
+				"name": "Brebaje de Entendimiento",
+				"source": "Himo"
+			},
+			{
+				"name": "Fango cegador",
+				"source": "Himo"
+			},
+			{
+				"name": "Pociones Vinculantes",
+				"source": "Himo"
+			},
+			{
+				"name": "Compuesto Antiaéreo",
+				"source": "Himo"
+			},
+			{
+				"name": "Glucosa de Conservación",
+				"source": "Himo"
+			},
+			{
+				"name": "Suero de la verdad",
+				"source": "Himo"
+			},
+			{
+				"name": "Poción de Control Mental",
+				"source": "Himo"
+			},
+			{
+				"name": "Poción de Lavado Mental",
+				"source": "Himo"
+			},
+			{
+				"name": "Potencia Animal de Drasus",
+				"source": "Himo"
+			},
+			{
+				"name": "Ungüento Elemental",
+				"source": "Himo"
+			},
+			{
+				"name": "Filtro de Amor",
+				"source": "Himo"
+			},
+			{
+				"name": "Alma Filosofal Embotellada",
+				"source": "Himo"
+			},
+			{
+				"name": "Ungüento Antimagia",
+				"source": "Himo"
+			},
+			{
+				"name": "Licor Salvaje",
+				"source": "Himo"
+			},
+			{
+				"name": "Elixir de la vida",
+				"source": "Himo"
+			},
+			{
+				"name": "Poción Multijugos",
+				"source": "Himo"
+			},
+			{
+				"name": "Esencia Mágica Embotellada de Ruvyn",
+				"source": "Himo"
+			},
+			{
+				"name": "Agua de Ki",
+				"source": "Himo"
+			},
+			{
+				"name": "Bomba Aniquiladora",
+				"source": "Himo"
+			},
+			{
+				"name": "Combustible Filosofal",
+				"source": "Himo"
+			},
+			{
+				"name": "Bomba de Fotones",
+				"source": "Himo"
+			},
+			{
+				"name": "Ácido Corrosivo",
+				"source": "Himo"
+			},
+			{
+				"name": "Poción de Gargantúa",
+				"source": "Himo"
+			},
+			{
+				"name": "Veneno Lento",
+				"source": "Himo"
+			},
+			{
+				"name": "Vinagre Debilitador",
+				"source": "Himo"
+			},
+			{
+				"name": "Poción de Drenaje Arcano",
+				"source": "Himo"
+			},
+			{
+				"name": "Licor Relajante (Lv1)",
+				"source": "Himo"
+			},
+			{
+				"name": "Amplitud de Sentidos (lv5)",
+				"source": "Himo"
+			},
+			{
+				"name": "Bomba Magnética (lv 5)",
+				"source": "Himo"
+			},
+			{
+				"name": "Aliento químico (lv1)",
+				"source": "Himo"
+			},
+			{
+				"name": "Bomba de Escarcha (lv5)",
+				"source": "Himo"
+			},
+			{
+				"name": "Vapores del Nirvana (lv 5)",
+				"source": "Himo"
+			},
+			{
+				"name": "Bomba Fétida Lv1",
+				"source": "Himo"
+			},
+			{
+				"name": "Bomba Química (lv 10)",
+				"source": "Himo"
+			},
+			{
+				"name": "Condición",
+				"source": "Himo"
+			},
+			{
+				"name": "Empujar",
+				"source": "Himo"
+			},
+			{
+				"name": "Quieto",
+				"source": "Himo"
+			},
+			{
+				"name": "Dolor",
+				"source": "Himo"
+			},
+			{
+				"name": "Obediencia",
+				"source": "Himo"
+			},
+			{
+				"name": "Verdad/Mentira",
+				"source": "Himo"
+			},
+			{
+				"name": "Antimagia",
+				"source": "Himo"
+			},
+			{
+				"name": "Viento",
+				"source": "Himo"
+			},
+			{
+				"name": "Resistencia",
+				"source": "Himo"
+			},
+			{
+				"name": "Desarmar",
+				"source": "Himo"
+			},
+			{
+				"name": "Levitar",
+				"source": "Himo"
+			},
+			{
+				"name": "Inconsciencia",
+				"source": "Himo"
+			},
+			{
+				"name": "Paz",
+				"source": "Himo"
+			},
+			{
+				"name": "Guerra",
+				"source": "Himo"
+			},
+			{
+				"name": "Muerte",
+				"source": "Himo"
+			},
+			{
+				"name": "Locura",
+				"source": "Himo"
+			},
+			{
+				"name": "Abismo",
+				"source": "Himo"
+			},
+			{
+				"name": "Antagonizar",
+				"source": "Himo"
+			},
+			{
+				"name": "Perdición",
+				"source": "Himo"
+			},
+			{
+				"name": "Alma",
+				"source": "Himo"
+			},
+			{
+				"name": "Infierno",
+				"source": "Himo"
+			},
+			{
+				"name": "Vida",
+				"source": "Himo"
+			},
+			{
+				"name": "Curación",
+				"source": "Himo"
+			},
+			{
+				"name": "Revivir",
+				"source": "Himo"
+			},
+			{
+				"name": "Rugido",
+				"source": "Himo"
+			},
+			{
+				"name": "Jaula",
+				"source": "Himo"
+			},
+			{
+				"name": "ghoul",
+				"source": "Himo"
+			},
+			{
+				"name": "Lichdom",
+				"source": "Himo"
+			},
+			{
+				"name": "Shock",
+				"source": "Himo"
+			},
+			{
+				"name": "Cubo en la puerta",
+				"source": "Himo"
+			},
+			{
+				"name": "Chorro de Agua",
+				"source": "Himo"
+			},
+			{
+				"name": "Zancadilla",
+				"source": "Himo"
+			},
+			{
+				"name": "Palmada Eléctrica",
+				"source": "Himo"
+			},
+			{
+				"name": "Tartazo",
+				"source": "Himo"
+			},
+			{
+				"name": "Confeti",
+				"source": "Himo"
+			},
+			{
+				"name": "Bolsillo Mágico",
+				"source": "Himo"
+			},
+			{
+				"name": "Proporciones cómicas",
+				"source": "Himo"
+			},
+			{
+				"name": "Esquiva Ensayada",
+				"source": "Himo"
+			},
+			{
+				"name": "Hombre del Saco",
+				"source": "Himo"
+			},
+			{
+				"name": "Bruto",
+				"source": "Himo"
+			},
+			{
+				"name": "Acoso",
+				"source": "Himo"
+			},
+			{
+				"name": "Mil y una risas",
+				"source": "Himo"
+			},
+			{
+				"name": "Repetidor de Locura",
+				"source": "Himo"
+			},
+			{
+				"name": "¿Seguro?",
+				"source": "Himo"
+			},
+			{
+				"name": "¡Que le corten la cabeza!",
+				"source": "Himo"
+			},
+			{
+				"name": "Pasar por el aro",
+				"source": "Himo"
+			},
+			{
+				"name": "Malabares",
+				"source": "Himo"
+			},
+			{
+				"name": "Arena en el ojo",
+				"source": "Himo"
+			},
+			{
+				"name": "Escupir",
+				"source": "Himo"
+			},
+			{
+				"name": "Patada en el estómago",
+				"source": "Himo"
+			},
+			{
+				"name": "Momento incómodo",
+				"source": "Himo"
+			},
+			{
+				"name": "Besar",
+				"source": "Himo"
+			},
+			{
+				"name": "Dedo en el ojo",
+				"source": "Himo"
+			},
+			{
+				"name": "Brochazo",
+				"source": "Himo"
+			},
+			{
+				"name": "Tintazo",
+				"source": "Himo"
+			},
+			{
+				"name": "Bomba de Tinta",
+				"source": "Himo"
+			},
+			{
+				"name": "Cubo tras la puerta",
+				"source": "Himo"
+			},
+			{
+				"name": "Moneda al aire",
+				"source": "Himo"
+			},
+			{
+				"name": "Lanzar 1d20",
+				"source": "Himo"
+			},
+			{
+				"name": "Carta no deseada",
+				"source": "Himo"
+			},
+			{
+				"name": "Fajo de cartas",
+				"source": "Himo"
+			},
+			{
+				"name": "Choque de carrera",
+				"source": "Himo"
+			},
+			{
+				"name": "Pasar por encima",
+				"source": "Himo"
+			},
+			{
+				"name": "¿Por qué no te metes con alguien de tu tamaño?",
+				"source": "Himo"
+			},
+			{
+				"name": "Patada voladora",
+				"source": "Himo"
+			},
+			{
+				"name": "Empujón",
+				"source": "Himo"
+			},
+			{
+				"name": "Sacar pecho",
+				"source": "Himo"
+			},
+			{
+				"name": "Someter",
+				"source": "Himo"
+			},
+			{
+				"name": "¡Vamos chicos!",
+				"source": "Himo"
+			},
+			{
+				"name": "Dando la nota",
+				"source": "Himo"
+			},
+			{
+				"name": "Nota de Distracción",
+				"source": "Himo"
+			},
+			{
+				"name": "El Super-estribillo",
+				"source": "Himo"
+			},
+			{
+				"name": "Sonata Multitudinaria",
+				"source": "Himo"
+			},
+			{
+				"name": "Grito de Guerra",
+				"source": "Himo"
+			},
+			{
+				"name": "Gas lacrimógeno",
+				"source": "Himo"
+			},
+			{
+				"name": "Oleada",
+				"source": "Himo"
+			},
+			{
+				"name": "¡A cubierto!",
+				"source": "Himo"
+			},
+			{
+				"name": "Desarme",
+				"source": "Himo"
+			},
+			{
+				"name": "Navajazo",
+				"source": "Himo"
+			},
+			{
+				"name": "Manto Nocturno",
+				"source": "Himo"
+			},
+			{
+				"name": "Correa Maestra",
+				"source": "Himo"
+			}
+		],
+		"background": [
+			{
+				"name": "Médico",
+				"source": "Himo"
+			},
+			{
+				"name": "Adoptado por las Hadas",
+				"source": "Himo"
+			},
+			{
+				"name": "Cazador Abisal",
+				"source": "Himo"
+			},
+			{
+				"name": "Amnésico",
+				"source": "Himo"
+			},
+			{
+				"name": "Cazador",
+				"source": "Himo"
+			}
+		],
+		"condition": [
+			{
+				"name": "Dazed",
+				"source": "Himo"
+			},
+			{
+				"name": "Sangrado",
+				"source": "Himo"
+			}
+		],
+		"disease": [
+			{
+				"name": "Aeromonosis",
+				"source": "Himo"
+			},
+			{
+				"name": "Anemia",
+				"source": "Himo"
+			},
+			{
+				"name": "Apendicitis",
+				"source": "Himo"
+			},
+			{
+				"name": "Ataque de Ansiedad",
+				"source": "Himo"
+			},
+			{
+				"name": "Caosfágia",
+				"source": "Himo"
+			},
+			{
+				"name": "Depresión",
+				"source": "Himo"
+			},
+			{
+				"name": "Escorbuto",
+				"source": "Himo"
+			},
+			{
+				"name": "Fiebre de las Alcantarillas",
+				"source": "Himo"
+			},
+			{
+				"name": "Fiebre de Infección",
+				"source": "Himo"
+			},
+			{
+				"name": "Fiebre Ghoul",
+				"source": "Himo"
+			},
+			{
+				"name": "Fiebres Invernales",
+				"source": "Himo"
+			},
+			{
+				"name": "Fiebre del Oro",
+				"source": "Himo"
+			},
+			{
+				"name": "Fractura",
+				"source": "Himo"
+			},
+			{
+				"name": "Gangrena",
+				"source": "Himo"
+			},
+			{
+				"name": "Golpe de Calor",
+				"source": "Himo"
+			},
+			{
+				"name": "Hipo Arcano",
+				"source": "Himo"
+			},
+			{
+				"name": "Hipotermia",
+				"source": "Himo"
+			},
+			{
+				"name": "Indigestión",
+				"source": "Himo"
+			},
+			{
+				"name": "Lepra",
+				"source": "Himo"
+			},
+			{
+				"name": "Malaria",
+				"source": "Himo"
+			},
+			{
+				"name": "Peste",
+				"source": "Himo"
+			},
+			{
+				"name": "Pulmones Sucios",
+				"source": "Himo"
+			},
+			{
+				"name": "Rabia",
+				"source": "Himo"
+			},
+			{
+				"name": "Salmonela",
+				"source": "Himo"
+			},
+			{
+				"name": "Sarna",
+				"source": "Himo"
+			},
+			{
+				"name": "Sida",
+				"source": "Himo"
+			},
+			{
+				"name": "Síndrome de Abstinencia",
+				"source": "Himo"
+			},
+			{
+				"name": "Tétanos",
+				"source": "Himo"
+			},
+			{
+				"name": "Tifus",
+				"source": "Himo"
+			},
+			{
+				"name": "Trastorno de Estrés Postraumático",
+				"source": "Himo"
+			},
+			{
+				"name": "Tuberculosis",
+				"source": "Himo"
+			},
+			{
+				"name": "Viruela",
+				"source": "Himo"
+			}
+		],
+		"table": [
+			{
+				"name": "Wild Magic",
+				"source": "Himo"
+			},
+			{
+				"name": "Modron",
+				"source": "Himo"
+			},
+			{
+				"name": "Slaad",
+				"source": "Himo"
+			}
+		]
+	}
+}

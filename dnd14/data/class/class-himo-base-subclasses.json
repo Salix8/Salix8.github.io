@@ -1,0 +1,3377 @@
+{
+	"_meta": {
+		"internalCopies": [
+			"subclass"
+		]
+	},
+	"subclass": [
+		{
+			"name": "Demeri",
+			"shortName": "Demeri",
+			"source": "Himo",
+			"page": 84,
+			"edition": "classic",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"Color Spray|PHB",
+							"Distort Value|AI"
+						],
+						"5": [
+							"Scorching Ray|PHB",
+							"Shatter|PHB"
+						],
+						"9": [
+							"Fireball|PHB",
+							"Wind Wall|PHB"
+						],
+						"13": [
+							"Ice Storm|PHB",
+							"Wall of Fire|PHB"
+						],
+						"17": [
+							"Cone of Cold|PHB",
+							"Wall of Force|PHB"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Demeri|Artificer|TCE|Demeri|Himo|3",
+				"Foco Mundano|Artificer|TCE|Demeri|Himo|5",
+				"Infusión Arcana|Artificer|TCE|Demeri|Himo|9",
+				"Maestro de Infusiones|Artificer|TCE|Demeri|Himo|15"
+			],
+			"className": "Artificer",
+			"classSource": "TCE"
+		},
+		{
+			"name": "Bladesmith",
+			"shortName": "Bladesmith",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Bladesmith|Artificer|TCE|Bladesmith|Himo|3",
+				"Multiataque|Artificer|TCE|Bladesmith|Himo|5",
+				"Armas Modificadas|Artificer|TCE|Bladesmith|Himo|9",
+				"Switch|Artificer|TCE|Bladesmith|Himo|15"
+			],
+			"className": "Artificer",
+			"classSource": "TCE"
+		},
+		{
+			"name": "Camino Filosofal",
+			"shortName": "Filosofal",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Camino Filosofal|Barbarian||Filosofal|Himo|3",
+				"Resistencia Mágica|Barbarian||Filosofal|Himo|6",
+				"Forzar Regeneración|Barbarian||Filosofal|Himo|10",
+				"Destello Desmedido|Barbarian||Filosofal|Himo|14"
+			],
+			"className": "Barbarian",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Camino del Berserker (Himo)",
+			"shortName": "Berserker (Himo)",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Camino del Berserker|Barbarian||Berserker (Himo)|Himo|3",
+				"Fuerza Irracional|Barbarian||Berserker (Himo)|Himo|6",
+				"Presencia Intimidante|Barbarian||Berserker (Himo)|Himo|10",
+				"Represalia|Barbarian||Berserker (Himo)|Himo|14"
+			],
+			"className": "Barbarian",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Colegio del Juego",
+			"shortName": "Juego",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Colegio del Juego|Bard||Juego|Himo|3",
+				"Cartomancia|Bard||Juego|Himo|6",
+				"Comodín|Bard||Juego|Himo|14"
+			],
+			"className": "Bard",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Dominio Shintoísta",
+			"shortName": "Shintoísta",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Dominio Shintoísta|Cleric||Shintoísta|Himo|1",
+				"Canalizar Divinidad: Puente Etéreo|Cleric||Shintoísta|Himo|2",
+				"Evasión Etérea|Cleric||Shintoísta|Himo|6",
+				"Golpe Divino|Cleric||Shintoísta|Himo|8",
+				"Visión del Más Allá|Cleric||Shintoísta|Himo|17"
+			],
+			"className": "Cleric",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Dominio del Vacío",
+			"shortName": "Vacío",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Dominio del Vacío|Cleric||Vacío|Himo|1",
+				"Canalizar Divinidad: Empuje Gravitacional|Cleric||Vacío|Himo|2",
+				"Liberar el Horror|Cleric||Vacío|Himo|6",
+				"Golpe Divino|Cleric||Vacío|Himo|8",
+				"Maestro del Vacío|Cleric||Vacío|Himo|17"
+			],
+			"className": "Cleric",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Dominio del Viaje",
+			"shortName": "Viaje",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Dominio del Viaje|Cleric||Viaje|Himo|1",
+				"Canalizar Divinidad: Huida Cortante|Cleric||Viaje|Himo|2",
+				"Paso Sagrado|Cleric||Viaje|Himo|6",
+				"Golpe Divino|Cleric||Viaje|Himo|8",
+				"Godspeed|Cleric||Viaje|Himo|17"
+			],
+			"className": "Cleric",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Círculo del Bosque",
+			"shortName": "Bosque",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Círculo del Bosque|Druid||Bosque|Himo|2",
+				"Habla Vegetal|Druid||Bosque|Himo|6",
+				"Aliados del Bosque|Druid||Bosque|Himo|10",
+				"Guardián del Bosque|Druid||Bosque|Himo|14"
+			],
+			"className": "Druid",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Círculo Elemental",
+			"shortName": "Elemental",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Círculo Elemental|Druid||Elemental|Himo|2",
+				"Mejora de Refuerzos Elementales|Druid||Elemental|Himo|6",
+				"Control Total|Druid||Elemental|Himo|10",
+				"Mejora de Refuerzos Elementales|Druid||Elemental|Himo|14"
+			],
+			"className": "Druid",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Círculo de Esporas",
+			"shortName": "Esporas (Himo)",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Círculo de Esporas|Druid||Esporas (Himo)|Himo|2",
+				"Infestación Fúngica|Druid||Esporas (Himo)|Himo|6",
+				"Esparcir Esporas|Druid||Esporas (Himo)|Himo|10",
+				"Cuerpo Fúngico|Druid||Esporas (Himo)|Himo|14"
+			],
+			"className": "Druid",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Círculo de las Espinas",
+			"shortName": "Espinas",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Círculo de las Espinas|Druid||Espinas|Himo|2",
+				"Espíritus Guardianes|Druid||Espinas|Himo|6",
+				"Aliados del Bosque|Druid||Espinas|Himo|10",
+				"Aullido de los Muertos|Druid||Espinas|Himo|14"
+			],
+			"className": "Druid",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Círculo de lo Salvaje",
+			"shortName": "Salvaje",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Círculo de lo Salvaje|Druid||Salvaje|Himo|2",
+				"Depredador Eficaz|Druid||Salvaje|Himo|6",
+				"Golpe Mortal|Druid||Salvaje|Himo|10",
+				"Instintos Salvajes|Druid||Salvaje|Himo|14"
+			],
+			"className": "Druid",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Círculo de Santería",
+			"shortName": "Santería",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Círculo de Santería|Druid||Santería|Himo|2",
+				"Alma Sintética|Druid||Santería|Himo|6",
+				"Hechicería Vudú|Druid||Santería|Himo|10",
+				"Atrapa-almas|Druid||Santería|Himo|14"
+			],
+			"className": "Druid",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Círculo de la Tierra (Corrección)",
+			"shortName": "Tierra (Corrección)",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Círculo de la Tierra (Corrección)|Druid||Tierra (Corrección)|Himo|2",
+				"Terreno Predilecto|Druid||Tierra (Corrección)|Himo|6",
+				"Guarda Natural|Druid||Tierra (Corrección)|Himo|10",
+				"Santuario de la Naturaleza|Druid||Tierra (Corrección)|Himo|14"
+			],
+			"className": "Druid",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Penitente",
+			"shortName": "Penitente",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Penitente|Fighter||Penitente|Himo|3",
+				"Cruz del Pecador|Fighter||Penitente|Himo|7",
+				"Mejora del Mea Culpa|Fighter||Penitente|Himo|10",
+				"Rezos|Fighter||Penitente|Himo|15",
+				"Mejora de Mea Culpa|Fighter||Penitente|Himo|18"
+			],
+			"className": "Fighter",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Guerrero Tribal",
+			"shortName": "Tribal",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Guerrero Tribal|Fighter||Tribal|Himo|3",
+				"Camuflaje Preciso|Fighter||Tribal|Himo|7",
+				"Tácticas Tribales|Fighter||Tribal|Himo|10",
+				"Emboscada Sorpresa|Fighter||Tribal|Himo|15",
+				"Golpe Fulminante|Fighter||Tribal|Himo|18"
+			],
+			"className": "Fighter",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Vía del Hilador",
+			"shortName": "Hilador",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Vía del Hilador|Monk||Hilador|Himo|3",
+				"Hilo Trepador|Monk||Hilador|Himo|6",
+				"Muro Cortante|Monk||Hilador|Himo|11",
+				"Nido del Hilador|Monk||Hilador|Himo|17"
+			],
+			"className": "Monk",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Vía del Pugilista",
+			"shortName": "Pugilista",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Vía del Pugilista|Monk||Pugilista|Himo|3",
+				"Entereza Final|Monk||Pugilista|Himo|6",
+				"Gancho Cargado|Monk||Pugilista|Himo|11",
+				"Frenesí Finalizador|Monk||Pugilista|Himo|17"
+			],
+			"className": "Monk",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Vía del Buscabroncas",
+			"shortName": "Buscabroncas",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Vía del Buscabroncas|Monk||Buscabroncas|Himo|3",
+				"¡Detrás de la Mesa!|Monk||Buscabroncas|Himo|6",
+				"Aguantaría Todo el Día|Monk||Buscabroncas|Himo|11",
+				"Violencia como Respuesta|Monk||Buscabroncas|Himo|17"
+			],
+			"className": "Monk",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Vía del Wushu",
+			"shortName": "Wushu",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Vía del Wushu|Monk||Wushu|Himo|3",
+				"Estilo de Wushu de nivel 6|Monk||Wushu|Himo|6",
+				"Estilo de Wushu de nivel 11|Monk||Wushu|Himo|11",
+				"Estilo de Wushu de nivel 17|Monk||Wushu|Himo|17"
+			],
+			"className": "Monk",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Juramento Salvaje",
+			"shortName": "Salvaje",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Juramento Salvaje|Paladin||Salvaje|Himo|3",
+				"Aura Salvaje|Paladin||Salvaje|Himo|7",
+				"Mejora de Aura Salvaje|Paladin||Salvaje|Himo|15",
+				"Furia del Depredador|Paladin||Salvaje|Himo|20"
+			],
+			"additionalSpells": [
+				{
+					"name": "Catalog access",
+					"expanded": {
+						"s1": [
+							"Llamada del Cazador|GMAM"
+						]
+					}
+				}
+			],
+			"className": "Paladin",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Juramento Fey",
+			"shortName": "Fey",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Juramento Fey|Paladin||Fey|Himo|3",
+				"Canalizar Divinidad: Lluvia Radiante|Paladin||Fey|Himo|7",
+				"Arquería Mágica|Paladin||Fey|Himo|15",
+				"Protector del Bosque|Paladin||Fey|Himo|20"
+			],
+			"className": "Paladin",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Juramento de Magia Hishna",
+			"shortName": "Hishna",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Juramento de Magia Hishna|Paladin||Hishna|Himo|3",
+				"Aura de Sangre|Paladin||Hishna|Himo|7",
+				"Mejora de Aura de Sangre|Paladin||Hishna|Himo|15",
+				"Forma Bestial|Paladin||Hishna|Himo|20"
+			],
+			"className": "Paladin",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Juramento de Magia Pluma",
+			"shortName": "Pluma",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Juramento de Magia Pluma|Paladin||Pluma|Himo|3",
+				"Aura de Paz|Paladin||Pluma|Himo|7",
+				"Mejora de Aura de Paz|Paladin||Pluma|Himo|15",
+				"Forma Bestial|Paladin||Pluma|Himo|20"
+			],
+			"className": "Paladin",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Linaje Vampírico",
+			"shortName": "Vampírico",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Linaje Vampírico|Sorcerer||Vampírico|Himo|1",
+				"Cambio de Forma|Sorcerer||Vampírico|Himo|6",
+				"Mordisco de Vampiro|Sorcerer||Vampírico|Himo|14",
+				"Regeneración Vampírica|Sorcerer||Vampírico|Himo|18"
+			],
+			"className": "Sorcerer",
+			"classSource": "PHB"
+		},
+		{
+			"name": "El Parásito",
+			"shortName": "Parásito",
+			"source": "Himo",
+			"subclassFeatures": [
+				"El Parásito|Warlock||Parásito|Himo|1",
+				"Protección Mental|Warlock||Parásito|Himo|6",
+				"Voluntad Compartida|Warlock||Parásito|Himo|10",
+				"Disruptor Psiónico|Warlock||Parásito|Himo|14"
+			],
+			"className": "Warlock",
+			"classSource": "PHB"
+		},
+		{
+			"name": "El Quori",
+			"shortName": "Quori",
+			"source": "Himo",
+			"subclassFeatures": [
+				"El Quori|Warlock||Quori|Himo|1",
+				"Mente Abierta|Warlock||Quori|Himo|6",
+				"Imaginación Poderosa|Warlock||Quori|Himo|10",
+				"Moldear Pesadilla|Warlock||Quori|Himo|14"
+			],
+			"className": "Warlock",
+			"classSource": "PHB"
+		},
+		{
+			"name": "El Archimago",
+			"shortName": "Archimago",
+			"source": "Himo",
+			"subclassFeatures": [
+				"El Archimago|Warlock||Archimago|Himo|1",
+				"Tropiezo Astral|Warlock||Archimago|Himo|6",
+				"Alumno Avanzado|Warlock||Archimago|Himo|6",
+				"Protección Mágica|Warlock||Archimago|Himo|10",
+				"Fuerza Atrapante|Warlock||Archimago|Himo|14"
+			],
+			"className": "Warlock",
+			"classSource": "PHB"
+		},
+		{
+			"name": "El Dragón",
+			"shortName": "Dragón",
+			"source": "Himo",
+			"subclassFeatures": [
+				"El Dragón|Warlock||Dragón|Himo|1",
+				"Influencia Dracónica|Warlock||Dragón|Himo|6",
+				"Transformación Ancestral|Warlock||Dragón|Himo|10",
+				"Resistencia Legendaria|Warlock||Dragón|Himo|14"
+			],
+			"className": "Warlock",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Lich",
+			"shortName": "Lich",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Lich|Wizard||Lich|Himo|2",
+				"Levantar No Muertos|Wizard||Lich|Himo|6",
+				"Muerto entre los Vivos|Wizard||Lich|Himo|10",
+				"Guía de Almas|Wizard||Lich|Himo|14"
+			],
+			"className": "Wizard",
+			"classSource": "PHB"
+		},
+		{
+			"name": "Oniromante",
+			"shortName": "Oniromante",
+			"source": "Himo",
+			"subclassFeatures": [
+				"Oniromante|Wizard||Oniromante|Himo|2",
+				"Sueño Intrusivo|Wizard||Oniromante|Himo|6",
+				"Mente Afilada|Wizard||Oniromante|Himo|10",
+				"Destructor de Mentes|Wizard||Oniromante|Himo|14"
+			],
+			"className": "Wizard",
+			"classSource": "PHB"
+		}
+	],
+	"subclassFeature": [
+		{
+			"name": "Demeri",
+			"source": "Himo",
+			"page": 84,
+			"entries": [
+				"Cualquier artífice sabe cómo infundir objetos mundanos en magia, pero el escuadrón de Demeri lleva esta práctica al extremo. Literalmente cualquier cosa puede ser un poderoso objeto mágico en sus manos. Gracias a ello se han granjeado un incalculable respeto entre muchas comunidades mágicas.",
+				{
+					"name": "Tool Proficiency",
+					"entries": [
+						"Cuando adoptas esta especialización en el 3er nivel, obtienes competencia con las herramientas de joyero. Si ya tienes esta competencia, obtienes competencia con otro tipo de herramientas de artesano de tu elección."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Demeri Spells",
+					"entries": [
+						"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Artillerist Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+						{
+							"type": "table",
+							"caption": "Conjuros de Demeri",
+							"colLabels": [
+								"Artificer Level",
+								"Spell"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"3rd",
+									"{@spell Color Spray}, {@spell Distort Value|AI}"
+								],
+								[
+									"5th",
+									"{@spell Nystul's Magic Aura}, {@spell Locate Object}"
+								],
+								[
+									"9th",
+									"{@spell Bestow Curse}, {@spell Remove Curse}"
+								],
+								[
+									"13th",
+									"{@spell Conjure Minor Elementals}, {@spell Vitriolic Sphere|XGE}"
+								],
+								[
+									"17th",
+									"{@spell Conjure Elemental}, {@spell Passwall}"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Experto Canalizador",
+					"entries": [
+						"Eres capaz de canalizar una mayor cantidad de magia en tus infusiones. A partir de ahora el número de infusiones que puedes tener activas es igual al número de infusiones conocidas. Además, elige un artículo de la infusión Replicar Objeto Mágico, este lo tendrás preparado siempre y no cuenta para el número de infusiones conocidas. Adquieres otro artículo a niveles 6, 10 y 14.",
+						"Puedes elegir qué infusión desactivar cuando sobrepases el número máximo de infusiones activas, así como desactivar una infusión al acabar un descanso corto."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Demeri",
+			"subclassSource": "Himo",
+			"level": 3
+		},
+		{
+			"name": "Foco Mundano",
+			"source": "Himo",
+			"page": 84,
+			"header": 2,
+			"entries": [
+				"At 5th level, Puedes canalizar la infusión Foco Arcano Mejorado en cualquier objeto de hasta 1 pie cúbico y usarlo como foco de lanzamiento de hechizos. Solo tú podrás usarlo como tal. Si un conjuro requiere un coste material concreto, y el objeto en sí mismo iguala o supera dicho coste, el foco arcano sustituirá dicho componente. Si el conjuro consume el componente con coste, el foco arcano también se consumirá. No puedes infundir un objeto creado con la infusión Replicar Objeto Mágico."
+			],
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Demeri",
+			"subclassSource": "Himo",
+			"level": 5
+		},
+		{
+			"name": "Infusión Arcana",
+			"source": "Himo",
+			"page": 84,
+			"header": 2,
+			"entries": [
+				"Starting at 9th level, Utilizando tus Herramientas de Carpintero, puedes crear recipientes mágicos para guardar tus conjuros. Con un ritual de una hora, que puede coincidir con un descanso corto, puedes gastar un espacio de conjuro que tengas disponible y castear un conjuro dentro de un objeto. Una criatura que no seas necesariamente tú puede usar su acción para castear el conjuro desde el objeto, utilizándolo como foco arcano, valiéndose de tu bono de lanzamiento de conjuros o tu CD de salvación de conjuros. Si el conjuro requiere {@status Concentration|PHB}, deberá ser la criatura que castee el conjuro quien la mantenga. Para poder meter el conjuro dentro del objeto, este debe poder ser casteado en al menos 1 hora.",
+				"Recuperarás el espacio de conjuro en el próximo descanso largo tras su utilización. No puedes usar este rasgo más veces que tu BC. Si superas esa cantidad, el más antiguo se pierde."
+			],
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Demeri",
+			"subclassSource": "Himo",
+			"level": 9
+		},
+		{
+			"name": "Maestro de Infusiones",
+			"source": "Himo",
+			"page": 84,
+			"header": 2,
+			"entries": [
+				"Starting at 15th level, Tus conocimientos sobre las infusiones te posicionan entre los mejores en tu campo. Puedes dedicar un descanso corto a activar una de tus infusiones y, si es necesario, a desactivar otra. Además, con cada descanso largo puedes sustituir una de tus infusiones conocidas por otra."
+			],
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Demeri",
+			"subclassSource": "Himo",
+			"level": 15
+		},
+		{
+			"name": "Bladesmith",
+			"source": "Himo",
+			"entries": [
+				"Es el sueño de cualquier herrero de combate crear el arma definitiva. Allí donde las armas mágicas dominen el combate, un Artificiero Bladesmith martilleará el yunque para forjar la mejor arma jamás vista.",
+				{
+					"name": "Dominio de Armero",
+					"entries": [
+						"Eres competente en armas marciales y herramientas de herrero. Si ya eras competente con estas últimas, eres competente con herramientas de carpintero o, en su defecto, con un kit de herramientas de tu elección. Fabricar armas te cuesta la mitad de dinero."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Conjuros de Bladesmith",
+					"entries": [
+						"Siempre tienes preparados los siguientes conjuros. Cuentan como conjuros de artificiero para ti, pero no para el número que puedes preparar.",
+						{
+							"type": "table",
+							"colLabels": [
+								"Nivel de artificiero",
+								"Conjuros"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"3rd",
+									"{@spell compelled duel}, {@spell wrathful smite}"
+								],
+								[
+									"5th",
+									"{@spell kinetic jaunt|SCC}, {@spell spiritual weapon}"
+								],
+								[
+									"9th",
+									"{@spell crusader's mantle}, {@spell elemental weapon}"
+								],
+								[
+									"13th",
+									"{@spell staggering smite}, {@spell fire shield}"
+								],
+								[
+									"17th",
+									"{@spell steel wind strike|XGE}, {@spell holy weapon|XGE}"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Segundo Filo",
+					"entries": [
+						"Al final de un descanso prolongado puedes vincular un arma mágica o mundana. Elige dos armas adicionales con las que seas competente y que no sean la base, o un arma y un escudo. Como acción adicional puedes cambiar el arma equipada por otra de las elegidas. Un arma mágica solo mantiene sus propiedades en su forma original; las otras formas cuentan como mágicas, pero no conservan esas propiedades.",
+						"Puedes usar el arma en cualquiera de sus formas como foco arcano y usar Inteligencia para sus ataques."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Bladesmith",
+			"subclassSource": "Himo",
+			"level": 3
+		},
+		{
+			"name": "Multiataque",
+			"source": "Himo",
+			"entries": [
+				"Ejerces la violencia dos veces con tu acción de Ataque. Además, puedes usar tu reacción para cambiar de tipo de arma entre ataques."
+			],
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Bladesmith",
+			"subclassSource": "Himo",
+			"level": 5
+		},
+		{
+			"name": "Armas Modificadas",
+			"source": "Himo",
+			"entries": [
+				"Ahora puedes infusionar tus armas de Segundo Filo. Cada una cuenta como un objeto aparte para infusionar y puede contener hasta dos infusiones. Los efectos solo son vigentes cuando tengas equipada el arma en la forma en que la infusionaste."
+			],
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Bladesmith",
+			"subclassSource": "Himo",
+			"level": 9
+		},
+		{
+			"name": "Switch",
+			"source": "Himo",
+			"entries": [
+				"Cuando uses tu acción adicional para cambiar de arma, puedes atacar una vez con la nueva. Si cambias a escudo, puedes atacar para dejar al objetivo {@condition Stunned|PHB}. Si el escudo tenía un modificador mágico a tu CA, lo añade al ataque."
+			],
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Bladesmith",
+			"subclassSource": "Himo",
+			"level": 15
+		},
+		{
+			"name": "Camino Filosofal",
+			"source": "Himo",
+			"entries": [
+				"Una vez pereciste y un alquimista te ofreció una segunda oportunidad: tu corazón es ahora una piedra filosofal y eres poco más que un gólem.",
+				{
+					"name": "Construcción Filosofal",
+					"entries": [
+						"Adquieres el tipo constructo. No necesitas comer ni respirar, pero puedes ser curado como un humanoide normal. Eres inmune al veneno y a la condición {@condition Poisoned|PHB}."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Regeneración Filosofal",
+					"entries": [
+						"Al entrar en furia te envuelve el poder de la Piedra Filosofal. Mientras dure, eres vulnerable a las curaciones: cuando fueras a recuperar puntos de golpe de cualquier fuente, recuperas el doble. Con un ritual de dos horas, que puede coincidir con un descanso prolongado, puedes regenerar un miembro."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Filosofal",
+			"subclassSource": "Himo",
+			"level": 3
+		},
+		{
+			"name": "Resistencia Mágica",
+			"source": "Himo",
+			"entries": [
+				"Tienes ventaja en salvaciones contra conjuros que hagan daño y resistencia al daño de estos."
+			],
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Filosofal",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Forzar Regeneración",
+			"source": "Himo",
+			"entries": [
+				"Como acción gastas un dado de golpe, añades el doble de tu modificador de Constitución y recuperas esa cantidad de puntos de golpe. Una vez al día, al terminar un descanso corto, recuperas una cantidad de dados de golpe igual a tu bonificador de competencia."
+			],
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Filosofal",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Destello Desmedido",
+			"source": "Himo",
+			"entries": [
+				"Cada vez que restaures puntos de golpe con Forzar Regeneración, curas la mitad a una criatura elegida a 5 pies de ti."
+			],
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Filosofal",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "Camino del Berserker",
+			"source": "Himo",
+			"entries": [
+				"El camino del berserker es una senda de furia desenfrenada y violencia.",
+				{
+					"name": "Frenesí",
+					"entries": [
+						"Mientras estés en furia, puedes usar una acción adicional para hacer un ataque cuerpo a cuerpo adicional o lanzar un objeto o criatura contra un enemigo. Puedes aplicar Reckless Attack y furia a ambos. Lanzar un objeto no destinado a ser arma o una criatura cuenta como arma improvisada.",
+						{
+							"type": "table",
+							"colLabels": [
+								"Tamaño",
+								"Daño",
+								"Alcance",
+								"Extra"
+							],
+							"colStyles": [
+								"col-2",
+								"col-3",
+								"col-4",
+								"col-3"
+							],
+							"rows": [
+								[
+									"Diminuto",
+									"{@dice 1d4} + Fue",
+									"Mod. de Fuerza × 15 pies",
+									"\u2014"
+								],
+								[
+									"Pequeño",
+									"{@dice 1d6} + Fue",
+									"Mod. de Fuerza × 10 pies",
+									"Salvación de Fuerza o {@condition Prone|PHB}"
+								],
+								[
+									"Mediano",
+									"{@dice 1d8} + Fue",
+									"Mod. de Fuerza × 5 pies",
+									"Desventaja si supera la mitad del alcance"
+								],
+								[
+									"Grande",
+									"{@dice 2d10} + Fue",
+									"Mod. de Fuerza × 2 pies",
+									"Con desventaja"
+								],
+								[
+									"Enorme",
+									"{@dice 4d10} + Fue",
+									"Mod. de Fuerza en pies",
+									"Con desventaja"
+								]
+							]
+						},
+						"Si lanzaste una criatura, esta siempre cae {@condition Prone|PHB} después de este ataque. Si el objetivo es golpeado por un objeto mediano o más grande, este también cae {@condition Prone|PHB}. La criatura lanzada puede evitar ser arrojada con un check de {@skill Athletics} o {@skill Acrobatics} contra tu {@skill Athletics}. Si el objeto es Mediano o mayor, el objetivo también queda {@condition Prone|PHB}."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Berserker (Himo)",
+			"subclassSource": "Himo",
+			"level": 3
+		},
+		{
+			"name": "Fuerza Irracional",
+			"source": "Himo",
+			"entries": [
+				"Eres inmune a quedar {@condition Charmed|PHB} o {@condition Frightened|PHB} mientras estés en furia; esos efectos se suprimen si ya los tenías al entrar. Además, cuando uses Reckless Attack en tu turno, haces crítico con 19."
+			],
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Berserker (Himo)",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Presencia Intimidante",
+			"source": "Himo",
+			"entries": [
+				"Como acción eliges una criatura que puedas ver a menos de 30 pies. Si puede verte u oírte, debe superar una salvación de Sabiduría contra tu Constitución o temerte hasta el final de tu siguiente turno. En turnos posteriores puedes prolongarlo con tu acción; termina si acaba su turno sin línea de visión o a más de 60 pies. Con éxito, es inmune a este rasgo durante 24 horas."
+			],
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Berserker (Himo)",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Represalia",
+			"source": "Himo",
+			"entries": [
+				"Mientras estés en furia, cuando una criatura te ataque cuerpo a cuerpo, puedes usar tu reacción para hacer un ataque contra ella."
+			],
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Berserker (Himo)",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "Colegio del Juego",
+			"source": "Himo",
+			"entries": [
+				"Los bardos del Colegio del Juego saben llevar cualquier juego de cartas a su terreno y doblan su magia a través de los cartones.",
+				{
+					"name": "Dominio del Juego",
+					"entries": [
+						"Eres competente con el set de cartas; si ya lo eras, duplicas tu bonificador de competencia. Puedes usarlo como foco arcano y, mediante un ritual de una hora que puede coincidir con un descanso corto o prolongado, recuperar cartas perdidas o destruidas si conservas al menos una carta."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Suerte del Ludópata",
+					"entries": [
+						"Como reacción, tras fallar una prueba de característica, salvación o ataque, puedes gastar Inspiración de Bardo para repetirla, añadir un dado de Inspiración de Bardo y usar el nuevo resultado. Si tienes éxito, anota el resultado del dado; el DM puede aplicarlo como penalizador a un ataque o prueba posterior tuya, y no puedes usar este rasgo de nuevo hasta sufrir ese inconveniente."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Cartas Letales",
+					"entries": [
+						"Mientras uses el set como foco, puedes usar tu acción para hacer un ataque a distancia con una carta: {@dice 1d8} de daño cortante mágico, alcance 30/60, usando Carisma. Puedes lanzar 52 cartas antes de recuperarlas; cada una se rompe tras usarse. Los comodines no son arrojadizos."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Juego",
+			"subclassSource": "Himo",
+			"level": 3
+		},
+		{
+			"name": "Cartomancia",
+			"source": "Himo",
+			"entries": [
+				"Al final de un descanso prolongado puedes sintonizarte con uno de los ases de la baraja; no cuenta para el límite de sintonización.",
+				{
+					"type": "list",
+					"items": [
+						"Tréboles/Oros: en pruebas de habilidad, los 1 cuentan como 2 y los 19 como 20 antes de modificadores.",
+						"Diamantes/Bastos: resistencia al daño cortante, perforante y contundente.",
+						"Corazones/Copas: añade {@dice 1d8} + Carisma a la curación de conjuros; a nivel 10, añade otro {@dice 1d8}.",
+						"Picas/Espadas: añade {@dice 1d8} + Carisma al daño de conjuros; a nivel 10, añade otro {@dice 1d8}."
+					]
+				}
+			],
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Juego",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Comodín",
+			"source": "Himo",
+			"entries": [
+				"Puedes gastar un espacio de conjuro de hasta nivel 5 e introducir el conjuro en uno de los comodines. Puedes hacerlo con los dos comodines a la vez, gastando un espacio por cada uno. Cuando lances el conjuro desde la carta, la usas como foco y se consume."
+			],
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Juego",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "Dominio Shintoísta",
+			"source": "Himo",
+			"entries": [
+				"Los clérigos shintoístas veneran la naturaleza, sus espíritus y los yokai.",
+				{
+					"name": "Compañero Yokai",
+					"entries": [
+						"Una vez al día puedes lanzar {@spell find familiar} sin componente material para invocar un Yokai Menor. Con componente material puedes invocar uno de VD 1/2 o inferior; si gastas además un espacio y 10 po por nivel, uno de VD igual al nivel del conjuro. Solo puedes tener uno a la vez y el mismo yokai conserva recursos gastados entre invocaciones."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Competencias adicionales",
+					"entries": [
+						"Eres competente con armaduras pesadas, katanas, tantos, bastones de todo tipo y kanabos."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Conjuros de Dominio",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Nivel",
+								"Conjuros"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1st",
+									"{@spell dissonant whispers}, {@spell silvery barbs|SCC}"
+								],
+								[
+									"3rd",
+									"{@spell invisibility}, {@spell phantasmal force}"
+								],
+								[
+									"5th",
+									"{@spell fear}, {@spell blink}"
+								],
+								[
+									"7th",
+									"Perrete del Morde, {@spell confusion}"
+								],
+								[
+									"9th",
+									"{@spell mislead}, {@spell telekinesis}"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Shintoísta",
+			"subclassSource": "Himo",
+			"level": 1
+		},
+		{
+			"name": "Canalizar Divinidad: Puente Etéreo",
+			"source": "Himo",
+			"entries": [
+				"Como acción, durante 10 minutos ves criaturas {@condition Invisible|PHB} o en el Plano Etéreo y puedes elegir como objetivo a las etéreas como si estuvieras en dicho plano."
+			],
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Shintoísta",
+			"subclassSource": "Himo",
+			"level": 2
+		},
+		{
+			"name": "Evasión Etérea",
+			"source": "Himo",
+			"entries": [
+				"Un número de veces igual a tu bonificador de competencia, cuando recibas daño puedes usar tu reacción para pasar al Plano Etéreo hasta el final de tu próximo turno."
+			],
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Shintoísta",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Golpe Divino",
+			"source": "Himo",
+			"entries": [
+				"Una vez por turno, cuando una criatura reciba daño de uno de tus trucos o armas, añades {@dice 1d8} de daño radiante."
+			],
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Shintoísta",
+			"subclassSource": "Himo",
+			"level": 8
+		},
+		{
+			"name": "Visión del Más Allá",
+			"source": "Himo",
+			"entries": [
+				"Ganas visión verdadera a 60 pies."
+			],
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Shintoísta",
+			"subclassSource": "Himo",
+			"level": 17
+		},
+		{
+			"name": "Dominio del Vacío",
+			"source": "Himo",
+			"entries": [
+				"Estos clérigos veneran dioses de otros mundos, seres primigenios u Obyriths, llevando el vacío y sus horrores allá donde van.",
+				{
+					"name": "Tocado por el Vacío",
+					"entries": [
+						"Ganas telepatía a 60 pies; las criaturas pueden responder si compartís al menos un idioma. Ganas competencia en dos opciones entre Deep Speech y Qualith, Abisal, {@skill Arcana}, {@skill Investigation}, Perspicacia, {@item Alchemist's Supplies|PHB} o vehículos de agua, espacio o aire."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Conjuros de Dominio",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Nivel",
+								"Conjuros"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1st",
+									"{@spell dissonant whispers}, {@spell feather fall}"
+								],
+								[
+									"3rd",
+									"{@spell levitate}, {@spell silence}"
+								],
+								[
+									"5th",
+									"{@spell fly}, {@spell magic circle}"
+								],
+								[
+									"7th",
+									"{@spell banishment}, {@spell dimension door}"
+								],
+								[
+									"9th",
+									"{@spell contact other plane}, {@spell planar binding}"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Vacío",
+			"subclassSource": "Himo",
+			"level": 1
+		},
+		{
+			"name": "Canalizar Divinidad: Empuje Gravitacional",
+			"source": "Himo",
+			"entries": [
+				"Como acción creas un campo gravitatorio de 15 pies durante un minuto. Los objetos no asegurados se acercan 5 pies por turno y las criaturas elegidas lo tratan como terreno difícil y usan toda su velocidad para levantarse. Como acción, puedes atraer hasta 5 pies o derribar a una criatura con una salvación de Fuerza, o coger un objeto del área al vuelo."
+			],
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Vacío",
+			"subclassSource": "Himo",
+			"level": 2
+		},
+		{
+			"name": "Liberar el Horror",
+			"source": "Himo",
+			"entries": [
+				"Cuando una criatura te fuerce una salvación de Inteligencia, Sabiduría o Carisma, puedes usar tu reacción para obligarla a hacer una salvación de Carisma contra tu CD. Con un fallo recibe {@dice 2d6} psíquico y te teme. Criaturas inmunes al {@condition Frightened|PHB} o con Inteligencia inferior a 5 son inmunes."
+			],
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Vacío",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Golpe Divino",
+			"source": "Himo",
+			"entries": [
+				"Al dañar con un truco, añades {@dice 1d8} psíquico; aumenta a {@dice 2d8} a nivel 14."
+			],
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Vacío",
+			"subclassSource": "Himo",
+			"level": 8
+		},
+		{
+			"name": "Maestro del Vacío",
+			"source": "Himo",
+			"entries": [
+				"Ganas resistencia al daño de fuerza y psíquico. Empuje Gravitacional se extiende a 30 pies y, mientras esté activo, ganas velocidad de vuelo con flotación igual a tu velocidad a pie."
+			],
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Vacío",
+			"subclassSource": "Himo",
+			"level": 17
+		},
+		{
+			"name": "Dominio del Viaje",
+			"source": "Himo",
+			"entries": [
+				{
+					"name": "Competencias extra",
+					"entries": [
+						"Ganas competencia con armas marciales, {@skill Persuasion} y dos idiomas a tu elección."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Vagabundo Escurridizo",
+					"entries": [
+						"Añades Sabiduría a la iniciativa. Durante el primer turno de combate recibes ataques con desventaja y tienes ventaja en salvaciones de Destreza."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Conjuros de Dominio",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Nivel",
+								"Conjuros"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1st",
+									"{@spell disguise self}, {@spell zephyr strike|XGE}"
+								],
+								[
+									"3rd",
+									"{@spell find steed}, {@spell vortex warp|SCC}"
+								],
+								[
+									"5th",
+									"{@spell Leomund's Tiny Hut|PHB|tiny hut}, {@spell thunder step|XGE}"
+								],
+								[
+									"7th",
+									"{@spell dimension door}, {@spell Sending (Hishna)|GMAM}"
+								],
+								[
+									"9th",
+									"{@spell passwall}, {@spell teleportation circle}"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Viaje",
+			"subclassSource": "Himo",
+			"level": 1
+		},
+		{
+			"name": "Canalizar Divinidad: Huida Cortante",
+			"source": "Himo",
+			"entries": [
+				"Como acción, una criatura voluntaria a 5 pies puede moverse inmediatamente su velocidad más tu nivel de clérigo dividido entre 5, sin ataques de oportunidad ni terreno difícil. Puede atravesar criaturas y, al final, elige hasta tu bonificador de competencia de las atravesadas: salvación de Destreza o {@dice 10} + tu nivel de daño cortante, la mitad con éxito; si falla por 7 o más sufre {@condition Sangrado|Himo|sangrado} {@dice 1d4}."
+			],
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Viaje",
+			"subclassSource": "Himo",
+			"level": 2
+		},
+		{
+			"name": "Paso Sagrado",
+			"source": "Himo",
+			"entries": [
+				"Estás permanentemente bajo los efectos de {@spell feather fall}, {@spell spider climb} y {@spell water walk}, salvo que no quieras. Las criaturas que viajen a pie o montadas a 60 pies de ti, incluido tú, doblan su velocidad de viaje."
+			],
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Viaje",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Golpe Divino",
+			"source": "Himo",
+			"entries": [
+				"Tus ataques de arma añaden {@dice 1d8} del tipo del arma, aumentado a {@dice 2d8} a nivel 14."
+			],
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Viaje",
+			"subclassSource": "Himo",
+			"level": 8
+		},
+		{
+			"name": "Godspeed",
+			"source": "Himo",
+			"entries": [
+				"Siempre tienes preparados {@spell arcane gate}, {@spell teleport}, {@spell demiplane} y {@spell gate}. Si gastas Canalizar Divinidad al lanzar {@spell teleportation circle}, se vuelve permanente e {@condition Invisible|PHB} para cualquiera salvo ti."
+			],
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Viaje",
+			"subclassSource": "Himo",
+			"level": 17
+		},
+		{
+			"name": "Círculo del Bosque",
+			"source": "Himo",
+			"entries": [
+				"Los druidas del bosque son aquellos más en comunión con la vegetación que con los animales o los elementos. Sus enclaves a menudo se dedican a preservar la vegetación, prevenir incendios y reforestar zonas destruidas.",
+				{
+					"name": "Forma Vegetal",
+					"entries": [
+						"Cuando uses tu Wild Shape, puedes transformarte en plantas con las mismas limitaciones que el Wild Shape del Druida de la Luna."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Conjuros del Bosque",
+					"entries": [
+						"Tienes los siguientes conjuros siempre preparados y no cuentan para el máximo de conjuros que puedes conocer.",
+						{
+							"type": "table",
+							"colLabels": [
+								"Nivel de druida",
+								"Conjuros"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"3rd",
+									"{@spell entangle}, {@spell ensnaring strike}"
+								],
+								[
+									"5th",
+									"{@spell Emboscada|GMAM}, {@spell spike growth}"
+								],
+								[
+									"7th",
+									"{@spell plant growth}, Florecer"
+								],
+								[
+									"9th",
+									"{@spell Cambiar Cauce|GMAM}, {@spell grasping vine}"
+								],
+								[
+									"11th",
+									"Ira del Árbol, {@spell Espíritu del Sauce|GdR}"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Bosque",
+			"subclassSource": "Himo",
+			"level": 2
+		},
+		{
+			"name": "Habla Vegetal",
+			"source": "Himo",
+			"entries": [
+				"Puedes lanzar {@spell speak with plants} un número de veces al día igual a tu modificador de Sabiduría."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Bosque",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Aliados del Bosque",
+			"source": "Himo",
+			"entries": [
+				"Como acción, levantas un árbol que sigue tus comandos. Usa la ficha del {@creature awakened tree}. Puedes hacer esta acción un número de veces igual a tu bonificador de competencia. Pasada una hora, el árbol vuelve a enraizarse en la tierra donde esté y vuelve a la normalidad."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Bosque",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Guardián del Bosque",
+			"source": "Himo",
+			"entries": [
+				"Puedes gastar dos usos de tu Wild Shape para transformarte en un {@creature treant}. Mientras estés en esta forma puedes hablar, pero no lanzar conjuros."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Bosque",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "Círculo Elemental",
+			"source": "Himo",
+			"entries": [
+				"Los druidas elementales se centran en el estudio y aprendizaje de los cuatro elementos. Estos druidas son capaces de proteger sus enclaves con ataques devastadores, pero a menudo destruyen también aquello que pretendían proteger.",
+				{
+					"name": "Refuerzos Elementales",
+					"entries": [
+						"Puedes usar un uso de tu Wild Shape para darte resistencia al daño por fuego, frío, contundente, veneno o ácido. Invocas un número de mephits igual a tu bonificador de competencia. Todos son del mismo tipo y se corresponden a tu resistencia: vapor o magma para fuego; hielo para frío; barro o polvo para contundente; humo para veneno; y slime para ácido. Pasados 10 minutos, la resistencia acaba y los mephits que sigan con vida vuelven al Plano Elemental."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Adepto de los Elementos",
+					"entries": [
+						"Aprendes Primordial y puedes intercambiar el daño de tus conjuros de fuego, frío, ácido, rayo o veneno."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Elemental",
+			"subclassSource": "Himo",
+			"level": 2
+		},
+		{
+			"name": "Mejora de Refuerzos Elementales",
+			"source": "Himo",
+			"entries": [
+				"Ahora puedes darte dos resistencias y llamar a dos tipos de mephit. Sumas tu modificador de Sabiduría al daño de ese elemento de los conjuros de nivel 1 o superior que lances."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Elemental",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Control Total",
+			"source": "Himo",
+			"entries": [
+				"Aprendes los conjuros {@spell control water}, {@spell control winds|XGE}, {@spell control flames|XGE} y {@spell stone shape}, y los tienes siempre preparados. Cuando lances cualquiera de estos conjuros, puedes pasar de uno a otro sin gastar un espacio de conjuro extra ni perder la {@status Concentration|PHB}.",
+				"Dos de estos conjuros son de nivel 4 y dos son de nivel 5. Para pasar de un conjuro de nivel 4 a uno de nivel 5 debes haberlo lanzado con un espacio de nivel 5."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Elemental",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Mejora de Refuerzos Elementales",
+			"source": "Himo",
+			"entries": [
+				"Ahora recibes todas las resistencias y puedes elegir entre todos los mephits para invocarlos. Como acción adicional, puedes invocar un mephit más cada turno. Las CD de los mephits pasan a ser las tuyas."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Elemental",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "Círculo de Esporas",
+			"source": "Himo",
+			"entries": [
+				"Mantienes la tabla de conjuros y {@spell chill touch}, así como Halo de Esporas.",
+				{
+					"name": "Entidad Simbionte",
+					"entries": [
+						"Como acción adicional, gastas un uso de Wild Shape para alzar tus esporas y ganar 4 puntos de golpe temporales por nivel de druida. Ganas los siguientes beneficios:",
+						{
+							"type": "list",
+							"items": [
+								"Añades un dado extra al daño del Halo de Esporas.",
+								"Tus ataques cuerpo a cuerpo hacen {@dice 1d6} de daño necrótico adicional.",
+								"Estos beneficios duran 1 minuto, a menos que uses otro Wild Shape."
+							]
+						}
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Esporas (Himo)",
+			"subclassSource": "Himo",
+			"level": 2
+		},
+		{
+			"name": "Infestación Fúngica",
+			"source": "Himo",
+			"entries": [
+				"Tus esporas ganan la habilidad de infestar un cadáver de tamaño Mediano o Pequeño situado a 10 pies de ti que no sea constructo, muerto viviente, oblex, elemental, planta, ni una aberración que no deje cadáver, e infectarlo. Puedes usar este rasgo de dos formas:",
+				{
+					"type": "list",
+					"items": [
+						"Puedes infestar el cadáver y ganar control sobre él. Solo puedes tener uno cada vez, pero puedes hacerlo a voluntad. Usa la ficha de {@creature zombie}, pero con 1 punto de golpe y sin el rasgo Fortaleza de los No Muertos. No puede usar acciones, pero llevará cualquier objeto que se le preste o equipe. Si se le da un arma, la blandirá y la transportará, pero no la usará. Pasada una hora, el exceso de esporas y hongos hará colapsar el cuerpo, impidiendo su movilidad. El efecto acaba.",
+						"Como reacción, infestas el cadáver de un humanoide o bestia que muera a 10 pies de ti y puedas ver. Tus esporas reaccionan con la adrenalina del cadáver, convirtiéndolo en un aliado bastante útil. Usa la ficha de {@creature zombie}, pero tiene telepatía contigo. Actúa después de ti, pero solo recibe órdenes de su objetivo. Si no puede atacar a nadie, se atacará a sí mismo hasta consumirse. Puedes usar esta reacción un número de veces igual a tu bonificador de competencia."
+					]
+				}
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Esporas (Himo)",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Esparcir Esporas",
+			"source": "Himo",
+			"entries": [
+				"Ganas la habilidad de sembrar un área con esporas letales. Como acción adicional mientras tu Entidad Simbionte esté activa, puedes enviar las esporas a 30 pies de ti, llenando un cubo de 10 pies. Estas se disipan como acción adicional, si usas este rasgo otra vez o si se acaba tu Entidad Simbionte.",
+				"Toda criatura que entre o empiece el turno allí debe superar una salvación de Constitución o recibir el daño de tu Halo de Esporas. Solo recibe el daño una vez por turno. Mientras esté activo, no puedes usar la reacción del Halo de Esporas."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Esporas (Himo)",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Cuerpo Fúngico",
+			"source": "Himo",
+			"entries": [
+				"A nivel 14, las esporas fúngicas de tu cuerpo te alteran: no puedes quedar {@condition blinded}, {@condition deafened}, {@condition Frightened|PHB} ni {@condition Poisoned|PHB}, y cualquier golpe crítico contra ti cuenta como un golpe normal, salvo que estés {@condition Incapacitated|PHB}."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Esporas (Himo)",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "Círculo de las Espinas",
+			"source": "Himo",
+			"entries": [
+				"Los druidas de las espinas son aquellos que se crían entre sangre y muerte y encuentran la belleza en las plantas que se nutren directamente de la muerte. A menudo vampiros y brujos de Gulthias adoptan esta filosofía de vida.",
+				{
+					"name": "Maldición Salvaje",
+					"entries": [
+						"Tienes siempre preparado el conjuro {@spell hex} y no cuenta para el máximo de conjuros que puedes preparar. Cada vez que elijas un objetivo para {@spell hex}, puedes añadir uno de los siguientes efectos:",
+						{
+							"type": "list",
+							"items": [
+								"Cualquier planta o bestia que invoques le ataca con ventaja y añade {@dice 1d4} de daño necrótico al daño.",
+								"Mientras la criatura se esté concentrando en un conjuro, recibe {@dice 1d6} de daño psíquico al final de cada uno de sus turnos.",
+								"Si la criatura objetivo era una planta de VD igual o inferior al nivel de conjuro, la controlas como si estuviera bajo los efectos de {@spell dominate monster}, pero recibe {@dice 1d6} de daño psíquico al final de cada turno."
+							]
+						}
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Espinas",
+			"subclassSource": "Himo",
+			"level": 2
+		},
+		{
+			"name": "Espíritus Guardianes",
+			"source": "Himo",
+			"entries": [
+				"Tienes siempre preparado el conjuro {@spell animate dead} y no cuenta para el máximo de conjuros que puedes preparar. Cuando lo lances, puedes levantar {@creature vine blight|MM|Vine Blights} en vez de esqueletos o zombis.",
+				"Cuando tú o un aliado a 30 pies vaya a recibir daño, puedes usar tu reacción para destruir uno de los blights y reducir el daño en una cantidad igual a los puntos de golpe actuales del blight."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Espinas",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Aliados del Bosque",
+			"source": "Himo",
+			"entries": [
+				"Tienes siempre preparado el conjuro {@spell scrying} y no cuenta para el máximo de conjuros que puedes preparar. Además, tienes resistencia a todo el daño provocado por plantas y bestias."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Espinas",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Aullido de los Muertos",
+			"source": "Himo",
+			"entries": [
+				"Una vez al día, como acción, puedes emitir un aullido terrorífico que podrá ser oído a una milla a la redonda. Toda criatura de tu elección a 120 pies debe superar una salvación de Sabiduría\u2014las plantas y los muertos vivientes tienen desventaja\u2014o recibir {@dice 10d6} de daño psíquico; con una salvación exitosa recibe la mitad. Toda criatura Grande o más pequeña que falle la salvación queda {@condition Frightened|PHB} de ti y forzada a huir mientras pueda verte y siga {@condition Frightened|PHB}. Una criatura {@condition Frightened|PHB} de esta forma puede hacer la salvación cuando esté a 60 pies de ti. Si la criatura era inmune al daño psíquico, es inmune a todo este rasgo."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Espinas",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "Círculo de lo Salvaje",
+			"source": "Himo",
+			"entries": [
+				"Los druidas salvajes, también conocidos como Yuir entre los elfos, son aquellos que reniegan de toda convención y vagan en libertad por bosques y prados. Su cercanía a la naturaleza les permite transformarse en criaturas mucho más grotescas y salvajes, siendo, a menudo, el depredador ápice de su territorio. Estos druidas, por lo general, no se reúnen en círculos, sino en manadas, y forman una jerarquía basada en la fuerza y el espíritu.",
+				{
+					"name": "Instinto del Cazador",
+					"entries": [
+						"Aprendes Daelkyr y añades tu modificador de Sabiduría a la iniciativa."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Forma del Depredador",
+					"entries": [
+						"Al unirte a este círculo descubres ciertas formas salvajes a las que otros druidas no tienen acceso. Añade las siguientes modificaciones a tu tabla de formas salvajes:",
+						{
+							"type": "table",
+							"colLabels": [
+								"Nivel de druida",
+								"Formas"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"2",
+									"Rust Monster, Worg y Krasis Categoría 1"
+								],
+								[
+									"4",
+									"Hippocamp, Nyx-Fleece Ram y Homarid"
+								],
+								[
+									"6",
+									"Kruthik Adulto, Ankheg y Mímico"
+								],
+								[
+									"8",
+									"Griffon, Peryton y Ettercap"
+								],
+								[
+									"9",
+									"Displacer Beast, Basilisk y Owlbear"
+								],
+								[
+									"12",
+									"Kamadan, Strigoi y Doppelganger"
+								],
+								[
+									"15",
+									"Bulette, Sea Lion y Catoblepas"
+								],
+								[
+									"18",
+									"Chimera, Krasis Categoría 2 y Thunder Boar"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Salvaje",
+			"subclassSource": "Himo",
+			"level": 2
+		},
+		{
+			"name": "Depredador Eficaz",
+			"source": "Himo",
+			"entries": [
+				"Puedes lanzar {@spell hunter's mark} a nivel 1 una vez por cada uso de Wild Shape y no necesitas concentrarte en este conjuro específicamente."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Salvaje",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Golpe Mortal",
+			"source": "Himo",
+			"entries": [
+				"Mientras estés en tu Forma de Depredador puedes gastar un espacio de conjuro de hasta nivel 3 para añadir {@dice 1d8} × el nivel del conjuro de daño cortante mágico. El objetivo debe superar una salvación de Constitución o recibir {@condition Sangrado|Himo|hemorragia} durante un minuto, pudiendo repetir la salvación al final de cada turno."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Salvaje",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Instintos Salvajes",
+			"source": "Himo",
+			"entries": [
+				"Si resultas sorprendido al inicio de un combate y no estás {@condition Incapacitated|PHB}, puedes entrar en Wild Shape y actuar normalmente en tu turno."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Salvaje",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "Círculo de Santería",
+			"source": "Himo",
+			"entries": [
+				"Fundado por sagas primordiales, el Círculo de la Santería juega con vidas y emociones para su beneficio, tejiendo redes de favores y gobernando en la sombra.",
+				{
+					"name": "Muñeco Vudú",
+					"entries": [
+						"Puedes tejer un muñeco de vudú e infundirlo en magia con un ritual de una hora que puede coincidir con un descanso corto o prolongado. Es un foco arcano de druida. Como acción puedes afectar a una criatura que veas: debe superar una salvación de Sabiduría contra tu CD de conjuros o tirar en la tabla de Locura Vudú.",
+						{
+							"type": "table",
+							"caption": "Locura Vudú",
+							"colLabels": [
+								"{@dice 1d12}",
+								"Efecto"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Depresión profunda: durante una hora falla las pruebas de Carisma y tiene desventaja en salvaciones de Carisma."
+								],
+								[
+									"2",
+									"Queda afectada por {@spell Tasha's hideous laughter} durante 10 minutos."
+								],
+								[
+									"3",
+									"Rabia incontrolable durante un minuto: debe atacar una criatura aleatoria a 5 pies o usar el movimiento para acercarse."
+								],
+								[
+									"4",
+									"Se enamora de una criatura elegida por ti y queda {@condition Charmed|PHB} por ella durante un minuto."
+								],
+								[
+									"5",
+									"Hambre voraz: durante un minuto dedica sus turnos a comer comida visible o equipada; si no hay, hace otra salvación de Sabiduría o intenta comerse a sí misma."
+								],
+								[
+									"6",
+									"Queda dormida como por {@spell sleep} durante 10 minutos."
+								],
+								[
+									"7",
+									"{@condition Frightened|PHB} irracional a algo de su visión elegido por ti; durante un minuto debe huir, cubrirse o esquivar."
+								],
+								[
+									"8",
+									"Queda cegada o ensordecida durante un minuto."
+								],
+								[
+									"9",
+									"Puedes leer su mente como con {@spell detect thoughts}."
+								],
+								[
+									"10",
+									"Gana un nivel de agotamiento durante un minuto; varios efectos desaparecen a la vez al perder el último."
+								],
+								[
+									"11",
+									"Queda {@condition Paralyzed|PHB} durante un minuto."
+								],
+								[
+									"12",
+									"Recibe un efecto de locura a largo plazo durante 10 minutos y no puede repetir la salvación al final de cada turno."
+								]
+							]
+						},
+						"Puede repetir la salvación al final de cada turno, salvo que se especifique lo contrario. Puedes usar este rasgo un número de veces igual a tu bonificador de competencia por descanso prolongado. No puede recibir un efecto nuevo mientras otro siga activo; al reutilizarlo, se pierde el más antiguo."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Santería",
+			"subclassSource": "Himo",
+			"level": 2
+		},
+		{
+			"name": "Alma Sintética",
+			"source": "Himo",
+			"entries": [
+				"Puedes lanzar {@spell animate dead} como ritual, sustituyendo los componentes materiales por un cadáver y tu muñeco de vudú, que consume el hechizo."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Santería",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Hechicería Vudú",
+			"source": "Himo",
+			"entries": [
+				"Como acción vinculas una criatura que veas a tu muñeco activo. Desde tu próximo turno tiras dos dados en Locura Vudú y eliges el efecto. Alternativamente, gastas un uso de Wild Shape para afectarla permanentemente con {@spell contagion} o una maldición fey; pueden eliminarse con {@spell greater restoration}, {@spell remove curse} o deseo, y puede repetir la salvación adecuada al final de cada descanso prolongado. No puede volver a sufrir el mismo efecto.",
+				"El portador puede destruir el muñeco: la criatura vinculada hace una salvación de Sabiduría y recibe {@dice 6d8} necrótico con un fallo, o la mitad con éxito. El daño no puede curarse hasta un descanso prolongado; si la reduce a 0 puntos de golpe, muere inmediatamente y pierde Contagio o Maldición Fey."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Santería",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Atrapa-almas",
+			"source": "Himo",
+			"entries": [
+				"Puedes lanzar {@spell finger of death} una vez al día sin gastar espacio de conjuro."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Santería",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "Círculo de la Tierra (Corrección)",
+			"source": "Himo",
+			"entries": [
+				"Recuperación {@skill Arcana} se mantiene y el truco adicional puede ser de druida o mago. Cada terreno añade conjuros y formas exclusivas de Wild Shape.",
+				{
+					"type": "table",
+					"caption": "Conjuros y formas por terreno",
+					"colLabels": [
+						"Terreno",
+						"Nivel 3",
+						"Nivel 5",
+						"Nivel 7",
+						"Nivel 9"
+					],
+					"colStyles": [
+						"col-2",
+						"col-2",
+						"col-2",
+						"col-2",
+						"col-2"
+					],
+					"rows": [
+						[
+							"Ártico",
+							"{@spell Rime's Binding Ice|FTD}; {@spell Blur}; {@creature Black Bear|MM}",
+							"{@spell Hypnotic Pattern}; {@spell Slow}; Snow Leopard",
+							"{@spell Greater Invisibility}; {@spell Compulsion}; {@creature Polar Bear|MM} y Sabertooth",
+							"{@spell Steel Wind Strike|XGE}; {@spell Hold Monster}; {@creature Killer Whale|MM} y Spotted Lion"
+						],
+						[
+							"Bosque",
+							"{@spell Silence}; {@spell Spider Climb}; {@creature Ape|MM}",
+							"{@spell Clairvoyance}; {@spell Conjure Barrage}; {@creature Brown Bear|MM}",
+							"{@spell Aura of Purity}; {@spell Find Greater Steed|XGE}; {@creature Giant Boar|MM}",
+							"{@spell Conjure Volley}; {@spell Seeming}; {@creature Juvenile Forest Prowler|HWCS}"
+						],
+						[
+							"Ciénaga",
+							"{@spell Melf's Acid Arrow|PHB|Melf's Arrow}; {@spell Web}; {@creature Crocodile|MM}",
+							"{@spell Stinking Cloud}; {@spell Hunger of Hadar}; {@creature Giant Toad|MM}",
+							"{@spell Vitriolic Sphere|XGE}; {@spell Evard's Black Tentacles}; River Serpent",
+							"{@spell Nudo de Nyx|GdR}; {@spell Enervation|XGE}; Amphisbaena"
+						],
+						[
+							"Costa",
+							"{@spell Maximilian's Earthen Grasp|XGE}; {@spell Misty Step}; {@creature Giant Crab|MM}",
+							"{@spell Wall of Sand|XGE}; {@spell Catnap|XGE}; Snapping Turtle",
+							"{@spell Storm Sphere|XGE}; {@spell Evard's Black Tentacles}; Giant Crayfish",
+							"{@spell Creation}; {@spell Dawn|XGE}; Giant Snapping Turtle y {@creature Killer Whale|MM}"
+						],
+						[
+							"Desierto",
+							"{@spell Phantasmal Force}; {@spell Mirror Image}; Camel (FM!)",
+							"{@spell Gaseous Form}; {@spell Wall of Sand|XGE}; Dogmole",
+							"{@spell Sickening Radiance|XGE}; {@spell Compulsion}; Relic Sloth",
+							"{@spell Flame Strike}; {@spell Dream}; {@creature Giant Scorpion|MM}"
+						],
+						[
+							"Montaña",
+							"{@spell Spider Climb}; {@spell Snilloc's Snowball Swarm|XGE}; {@creature Giant Goat|MM}",
+							"{@spell Thunder Step|XGE}; {@spell Lanza Atrapante de Claymore|GPNM}; Mountain Lion",
+							"{@spell Dimension Door}; {@spell Storm Sphere|XGE}; Quetzalcoatlus",
+							"{@spell Passwall}; {@spell Animate Objects}; Dire Bird of Prey sin flyby y 60 ft de vuelo"
+						],
+						[
+							"Pradera",
+							"{@spell Find Steed}; {@spell Invisibility}; {@creature Warhorse|MM}",
+							"{@spell Fly}; {@spell Haste}; {@creature Dire Wolf|MM}",
+							"{@spell Find Greater Steed|XGE}; {@spell Greater Invisibility}; {@creature Giant Elk|MM}",
+							"{@spell Dream}; {@spell Far Step|XGE}; Dire Bird of Prey sin flyby y 60 ft de vuelo"
+						],
+						[
+							"Underdark",
+							"{@spell Spider Climb}; {@spell Web}; Fiendish Giant Spider",
+							"{@spell Gaseous Form}; {@spell Stinking Cloud}; {@creature Giant Spider|MM} y Dragón de Komodo",
+							"{@spell Greater Invisibility}; {@spell Shadow of Moil|XGE}; Young Bulette",
+							"{@spell Mislead}; {@spell Passwall}; Night Scorpion"
+						],
+						[
+							"Subacuático",
+							"{@spell Shatter}; {@spell Invisibility}; {@creature Reef Shark|MM}",
+							"{@spell Hypnotic Pattern}; {@spell Thunder Step|XGE}; {@creature Giant Octopus|MM} y Snapping Turtle",
+							"{@spell Evard's Black Tentacles}; {@spell Storm Sphere|XGE}; {@creature Plesiosaurus|MM}",
+							"{@spell Dominate Person}; {@spell Nudo de Nyx|GdR}; Giant Lightning Eel"
+						]
+					]
+				}
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Tierra (Corrección)",
+			"subclassSource": "Himo",
+			"level": 2
+		},
+		{
+			"name": "Terreno Predilecto",
+			"source": "Himo",
+			"entries": [
+				"Eres inmune a terreno difícil, atraviesas plantas sin daño y tienes ventaja contra plantas mágicas; obtienes Terreno Predilecto de explorador solo en tu terreno."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Tierra (Corrección)",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Guarda Natural",
+			"source": "Himo",
+			"entries": [
+				"Inmune a hechizo y {@condition Frightened|PHB} de bestias, plantas, monstruosidades, fey y elementales, además de veneno y enfermedades."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Tierra (Corrección)",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Santuario de la Naturaleza",
+			"source": "Himo",
+			"entries": [
+				"Bestias y plantas de VD hasta la mitad de tu nivel quedan automáticamente {@condition Charmed|PHB} y te ven como aliado. Contra VD superior tienes ventaja para hechizarlas por otros medios."
+			],
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Tierra (Corrección)",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "Penitente",
+			"source": "Himo",
+			"entries": [
+				"Los penitentes son guerreros expulsados de órdenes religiosas que perdieron sus poderes sagrados y buscan perdón divino.",
+				{
+					"name": "Mea Culpa",
+					"entries": [
+						"Tienes una reserva de Puntos de Penitencia igual a tu nivel y recuperas la mitad, redondeada hacia abajo, al final de cada descanso corto. El daño producido al gastarlos cuenta como mágico y plateado contra resistencias, pero no para antimagia. Solo puedes elegir una opción por turno.",
+						{
+							"type": "list",
+							"items": [
+								"Ira Pecaminosa: añade {@dice 1d6} al daño de un ataque por cada punto gastado, hasta tu bonificador de competencia.",
+								"Puñalada Sacra: al usar Correr, gastas 1 PP para hacer un ataque con arma cuerpo a cuerpo.",
+								"Sangre Fervorosa: gastas 1 PP para lanzar tu sangre como daga a 30 pies; ataque de arma de sutileza que hace {@dice 1d8}, sumando Constitución al ataque y daño."
+							]
+						}
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Ataque en Caída",
+					"entries": [
+						"Si caes al menos 10 pies antes de golpear a una criatura, añades todo el daño de caída al primer ataque cuerpo a cuerpo tras aterrizar. No recibes los primeros {@dice 3d6}, y la reducción solo se aplica si impactas."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Penitente",
+			"subclassSource": "Himo",
+			"level": 3
+		},
+		{
+			"name": "Cruz del Pecador",
+			"source": "Himo",
+			"entries": [
+				"Puedes usar Dados de Golpe durante descansos cortos y Segundo Aliento fuera de ellos para recuperar PP. Con Segundo Aliento, añade el doble de tu modificador de Constitución en lugar de tu nivel."
+			],
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Penitente",
+			"subclassSource": "Himo",
+			"level": 7
+		},
+		{
+			"name": "Mejora del Mea Culpa",
+			"source": "Himo",
+			"entries": [
+				"Ira Sagrada usa {@dice d8}. Estocada Sacra permite gastar 1 PP extra para no provocar ataques de oportunidad. Sangre Sacra permite lanzar sangre extra por 1 PP cada una, hasta la mitad de tu bonificador de competencia.",
+				"Peso de la Justicia: en un Ataque en Caída, gasta hasta tu bonificador de competencia en PP para lanzar {@spell earth tremor|XGE} centrado en ti a un nivel igual a los PP gastados. Saeta Dolorosa: al inicio de tu turno, gasta 5 PP; todo el daño que hagas hasta el inicio de tu próximo turno se regenera como puntos de golpe."
+			],
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Penitente",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Rezos",
+			"source": "Himo",
+			"entries": [
+				"Una vez al día puedes gastar 10 PP para invocar un rezo, recuperándolo tras un descanso prolongado.",
+				{
+					"type": "list",
+					"items": [
+						"Zarabanda del Refugio Seguro: +4 a la CA y resistencia a todo daño durante 10 minutos.",
+						"Debla de las Luces: criaturas elegidas a 30 pies hacen salvación de Sabiduría contra tu Constitución o reciben {@dice 10d12} radiante, o la mitad; eres inmune a todo daño hasta el final de tu próximo turno.",
+						"Cante Jondo de las Tres Hermanas: criaturas elegidas a 120 pies hacen salvación de Constitución contra la tuya o reciben {@dice 10d4} necrótico.",
+						"Tiento a tus Cabellos Espinados: durante una hora, quien te ataque cuerpo a cuerpo recibe daño perforante igual a tu modificador de Constitución."
+					]
+				}
+			],
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Penitente",
+			"subclassSource": "Himo",
+			"level": 15
+		},
+		{
+			"name": "Mejora de Mea Culpa",
+			"source": "Himo",
+			"entries": [
+				"Ira del Retorcido usa {@dice d10}. Embestida Sacra permite gastar hasta 5 PP extra para ampliar el rango de crítico en 1 por punto, hasta 15. Milagro Sangrante eleva el máximo a tu bonificador de competencia. Consagración: al gastar de 7 a 9 PP para subir el nivel del efecto de caída, su alcance aumenta 5 pies por punto extra."
+			],
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Penitente",
+			"subclassSource": "Himo",
+			"level": 18
+		},
+		{
+			"name": "Guerrero Tribal",
+			"source": "Himo",
+			"entries": [
+				"Guerreros de tribus de Chult, Cormanthor, Eversmoors y las Agujas del Mundo emboscan y rodean a sus enemigos mediante tácticas de {@skill Stealth}.",
+				{
+					"name": "Táctica Ligera",
+					"entries": [
+						"Tu defensa sin armadura se calcula con 13 en lugar de 10 y, con armadura media, tu modificador máximo de Destreza es 3 en lugar de 2."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Experto Lancero",
+					"entries": [
+						"Al usar una jabalina, lanza, lanza de caballería o pica, añades 5 pies a su alcance cuerpo a cuerpo e ignoras la desventaja por alcance largo al arrojarlas. Cuando arrojes una de estas armas, reduces 10 pies la velocidad del objetivo."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Tribal",
+			"subclassSource": "Himo",
+			"level": 3
+		},
+		{
+			"name": "Camuflaje Preciso",
+			"source": "Himo",
+			"entries": [
+				"Durante un descanso corto o prolongado puedes preparar un camuflaje para tu entorno. Hasta recibir daño, añades el doble de tu bonificador de Destreza a las pruebas de {@skill Stealth} y se te considera competente, o experto si ya lo eras."
+			],
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Tribal",
+			"subclassSource": "Himo",
+			"level": 7
+		},
+		{
+			"name": "Tácticas Tribales",
+			"source": "Himo",
+			"entries": [
+				"Flanquear te da +5 en lugar de +2 y puedes flanquear incluso con ataques a distancia. El aliado que flanquee contigo también obtiene este bono cuerpo a cuerpo y a distancia. Solo puedes flanquear con un aliado a la vez, pero puedes elegir cuál."
+			],
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Tribal",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Emboscada Sorpresa",
+			"source": "Himo",
+			"entries": [
+				"Si sorprendes a una criatura al inicio de un combate, puedes cambiar todo tu multiataque por un único lanzazo con un arma de Experto Lancero. Con un impacto, recibe el daño que hubiera recibido de todo tu multiataque, más tu nivel."
+			],
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Tribal",
+			"subclassSource": "Himo",
+			"level": 15
+		},
+		{
+			"name": "Golpe Fulminante",
+			"source": "Himo",
+			"entries": [
+				"Mientras estés escondido, si superas la CA de una criatura por 6 o más al atacarla, el ataque es crítico. Si ya era crítico, sigues escondido para ella y para cualquier criatura que no te hubiera detectado antes."
+			],
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Tribal",
+			"subclassSource": "Himo",
+			"level": 18
+		},
+		{
+			"name": "Vía del Hilador",
+			"source": "Himo",
+			"entries": [
+				"Las vías del hilador son difíciles e impredecibles, y dominar los guantes del hilador no es para novatos. Los monjes hiladores pasan sus vidas entretejiendo marañas de hilos donde sus enemigos no puedan escapar. Son muchos los drows que adoptan esta disciplina.",
+				{
+					"name": "Guante de Hilador",
+					"entries": [
+						"Adquieres competencia con el Guante de Hilador y es un arma de monje para ti. Con un ritual de una hora, una bobina de hilo de pescar y un par de guantes de cuero puedes fabricar esta arma."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Trampa de Hilos",
+					"entries": [
+						"Cuando uses tu Ráfaga de Golpes contra una criatura Mediana o más pequeña puedes forzarla a hacer una salvación de Destreza contra tu CD de ki. Con un fallo puedes agarrarla. Si ya estaba {@condition Grappled|PHB} de esta forma, puedes apresarla. Ambos efectos acaban si te alejas más de 5 pies y puedes mantener tantos objetivos {@condition Grappled|PHB} como sea posible si están a 5 pies de ti. Tus manos estarán libres para seguir atacando."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Hilador",
+			"subclassSource": "Himo",
+			"level": 3
+		},
+		{
+			"name": "Hilo Trepador",
+			"source": "Himo",
+			"entries": [
+				"Mientras lleves equipado tu Guante de Hilador puedes usar tu acción para lanzar hilos y agarrarte a superficies o criaturas a 30 pies de ti. Con tu interacción con objeto puedes atraer los hilos, dejándote llevar o atrayendo lo {@condition Grappled|PHB}. Si era una criatura, puede hacer una salvación de Fuerza para no ser arrastrada; también puedes acercarte hasta ella. Si haces un ataque inmediatamente después, se realiza con ventaja."
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Hilador",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Muro Cortante",
+			"source": "Himo",
+			"entries": [
+				"Puedes gastar hasta 5 puntos de ki para clavar tus hilos en dos superficies sólidas a un máximo de 60 pies entre sí. Toda criatura que pase por ahí debe hacer una salvación de Destreza o recibir un dado de Artes Marciales de daño por cada punto gastado, o la mitad si salva. Una criatura que falle ve su velocidad reducida a 0 y queda {@condition Stunned|PHB} hasta el inicio de su próximo turno si recorrió más de 10 pies antes de recibir el daño. Tras el primer impacto, el hilo se rompe."
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Hilador",
+			"subclassSource": "Himo",
+			"level": 11
+		},
+		{
+			"name": "Nido del Hilador",
+			"source": "Himo",
+			"entries": [
+				"Como acción gastas 10 puntos de ki, siempre que haya puntos de apoyo en el área, para crear un campo circular de hilos afilados de hasta 60 pies de diámetro en tu casilla; el campo no te sigue.",
+				{
+					"type": "list",
+					"items": [
+						"El área es terreno difícil.",
+						"Las criaturas elegidas reciben un dado de Artes Marciales de daño por cada casilla que se muevan.",
+						"Sufren un penalizador de -5 a las tiradas de ataque cuerpo a cuerpo y a distancia.",
+						"Tienen desventaja en salvaciones de Destreza; este penalizador cuenta como cobertura de tres cuartos para evitar que se solape.",
+						"Los hilos se rompen tras causar 100 puntos de daño, o se sueltan si usas una acción adicional para ello o vuelves a usar este rasgo."
+					]
+				}
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Hilador",
+			"subclassSource": "Himo",
+			"level": 17
+		},
+		{
+			"name": "Vía del Pugilista",
+			"source": "Himo",
+			"entries": [
+				"Esta subclase da por hecho que no se usan armas de monje; solo el rasgo de nivel 6 puede utilizarse si llevas equipada al menos un arma.",
+				"Los pugilistas dedican su entrenamiento a los puños y al torso para alcanzar una mayor potencia marcial.",
+				{
+					"name": "Puños de Hierro",
+					"entries": [
+						"Cuando pelees sin armadura y con ambas manos libres, tus ataques desarmados cumplen todos los requisitos para contar como armas ligeras en lo relativo al uso de rasgos. Además, haces el daño máximo a objetos con cada ataque."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Posición Defensiva",
+					"entries": [
+						"Como acción adicional puedes gastar 1 punto de ki en replegar los brazos. Hasta el inicio de tu próximo turno tienes resistencia al daño perforante, contundente y cortante, ventaja en salvaciones de Fuerza y ventaja contra agarres y para evitar quedar {@condition Prone|PHB}."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Pugilista",
+			"subclassSource": "Himo",
+			"level": 3
+		},
+		{
+			"name": "Entereza Final",
+			"source": "Himo",
+			"entries": [
+				"Cuando caes a 0 puntos de golpe pero no has muerto, puedes gastar 3 puntos de ki y un dado de golpe antes de caer al suelo, como acción gratuita. Cada vez que lo hagas ganas un punto de agotamiento."
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Pugilista",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Gancho Cargado",
+			"source": "Himo",
+			"entries": [
+				"Cuando uses tu Ráfaga de Golpes puedes sacrificar uno de los ataques para potenciar el otro. Si impacta, el daño es igual a tres dados de Artes Marciales y el objetivo debe superar una salvación de Constitución o quedar {@condition Stunned|PHB} durante un minuto, pudiendo repetir la salvación al final de cada turno. Si falla, el próximo ataque del objetivo tiene ventaja contra ti."
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Pugilista",
+			"subclassSource": "Himo",
+			"level": 11
+		},
+		{
+			"name": "Frenesí Finalizador",
+			"source": "Himo",
+			"entries": [
+				"Al inicio de tu turno puedes sacrificarlo entero\u2014acción, acción adicional y movimiento\u2014para asestar una ráfaga de golpes. Gasta tantos puntos de ki como prefieras y realiza 2 + los puntos de ki gastados ataques. Si 5 o más impactan en el objetivo, debe hacer salvaciones de Fuerza y Constitución. Si falla Fuerza queda {@condition Prone|PHB} al final del frenesí; si falla Constitución, queda {@condition Stunned|PHB} hasta el final de su próximo turno."
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Pugilista",
+			"subclassSource": "Himo",
+			"level": 17
+		},
+		{
+			"name": "Vía del Buscabroncas",
+			"source": "Himo",
+			"entries": [
+				"Basada en peleas de taberna. Los buscabroncas son luchadores versátiles, capaces de combatir sin importar las armas, la cantidad de gente ni la geografía.",
+				{
+					"name": "Luchador de Recursos",
+					"entries": [
+						"Eres competente en armas improvisadas y cuentan como armas de monje para ti."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Cuerpo Resiliente",
+					"entries": [
+						"Cuando hagas salvaciones o pruebas de Constitución, puedes añadir tu modificador de Sabiduría."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Abrir Camino",
+					"entries": [
+						"Pasar por el espacio de otra criatura no te supone terreno difícil, y puedes pasar aunque no te deje si es Mediana o más pequeña y no te detienes en su casilla."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Buscabroncas",
+			"subclassSource": "Himo",
+			"level": 3
+		},
+		{
+			"name": "¡Detrás de la Mesa!",
+			"source": "Himo",
+			"entries": [
+				"La cobertura media cuenta como cobertura de tres cuartos para ti, y la de tres cuartos como cobertura total."
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Buscabroncas",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Aguantaría Todo el Día",
+			"source": "Himo",
+			"entries": [
+				"Como acción puedes gastar 3 puntos de ki y recuperar puntos de golpe iguales a tu modificador de Constitución más tres dados de Artes Marciales. Solo puedes usar este rasgo en combate."
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Buscabroncas",
+			"subclassSource": "Himo",
+			"level": 11
+		},
+		{
+			"name": "Violencia como Respuesta",
+			"source": "Himo",
+			"entries": [
+				"Tienes ventaja en tiradas de {@skill Persuasion} e {@skill Intimidation} contra criaturas que hayas agredido. Estas deben ser contestadas con salvaciones de Sabiduría. Si superas su tirada, la criatura objetivo cuenta como {@condition Charmed|PHB} o {@condition Frightened|PHB}, respectivamente, mientras te siga viendo y no la agredas más. También puedes usar este rasgo en combate."
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Buscabroncas",
+			"subclassSource": "Himo",
+			"level": 17
+		},
+		{
+			"name": "Vía del Wushu",
+			"source": "Himo",
+			"entries": [
+				"En cada nivel eliges un estilo de Wushu, adquieres ese rasgo y no puedes cambiarlo.",
+				"La vía del Wushu se basa en los movimientos del mono, la grulla, el tigre, la serpiente y el dragón.",
+				{
+					"type": "list",
+					"items": [
+						"Dragón\u2014Presencia Dracónica: competencia en {@skill Intimidation}. Al dirigir ambos golpes de Ráfaga de Golpes a un objetivo, puedes forzar una salvación de Sabiduría si al menos uno impactó; con un fallo te teme hasta el inicio de tu próximo turno.",
+						"Mono\u2014Salto Encadenado: competencia en {@skill Acrobatics}. Tras impactar con el primer ataque de Ráfaga de Golpes, puedes saltar hasta otra criatura a 30 pies sin provocar ataques de oportunidad y atacarla con el otro.",
+						"Grulla\u2014Golpe Directo: competencia en Perspicacia. El primer ataque que impacte de Ráfaga de Golpes hace un dado de Artes Marciales adicional.",
+						"Tigre\u2014Golpe Atrapante: competencia en {@skill Athletics}. Al usar Ráfaga de Golpes puedes forzar una salvación de Fuerza; con un fallo, el objetivo queda {@condition Grappled|PHB} y apresado por ti, mientras tú también estás apresado.",
+						"Serpiente\u2014Golpe Rápido: puedes sacrificar un ataque de Ráfaga de Golpes para que el otro tenga ventaja y haga un dado de daño adicional."
+					]
+				}
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Wushu",
+			"subclassSource": "Himo",
+			"level": 3
+		},
+		{
+			"name": "Estilo de Wushu de nivel 6",
+			"source": "Himo",
+			"entries": [
+				{
+					"type": "list",
+					"items": [
+						"Dragón\u2014Ataque de Dedos: puedes cambiar el daño de los ataques desarmados entre cortante, perforante y contundente.",
+						"Mono\u2014Esquiva Ágil: como reacción puedes gastar puntos de ki para sumarlos a la CA, hasta un máximo de tu bonificador de competencia.",
+						"Grulla\u2014Táctica Evasiva: cada criatura que golpees en tu turno te ataca con desventaja.",
+						"Tigre\u2014Sometedor de Fuerza: tienes ventaja en {@skill Athletics} para derribar a alguien y puedes hacerlo con una acción adicional.",
+						"Serpiente\u2014Peleador de Suelo: estar {@condition Prone|PHB} ya no impone ventaja a los ataques contra ti."
+					]
+				}
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Wushu",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Estilo de Wushu de nivel 11",
+			"source": "Himo",
+			"entries": [
+				{
+					"type": "list",
+					"items": [
+						"Dragón\u2014Velocidad del Dragón: velocidad de vuelo y de nado igual a la de caminar.",
+						"Mono\u2014Salto Extralargo: tu distancia de salto iguala tu velocidad de caminar y no provocas ataques de oportunidad; sin carrerilla es la mitad.",
+						"Grulla\u2014Golpe Paciente: como acción adoptas una posición de espera hasta la próxima ronda; tienes ventaja en salvaciones de Destreza y una reacción para realizar un ataque con ventaja contra quien te ataque cuerpo a cuerpo o se acerque a 5 pies. Un impacto hace cuatro veces el daño de Artes Marciales.",
+						"Tigre\u2014Mimetismo Salvaje: ventaja en {@skill Stealth} para esconderte; mientras no te vean eres {@condition Invisible|PHB}.",
+						"Serpiente\u2014Veneno de Víbora: puedes cambiar el daño de tus ataques desarmados a veneno y gastar 1 punto de ki para forzar una salvación de Constitución o envenenar al objetivo."
+					]
+				}
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Wushu",
+			"subclassSource": "Himo",
+			"level": 11
+		},
+		{
+			"name": "Estilo de Wushu de nivel 17",
+			"source": "Himo",
+			"entries": [
+				{
+					"type": "list",
+					"items": [
+						"Dragón\u2014Desvío de Fuerza: como reacción al ser objetivo de un ataque, haces una tirada de ataque enfrentada. Si ganas, el objetivo queda {@condition Prone|PHB}, pierde el ataque y el resto de su multiataque, y su velocidad se reduce a 0. Se declara antes de ver la tirada.",
+						"Mono\u2014Ataque-Defensa: cuando una criatura falle un ataque contra ti, puedes usar tu reacción para atacarla; con un impacto tiene desventaja en el resto de ataques contra ti.",
+						"Grulla\u2014Entereza Sutil: inmunidad a quedar {@condition Prone|PHB}, {@condition Grappled|PHB}, apresado y {@condition Paralyzed|PHB}; tu velocidad no puede reducirse salvo a 0.",
+						"Tigre\u2014Fuerza Bruta: añades tu modificador de Fuerza además del de Destreza al daño de tus ataques desarmados.",
+						"Serpiente\u2014Movimientos Imprevisibles: tu movimiento no provoca ataques de oportunidad, el terreno difícil no te frena y tus ataques de oportunidad tienen ventaja."
+					]
+				}
+			],
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Wushu",
+			"subclassSource": "Himo",
+			"level": 17
+		},
+		{
+			"name": "Juramento Salvaje",
+			"source": "Himo",
+			"entries": [
+				"Estos paladines normalmente no pertenecen a ninguna orden, aunque algunos viven en círculos de druidas. Respetan y preservan el ciclo de la vida.",
+				{
+					"name": "Preceptos del Juramento",
+					"entries": [
+						"Respeta el ciclo de la vida. Naturaleza como máximo poder. Protección de lo natural. Viaja en manada."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Hechizos de Juramento",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Nivel de paladín",
+								"Conjuros"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"3rd",
+									"{@spell hunter's mark}, {@spell animal friendship}"
+								],
+								[
+									"5th",
+									"{@spell animal messenger}, {@spell beast sense}"
+								],
+								[
+									"9th",
+									"{@spell conjure animals}, {@spell phantom steed}"
+								],
+								[
+									"13th",
+									"{@spell guardian of nature|XGE}, {@spell aura of life}"
+								],
+								[
+									"17th",
+									"{@spell commune with nature}, {@spell wrath of nature|XGE}"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Canalizar Divinidad",
+					"entries": [
+						"Presencia de Depredador: como acción, fuerzas a toda criatura elegida a 30 pies a superar una salvación de Sabiduría contra tu {@skill Intimidation} pasiva (máximo 20) o temerte durante un minuto o hasta recibir daño. Mientras esté {@condition Frightened|PHB}, su velocidad es 0 y no puede aumentarla.",
+						"Furia Desmedida: como acción adicional, entras en furia salvaje durante un minuto y sumas tu modificador de Constitución a las tiradas de daño."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Salvaje",
+			"subclassSource": "Himo",
+			"level": 3
+		},
+		{
+			"name": "Aura Salvaje",
+			"source": "Himo",
+			"entries": [
+				"Tú y toda criatura aliada a 10 pies de ti está bajo los efectos de {@spell speak with animals}. Entienden las intenciones de las bestias en alcance, pero solo tú puedes comunicarte verbalmente con ellas. El alcance aumenta a 30 pies a nivel 18."
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Salvaje",
+			"subclassSource": "Himo",
+			"level": 7
+		},
+		{
+			"name": "Mejora de Aura Salvaje",
+			"source": "Himo",
+			"entries": [
+				"Las bestias y los fey aliados suman tu modificador de Carisma a las tiradas de ataque."
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Salvaje",
+			"subclassSource": "Himo",
+			"level": 15
+		},
+		{
+			"name": "Furia del Depredador",
+			"source": "Himo",
+			"entries": [
+				"Cuando uses Canalizar Divinidad, ganas los efectos de ambas opciones. Además, tienes resistencia al daño físico y, cuando una bestia o fey aliado dentro de tu aura ataque, puedes usar tu reacción para aplicar un Castigo Divino a su ataque."
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Salvaje",
+			"subclassSource": "Himo",
+			"level": 20
+		},
+		{
+			"name": "Juramento Fey",
+			"source": "Himo",
+			"entries": [
+				"Los paladines silvanos son arqueros devotos de una entidad fey, entrenados en tácticas de equipo y en proteger a su escuadrón.",
+				{
+					"name": "Preceptos del Juramento",
+					"entries": [
+						"Respeto a la jerarquía. Compañerismo en filas. Amor a la vida. Responsabilízate de tus actos."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Hechizos de Juramento",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Nivel de paladín",
+								"Conjuros"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"3rd",
+									"{@spell faerie fire}, {@spell hunter's mark}"
+								],
+								[
+									"5th",
+									"{@spell calm emotions}, {@spell phantasmal force}"
+								],
+								[
+									"9th",
+									"Ritual Funerario de Zackie, {@spell conjure barrage}"
+								],
+								[
+									"13th",
+									"{@spell guardian of nature|XGE}, {@spell charm monster|XGE}"
+								],
+								[
+									"17th",
+									"{@spell geas}, {@spell far step|XGE}"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Canalizar Divinidad: Aura de Encantamiento",
+					"entries": [
+						"Como acción, cada criatura en un cubo de 10 pies originado en ti debe hacer una salvación de Sabiduría contra tu CD de conjuros. Con un fallo, queda {@condition Charmed|PHB} hasta el final de tu siguiente turno si está en combate o un minuto si no hay hostilidad."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Tácticas Fey",
+					"entries": [
+						"Obtienes +2 a la CA siempre que no lleves armadura pesada. Puedes usar Castigo Divino con ataques de arco corto o largo; a nivel 11, Castigo Divino Mejorado también se aplica a esos ataques."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Fey",
+			"subclassSource": "Himo",
+			"level": 3
+		},
+		{
+			"name": "Canalizar Divinidad: Lluvia Radiante",
+			"source": "Himo",
+			"entries": [
+				"Como acción, disparas una flecha al cielo y creas una nube blanca en un área de 20 pies de diámetro centrada en un punto a 60 pies. Las criaturas elegidas deben superar una salvación de Destreza contra tu CD de conjuros o recibir tres veces el daño del arco más tu Carisma, o la mitad con éxito. El daño es radiante y puede beneficiarse de Castigo Divino Mejorado, pero no del básico."
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Fey",
+			"subclassSource": "Himo",
+			"level": 7
+		},
+		{
+			"name": "Arquería Mágica",
+			"source": "Himo",
+			"entries": [
+				"Tus flechas hacen daño radiante y añades tu modificador de Carisma al daño."
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Fey",
+			"subclassSource": "Himo",
+			"level": 15
+		},
+		{
+			"name": "Protector del Bosque",
+			"source": "Himo",
+			"entries": [
+				"Como acción, te envuelves en zarzas y enredaderas durante un minuto. Te alzan a 20 pies, te dan cobertura de tres cuartos y ventaja en todas las salvaciones; tu velocidad es 0 y la planta tiene CA 10 y puntos de golpe iguales a la mitad de tus máximos. Puedes infligir daño perforante mágico igual a tu Carisma a quien te toque o ataque a ti o a la planta.",
+				"Tu Aura de Protección sigue beneficiando aliados y ahora ocupa una columna de 5 pies de ancho y 20 de alto. Los enemigos que entren o empiecen allí deben superar una salvación de Carisma o quedar {@condition Charmed|PHB} hasta el inicio de su próximo turno. Ignoras la desventaja de alcance al disparar flechas. Recuperas este rasgo tras un descanso prolongado o termina antes si destruyen o descartas la planta, o sales usando todo tu movimiento."
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Fey",
+			"subclassSource": "Himo",
+			"level": 20
+		},
+		{
+			"name": "Juramento de Magia Hishna",
+			"source": "Himo",
+			"entries": [
+				"Los Paladines Hishna son una orden de Maztica leal a Zaltec y la Mano Sangrienta. Adoptan el símbolo del jaguar y ven la guerra como forma de vida.",
+				{
+					"name": "Preceptos del Juramento",
+					"entries": [
+						"La voluntad de Zaltec ante todo. La caza es un acto sagrado. Estrategia y guerra. Imposición de voluntad."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Hechizos de Juramento",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Nivel de paladín",
+								"Conjuros"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"3rd",
+									"{@spell Cat Charm|GMAM}, {@spell Espolón de Roca|GMAM}"
+								],
+								[
+									"5th",
+									"{@spell Heartsense|GMAM}, {@spell Emboscada|GMAM}"
+								],
+								[
+									"9th",
+									"{@spell Sequía|GMAM}, {@spell Forma de Jaguar|GMAM}"
+								],
+								[
+									"13th",
+									"{@spell Incendio|GMAM}, {@spell Sending (Hishna)|GMAM}"
+								],
+								[
+									"17th",
+									"{@spell Cacería|GPNM}, {@spell Talismán de Hishna|GMAM}"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Canalizar Divinidad",
+					"entries": [
+						"Sacrificio a Zaltec: mediante un ritual de 10 minutos sobre el cadáver de un humanoide que puedas ver y tocar, ofreces su alma a Zaltec y bebes su sangre. Durante una hora, al impactar con ataques de arma perforantes o cortantes, o ataques a distancia perforantes, aplicas {@condition Sangrado|Himo|sangrado} de un dado inferior al arma.",
+						"Ataque Letal: como parte de un ataque que impacte, gastas Canalizar Divinidad para convertirlo en crítico y aplicar {@condition Sangrado|Himo|sangrado} igual a un dado inferior al arma, mínimo d4. Usa tu CD de conjuros para el sangrado.",
+						"Modificación: tus castigos y Castigo Divino Mejorado hacen daño necrótico. No puedes preparar {@spell Forma de Águila|GMAM}."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Hishna",
+			"subclassSource": "Himo",
+			"level": 3
+		},
+		{
+			"name": "Aura de Sangre",
+			"source": "Himo",
+			"entries": [
+				"Cada vez que una criatura reciba daño pasivo de {@condition Sangrado|Himo|sangrado} dentro de tu aura, recibes puntos de golpe temporales iguales a la cantidad."
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Hishna",
+			"subclassSource": "Himo",
+			"level": 7
+		},
+		{
+			"name": "Mejora de Aura de Sangre",
+			"source": "Himo",
+			"entries": [
+				"Ahora tus aliados también reciben los puntos de golpe temporales de tu aura."
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Hishna",
+			"subclassSource": "Himo",
+			"level": 15
+		},
+		{
+			"name": "Forma Bestial",
+			"source": "Himo",
+			"entries": [
+				"Una vez al día, como acción adicional, puedes usar {@spell Forma de Jaguar|GMAM} sin gastar espacio de conjuro. Todo el daño que hagas es necrótico y te curas la mitad. Puedes usar tus castigos con los ataques de Jaguar y curarte la mitad de ese daño. Puedes hablar con normalidad, mantienes el aura y sigues pudiendo usar Imposición de Manos y Canalizar Divinidad."
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Hishna",
+			"subclassSource": "Himo",
+			"level": 20
+		},
+		{
+			"name": "Juramento de Magia Pluma",
+			"source": "Himo",
+			"entries": [
+				"Los paladines de Pluma siguen las enseñanzas de Maztica, Madre de la Vida, y Qotal, el Primer Hijo. Abrazan la paz, la enseñanza y las artes, y se enfrentan a quienes amenazan la paz en Maztica.",
+				{
+					"name": "Preceptos del Juramento",
+					"entries": [
+						"Protege la paz. Paz para los civiles y guerra para los guerreros. La naturaleza es sabia. Respeta el arte y la artesanía."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Hechizos de Juramento",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Nivel de paladín",
+								"Conjuros"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"3rd",
+									"{@spell Elevar Menor|GMAM}, {@spell Regulación Térmica|GMAM}"
+								],
+								[
+									"5th",
+									"{@spell Breathsense|GMAM}, {@spell Suerte del Pescador|GMAM}"
+								],
+								[
+									"9th",
+									"{@spell Elevar Mayor|GMAM}, {@spell Forma de Águila|GMAM}"
+								],
+								[
+									"13th",
+									"{@spell Cambiar Cauce|GMAM}, {@spell Major Bird Charm|GMAM}"
+								],
+								[
+									"17th",
+									"{@spell Espíritu del Sauce|GdR}, {@spell Talismán de Pluma|GMAM}"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Canalizar Divinidad",
+					"entries": [
+						"Plegaria de Paz: como acción, fuerzas a toda criatura hostil a 30 pies a hacer una salvación de Sabiduría. Con un fallo queda bajo los efectos de {@spell calm emotions} y os percibe a ti y a tu grupo como un encuentro pacífico durante 10 minutos, salvo que os vea enfrentaros a otra criatura antes de que esta os ataque.",
+						"Regalo de Vida: como parte de una Imposición de Manos sobre otra criatura, gastas Canalizar Divinidad para que una cantidad igual a la mitad de tu reserva máxima de Imposición de Manos sea gratuita; la curación adicional sí se gasta.",
+						"Modificación: aprendes el truco Featherweaving y no puedes preparar {@spell Forma de Jaguar|GMAM}."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Pluma",
+			"subclassSource": "Himo",
+			"level": 3
+		},
+		{
+			"name": "Aura de Paz",
+			"source": "Himo",
+			"entries": [
+				"Cada vez que una criatura en tu aura reciba curación, añade tu modificador de Carisma a la cantidad curada."
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Pluma",
+			"subclassSource": "Himo",
+			"level": 7
+		},
+		{
+			"name": "Mejora de Aura de Paz",
+			"source": "Himo",
+			"entries": [
+				"Las criaturas en tu aura son inmunes a veneno y enfermedades. Si una criatura enferma o {@condition Poisoned|PHB} entra, el efecto se suprime hasta que salga."
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Pluma",
+			"subclassSource": "Himo",
+			"level": 15
+		},
+		{
+			"name": "Forma Bestial",
+			"source": "Himo",
+			"entries": [
+				"Una vez al día, como acción adicional, puedes usar {@spell Forma de Águila|GMAM} sin gastar espacio de conjuro. Todo el daño que hagas en esta forma es radiante y curas la mitad a una criatura a 60 pies. Puedes usar tus castigos con los ataques del Águila y añadir la mitad de ese daño a la curación. Puedes hablar con normalidad, mantienes el aura y sigues pudiendo usar Imposición de Manos y Canalizar Divinidad."
+			],
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Pluma",
+			"subclassSource": "Himo",
+			"level": 20
+		},
+		{
+			"name": "Linaje Vampírico",
+			"source": "Himo",
+			"entries": [
+				"Tu maldición vampírica ha corrompido tu vínculo con la Onda, haciéndote un depredador nocturno sin necesidad de ser un muerto viviente.",
+				{
+					"name": "Trepar como Araña",
+					"entries": [
+						"Tienes velocidad de escalada igual a tu velocidad andando, puedes adherirte a paredes y techos y moverte por ellos sin usar las manos."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Conjuros de Linaje",
+					"entries": [
+						"Estos conjuros cuentan como de hechicero y no para tu límite de conjuros conocidos. Al ganar un nivel de hechicero, puedes cambiar uno por un conjuro de Encantamiento o Nigromancia de las listas de hechicero, mago o brujo.",
+						{
+							"type": "table",
+							"colLabels": [
+								"Nivel",
+								"Conjuros"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1st",
+									"{@spell charm person}, {@spell sleep}"
+								],
+								[
+									"3rd",
+									"{@spell hold person}, {@spell wither and bloom|SCC}"
+								],
+								[
+									"5th",
+									"{@spell vampiric touch}, {@spell speak with dead}"
+								],
+								[
+									"7th",
+									"{@spell charm monster|XGE}, {@spell shadow of moil|XGE}"
+								],
+								[
+									"9th",
+									"{@spell geas}, {@spell enervation|XGE}"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Vampírico",
+			"subclassSource": "Himo",
+			"level": 1
+		},
+		{
+			"name": "Cambio de Forma",
+			"source": "Himo",
+			"entries": [
+				"Como acción adicional puedes transformarte en un {@creature bat} durante 10 minutos un número de veces igual a tu bonificador de competencia por descanso prolongado; después puedes gastar 1 punto de hechicería para repetirlo. Alternativamente, puedes gastar 2 usos o 2 puntos de hechicería para lanzar {@spell gaseous form} durante 10 minutos."
+			],
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Vampírico",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Mordisco de Vampiro",
+			"source": "Himo",
+			"entries": [
+				"Como acción haces un ataque de conjuro cuerpo a cuerpo. Si el objetivo no está {@condition Grappled|PHB}, apresado, {@condition Incapacitated|PHB} o {@condition Paralyzed|PHB}, atacas con desventaja. Al impactar puedes gastar de 1 a 5 puntos de hechicería: recibe {@dice 1d6} necrótico por punto, se reduce su máximo de puntos de golpe y recuperas la mitad. Tras gastar 5 puntos con este rasgo, lo recuperas tras un descanso prolongado."
+			],
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Vampírico",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "Regeneración Vampírica",
+			"source": "Himo",
+			"entries": [
+				"Como acción puedes gastar puntos de hechicería para recuperar 5 puntos de golpe por punto. Si gastas al menos 3, también regeneras miembros perdidos y heridas abiertas."
+			],
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Vampírico",
+			"subclassSource": "Himo",
+			"level": 18
+		},
+		{
+			"name": "El Parásito",
+			"source": "Himo",
+			"entries": [
+				"Has permitido que una entidad acceda parcialmente a tu mente. Vives en simbiosis con un parásito o espíritu simbionte que obtiene beneficio de tus actos y, a cambio, te ofrece poder mental.",
+				{
+					"name": "Conjuros Ampliados",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Nivel de conjuro",
+								"Conjuros"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1st",
+									"{@spell dissonant whispers}, {@spell identify}"
+								],
+								[
+									"3rd",
+									"{@spell detect thoughts}, {@spell enhance ability}"
+								],
+								[
+									"5th",
+									"{@spell pulse wave|EGW}, {@spell sending}"
+								],
+								[
+									"7th",
+									"{@spell compulsion}, {@spell confusion}"
+								],
+								[
+									"9th",
+									"{@spell modify memory}, {@spell telekinesis}"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Mente Ampliada",
+					"entries": [
+						"Eres competente con un kit de herramientas y una habilidad de tu elección, puedes hablar Deep Speech y leer Qualith. Además, tienes telepatía a 60 pies con una criatura que puedas ver y con la que compartas al menos un idioma; la criatura no puede responderte."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Parásito",
+			"subclassSource": "Himo",
+			"level": 1
+		},
+		{
+			"name": "Protección Mental",
+			"source": "Himo",
+			"entries": [
+				"Eres resistente al daño psíquico y ninguna criatura puede leer tu mente si no quieres."
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Parásito",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Voluntad Compartida",
+			"source": "Himo",
+			"entries": [
+				"Eres inmune a quedar {@condition Charmed|PHB} y no pueden hacerte actuar mágicamente en contra de tu voluntad."
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Parásito",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Disruptor Psiónico",
+			"source": "Himo",
+			"entries": [
+				"Como acción puedes sobrecargar la mente de una criatura que veas a 60 pies. Debe superar una salvación de Inteligencia o recibir {@dice 5d8} de daño psíquico, caer {@condition Unconscious|PHB} y ganar un nivel de agotamiento. Despierta al recibir daño o tras una hora. Recuperas este rasgo tras un descanso prolongado."
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Parásito",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "El Quori",
+			"source": "Himo",
+			"entries": [
+				"Los quori, criaturas del Plano Onírico o Dal Quor, buscan humanoides a los que inspirar y dar poder. Muchos de sus oniromantes actúan como diplomáticos o espías.",
+				{
+					"name": "Inspiración Quori",
+					"entries": [
+						"Hablas quori. Al final de un descanso prolongado puedes elegir un idioma, habilidad o kit de herramientas y ganar competencia con él hasta tu próximo descanso prolongado. Entre tus opciones de Arcanum se encuentran Proyección Onírica de nivel 9 y Paraje Onírico de nivel 6."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Conjuros Ampliados",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Nivel de conjuro",
+								"Conjuros"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1st",
+									"Abrir Mente, {@spell sleep}"
+								],
+								[
+									"3rd",
+									"Buscador de Sueños, {@spell calm emotions}"
+								],
+								[
+									"5th",
+									"Atar Consciencia, {@spell clairvoyance}"
+								],
+								[
+									"7th",
+									"Caminante de Sueños, {@spell arcane eye}"
+								],
+								[
+									"9th",
+									"{@spell modify memory}, {@spell Rary's telepathic bond}"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Quori",
+			"subclassSource": "Himo",
+			"level": 1
+		},
+		{
+			"name": "Mente Abierta",
+			"source": "Himo",
+			"entries": [
+				"Siempre que duermas eres consciente de tu burbuja onírica. Eres resistente al daño psíquico tanto en el Plano Material como en el Onírico."
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Quori",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Imaginación Poderosa",
+			"source": "Himo",
+			"entries": [
+				"Siempre que uses la acción de Modificar Paraje para crear o reparar una anomalía, causas o curas un número de {@dice d12} igual a tu bonificador de competencia."
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Quori",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Moldear Pesadilla",
+			"source": "Himo",
+			"entries": [
+				"Una vez por descanso prolongado puedes infundir los mayores miedos de una criatura que veas a 30 pies y cuya Inteligencia sea 5 o superior. Debe superar una salvación de Sabiduría contra tu CD de conjuros. Si está en el Plano Material o no es anfitrión de la burbuja actual, recibe todos los efectos de un ataque de ansiedad excepto el daño, que se sustituye por el de Imaginación Poderosa. Si era anfitrión de su propia burbuja en el Plano Onírico, entra automáticamente en Modo Pesadilla."
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Quori",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "El Archimago",
+			"source": "Himo",
+			"entries": [
+				"Algunos magos ofrecen poder directamente a alumnos que necesitan prosperar en las artes arcanas, cerrando un pacto arcano.",
+				{
+					"name": "Aprendiz Arcano",
+					"entries": [
+						"Eres competente en tres habilidades de Inteligencia o Sabiduría y ganas un truco de la lista de mago que usa Carisma."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Conjuros Ampliados",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Nivel de conjuro",
+								"Conjuros"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1st",
+									"{@spell magic missile}, {@spell shield}"
+								],
+								[
+									"3rd",
+									"{@spell rope trick}, {@spell Leomund's Tiny Hut|PHB|tiny hut}"
+								],
+								[
+									"5th",
+									"{@spell lightning bolt}, {@spell tiny servant|XGE}"
+								],
+								[
+									"7th",
+									"{@spell arcane eye}, {@spell Otiluke's resilient sphere}"
+								],
+								[
+									"9th",
+									"{@spell Bigby's hand}, {@spell wall of force}"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Archimago",
+			"subclassSource": "Himo",
+			"level": 1
+		},
+		{
+			"name": "Tropiezo Astral",
+			"source": "Himo",
+			"entries": [
+				"Cuando seas golpeado por un ataque o efecto de área, puedes usar tu reacción para desaparecer en el Plano Astral sin recibir daño. Al final del turno reapareces en un espacio de tu elección a 30 pies del punto en que desapareciste. Recuperas este rasgo tras un descanso corto o prolongado."
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Archimago",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Alumno Avanzado",
+			"source": "Himo",
+			"entries": [
+				"Al final de un descanso prolongado puedes cambiar un conjuro de brujo de nivel 1 por otro de nivel 1 de la lista de brujo."
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Archimago",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Protección Mágica",
+			"source": "Himo",
+			"entries": [
+				"Eres resistente al daño de fuerza y, cuando hagas una salvación para recibir daño mágico, puedes usar tu reacción para convertirla en una salvación de Carisma. Puedes hacerlo un número de veces al día igual a tu modificador de Carisma."
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Archimago",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Fuerza Atrapante",
+			"source": "Himo",
+			"entries": [
+				"Una vez por descanso, al golpear a una criatura con un truco o arma que haga daño, puedes decidir no dañarla y transportarla a una dimensión de bolsillo creada por tu patrón. Permanece allí mientras mantengas la {@status Concentration|PHB} o hasta un minuto. Después debe superar una salvación de Carisma; vuelva o no al espacio del que se desvaneció, con un fallo recibe {@dice 5d10} de daño de fuerza y queda {@condition Prone|PHB}."
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Archimago",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "El Dragón",
+			"source": "Himo",
+			"entries": [
+				"Solo unos pocos cultistas de dragones logran el favor verdadero de su patrón, prometiendo ampliar su horda, luchar por sus intereses o llegar donde otros fieles no se atreven.",
+				{
+					"name": "Presencia Dracónica",
+					"entries": [
+						"Como acción puedes forzar a toda criatura de tu elección a 30 pies a hacer una salvación de Sabiduría contra tu CD de conjuros o quedar {@condition Frightened|PHB} de ti hasta el inicio de tu próximo turno. Con un éxito, es inmune a este efecto durante 24 horas."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Conjuros Ampliados",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Nivel de conjuro",
+								"Conjuros"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1st",
+									"{@spell absorb elements|XGE}, {@spell chromatic orb}"
+								],
+								[
+									"3rd",
+									"{@spell dragon's breath|XGE}, {@spell Rime's binding ice|FTD}"
+								],
+								[
+									"5th",
+									"{@spell lightning bolt}, {@spell Ashardalon's stride|FTD}"
+								],
+								[
+									"7th",
+									"{@spell fire shield}, {@spell ice storm}"
+								],
+								[
+									"9th",
+									"{@spell cone of cold}, {@spell immolation|XGE}"
+								]
+							]
+						}
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Dragón",
+			"subclassSource": "Himo",
+			"level": 1
+		},
+		{
+			"name": "Influencia Dracónica",
+			"source": "Himo",
+			"entries": [
+				"Al final de un descanso prolongado, elige un tipo de dragón cromático o metálico. Ganas resistencia a su tipo de daño y puedes hacer que tu Eldritch Blast haga ese tipo de daño. El DM puede limitar la elección a un único tipo para conservar la consistencia del patrón."
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Dragón",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Transformación Ancestral",
+			"source": "Himo",
+			"entries": [
+				"Una vez al día entras durante un minuto en un éxtasis influenciado por tu patrón. Eres inmune a tu tipo de daño; el daño que inflijas de ese tipo ignora resistencias y trata inmunidades como resistencias. Te crecen alas dracónidas y ganas velocidad de vuelo igual a la de caminar. Si el dragón elegido tiene velocidad de nado o excavación, también puedes ganarla; si solo te da vuelo, ganas 15 pies de velocidad."
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Dragón",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Resistencia Legendaria",
+			"source": "Himo",
+			"entries": [
+				"Una vez al día, cuando falles una salvación, puedes elegir tener éxito. Puedes gastar un espacio de conjuro para volver a usar este rasgo."
+			],
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Dragón",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "Lich",
+			"source": "Himo",
+			"entries": [
+				"Has ido más allá de la Escuela de Nigromancia y buscas comprender la muerte como herramienta, vasallo o juguete.",
+				{
+					"name": "Magia Oscura",
+					"entries": [
+						"Al preparar trucos o conjuros, puedes escoger conjuros de Nigromancia de cualquier lista."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Heraldo de la Muerte",
+					"entries": [
+						"Cuando hagas daño necrótico con un conjuro de nivel 1 o superior, añade tu modificador de Inteligencia al daño total."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Lich",
+			"subclassSource": "Himo",
+			"level": 2
+		},
+		{
+			"name": "Levantar No Muertos",
+			"source": "Himo",
+			"entries": [
+				"Como acción, con una mano libre y tu foco arcano, puedes levantar un esqueleto o zombi durante una hora. Puedes liberarlo con una acción. Puedes invocar un máximo de criaturas igual a tu bonificador de competencia, pero solo tener una a la vez; después debes terminar un descanso prolongado para recuperar los usos. No puedes usar el mismo cadáver dos veces."
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Lich",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Muerto entre los Vivos",
+			"source": "Himo",
+			"entries": [
+				"Ganas resistencia al daño necrótico, tu máximo de puntos de golpe no puede reducirse y ya no necesitas comer, dormir ni respirar. No envejeces y tienes ventaja en salvaciones de muerte."
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Lich",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Guía de Almas",
+			"source": "Himo",
+			"entries": [
+				"Cuando una criatura muera por tu mano, vuelve como un no muerto leal hasta {@dice 1d6} horas, hasta que la liberes o llegue a 0 puntos de golpe. Usa un espíritu no muerto de nivel 3 como zombi, esqueleto o forma fantasmal según el estado del cuerpo. Solo puedes tener uno, no cuenta para Levantar No Muertos y recuperas el rasgo tras un descanso prolongado."
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Lich",
+			"subclassSource": "Himo",
+			"level": 14
+		},
+		{
+			"name": "Oniromante",
+			"source": "Himo",
+			"entries": [
+				"Los oniromantes investigan la magia de los sueños y el Plano Onírico, un mundo de posibilidades ilimitadas y peligroso.",
+				{
+					"name": "Erudito Oniromante",
+					"entries": [
+						"Copiar conjuros de oniromancia cuesta la mitad de tiempo y dinero, al igual que los conjuros indicados de sueño, {@condition Frightened|PHB}, ilusión, adivinación y magia psíquica de la lista proporcionada."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Consciencia Onírica",
+					"entries": [
+						"Concentrarte en conjuros de oniromancia no perturba los descansos mientras permanezcas dormido o en actividades relajadas y no lances otros conjuros. Al lanzar Abrir Mente sobre ti mismo, obtienes consciencia del Plano Material similar al Trance élfico."
+					],
+					"type": "entries"
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Oniromante",
+			"subclassSource": "Himo",
+			"level": 2
+		},
+		{
+			"name": "Sueño Intrusivo",
+			"source": "Himo",
+			"entries": [
+				"Añades 2 dados extra cada vez que lances {@spell sleep} y puedes acceder involuntariamente a la mente de criaturas {@condition Unconscious|PHB} si conoces su nombre."
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Oniromante",
+			"subclassSource": "Himo",
+			"level": 6
+		},
+		{
+			"name": "Mente Afilada",
+			"source": "Himo",
+			"entries": [
+				"Al lanzar {@spell detect thoughts} en una Burbuja Onírica ajena, no necesitas {@status Concentration|PHB} y dura una hora. En el Plano Material puedes profundizar sin que la criatura sepa que lees su mente."
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Oniromante",
+			"subclassSource": "Himo",
+			"level": 10
+		},
+		{
+			"name": "Destructor de Mentes",
+			"source": "Himo",
+			"entries": [
+				"Si lanzas en el Plano Onírico un truco o conjuro que ya haga daño psíquico, el objetivo recibe ese daño tanto en su mente como en su cuerpo."
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Oniromante",
+			"subclassSource": "Himo",
+			"level": 14
+		}
+	]
+}
