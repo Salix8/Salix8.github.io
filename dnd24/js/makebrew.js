@@ -207,10 +207,27 @@ class PageUi extends ProxyBase {
 		});
 
 		const btnSourceEdit = ee`<button class="ve-btn ve-btn-default ve-btn-xs" title="Edit Selected Source"><span class="glyphicon glyphicon-pencil"></span></button>`
-			.onn("click", () => {
+			.onn("click", async () => {
 				const curSourceJson = this._state.activeSource;
-				const curSource = BrewUtil2.sourceJsonToSource(curSourceJson);
-				if (!curSource) return;
+				let curSource = BrewUtil2.sourceJsonToSource(curSourceJson);
+				if (!curSource) {
+					JqueryUtil.doToast({type: "warning", content: "Only homebrew sources can be made editable."});
+					return;
+				}
+
+				// Local bundled sources are read-only until explicitly promoted to the user's editable document.
+				// This keeps the shared base content intact while allowing the Builder to edit a personal copy.
+				if (!await BrewUtil2.pIsEditableSourceJson(curSourceJson)) {
+					const editableBrew = await BrewUtil2.pMoveOrCopyToEditableBySourceJson(curSourceJson);
+					if (!editableBrew) {
+						JqueryUtil.doToast({type: "warning", content: `The source "${curSource.full}" cannot be made editable.`});
+						return;
+					}
+
+					await Makebrew.pPrepareExistingEditableBrew();
+					curSource = BrewUtil2.sourceJsonToSource(curSourceJson);
+				}
+
 				this._doRebuildStageSource({mode: "edit", source: MiscUtil.copy(curSource)});
 				this.__setStageSource();
 			});
@@ -380,6 +397,7 @@ class Makebrew {
 		]);
 		ExcludeUtil.pInitialise().then(null); // don't await, as this is only used for search
 		await this.pPrepareExistingEditableBrew();
+		await this.pHandleBundledSourceUpdates();
 		const brew = await BrewUtil2.pGetBrewProcessed();
 		await SearchUiUtil.pDoGlobalInit();
 		// Do this asynchronously, to avoid blocking the load
@@ -416,6 +434,24 @@ class Makebrew {
 		if (!isAnyMod) return;
 
 		await BrewUtil2.pSetEditableBrewDoc(brew);
+	}
+
+	static async pHandleBundledSourceUpdates () {
+		const updates = await BrewUtil2.pGetBundledSourceUpdates();
+		for (const {source, bundledSource} of updates) {
+			const choice = await InputUiUtil.pGetUserGenericButton({
+				title: `${bundledSource.full} Has an Update`,
+				htmlDescription: `<p>The shared manual is now version ${bundledSource.version}, while your editable copy was based on version ${source.baseVersion}.</p><p>Keeping your copy preserves all of your changes. Restoring the shared version discards this source's local changes.</p>`,
+				buttons: [
+					new InputUiUtil.GenericButtonInfo({text: "Keep My Copy", clazzIcon: "glyphicon glyphicon-floppy-disk", value: "keep"}),
+					new InputUiUtil.GenericButtonInfo({text: "Restore Shared Version", clazzIcon: "glyphicon glyphicon-repeat", value: "restore", isPrimary: true}),
+					new InputUiUtil.GenericButtonInfo({text: "Later", clazzIcon: "glyphicon glyphicon-time", value: "later", isSmall: true}),
+				],
+			});
+
+			if (choice === "keep") await BrewUtil2.pAcknowledgeBundledSourceUpdate({sourceJson: source.json, version: bundledSource.version});
+			else if (choice === "restore") await BrewUtil2.pRestoreBundledSource({sourceJson: source.json});
+		}
 	}
 
 	static async pHashChange () {
