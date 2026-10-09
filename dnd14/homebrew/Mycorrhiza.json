@@ -1,0 +1,3299 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "Myc",
+				"abbreviation": "Myc",
+				"full": "Mycorrhiza",
+				"url": "https://docs.google.com/document/d/1kF4gsuM2KyZgR8AXpwpauTaJtBJ4Sj64TnQbLoJypkg/edit#heading=h.ohookyp7n2zq",
+				"authors": ["Ella"],
+				"convertedBy": [
+					"Salix"
+				],
+				"isEditable": true,
+				"version": "1.0.0"
+			}
+		]
+	},
+	"monster": [
+		{
+			"name": "Ave muda warlock",
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"source": "Myc",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"formula": " ( 8 +  (  ( 8 / 2 )  + 1 )  *  ( 6 - 1 )  + 2 * 6 ) ",
+				"average": 45
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 14,
+			"int": 12,
+			"wis": 16,
+			"cha": 19,
+			"passive": 13,
+			"cr": "5",
+			"languages": [
+				"Common"
+			],
+			"languageTags": [
+				"C"
+			],
+			"level": 5,
+			"save": {
+				"wis": "+6",
+				"cha": "+7"
+			},
+			"skill": {
+				"arcana": "+4",
+				"history": "+4",
+				"intimidation": "+7",
+				"deception": "+7",
+				"insight": "+6",
+				"stealth": "+4"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+7 CD 15",
+						"{@optfeature Devil's Sight|XPHB}",
+						"{@optfeature Eldritch Mind|XPHB}",
+						"{@optfeature Repelling Blast|XPHB}",
+						"{@spell Darkness|XPHB} 2 / SR",
+						"{@optfeature Fiendish Vigor|XPHB} (+22thp=67)",
+						"Puedes cambiar todo daño de spells a psiquico. *Ilusión y encantamiento sin V y S componentes."
+					],
+					"will": [
+						"{@spell Compulsion|XPHB}*"
+					],
+					"rest": {
+						"2": [
+							"{@spell Darkness|XPHB} (Aja)"
+						]
+					},
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell Eldritch Blast|XPHB} +10ft",
+								"{@spell Mage Hand|XPHB}",
+								"{@spell Mind Sliver|XPHB}",
+								"{@spell Minor Illusion|XPHB}*"
+							]
+						},
+						"3": {
+							"spells": [
+								"{@spell Banishment|XPHB}",
+								"{@spell Crown of Madness|XPHB}*",
+								"{@spell Fear|XPHB}*",
+								"{@spell Hypnotic Pattern|XPHB}*",
+								"{@spell Major Image|XPHB}*",
+								"{@spell Suggestion|XPHB}*",
+								"{@spell Vampiric Touch|XPHB}"
+							],
+							"slots": 2,
+							"lower": 1
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"trait": [
+				{
+					"name": "Bendicion Aja",
+					"entries": [
+						"Aja les da {@optfeature Bewitching Whispers|PHB} (without spending spell, {@spell Compulsion|XPHB}) y {@optfeature Gaze of Two Minds|XPHB}"
+					]
+				},
+				{
+					"name": "{@classFeature Magical Cunning|Warlock|XPHB|2|XPHB}",
+					"entries": [
+						"recarga mitad conjuros en 1 min /LR"
+					]
+				},
+				{
+					"name": "{@feat Fairy Trickster|FRHoF} 3/3 LR",
+					"entries": [
+						"When hit attack rol, salvación Wis CD 15 si falla desventaja a las salvaciones hasta el final de mi próximo turno."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "{@subclassFeature Awakened Mind|Warlock|XPHB|Great Old One|XPHB|3}",
+					"entries": [
+						"Una criatura a 30 ft Telepatía (distancia hasta 4 millas) duración 5 mins o nuevo uso.",
+						"{@subclassFeature Clairvoyant Combatant|Warlock|XPHB|Great Old One|XPHB|6} 1/1: Además puedes forzarla a una salvacion de Wis. Si falla esa criatura me tiene desventaja y yo le tengo ventaja. 1/1 LR"
+					]
+				},
+				{
+					"name": "{@optfeature Gaze of Two Minds|XPHB}",
+					"entries": [
+						"Criatura voluntaria percibes lo que perciban sus sentidos.",
+						"Además puede hablar a través de estas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "{@optfeature Fiendish Vigor|XPHB}",
+					"entries": [
+						"(22hp)"
+					]
+				},
+				{
+					"name": "Ataque subterfugio",
+					"entries": [
+						"Turno 1: {@spell Mind Sliver|XPHB}",
+						"Pasiva Fairty Trickster salva Wis CD 15. {@variantrule Disadvantage|XPHB} salvaciones y{@dice  - 1d4}",
+						"Turno 2: Conjuro guapo como {@spell Crown of Madness|XPHB}*"
+					]
+				},
+				{
+					"name": "Ataque potente",
+					"entries": [
+						"{@spell Darkness|XPHB} + {@spell Eldritch Blast|XPHB} +10ft"
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Aja: Bendicion + 2 Darkness",
+					"Dote lv 4: Fairy Trickster FRHoF"
+				]
+			},
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"Y"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"intelligence",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Olog-Hai",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Orc"
+				]
+			},
+			"source": "Myc",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"condition": "(Armadura natural)"
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 50",
+				"average": 94
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 13,
+			"con": 20,
+			"int": 9,
+			"wis": 9,
+			"cha": 9,
+			"passive": 12,
+			"cr": "5",
+			"shortName": "Olog",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Orc"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"O"
+			],
+			"skill": {
+				"intimidation": "+2",
+				"perception": "+2"
+			},
+			"resist": [
+				{
+					"resist": [
+						"fire",
+						"poison"
+					]
+				},
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks"
+				}
+			],
+			"bonus": [
+				{
+					"name": "Agresivo",
+					"entries": [
+						"Como acción adicional, el olog puede moverse hasta su velocidad hacia una criatura hostil que pueda ver."
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Resistencia mágica",
+					"entries": [
+						"El olog tiene ventaja en las tiradas de salvación contra hechizos y otros efectos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiataque",
+					"entries": [
+						"El olog realiza dos ataques: uno con su mordisco y otro con su maza."
+					]
+				},
+				{
+					"name": "Mordisco",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}8 ( {@dice 1d8 + 4} ) slashing damage."
+					]
+				},
+				{
+					"name": "Maza",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}11 ( {@dice 2d6 + 4} ) bludgeoning damage."
+					]
+				}
+			],
+			"environment": [
+				"hill",
+				"mountain",
+				"underdark"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://www.artstation.com/artwork/N5Zvg5"
+						}
+					}
+				]
+			},
+			"reaction": [
+				{
+					"name": "Furia desenfrenada",
+					"entries": [
+						"En respuesta a ser golpeado por un ataque cuerpo a cuerpo, el olog puede hacer un ataque con un arma cuerpo a cuerpo con ventaja contra el atacante."
+					]
+				}
+			]
+		},
+		{
+			"name": "Orco de las montañas",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Orc"
+				]
+			},
+			"source": "Myc",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"condition": "(Armadura natural)"
+				}
+			],
+			"hp": {
+				"formula": "8d8 + 16",
+				"average": 52
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 16,
+			"int": 9,
+			"wis": 13,
+			"cha": 12,
+			"passive": 11,
+			"cr": "4",
+			"skill": {
+				"intimidation": "+5",
+				"religion": "+1"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Orc"
+			],
+			"languageTags": [
+				"O"
+			],
+			"bonus": [
+				{
+					"name": "Agresivo",
+					"entries": [
+						"Como acción adicional, el orco puede moverse hasta su velocidad hacia una criatura hostil que pueda ver."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiataque",
+					"entries": [
+						"El orco puede realizar dos ataques, ya sea con armas cuerpo a cuerpo o desarmado."
+					]
+				},
+				{
+					"name": "Espada",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d6 + 3}) slashing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"damageTags": [
+				"S"
+			],
+			"environment": [
+				"mountain",
+				"underdark"
+			]
+		},
+		{
+			"name": "Orco arquero",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Orc"
+				]
+			},
+			"source": "Myc",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"formula": "4d8 + 6",
+				"average": 38
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 16,
+			"int": 8,
+			"wis": 12,
+			"cha": 10,
+			"passive": 13,
+			"cr": "3",
+			"action": [
+				{
+					"name": "Multiataque",
+					"entries": [
+						"El orco arquero puede realizar dos ataques con la ballesta ligera"
+					]
+				},
+				{
+					"name": "Ballesta ligera",
+					"entries": [
+						"{@atk rw} {@hit 5} to hit, range 150/600 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage."
+					]
+				}
+			],
+			"skill": {
+				"intimidation": "+2",
+				"perception": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Common",
+				"Orc"
+			],
+			"languageTags": [
+				"C",
+				"O"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"RW"
+			],
+			"environment": [
+				"forest",
+				"mountain",
+				"underdark"
+			]
+		},
+		{
+			"name": "Orco domador",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Orc"
+				]
+			},
+			"source": "Myc",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"formula": "6d8 + 10",
+				"average": 37
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 16,
+			"int": 8,
+			"wis": 14,
+			"cha": 10,
+			"passive": 10,
+			"cr": "3",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Common",
+				"Orc"
+			],
+			"languageTags": [
+				"C",
+				"O"
+			],
+			"skill": {
+				"animal handling": "+6",
+				"intimidation": "+2"
+			},
+			"damageTags": [
+				"S"
+			],
+			"action": [
+				{
+					"name": "Espada",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) slashing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"trait": [
+				{
+					"name": "Sinergia bestial",
+					"entries": [
+						"Tiene ventaja en el siguiente ataque cuando la bestia que el ha domado esta viva y a no más de 10 pies de el orco domador."
+					]
+				}
+			],
+			"environment": [
+				"forest",
+				"mountain",
+				"underdark"
+			]
+		},
+		{
+			"name": "Úrzul Cuchilla de cráneo, Exterminador de los merodeadores",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"orc"
+				]
+			},
+			"source": "Myc",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"formula": "19d10 + 90",
+				"average": 194
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 20,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 10,
+			"passive": 17,
+			"cr": "7",
+			"shortName": "Úrzul",
+			"languages": [
+				"Common",
+				"Abyssal",
+				"Orc"
+			],
+			"languageTags": [
+				"C",
+				"AB",
+				"O"
+			],
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				{
+					"conditionImmune": [],
+					"preNote": "sigilo",
+					"note": "no le pueden sorprender"
+				},
+				{
+					"conditionImmune": [],
+					"preNote": "enfurecido por el sigilo"
+				},
+				{
+					"conditionImmune": [],
+					"preNote": "miedo a",
+					"note": "moscas morgai"
+				}
+			],
+			"vulnerable": [
+				{
+					"vulnerable": [
+						"fire"
+					]
+				},
+				{
+					"vulnerable": [
+						"piercing"
+					],
+					"note": "armas a distancia"
+				}
+			],
+			"trait": [
+				{
+					"name": "Banda de cazadores",
+					"entries": [
+						"Lidera un grupo de 4 cazadores que siempre le acompañan"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiataque Cazador",
+					"entries": [
+						"Ataca con una letal combinacion de tres golpes. Extrema precaución al luchar con él en corto alcance."
+					]
+				},
+				{
+					"name": "Multiataque",
+					"entries": [
+						"Utiliza dos ballestas a la vez para disparar saetas aturdidorras a los enemigos."
+					]
+				},
+				{
+					"name": "Jabalina",
+					"entries": [
+						"{@atk mw,rw} {@hit 8} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}8 ({@damage 1d6 + 5}) damage in melee, or 8 ({@damage 1d6 + 5}) damage at range."
+					]
+				},
+				{
+					"name": "Ballesta de mano",
+					"entries": [
+						"{@atk rw} {@hit 8} to hit, range 30/120 ft., one target. {@h}8 ({@damage 1d6 + 5}) damage. Debe tener exito en una salvación  13 de Destreza o quedar {@condition prone}"
+					]
+				}
+			],
+			"skill": {
+				"perception": "+7",
+				"stealth": "+8"
+			},
+			"bonus": [
+				{
+					"name": "Ojo de exterminador (4/dia)",
+					"entries": [
+						"Como acción adicional, Úrzul puede añadir ({@damage 1d12}) a su proxima tirada de ataque o tirada de daño con un ataque de arma a distancia"
+					]
+				}
+			],
+			"miscTags": [
+				"RW",
+				"MW"
+			],
+			"environment": [
+				"mountain",
+				"underdark"
+			],
+			"group": [
+				"Jefes Orcos"
+			]
+		},
+		{
+			"name": "Takra el piadoso, Domador de los agrestes",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Orc"
+				]
+			},
+			"source": "Myc",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"formula": "20d10 + 90",
+				"average": 200
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 12,
+			"con": 16,
+			"int": 10,
+			"wis": 19,
+			"cha": 10,
+			"passive": 10,
+			"cr": "7",
+			"shortName": "Takra el piadoso",
+			"languages": [
+				"Common",
+				"Abyssal",
+				"Orc"
+			],
+			"languageTags": [
+				"C",
+				"AB",
+				"O"
+			],
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"group": [
+				"Jefes Orcos"
+			],
+			"vulnerable": [
+				{
+					"vulnerable": [
+						"necrotic"
+					],
+					"note": "/ maldiciones"
+				},
+				{
+					"vulnerable": [
+						"cold",
+						"poison"
+					],
+					"preNote": "le hacen +5 hp daño"
+				},
+				{
+					"vulnerable": [
+						"piercing"
+					],
+					"note": "de armas a distancia le hace +10 hp damages"
+				}
+			],
+			"immune": [
+				{
+					"immune": [
+						"fire"
+					]
+				},
+				{
+					"immune": [],
+					"note": "a prueba de bestias"
+				},
+				{
+					"immune": [],
+					"note": "vigilante frente al sigilo"
+				}
+			],
+			"conditionImmune": [
+				{
+					"conditionImmune": [],
+					"note": "enfurecido por dragones"
+				}
+			],
+			"trait": [
+				{
+					"name": "Domdor",
+					"entries": [
+						"Tiene una comunion especial con las criaturas. Las bestias no le atacan."
+					]
+				},
+				{
+					"name": "Manada de huargos",
+					"entries": [
+						"Va montado en un Huargo alfa rodeado de otros 4 huargos"
+					]
+				},
+				{
+					"name": "Asesino de bestias",
+					"entries": [
+						"Sumamente letal contra las bestias, siempre que le haga un ataque a una bestia le suma +3 a la tirada de ataque y +10 al daño"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Espada corta",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) damage."
+					]
+				},
+				{
+					"name": "Domador de huargos",
+					"entries": [
+						"Puede convertir a los huargos/lobos y bestias simialres enemigas en aliadas"
+					]
+				},
+				{
+					"name": "Garras agrestes",
+					"entries": [
+						"Si se mueve al menos 10 pies en linea recta hacia un objetivo y luego lo golpea con este ataque de enbestida en el mismo turno, el objetivo recibe tres ataques de ({@damage 1d12 + 3}) de daño punzante con sus grandes garras. Si es una criatura debe superar una salvacion de Fuerza CD 15 o quedar tumbado"
+					]
+				},
+				{
+					"name": "Rugido bestial (5-6)",
+					"entries": [
+						"Emite un rugido bestial que invoca 2 huargos, cura a las bestias aliadas ({@damage 2d6 + 3}) y las empuja a atacar a su objetivo (gastando su reacción)"
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"environment": [
+				"mountain",
+				"underdark"
+			],
+			"bonus": [
+				{
+					"name": "Lealtad bestial",
+					"entries": [
+						"Ordena a una bestia que este a 60 pies de el que realice un ataque con ventaja a su objetivo."
+					]
+				}
+			],
+			"skill": {
+				"animal handling": "+7",
+				"nature": "+3",
+				"survival": "+7"
+			}
+		},
+		{
+			"name": "Orco chaman",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Orc"
+				]
+			},
+			"source": "Myc",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"formula": "5d8 + 20",
+				"average": 45
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 18,
+			"int": 10,
+			"wis": 19,
+			"cha": 10,
+			"passive": 10,
+			"cr": "5",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Common",
+				"Abyssal",
+				"Orc"
+			],
+			"languageTags": [
+				"C",
+				"AB",
+				"O"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"El orco es un lanzador de conjuros de nivel 7. Su habilidad para lanzar conjuros es Sabiduría (conjuros de salvación CD 13, +6 para impactar con ataques de conjuros). El orco tiene preparados los siguientes hechizos:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill Touch}",
+								"{@spell produce flame}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell burning hands}",
+								"{@spell cause fear|XGE}",
+								"{@spell ice knife|XGE}",
+								"{@spell ray of sickness}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell barkskin}",
+								"{@spell blindness/deafness}",
+								"{@spell scorching Ray}",
+								"{@spell spiritual weapon}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell life Transference|XGE}",
+								"{@spell spirit guardians}",
+								"{@spell stinking cloud}",
+								"{@spell bestow curse}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell death ward}",
+								"{@spell guardian of faith}",
+								"{@spell blight}"
+							],
+							"slots": 1
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O",
+				"P",
+				"R"
+			],
+			"save": {
+				"wis": "+7"
+			},
+			"skill": {
+				"arcana": "+3",
+				"religion": "+3",
+				"intimidation": "+3"
+			},
+			"bonus": [
+				{
+					"name": "Agresivo",
+					"entries": [
+						"El orco puede moverse hasta su velocidad hacia una criatura hostil que pueda ver."
+					]
+				}
+			],
+			"environment": [
+				"mountain",
+				"underdark"
+			],
+			"action": [
+				{
+					"name": "Daga",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"damageTags": [
+				"P"
+			]
+		},
+		{
+			"name": "Hûra el gracioso, Asesino abrasador de los merodeadores",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Orc"
+				]
+			},
+			"source": "Myc",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"formula": "19d10 + 90",
+				"average": 194
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 20,
+			"con": 17,
+			"int": 9,
+			"wis": 10,
+			"cha": 10,
+			"passive": 13,
+			"cr": "9",
+			"shortName": "Hûra",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Common",
+				"Abyssal",
+				"Orc"
+			],
+			"languageTags": [
+				"C",
+				"AB",
+				"O"
+			],
+			"save": {
+				"dex": "+8",
+				"int": "+4"
+			},
+			"skill": {
+				"stealth": "+11",
+				"acrobatics": "+11",
+				"intimidation": "+3",
+				"survival": "+3",
+				"perception": "+3"
+			},
+			"vulnerable": [
+				{
+					"vulnerable": [
+						"piercing"
+					],
+					"note": "de armas a distancia le hace +10 hp damages"
+				},
+				{
+					"vulnerable": [
+						{
+							"special": "critico"
+						}
+					],
+					"note": "le hace +20 de daño con posibiliad de decapitarlos si le queda menos de 50 hp"
+				}
+			],
+			"trait": [
+				{
+					"name": "Miedo gelido",
+					"entries": [
+						"Tras sufrir daño por congelacion/frio quedara {@condition Stunned} durante un turno."
+					]
+				},
+				{
+					"name": "Miedo a los caragors",
+					"entries": [
+						"Queda  {@condition Stunned} durante un turno tras sufrir ataques de huargos/lobos o criaturas similares a discrepcion del dm."
+					]
+				},
+				{
+					"name": "Acrobata experto",
+					"entries": [
+						"Como parte de su movimiento puede rodar por el suelo y/o saltar sobre criaturas medianas o mas pequeñas, sin recibir ataques de oportunidad."
+					]
+				},
+				{
+					"name": "Señuelos",
+					"entries": [
+						"Lidera una banda de individuos prácticamente idénticos a él. Lo que dificulta identificarlo en combate. (estos señuelos tienen 50 de vida)"
+					]
+				},
+				{
+					"name": "Arma en llamas",
+					"entries": [
+						"Esgrime un arma llameante, capaz de prender a los enemigos e inflingir daño de fuego. Lanza {@damage 1d8} si sacas entre un 7 te inflinge {@damage 1d4} de daño de fuego y si sacas un 8 te quemas durante 3 turnos, por tanto haciendote {@damage 1d4} cada turno, a no ser que utilicen su accion para apagarte."
+					]
+				},
+				{
+					"name": "Asesinar",
+					"entries": [
+						"Durante su primer turno, Montaron tiene ventaja en las tiradas de ataque contra cualquier criatura que no haya tomado un turno. Cualquier golpe que Montaron consiga contra una criatura sorprendida es un golpe crítico"
+					]
+				},
+				{
+					"name": "Evasión",
+					"entries": [
+						"Si Montaron está sujeto a un efecto que le permite realizar una tirada de salvación de Destreza para recibir solo la mitad del daño, Montaron no recibe daño si tiene éxito en la tirada de salvación, y solo la mitad del daño si falla"
+					]
+				},
+				{
+					"name": "Agilidad",
+					"entries": [
+						"Montaron puede moverse por el espacio de cualquier criatura que sea de un tamaño mayor que el suyo."
+					]
+				},
+				{
+					"name": "Ataque furtivo (1/Turno)",
+					"entries": [
+						"causa 21 ( 4d6 ) de daño adicional cuando golpea a un objetivo con un ataque con arma y tiene ventaja en la tirada de ataque, o cuando el objetivo está a 5 pies de un aliado de Montaron que no está incapacitado y Montaron no. tener desventaja en la tirada de ataque."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Evadiendo enemigos",
+					"entries": [
+						"Puede usar su accion adicional para usar la accion de {@action Dodge}"
+					]
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"action": [
+				{
+					"name": "Multiataque Cazador",
+					"entries": [
+						"Hûra realiza dos ataques con su lanzas llameante."
+					]
+				},
+				{
+					"name": "Lluvia de dagas",
+					"entries": [
+						"Hûra puede gastar su acción para lanzar 4 dagas."
+					]
+				},
+				{
+					"name": "Lanza llameante con retorno",
+					"entries": [
+						"{@atk mw,rw} {@hit 10} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}8 ({@damage 1d6 + 5}) piercing damage in melee, or 8 ({@damage 1d6 + 5}) piercing damage at range, plus 4 ({@damage 1d8}) fire damage. Ademas la lanza reguresa a el."
+					]
+				},
+				{
+					"name": "Cuchillos arrojadizos",
+					"entries": [
+						"{@atk mw,rw} {@hit 8} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}7 ({@damage 1d4 + 5}) piercing damage in melee, or 7 ({@damage 1d4 + 5}) piercing damage at range, plus 4 ({@damage 1d8}) fire damage."
+					]
+				}
+			],
+			"miscTags": [
+				"RW",
+				"MW"
+			],
+			"reaction": [
+				{
+					"name": "Esquiva asombrosa",
+					"entries": [
+						"Cuando un atacante que puedes ver te golpea con un ataque con armas. Puedes usar tu reacción para reducir a la mitad el daño del ataque contra ti."
+					]
+				}
+			],
+			"resist": [
+				"fire"
+			],
+			"legendary": [
+				{
+					"name": "Lluvia de dagas",
+					"entries": [
+						"Utiliza su accion de Lluvia de dagas"
+					]
+				},
+				{
+					"name": "Ataque de lanza llameante",
+					"entries": [
+						"Realiza un ataque con su lanza llameante"
+					]
+				},
+				{
+					"name": "Movilidad extra",
+					"entries": [
+						"Puede moverse 30 pies adicionales"
+					]
+				}
+			],
+			"damageTags": [
+				"F",
+				"P"
+			]
+		},
+		{
+			"name": "Kynthia Aure",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Draconida"
+				]
+			},
+			"source": "Myc",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"Casaca +2",
+						"{@spell mage armor}"
+					]
+				}
+			],
+			"hp": {
+				"formula": " ( 6 +  (  ( 6 / 2 )  + 1 )  *  ( 12 - 1 )  + 3 * 12 ) ",
+				"average": 86
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "{@race Dragonborn (Gem) | FTD}"
+				}
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 16,
+			"int": 20,
+			"wis": 10,
+			"cha": 15,
+			"passive": 14,
+			"cr": "12",
+			"save": {
+				"int": "+9",
+				"con": "+7",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+9",
+				"athletics": "+3",
+				"perception": "+4",
+				"investigation": "+9"
+			},
+			"resist": [
+				"force",
+				"psychic"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Marquesiano"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"action": [
+				{
+					"name": "Breath Weapon",
+					"entries": [
+						"As Attack action, you can replace one of your attacks with an exhalation of magical energy in a 15-foot cone. Each creature in that area must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failed save, the creature takes {@damage 1d10} damage of the type associated with your Gem Ancestry. On a successful save, it takes half as much damage. This damage increases by {@dice 1d10} when you reach 5th level ({@dice 2d10}), 11th level ({@dice 3d10}), and 17th level ({@dice 4d10}). ",
+						"Uses = PB, Recharge LR. CD 15"
+					]
+				}
+			],
+			"actionTags": [
+				"Breath Weapon"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"bonus": [
+				{
+					"name": "Gem Flight",
+					"entries": [
+						"Use a bonus action to manifest spectral wings on your body last for 1 min. You gain a flying speed equal to your walking speed and can hover.",
+						"Uses = 1, Recharge LR."
+					]
+				},
+				{
+					"name": "Telekinetic thrust (Empuje)",
+					"entries": [
+						"shove one creature you can see within 30 feet of you. Succeed on a Strength saving throw ({@dc 8} + your proficiency bonus + the ability modifier of the score increased by this feat) or be moved 5 feet toward you or away from you. A creature can willingly fail this save."
+					]
+				},
+				{
+					"name": "Echo Yuki",
+					"entries": [
+						"Como acción adicional puedo invocar el echo de Yuki (se lo robo, si lo esta usando F).",
+						"Se invoca a 15 pies, se mueve 30 pies y no se puede alejar >30 pies de mi.",
+						"CA=14+PB    HP=1",
+						"- Como acción adicional tp (intercambio) entre yo y el echo cuesta 15 pies.",
+						"- Puede realizar la acción de ataque (Kynthia es maga solo haria 1 ataque).",
+						"- Ataque de oportunidad. ",
+						"- Cuando acción de ataque + un ataque, veces igual al Mod Con Recarga LR"
+					]
+				},
+				{
+					"name": "Cinturon",
+					"entries": [
+						"Tiene 3 huecos y me permite usar un objeto con la acción bonus.",
+						"Poti concentración y 2 poti curación mayor"
+					]
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "z Spellcasting",
+					"headerEntries": [
+						"A: +9, CD: 17",
+						"Foco arcano (Dientes de tiburón encantados) Modificación:",
+						"Dardo plateado +1 misil mágico",
+						"Carta con un ojo Detectar magia at will",
+						"Escama irisada BC Cambio el tipo de daño",
+						"Reloj de arena (Metamagia conjuro extendido)",
+						"Pétalo de rosa rojo de cristal 2 recuperaciones arcanas",
+						"Pedúnculo de gazer preparar 2 conjuros más",
+						"Yelmo plateado mage armor at will CA 13",
+						"Paperbird roto pegado mágicamente 3 sendings",
+						"Trébol de 4 hojas con Gentle repose rerolear pifia",
+						"Anillo spell storing meto 1 conjuro de lv 5 para ti"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell mage armor}",
+						"{@spell mage hand} (invisible -> {@feat Telekinetic | TCE})"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell Adivinación Menor|GrimorioRuvyn|adivinacion menor}",
+								"{@spell fire bolt}",
+								"{@spell mind sliver|TCE}",
+								"{@spell minor illusion|XPHB}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell magic missile}",
+								"{@spell silvery barbs|SCC}",
+								"{@spell Tasha's hideous laughter}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell blindness/deafness}",
+								"{@spell detect thoughts}",
+								"{@spell Domo De Protección|GrimorioRuvyn|domo de proteccion}",
+								"{@spell mind spike|XGE}",
+								"{@spell suggestion}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell dispel magic|XPHB}",
+								"{@spell lightning bolt|XPHB}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell dimension door|XPHB}",
+								"{@spell raulothim's psychic lance|FTD}",
+								"{@spell storm sphere|XGE}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell dream}",
+								"{@spell nudo de nyx|GrimorioRuvyn}",
+								"{@spell wall of force}"
+							],
+							"slots": 2
+						},
+						"6": {
+							"spells": [
+								"{@spell eyebite|XPHB}"
+							],
+							"slots": 1
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"variant": [
+				{
+					"name": "Spells Known CD 17",
+					"entries": [
+						"At will:",
+						"{@spell detect magic}, {@spell mage armor}, {@spell mage hand} ({@condition invisible} -> {@feat Telekinetic | TCE})",
+						"Rituals: ",
+						"- Lv 1: {@spell abrir mente|ZackieUpdate}, {@spell alarm}, {@spell comprehend languages}, {@spell danza de las herramientas|GrimorioRuvyn}, {@spell detect magic}, {@spell find familiar}, {@spell identify}, {@spell unseen servant}",
+						"- Lv 2: {@spell augury}, {@spell ojos de oghma|GrimorioRuvyn}",
+						"- Lv 3: {@spell glyph of warding} (mejorado), {@spell Ojo De Halcón|GrimorioRuvyn|ojo de halcon}, {@spell water breathing}",
+						"- Lv 4: {@spell divination}",
+						"- Lv 5: {@spell Rary's telepathic bond}, {@spell contact other plane}",
+						".",
+						"Spells",
+						"- Lv 0: {@spell Adivinación Menor|GrimorioRuvyn|adivinacion menor}, {@spell fire bolt}, {@spell mind sliver|TCE}, {@spell minor illusion|XPHB}, {@spell prestidigitation}",
+						"- Lv 1: {@spell magic missile}, {@spell conjuro no letal|GrimorioRuvyn}, ¡{@spell witch bolt}, {@spell burning hands}, ¡{@spell Tasha's caustic brew|TCE}, ",
+						"    {@spell silvery barbs|SCC}, ¡{@spell fog cloud}, {@spell shield}, ¡{@spell cause fear|XGE}",
+						"    {@spell sleep}, ¡{@spell Tasha's hideous laughter}, {@spell disguise self}",
+						"- Lv 2: ¡{@spell mind spike|XGE}",
+						"    {@spell blindness/deafness}, {@spell Domo De Protección|GrimorioRuvyn|domo de proteccion}, ¡{@spell suggestion}",
+						"    {@spell Alter Self}, {@spell air bubble|AAG}, ¡{@spell Buscador De Sueños|ZackieUpdate|buscador de suenos}, ¡{@spell detect thoughts}, {@spell immovable object|EGW}, ¡{@spell invisibility}, {@spell magic mouth}, {@spell misty step}, {@spell Nystul's magic aura}",
+						"- Lv 3: {@spell lightning bolt}, {@spell pulse wave|EGW}",
+						"    {@spell counterspell}, {@spell dispel magic}, ¡{@spell fear}, ¡{@spell haste}, ¡{@spell slow}",
+						"    {@spell anonimato|ZackieUpdate}, {@spell Atar Consciencia|ZackieUpdate}, ¡{@spell clairvoyance}, ¡{@spell fly}, {@spell glyph of warding}, {@spell magic circle}, ¡{@spell pesadilla|ZackieUpdate}, {@spell sending}, {@spell tongues}",
+						"- Lv 4: {@spell gravity sinkhole|EGW}, {@spell ice storm}, ¡{@spell Raulothim's Psychic Lance|FTD}, {@spell robar pensamientos|ZackieUpdate}, ¡{@spell storm sphere|XGE} ",
+						"    ¡{@spell confusion}, ¡{@spell greater invisibility}, ¡{@spell Watery Sphere|XGE}",
+						"    ¡{@spell Arcane eye}, {@spell Bloqueo onírico|ZackieUpdate}, ¡{@spell Caminante De Sueños|ZackieUpdate|caminante de suenos}, ¡{@spell Control water}, {@spell Dimension door}, {@spell Mordenkainen's private sanctum}, ¡{@spell pesadilla|ZackieUpdate}",
+						"- Lv 5: {@spell cone of cold}, ¡{@spell Nudo de Nyx|GDR}, ",
+						"    {@spell Teleportation Circle}, ¡{@spell telekinesis}, {@spell transmute rock|XGE}, ¡{@spell wall of force}",
+						"    ¡{@spell scrying}, {@spell dream}, {@spell Bigby's Hand}, {@spell Modify Memory}",
+						"- Lv 6: {@spell Disintegrate}",
+						"{@spell Eyebite}",
+						"{@spell Soul Cage|XGE}, {@spell True Seeing}, {@spell Guards and Wards}, {@spell Globe of Invulnerability}, {@spell Paraje Onírico|ZackieUpdate}, {@spell Fusionar Parajes Oníricos|ZackieUpdate}"
+					],
+					"type": "variant"
+				}
+			],
+			"trait": [
+				{
+					"name": "0 Psionic Mind",
+					"entries": [
+						"You can send telepathic messages to any creature you can see within 30 feet of you. You don't need to share a language with the creature for it to understand these messages, but it must be able to understand at least one language to comprehend them."
+					]
+				},
+				{
+					"name": "{@classFeature Arcane Tradition|Wizard|PHB|2|PHB} D2 - Divination Savant",
+					"entries": [
+						"The gold and time you must spend to copy a divination spell into your spellbook is halved"
+					]
+				},
+				{
+					"name": "{@classFeature Arcane Tradition|Wizard|PHB|2|PHB} D2 - Portent",
+					"entries": [
+						"When LR, roll two d20s and record the numbers rolled. You can replace any attack roll, saving throw, or ability check made by you or a creature that you can see with one of these foretelling rolls. You must choose to do so before the roll, and you can replace a roll in this way only once per turn.",
+						"Each foretelling roll can be used only once. When you finish a long rest, you lose any unused foretelling rolls.",
+						"Recharge LR."
+					]
+				},
+				{
+					"name": "{@classFeature Arcane Tradition|Wizard|PHB|2|PHB} D6 - Expert Divination",
+					"entries": [
+						"When you cast a divination spell of 2nd level or higher using a spell slot, you regain one expended spell slot. The slot you regain must be of a level lower than the spell you cast and can't be higher than 5th level."
+					]
+				},
+				{
+					"name": "{@classFeature Arcane Recovery|Wizard|PHB|1|PHB}",
+					"entries": [
+						"When you finish a SR, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.",
+						"Uses = 2, Recharge LR."
+					]
+				},
+				{
+					"name": "z Objetos",
+					"entries": [
+						"Atuneados",
+						"- Foco arcano (x)",
+						"- {@item wand of binding} (x)",
+						"- {@item Brooch of Shielding} (x)",
+						"Otros",
+						"- Libro de conjuros",
+						"- Componentes para un monton de conjuros",
+						"- {@item Broom of Flying}",
+						"- {@item Hat of Disguise} (-)",
+						"- {@item Wand of Secrets | DMG}",
+						"- {@item Pearl of power} (-)",
+						"- {@item Charred Wand of Magic Missiles | WDH}"
+					]
+				},
+				{
+					"name": "{@classFeature Arcane Tradition|Wizard|PHB|2|PHB} Dl0 - The Third Eye",
+					"entries": [
+						"Acción elige uno de los siguientes beneficios. Dura hasta incapacitado o algún descanso.",
+						"- Darkvision. Darkvision a 60 pies.",
+						"- Ethereal Sight. Puedes ver en el plano etereo a 60 pies.",
+						"- Greater Comprehension. Puedes leer cualquier lengua.",
+						"- See Invisibility. Puedes ver a 10 pies de ti en linea recta."
+					]
+				},
+				{
+					"name": "ss Aliado planar",
+					"entries": [
+						"Como acción gratuita llamo a un aliado que este en otro plano, con el que lo haya acordado explícitamente. El aliado sabe lo que ocurre y lo que quiero actúa inmediatamente después de mi durante un turno. ",
+						"Uses = PB = 4 Recargue LR"
+					]
+				},
+				{
+					"name": "Alerta lv 12",
+					"entries": [
+						"(feat 2014)",
+						"+5 iniciativa.",
+						"no pueden {@status Surprised|XPHB} mientras esta consciente.",
+						"las criaturas no ganan ventaja en sus ataques como consecuencia de que Kynthia no las vea."
+					]
+				}
+			],
+			"immune": [
+				{
+					"special": "{@spell magic missile}"
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Kynthia Aure maga adivina y oniromante procedente de Waterdeep. Alumna de Polymnia otra oniromante. Esta perdió a su hija Yuki y para evitarlo anclo su alma al plano de los sueños y después en su búsqueda ella también quedo atrapada en dicho plano. Kynthia empezo a estudiar la magia para poder sacar tanto a su novia (Yuki) como su maestra Polymnia del plano onirico. Pero por ahora debe enfrentarse a Tabula Rasa una secta de monstruosidades que amenaza con arrasar Waterdeep."
+				]
+			},
+			"dragonCastingColor": "green",
+			"alias": [
+				"Oniromancia",
+				"Sueños",
+				"Adivina"
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"level": 12,
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"L",
+				"O",
+				"Y"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"strength",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Gar Crostorm",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"note": "(Elemental)"
+			},
+			"source": "Myc",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item mariner's chain shirt}"
+					]
+				}
+			],
+			"hp": {
+				"formula": " ( 8 +  (  ( 8 / 2 )  + 1 )  *  ( 15 - 1 )  + 3 * 15 ) ",
+				"average": 123
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "when aura tormentosa"
+				},
+				"swim": {
+					"number": 30,
+					"condition": "when aura tormentosa"
+				}
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 16,
+			"int": 10,
+			"wis": 20,
+			"cha": 17,
+			"passive": 20,
+			"cr": {
+				"cr": "15",
+				"lair": "16"
+			},
+			"level": 15,
+			"languages": [
+				"Common",
+				"Primordial",
+				"Druidic",
+				"Draconic"
+			],
+			"languageTags": [
+				"C",
+				"P",
+				"DU",
+				"DR"
+			],
+			"save": {
+				"int": "+5",
+				"wis": "+10"
+			},
+			"skill": {
+				"intimidation": "+8",
+				"survival": "+10",
+				"perception": "+10"
+			},
+			"bonus": [
+				{
+					"name": "Aura tormentosa",
+					"entries": [
+						"Gastando una de tus Wild shapes, generas una aura con un radio de 20 pies en la cual generas tu propia tormenta. Esta te otorga inmunidad al rayo sonido y frio. El aura finaliza si la disipas, caes inconsciente, mueres o usas este rasgo otra vez.",
+						"A partir del lv 14 puedes crear el aura en otras criaturas que no seas tu mismo."
+					]
+				},
+				{
+					"name": "Rayo",
+					"entries": [
+						"Lanzas un rayo a una criatura que puedas ver dentro del aura tormentosa, haciendo {@atk rs} {@hit 10} to hit, dentro del aura tormentosa, one target. {@h}9 ({@damage 2d8}) damage. "
+					]
+				},
+				{
+					"name": "Empuje",
+					"entries": [
+						"Empujas a una criatura que este dentro del aura tormentosa en dirección contraria al centro de esta (una criatura que es el centro del aura no podrá ser empujada). La criatura hace una salvación de Fuerza contra tu salvación de conjuros"
+					]
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Its spellcasting ability is Wisdom (spell save {@dc 17}, {@hit 10} to hit with spell attacks)"
+					],
+					"rest": {
+						"1": [
+							"{@spell call lightning}",
+							"{@spell conjure elemental}",
+							"{@spell lightning bolt} o gastando espacios"
+						]
+					},
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell dancing lights}",
+								"{@spell druidcraft}",
+								"{@spell lightning lure|TCE}",
+								"{@spell shape water|XGE}",
+								"{@spell thorn whip}",
+								"{@spell thunderclap|XGE}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell entangle} (con aire)",
+								"{@spell faerie fire}",
+								"{@spell thunderwave}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell beast sense}",
+								"{@spell gust of wind}",
+								"{@spell hold person}",
+								"{@spell pass without trace}",
+								"{@spell protection from poison}",
+								"{@spell warding wind|XGE}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell thunder step|XGE}",
+								"{@spell tidal wave|XGE}",
+								"{@spell wall of water|XGE}",
+								"{@spell water breathing}",
+								"{@spell wind wall}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell control water}",
+								"{@spell elemental bane|XGE}",
+								"{@spell fire shield}",
+								"{@spell guardian of nature|XGE}",
+								"{@spell ice storm}",
+								"{@spell storm sphere|XGE} c"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell commune with nature}",
+								"{@spell cone of cold}",
+								"{@spell control winds|XGE}",
+								"{@spell freedom of the winds|TDCSR}",
+								"{@spell hold monster}",
+								"{@spell tree stride}"
+							],
+							"slots": 2
+						},
+						"6": {
+							"spells": [
+								"{@spell druid grove|XGE}",
+								"{@spell find the path}",
+								"{@spell heroes' feast}",
+								"{@spell wind walk}"
+							],
+							"slots": 1
+						},
+						"7": {
+							"spells": [
+								"{@spell fire storm} (de lightning)"
+							],
+							"slots": 1
+						},
+						"8": {
+							"spells": [
+								"{@spell tsunami}"
+							],
+							"slots": 1
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"action": [
+				{
+					"name": "Wild Shape",
+					"entries": [
+						"Dos usos y dura una cantidad de horas igual a la mitad de tu lv de druida (redondeado hacia abajo)",
+						"Te transformas en un animal con menor cr que tu lv, y añades la mitad de su vida como puntos de golpe para tu vida. Puedes hablar mientras estas transformado (puedes lanzar conjuros). Tu forma salvaje finaliza hasta que la disipes o hasta que caigas inconsciente, a 0 de vida o mueras."
+					]
+				},
+				{
+					"name": "Wild Companion",
+					"entries": [
+						"Gastas una Wild Shape en castear {@spell find familiar} without material components"
+					]
+				}
+			],
+			"resist": [
+				{
+					"resist": [
+						"cold",
+						"lightning",
+						"thunder"
+					],
+					"note": "when aura tormentosa"
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.pinimg.com/originals/71/84/55/7184554628fa63fa7f6d88c5e5284753.jpg"
+						}
+					}
+				]
+			},
+			"tokenHref": {
+				"type": "external",
+				"url": "https://i.pinimg.com/originals/71/84/55/7184554628fa63fa7f6d88c5e5284753.jpg"
+			},
+			"legendary": [
+				{
+					"name": "Cañones por banda",
+					"entries": [
+						"Se disparan los cañones {@atk rs} {@hit 10} to hit, reach 120 ft., one target. {@h}10 ({@damage 3d6})"
+					]
+				}
+			],
+			"miscTags": [
+				"RCH"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"L",
+				"O",
+				"P",
+				"T"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Hydia Crostorm",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"note": "(Elemental)"
+			},
+			"source": "Myc",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item scale mail|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": " (  ( 8 +  (  ( 8 / 2 )  + 1 )  *  ( 10 - 1 )  + 2 * 10 )  ) ",
+				"average": 73
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 15,
+			"int": 10,
+			"wis": 19,
+			"cha": 13,
+			"passive": 14,
+			"cr": "10",
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://www.bing.com/images/blob?bcid=RH9EdpPXT00HeOHSM0GdeuHIgMVM.....4o"
+						}
+					}
+				]
+			},
+			"tokenHref": {
+				"type": "external",
+				"url": "https://www.bing.com/images/blob?bcid=RH9EdpPXT00HeOHSM0GdeuHIgMVM.....4o"
+			},
+			"skill": {
+				"animal handling": "+8"
+			},
+			"level": 10,
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell animal friendship}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell animal messenger}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell conjure animals}",
+								"{@spell mass healing word} c"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell conjure minor elementals}",
+								"{@spell dominate beast}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell awaken}"
+							],
+							"slots": 1
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"action": [
+				{
+					"name": "Wild Shape",
+					"entries": [
+						"Dos usos y dura la mitad de tu lv de druida (redondeado hacia abajo)",
+						"Te transformas en un animal con menor cr que tu lv, y añades la mitad de su vida como puntos de golpe para tu vida. Puedes hablar mientras estas transformado (puedes lanzar conjuros). Tu forma salvaje finaliza hasta que la disipes o hasta que caigas inconsciente, a 0 de vida o mueras."
+					]
+				},
+				{
+					"name": "Wild Companion",
+					"entries": [
+						"Gastas una Wild Shape en castear find familiar without material components"
+					]
+				}
+			],
+			"languages": [
+				"Common",
+				"Druidic",
+				"Primordial"
+			],
+			"languageTags": [
+				"C",
+				"DU",
+				"P"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Alvyn Glittergem",
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome rock"
+				]
+			},
+			"source": "Myc",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"formula": " ( 8 +  (  ( 8 / 2 )  + 1 )  *  ( 8 - 1 )  + 3 * 8 ) ",
+				"average": 67
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 13,
+			"con": 16,
+			"int": 17,
+			"wis": 14,
+			"cha": 10,
+			"passive": 14,
+			"cr": "0",
+			"fluff": {
+				"entries": [
+					"Zippeltink Gearlash"
+				]
+			},
+			"shortName": "Zippeltink Gearlash",
+			"level": 1,
+			"languages": [
+				"Common",
+				"Gnomish",
+				"Draconic"
+			],
+			"languageTags": [
+				"C",
+				"G",
+				"DR"
+			],
+			"save": {
+				"int": "+5",
+				"con": "+5"
+			},
+			"skill": {
+				"acrobatics": "+3",
+				"arcana": "+5",
+				"investigation": "+5",
+				"perception": "+4",
+				"sleight of hand": "+3"
+			},
+			"spellcasting": [
+				{
+					"name": "x Spellcasting",
+					"headerEntries": [
+						"{@hit 5} CD 13  "
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell magic stone|XGE}",
+								"{@spell mending|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell catapult|XGE}",
+								"{@spell purify food and drink|XPHB}",
+								"{@spell sanctuary|XPHB}"
+							],
+							"slots": 0
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"trait": [
+				{
+					"name": "0 Tools",
+					"entries": [
+						"Competencia en Firearms",
+						"{@skill History} {@hit 7} si es Alquimia, artefactos y tecnología +PBx2",
+						"{@item Jeweler's Tools|PHB} Int {@hit 7}",
+						"{@item Tinker's Tools|PHB} Dex {@hit 3}",
+						"{@item Thieves' Tools|PHB} Dex {@hit 3}",
+						"{@item Mason's Tools|PHB} Str {@hit 1}",
+						"{@item Carpenter's Tools|PHB} Str {@hit 1}",
+						"{@item Artisan's Tools|PHB} Abi {@hit 0}"
+					]
+				},
+				{
+					"name": "0",
+					"entries": [
+						"Gnome Cunning: Adv on all Int, Wis, y Cha saving throws against magic.",
+						"Squat Nimbleness: Adv {@skill Athletics} or {@skill Acrobatics} to escape from {@condition grappled}."
+					]
+				},
+				{
+					"name": "1 Tinkers 3/3",
+					"entries": [
+						"En 1h + 10pg en materiales",
+						"CA 5, 1hp hasta 24h (con 1h se puede reparar, se puede desmontar y recuperar los materiales)",
+						"- Clockwork Toy: Criatura se mueve 5 pies en el suelo cada turno en una dirección aleatoria. Hace ruidos.",
+						"- Fire Starter: mechero usa acción.",
+						"- Music Box: "
+					]
+				},
+				{
+					"name": "2 Magical tinkering 3/3",
+					"entries": [
+						"Con {@item Artisan's Tools|PHB} puedes infundir un efecto mágico en un objeto.",
+						"Como acción tocas un objeto no mágico y le puedes añadir:",
+						"- Objeto brilla 5 pies + 5 pies",
+						"- When touched, suena mensaje a 10 pies y no mas 6s.",
+						"- Emite un olor o sonido (no verbal) a 10 pies.",
+						"- Efecto visual en la superficie. Una img o 25 palabras, lineas, formas o mezcla.",
+						"Max objetos mod int. Si se sobrepasa el mas antiguo se acaba."
+					]
+				},
+				{
+					"name": "Infusiones",
+					"entries": [
+						"s"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Tirachinas/Sling",
+					"entries": [
+						"{@atk rw} {@hit +3} to hit, range 30/120 ft., one target. {@h}3 ({@damage 1d4 + 1}) Bludgeoning damage."
+					]
+				}
+			],
+			"miscTags": [
+				"RW",
+				"RNG"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"B"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Jon Silvercrest",
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"source": "Myc",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": " ( 10 +  (  ( 10 / 2 )  + 1 )  *  ( 1 - 1 )  + 3 * 1 ) ",
+				"average": 13
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 16,
+			"int": 9,
+			"wis": 14,
+			"cha": 12,
+			"passive": 14,
+			"cr": "0",
+			"fluff": {
+				"entries": [
+					"Jacob Frye"
+				]
+			},
+			"level": 1,
+			"save": {
+				"str": "+5",
+				"con": "+5"
+			},
+			"skill": {
+				"performance": "+3",
+				"perception": "+4",
+				"religion": "+1",
+				"survival": "+4"
+			},
+			"senses": [
+				"blindsight 10 ft."
+			],
+			"senseTags": [
+				"B"
+			],
+			"languages": [
+				"Common",
+				"Giant",
+				"Dwarvish"
+			],
+			"languageTags": [
+				"C",
+				"GI",
+				"D"
+			],
+			"bonus": [
+				{
+					"name": "Second Wind",
+					"entries": [
+						"hp {@dice 1d10}+lv Fighter"
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Sentinel",
+					"entries": [
+						"- Si ataque de oportunidad vel 0 hasta fin turno.",
+						"- Provocan ataque de oportunidad incluso si se desenganchan",
+						"- Si criatura a 5 pies ataca a otra criatura, se puede usar reacción en ataque mele"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Sentinel",
+					"entries": [
+						"Si criatura a 5 pies ataca a otra criatura, reacción ataque melé."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}4 damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Agustin",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Dracónido Feérico"
+				]
+			},
+			"source": "Myc",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item scale mail|phb}"
+					]
+				},
+				{
+					"ac": 18,
+					"from": [
+						"{@item scale mail|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": " ( 8 +  (  ( 8 / 2 )  + 1 )  *  ( 3 - 1 )  + 2 * 3 ) ",
+				"average": 24
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "Alas Feéricas"
+				}
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 14,
+			"int": 10,
+			"wis": 18,
+			"cha": 11,
+			"passive": 16,
+			"cr": "0",
+			"level": 3,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Sylvan"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"S"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+6 {@dc 14}",
+						"Si gasto un conjuro de >= lv1 puedo hacer que ese aliado gaste su reacción en hacer un {@atk w} a una criatura que yo vea"
+					],
+					"daily": {
+						"1": [
+							"{@classFeature Channel Divinity|Cleric|PHB|2|PHB}: Order's Demand",
+							"{@spell misty step|PHB}",
+							"{@spell silvery barbs|SCC}"
+						]
+					},
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance|PHB}",
+								"{@spell thaumaturgy|PHB}",
+								"{@spell toll the dead|XGE}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell command|PHB}*",
+								"{@spell detect evil and good|PHB}",
+								"{@spell detect magic|PHB}",
+								"{@spell healing word|PHB}",
+								"{@spell heroism|PHB}*",
+								"{@spell protection from evil and good|PHB}",
+								"{@spell sanctuary|PHB}"
+							],
+							"slots": 0
+						},
+						"2": {
+							"spells": [
+								"{@spell calm emotions|PHB}",
+								"{@spell hold person|PHB}*",
+								"{@spell silence|PHB}",
+								"{@spell zone of truth|PHB}*"
+							],
+							"slots": 0
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"skill": {
+				"persuasion": "+2",
+				"religion": "+2",
+				"insight": "+6",
+				"perception": "+6",
+				"intimidation": "+2"
+			},
+			"action": [
+				{
+					"name": "Light Crossbow",
+					"entries": [
+						"{@atk rw} {@hit +4} to hit, range 80/320 ft., one target. {@h}6 ({@damage 1d8 + 2}) Piercing damage."
+					]
+				},
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit +3} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) Bludgeoning damage."
+					]
+				}
+			],
+			"miscTags": [
+				"RW",
+				"RNG",
+				"MW",
+				"MLW"
+			],
+			"attachedItems": [
+				"light crossbow|phb",
+				"mace|phb"
+			],
+			"trait": [
+				{
+					"name": "Dracónido Feérico",
+					"entries": [
+						"Idiomas comun draco y sylva",
+						"Apariencia: soy humano orejas semielfo y diente guapos",
+						"Tipo: Cuentas como dracónido o semielfo para coger dotes",
+						"Resistencia Draco + Alas Feéricas",
+						"Darkvision 60"
+					]
+				},
+				{
+					"name": "{@feat Fey Touched|XGE}",
+					"entries": [
+						"+1 Wis, {@spell silvery barbs|SCC} y {@spell misty step|PHB} 1/day gratis"
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Persuasion C, Religion e Insight C, Percepcion e Intimidacion B",
+					"Vida 10 - 17 - 24",
+					"Se junta con el ejercito de Boros para patrullar las calles de ravnica. Cyra su compañera asimar."
+				]
+			},
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Zobil",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Kender/Halfling"
+				]
+			},
+			"source": "Myc",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": " ( 8 +  (  ( 8 / 2 )  + 1 )  *  ( 7 - 1 )  + 2 * 7 ) ",
+				"average": 52
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 14,
+			"int": 12,
+			"wis": 10,
+			"cha": 18,
+			"passive": 10,
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+7 CD 15",
+						"10 conjuros"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell disparo ilusorio|GuadePeteralaNotanMagia}",
+								"{@spell mage hand|PHB}",
+								"{@spell minor illusion|PHB}",
+								"{@spell vicious mockery|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell cure wounds|PHB}",
+								"{@spell silvery barbs|SCC}",
+								"{@spell Tasha's hideous laughter|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell crown of madness|PHB}",
+								"{@spell heat metal|PHB}",
+								"{@spell invisibility|PHB}",
+								"{@spell spray of cards|BMT}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell catnap|XGE}",
+								"{@spell dispel magic|PHB}",
+								"{@spell hypnotic pattern|PHB}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell polymorph|PHB}"
+							],
+							"slots": 1
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"trait": [
+				{
+					"name": "Telekinetic",
+					"entries": [
+						"{@spell mage hand|PHB} {@condition invisible} a 30 feets",
+						"Empujar criatura 5 pies CD 15"
+					]
+				},
+				{
+					"name": "4/4 {@classFeature  Bardic Inspiration|Bard|PHB|1|PHB} (1d8)",
+					"entries": [
+						"{@dice 1d6} para una criatura que me oiga a 60 feets en los próximos 10 mins, lo puedes gastar en habilidades salvaciones o ataques. (se puede decidir si gastar o no después del {@dice d20}).",
+						"{@dice 1d8} al lv5, {@dice 1d10} al lv10, {@dice 1d12} al lv 15",
+						"Uses = ModCha, Recharge SR."
+					]
+				},
+				{
+					"name": "Jack of All Trades",
+					"entries": [
+						"Añades la mitad de tu PB a todas las tiradas de habilidad que no seas competente (acuerdense de iniciativa)",
+						"Bard College: Doblo sigilo y el de cartas"
+					]
+				},
+				{
+					"name": "Song of Rest (d6)",
+					"entries": [
+						"Partidita, aliados que jueguen recuperan {@dice 1d6} de HP",
+						"{@dice 1d8} al lv9, {@dice 1d10} al lv13 y {@dice 1d12} al lv17"
+					]
+				},
+				{
+					"name": "Countercharm",
+					"entries": [
+						"As Acción puedes empezar una performance hasta el final de tu siguiente turno. Aliados a 30 feets que puedan oirme, Adv contra {@condition frightened} or {@condition charmed}"
+					]
+				},
+				{
+					"name": "Kender",
+					"entries": [
+						"Intrépido Adv miedo y si fallo 1/day puedo elegir no fallar.",
+						"Mofa: criatura a 60 feets que pueda escucharme y entenderme. salvacion Wis o desventaja contra toda criatura que no sea yo.",
+						"Uses = PB, Recharge LR."
+					]
+				},
+				{
+					"name": "Lucky",
+					"entries": [
+						"Reroll de 3 tiradas"
+					]
+				},
+				{
+					"name": "Bardo del juego",
+					"entries": [
+						"Suerte del ludópata: Reacción gasto una inspiracion en rerolear {@dice 1d20}+Inspiracion bardica, si tengo éxito nos guardamos el resultado y el master lo puede en mi contra. No lo puedo volver a usar hasta que el DM no lo use contra mi.",
+						"Cartas letales: ataque a distancia mágico {@dice 1d8} slashing a 30/60 pies, 52 cartas.",
+						"Cartomancia: Tréboles los 1 son 2 y el 19 cuenta como 20, Diamantes resistencia cortante perforante y punzante, Corazones{@dice  + 1d8}+Mod a curaciones, Picas{@dice  + 1d8}+Mod al daño"
+					]
+				}
+			],
+			"skill": {
+				"acrobatics": "+6",
+				"stealth": "+9",
+				"sleight of hand": "+9",
+				"performance": "+7",
+				"persuasion": "+7",
+				"deception": "+7"
+			},
+			"fluff": {
+				"entries": [
+					"Competencias C: Cartas, acrobacias, Juego de manos",
+					"Competencias R: sigilo ",
+					"Competencias B: Decepción y persuasión",
+					"Doblo: sigilo."
+				]
+			},
+			"languages": [
+				"Common",
+				"Halfling"
+			],
+			"languageTags": [
+				"C",
+				"H"
+			],
+			"level": 7,
+			"save": {
+				"cha": "+7",
+				"dex": "+6"
+			},
+			"damageTagsSpell": [
+				"F",
+				"O",
+				"Y"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Nolan",
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"source": "Myc",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item studded leather armor|xphb}",
+						"27 hpt"
+					]
+				}
+			],
+			"hp": {
+				"formula": " ( 8 +  (  ( 8 / 2 )  + 1 )  *  ( 7 - 1 )  + 2 * 7 ) ",
+				"average": 52
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "Elemental Gift"
+				}
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 14,
+			"int": 10,
+			"wis": 12,
+			"cha": 19,
+			"passive": 11,
+			"save": {
+				"wis": "+4",
+				"cha": "+7"
+			},
+			"skill": {
+				"stealth": "+5",
+				"deception": "+7",
+				"performance": "+7",
+				"intimidation": "+7",
+				"insight": "+4"
+			},
+			"level": 7,
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Ataque: +7,   CD 15",
+						"{@b Genie's Wrath}: 1/turn when hit with attack roll puedes añadir +3 (PB) de trueno al daño"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell Chill Touch|XPHB}",
+								"{@spell Eldritch Blast|XPHB}",
+								"{@spell Friends|XPHB}",
+								"{@spell Mage Hand|XPHB}",
+								"{@spell Minor Illusion|XPHB}",
+								"{@spell Prestidigitation|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell Detect Magic|XPHB}",
+								"{@spell Identify|XPHB}"
+							],
+							"slots": 0
+						},
+						"4": {
+							"spells": [
+								"{@spell Banishment|XPHB}",
+								"{@spell Darkness|XPHB}",
+								"{@spell Enemies Abound|XGE}",
+								"{@spell Hold Person|XPHB}",
+								"{@spell Raulothim's Psychic Lance|FTD}",
+								"{@spell Suggestion|XPHB}",
+								"{@spell Tongues|XPHB}",
+								"{@spell Witch Bolt|XPHB}"
+							],
+							"slots": 2,
+							"lower": 1
+						}
+					},
+					"restLong": {
+						"1": [
+							"{@spell Detect Thoughts|XPHB} (Sin componentes)"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"trait": [
+				{
+					"name": "{@classFeature Eldritch Invocations|Warlock|XPHB|1|XPHB}",
+					"entries": [
+						"El libro de las sombras es también el libro de cuentas y lo voy invocando cuando quiero.",
+						"{@optfeature Pact of the Tome}",
+						"{@optfeature Pact of the Chain} -> Imp? con invisibilidad (rol + explo)",
+						"{@optfeature Devil's Sight}",
+						"{@optfeature Master of Myriad Forms}",
+						"{@optfeature Gaze of Two Minds}",
+						"{@optfeature Fiendish Vigor} (27hpt)"
+					]
+				},
+				{
+					"name": "FO {@feat Crafter|XPHB}",
+					"entries": [
+						"Proficiency with: {@item Weaver's Tools |XPHB}, {@item Tinker's Tools|XPHB}, {@item Leatherworker's Tools|XPHB} y {@item Smith's Tools|XPHB} (B)",
+						"Discount: -20% nonmagic items",
+						"Fast Crafting: Cada LR creo un objeto de la tabla con la herramienta que tenga proficiency, al si siguiente LR se desintegra."
+					]
+				},
+				{
+					"name": "FB {@feat Actor|XPHB}",
+					"entries": [
+						"Ability Score Increase: +1 Wis",
+						"Impersonation: Adv to Deception or Performance checks to convince others that you are that person.",
+						"Mimicry: Insight CD 15 (Cha+PB)"
+					]
+				},
+				{
+					"name": "FLv4 {@feat Telepathic|XPHB}",
+					"entries": [
+						"Ability Score Increase: +1 Wis",
+						"Telepathic Utterance: yo pudeo hablarles telepaticamente 60ft, no me pueden responder.",
+						"Detect Thoughts: Siempre tengo preparado {@spell Detect Thoughts|XPHB}. Puedo castearlo sin componentes 1/LR."
+					]
+				}
+			],
+			"languages": [
+				"Common",
+				"Elvish",
+				"Dwarvish",
+				"Telepathic 60ft"
+			],
+			"languageTags": [
+				"C",
+				"E",
+				"D"
+			],
+			"senses": [
+				"normalvision 120 ft."
+			],
+			"action": [
+				{
+					"name": "Bottled Respite",
+					"entries": [
+						"Puedo entrar en mi anillo de los gatos de plata.",
+						"El interir es una habitacion (cilindro) 20x20ft",
+						"Puedo estar dentro PBx2 horas",
+						"LR"
+					]
+				}
+			],
+			"mythic": [
+				{
+					"name": "Magical Cunning",
+					"entries": [
+						"1 min, recupero spell slots igual a la cantidad de spell slots / 2 redondeada hacia arriba. LR"
+					]
+				},
+				{
+					"name": "Human Resourceful",
+					"entries": [
+						"{@variantrule Heroic Inspiration|XPHB} / LR "
+					]
+				},
+				{
+					"name": "Recuperar el tomo",
+					"entries": [
+						"SR"
+					]
+				},
+				{
+					"name": "Recuperar el Anillo",
+					"entries": [
+						"1h"
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Stats: https://chicken-dinner.com/5e/5e-point-buy.html#customrace&NA&8&13&14&10&12&15&0&0&27&15&8&19&15&12&9&7&5&4&3&2&1&0&1&2&4&6&9&4&5&4&4&4&6",
+					"+1 Wis por la dote de Actor",
+					"+1 Wis por la dote de Telepathic",
+					"Background custom",
+					"Ability Scores: +2 Cha, +1Con",
+					"Feat: Actor",
+					"Skills: Stealth, Performance ",
+					"Tool Proficiency: Smith's Tools (vender armas rodamientos etc)",
+					"Human",
+					"Skill: Insight ",
+					"Feat: Crafter",
+					"Ficha de los jugadores:",
+					"Lucas, Drogun Thalvak: Paladin conquista",
+					"https://www.dndbeyond.com/characters/146843171",
+					"Raúl, Kaeru: Monje de la mano abierta",
+					"https://www.dndbeyond.com/characters/117411024",
+					"Miquel, Pitagoras: Clerigo Forja",
+					"https://www.dndbeyond.com/characters/97162463",
+					"Karl, Clay: Mago adivinacion",
+					"https://dicecloud.com/character/e4yx3Ye4hQ6yStQES/Clay",
+					"{@b Action:} ",
+					"Cast spell: Magia Azul",
+					"Prestidigitacion, Minor ilusion",
+					"Detect Thoughts",
+					"Suggestion",
+					"{@b Bonus:}",
+					"Gaze of Two Minds",
+					"{@b Recordatorios:}",
+					"Mascota imp y sus transformaciones",
+					"Rol de que alguien no puede curarse o que no se pueden mover",
+					"Visión normal en la oscuridad mágica",
+					"Telepatía",
+					"Anillo donde me puedo meter",
+					"Artesano",
+					"Recuperación arcana 1 min",
+					"Meta",
+					"Kaeru (25.5) 3d8+12 (35)4d8+12+2d4, Drogun (18) 4d6+4 (31.5)4d6+4+3d8",
+					"CHA: Clay > Kaeru / / / Banishment ",
+					"INT: Kaeru = Drogun / / / Raulothim's, Enemies, ",
+					"WIS: Kaeru > Clay > Drogun > Pitagoras / / / Fear, Hypnotic, Suggestion"
+				]
+			},
+			"isNpc": true,
+			"alias": [
+				"Azón",
+				"Los gatos de plata"
+			],
+			"resist": [
+				"thunder"
+			],
+			"bonus": [
+				{
+					"name": "Elemental Gift",
+					"entries": [
+						"30ft fly 10 mins 3/LR"
+					]
+				}
+			],
+			"damageTagsSpell": [
+				"L",
+				"N",
+				"O",
+				"Y"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"intelligence",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Moik Possesion",
+			"source": "Myc",
+			"page": 15,
+			"summonedByClass": "Ranger|PHB",
+			"size": [
+				"L"
+			],
+			"type": "dragon",
+			"ac": [
+				{
+					"special": "16 (14+PB)"
+				}
+			],
+			"hp": {
+				"special": "20 (5*lv)"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 16,
+			"int": 8,
+			"wis": 14,
+			"cha": 8,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"poison"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 3} piercing damage."
+					]
+				},
+				{
+					"name": "Breath Weapon 2/PB",
+					"entries": [
+						"Puedes reemplazar uno de tus ataques por una exhalación de energía mágica en 15-foot Cone o 30-foot Line. Cada criatura en esa zona salvación de Dex CD 13. Si falla {@damage 1d10} fire damage.",
+						"Usos num veces = PB. Recarga LR"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"token": {
+				"name": "Drake Companion",
+				"source": "FTD"
+			},
+			"cr": "3",
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"actionTags": [
+				"Breath Weapon"
+			],
+			"bonus": [
+				{
+					"name": "Draconic Flight ( a partir de lv 5)",
+					"entries": [
+						"Puedes volar durante 10 mins (speed = monk speed)",
+						"LR"
+					]
+				}
+			],
+			"damageTags": [
+				"F",
+				"P"
+			]
+		},
+		{
+			"name": "Xica Possesion",
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"source": "Myc",
+			"alignment": null,
+			"ac": [
+				{
+					"special": "12 (10+PB)"
+				}
+			],
+			"hp": {
+				"special": "20 (5*lv)"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 14,
+			"int": 6,
+			"wis": 12,
+			"cha": 7,
+			"passive": 13,
+			"cr": "2",
+			"skill": {
+				"acrobatics": "+4",
+				"perception": "+3",
+				"survival": "+3",
+				"animal handling": "+3",
+				"athletics": "+5"
+			},
+			"languages": [
+				"Common"
+			],
+			"languageTags": [
+				"C"
+			],
+			"trait": [
+				{
+					"name": "{@class Monk} Features",
+					"entries": [
+						"Todas las características que te dan por ser monk los puedes utilizar mientras estés poseída por Xica.",
+						"Speed, CA, los dados del Martial Arts, etc."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Fist",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) bludgeoning  damage."
+					]
+				},
+				{
+					"name": "Rock",
+					"entries": [
+						"{@atk rw} {@hit 5} to hit, range 25/50 ft., one target. {@h}5 ({@damage 1d6 + 3}) bludgeoning damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"damageTags": [
+				"B"
+			]
+		},
+		{
+			"name": "Krivkrin criruun",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Dragonborn"
+				]
+			},
+			"source": "Myc",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item serpent scale armor|cm}"
+					]
+				}
+			],
+			"hp": {
+				"formula": " ( 10 +  (  ( 10 / 2 )  + 1 )  *  ( 7 - 1 )  + 2 * 7 )  + 8 / 2 + 1",
+				"average": 65
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40,
+				"swim": 40
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 12,
+			"int": 10,
+			"wis": 16,
+			"cha": 14,
+			"passive": 12,
+			"cr": "7",
+			"skill": {
+				"animal handling": "+9",
+				"deception": "+5",
+				"insight": "+6",
+				"survival": "+6",
+				"stealth": "+7"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+7 CD15 (prep 7)",
+						"{@optfeature Eldritch Mind|XPHB} Adv Constitution saving throws to maintain Concentration.",
+						"Top estrategias reflejar daño."
+					],
+					"restLong": {
+						"1": [
+							"{@spell Charm Person|XPHB}",
+							"{@spell Hellish Rebuke|XPHB}"
+						],
+						"3": [
+							"{@spell Hunter's Mark|XPHB}"
+						]
+					},
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell Elementalism|XPHB}",
+								"{@spell Minor Illusion|XPHB}",
+								"{@spell Thaumaturgy|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell Absorb Elements|XGE}",
+								"{@spell Cure Wounds|XPHB}",
+								"{@spell Ensnaring Strike|XPHB}",
+								"{@spell Spiny Shield|HumblewoodCampaignSetting}",
+								"{@spell Zephyr Strike|XGE}"
+							],
+							"slots": 4,
+							"lower": 1
+						},
+						"2": {
+							"spells": [
+								"{@spell Silence|XPHB}",
+								"{@spell Spike Growth|XPHB}"
+							],
+							"slots": 3
+						}
+					},
+					"ability": "con",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"action": [
+				{
+					"name": "{@subclassFeature Drake Companion|Ranger||Drakewarden|FTD|3} 3/3",
+					"entries": [
+						"{@creature Drake Companion|FTD}",
+						"drake's Bite attack{@dice  + 1d6}",
+						"recordar resisntencia custom del drake"
+					]
+				},
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Dragon's Terror, Cimitarra, Breath Weapon o Tail"
+					]
+				},
+				{
+					"name": "Top Attack",
+					"entries": [
+						"{@hit 8}  {@h} ({@damage 1d6 + 1d6 + 1d6 + 5}) damage.",
+						"{@hit 8}  {@h} ({@damage 1d6 + 1d6 + 5}) damage.",
+						"{@hit 8}  {@h} ({@damage 1d6 + 1d6 + 5}) damage.",
+						"Cimitarra + Drake + Hunter's Mark "
+					]
+				},
+				{
+					"name": "{@item Scimitar|XPHB} +1",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}11 ({@damage 1d6 + 5}) damage, BA plus 7 ({@damage 1d6 + 5}) damage."
+					]
+				},
+				{
+					"name": "Dragon's Terror",
+					"entries": [
+						"Wis CD 15 o {@condition Frightened|XPHB} until the end of your next turn ",
+						"Si afecta a creature + {@variantrule Heroic Inspiration|XPHB}"
+					]
+				},
+				{
+					"name": "Breath Weapon 3/3",
+					"entries": [
+						"a 15-foot Cone or a 30-foot Line Dex CD 12",
+						"{@h} ({@damage 2d10}) cold damage",
+						"On a successful save, a creature takes half as much damage"
+					]
+				}
+			],
+			"save": {
+				"dex": "+7",
+				"str": "+3"
+			},
+			"languages": [
+				"Common",
+				"Draconic",
+				"Elvish",
+				"Dwarvish",
+				"Infernal"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"E",
+				"D",
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack",
+				"Parry"
+			],
+			"trait": [
+				{
+					"name": "Weapon Mastery",
+					"entries": [
+						"2 mastery properties change LR"
+					]
+				},
+				{
+					"name": "Two-Weapon Fighting",
+					"entries": [
+						"Añade el bono a la bonus."
+					]
+				},
+				{
+					"name": "Feat: OG",
+					"entries": [
+						"{@feat Cult of the Dragon Initiate|FRHoF}"
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Idea del pj. Cuando le vayan a pegar es broma Spiny Shield (de hielo)",
+					"Feat origin: {@feat Cult of the Dragon Initiate|FRHoF}",
+					"Race: {@race Dragonborn|XPHB}"
+				]
+			},
+			"resist": [
+				"cold"
+			],
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"bonus": [
+				{
+					"name": "Draconic Flight",
+					"entries": [
+						"10 mins {@variantrule Fly Speed|XPHB} {@b 1/LR}"
+					]
+				},
+				{
+					"name": "Drake's bite attack",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h} ({@dice 1d6 + 3}) piercing damage, plus ({@dice 1d6}) drake's Draconic Essence damage."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Adds 3 to its AC against one melee attack that would hit it. To do so, it must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"damageTagsSpell": [
+				"F",
+				"O",
+				"P"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"strength",
+				"wisdom"
+			]
+		}
+	]
+}

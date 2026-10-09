@@ -179,7 +179,18 @@ export class BrewUtil2_ extends BrewUtil2Base {
 	 *   document, copy the source to the editable document instead.
 	 */
 	async pMoveOrCopyToEditableBySourceJson (sourceJson) {
-		if (await this.pIsEditableSourceJson(sourceJson)) return;
+		const brewEditable = await this.pGetEditableBrewDoc();
+		const sourceEditable = brewEditable?.body._meta?.sources?.find(src => src.json === sourceJson);
+		if (sourceEditable) {
+			// Backfill copies created before bundled-source version tracking was introduced.
+			if (!sourceEditable.baseVersion) {
+				const sourceBundled = (await this._pGetBrew_pGetLocalBrew())
+					.flatMap(brew => brew.body._meta?.sources || [])
+					.find(src => src.json === sourceJson && src.isEditable);
+				if (sourceBundled) await this.pAcknowledgeBundledSourceUpdate({sourceJson, version: sourceBundled.version || "1.0.0"});
+			}
+			return brewEditable;
+		}
 
 		// Fetch all candidate brews
 		const brews = (await this._pGetBrewRaw()).filter(brew => (brew.body._meta?.sources || []).some(src => src.json === sourceJson));
@@ -189,11 +200,87 @@ export class BrewUtil2_ extends BrewUtil2Base {
 		let brew = brews.find(brew => BrewDoc.isOperationPermitted_moveToEditable({brew}));
 		if (!brew) brew = brewsLocal.find(brew => BrewDoc.isOperationPermitted_moveToEditable({brew, isAllowLocal: true}));
 
-		if (!brew) return;
+		if (!brew) return null;
 
-		if (brew.head.isLocal) return this.pCopyToEditable({brews: [brew]});
+		if (brew.head.isLocal) return this._pCopyBundledSourceToEditable({brew, sourceJson});
 
 		return this.pMoveToEditable({brews: [brew]});
+	}
+
+	/**
+	 * Bundled homebrew is shared, read-only content. This promotion path copies only an
+	 * explicitly editable source into the user's document, which is an overlay of the bundle.
+	 */
+	async _pCopyBundledSourceToEditable ({brew, sourceJson}) {
+		const source = brew.body._meta?.sources?.find(it => it.json === sourceJson);
+		if (!source?.isEditable) return null;
+
+		const json = {
+			_meta: {
+				...MiscUtil.copyFast(brew.body._meta),
+				sources: [{
+					...MiscUtil.copyFast(source),
+					baseVersion: source.version || "1.0.0",
+				}],
+			},
+		};
+
+		Object.entries(brew.body)
+			.filter(([prop, entries]) => prop !== "_meta" && entries instanceof Array)
+			.forEach(([prop, entries]) => {
+				const sourceEntries = entries.filter(entry => (entry.source || entry.inherits?.source) === sourceJson);
+				if (sourceEntries.length) json[prop] = MiscUtil.copyFast(sourceEntries);
+			});
+
+		const brewEditable = await this.pGetOrCreateEditableBrewDoc();
+		const copyEditable = BrewDoc.fromObject(brewEditable, {isCopy: true})
+			.mutMerge({json});
+		await this.pSetEditableBrewDoc(copyEditable.toObject());
+
+		return copyEditable.toObject();
+	}
+
+	async pGetBundledSourceUpdates () {
+		const brewEditable = await this.pGetEditableBrewDoc();
+		if (!brewEditable) return [];
+
+		const bundledSources = (await this._pGetBrew_pGetLocalBrew())
+			.flatMap(brew => brew.body._meta?.sources || [])
+			.filter(source => source.isEditable)
+			.mergeMap(source => ({[source.json]: source}));
+
+		return (brewEditable.body._meta?.sources || [])
+			.filter(source => source.baseVersion && bundledSources[source.json] && bundledSources[source.json].version !== source.baseVersion)
+			.map(source => ({
+				source: MiscUtil.copyFast(source),
+				bundledSource: MiscUtil.copyFast(bundledSources[source.json]),
+			}));
+	}
+
+	async pAcknowledgeBundledSourceUpdate ({sourceJson, version}) {
+		const brewEditable = await this.pGetEditableBrewDoc();
+		const next = MiscUtil.copyFast(brewEditable);
+		const source = next.body._meta?.sources?.find(it => it.json === sourceJson);
+		if (!source) return;
+		source.baseVersion = version;
+		await this.pSetEditableBrewDoc(next);
+	}
+
+	async pRestoreBundledSource ({sourceJson}) {
+		const brewEditable = await this.pGetEditableBrewDoc();
+		if (!brewEditable) return;
+
+		const next = MiscUtil.copyFast(brewEditable);
+		next.body._meta.sources = (next.body._meta?.sources || []).filter(source => source.json !== sourceJson);
+		Object.entries(next.body)
+			.filter(([prop, entries]) => prop !== "_meta" && entries instanceof Array)
+			.forEach(([, entries]) => {
+				for (let i = entries.length - 1; i >= 0; --i) {
+					if ((entries[i].source || entries[i].inherits?.source) === sourceJson) entries.splice(i, 1);
+				}
+			});
+
+		await this.pSetEditableBrewDoc(next);
 	}
 
 	async pMoveToEditable ({brews}) {

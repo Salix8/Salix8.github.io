@@ -211,8 +211,9 @@ export class BrewUtil2Base {
 
 	_getBrewMetas () {
 		return [
-			...(this._storage.syncGet(this._STORAGE_KEY_META) || []),
 			...(this._cache_brewsLocal || []).map(brew => this._getBrewDocReduced(brew)),
+			// Editable user data comes last so it overrides bundled homebrew with the same source ID.
+			...(this._storage.syncGet(this._STORAGE_KEY_META) || []),
 		];
 	}
 
@@ -302,9 +303,15 @@ export class BrewUtil2Base {
 			lockToken = await this._LOCK.pLock({token: lockToken});
 			if (this._cache_brews) return this._cache_brews;
 
+			const brewsStored = await this._pGetBrewRaw({lockToken});
+			const brewsLocal = await this._pGetBrew_pGetLocalBrew({lockToken});
+			const editableSourceJsons = this._getEditableSourceJsons({brews: brewsStored});
+
 			const out = [
-				...(await this._pGetBrewRaw({lockToken})),
-				...(await this._pGetBrew_pGetLocalBrew({lockToken})),
+				...brewsStored,
+				...brewsLocal
+					.map(brew => this._getBrewWithoutEditableSourceOverrides({brew, editableSourceJsons}))
+					.filter(Boolean),
 			];
 
 			return this._cache_brews = out
@@ -313,6 +320,35 @@ export class BrewUtil2Base {
 		} finally {
 			this._LOCK.unlock();
 		}
+	}
+
+	_getEditableSourceJsons ({brews}) {
+		return new Set(
+			brews
+				.filter(brew => brew.head.isEditable)
+				.flatMap(brew => brew.body._meta?.sources || [])
+				.map(source => source.json?.toLowerCase())
+				.filter(Boolean),
+		);
+	}
+
+	_getBrewWithoutEditableSourceOverrides ({brew, editableSourceJsons}) {
+		const sources = brew.body._meta?.sources || [];
+		if (!sources.some(source => editableSourceJsons.has(source.json?.toLowerCase()))) return brew;
+
+		const out = MiscUtil.copyFast(brew);
+		out.body._meta.sources = sources.filter(source => !editableSourceJsons.has(source.json?.toLowerCase()));
+
+		Object.entries(out.body)
+			.filter(([prop, entries]) => prop !== "_meta" && entries instanceof Array)
+			.forEach(([, entries]) => {
+				for (let i = entries.length - 1; i >= 0; --i) {
+					const source = (entries[i].source || entries[i].inherits?.source || "").toLowerCase();
+					if (editableSourceJsons.has(source)) entries.splice(i, 1);
+				}
+			});
+
+		return out.body._meta.sources.length ? out : null;
 	}
 
 	/* -------------------------------------------- */
