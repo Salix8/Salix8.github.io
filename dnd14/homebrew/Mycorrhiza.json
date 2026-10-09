@@ -2683,6 +2683,11 @@
 						"Ataque: +7,   CD 15",
 						"{@b Genie's Wrath}: 1/turn when hit with attack roll puedes añadir +3 (PB) de trueno al daño"
 					],
+					"restLong": {
+						"1": [
+							"{@spell Detect Thoughts|XPHB} (Sin componentes)"
+						]
+					},
 					"spells": {
 						"0": {
 							"spells": [
@@ -2694,33 +2699,26 @@
 								"{@spell Prestidigitation|XPHB}"
 							]
 						},
-						"1": {
-							"spells": [
-								"{@spell Detect Magic|XPHB}",
-								"{@spell Identify|XPHB}"
-							],
-							"slots": 0
-						},
 						"4": {
 							"spells": [
 								"{@spell Banishment|XPHB}",
+								"{@spell Charm Monster|XPHB}",
 								"{@spell Darkness|XPHB}",
-								"{@spell Enemies Abound|XGE}",
-								"{@spell Hold Person|XPHB}",
+								"{@spell Dimension Door|XPHB}",
 								"{@spell Raulothim's Psychic Lance|FTD}",
+								"{@spell Spirit of Death|BMT}",
 								"{@spell Suggestion|XPHB}",
-								"{@spell Tongues|XPHB}",
-								"{@spell Witch Bolt|XPHB}"
+								"{@spell Tongues|XPHB}"
 							],
 							"slots": 2,
 							"lower": 1
 						}
 					},
-					"restLong": {
-						"1": [
-							"{@spell Detect Thoughts|XPHB} (Sin componentes)"
-						]
-					},
+					"ritual": [
+						"{@spell Detect Magic|XPHB}",
+						"{@spell Identify|XPHB}",
+						"{@spell Magic Mouth|XPHB}"
+					],
 					"type": "spellcasting"
 				}
 			],
@@ -2751,7 +2749,7 @@
 				{
 					"name": "FB {@feat Actor|XPHB}",
 					"entries": [
-						"Ability Score Increase: +1 Wis",
+						"Ability Score Increase: +1 Cha",
 						"Impersonation: Adv to Deception or Performance checks to convince others that you are that person.",
 						"Mimicry: Insight CD 15 (Cha+PB)"
 					]
@@ -2759,7 +2757,7 @@
 				{
 					"name": "FLv4 {@feat Telepathic|XPHB}",
 					"entries": [
-						"Ability Score Increase: +1 Wis",
+						"Ability Score Increase: +1 Cha",
 						"Telepathic Utterance: yo pudeo hablarles telepaticamente 60ft, no me pueden responder.",
 						"Detect Thoughts: Siempre tengo preparado {@spell Detect Thoughts|XPHB}. Puedo castearlo sin componentes 1/LR."
 					]
@@ -2819,10 +2817,10 @@
 			"fluff": {
 				"entries": [
 					"Stats: https://chicken-dinner.com/5e/5e-point-buy.html#customrace&NA&8&13&14&10&12&15&0&0&27&15&8&19&15&12&9&7&5&4&3&2&1&0&1&2&4&6&9&4&5&4&4&4&6",
-					"+1 Wis por la dote de Actor",
-					"+1 Wis por la dote de Telepathic",
+					"+1 Cha por la dote de Actor",
+					"+1 Cha por la dote de Telepathic",
 					"Background custom",
-					"Ability Scores: +2 Cha, +1Con",
+					"Ability Scores: +2 Cha, +1Dex",
 					"Feat: Actor",
 					"Skills: Stealth, Performance ",
 					"Tool Proficiency: Smith's Tools (vender armas rodamientos etc)",
@@ -2858,6 +2856,15 @@
 					"CHA: Clay > Kaeru / / / Banishment ",
 					"INT: Kaeru = Drogun / / / Raulothim's, Enemies, ",
 					"WIS: Kaeru > Clay > Drogun > Pitagoras / / / Fear, Hypnotic, Suggestion"
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.pinimg.com/1200x/09/f6/42/09f6427c53d2c119d995bbb2d3247475.jpg"
+						}
+					}
 				]
 			},
 			"isNpc": true,
@@ -2877,7 +2884,6 @@
 				}
 			],
 			"damageTagsSpell": [
-				"L",
 				"N",
 				"O",
 				"Y"
