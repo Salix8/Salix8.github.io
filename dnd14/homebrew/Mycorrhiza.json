@@ -3300,6 +3300,192 @@
 				"strength",
 				"wisdom"
 			]
+		},
+		{
+			"name": "Rakra",
+			"source": "CdU",
+			"referenceSources": [
+				"BGDIA",
+				"BMT",
+				"CM",
+				"CoA",
+				"CoS",
+				"CRCotN",
+				"DC",
+				"DIP",
+				"DSotDQ",
+				"EGW",
+				"GoS",
+				"GotSF",
+				"HotDQ",
+				"JttRC",
+				"KftGV",
+				"MOT",
+				"OotA",
+				"OoW",
+				"PotA",
+				"QftIS",
+				"RoT",
+				"SatO",
+				"SKT",
+				"TftYP",
+				"TftYP-AtG",
+				"TftYP-DiT",
+				"TftYP-WPM",
+				"ToA",
+				"ToFW",
+				"WBtW",
+				"WDH"
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "elemental",
+				"tags": [
+					"genasi"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"formula": "8d10 + 24",
+				"average": 76
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 11,
+			"con": 16,
+			"int": 11,
+			"wis": 11,
+			"cha": 15,
+			"save": {
+				"con": "+6",
+				"wis": "+3"
+			},
+			"passive": 10,
+			"languages": [
+				"Común y Terran"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Brave",
+					"entries": [
+						"Rakra has advantage on saving throws against being {@condition frightened}."
+					]
+				},
+				{
+					"name": "Paso Pesado",
+					"entries": [
+						"El terreno difícil no puede afectarle mientras sea se origine desde el suelo y esté caminando."
+					]
+				},
+				{
+					"name": "Action Surge",
+					"entries": [
+						"Gana una acción extra."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"The knight adds 2 to its AC against one melee attack that would hit it. To do so, the knight must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://2014.5e.tools/audio/bestiary/knight.opus"
+			},
+			"attachedItems": [
+				"greatsword|phb",
+				"heavy crossbow|phb"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"T"
+			],
+			"hasFluff": true,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell blade ward}"
+							]
+						}
+					},
+					"daily": {
+						"1": [
+							"{@spell pass without trace}"
+						],
+						"2": [
+							"{@spell blade ward} (bonus)"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"pbNote": "+3",
+			"skill": {
+				"stealth": "+3",
+				"athletics": "+6"
+			},
+			"actionHeader": [
+				"Ejerce la violencia 2 veces con el arma que le den o a puñetazos. Tiene un +6 to hit, +3 si es un arma a distancia. Si graplea hace 1d4 al inicio del turno."
+			],
+			"bonus": [
+				{
+					"name": "Second Wind (1 /rest)",
+					"entries": [
+						"Se cura {@dice 1d10 + 8}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Puñetazo",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) bludgeoning damage, or 7 ({@damage 1d8 + 3}) bludgeoning damage si no tenía nada en las manos."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"environment": [
+				"mountain"
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": "https://i.ibb.co/LD3KpCMG/Rakra.png"
+			},
+			"isNpc": true,
+			"damageTags": [
+				"B"
+			]
 		}
 	]
 }
