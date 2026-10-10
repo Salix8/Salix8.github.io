@@ -2,6 +2,11 @@ import {BrewUtil2Base} from "./utils-brew-base.js";
 import {BrewDoc} from "./utils-brew-models.js";
 
 export class BrewUtil2_ extends BrewUtil2Base {
+	// Promotion is a read-modify-write operation on the editable document. This
+	// dedicated lock prevents concurrent source selection, save, and edit actions
+	// from creating competing local copies.
+	_LOCK_EDITABLE_PROMOTION = new VeLock({name: "editable homebrew promotion"});
+
 	_STORAGE_KEY_LEGACY = "HOMEBREW_STORAGE";
 	_STORAGE_KEY_LEGACY_META = "HOMEBREW_META_STORAGE";
 
@@ -178,6 +183,15 @@ export class BrewUtil2_ extends BrewUtil2Base {
 	 *   document, copy the source to the editable document instead.
 	 */
 	async pMoveOrCopyToEditableBySourceJson (sourceJson) {
+		try {
+			await this._LOCK_EDITABLE_PROMOTION.pLock();
+			return await this._pMoveOrCopyToEditableBySourceJson({sourceJson});
+		} finally {
+			this._LOCK_EDITABLE_PROMOTION.unlock();
+		}
+	}
+
+	async _pMoveOrCopyToEditableBySourceJson ({sourceJson}) {
 		const brewEditable = await this.pGetEditableBrewDoc();
 		const sourceEditable = brewEditable?.body._meta?.sources?.find(src => src.json === sourceJson);
 		if (sourceEditable) {

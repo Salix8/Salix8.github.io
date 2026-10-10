@@ -13,6 +13,7 @@ class PageUi extends ProxyBase {
 
 	constructor () {
 		super();
+		this._pActiveSourceUpdate = null;
 
 		this._builders = {};
 
@@ -101,6 +102,9 @@ class PageUi extends ProxyBase {
 			this._doRebuildStageSource({mode: "add", isRequired: true});
 			this.__setStageSource();
 		}
+
+		// Stored source selections do not fire a state-change hook during page initialization.
+		if (this._state.activeSource) await this._pHandleActiveSourceUpdate();
 
 		this._isInitialLoad = false;
 	}
@@ -203,7 +207,7 @@ class PageUi extends ProxyBase {
 		})();
 		// Deferred; only required on later change
 		this._addHook("state", "activeSource", () => {
-			this._getActiveBuilderInstance().pDoHandleSourceUpdate().then(null);
+			this._pHandleActiveSourceUpdate();
 		});
 
 		const btnSourceEdit = veT`<button class="ve-btn ve-btn-default ve-btn-xs" title="Edit Selected Source"><span class="glyphicon glyphicon-pencil"></span></button>`
@@ -251,6 +255,42 @@ class PageUi extends ProxyBase {
 			</div>
 		</div>`
 			.vee.appendTo(wrpSettingsTop);
+	}
+
+	async _pHandleActiveSourceUpdate () {
+		// State hooks can fire again while local storage is being updated. A single worker
+		// coalesces those notifications, so promotion and builder rendering never race.
+		if (this._pActiveSourceUpdate) return this._pActiveSourceUpdate;
+
+		this._pActiveSourceUpdate = this._pHandleActiveSourceUpdate_()
+			.catch(e => {
+				console.error(e);
+				JqueryUtil.doToast({type: "danger", content: "Unable to prepare the selected source for editing. Reload the page and try again."});
+			})
+			.finally(() => this._pActiveSourceUpdate = null);
+
+		return this._pActiveSourceUpdate;
+	}
+
+	async _pHandleActiveSourceUpdate_ () {
+		while (true) {
+			const sourceJson = this._state.activeSource;
+			const source = BrewUtil2.sourceJsonToSource(sourceJson);
+
+			// Selecting a bundled source which explicitly opts in to editing should be enough
+			// to make every Builder action operate on the user's local overlay.
+			if (source?.isEditable && !await BrewUtil2.pIsEditableSourceJson(sourceJson)) {
+				const editableBrew = await BrewUtil2.pMoveOrCopyToEditableBySourceJson(sourceJson);
+				if (!editableBrew) JqueryUtil.doToast({type: "warning", content: `The source "${source.full}" cannot be made editable.`});
+				else await Makebrew.pPrepareExistingEditableBrew();
+			}
+
+			// Do not render a source that was changed while its local copy was being prepared.
+			if (sourceJson !== this._state.activeSource) continue;
+
+			await this._getActiveBuilderInstance().pDoHandleSourceUpdate();
+			if (sourceJson === this._state.activeSource) return;
+		}
 	}
 
 	_initHeader_new ({wrpSettingsBtm}) {
