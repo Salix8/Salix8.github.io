@@ -26,7 +26,6 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 	static _getClassKey (name, source) { return `${name}\u0000${source || "PHB"}`; }
 
 	static _CLASS_FILTER_MODES = {
-		[PageFilterOptionalFeatures._getClassKey("Alquimista", "Himo")]: "omit",
 		[PageFilterOptionalFeatures._getClassKey("Artificer", "PHB")]: "omit",
 		[PageFilterOptionalFeatures._getClassKey("Artificer", "TCE")]: "omit",
 		[PageFilterOptionalFeatures._getClassKey("Artificer (Revisited)", "PHB")]: "omit",
@@ -35,6 +34,9 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 	};
 
 	static _HIDDEN_FEATURE_TYPES = new Set(["AS", "AS:V1-UA", "AS:V2-UA"]);
+	static _POTION_LEVELS = [1, 5, 10, 15];
+	static _POTION_INGREDIENTS = ["Animal", "Vegetal", "Mineral", "Otros", "Especial"];
+	static _GENERAL_LEVELS = Array.from({length: 20}, (_, i) => i + 1);
 
 	static _FEATURE_TYPE_NESTS = {
 		"FS:B": {nest: "fighting-styles", displayName: "Fighting Styles"},
@@ -56,6 +58,7 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 
 	static _getClassFilterDisplay (item) {
 		const [className, , subclassName] = item.split("\u0000");
+		if (subclassName === "potion") return "Pociones";
 		return subclassName === "base" ? `${className} base` : subclassName;
 	}
 
@@ -70,6 +73,12 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		const subclassKey = subclassName ? `${classKey}\u0000${subclassName}\u0000${subclassSource}` : `${classKey}\u0000base`;
 
 		return {classKey, subclassKey, className, level: Number(levelMeta.level)};
+	}
+
+	static _getPotionClassFilterMeta () {
+		const className = "Alquimista";
+		const classKey = this._getClassKey(className, "Himo");
+		return {classKey, subclassKey: `${classKey}\u0000potion`, className};
 	}
 	// endregion
 
@@ -105,7 +114,13 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		});
 		this._ingredientFilter = new Filter({
 			header: "Ingredients",
-			items: ["Animal", "Vegetal", "Mineral", "Otros", "Especial"],
+			items: PageFilterOptionalFeatures._POTION_INGREDIENTS,
+		});
+		this._potionLevelFilter = new Filter({
+			header: "Potion Level",
+			items: PageFilterOptionalFeatures._POTION_LEVELS,
+			displayFn: level => `${level}`,
+			itemSortFn: SortUtil.ascSort,
 		});
 		this._classFilter = new Filter({
 			header: "Class / Subclass",
@@ -122,7 +137,7 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		});
 		this._classAndLevelFilter = new MultiFilter({
 			header: "Class and Level",
-			filters: [this._levelFilter, this._classFilter],
+			filters: [this._classFilter, this._levelFilter, this._potionLevelFilter, this._ingredientFilter],
 			mode: "and",
 			isModeLocked: true,
 			isHeaderHidden: true,
@@ -134,9 +149,9 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 				this._pactFilter,
 				this._patronFilter,
 				this._spellFilter,
-				this._ingredientFilter,
 				this._featureFilter,
 			],
+			mode: "or",
 			isHeaderHidden: true,
 		});
 		this._miscFilter = new Filter({
@@ -147,7 +162,7 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		});
 
 		this._bindWarlockPrerequisiteVisibility();
-		this._bindFeatureTypePrerequisiteVisibility({featureType: "POT", filters: [this._ingredientFilter]});
+		this._bindAlchemistPotionVisibility();
 	}
 
 	_bindWarlockPrerequisiteVisibility () {
@@ -165,10 +180,35 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		filters.forEach(filter => filter.setIsExternallyHidden(true));
 	}
 
-	_bindFeatureTypePrerequisiteVisibility ({featureType, filters}) {
-		const hk = () => filters.forEach(filter => filter.setIsExternallyHidden(this._typeFilter._state[featureType] !== 1));
-		this._typeFilter._addHook("state", featureType, hk);
-		hk();
+	_bindAlchemistPotionVisibility () {
+		const {classKey, subclassKey} = PageFilterOptionalFeatures._getPotionClassFilterMeta();
+		const filters = [this._ingredientFilter, this._potionLevelFilter];
+		let wasOpen = null;
+		const hk = () => {
+			const isOpen = this._classFilter._nestsHidden[classKey] === false;
+			filters.forEach(filter => filter.setIsExternallyHidden(!isOpen));
+
+			// Nest state is first populated while the filter modal is building. The
+			// controls already have their default state then, so do not mutate them
+			// until the user actually opens or closes the Alquimista section.
+			if (wasOpen === null) {
+				wasOpen = isOpen;
+				if (isOpen) this._classFilter.setValue(subclassKey, 1);
+				return;
+			}
+			wasOpen = isOpen;
+
+			if (isOpen) {
+				this._classFilter.setValue(subclassKey, 1);
+				return;
+			}
+
+			this._classFilter.setValue(subclassKey, 0);
+			filters.forEach(filter => filter.reset());
+		};
+
+		this._classFilter._addHook("nestsHidden", classKey, hk);
+		filters.forEach(filter => filter.setIsExternallyHidden(true));
 	}
 
 	static _RE_OPTIONALFEATURE_PACT = /^pact of (?:the )?(?<pactName>[^|]+)(?:\|[^|]+)?$/;
@@ -205,6 +245,8 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		ent.featureType = ent.featureType && ent.featureType instanceof Array ? ent.featureType : ent.featureType ? [ent.featureType] : ["OTH"];
 		ent._fPrereqClass = [];
 		ent._fPrereqLevel = [];
+		ent._fPotionClass = [];
+		ent._fPotionLevel = [];
 		ent._fPotionIngredients = [];
 		if (ent.prerequisite) {
 			ent._sPrereq = true;
@@ -214,7 +256,7 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 			ent._fPrereqPatron = ent.prerequisite.filter(it => it.patron).map(it => it.patron);
 			ent._fPrereqSpell = ent.prerequisite
 				.filter(it => it.spell)
-				.map(prereq => {
+				.flatMap(prereq => {
 					return (prereq.spell || [])
 						.map(strOrObj => {
 							if (typeof strOrObj === "string") return strOrObj.split("#")[0].split("|")[0];
@@ -241,11 +283,14 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		}
 		if (ent.potion) {
 			ent._fPotionIngredients = ent.potion.ingredientTypes || [];
-			const meta = PageFilterOptionalFeatures._getClassLevelFilterMeta({level: ent.potion.level, class: {name: "Alquimista", source: "Himo"}});
-			if (meta) {
-				ent._fPrereqClass.push(meta.subclassKey);
-				ent._fPrereqLevel.push(meta.level);
-			}
+			ent._fPotionClass.push(PageFilterOptionalFeatures._getPotionClassFilterMeta().subclassKey);
+			ent._fPotionLevel.push(Number(ent.potion.level));
+			ent._fPrereqLevel.push(...PageFilterOptionalFeatures._GENERAL_LEVELS);
+		} else {
+			// Potion-only filters should not remove regular class features when both
+			// kinds are selected together.
+			ent._fPotionIngredients = [...PageFilterOptionalFeatures._POTION_INGREDIENTS];
+			ent._fPotionLevel = [...PageFilterOptionalFeatures._POTION_LEVELS];
 		}
 
 		ent._dFeatureType = ent.featureType.map(ft => Parser.optFeatureTypeToFull(ft));
@@ -270,7 +315,8 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		this._miscFilter.addItem(it._fMisc);
 
 		(it.prerequisite || []).map(it => PageFilterOptionalFeatures._getClassLevelFilterMeta(it.level)).filter(Boolean).forEach(meta => this._addClassLevelFilterItem(meta));
-		if (it.potion) this._addClassLevelFilterItem(PageFilterOptionalFeatures._getClassLevelFilterMeta({level: it.potion.level, class: {name: "Alquimista", source: "Himo"}}));
+		if (it.potion) this._addPotionClassFilterItem();
+		this._potionLevelFilter.addItem(it._fPotionLevel);
 		this._ingredientFilter.addItem(it._fPotionIngredients);
 	}
 
@@ -283,6 +329,12 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		const isNewClass = !this._classFilter._nests[meta.classKey];
 		this._classFilter.addNest(meta.classKey, {isHidden: true, displayName: meta.className});
 		if (isNewClass) this._bindClassBaseSelection(meta);
+		this._classFilter.addItem(new FilterItem({item: meta.subclassKey, nest: meta.classKey}));
+	}
+
+	_addPotionClassFilterItem () {
+		const meta = PageFilterOptionalFeatures._getPotionClassFilterMeta();
+		this._classFilter.addNest(meta.classKey, {isHidden: true, displayName: meta.className});
 		this._classFilter.addItem(new FilterItem({item: meta.subclassKey, nest: meta.classKey}));
 	}
 
@@ -315,11 +367,10 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 			it._fSources,
 			it.featureType,
 			[
-				[it._fPrereqClass, it._fPrereqLevel],
+				[it._fPrereqClass.concat(it._fPotionClass), it._fPrereqLevel.length ? it._fPrereqLevel : null, it._fPotionLevel, it._fPotionIngredients],
 				it._fPrereqPact,
 				it._fPrereqPatron,
 				it._fPrereqSpell,
-				it._fPotionIngredients,
 				it._fPrereqFeature,
 			],
 			it._fMisc,
@@ -371,8 +422,8 @@ class ModalFilterOptionalFeatures extends ModalFilterBase {
 
 		const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_OPT_FEATURES](optfeat);
 		const source = Parser.sourceJsonToAbv(optfeat.source);
-		const prerequisite = Renderer.utils.prerequisite.getHtml(optfeat.prerequisite, {isListMode: true, keyOptions: {level: {isNameOnly: true}}});
-		const level = Renderer.optionalfeature.getListPrerequisiteLevelText(optfeat.prerequisite);
+		const prerequisite = Renderer.optionalfeature.getListPrerequisiteHtml(optfeat);
+		const level = Renderer.optionalfeature.getListPrerequisiteLevelText(optfeat);
 
 		eleRow.innerHTML = `<div class="ve-w-100 ve-flex-vh-center ve-lst__row-border veapp__list-row ve-no-select ve-lst__wrp-cells">
 			<div class="ve-col-0-5 ve-pl-0 ve-flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="ve-no-events">` : `<input type="checkbox" class="ve-no-events">`}</div>

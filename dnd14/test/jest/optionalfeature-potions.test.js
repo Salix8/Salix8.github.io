@@ -1,0 +1,200 @@
+import fs from "node:fs";
+
+import "../../js/parser.js";
+globalThis.FilterItem = class {};
+globalThis.PrereleaseUtil = {hasSourceJson: () => false, getBrewProcessedFromCache: () => []};
+globalThis.BrewUtil2 = {hasSourceJson: () => false, getBrewProcessedFromCache: () => []};
+globalThis.VetoolsConfig = {get: () => "classic"};
+import "../../js/utils.js";
+import "../../js/render.js";
+globalThis.veT = (strings, ...values) => strings.reduce((out, part, i) => `${out}${part}${values[i] ?? ""}`, "");
+const {RenderOptionalFeatures} = await import("../../js/render-optionalfeatures.js");
+await import("../../js/utils-ui.js");
+await import("../../js/filter.js");
+await import("../../js/filter-optionalfeatures.js");
+
+const DATA = JSON.parse(fs.readFileSync(new URL("../../data/optionalfeatures.json", import.meta.url), "utf8"));
+const getPotion = (name) => DATA.optionalfeature.find(it => it.name === name && it.featureType.includes("POT"));
+const POTIONS = DATA.optionalfeature.filter(it => it.featureType.includes("POT"));
+
+function getPotionFilterPage ({additionalPotions = []} = {}) {
+	const pageFilter = new PageFilterOptionalFeatures();
+	[...POTIONS, ...additionalPotions].forEach(it => pageFilter.mutateAndAddToFilters(it, false));
+	return pageFilter;
+}
+
+function getOptionalFeatureFilterPage (entities = DATA.optionalfeature) {
+	const pageFilter = new PageFilterOptionalFeatures();
+	entities.forEach(it => pageFilter.mutateAndAddToFilters(it, false));
+	return pageFilter;
+}
+
+function getPotionFilterMatches (pageFilter, entities = POTIONS) {
+	const values = pageFilter._classAndLevelFilter.getValues();
+	return entities.filter(it => pageFilter._classAndLevelFilter.toDisplay(
+		values,
+		[it._fPrereqClass.concat(it._fPotionClass), it._fPrereqLevel.length ? it._fPrereqLevel : null, it._fPotionLevel, it._fPotionIngredients],
+	));
+}
+
+function getPrerequisiteFilterMatches (pageFilter, entities) {
+	const values = pageFilter._prerequisiteFilter.getValues();
+	return entities.filter(it => pageFilter._prerequisiteFilter.toDisplay(
+		values,
+		[
+			[it._fPrereqClass.concat(it._fPotionClass), it._fPrereqLevel.length ? it._fPrereqLevel : null, it._fPotionLevel, it._fPotionIngredients],
+			it._fPrereqPact,
+			it._fPrereqPatron,
+			it._fPrereqSpell,
+			it._fPrereqFeature,
+		],
+	));
+}
+
+describe("Pociones del Alquimista", () => {
+	it("shows ingredients in list requirements and five ordered detail lines", () => {
+		const explosivePotion = getPotion("Poción Explosiva");
+		const meta = Renderer.optionalfeature.getPotionMeta(explosivePotion);
+
+		expect(meta).toEqual(expect.objectContaining({level: 1, ingredients: "Mineral y Animal", range: "4 casillas", use: "Acción", duration: "Instantáneo"}));
+		expect(Renderer.optionalfeature.getListPrerequisiteHtml(explosivePotion)).toBe("<b>Ingredientes:</b> Mineral y Animal");
+		expect(Renderer.optionalfeature.getPotionDetailEntries(explosivePotion)).toEqual([
+			["Nivel", 1],
+			["Casting Time", "Acción"],
+			["Range", "4 casillas"],
+			["Ingredientes", "Mineral y Animal"],
+			["Duration", "Instantáneo"],
+		]);
+		expect(Renderer.optionalfeature.getListPrerequisiteLevelText(explosivePotion)).toBe(1);
+
+		const rendered = RenderOptionalFeatures.getRenderedOptionalFeature(explosivePotion);
+		expect(rendered).toContain("<b>Ingredientes:</b> Mineral y Animal");
+		expect(rendered).toContain("<b>Nivel:</b> 1");
+		expect(rendered).toContain("<b>Casting Time:</b> Acción");
+		expect(rendered).toContain("<b>Range:</b> 4 casillas");
+		expect(rendered).toContain("<b>Duration:</b> Instantáneo");
+	});
+
+	it("keeps higher-level potion metadata available", () => {
+		const alchemicalOil = getPotion("Aceite Alquímico");
+
+		expect(Renderer.optionalfeature.getListPrerequisiteLevelText(alchemicalOil)).toBe(5);
+		expect(Renderer.optionalfeature.getPotionDetailsHtml(alchemicalOil)).toContain("Duration:</b> Instantáneo");
+	});
+
+	it("renders the same metadata for a homebrew potion", () => {
+		const homebrewPotion = {
+			name: "Poción de prueba",
+			potion: {
+				level: 20,
+				ingredients: "Ingrediente de prueba",
+				range: "Personal",
+				use: "Acción",
+				duration: "1 minuto",
+			},
+		};
+
+		expect(Renderer.optionalfeature.getListPrerequisiteHtml(homebrewPotion)).toContain("Ingredientes:</b> Ingrediente de prueba");
+		expect(Renderer.optionalfeature.getPotionDetailsHtml(homebrewPotion)).toContain("Range:</b> Personal");
+		expect(Renderer.optionalfeature.getListPrerequisiteLevelText(homebrewPotion)).toBe(20);
+	});
+
+	it("adds Alquimista > Pociones and exposes its filters only while open", () => {
+		const pageFilter = getPotionFilterPage();
+		const {classKey, subclassKey} = PageFilterOptionalFeatures._getPotionClassFilterMeta();
+
+		expect(pageFilter._classFilter._items.map(it => it.item)).toContain(subclassKey);
+		expect(PageFilterOptionalFeatures._getClassFilterDisplay(subclassKey)).toBe("Pociones");
+		expect(pageFilter._ingredientFilter._isExternallyHidden).toBe(true);
+		expect(pageFilter._potionLevelFilter._isExternallyHidden).toBe(true);
+
+		pageFilter._classFilter._nestsHidden[classKey] = false;
+		expect(pageFilter._classFilter._state[subclassKey]).toBe(1);
+		expect(pageFilter._ingredientFilter._isExternallyHidden).toBe(false);
+		expect(pageFilter._potionLevelFilter._isExternallyHidden).toBe(false);
+		expect(pageFilter._potionLevelFilter._items.map(it => it.item)).toEqual([1, 5, 10, 15]);
+		expect(pageFilter._potionLevelFilter._items.map(it => pageFilter._potionLevelFilter._getDisplayText(it))).toEqual(["1", "5", "10", "15"]);
+		expect(pageFilter._potionLevelFilter._items.map(it => pageFilter._potionLevelFilter._getDisplayText(it).toLowerCase())).toEqual(["1", "5", "10", "15"]);
+
+		pageFilter._ingredientFilter.setValue("Mineral", 1);
+		pageFilter._potionLevelFilter.setValue(1, 1);
+		pageFilter._classFilter._nestsHidden[classKey] = true;
+
+		expect(pageFilter._classFilter._state[subclassKey]).toBe(0);
+		expect(pageFilter._ingredientFilter._state.Mineral).toBe(0);
+		expect(pageFilter._potionLevelFilter._state[1]).toBe(0);
+		expect(pageFilter._levelFilter._isExternallyHidden).toBe(false);
+	});
+
+	it("intersects potion class, ingredients, and potion level", () => {
+		const pageFilter = getPotionFilterPage();
+		const {classKey} = PageFilterOptionalFeatures._getPotionClassFilterMeta();
+		pageFilter._classFilter._nestsHidden[classKey] = false;
+
+		pageFilter._ingredientFilter.setValue("Mineral", 1);
+		pageFilter._potionLevelFilter.setValue(1, 1);
+		expect(getPotionFilterMatches(pageFilter)).toHaveLength(8);
+		expect(getPotionFilterMatches(pageFilter).map(it => it.name)).toContain("Poción Explosiva");
+
+		pageFilter._ingredientFilter.setValue("Mineral", 0);
+		pageFilter._ingredientFilter.setValue("Vegetal", 1);
+		pageFilter._potionLevelFilter.setValue(1, 0);
+		pageFilter._potionLevelFilter.setValue(5, 1);
+		expect(getPotionFilterMatches(pageFilter)).toHaveLength(11);
+
+		pageFilter._ingredientFilter.setValue("Vegetal", 0);
+		pageFilter._ingredientFilter.setValue("Otros", 1);
+		pageFilter._potionLevelFilter.setValue(5, 0);
+		pageFilter._potionLevelFilter.setValue(15, 1);
+		expect(getPotionFilterMatches(pageFilter)).toHaveLength(8);
+	});
+
+	it("filters potions and Warlock prerequisites through the full prerequisite group", () => {
+		const pageFilter = getOptionalFeatureFilterPage();
+		const {classKey} = PageFilterOptionalFeatures._getPotionClassFilterMeta();
+
+		expect(getPrerequisiteFilterMatches(pageFilter, DATA.optionalfeature)).toHaveLength(DATA.optionalfeature.length);
+
+		pageFilter._classFilter._nestsHidden[classKey] = false;
+		expect(getPrerequisiteFilterMatches(pageFilter, DATA.optionalfeature)).toHaveLength(POTIONS.length);
+		pageFilter._ingredientFilter.setValue("Mineral", 1);
+		pageFilter._potionLevelFilter.setValue(1, 1);
+
+		const mineralLevelOne = getPrerequisiteFilterMatches(pageFilter, DATA.optionalfeature);
+		expect(mineralLevelOne).toHaveLength(8);
+		expect(mineralLevelOne.map(it => it.name)).toContain("Poción Explosiva");
+		expect(mineralLevelOne.every(it => it.potion?.level === 1 && it.potion.ingredientTypes.includes("Mineral"))).toBe(true);
+
+		pageFilter._ingredientFilter.setValue("Mineral", 0);
+		pageFilter._ingredientFilter.setValue("Vegetal", 1);
+		pageFilter._potionLevelFilter.setValue(1, 0);
+		pageFilter._potionLevelFilter.setValue(5, 1);
+		const vegetalLevelFive = getPrerequisiteFilterMatches(pageFilter, DATA.optionalfeature);
+		expect(vegetalLevelFive).toHaveLength(11);
+		expect(vegetalLevelFive.every(it => it.potion?.level === 5 && it.potion.ingredientTypes.includes("Vegetal"))).toBe(true);
+
+		pageFilter._ingredientFilter.setValue("Vegetal", 0);
+		pageFilter._ingredientFilter.setValue("Mineral", 1);
+		pageFilter._potionLevelFilter.setValue(5, 0);
+		pageFilter._potionLevelFilter.setValue(1, 1);
+		pageFilter._spellFilter.setValue("eldritch blast", 1);
+		const potionOrWarlock = getPrerequisiteFilterMatches(pageFilter, DATA.optionalfeature);
+		expect(potionOrWarlock.map(it => it.name)).toEqual(expect.arrayContaining(["Poción Explosiva", "Agonizing Blast"]));
+	});
+
+	it("keeps potion controls independent from the general class level", () => {
+		const pageFilter = getOptionalFeatureFilterPage();
+		const {classKey} = PageFilterOptionalFeatures._getPotionClassFilterMeta();
+		const clownBaseKey = `${PageFilterOptionalFeatures._getClassKey("Payaso", "Himo")}\u0000base`;
+
+		pageFilter._classFilter._nestsHidden[classKey] = false;
+		pageFilter._classFilter.setValue(clownBaseKey, 1);
+		pageFilter._levelFilter._state.curMin = 2;
+		pageFilter._levelFilter._state.curMax = 2;
+		pageFilter._ingredientFilter.setValue("Mineral", 1);
+		pageFilter._potionLevelFilter.setValue(1, 1);
+
+		expect(pageFilter._levelFilter._isExternallyHidden).toBe(false);
+		expect(getPrerequisiteFilterMatches(pageFilter, DATA.optionalfeature).map(it => it.name)).toEqual(expect.arrayContaining(["Poción Explosiva", "Chorro de Agua"]));
+	});
+});

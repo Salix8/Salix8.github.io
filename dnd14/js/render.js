@@ -8427,6 +8427,7 @@ class _RenderCompactOptionalfeaturesImplBase extends _RenderCompactImplBase {
 	) {
 		return {
 			...super._getCommonHtmlParts({ent, renderer, opts}),
+			htmlPtPotionDetails: this._getCommonHtmlParts_potionDetails({ent}),
 
 			htmlPtCost: this._getCommonHtmlParts_cost({ent}),
 
@@ -8436,6 +8437,18 @@ class _RenderCompactOptionalfeaturesImplBase extends _RenderCompactImplBase {
 
 			htmlPtFeatureType: this._getCommonHtmlParts_featureType({ent, renderer}),
 		};
+	}
+
+	/* ----- */
+
+	_getCommonHtmlParts_prerequisites ({ent}) {
+		const pt = Renderer.optionalfeature.getPrerequisiteHtml(ent, {styleHint: this._style});
+		return pt ? `<div><i>${pt}</i></div>` : "";
+	}
+
+	_getCommonHtmlParts_potionDetails ({ent}) {
+		const pt = Renderer.optionalfeature.getPotionDetailsHtml(ent);
+		return pt;
 	}
 
 	/* ----- */
@@ -8471,6 +8484,7 @@ class _RenderCompactOptionalfeaturesImplBase extends _RenderCompactImplBase {
 			htmlPtName,
 
 			htmlPtPrerequisites,
+			htmlPtPotionDetails,
 
 			htmlPtCost,
 
@@ -8485,8 +8499,9 @@ class _RenderCompactOptionalfeaturesImplBase extends _RenderCompactImplBase {
 			opts,
 		});
 
-		const ptHeader = htmlPtPrerequisites || htmlPtCost ? `<tr><td colspan="6" class="ve-pb-2 ve-pt-0">
+		const ptHeader = htmlPtPrerequisites || htmlPtPotionDetails || htmlPtCost ? `<tr><td colspan="6" class="ve-pb-2 ve-pt-0">
 			${htmlPtPrerequisites}
+			${htmlPtPotionDetails}
 			${htmlPtCost}
 		</td></tr>` : "";
 
@@ -8508,7 +8523,54 @@ class _RenderCompactOptionalfeaturesImplClassic extends _RenderCompactOptionalfe
 }
 
 Renderer.optionalfeature = class {
-	static getListPrerequisiteLevelText (prerequisites) {
+	static getPotionMeta (ent) {
+		if (!ent?.potion) return null;
+
+		return {
+			level: ent.potion.level,
+			ingredients: ent.potion.ingredients,
+			range: ent.potion.range,
+			use: ent.potion.use,
+			duration: ent.potion.duration,
+		};
+	}
+
+	static getPrerequisiteHtml (ent, {isListMode = false, styleHint} = {}) {
+		return Renderer.utils.prerequisite.getHtml(ent.prerequisite, {isListMode, styleHint, keyOptions: {level: {isNameOnly: true}}});
+	}
+
+	static getListPrerequisiteHtml (ent) {
+		const ptPrerequisites = Renderer.optionalfeature.getPrerequisiteHtml(ent, {isListMode: true});
+		const potionMeta = Renderer.optionalfeature.getPotionMeta(ent);
+		if (!potionMeta) return ptPrerequisites;
+
+		return [ptPrerequisites === "\u2014" ? null : ptPrerequisites, `<b>Ingredientes:</b> ${potionMeta.ingredients}`].filter(Boolean).join("; ");
+	}
+
+	static getPotionDetailEntries (ent) {
+		const potionMeta = Renderer.optionalfeature.getPotionMeta(ent);
+		if (!potionMeta) return [];
+
+		return [
+			["Nivel", potionMeta.level],
+			["Casting Time", potionMeta.use],
+			["Range", potionMeta.range],
+			["Ingredientes", potionMeta.ingredients],
+			["Duration", potionMeta.duration],
+		];
+	}
+
+	static getPotionDetailsHtml (ent) {
+		return Renderer.optionalfeature.getPotionDetailEntries(ent)
+			.map(([label, value]) => `<div><b>${label}:</b> ${value}</div>`)
+			.join("");
+	}
+
+	static getListPrerequisiteLevelText (entOrPrerequisites) {
+		const potionMeta = Array.isArray(entOrPrerequisites) ? null : Renderer.optionalfeature.getPotionMeta(entOrPrerequisites);
+		if (potionMeta) return potionMeta.level;
+
+		const prerequisites = Array.isArray(entOrPrerequisites) ? entOrPrerequisites : entOrPrerequisites?.prerequisite;
 		if (!prerequisites || !prerequisites.some(it => it.level)) return "\u2014";
 		const levelPart = prerequisites.find(it => it.level).level;
 		return levelPart.level || levelPart;

@@ -35,8 +35,8 @@ class OptionalFeaturesSublistManager extends SublistManager {
 	}
 
 	pGetSublistItem (it, hash) {
-		const prerequisite = Renderer.utils.prerequisite.getHtml(it.prerequisite, {isListMode: true, keyOptions: {level: {isNameOnly: true}}});
-		const level = Renderer.optionalfeature.getListPrerequisiteLevelText(it.prerequisite);
+		const prerequisite = Renderer.optionalfeature.getListPrerequisiteHtml(it);
+		const level = Renderer.optionalfeature.getListPrerequisiteLevelText(it);
 		const cellsText = [
 			it.name,
 			new SublistCell({title: it._dFeatureType.join(", "), text: it._lFeatureType}),
@@ -108,8 +108,8 @@ class OptionalFeaturesPage extends ListPage {
 
 		const source = Parser.sourceJsonToAbv(it.source);
 		const hash = UrlUtil.autoEncodeHash(it);
-		const prerequisite = Renderer.utils.prerequisite.getHtml(it.prerequisite, {isListMode: true, keyOptions: {level: {isNameOnly: true}}});
-		const level = Renderer.optionalfeature.getListPrerequisiteLevelText(it.prerequisite);
+		const prerequisite = Renderer.optionalfeature.getListPrerequisiteHtml(it);
+		const level = Renderer.optionalfeature.getListPrerequisiteLevelText(it);
 
 		eleLi.innerHTML = `<a href="#${hash}" class="ve-lst__row-border ve-lst__row-inner">
 			<span class="ve-col-0-3 ve-px-0 ve-flex-vh-center ve-lst__btn-toggle-expand ve-self-flex-stretch ve-no-select">[+]</span>

@@ -1,6 +1,4 @@
 import {FilterBase} from "./filter-filter-base.js";
-import {RangeFilter} from "./filter-filter-range.js";
-
 export class MultiFilter extends FilterBase {
 	constructor (opts) {
 		super(opts);
@@ -356,20 +354,18 @@ export class MultiFilter extends FilterBase {
 		const results = [];
 		for (let i = this._filters.length - 1; i >= 0; --i) {
 			const f = this._filters[i];
-			if (f instanceof RangeFilter) {
-				results.push(f.toDisplay(boxState, entryValArr[i]));
-			} else {
-				const totals = boxState[f.header]._totals;
-
-				if (totals.yes === 0 && totals.no === 0) results.push(null);
-				else results.push(f.toDisplay(boxState, entryValArr[i]));
+			if (!f.isActive(boxState)) {
+				results.push(null);
+				continue;
 			}
+
+			results.push(f.toDisplay(boxState, entryValArr[i]));
 		}
 
 		const resultsActive = results.filter(r => r !== null);
 		if (this._state.mode === "or") {
 			if (!resultsActive.length) return true;
-			return resultsActive.find(r => r);
+			return resultsActive.some(Boolean);
 		} else {
 			return resultsActive.filter(r => r).length === resultsActive.length;
 		}

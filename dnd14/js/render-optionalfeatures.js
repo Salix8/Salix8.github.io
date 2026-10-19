@@ -19,6 +19,7 @@ class _RenderOptionalfeaturesImplBase extends RenderPageImplBase {
 	) {
 		return {
 			...super._getCommonHtmlParts({ent, renderer, opts}),
+			htmlPtPotionDetails: this._getCommonHtmlParts_potionDetails({ent}),
 
 			htmlPtCost: this._getCommonHtmlParts_cost({ent}),
 
@@ -31,8 +32,16 @@ class _RenderOptionalfeaturesImplBase extends RenderPageImplBase {
 	/* ----- */
 
 	_getCommonHtmlParts_prerequisites ({ent}) {
-		const ptPrerequisites = Renderer.utils.prerequisite.getHtml(ent.prerequisite, {styleHint: this._style});
+		const ptPrerequisites = Renderer.optionalfeature.getPrerequisiteHtml(ent, {styleHint: this._style});
 		return ptPrerequisites ? `<tr><td colspan="6" class="ve-pt-0 ${this._style === SITE_STYLE__CLASSIC ? "" : "ve-italic"}">${ptPrerequisites}</td></tr>` : "";
+	}
+
+	/* ----- */
+
+	_getCommonHtmlParts_potionDetails ({ent}) {
+		return Renderer.optionalfeature.getPotionDetailEntries(ent)
+			.map(([label, value]) => `<tr><td colspan="6" class="ve-pt-0"><b>${label}:</b> ${value}</td></tr>`)
+			.join("");
 	}
 
 	/* ----- */
@@ -65,6 +74,8 @@ class _RenderOptionalfeaturesImplClassic extends _RenderOptionalfeaturesImplBase
 
 			htmlPtPrerequisites,
 
+			htmlPtPotionDetails,
+
 			htmlPtCost,
 
 			htmlPtEntries,
@@ -85,6 +96,8 @@ class _RenderOptionalfeaturesImplClassic extends _RenderOptionalfeaturesImplBase
 			${htmlPtName}
 
 			${htmlPtPrerequisites}
+
+			${htmlPtPotionDetails}
 
 			${htmlPtCost}
 
