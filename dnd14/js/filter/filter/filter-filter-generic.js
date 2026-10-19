@@ -926,6 +926,11 @@ export class Filter extends FilterBase {
 		if (this._itemSortFn) this._items.sort(this._isSortByDisplayItems && this._displayFn ? (a, b) => this._itemSortFn(this._displayFn(a.item, a), this._displayFn(b.item, b)) : this._itemSortFn);
 
 		this._items.forEach(it => {
+			if (it.isHidden) {
+				it.searchText ||= this._getDisplayText(it).toLowerCase();
+				return;
+			}
+
 			if (!it.rendered) {
 				it.rendered = this._getPill(it);
 				if (it.nest) {
@@ -1059,6 +1064,8 @@ export class Filter extends FilterBase {
 
 		const frag = document.createDocumentFragment();
 		view.forEach(item => {
+			if (item.isHidden) return;
+
 			this._doRenderMiniPills_doBindHookState(item);
 
 			if (!item.btnMini && this._state[item.item] === PILL_STATE__IGNORE) return;
@@ -1104,11 +1111,12 @@ export class Filter extends FilterBase {
 							});
 						const allHigh = stats.total === stats.high;
 						const allLow = stats.total === stats.low;
-						nestMeta._btnNest.vee.toggleClass("ve-fltr__btn_nest--include-all", this._nestsHidden[nestName] && allHigh)
-							.vee.toggleClass("ve-fltr__btn_nest--exclude-all", this._nestsHidden[nestName] && allLow)
-							.vee.toggleClass("ve-fltr__btn_nest--include", this._nestsHidden[nestName] && !!(!allHigh && !allLow && stats.high && !stats.low))
-							.vee.toggleClass("ve-fltr__btn_nest--exclude", this._nestsHidden[nestName] && !!(!allHigh && !allLow && !stats.high && stats.low))
-							.vee.toggleClass("ve-fltr__btn_nest--both", this._nestsHidden[nestName] && !!(!allHigh && !allLow && stats.high && stats.low));
+						const isNestActive = this._nestsHidden[nestName] && stats.total > 0;
+						nestMeta._btnNest.vee.toggleClass("ve-fltr__btn_nest--include-all", isNestActive && allHigh)
+							.vee.toggleClass("ve-fltr__btn_nest--exclude-all", isNestActive && allLow)
+							.vee.toggleClass("ve-fltr__btn_nest--include", isNestActive && !!(!allHigh && !allLow && stats.high && !stats.low))
+							.vee.toggleClass("ve-fltr__btn_nest--exclude", isNestActive && !!(!allHigh && !allLow && !stats.high && stats.low))
+							.vee.toggleClass("ve-fltr__btn_nest--both", isNestActive && !!(!allHigh && !allLow && stats.high && stats.low));
 
 						if (this._updateNestSummary) this._updateNestSummary();
 					};

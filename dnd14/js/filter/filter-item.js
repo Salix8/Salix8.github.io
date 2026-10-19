@@ -44,6 +44,7 @@ export class FilterItem extends FilterItemBase {
 	 * @param [options.group] (optional) group this item belongs to.
 	 * @param [options.nest] (optional) nest this item belongs to
 	 * @param [options.isIgnoreRed] (optional) if this item should be ignored when negative filtering
+	 * @param [options.isHidden] (optional) if this item participates in filtering without rendering a pill
 	 */
 	constructor (options) {
 		super();
@@ -52,6 +53,7 @@ export class FilterItem extends FilterItemBase {
 		this.group = options.group;
 		this.nest = options.nest;
 		this.isIgnoreRed = options.isIgnoreRed;
+		this.isHidden = options.isHidden;
 
 		this.rendered = null;
 		this.searchText = null;
@@ -65,6 +67,7 @@ export class FilterItem extends FilterItemBase {
 			group: this.group,
 			nest: this.nest,
 			isIgnoreRed: this.isIgnoreRed,
+			isHidden: this.isHidden,
 		};
 	}
 

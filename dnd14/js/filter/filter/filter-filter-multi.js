@@ -350,6 +350,10 @@ export class MultiFilter extends FilterBase {
 
 	toDisplay (boxState, entryValArr) {
 		if (this._filters.length !== entryValArr.length) throw new Error("Number of filters and number of values did not match");
+		// Always evaluate the state supplied by the FilterBox. This matters for
+		// nested groups, whose state may have been restored from a URL or saved
+		// filter set rather than being the instance's current local state.
+		const mode = boxState[this.header]?.mode ?? this._state.mode;
 
 		const results = [];
 		for (let i = this._filters.length - 1; i >= 0; --i) {
@@ -363,7 +367,7 @@ export class MultiFilter extends FilterBase {
 		}
 
 		const resultsActive = results.filter(r => r !== null);
-		if (this._state.mode === "or") {
+		if (mode === "or") {
 			if (!resultsActive.length) return true;
 			return resultsActive.some(Boolean);
 		} else {

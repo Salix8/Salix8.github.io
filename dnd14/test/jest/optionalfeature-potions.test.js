@@ -51,6 +51,15 @@ function getPrerequisiteFilterMatches (pageFilter, entities) {
 	));
 }
 
+function getFilterBoxMatches (pageFilter, entities) {
+	pageFilter._filterBox = new FilterBox({
+		filters: [pageFilter._sourceFilter, pageFilter._typeFilter, pageFilter._prerequisiteFilter, pageFilter._miscFilter],
+		namespaceSnapshots: "OptionalFeaturePotionTests",
+	});
+	const values = pageFilter._filterBox.getValues();
+	return entities.filter(it => pageFilter.toDisplay(values, it));
+}
+
 describe("Pociones del Alquimista", () => {
 	it("shows ingredients in list requirements and five ordered detail lines", () => {
 		const explosivePotion = getPotion("Poción Explosiva");
@@ -99,17 +108,20 @@ describe("Pociones del Alquimista", () => {
 		expect(Renderer.optionalfeature.getListPrerequisiteLevelText(homebrewPotion)).toBe(20);
 	});
 
-	it("adds Alquimista > Pociones and exposes its filters only while open", () => {
+	it("uses the Alquimista header as the hidden potion selection", () => {
 		const pageFilter = getPotionFilterPage();
-		const {classKey, subclassKey} = PageFilterOptionalFeatures._getPotionClassFilterMeta();
+		const {classKey, selectionKey} = PageFilterOptionalFeatures._getPotionClassFilterMeta();
 
-		expect(pageFilter._classFilter._items.map(it => it.item)).toContain(subclassKey);
-		expect(PageFilterOptionalFeatures._getClassFilterDisplay(subclassKey)).toBe("Pociones");
+		const selectionItem = pageFilter._classFilter._items.find(it => it.item === selectionKey);
+		expect(selectionItem?.isHidden).toBe(true);
 		expect(pageFilter._ingredientFilter._isExternallyHidden).toBe(true);
 		expect(pageFilter._potionLevelFilter._isExternallyHidden).toBe(true);
 
+		// The first update initializes persisted UI state, so it must not select
+		// potions. Reopening the section is the user's explicit selection.
+		pageFilter._classFilter._nestsHidden[classKey] = true;
 		pageFilter._classFilter._nestsHidden[classKey] = false;
-		expect(pageFilter._classFilter._state[subclassKey]).toBe(1);
+		expect(pageFilter._classFilter._state[selectionKey]).toBe(1);
 		expect(pageFilter._ingredientFilter._isExternallyHidden).toBe(false);
 		expect(pageFilter._potionLevelFilter._isExternallyHidden).toBe(false);
 		expect(pageFilter._potionLevelFilter._items.map(it => it.item)).toEqual([1, 5, 10, 15]);
@@ -120,15 +132,36 @@ describe("Pociones del Alquimista", () => {
 		pageFilter._potionLevelFilter.setValue(1, 1);
 		pageFilter._classFilter._nestsHidden[classKey] = true;
 
-		expect(pageFilter._classFilter._state[subclassKey]).toBe(0);
+		expect(pageFilter._classFilter._state[selectionKey]).toBe(0);
 		expect(pageFilter._ingredientFilter._state.Mineral).toBe(0);
 		expect(pageFilter._potionLevelFilter._state[1]).toBe(0);
 		expect(pageFilter._levelFilter._isExternallyHidden).toBe(false);
 	});
 
+	it("does not restore saved potion selections from an open Alquimista section", () => {
+		const pageFilter = getOptionalFeatureFilterPage();
+		const {classKey, selectionKey} = PageFilterOptionalFeatures._getPotionClassFilterMeta();
+
+		pageFilter._classFilter.setValue(selectionKey, 1);
+		pageFilter._ingredientFilter.setValue("Mineral", 1);
+		pageFilter._potionLevelFilter.setValue(1, 1);
+		pageFilter._classFilter._nestsHidden[classKey] = false;
+
+		expect(pageFilter._classFilter._state[selectionKey]).toBe(0);
+		expect(pageFilter._ingredientFilter._state.Mineral).toBe(0);
+		expect(pageFilter._potionLevelFilter._state[1]).toBe(0);
+		expect(getPrerequisiteFilterMatches(pageFilter, DATA.optionalfeature)).toHaveLength(DATA.optionalfeature.length);
+
+		pageFilter._typeFilter.setValue("EI", 1);
+		const invocations = getFilterBoxMatches(pageFilter, DATA.optionalfeature);
+		expect(invocations.map(it => it.name)).toContain("Agonizing Blast");
+		expect(invocations.every(it => it.featureType.includes("EI"))).toBe(true);
+	});
+
 	it("intersects potion class, ingredients, and potion level", () => {
 		const pageFilter = getPotionFilterPage();
 		const {classKey} = PageFilterOptionalFeatures._getPotionClassFilterMeta();
+		pageFilter._classFilter._nestsHidden[classKey] = true;
 		pageFilter._classFilter._nestsHidden[classKey] = false;
 
 		pageFilter._ingredientFilter.setValue("Mineral", 1);
@@ -155,6 +188,7 @@ describe("Pociones del Alquimista", () => {
 
 		expect(getPrerequisiteFilterMatches(pageFilter, DATA.optionalfeature)).toHaveLength(DATA.optionalfeature.length);
 
+		pageFilter._classFilter._nestsHidden[classKey] = true;
 		pageFilter._classFilter._nestsHidden[classKey] = false;
 		expect(getPrerequisiteFilterMatches(pageFilter, DATA.optionalfeature)).toHaveLength(POTIONS.length);
 		pageFilter._ingredientFilter.setValue("Mineral", 1);
@@ -187,6 +221,7 @@ describe("Pociones del Alquimista", () => {
 		const {classKey} = PageFilterOptionalFeatures._getPotionClassFilterMeta();
 		const clownBaseKey = `${PageFilterOptionalFeatures._getClassKey("Payaso", "Himo")}\u0000base`;
 
+		pageFilter._classFilter._nestsHidden[classKey] = true;
 		pageFilter._classFilter._nestsHidden[classKey] = false;
 		pageFilter._classFilter.setValue(clownBaseKey, 1);
 		pageFilter._levelFilter._state.curMin = 2;
@@ -196,5 +231,61 @@ describe("Pociones del Alquimista", () => {
 
 		expect(pageFilter._levelFilter._isExternallyHidden).toBe(false);
 		expect(getPrerequisiteFilterMatches(pageFilter, DATA.optionalfeature).map(it => it.name)).toEqual(expect.arrayContaining(["Poción Explosiva", "Chorro de Agua"]));
+	});
+
+	it("uses Alquimista and Warlock as section headers without Base tags", () => {
+		const pageFilter = getOptionalFeatureFilterPage();
+		const alchemist = PageFilterOptionalFeatures._getPotionClassFilterMeta();
+		const warlockKey = PageFilterOptionalFeatures._getClassKey("Warlock", "PHB");
+		const itemKeys = pageFilter._classFilter._items.map(it => it.item);
+
+		expect(itemKeys).toContain(alchemist.selectionKey);
+		expect(itemKeys).not.toContain(`${alchemist.classKey}\u0000base`);
+		expect(itemKeys).not.toContain(`${warlockKey}\u0000base`);
+		const alchemistSelection = pageFilter._classFilter._items.find(it => it.item === alchemist.selectionKey);
+		expect(alchemistSelection?.isHidden).toBe(true);
+		expect(pageFilter._classFilter._getDisplayText(alchemistSelection)).toBe("Alquimista");
+		expect(pageFilter._classFilter._getDisplayText(alchemistSelection).toLowerCase()).toBe("alquimista");
+
+		pageFilter._classFilter._nestsHidden[warlockKey] = false;
+		expect(pageFilter._pactFilter._isExternallyHidden).toBe(false);
+		expect(pageFilter._classFilter._state[`${warlockKey}\u0000base`]).toBeUndefined();
+		expect(pageFilter._typeFilter._state.EI).toBe(0);
+	});
+
+	it("keeps fighting styles and Eldritch Invocations usable", () => {
+		const pageFilter = getOptionalFeatureFilterPage();
+
+		pageFilter._typeFilter.setValue("EI", 1);
+		const invocations = getFilterBoxMatches(pageFilter, DATA.optionalfeature);
+		expect(invocations.length).toBeGreaterThan(0);
+		expect(invocations.every(it => it.featureType.includes("EI"))).toBe(true);
+
+		pageFilter._typeFilter.setValue("EI", 0);
+		pageFilter._typeFilter.setValue("FS:F", 1);
+		const fightingStyles = getFilterBoxMatches(pageFilter, DATA.optionalfeature);
+		expect(fightingStyles.length).toBeGreaterThan(0);
+		expect(fightingStyles.every(it => it.featureType.includes("FS:F"))).toBe(true);
+	});
+
+	it("applies every visible feature-type pill through the same FilterBox route as the page", () => {
+		const pageFilter = getOptionalFeatureFilterPage();
+		pageFilter._filterBox = new FilterBox({
+			filters: [pageFilter._sourceFilter, pageFilter._typeFilter, pageFilter._prerequisiteFilter, pageFilter._miscFilter],
+			namespaceSnapshots: "OptionalFeaturePotionTests",
+		});
+		// Test the type filter in isolation. Source defaults intentionally hide
+		// some UA-only types, which is a separate source-filter concern.
+		Object.keys(pageFilter._sourceFilter._state).forEach(source => pageFilter._sourceFilter.setValue(source, 0));
+
+		for (const {item: featureType} of pageFilter._typeFilter._items) {
+			pageFilter._typeFilter.setValue(featureType, 1);
+			const values = pageFilter._filterBox.getValues();
+			const matches = DATA.optionalfeature.filter(it => pageFilter.toDisplay(values, it));
+
+			expect(matches.length).toBeGreaterThan(0);
+			expect(matches.every(it => it.featureType.includes(featureType))).toBe(true);
+			pageFilter._typeFilter.setValue(featureType, 0);
+		}
 	});
 });
