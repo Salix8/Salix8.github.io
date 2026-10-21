@@ -404,14 +404,6 @@
 						},
 						{
 							"type": "entries",
-							"name": "Close Quarters Shooter",
-							"source": "UALightDarkUnderdark",
-							"entries": [
-								"When making a ranged attack while you are within 5 feet of a hostile creature, you do not have disadvantage on the attack roll. Your ranged attacks ignore half cover and three-quarters cover against targets within 30 feet of you. You have a +1 bonus to attack rolls on ranged attacks."
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Defense",
 							"entries": [
 								"While you are wearing armor, you gain a +1 bonus to AC."
@@ -426,72 +418,9 @@
 						},
 						{
 							"type": "entries",
-							"name": "Mariner",
-							"source": "UAWaterborneAdventures",
-							"entries": [
-								"As long as you are not wearing heavy armor or using a shield, you have a swimming speed and a climbing speed equal to your normal speed, and you gain a +1 bonus to AC."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Tunnel Fighter",
-							"source": "UALightDarkUnderdark",
-							"entries": [
-								"As a bonus action, you can enter a defensive stance that lasts until the start of your next turn. While in your defensive stance, you can make opportunity attacks without using your reaction, and you can use your reaction to make a melee attack against a creature that moves more than 5 feet while within your reach."
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Two-Weapon Fighting",
 							"entries": [
 								"When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Blind Fighting",
-							"source": "UAClassFeatureVariants",
-							"page": 12,
-							"entries": [
-								"Being unable to see a creature doesn't impose disadvantage on your attack rolls against it, provided the creature isn't hidden from you."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Interception",
-							"source": "UAClassFeatureVariants",
-							"page": 12,
-							"entries": [
-								"When a creature you can see hits a target that is within 5 feet of you with an attack, you can use your reaction to reduce the damage the target takes by {@dice 1d10} + your proficiency bonus (to a minimum of 0 damage). You must be wielding a shield or a simple or martial weapon to use this reaction."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Thrown Weapon Fighting",
-							"source": "UAClassFeatureVariants",
-							"page": 12,
-							"entries": [
-								"You can draw a weapon that has the thrown property as part of the attack you make with the weapon.",
-								"In addition, when you hit with a ranged attack using a thrown weapon, you gain a +1 bonus to the damage roll."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Unarmed Fighting",
-							"source": "UAClassFeatureVariants",
-							"page": 12,
-							"entries": [
-								"Your unarmed strikes can deal bludgeoning damage equal to {@dice 1d6} + your Strength modifier. If you strike with two free hands, the {@dice d6} becomes a {@dice d8}.",
-								"When you successfully start a grapple, you can deal {@dice 1d4} bludgeoning damage to the grappled creature. Until the grapple ends, you can also deal this damage to the creature whenever you hit it with a melee attack."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Druidic Warrior",
-							"source": "UAClassFeatureVariants",
-							"page": 7,
-							"entries": [
-								"You learn two cantrips of your choice from the {@filter druid spell list|spells|level=0|class=druid}. They count as druid spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the druid spell list."
 							]
 						}
 					]

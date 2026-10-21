@@ -472,7 +472,6 @@
 							"Cure Wounds|PHB",
 							"Guiding Bolt|PHB",
 							"Healing Word|PHB",
-							"Ceremony (UA)|UAStarterSpells",
 							"Espolón de Roca|GMAM"
 						],
 						"s3": [
@@ -526,7 +525,6 @@
 							"Searing Smite|PHB",
 							"Thunderous Smite|PHB",
 							"Wrathful Smite|PHB",
-							"Ceremony (UA)|UAStarterSpells",
 							"Espolón de Roca|GMAM"
 						],
 						"s5": [
@@ -571,7 +569,6 @@
 							"Crown of Madness|PHB",
 							"Hold Person|PHB",
 							"Suggestion|PHB",
-							"Mind Thrust|UAFighterRogueWizard",
 							"Tasha's Mind Whip|TCE",
 							"Pacto de Verdad|GPNM",
 							"Hipnosis|GMAM",
@@ -580,7 +577,6 @@
 						"s4": [
 							"Raulothim's Psychic Lance|FTD",
 							"Confusion|PHB",
-							"Ego Whip|UAFighterRogueWizard",
 							"Synchronicity (UA)|UAModernMagic",
 							"Charm Monster|XGE"
 						],
@@ -588,9 +584,6 @@
 							"Charm Person|PHB",
 							"Sleep|PHB",
 							"Tasha's Hideous Laughter|PHB",
-							"Id Insinuation|UAFighterRogueWizard",
-							"Puppet (UA)|UAStarterSpells",
-							"Sudden Awakening (UA)|UAStarterSpells",
 							"Silvery Barbs|SCC"
 						],
 						"s5": [
@@ -639,7 +632,6 @@
 						"s1": [
 							"Arms of Hadar|PHB",
 							"Unseen Servant|PHB",
-							"Healing Elixir (UA)|UAStarterSpells",
 							"Dispersal|GdR"
 						],
 						"s3": [
@@ -704,7 +696,6 @@
 							"Detect Evil and Good|PHB",
 							"Detect Magic|PHB",
 							"Detect Poison and Disease|PHB",
-							"Guiding Hand (UA)|UAStarterSpells",
 							"Abrir Mente|CdS"
 						],
 						"s4": [

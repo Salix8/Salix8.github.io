@@ -2610,13 +2610,7 @@ Parser.pageCategoryToProp = function (catId) {
 Parser.ABIL_ABVS = ["str", "dex", "con", "int", "wis", "cha"];
 
 Parser.spClassesToCurrentAndLegacy = function (fromClassList) {
-	const current = [];
-	const legacy = [];
-	fromClassList.forEach(cls => {
-		if ((cls.name === "Artificer" && cls.source === "UAArtificer") || (cls.name === "Artificer (Revisited)" && cls.source === "UAArtificerRevisited")) legacy.push(cls);
-		else current.push(cls);
-	});
-	return [current, legacy];
+	return [fromClassList, []];
 };
 
 /**

@@ -36,8 +36,24 @@ assert.match(characterBuilderServices, /pLoadRawJson/);
 assert.match(characterBuilderServices, /pLoadRaces/);
 
 const optionalFeatures = JSON.parse(fs.readFileSync(path.join(root, "data", "optionalfeatures.json"), "utf8")).optionalfeature;
-assert.equal(optionalFeatures.length, 457, "D&D 2014 must contain the complete historical Optional Features catalogue.");
+const removedUaSources = new Set([
+	"UAArtificer", "UAArtificerRevisited", "UAClassFeatureVariants", "UAClericDruidWizard", "UAFighter", "UAFighterRangerRogue", "UAFighterRogueWizard", "UALightDarkUnderdark", "UARevisedClassOptions", "UARevisedSubclasses", "UASorcererAndWarlock", "UAStarterSpells", "UATheFaithful", "UAWarlockAndWizard", "UAWaterborneAdventures",
+]);
+assert.equal(optionalFeatures.length, 336, "D&D 2014 must retain the curated Optional Features catalogue.");
+assert.ok(optionalFeatures.every(({source}) => !removedUaSources.has(source)), "Removed UA sources must not remain in Optional Features.");
 assert.equal(new Set(optionalFeatures.map(({name, source}) => `${name}\u0000${source}`)).size, optionalFeatures.length, "Optional Features must not be duplicated.");
+
+const mystic = JSON.parse(fs.readFileSync(path.join(root, "data", "class", "class-mystic.json"), "utf8"));
+const psionics = JSON.parse(fs.readFileSync(path.join(root, "data", "psionics.json"), "utf8")).psionic;
+assert.equal(mystic.class.length, 1, "The Mystic class must be retained.");
+assert.equal(mystic.subclass.length, 6, "All Mystic Orders must be retained.");
+assert.equal(psionics.filter(({source}) => source === "UATheMysticClass").length, 52, "All Mystic psionics must be retained.");
+
+const spellIndex = JSON.parse(fs.readFileSync(path.join(root, "data", "spells", "index.json"), "utf8"));
+assert.equal(spellIndex.UAModernMagic, "spells-ua-mm.json", "Modern Magic must remain in the spell catalogue.");
+assert.ok(!Object.keys(spellIndex).some(source => removedUaSources.has(source)), "Removed UA spell sources must not remain in the spell index.");
+const modernMagicSpells = JSON.parse(fs.readFileSync(path.join(root, "data", "spells", "spells-ua-mm.json"), "utf8")).spell;
+assert.equal(modernMagicSpells.length, 14, "All Modern Magic spells must be retained.");
 
 const potions = optionalFeatures.filter(it => it.potion);
 assert.equal(potions.length, 61, "All Alchemist potion recipes must be present.");
@@ -47,17 +63,17 @@ assert.ok(potions.every(it => it.featureType.includes("POT") && it.potion.ingred
 const optionalFeaturesFilter = fs.readFileSync(path.join(root, "js", "filter-optionalfeatures.js"), "utf8");
 assert.match(optionalFeaturesFilter, /header: "Class \/ Subclass"/);
 assert.match(optionalFeaturesFilter, /OptionalFeatureLevelRangeFilter/);
-assert.match(optionalFeaturesFilter, /filters: \[this\._levelFilter, this\._classFilter\]/);
-assert.match(optionalFeaturesFilter, /setValue\(baseKey, isHidden \? 0 : 1\)/);
-assert.match(optionalFeaturesFilter, /_getClassKey\("Alquimista", "Himo"\)\]: "omit"/);
+assert.match(optionalFeaturesFilter, /filters: \[this\._classFilter, this\._levelFilter, this\._potionLevelFilter, this\._ingredientFilter\]/);
+assert.match(optionalFeaturesFilter, /setValue\(selectionKey, 1\)/);
+assert.match(optionalFeaturesFilter, /_getClassKey\("Alquimista", "Himo"\)\]: "nest-only"/);
 assert.match(optionalFeaturesFilter, /_getClassKey\("Fighter", "PHB"\)\]: "omit"/);
 assert.match(optionalFeaturesFilter, /"fighting-styles", displayName: "Fighting Styles"/);
 assert.match(optionalFeaturesFilter, /"maneuvers", displayName: "Maneuvers"/);
 assert.match(optionalFeaturesFilter, /"ship-upgrades", displayName: "Ship Upgrades"/);
 assert.match(optionalFeaturesFilter, /"infernal-war-machine", displayName: "Infernal War Machine"/);
 assert.match(optionalFeaturesFilter, /isNestDivider: true/);
-assert.match(optionalFeaturesFilter, /setValue\("EI", 1\)/);
-assert.match(optionalFeaturesFilter, /featureType: "POT", filters: \[this\._ingredientFilter\]/);
+assert.match(optionalFeaturesFilter, /header: "Potion Level"/);
+assert.match(optionalFeaturesFilter, /const filters = \[this\._ingredientFilter, this\._potionLevelFilter\]/);
 assert.match(fs.readFileSync(path.join(root, "js", "parser.js"), "utf8"), /"POT": "Pociones del Alquimista"/);
 
 console.log("PASS: 2014 custom content manifest, routes, spell pricing, Character Builder, and Canalla data.");
