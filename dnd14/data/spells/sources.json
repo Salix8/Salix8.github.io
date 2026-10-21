@@ -8222,5 +8222,158 @@
 				}
 			]
 		}
+	},
+	"Himo": {
+		"Sending (Rework)": {
+			"class": [
+				{
+					"name": "Bard",
+					"source": "PHB"
+				},
+				{
+					"name": "Cleric",
+					"source": "PHB"
+				},
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				}
+			]
+		},
+		"Goodberry (Rework)": {
+			"class": [
+				{
+					"name": "Druid",
+					"source": "PHB"
+				},
+				{
+					"name": "Ranger",
+					"source": "PHB"
+				}
+			]
+		},
+		"Jump (Rework)": {
+			"class": [
+				{
+					"name": "Druid",
+					"source": "PHB"
+				},
+				{
+					"name": "Ranger",
+					"source": "PHB"
+				},
+				{
+					"name": "Sorcerer",
+					"source": "PHB"
+				},
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				},
+				{
+					"name": "Artificer",
+					"source": "TCE"
+				}
+			]
+		},
+		"Witch Bolt (Rework)": {
+			"class": [
+				{
+					"name": "Sorcerer",
+					"source": "PHB"
+				},
+				{
+					"name": "Warlock",
+					"source": "PHB"
+				},
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				}
+			]
+		},
+		"Detect Thoughts (Rework)": {
+			"class": [
+				{
+					"name": "Bard",
+					"source": "PHB"
+				},
+				{
+					"name": "Sorcerer",
+					"source": "PHB"
+				},
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				}
+			]
+		},
+		"Enervation (Rework)": {
+			"classVariant": [
+				{
+					"name": "Sorcerer",
+					"source": "PHB",
+					"definedInSource": "XGE"
+				},
+				{
+					"name": "Warlock",
+					"source": "PHB",
+					"definedInSource": "XGE"
+				},
+				{
+					"name": "Wizard",
+					"source": "PHB",
+					"definedInSource": "XGE"
+				}
+			]
+		},
+		"Levitate (Rework)": {
+			"class": [
+				{
+					"name": "Sorcerer",
+					"source": "PHB"
+				},
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				},
+				{
+					"name": "Artificer",
+					"source": "TCE"
+				}
+			]
+		},
+		"Drawmij's Instant Summons (Rework)": {
+			"class": [
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				}
+			]
+		},
+		"Etherealness (Rework)": {
+			"class": [
+				{
+					"name": "Bard",
+					"source": "PHB"
+				},
+				{
+					"name": "Cleric",
+					"source": "PHB"
+				},
+				{
+					"name": "Sorcerer",
+					"source": "PHB"
+				},
+				{
+					"name": "Warlock",
+					"source": "PHB"
+				},
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				}
+			]
+		}
 	}
 }

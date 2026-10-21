@@ -1,0 +1,473 @@
+{
+	"spell": [
+		{
+			"name": "Sending (Rework)",
+			"source": "Himo",
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "unlimited"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a short piece of fine copper wire"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You send a short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with Intelligence scores of at least 1 to understand the meaning of your message.",
+				"You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a {@chance 5|||Message lost!|Message arrives} chance that the message doesn't arrive."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"For every level you can add 10 more words."
+					]
+				}
+			]
+		},
+		{
+			"name": "Goodberry (Rework)",
+			"source": "Himo",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a sprig of mistletoe"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Up to ten berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for one day.",
+				"The berries lose their potency if they have not been consumed within 24 hours of the casting of this spell."
+			],
+			"miscTags": [
+				"HL"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"You can create 5 more berries for each extra level."
+					]
+				}
+			]
+		},
+		{
+			"name": "Jump (Rework)",
+			"source": "Himo",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a grasshopper's hind leg"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You touch a creature. The creature's {@book jump distance|phb|8|Jumping} is tripled until the spell ends."
+			],
+			"areaTags": [
+				"ST"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"You can target 1 more creature within 5 feet of the original target for extra slot. When you cast it at lv3 or higher, every target doesn't take falling damage due to their own jump."
+					]
+				}
+			]
+		},
+		{
+			"name": "Witch Bolt (Rework)",
+			"source": "Himo",
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a twig from a tree that has been struck by lightning"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes {@damage 1d12} lightning damage, and on each of your turns for the duration, you can use your action to deal {@damage 1d12} lightning damage to the target automatically. The spell ends if you use your action to do anything else. The spell also ends if the target if you end your turn and the target is outside the spell's range or if it has {@quickref Cover||3||total cover} from you."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the initial damage increases by {@scaledamage 1d12|1-9|1d12} for each slot level above 1st."
+					]
+				}
+			],
+			"damageInflict": [
+				"lightning"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"miscTags": [
+				"UA"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Detect Thoughts (Rework)",
+			"source": "Himo",
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a copper piece"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"For the duration, you can read the thoughts of certain creatures. When you cast the spell and as your action on each turn until the spell ends, you can focus your mind on any one creature that you can see within 30 feet of you. If the creature you choose has an Intelligence of 3 or lower or doesn't speak any language, the creature is unaffected.",
+				"You initially learn the surface thoughts of the creature—what is most on its mind in that moment. As an action, you can either shift your attention to another creature's thoughts or attempt to probe deeper into the same creature's mind. If you probe deeper, the target must make a Wisdom saving throw. If it fails, you gain insight into its reasoning (if any), its emotional state, and something that looms large in its mind (such as something it worries over, loves, or hates). If it succeeds, the spell ends. Either way, the target knows that you are probing into its mind, and unless you shift your attention to another creature's thoughts, the creature can use its action on its turn to make an Intelligence check contested by your Intelligence check; if it succeeds, the spell ends.",
+				"Questions verbally directed at the target creature naturally shape the course of its thoughts, so this spell is particularly effective as part of an interrogation.",
+				"You can also use this spell to detect the presence of thinking creatures you can't see. When you cast the spell or as your action during the duration, you can search for thoughts within 30 feet of you. The spell can penetrate barriers, but 2 feet of rock, 2 inches of any metal other than lead, or a thin sheet of lead blocks you. You can't detect a creature with an Intelligence of 3 or lower or one that doesn't speak any language.",
+				"Once you detect the presence of a creature in this way, you can read its thoughts for the rest of the duration as described above, even if you can't see it, but it must still be within range."
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"abilityCheck": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT",
+				"UA"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell at higher level, its duration extends: 2 min at lv3, 5 min at lv4, 10 min at lv5, 30 min at lv6, 1 hour at lv7, 2 hours at lv 8 or 8 hours at lv9. When you cast it at level 8 or 9, you can choose to cast this spell without any {@status concentration}. If you do, its duration is halved (1 and 4 hours)."
+					]
+				}
+			]
+		},
+		{
+			"name": "Enervation (Rework)",
+			"source": "Himo",
+			"level": 5,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"A tendril of inky darkness reaches out from you, touching a creature you can see within range to drain life from it. The target must make a Dexterity saving throw. On a successful save, the target takes {@damage 2d8} necrotic damage, and the spell ends. On a failed save, the target takes {@damage 4d8} necrotic damage, and until the spell ends, you can use your action on each of your turns to automatically deal {@damage 4d8} necrotic damage to the target. The spell ends if you use your action to do anything else, if you end your turn with your target outside the spell's range, or if the target has {@quickref Cover||3||total cover} from you.",
+				"Whenever the spell deals damage to a target, you regain hit points equal to half the amount of necrotic damage the target takes."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 6th level or higher, the damage increases by {@scaledamage 4d8;2d8|5-9|1d8} for each slot level above 5th."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"HL",
+				"SGT",
+				"UA"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Levitate (Rework)",
+			"source": "Himo",
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "either a small leather loop or a piece of golden wire bent into a cup shape with a long shank on one end"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"One creature or loose object of your choice that you can see within range rises vertically, up to 20 feet, and remains suspended there for the duration. The spell can levitate a target that weighs up to 500 pounds. An unwilling creature that succeeds on a Constitution saving throw is unaffected.",
+				"The target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move as if it were climbing. You can change the target's altitude by up to 20 feet in either direction on your turn. If you are the target, you can move up or down as part of your move. Otherwise, you can use your action to move the target, which must remain within the spell's range.",
+				"When the spell ends, the target floats gently to the ground if it is still aloft."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"OBJ",
+				"SGT",
+				"UA"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"You can target one additional creature for each extra level."
+					]
+				}
+			]
+		},
+		{
+			"name": "Drawmij's Instant Summons (Rework)",
+			"level": 6,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"duration": [
+				{
+					"type": "permanent"
+				}
+			],
+			"entries": [
+				"Tocas un objeto que pese 10 lb (4.5 kg) o menos y que su medida más larga por cualquiera de sus lados sea 6 ft (182 cm). El conjuro engarza el zafiro en el objeto, de forma que solo puede extraerse destruyendo el zafiro.",
+				"En cualquier momento, como acción, puedes decir la palabra comando, que es el nombre del objeto, y este aparecerá en tu mano, sin importar que estés en otro plano. Solo tú puedes activar su palabra comando, pero castear este conjuro en un segundo zafiro permite vincularlo, de forma que una criatura que lo porte pueda invocar también la palabra comando.",
+				"Si el objeto engarzado está siendo equipado por otra criatura, no podrás invocarlo, pero sabrás su identidad y su ubicación aproximada. Si tiene más de una identidad, conoces la más familiar para ti. Tras esto no puedes volver a usar tu acción para invocar el objeto, sino que debes volver a castear este conjuro (puede ser como ritual). En el momento en que consigas volver a invocarlo, recuperas la habilidad de invocar el item como acción.",
+				"Cualquier conjuro que siga las normas antimagia destruye o desactiva el zafiro si es aplicado directamente sobre el objeto ({@spell Dispel Magic} lo destruye, {@spell Antimagic Field} lo desactiva temporalmente)."
+			],
+			"source": "Himo",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Un zafiro por valor de 1000 GP",
+					"cost": 100000
+				}
+			},
+			"meta": {
+				"ritual": true
+			}
+		},
+		{
+			"name": "Etherealness (Rework)",
+			"source": "Himo",
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8,
+						"upTo": true
+					}
+				}
+			],
+			"entries": [
+				"You step into the border regions of the Ethereal Plane, in the area where it overlaps with your current plane. You remain in the Border Ethereal for the duration or until you use your action to dismiss the spell. During this time, you can move in any direction. If you move up or down, every foot of movement costs an extra foot. You can see and hear the plane you originated from, but everything there looks gray, and you can't see anything more than 60 feet away.",
+				"While on the Ethereal Plane, you can only affect and be affected by other creatures on that plane. Creatures that aren't on the Ethereal Plane can't perceive you and can't interact with you, unless a special ability or magic has given them the ability to do so.",
+				"You ignore all objects and effects that aren't on the Ethereal Plane, allowing you to move through objects you perceive on the plane you originated from.",
+				"When the spell ends, you immediately return to the plane you originated from in the spot you currently occupy. If you occupy the same spot as a solid object or creature when this happens, you are immediately shunted to the nearest unoccupied space that you can occupy and take force damage equal to twice the number of feet you are moved.",
+				"This spell has no effect if you cast it while you are on the Ethereal Plane or a plane that doesn't border it, such as one of the Outer Planes.",
+				"While the spell is active, you can spend a whole minute in order to return to the plane where you casted the spell or coming back to the Ethereal Plane."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 8th level or higher, you can target up to three willing creatures (including you) for each slot level above 7th. The creatures must be within 10 feet of you when you cast the spell."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"miscTags": [
+				"PS",
+				"SCT",
+				"UA"
+			]
+		}
+	]
+}
