@@ -81,6 +81,8 @@ export class Filter extends FilterBase {
 	 * @param [opts.umbrellaItems] Items which should, when set active, show everything in the filter. E.g. "All".
 	 * @param [opts.umbrellaExcludes] Items which should ignore the state of any `umbrellaItems`
 	 * @param [opts.isSortByDisplayItems] If items should be sorted by their display value, rather than their internal value.
+	 * @param [opts.isNestItemsFirst] If nested items should render directly below their nest headers before grouped items.
+	 * @param [opts.isNestAfterItems] If nested sections should render after regular items.
 	 * @param [opts.pFnOnChange] Function to be run when a filter item changes.
 	 * @param [opts.isMiscFilter] If this is the Misc. filter (containing "SRD" and "Basic Rules" tags).
 	 * @param [opts.compSearch] Component responsible for managing search term update propagation.
@@ -105,6 +107,8 @@ export class Filter extends FilterBase {
 		this._umbrellaItems = Filter._getAsFilterItems(opts.umbrellaItems);
 		this._umbrellaExcludes = Filter._getAsFilterItems(opts.umbrellaExcludes);
 		this._isSortByDisplayItems = !!opts.isSortByDisplayItems;
+		this._isNestItemsFirst = !!opts.isNestItemsFirst;
+		this._isNestAfterItems = !!opts.isNestAfterItems;
 		this._pFnOnChange = opts.pFnOnChange;
 		this._isReprintedFilter = !!opts.isMiscFilter && this._items.some(it => it.item === "Reprinted");
 		this._isSrdFilter = !!opts.isMiscFilter && this._items.some(it => it.item === MISC_FILTER_VALUE__SRD_5_1 || it.item === MISC_FILTER_VALUE__SRD_5_2);
@@ -117,6 +121,7 @@ export class Filter extends FilterBase {
 		this.__wrpFilter = null;
 		this.__wrpPills = null;
 		this.__wrpNestPills = null;
+		this.__wrpNestHead = null;
 
 		this.__wrpMiniPills = null;
 		this._miniPillItemsHooked = new Set();
@@ -794,6 +799,7 @@ export class Filter extends FilterBase {
 
 		if (this._nests) {
 			const wrpNestHead = veE({tag: "div", clazz: `ve-fltr__wrp-pills--sub ${this._isNestDivider ? "ve-fltr__wrp-pills--sub--divider" : ""}`}).vee.appendTo(this.__wrpPills);
+			this.__wrpNestHead = wrpNestHead;
 			this.__wrpNestHeadInner = veE({tag: "div", clazz: "ve-flex ve-flex-wrap ve-fltr__container-pills"}).vee.appendTo(wrpNestHead);
 			const wrpNestHeadSummary = veE({tag: "div", clazz: "ve-fltr__summary_nest"}).vee.appendTo(wrpNestHead);
 			if (this._isNestDivider) this.__wrpNestPills = veE({tag: "div", clazz: "ve-flex ve-flex-wrap ve-fltr__container-pills"}).vee.appendTo(wrpNestHead);
@@ -832,6 +838,7 @@ export class Filter extends FilterBase {
 		}
 
 		this._doRenderPills();
+		if (this._isNestAfterItems && this.__wrpNestHead) this.__wrpNestHead.vee.appendTo(this.__wrpPills);
 
 		const btnMobToggleControls = this._getBtnMobToggleControls(wrpControls);
 
@@ -940,7 +947,8 @@ export class Filter extends FilterBase {
 				}
 			}
 
-			if (this._groupFn) {
+			if (it.nest && this._isNestItemsFirst && this.__wrpNestPills) it.rendered.vee.appendTo(this.__wrpNestPills);
+			else if (this._groupFn) {
 				const group = this._groupFn(it);
 				this._doRenderPills_doRenderWrpGroup(group);
 				this._pillGroupsMeta[group].wrpPills.append(it.rendered);

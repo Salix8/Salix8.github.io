@@ -108,6 +108,15 @@ class PageFilterSpells extends PageFilterBase {
 	static INCHES_PER_FOOT = 12;
 	static FEET_PER_YARD = 3;
 	static FEET_PER_MILE = 5280;
+	static _DESANGRADOR_NEST = "Desangrador";
+	static _DESANGRADOR_ACCESS = [
+		{key: "Desangrador", displayName: "Base", school: "N"},
+		{key: "Desangrador: Delirante", displayName: "Delirante", className: "Cleric", school: "D"},
+		{key: "Desangrador: Flagelante", displayName: "Flagelante", className: "Cleric", school: "V"},
+		{key: "Desangrador: Quebrantahuesos", displayName: "Quebrantahuesos", className: "Paladin", school: "V"},
+		{key: "Desangrador: Pagano", displayName: "Pagano", className: "Warlock", school: "C"},
+		{key: "Desangrador: Vampírico", displayName: "Vampírico", className: "Wizard", school: "E"},
+	];
 
 	// region static
 	static sortSpells (a, b, o) {
@@ -130,6 +139,19 @@ class PageFilterSpells extends PageFilterBase {
 
 	static getFilterAbilitySave (ability) { return `${ability.uppercaseFirst()} Save`; }
 	static getFilterAbilityCheck (ability) { return `${ability.uppercaseFirst()} Check`; }
+
+	static getDesangradorAccessTags (spell) {
+		if (spell.level < 1 || spell.level > 5) return [];
+
+		const classNames = new Set((spell._fClassesAndVariantClasses || []).map(it => it.item));
+		return this._DESANGRADOR_ACCESS
+			.filter(access => access.school === spell.school && (!access.className || classNames.has(access.className)))
+			.map(access => access.key);
+	}
+
+	static getClassFilterDisplay (item) {
+		return this._DESANGRADOR_ACCESS.find(access => access.key === item)?.displayName || item;
+	}
 
 	static _mutMetaFilterObj (s) {
 		this._mutateForFilters_commonMisc(s);
@@ -327,7 +349,13 @@ class PageFilterSpells extends PageFilterBase {
 		this._classFilter = new Filter({
 			header: "Class",
 			groupFn: it => it.group,
+			nests: {},
+			isNestDivider: true,
+			isNestItemsFirst: true,
+			isNestAfterItems: true,
+			displayFn: PageFilterSpells.getClassFilterDisplay.bind(PageFilterSpells),
 		});
+		this._initDesangradorAccessFilter();
 		this._subclassFilter = new Filter({
 			header: "Subclass",
 			nests: {},
@@ -447,6 +475,42 @@ class PageFilterSpells extends PageFilterBase {
 		});
 	}
 
+	_initDesangradorAccessFilter () {
+		this._classFilter.addNest(PageFilterSpells._DESANGRADOR_NEST, {
+			isHidden: true,
+			displayName: PageFilterSpells._DESANGRADOR_NEST,
+		});
+		PageFilterSpells._DESANGRADOR_ACCESS.forEach(({key}) => this._classFilter.addItem(new FilterItem({
+			item: key,
+			nest: PageFilterSpells._DESANGRADOR_NEST,
+		})));
+
+		const keys = PageFilterSpells._DESANGRADOR_ACCESS.map(({key}) => key);
+		const baseKey = PageFilterSpells._DESANGRADOR_ACCESS[0].key;
+		let wasOpen = null;
+		const reset = () => keys.forEach(key => this._classFilter.setValue(key, 0));
+		const hkNest = () => {
+			const isOpen = this._classFilter._nestsHidden[PageFilterSpells._DESANGRADOR_NEST] === false;
+			if (wasOpen === null) {
+				wasOpen = isOpen;
+				if (!isOpen) reset();
+				return;
+			}
+
+			wasOpen = isOpen;
+			if (isOpen) this._classFilter.setValue(baseKey, 1);
+			else reset();
+		};
+
+		this._classFilter._addHook("nestsHidden", PageFilterSpells._DESANGRADOR_NEST, hkNest);
+		this._classFilter._addHook("state", baseKey, () => {
+			if (this._classFilter._state[baseKey] === 1 && this._classFilter._nestsHidden[PageFilterSpells._DESANGRADOR_NEST] !== false) {
+				this._classFilter._nestsHidden[PageFilterSpells._DESANGRADOR_NEST] = false;
+			}
+		});
+		hkNest();
+	}
+
 	static mutateForFilters (s) {
 		Renderer.spell.initBrewSources(s);
 
@@ -491,6 +555,7 @@ class PageFilterSpells extends PageFilterBase {
 				.filter(Boolean)
 				.filter(it => !s._fClasses.some(itCls => itCls.item === it.item)),
 		];
+		s._fDesangradorAccess = this.getDesangradorAccessTags(s);
 		s._fRaces = Renderer.spell.getCombinedGeneric(s, {propSpell: "races", prop: "race"}).map(PageFilterSpells.getRaceFilterItem);
 		s._fBackgrounds = Renderer.spell.getCombinedGeneric(s, {propSpell: "backgrounds", prop: "background"}).map(it => it.name);
 		s._fFeats = Renderer.spell.getCombinedGeneric(s, {propSpell: "feats", prop: "feat"}).map(it => it.name);
@@ -581,7 +646,10 @@ class PageFilterSpells extends PageFilterBase {
 			s._fSources,
 			s.level,
 			[
-				this._classAndSubclassFilter.isVariantSplit ? s._fClasses : s._fClassesAndVariantClasses,
+				[
+					...(this._classAndSubclassFilter.isVariantSplit ? s._fClasses : s._fClassesAndVariantClasses),
+					...s._fDesangradorAccess,
+				],
 				s._fSubclasses,
 				this._classAndSubclassFilter.isVariantSplit ? s._fVariantClasses : null,
 			],
