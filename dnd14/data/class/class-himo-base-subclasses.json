@@ -1405,19 +1405,52 @@
 			"name": "Círculo de Esporas",
 			"source": "Himo",
 			"entries": [
-				"Mantienes la tabla de conjuros y {@spell chill touch}, así como Halo de Esporas.",
+				{
+					"name": "Conjuros de Círculo",
+					"entries": [
+						"Aprendes el cantrip de {@spell chill touch} y tienes siempre preparados los siguientes conjuros:",
+						{
+							"type": "table",
+							"colLabels": [
+								"Lv",
+								"Conjuro 1",
+								"Conjuro 2"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-5",
+								"col-5"
+							],
+							"rows": [
+								[3, "{@spell blindness/deafness}", "{@spell gentle repose}"],
+								[5, "{@spell animate dead}", "{@spell gaseous form}"],
+								[7, "{@spell blight}", "{@spell confusion}"],
+								[9, "{@spell cloudkill}", "{@spell contagion}"]
+							]
+						}
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Halo de Esporas",
+					"entries": [
+						"Empezando a lv2, estás rodeado por una capa de esporas necróticas invisibles que no son dañinas para ti, pero que puedes liberar en criaturas cercanas. Cuando una criatura que puedas ver se acerca a 10 ft de ti o empiece su turno allí, puedes usar tu reacción para hacer {@damage 1d4} When a creature you can see moves into a space within 10 feet of you or starts its turn there, you can use your reaction to deal {@damage 1d4} necrótico si falla una salvación de Constitución.",
+						"El daño aumenta a {@damage 1d6} a lv6, {@damage 1d8} a lv10 ya {@damage 1d10} a lv14."
+					],
+					"type": "entries"
+				},
 				{
 					"name": "Entidad Simbionte",
 					"entries": [
-						"Como acción adicional, gastas un uso de Wild Shape para alzar tus esporas y ganar 4 puntos de golpe temporales por nivel de druida. Ganas los siguientes beneficios:",
+						"Como bonus, gastas la Wild Shape para alzar tus esporas y ganar 4 HPT por lv de druida. Ganas los siguientes beneficios:",
 						{
 							"type": "list",
 							"items": [
-								"Añades un dado extra al daño del Halo de Esporas.",
-								"Tus ataques cuerpo a cuerpo hacen {@dice 1d6} de daño necrótico adicional.",
-								"Estos beneficios duran 1 minuto, a menos que uses otro Wild Shape."
+								"Añades un dado extra al daño del halo",
+								"Tus ataques a melé hacen {@damage 1d6} necrótico extra."
 							]
-						}
+						},
+						"Estos beneficios duran 1 minuto, a menos que uses otra Wild Shape."
 					],
 					"type": "entries"
 				}
@@ -1432,12 +1465,12 @@
 			"name": "Infestación Fúngica",
 			"source": "Himo",
 			"entries": [
-				"Tus esporas ganan la habilidad de infestar un cadáver de tamaño Mediano o Pequeño situado a 10 pies de ti que no sea constructo, muerto viviente, oblex, elemental, planta, ni una aberración que no deje cadáver, e infectarlo. Puedes usar este rasgo de dos formas:",
+				"Tus esporas ganan la habilidad de infestar un cadáver, de tamaño mediano o pequeño a 10 pies de ti que no sea constructo, undead, oblex, elemental, planta, y las aberraciones que no dejen cadáver; e infectarlo. Puedes usar este rasgo de dos formas:",
 				{
 					"type": "list",
 					"items": [
-						"Puedes infestar el cadáver y ganar control sobre él. Solo puedes tener uno cada vez, pero puedes hacerlo a voluntad. Usa la ficha de {@creature zombie}, pero con 1 punto de golpe y sin el rasgo Fortaleza de los No Muertos. No puede usar acciones, pero llevará cualquier objeto que se le preste o equipe. Si se le da un arma, la blandirá y la transportará, pero no la usará. Pasada una hora, el exceso de esporas y hongos hará colapsar el cuerpo, impidiendo su movilidad. El efecto acaba.",
-						"Como reacción, infestas el cadáver de un humanoide o bestia que muera a 10 pies de ti y puedas ver. Tus esporas reaccionan con la adrenalina del cadáver, convirtiéndolo en un aliado bastante útil. Usa la ficha de {@creature zombie}, pero tiene telepatía contigo. Actúa después de ti, pero solo recibe órdenes de su objetivo. Si no puede atacar a nadie, se atacará a sí mismo hasta consumirse. Puedes usar esta reacción un número de veces igual a tu bonificador de competencia."
+						"Puedes infestar el cadáver y ganar control sobre él. Solo puedes tener uno cada vez, pero es at will. Usa la ficha de {@creature zombie}, pero con 1 HP y sin el rasgo de Undead Fortitude. No puede usar acciones, pero llevará cualquier objeto que se le preste o equipe. Si se le da un arma, la blandirá y la transportará, pero no la usará. Pasada una hora, el exceso de esporas y hongos hará colapsar el cuerpo, impidiendo su movilidad. El efecto acaba.",
+						"Como reacción, infestas el cadáver de un humanoide o bestia que muera a 10 pies de ti y puedas ver. Tus esporas reaccionan con la adrenalina del cadáver, convirtiéndolo en un aliado bastante útil. Usa la ficha de {@creature zombie}, pero tiene telepatía contigo. Actúa después de ti, pero solo recibe órdenes de target. Si no puede atacar a nadie, se atacará a sí mismo hasta consumirse. Puedes usar esta reacción un número de veces igual a tu BC."
 					]
 				}
 			],
@@ -1451,8 +1484,8 @@
 			"name": "Esparcir Esporas",
 			"source": "Himo",
 			"entries": [
-				"Ganas la habilidad de sembrar un área con esporas letales. Como acción adicional mientras tu Entidad Simbionte esté activa, puedes enviar las esporas a 30 pies de ti, llenando un cubo de 10 pies. Estas se disipan como acción adicional, si usas este rasgo otra vez o si se acaba tu Entidad Simbionte.",
-				"Toda criatura que entre o empiece el turno allí debe superar una salvación de Constitución o recibir el daño de tu Halo de Esporas. Solo recibe el daño una vez por turno. Mientras esté activo, no puedes usar la reacción del Halo de Esporas."
+				"Ganas la habilidad de sembrar un área con esporas letales. Como bonus mientras tu Entidad Simbionte este activa, puedes enviar las esporas a 30 pies de ti, llenando un cubo de 10 pies. Estas se disipan como bonus, si usas este rasgo otra vez o si se acaba tu Entidad Simbionte.",
+				"Toda criatura que entre o empiece el turno allí, salva Constitución o recibe tu daño del halo. Solo recibe el daño una vez por turno. Mientras esté activo, no puedes usar la reacción del Halo."
 			],
 			"className": "Druid",
 			"classSource": "PHB",
@@ -1763,7 +1796,7 @@
 			"level": 14
 		},
 		{
-			"name": "Círculo de la Tierra (Corrección)",
+			"name": "Círculo de la Tierra (Himo)",
 			"source": "Himo",
 			"entries": [
 				"Recuperación {@skill Arcana} se mantiene y el truco adicional puede ser de druida o mago. Cada terreno añade conjuros y formas exclusivas de Wild Shape.",
