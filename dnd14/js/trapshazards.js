@@ -17,7 +17,7 @@ class TrapsHazardsSublistManager extends SublistManager {
 	}
 
 	pGetSublistItem (it, hash) {
-		const trapType = Parser.trapHazTypeToFull(it.trapHazType);
+		const trapType = this.constructor._getTrapHazardType(it);
 		const cellsText = [trapType, it.name];
 
 		const ele = veT`<div class="ve-lst__row ve-lst__row--sublist ve-flex-col">
@@ -45,6 +45,12 @@ class TrapsHazardsSublistManager extends SublistManager {
 		});
 		return listItem;
 	}
+
+	static _getTrapHazardType (it) {
+		return (it.trapHazType instanceof Array ? it.trapHazType : [it.trapHazType])
+			.map(type => Parser.trapHazTypeToFull(type))
+			.join(", ");
+	}
 }
 
 class TrapsHazardsPage extends ListPage {
@@ -52,13 +58,25 @@ class TrapsHazardsPage extends ListPage {
 		const pageFilter = new PageFilterTrapsHazards();
 
 		super({
-			dataSource: "data/trapshazards.json",
+			dataSource: async () => {
+				const [trapsHazards, vehicles] = await Promise.all([
+					DataUtil.loadJSON("data/trapshazards.json"),
+					DataUtil.loadJSON("data/vehicles.json"),
+				]);
 
-			pFnGetFluff: Renderer.traphazard.pGetFluff.bind(Renderer.traphazard),
+				return {
+					...trapsHazards,
+					vehicleUpgrade: vehicles.vehicleUpgrade.filter(it => it.upgradeType?.some(type => type.startsWith("SHP:") || type.startsWith("IWM:"))),
+				};
+			},
+
+			pFnGetFluff: ent => ent.__prop === "vehicleUpgrade"
+				? Renderer.vehicle.pGetFluff(ent)
+				: Renderer.traphazard.pGetFluff(ent),
 
 			pageFilter,
 
-			dataProps: ["trap", "hazard"],
+			dataProps: ["trap", "hazard", "vehicleUpgrade"],
 
 			bookViewOptions: {
 				nameSingular: "trap/hazard",
@@ -78,7 +96,7 @@ class TrapsHazardsPage extends ListPage {
 
 		const source = Parser.sourceJsonToAbv(it.source);
 		const hash = UrlUtil.autoEncodeHash(it);
-		const trapType = Parser.trapHazTypeToFull(it.trapHazType);
+		const trapType = TrapsHazardsSublistManager._getTrapHazardType(it);
 
 		eleLi.innerHTML = `<a href="#${hash}" class="ve-lst__row-border ve-lst__row-inner">
 			<span class="ve-col-3 ve-pl-0 ve-pr-1 ve-text-center">${trapType}</span>

@@ -14214,14 +14214,14 @@ Renderer.vehicleUpgrade = class {
 		};
 	}
 
-	static getCompactRenderedString (ent, opts) {
+	static getCompactRenderedString (ent, {page = UrlUtil.PG_VEHICLES} = {}) {
 		const styleHint = VetoolsConfig.get("styleSwitcher", "style");
 		const renderer = Renderer.get();
 
 		const entriesMeta = Renderer.vehicleUpgrade.getVehicleUpgradeRenderableEntriesMeta(ent, {styleHint});
 
-		return `${Renderer.utils.getExcludedTr({entity: ent, dataProp: "vehicleUpgrade", page: UrlUtil.PG_VEHICLES})}
-		${Renderer.utils.getNameTr(ent, {page: UrlUtil.PG_VEHICLES})}
+		return `${Renderer.utils.getExcludedTr({entity: ent, dataProp: "vehicleUpgrade", page})}
+		${Renderer.utils.getNameTr(ent, {page})}
 		${entriesMeta.entrySummary ? `<tr><td colspan="6">${renderer.render(entriesMeta.entrySummary)}</td></tr>` : ""}
 		${entriesMeta.entryCost ? `<tr><td colspan="6">${renderer.render(entriesMeta.entryCost)}</td></tr>` : ""}
 		<tr><td colspan="6" class="ve-py-0"><div class="ve-tbl-divider"></div></td></tr>

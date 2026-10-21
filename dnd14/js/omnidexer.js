@@ -771,7 +771,7 @@ class IndexableFileOptFeatures_Other extends IndexableFile {
 			include: (it) => {
 				// Any optional features that don't have a known type (i.e. are custom homebrew types) get lumped into here
 				return it.featureType.includes("OTH")
-					|| ["POT", "PW", "BRM", "JUG", "TT", "RP", "SHP:F", "SHP:H", "SHP:M", "SHP:O", "SHP:W", "IWM:A", "IWM:G", "IWM:W"].some(type => it.featureType.includes(type))
+					|| ["POT", "PW", "BRM", "JUG", "TT", "RP"].some(type => it.featureType.includes(type))
 					|| it.featureType.some(it => !Parser.OPT_FEATURE_TYPE_TO_FULL[it]);
 			},
 		});
@@ -1205,7 +1205,7 @@ class IndexableFileVehicles_UpgradeShip extends IndexableFile {
 			category: Parser.CAT_ID_VEHICLE_UPGRADE_SHIP,
 			file: "vehicles.json",
 			listProp: "vehicleUpgrade",
-			baseUrl: "vehicles.html",
+			baseUrl: "trapshazards.html",
 			isHover: true,
 			include: (it) => it.upgradeType?.some(ut => IndexableFileVehicles_UpgradeShip.UPGRADE_TYPES.has(ut)),
 		});
@@ -1224,7 +1224,7 @@ class IndexableFileVehicles_UpgradeInfernalWarMachine extends IndexableFile {
 			category: Parser.CAT_ID_VEHICLE_UPGRADE_INFERNAL_WAR_MACHINE,
 			file: "vehicles.json",
 			listProp: "vehicleUpgrade",
-			baseUrl: "vehicles.html",
+			baseUrl: "trapshazards.html",
 			isHover: true,
 			include: (it) => it.upgradeType?.some(ut => IndexableFileVehicles_UpgradeInfernalWarMachine.UPGRADE_TYPES.has(ut)),
 		});

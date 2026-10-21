@@ -11,7 +11,11 @@ class OptionalFeatureLevelRangeFilter extends RangeFilter {
 class PageFilterOptionalFeatures extends PageFilterBase {
 	// region static
 	static _filterFeatureTypeSort (a, b) {
-		return SortUtil.ascSort(Parser.optFeatureTypeToFull(a.item), Parser.optFeatureTypeToFull(b.item));
+		return SortUtil.ascSort(PageFilterOptionalFeatures._getFeatureTypeDisplay(a.item), PageFilterOptionalFeatures._getFeatureTypeDisplay(b.item));
+	}
+
+	static _getFeatureTypeDisplay (featureType) {
+		return featureType === "MV:B" ? "Battle Master" : Parser.optFeatureTypeToFull(featureType);
 	}
 
 	static sortOptionalFeatures (itemA, itemB, options) {
@@ -36,7 +40,7 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		[PageFilterOptionalFeatures._getClassKey("Warlock", "XPHB")]: "nest-only",
 	};
 
-	static _HIDDEN_FEATURE_TYPES = new Set(["AS", "AS:V1-UA", "AS:V2-UA"]);
+	static _HIDDEN_FEATURE_TYPES = new Set(["AS", "AS:V1-UA", "AS:V2-UA", "MV", "MV:C2-UA"]);
 	static _POTION_LEVELS = [1, 5, 10, 15];
 	static _POTION_INGREDIENTS = ["Animal", "Vegetal", "Mineral", "Otros", "Especial"];
 	static _GENERAL_LEVELS = Array.from({length: 20}, (_, i) => i + 1);
@@ -46,17 +50,6 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		"FS:F": {nest: "fighting-styles", displayName: "Fighting Styles"},
 		"FS:P": {nest: "fighting-styles", displayName: "Fighting Styles"},
 		"FS:R": {nest: "fighting-styles", displayName: "Fighting Styles"},
-		"MV": {nest: "maneuvers", displayName: "Maneuvers"},
-		"MV:B": {nest: "maneuvers", displayName: "Maneuvers"},
-		"MV:C2-UA": {nest: "maneuvers", displayName: "Maneuvers"},
-		"SHP:F": {nest: "ship-upgrades", displayName: "Ship Upgrades"},
-		"SHP:H": {nest: "ship-upgrades", displayName: "Ship Upgrades"},
-		"SHP:M": {nest: "ship-upgrades", displayName: "Ship Upgrades"},
-		"SHP:O": {nest: "ship-upgrades", displayName: "Ship Upgrades"},
-		"SHP:W": {nest: "ship-upgrades", displayName: "Ship Upgrades"},
-		"IWM:A": {nest: "infernal-war-machine", displayName: "Infernal War Machine"},
-		"IWM:G": {nest: "infernal-war-machine", displayName: "Infernal War Machine"},
-		"IWM:W": {nest: "infernal-war-machine", displayName: "Infernal War Machine"},
 	};
 
 	static _getClassFilterDisplay (item) {
@@ -91,7 +84,7 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 		this._typeFilter = new Filter({
 			header: "Feature Type",
 			items: [],
-			displayFn: Parser.optFeatureTypeToFull,
+			displayFn: PageFilterOptionalFeatures._getFeatureTypeDisplay,
 			itemSortFn: PageFilterOptionalFeatures._filterFeatureTypeSort,
 			nests: [],
 			isNestDivider: true,

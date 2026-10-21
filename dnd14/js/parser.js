@@ -2732,7 +2732,8 @@ Parser.attackTypeToFull = function (attackType) {
 };
 
 Parser.trapHazTypeToFull = function (type) {
-	return Parser._parse_aToB(Parser.TRAP_HAZARD_TYPE_TO_FULL, type);
+	if (Parser.TRAP_HAZARD_TYPE_TO_FULL[type]) return Parser.TRAP_HAZARD_TYPE_TO_FULL[type];
+	return Parser.vehicleUpgradeTypeToFull(type);
 };
 
 Parser.TRAP_HAZARD_TYPE_TO_FULL = {

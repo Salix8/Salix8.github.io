@@ -39,8 +39,9 @@ const optionalFeatures = JSON.parse(fs.readFileSync(path.join(root, "data", "opt
 const removedUaSources = new Set([
 	"UAArtificer", "UAArtificerRevisited", "UAClassFeatureVariants", "UAClericDruidWizard", "UAFighter", "UAFighterRangerRogue", "UAFighterRogueWizard", "UALightDarkUnderdark", "UARevisedClassOptions", "UARevisedSubclasses", "UASorcererAndWarlock", "UAStarterSpells", "UATheFaithful", "UAWarlockAndWizard", "UAWaterborneAdventures",
 ]);
-assert.equal(optionalFeatures.length, 336, "D&D 2014 must retain the curated Optional Features catalogue.");
+assert.equal(optionalFeatures.length, 305, "D&D 2014 must retain the curated Optional Features catalogue.");
 assert.ok(optionalFeatures.every(({source}) => !removedUaSources.has(source)), "Removed UA sources must not remain in Optional Features.");
+assert.ok(optionalFeatures.every(({featureType = []}) => featureType.every(type => !type.startsWith("SHP:") && !type.startsWith("IWM:"))), "Vehicle upgrades must not remain in Optional Features.");
 assert.equal(new Set(optionalFeatures.map(({name, source}) => `${name}\u0000${source}`)).size, optionalFeatures.length, "Optional Features must not be duplicated.");
 
 const mystic = JSON.parse(fs.readFileSync(path.join(root, "data", "class", "class-mystic.json"), "utf8"));
@@ -55,6 +56,15 @@ assert.ok(!Object.keys(spellIndex).some(source => removedUaSources.has(source)),
 const modernMagicSpells = JSON.parse(fs.readFileSync(path.join(root, "data", "spells", "spells-ua-mm.json"), "utf8")).spell;
 assert.equal(modernMagicSpells.length, 14, "All Modern Magic spells must be retained.");
 
+const vehicleUpgrades = JSON.parse(fs.readFileSync(path.join(root, "data", "vehicles.json"), "utf8")).vehicleUpgrade;
+const trapsHazardsPage = fs.readFileSync(path.join(root, "js", "trapshazards.js"), "utf8");
+assert.equal(vehicleUpgrades.filter(({upgradeType = []}) => upgradeType.some(type => type.startsWith("SHP:"))).length, 22, "All Ship Upgrades must remain in the vehicle catalogue.");
+assert.equal(vehicleUpgrades.filter(({upgradeType = []}) => upgradeType.some(type => type.startsWith("IWM:"))).length, 9, "All Infernal War Machine upgrades must remain in the vehicle catalogue.");
+assert.match(trapsHazardsPage, /data\/vehicles\.json/);
+assert.match(trapsHazardsPage, /dataProps: \["trap", "hazard", "vehicleUpgrade"\]/);
+assert.match(fs.readFileSync(path.join(root, "js", "filter-trapshazards.js"), "utf8"), /"SHP:O"/);
+assert.match(fs.readFileSync(path.join(root, "js", "filter-trapshazards.js"), "utf8"), /"IWM:G"/);
+
 const potions = optionalFeatures.filter(it => it.potion);
 assert.equal(potions.length, 61, "All Alchemist potion recipes must be present.");
 assert.deepEqual(Object.fromEntries([1, 5, 10, 15].map(level => [level, potions.filter(it => it.potion.level === level).length])), {1: 19, 5: 20, 10: 10, 15: 12});
@@ -68,9 +78,8 @@ assert.match(optionalFeaturesFilter, /setValue\(selectionKey, 1\)/);
 assert.match(optionalFeaturesFilter, /_getClassKey\("Alquimista", "Himo"\)\]: "nest-only"/);
 assert.match(optionalFeaturesFilter, /_getClassKey\("Fighter", "PHB"\)\]: "omit"/);
 assert.match(optionalFeaturesFilter, /"fighting-styles", displayName: "Fighting Styles"/);
-assert.match(optionalFeaturesFilter, /"maneuvers", displayName: "Maneuvers"/);
-assert.match(optionalFeaturesFilter, /"ship-upgrades", displayName: "Ship Upgrades"/);
-assert.match(optionalFeaturesFilter, /"infernal-war-machine", displayName: "Infernal War Machine"/);
+assert.match(optionalFeaturesFilter, /featureType === "MV:B" \? "Battle Master"/);
+assert.doesNotMatch(optionalFeaturesFilter, /"MV:B": \{nest:/);
 assert.match(optionalFeaturesFilter, /isNestDivider: true/);
 assert.match(optionalFeaturesFilter, /header: "Potion Level"/);
 assert.match(optionalFeaturesFilter, /const filters = \[this\._ingredientFilter, this\._potionLevelFilter\]/);

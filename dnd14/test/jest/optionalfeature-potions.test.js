@@ -268,6 +268,22 @@ describe("Pociones del Alquimista", () => {
 		expect(fightingStyles.every(it => it.featureType.includes("FS:F"))).toBe(true);
 	});
 
+	it("shows maneuvers as the single Battle Master feature-type tag", () => {
+		const pageFilter = getOptionalFeatureFilterPage();
+		pageFilter._typeFilter.setValue("MV:B", 1);
+
+		const maneuvers = getFilterBoxMatches(pageFilter, DATA.optionalfeature);
+		expect(maneuvers).toHaveLength(23);
+		expect(maneuvers.every(it => it.featureType.includes("MV:B"))).toBe(true);
+		const maneuverItem = pageFilter._typeFilter._items.find(it => it.item === "MV:B");
+		expect(pageFilter._typeFilter._getDisplayText(maneuverItem)).toBe("Battle Master");
+	});
+
+	it("sorts feature-type tags without a bound class context", () => {
+		const sort = PageFilterOptionalFeatures._filterFeatureTypeSort;
+		expect(Number.isFinite(sort({item: "MV:B"}, {item: "EI"}))).toBe(true);
+	});
+
 	it("applies every visible feature-type pill through the same FilterBox route as the page", () => {
 		const pageFilter = getOptionalFeatureFilterPage();
 		pageFilter._filterBox = new FilterBox({

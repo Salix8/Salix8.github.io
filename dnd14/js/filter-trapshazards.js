@@ -24,6 +24,14 @@ class PageFilterTrapsHazards extends PageFilterBase {
 				"GEN",
 				"TRP",
 				"HAUNT",
+				"SHP:F",
+				"SHP:H",
+				"SHP:M",
+				"SHP:O",
+				"SHP:W",
+				"IWM:A",
+				"IWM:G",
+				"IWM:W",
 			],
 			displayFn: Parser.trapHazTypeToFull,
 			itemSortFn: PageFilterTrapsHazards.sortFilterType.bind(PageFilterTrapsHazards),
@@ -37,7 +45,11 @@ class PageFilterTrapsHazards extends PageFilterBase {
 	}
 
 	static mutateForFilters (it) {
-		it.trapHazType = it.trapHazType || "HAZ";
+		if (it.__prop === "vehicleUpgrade") {
+			it.trapHazType = it.upgradeType;
+		} else {
+			it.trapHazType = it.trapHazType || "HAZ";
+		}
 
 		this._mutateForFilters_commonSources(it);
 		this._mutateForFilters_commonMisc(it);

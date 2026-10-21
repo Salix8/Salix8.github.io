@@ -431,22 +431,6 @@ Omnidexer.TO_INDEX = [
 		include: (it) => Omnidexer.arrIncludesOrEquals(it.featureType, "AI")
 	},
 	{
-		category: Parser.CAT_ID_SHIP_UPGRADE,
-		file: "optionalfeatures.json",
-		listProp: "optionalfeature",
-		baseUrl: "optionalfeatures.html",
-		hover: true,
-		include: (it) => Omnidexer.arrIncludesOrEquals(it.featureType, "SHP:H") || Omnidexer.arrIncludesOrEquals(it.featureType, "SHP:M") || Omnidexer.arrIncludesOrEquals(it.featureType, "SHP:W") || Omnidexer.arrIncludesOrEquals(it.featureType, "SHP:F")
-	},
-	{
-		category: Parser.CAT_ID_INFERNAL_WAR_MACHINE_UPGRADE,
-		file: "optionalfeatures.json",
-		listProp: "optionalfeature",
-		baseUrl: "optionalfeatures.html",
-		hover: true,
-		include: (it) => Omnidexer.arrIncludesOrEquals(it.featureType, "IWM:W") || Omnidexer.arrIncludesOrEquals(it.featureType, "IWM:A") || Omnidexer.arrIncludesOrEquals(it.featureType, "IWM:G")
-	},
-	{
 		category: Parser.CAT_ID_ONOMANCY_RESONANT,
 		file: "optionalfeatures.json",
 		listProp: "optionalfeature",

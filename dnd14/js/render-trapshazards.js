@@ -2,6 +2,8 @@
 
 class RenderTrapsHazards {
 	static getRenderedTrapHazard (ent) {
+		if (ent.__prop === "vehicleUpgrade") return Renderer.vehicleUpgrade.getCompactRenderedString(ent, {page: UrlUtil.PG_TRAPS_HAZARDS});
+
 		const styleHint = VetoolsConfig.get("styleSwitcher", "style");
 
 		const subtitle = Renderer.traphazard.getSubtitle(ent);
