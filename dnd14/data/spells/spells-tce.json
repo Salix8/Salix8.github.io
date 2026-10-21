@@ -137,7 +137,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Dream of the Blue Veil",
@@ -184,7 +192,15 @@
 				"PS",
 				"TP"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Green-Flame Blade",
@@ -260,7 +276,15 @@
 			"areaTags": [
 				"MT",
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Intellect Fortress",
@@ -314,7 +338,15 @@
 				"SCT",
 				"SGT"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Lightning Lure",
@@ -434,7 +466,19 @@
 			"areaTags": [
 				"ST"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Spirit Shroud",
@@ -545,7 +589,15 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Beast",
@@ -656,7 +708,15 @@
 				"SGT",
 				"SMN"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Construct",
@@ -711,7 +771,15 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Elemental",
@@ -766,7 +834,15 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Fey",
@@ -821,7 +897,15 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Fiend",
@@ -876,7 +960,15 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Shadowspawn",
@@ -932,7 +1024,15 @@
 				"SGT",
 				"SMN"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Summon Undead",
@@ -987,7 +1087,15 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Sword Burst",
@@ -1046,7 +1154,15 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Tasha's Caustic Brew",
@@ -1157,7 +1273,19 @@
 			"areaTags": [
 				"ST"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Tasha's Otherworldly Guise",

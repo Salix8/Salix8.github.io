@@ -51,7 +51,19 @@
 			"miscTags": [
 				"OBJ"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Draconic Transformation",
@@ -275,7 +287,15 @@
 			"miscTags": [
 				"RO",
 				"SGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Raulothim's Psychic Lance",
@@ -331,7 +351,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Rime's Binding Ice",
@@ -440,7 +468,15 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		}
 	]
 }

@@ -108,7 +108,15 @@
 				"SGT",
 				"RO",
 				"ADV"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Imagen Maldita",
@@ -268,7 +276,15 @@
 				"RO",
 				"LGT",
 				"OBJ"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Heartsense",
@@ -410,7 +426,23 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Invocar Plaga",
@@ -718,7 +750,23 @@
 				"SGT",
 				"SCL",
 				"RO"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Snake Charm",
@@ -873,7 +921,15 @@
 				"SCL",
 				"SCT",
 				"AAD"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Desconcierto",
@@ -918,7 +974,15 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Minor Bird Charm",
@@ -974,7 +1038,15 @@
 			"miscTags": [
 				"SCT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Major Bird Charm",
@@ -1027,7 +1099,15 @@
 			],
 			"miscTags": [
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Florecer",
@@ -1164,7 +1244,15 @@
 						"Puedes targetear a dos criaturas extra por cada lv extra."
 					]
 				}
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Forma de Águila",
@@ -1609,7 +1697,15 @@
 				"FMV",
 				"UBA",
 				"OBJ"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Talismán de Hishna",
@@ -1664,7 +1760,15 @@
 				"AAD",
 				"OBJ",
 				"PIR"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Talismán de Pluma",
@@ -1718,7 +1822,15 @@
 			"damageInflict": [
 				"piercing",
 				"slashing"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		}
 	]
 }

@@ -45,7 +45,15 @@
 						"When you cast this spell using a spell slot of 2nd level or higher, the maximum size of the object increases by 1 foot for each slot level above 1st."
 					]
 				}
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Fast Friends",
@@ -109,7 +117,23 @@
 			"areaTags": [
 				"MT",
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Gift of Gab",
@@ -148,12 +172,28 @@
 					],
 					"by": "Môrgæn"
 				},
-				"Jim Darkmagic is said to have invented this spell, originally calling it {@i I said what?!} Have you ever been talking to the local monarch and accidentally mentioned how their son looks like your favorite hog from when you were growing up on the family farm? We've all been there! But rather than being beheaded for an honest slip of the tongue, you can pretend it never happened\u2014by ensuring that no one knows it happened.",
+				"Jim Darkmagic is said to have invented this spell, originally calling it {@i I said what?!} Have you ever been talking to the local monarch and accidentally mentioned how their son looks like your favorite hog from when you were growing up on the family farm? We've all been there! But rather than being beheaded for an honest slip of the tongue, you can pretend it never happened—by ensuring that no one knows it happened.",
 				"When you cast this spell, you skillfully reshape the memories of listeners in your immediate area, so that each creature of your choice within 5 feet of you forgets everything you said within the last 6 seconds. Those creatures then remember that you actually said the words you speak as the verbal component of the spell."
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Incite Greed",
@@ -207,7 +247,15 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Jim's Glowing Coin",
@@ -253,7 +301,15 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Jim's Magic Missile",
@@ -379,7 +435,15 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		}
 	]
 }

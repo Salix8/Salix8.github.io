@@ -188,7 +188,15 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Alter Self",
@@ -266,7 +274,19 @@
 			],
 			"miscTags": [
 				"UA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Animal Friendship",
@@ -406,7 +426,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Animal Shapes",
@@ -655,7 +683,15 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Antilife Shell",
@@ -828,7 +864,15 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Antipathy/Sympathy",
@@ -909,7 +953,15 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Arcane Eye",
@@ -962,7 +1014,15 @@
 			],
 			"miscTags": [
 				"UA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Arcane Gate",
@@ -1086,7 +1146,15 @@
 			],
 			"miscTags": [
 				"OBJ"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Armor of Agathys",
@@ -1140,7 +1208,15 @@
 			],
 			"miscTags": [
 				"THP"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Arms of Hadar",
@@ -1325,7 +1401,15 @@
 				},
 				"The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.",
 				"If you cast the spell two or more times before completing your next long rest, there is a cumulative {@chance 25|||Random reading!|Regular reading} chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Aura of Life",
@@ -1581,7 +1665,15 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Banishing Smite",
@@ -1628,7 +1720,15 @@
 			],
 			"miscTags": [
 				"AAD"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Banishment",
@@ -1706,7 +1806,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Barkskin",
@@ -1931,7 +2043,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Bigby's Hand",
@@ -2035,7 +2159,15 @@
 				"OBJ",
 				"SGT",
 				"UBA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Blade Barrier",
@@ -2130,7 +2262,15 @@
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Bless",
@@ -2209,7 +2349,15 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Blight",
@@ -2340,7 +2488,15 @@
 			],
 			"miscTags": [
 				"AAD"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Blindness/Deafness",
@@ -2409,7 +2565,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Blink",
@@ -2453,7 +2617,19 @@
 			"miscTags": [
 				"SGT",
 				"UA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Blur",
@@ -2505,7 +2681,15 @@
 			],
 			"entries": [
 				"Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with {@sense truesight}."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Branding Smite",
@@ -2561,7 +2745,15 @@
 			"miscTags": [
 				"AAD",
 				"LGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Burning Hands",
@@ -2637,7 +2829,15 @@
 			"areaTags": [
 				"N"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Call Lightning",
@@ -2927,7 +3127,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Chill Touch",
@@ -3158,7 +3370,15 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Clairvoyance",
@@ -3217,7 +3437,15 @@
 			],
 			"miscTags": [
 				"UA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Clone",
@@ -3322,7 +3550,15 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Cloudkill",
@@ -3401,7 +3637,15 @@
 			"areaTags": [
 				"S"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Color Spray",
@@ -3462,7 +3706,15 @@
 			],
 			"areaTags": [
 				"N"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Command",
@@ -3593,7 +3845,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Commune",
@@ -3702,7 +3962,15 @@
 					]
 				},
 				"For example, you could determine the location of powerful undead in the area, the location of major sources of safe drinking water, and the location of any nearby towns."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Compelled Duel",
@@ -3816,7 +4084,19 @@
 			"entries": [
 				"For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text.",
 				"This spell doesn't decode secret messages in a text or a glyph, such as an arcane sigil, that isn't part of a written language."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Compulsion",
@@ -3865,7 +4145,23 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Cone of Cold",
@@ -4064,7 +4360,19 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Conjure Animals",
@@ -4231,7 +4539,15 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Conjure Elemental",
@@ -4292,7 +4608,15 @@
 			],
 			"miscTags": [
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Conjure Fey",
@@ -4350,7 +4674,15 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Conjure Minor Elementals",
@@ -4419,7 +4751,15 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Conjure Volley",
@@ -4526,7 +4866,15 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Contact Other Plane",
@@ -4581,7 +4929,19 @@
 			],
 			"savingThrow": [
 				"intelligence"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Contagion",
@@ -4720,7 +5080,7 @@
 				}
 			],
 			"entries": [
-				"Choose a spell of 5th level or lower that you can cast, that has a casting time of 1 action, and that can target you. You cast that spell\u2014called the contingent spell\u2014as part of casting contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain circumstance occurs. You describe that circumstance when you cast the two spells. For example, a contingency cast with {@spell water breathing} might stipulate that {@spell water breathing} comes into effect when you are engulfed in water or a similar liquid.",
+				"Choose a spell of 5th level or lower that you can cast, that has a casting time of 1 action, and that can target you. You cast that spell—called the contingent spell—as part of casting contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain circumstance occurs. You describe that circumstance when you cast the two spells. For example, a contingency cast with {@spell water breathing} might stipulate that {@spell water breathing} comes into effect when you are engulfed in water or a similar liquid.",
 				"The contingent spell takes effect immediately after the circumstance is met for the first time, whether or not you want it to, and then contingency ends.",
 				"The contingent spell takes effect only on you, even if it can normally target others. You can use only one contingency spell at a time. If you cast this spell again, the effect of another contingency spell on you ends. Also, contingency ends on you if its material component is ever not on your person."
 			]
@@ -4896,7 +5256,23 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Control Weather",
@@ -5048,7 +5424,15 @@
 						]
 					]
 				}
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Cordon of Arrows",
@@ -5084,7 +5468,7 @@
 				}
 			],
 			"entries": [
-				"You plant four pieces of nonmagical ammunition\u2014{@item arrow|phb|arrows} or {@item crossbow bolt|phb|crossbow bolts}\u2014in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take {@damage 1d6} piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains.",
+				"You plant four pieces of nonmagical ammunition—{@item arrow|phb|arrows} or {@item crossbow bolt|phb|crossbow bolts}—in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take {@damage 1d6} piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains.",
 				"When you cast this spell, you can designate any creatures you choose, and the spell ignores them."
 			],
 			"entriesHigherLevel": [
@@ -5163,7 +5547,19 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Create Food and Water",
@@ -5270,7 +5666,15 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Create Undead",
@@ -5330,7 +5734,15 @@
 				"PRM",
 				"SMN",
 				"UBA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Creation",
@@ -5412,7 +5824,15 @@
 						"When you cast this spell using a spell slot of 6th level or higher, the cube increases by 5 feet for each slot level above 5th."
 					]
 				}
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Crown of Madness",
@@ -5472,7 +5892,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Crusader's Mantle",
@@ -5668,7 +6100,23 @@
 			"miscTags": [
 				"LGT",
 				"UBA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Darkness",
@@ -5742,7 +6190,15 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Darkvision",
@@ -5793,7 +6249,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Daylight",
@@ -6115,7 +6579,15 @@
 				"fey",
 				"fiend",
 				"undead"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Detect Magic",
@@ -6215,7 +6687,15 @@
 			],
 			"miscTags": [
 				"UA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Detect Poison and Disease",
@@ -6311,7 +6791,7 @@
 			],
 			"entries": [
 				"For the duration, you can read the thoughts of certain creatures. When you cast the spell and as your action on each turn until the spell ends, you can focus your mind on any one creature that you can see within 30 feet of you. If the creature you choose has an Intelligence of 3 or lower or doesn't speak any language, the creature is unaffected.",
-				"You initially learn the surface thoughts of the creature\u2014what is most on its mind in that moment. As an action, you can either shift your attention to another creature's thoughts or attempt to probe deeper into the same creature's mind. If you probe deeper, the target must make a Wisdom saving throw. If it fails, you gain insight into its reasoning (if any), its emotional state, and something that looms large in its mind (such as something it worries over, loves, or hates). If it succeeds, the spell ends. Either way, the target knows that you are probing into its mind, and unless you shift your attention to another creature's thoughts, the creature can use its action on its turn to make an Intelligence check contested by your Intelligence check; if it succeeds, the spell ends.",
+				"You initially learn the surface thoughts of the creature—what is most on its mind in that moment. As an action, you can either shift your attention to another creature's thoughts or attempt to probe deeper into the same creature's mind. If you probe deeper, the target must make a Wisdom saving throw. If it fails, you gain insight into its reasoning (if any), its emotional state, and something that looms large in its mind (such as something it worries over, loves, or hates). If it succeeds, the spell ends. Either way, the target knows that you are probing into its mind, and unless you shift your attention to another creature's thoughts, the creature can use its action on its turn to make an Intelligence check contested by your Intelligence check; if it succeeds, the spell ends.",
 				"Questions verbally directed at the target creature naturally shape the course of its thoughts, so this spell is particularly effective as part of an interrogation.",
 				"You can also use this spell to detect the presence of thinking creatures you can't see. When you cast the spell or as your action during the duration, you can search for thoughts within 30 feet of you. The spell can penetrate barriers, but 2 feet of rock, 2 inches of any metal other than lead, or a thin sheet of lead blocks you. You can't detect a creature with an Intelligence of 3 or lower or one that doesn't speak any language.",
 				"Once you detect the presence of a creature in this way, you can read its thoughts for the rest of the duration as described above, even if you can't see it, but it must still be within range."
@@ -6325,7 +6805,23 @@
 			"miscTags": [
 				"SGT",
 				"UA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Dimension Door",
@@ -6385,7 +6881,23 @@
 			"miscTags": [
 				"TP"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Disguise Self",
@@ -6438,7 +6950,7 @@
 				}
 			],
 			"entries": [
-				"You make yourself\u2014including your clothing, armor, weapons, and other belongings on your person\u2014look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.",
+				"You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.",
 				"The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.",
 				"To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence ({@skill Investigation}) check against your spell save DC."
 			],
@@ -6448,7 +6960,19 @@
 			"miscTags": [
 				"SGT",
 				"UA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Disintegrate",
@@ -6610,7 +7134,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Dispel Magic",
@@ -6705,7 +7237,23 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Dissonant Whispers",
@@ -6754,7 +7302,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Divination",
@@ -6922,7 +7478,15 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Dominate Beast",
@@ -6988,7 +7552,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Dominate Monster",
@@ -7061,7 +7633,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Dominate Person",
@@ -7133,7 +7713,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Drawmij's Instant Summons",
@@ -7377,7 +7969,15 @@
 			],
 			"areaTags": [
 				"R"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Eldritch Blast",
@@ -7584,7 +8184,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Enlarge/Reduce",
@@ -7637,14 +8249,14 @@
 					"name": "Enlarge",
 					"type": "entries",
 					"entries": [
-						"The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category\u2014from Medium to Large, for example. If there isn't enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size. While these weapons are enlarged, the target's attacks with them deal {@damage 1d4} extra damage."
+						"The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category—from Medium to Large, for example. If there isn't enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size. While these weapons are enlarged, the target's attacks with them deal {@damage 1d4} extra damage."
 					]
 				},
 				{
 					"name": "Reduce",
 					"type": "entries",
 					"entries": [
-						"The target's size is halved in all dimensions, and its weight is reduced to one-eighth of normal. This reduction decreases its size by one category\u2014from Medium to Small, for example. Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. The target's weapons also shrink to match its new size. While these weapons are reduced, the target's attacks with them deal {@damage 1d4} less damage (this can't reduce the damage below 1)."
+						"The target's size is halved in all dimensions, and its weight is reduced to one-eighth of normal. This reduction decreases its size by one category—from Medium to Small, for example. Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. The target's weapons also shrink to match its new size. While these weapons are reduced, the target's attacks with them deal {@damage 1d4} less damage (this can't reduce the damage below 1)."
 					]
 				}
 			],
@@ -7658,7 +8270,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Ensnaring Strike",
@@ -7820,7 +8440,19 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Etherealness",
@@ -8006,7 +8638,19 @@
 			],
 			"miscTags": [
 				"UBA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Eyebite",
@@ -8083,7 +8727,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Fabricate",
@@ -8132,7 +8784,15 @@
 				"OBJ",
 				"PRM",
 				"SGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Faerie Fire",
@@ -8191,7 +8851,19 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "False Life",
@@ -8309,7 +8981,15 @@
 			],
 			"areaTags": [
 				"N"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Feather Fall",
@@ -8369,7 +9049,19 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Feeblemind",
@@ -8426,7 +9118,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Feign Death",
@@ -8493,7 +9193,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Find Familiar",
@@ -8603,7 +9315,15 @@
 				"PRM",
 				"SMN",
 				"UA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Find the Path",
@@ -8636,7 +9356,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a set of divinatory tools\u2014such as bones, ivory sticks, cards, teeth, or carved runes\u2014worth 100 gp and an object from the location you wish to find",
+					"text": "a set of divinatory tools—such as bones, ivory sticks, cards, teeth, or carved runes—worth 100 gp and an object from the location you wish to find",
 					"cost": 10000
 				}
 			},
@@ -8695,7 +9415,15 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Finger of Death",
@@ -9281,7 +10009,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Fly",
@@ -9366,7 +10102,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Fog Cloud",
@@ -9432,7 +10176,15 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Forbiddance",
@@ -9498,7 +10250,15 @@
 			"miscTags": [
 				"PIR",
 				"PRM"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Forcecage",
@@ -9554,7 +10314,15 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Foresight",
@@ -9653,7 +10421,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Friends",
@@ -9701,7 +10481,23 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Gaseous Form",
@@ -9820,7 +10616,15 @@
 				"PS",
 				"SGT",
 				"TP"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Geas",
@@ -9895,7 +10699,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Gentle Repose",
@@ -10206,7 +11022,15 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Goodberry",
@@ -10250,7 +11074,15 @@
 			],
 			"miscTags": [
 				"HL"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Grasping Vine",
@@ -10361,7 +11193,15 @@
 			],
 			"areaTags": [
 				"Q"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Greater Invisibility",
@@ -10419,7 +11259,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Greater Restoration",
@@ -10701,7 +11549,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Guiding Bolt",
@@ -10772,7 +11632,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Gust of Wind",
@@ -10842,7 +11710,19 @@
 			],
 			"areaTags": [
 				"L"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Hail of Thorns",
@@ -11048,7 +11928,15 @@
 			"miscTags": [
 				"LGT",
 				"OBS"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Hallucinatory Terrain",
@@ -11150,7 +12038,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Haste",
@@ -11282,7 +12178,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Healing Word",
@@ -11351,7 +12255,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Heat Metal",
@@ -11419,7 +12331,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Hellish Rebuke",
@@ -11478,7 +12398,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Heroes' Feast",
@@ -11594,7 +12522,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Hex",
@@ -11738,7 +12674,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Hold Person",
@@ -11829,7 +12773,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Holy Aura",
@@ -12055,7 +13007,15 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Ice Storm",
@@ -12202,7 +13162,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Illusory Script",
@@ -12254,7 +13226,15 @@
 				"To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know.",
 				"Should the spell be dispelled, the original script and the illusion both disappear.",
 				"A creature with {@sense truesight} can read the hidden message."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Imprisonment",
@@ -12365,7 +13345,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Incendiary Cloud",
@@ -12639,7 +13627,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Jump",
@@ -12687,7 +13683,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Knock",
@@ -12758,7 +13766,19 @@
 			"miscTags": [
 				"OBJ",
 				"SGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Legend Lore",
@@ -12815,7 +13835,15 @@
 			],
 			"miscTags": [
 				"OBJ"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Leomund's Secret Chest",
@@ -12865,7 +13893,15 @@
 			"miscTags": [
 				"OBJ",
 				"PRM"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Leomund's Tiny Hut",
@@ -12918,7 +13954,15 @@
 			],
 			"areaTags": [
 				"H"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Lesser Restoration",
@@ -13054,7 +14098,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Light",
@@ -13122,7 +14174,19 @@
 			"miscTags": [
 				"LGT",
 				"OBJ"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Lightning Arrow",
@@ -13308,7 +14372,15 @@
 			"affectsCreatureType": [
 				"beast",
 				"plant"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Locate Creature",
@@ -13355,9 +14427,17 @@
 			],
 			"entries": [
 				"Describe or name a creature that is familiar to you. You sense the direction to the creature's location, as long as that creature is within 1,000 feet of you. If the creature is moving, you know the direction of its movement.",
-				"The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a {@creature unicorn}), so long as you have seen such a creature up close\u2014within 30 feet\u2014at least once. If the creature you described or named is in a different form, such as being under the effects of a {@spell polymorph} spell, this spell doesn't locate the creature.",
+				"The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a {@creature unicorn}), so long as you have seen such a creature up close—within 30 feet—at least once. If the creature you described or named is in a different form, such as being under the effects of a {@spell polymorph} spell, this spell doesn't locate the creature.",
 				"This spell can't locate a creature if running water at least 10 feet wide blocks a direct path between you and the creature."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Locate Object",
@@ -13406,12 +14486,20 @@
 			],
 			"entries": [
 				"Describe or name an object that is familiar to you. You sense the direction to the object's location, as long as that object is within 1,000 feet of you. If the object is in motion, you know the direction of its movement.",
-				"The spell can locate a specific object known to you, as long as you have seen it up close\u2014within 30 feet\u2014at least once. Alternatively, the spell can locate the nearest object of a particular kind, such as a certain kind of apparel, jewelry, furniture, tool, or weapon.",
+				"The spell can locate a specific object known to you, as long as you have seen it up close—within 30 feet—at least once. Alternatively, the spell can locate the nearest object of a particular kind, such as a certain kind of apparel, jewelry, furniture, tool, or weapon.",
 				"This spell can't locate an object if any thickness of lead, even a thin sheet, blocks a direct path between you and the object."
 			],
 			"miscTags": [
 				"OBJ"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Longstrider",
@@ -13466,7 +14554,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Mage Armor",
@@ -13535,7 +14635,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Mage Hand",
@@ -13606,7 +14714,15 @@
 			"miscTags": [
 				"OBJ",
 				"UA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Magic Circle",
@@ -13687,7 +14803,15 @@
 			],
 			"areaTags": [
 				"Y"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Magic Jar",
@@ -13746,7 +14870,15 @@
 			"miscTags": [
 				"SGT",
 				"UA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Magic Missile",
@@ -13828,7 +14960,19 @@
 				"MT",
 				"ST"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Magic Mouth",
@@ -13894,7 +15038,23 @@
 			"miscTags": [
 				"OBJ",
 				"SGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Magic Weapon",
@@ -14023,7 +15183,15 @@
 				"PRM",
 				"SGT",
 				"UA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Mass Cure Wounds",
@@ -14224,7 +15392,15 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Mass Suggestion",
@@ -14289,7 +15465,15 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Maze",
@@ -14345,7 +15529,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Meld into Stone",
@@ -14397,7 +15589,15 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Melf's Acid Arrow",
@@ -14509,7 +15709,15 @@
 			],
 			"miscTags": [
 				"OBJ"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Message",
@@ -14561,7 +15769,23 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Meteor Swarm",
@@ -14724,12 +15948,20 @@
 			"entries": [
 				"You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action or cast this spell again.",
 				"If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.",
-				"If you create an image of an object\u2014such as a chair, muddy footprints, or a small chest\u2014it must be no larger than a 5-foot cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, because things can pass through it.",
+				"If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, because things can pass through it.",
 				"If a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature."
 			],
 			"abilityCheck": [
 				"intelligence"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Mirage Arcane",
@@ -14827,7 +16059,15 @@
 			],
 			"miscTags": [
 				"UA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Mislead",
@@ -14880,7 +16120,19 @@
 				"SGT",
 				"UA",
 				"UBA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Misty Step",
@@ -14941,7 +16193,15 @@
 			"miscTags": [
 				"SGT",
 				"TP"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Modify Memory",
@@ -15014,7 +16274,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Moonbeam",
@@ -15136,7 +16404,15 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Mordenkainen's Magnificent Mansion",
@@ -15260,7 +16536,15 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Mordenkainen's Sword",
@@ -15352,7 +16636,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "an iron blade and a small bag containing a mixture of soils\u2014clay, loam, and sand"
+				"m": "an iron blade and a small bag containing a mixture of soils—clay, loam, and sand"
 			},
 			"duration": [
 				{
@@ -15431,7 +16715,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Nystul's Magic Aura",
@@ -15497,7 +16789,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Otiluke's Freezing Sphere",
@@ -15601,7 +16901,7 @@
 			],
 			"entries": [
 				"A sphere of shimmering force encloses a creature or object of Large size or smaller within range. An unwilling creature must make a Dexterity saving throw. On a failed save, the creature is enclosed for the duration.",
-				"Nothing\u2014not physical objects, energy, or other spell effects\u2014can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can't be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it.",
+				"Nothing—not physical objects, energy, or other spell effects—can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can't be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it.",
 				"The sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can use its action to push against the sphere's walls and thus roll the sphere at up to half the creature's speed. Similarly, the globe can be picked up and moved by other creatures.",
 				"A {@spell disintegrate} spell targeting the globe destroys it without harming anything inside it."
 			],
@@ -15628,7 +16928,23 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Otto's Irresistible Dance",
@@ -15731,7 +17047,15 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Passwall",
@@ -15789,7 +17113,19 @@
 			"miscTags": [
 				"OBJ",
 				"SGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Phantasmal Force",
@@ -15839,7 +17175,7 @@
 				"You craft an illusion that takes root in the mind of a creature that you can see within range. The target must make an Intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration. This spell has no effect on undead or constructs.",
 				"The phantasm includes sound, temperature, and other stimuli, also evident only to the creature.",
 				"The target can use its action to examine the phantasm with an Intelligence ({@skill Investigation}) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends.",
-				"While a target is affected by the spell, the target treats the phantasm as if it were real. The target rationalizes any illogical outcomes from interacting with the phantasm. For example, a target attempting to walk across a phantasmal bridge that spans a chasm falls once it steps onto the bridge. If the target survives the fall, it still believes that the bridge exists and comes up with some other explanation for its fall\u2014it was pushed, it slipped, or a strong wind might have knocked it off.",
+				"While a target is affected by the spell, the target treats the phantasm as if it were real. The target rationalizes any illogical outcomes from interacting with the phantasm. For example, a target attempting to walk across a phantasmal bridge that spans a chasm falls once it steps onto the bridge. If the target survives the fall, it still believes that the bridge exists and comes up with some other explanation for its fall—it was pushed, it slipped, or a strong wind might have knocked it off.",
 				"An affected target is so convinced of the phantasm's reality that it can even take damage from the illusion. A phantasm created to appear as a creature can attack the target. Similarly, a phantasm created to appear as fire, a pool of acid, or lava can burn the target. Each round on your turn, the phantasm can deal {@damage 1d6} psychic damage to the target if it is in the phantasm's area or within 5 feet of the phantasm, provided that the illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the illusion."
 			],
 			"damageInflict": [
@@ -15939,7 +17275,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Phantom Steed",
@@ -16033,7 +17377,15 @@
 			],
 			"miscTags": [
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Planar Binding",
@@ -16104,7 +17456,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Plane Shift",
@@ -16177,7 +17541,15 @@
 			"areaTags": [
 				"MT",
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Plant Growth",
@@ -16358,7 +17730,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Power Word Heal",
@@ -16409,7 +17793,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Power Word Kill",
@@ -16453,7 +17845,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Power Word Stun",
@@ -16503,7 +17903,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Prayer of Healing",
@@ -16650,7 +18058,15 @@
 			"miscTags": [
 				"BO",
 				"OBJ"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Prismatic Spray",
@@ -16808,7 +18224,7 @@
 				}
 			],
 			"entries": [
-				"A shimmering, multicolored plane of light forms a vertical opaque wall\u2014up to 90 feet long, 30 feet high, and 1 inch thick\u2014centered on a point you can see within range. Alternatively, you can shape the wall into a sphere up to 30 feet in diameter centered on a point you choose within range. The wall remains in place for the duration. If you position the wall so that it passes through a space occupied by a creature, the spell fails, and your action and the spell slot are wasted.",
+				"A shimmering, multicolored plane of light forms a vertical opaque wall—up to 90 feet long, 30 feet high, and 1 inch thick—centered on a point you can see within range. Alternatively, you can shape the wall into a sphere up to 30 feet in diameter centered on a point you choose within range. The wall remains in place for the duration. If you position the wall so that it passes through a space occupied by a creature, the spell fails, and your action and the spell slot are wasted.",
 				"The wall sheds bright light out to a range of 100 feet and dim light for an additional 100 feet. You and creatures you designate at the time you cast the spell can pass through and remain near the wall without harm. If another creature that can see the wall moves to within 20 feet of it or starts its turn there, the creature must succeed on a Constitution saving throw or become {@condition blinded} for 1 minute.",
 				"The wall consists of seven layers, each with a different color. When a creature attempts to reach into or pass through the wall, it does so one layer at a time through all the wall's layers. As it passes or reaches through each layer, the creature must make a Dexterity saving throw or be affected by that layer's properties as described below.",
 				"The wall can be destroyed, also one layer at a time, in order from red to violet, by means specific to each layer. Once a layer is destroyed, it remains so for the duration of the spell. {@spell Antimagic field} has no effect on the wall, and {@spell dispel magic} can affect only the violet layer.",
@@ -16957,7 +18373,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Programmed Illusion",
@@ -17132,7 +18556,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Protection from Evil and Good",
@@ -17197,7 +18629,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Protection from Poison",
@@ -17359,8 +18803,8 @@
 			"entries": [
 				"You return a dead creature you touch to life, provided that it has been dead no longer than 10 days. If the creature's soul is both willing and at liberty to rejoin the body, the creature returns to life with 1 hit point.",
 				"This spell also neutralizes any poisons and cures nonmagical diseases that affected the creature at the time it died. This spell doesn't, however, remove magical diseases, curses, or similar effects; if these aren't first removed prior to casting the spell, they take effect when the creature returns to life. The spell can't return an undead creature to life.",
-				"This spell closes all mortal wounds, but it doesn't restore missing body parts. If the creature is lacking body parts or organs integral for its survival\u2014its head, for instance\u2014the spell automatically fails.",
-				"Coming back from the dead is an ordeal. The target takes a \u22124 penalty to all attack rolls, saving throws, and ability checks. Every time the target finishes a long rest, the penalty is reduced by 1 until it disappears."
+				"This spell closes all mortal wounds, but it doesn't restore missing body parts. If the creature is lacking body parts or organs integral for its survival—its head, for instance—the spell automatically fails.",
+				"Coming back from the dead is an ordeal. The target takes a −4 penalty to all attack rolls, saving throws, and ability checks. Every time the target finishes a long rest, the penalty is reduced by 1 until it disappears."
 			],
 			"affectsCreatureType": [
 				"aberration",
@@ -17433,7 +18877,15 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Ray of Enfeeblement",
@@ -17942,7 +19394,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Resistance",
@@ -17997,7 +19457,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Resurrection",
@@ -18048,7 +19520,7 @@
 				"You touch a dead creature that has been dead for no more than a century, that didn't die of old age, and that isn't undead. If its soul is free and willing, the target returns to life with all its hit points.",
 				"This spell neutralizes any poisons and cures normal diseases afflicting the creature when it died. It doesn't, however, remove magical diseases, curses, and the like; if such effects aren't removed prior to casting the spell, they afflict the target on its return to life.",
 				"This spell closes all mortal wounds and restores any missing body parts.",
-				"Coming back from the dead is an ordeal. The target takes a \u22124 penalty to all attack rolls, saving throws, and ability checks. Every time the target finishes a long rest, the penalty is reduced by 1 until it disappears.",
+				"Coming back from the dead is an ordeal. The target takes a −4 penalty to all attack rolls, saving throws, and ability checks. Every time the target finishes a long rest, the penalty is reduced by 1 until it disappears.",
 				"Casting this spell to restore life to a creature that has been dead for one year or longer taxes you greatly. Until you finish a long rest, you can't cast spells again, and you have disadvantage on all attack rolls, ability checks, and saving throws."
 			],
 			"affectsCreatureType": [
@@ -18068,7 +19540,15 @@
 			],
 			"miscTags": [
 				"HL"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Reverse Gravity",
@@ -18126,7 +19606,15 @@
 			],
 			"areaTags": [
 				"Y"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Revivify",
@@ -18239,7 +19727,15 @@
 				"The extradimensional space can be reached by climbing to the top of the rope. The space can hold as many as eight Medium or smaller creatures. The rope can be pulled into the space, making the rope disappear from view outside the space.",
 				"Attacks and spells can't cross through the entrance into or out of the extradimensional space, but those inside can see out of it as if through a 3-foot-by-5-foot window centered on the rope.",
 				"Anything inside the extradimensional space drops out when the spell ends."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Sacred Flame",
@@ -18367,7 +19863,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Scorching Ray",
@@ -18542,7 +20050,15 @@
 			],
 			"savingThrow": [
 				"wisdom"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Searing Smite",
@@ -18595,7 +20111,15 @@
 			],
 			"miscTags": [
 				"AAD"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "See Invisibility",
@@ -18646,7 +20170,15 @@
 			],
 			"entries": [
 				"For the duration, you see {@condition invisible} creatures and objects as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Seeming",
@@ -18768,7 +20300,19 @@
 			"entries": [
 				"You send a short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with Intelligence scores of at least 1 to understand the meaning of your message.",
 				"You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a {@chance 5|||Message lost!|Message arrives} chance that the message doesn't arrive."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Sequester",
@@ -19008,7 +20552,15 @@
 			],
 			"miscTags": [
 				"MAC"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Shield of Faith",
@@ -19306,7 +20858,15 @@
 			],
 			"miscTags": [
 				"UA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Simulacrum",
@@ -19564,7 +21124,7 @@
 			],
 			"entries": [
 				"You alter time around up to six creatures of your choice in a 40-foot cube within range. Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration.",
-				"An affected target's speed is halved, it takes a \u22122 penalty to AC and Dexterity saving throws, and it can't use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature's abilities or magic items, it can't make more than one melee or ranged attack during its turn.",
+				"An affected target's speed is halved, it takes a −2 penalty to AC and Dexterity saving throws, and it can't use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature's abilities or magic items, it can't make more than one melee or ranged attack during its turn.",
 				"If the creature attempts to cast a spell with a casting time of 1 action, roll a {@dice d20}. On an 11 or higher, the spell doesn't take effect until the creature's next turn, and the creature must use its action on that turn to complete the spell. If it can't, the spell is wasted.",
 				"A creature affected by this spell makes another Wisdom saving throw at the end of each of its turns. On a successful save, the effect ends for it."
 			],
@@ -19577,7 +21137,15 @@
 			"areaTags": [
 				"C",
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Spare the Dying",
@@ -19687,7 +21255,15 @@
 			],
 			"affectsCreatureType": [
 				"beast"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Speak with Dead",
@@ -19769,7 +21345,15 @@
 				"monstrosity",
 				"ooze",
 				"plant"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Speak with Plants",
@@ -19818,7 +21402,15 @@
 				"Plants might be able to perform other tasks on your behalf, at the DM's discretion. The spell doesn't enable plants to uproot themselves and move about, but they can freely move branches, tendrils, and stalks.",
 				"If a plant creature is in the area, you can communicate with it as if you shared a common language, but you gain no magical ability to influence it.",
 				"This spell can cause the plants created by the {@spell entangle} spell to release a {@condition restrained} creature."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Spider Climb",
@@ -19875,7 +21467,15 @@
 			],
 			"entries": [
 				"Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving its hands free. The target also gains a climbing speed equal to its walking speed."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Spike Growth",
@@ -20131,7 +21731,15 @@
 			],
 			"miscTags": [
 				"AAD"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Stinking Cloud",
@@ -20376,7 +21984,7 @@
 				},
 				{
 					"type": "entries",
-					"name": "Round 5\u201310",
+					"name": "Round 5–10",
 					"entries": [
 						"Gusts and freezing rain assail the area under the cloud. The area becomes {@quickref difficult terrain||3} and is {@quickref Vision and Light|PHB|2||heavily obscured}. Each creature there takes {@damage 1d6} cold damage. Ranged weapon attacks in the area are impossible. The wind and rain count as a severe distraction for the purposes of maintaining {@status concentration} on spells. Finally, gusts of strong wind (ranging from 20 to 50 miles per hour) automatically disperse fog, mists, and similar phenomena in the area, whether mundane or magical."
 					]
@@ -20475,7 +22083,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Sunbeam",
@@ -20765,7 +22381,15 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Tasha's Hideous Laughter",
@@ -20831,7 +22455,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Telekinesis",
@@ -20914,7 +22550,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Telepathy",
@@ -21035,52 +22679,52 @@
 					"rows": [
 						[
 							"Permanent circle",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"01\u2013100"
+							"—",
+							"—",
+							"—",
+							"01–100"
 						],
 						[
 							"Associated object",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"01\u2013100"
+							"—",
+							"—",
+							"—",
+							"01–100"
 						],
 						[
 							"Very familiar",
-							"01\u201305",
-							"06\u201313",
-							"14\u201324",
-							"25\u2013100"
+							"01–05",
+							"06–13",
+							"14–24",
+							"25–100"
 						],
 						[
 							"Seen casually",
-							"01\u201333",
-							"34\u201343",
-							"44\u201353",
-							"54\u2013100"
+							"01–33",
+							"34–43",
+							"44–53",
+							"54–100"
 						],
 						[
 							"Viewed once",
-							"01\u201343",
-							"44\u201353",
-							"54\u201373",
-							"74\u2013100"
+							"01–43",
+							"44–53",
+							"54–73",
+							"74–100"
 						],
 						[
 							"Description",
-							"01\u201343",
-							"44\u201353",
-							"54\u201373",
-							"74\u2013100"
+							"01–43",
+							"44–53",
+							"54–73",
+							"74–100"
 						],
 						[
 							"False destination",
-							"01\u201350",
-							"51\u2013100",
-							"\u2014",
-							"\u2014"
+							"01–50",
+							"51–100",
+							"—",
+							"—"
 						]
 					]
 				},
@@ -21133,7 +22777,15 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Teleportation Circle",
@@ -21191,14 +22843,26 @@
 			],
 			"entries": [
 				"As you cast the spell, you draw a 10-foot-diameter circle on the ground inscribed with sigils that link your location to a permanent teleportation circle of your choice whose sigil sequence you know and that is on the same plane of existence as you. A shimmering portal opens within the circle you drew and remains open until the end of your next turn. Any creature that enters the portal instantly appears within 5 feet of the destination circle or in the nearest unoccupied space if that space is occupied.",
-				"Many major temples, guilds, and other important places have permanent teleportation circles inscribed somewhere within their confines. Each such circle includes a unique sigil sequence\u2014a string of magical runes arranged in a particular pattern. When you first gain the ability to cast this spell, you learn the sigil sequences for two destinations on the Material Plane, determined by the DM. You can learn additional sigil sequences during your adventures. You can commit a new sigil sequence to memory after studying it for 1 minute.",
+				"Many major temples, guilds, and other important places have permanent teleportation circles inscribed somewhere within their confines. Each such circle includes a unique sigil sequence—a string of magical runes arranged in a particular pattern. When you first gain the ability to cast this spell, you learn the sigil sequences for two destinations on the Material Plane, determined by the DM. You can learn additional sigil sequences during your adventures. You can commit a new sigil sequence to memory after studying it for 1 minute.",
 				"You can create a permanent teleportation circle by casting this spell in the same location every day for one year. You need not use the circle to teleport when you cast the spell in this way."
 			],
 			"miscTags": [
 				"PIR",
 				"PRM",
 				"TP"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Tenser's Floating Disk",
@@ -21255,7 +22919,15 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Thaumaturgy",
@@ -21320,7 +22992,19 @@
 					]
 				},
 				"If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Thorn Whip",
@@ -21431,7 +23115,15 @@
 			"miscTags": [
 				"AAD",
 				"FMV"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Thunderwave",
@@ -21513,7 +23205,19 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Time Stop",
@@ -21558,7 +23262,15 @@
 			"entries": [
 				"You briefly stop the flow of time for everyone but yourself. No time passes for other creatures, while you take {@dice 1d4 + 1} turns in a row, during which you can use actions and move as normal.",
 				"This spell ends if one of the actions you use during this period, or any effects that you create during this period, affects a creature other than you or an object being worn or carried by someone other than you. In addition, the spell ends if you move to a place more than 1,000 feet from the location where you cast it."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Tongues",
@@ -21612,7 +23324,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Transport via Plants",
@@ -21894,7 +23618,15 @@
 			],
 			"entries": [
 				"This spell gives the willing creature you touch the ability to see things as they actually are. For the duration, the creature has {@sense truesight}, notices secret doors hidden by magic, and can see into the Ethereal Plane, all out to a range of 120 feet."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "True Strike",
@@ -21940,7 +23672,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Tsunami",
@@ -21991,7 +23731,15 @@
 			],
 			"areaTags": [
 				"W"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Unseen Servant",
@@ -22176,7 +23924,15 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Wall of Fire",
@@ -22307,7 +24063,19 @@
 			],
 			"areaTags": [
 				"W"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Wall of Ice",
@@ -22615,7 +24383,19 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Water Walk",
@@ -22663,7 +24443,7 @@
 				"ritual": true
 			},
 			"entries": [
-				"This spell grants the ability to move across any liquid surface\u2014such as water, acid, mud, snow, quicksand, or lava\u2014as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat). Up to ten willing creatures you can see within range gain this ability for the duration.",
+				"This spell grants the ability to move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat). Up to ten willing creatures you can see within range gain this ability for the duration.",
 				"If you target a creature submerged in a liquid, the spell carries the target to the surface of the liquid at a rate of 60 feet per round."
 			],
 			"miscTags": [
@@ -22671,7 +24451,19 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Web",
@@ -22753,7 +24545,15 @@
 			"areaTags": [
 				"C"
 			],
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Weird",
@@ -23002,7 +24802,15 @@
 				"ADV",
 				"HL",
 				"SGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Witch Bolt",
@@ -23068,7 +24876,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Word of Recall",
@@ -23162,7 +24982,15 @@
 			],
 			"miscTags": [
 				"AAD"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Zone of Truth",
@@ -23211,7 +25039,15 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		}
 	]
 }

@@ -1,0 +1,2263 @@
+{
+	"Lexarca": [
+		{
+			"name": "Adivinación Menor",
+			"source": "GdR",
+			"level": 0
+		},
+		{
+			"name": "Dancing Lights",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Encode Thoughts",
+			"source": "GGR",
+			"level": 0
+		},
+		{
+			"name": "Friends",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Guidance",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Light",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Message",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Mind Sliver",
+			"source": "TCE",
+			"level": 0
+		},
+		{
+			"name": "Resistance",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Thaumaturgy",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Thunderclap",
+			"source": "XGE",
+			"level": 0
+		},
+		{
+			"name": "Vicious Mockery",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Word of Radiance",
+			"source": "XGE",
+			"level": 0
+		},
+		{
+			"name": "Abrir Mente",
+			"source": "CdS",
+			"level": 1
+		},
+		{
+			"name": "Bane",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Bless",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Cause Fear",
+			"source": "XGE",
+			"level": 1
+		},
+		{
+			"name": "Charm Person",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Command",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Comprehend Languages",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Dissonant Whispers",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Healing Word",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Hellish Rebuke",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Heroism",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Hush",
+			"source": "GdR",
+			"level": 1
+		},
+		{
+			"name": "Identify",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Magic Missile",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Magnify Gravity",
+			"source": "EGW",
+			"level": 1
+		},
+		{
+			"name": "Minor Bird Charm",
+			"source": "GMAM",
+			"level": 1
+		},
+		{
+			"name": "Postrar",
+			"source": "GPNM",
+			"level": 1
+		},
+		{
+			"name": "Protection from Evil and Good",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Silvery Barbs",
+			"source": "SCC",
+			"level": 1
+		},
+		{
+			"name": "Speak with Animals",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Tasha's Hideous Laughter",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Thunderwave",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Vértigo",
+			"source": "GPNM",
+			"level": 1
+		},
+		{
+			"name": "Witch Bolt",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Amplificación",
+			"source": "GdR",
+			"level": 2
+		},
+		{
+			"name": "Animal Messenger",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Augury",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Borrowed Knowledge",
+			"source": "SCC",
+			"level": 2
+		},
+		{
+			"name": "Buscador de Sueños",
+			"source": "CdS",
+			"level": 2
+		},
+		{
+			"name": "Crown of Madness",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Desconcierto",
+			"source": "GMAM",
+			"level": 2
+		},
+		{
+			"name": "Detect Thoughts",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Eco de Combate",
+			"source": "GPNM",
+			"level": 2
+		},
+		{
+			"name": "Enhance Ability",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Enthrall",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Gift of Gab",
+			"source": "AI",
+			"level": 2
+		},
+		{
+			"name": "Hipnosis",
+			"source": "GMAM",
+			"level": 2
+		},
+		{
+			"name": "Hold Person",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Knock",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Magic Mouth",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Mind Spike",
+			"source": "XGE",
+			"level": 2
+		},
+		{
+			"name": "Ojos de Oghma",
+			"source": "GdR",
+			"level": 2
+		},
+		{
+			"name": "Pacto de Verdad",
+			"source": "GPNM",
+			"level": 2
+		},
+		{
+			"name": "Suggestion",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Tasha's Mind Whip",
+			"source": "TCE",
+			"level": 2
+		},
+		{
+			"name": "Zone of Truth",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Anonimato",
+			"source": "CdS",
+			"level": 3
+		},
+		{
+			"name": "Antagonize",
+			"source": "BMT",
+			"level": 3
+		},
+		{
+			"name": "Atar Consciencia",
+			"source": "CdS",
+			"level": 3
+		},
+		{
+			"name": "Bestow Curse",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Dispel Magic",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Enemies Abound",
+			"source": "XGE",
+			"level": 3
+		},
+		{
+			"name": "Fast Friends",
+			"source": "AI",
+			"level": 3
+		},
+		{
+			"name": "Fear",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Glyph of Warding",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Incite Greed",
+			"source": "AI",
+			"level": 3
+		},
+		{
+			"name": "Intellect Fortress",
+			"source": "TCE",
+			"level": 3
+		},
+		{
+			"name": "Magic Circle",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Mass Healing Word",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Motivational Speech",
+			"source": "AI",
+			"level": 3
+		},
+		{
+			"name": "Remove Curse",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Sending",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Speak with Dead",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Speak with Plants",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Summon Fey",
+			"source": "TCE",
+			"level": 3
+		},
+		{
+			"name": "Summon Lesser Demons",
+			"source": "XGE",
+			"level": 3
+		},
+		{
+			"name": "Summon Shadowspawn",
+			"source": "TCE",
+			"level": 3
+		},
+		{
+			"name": "Summon Undead",
+			"source": "TCE",
+			"level": 3
+		},
+		{
+			"name": "Tongues",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Banishment",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Bloqueo Onírico",
+			"source": "CdS",
+			"level": 4
+		},
+		{
+			"name": "Caminante de Sueños",
+			"source": "CdS",
+			"level": 4
+		},
+		{
+			"name": "Charm Monster",
+			"source": "XGE",
+			"level": 4
+		},
+		{
+			"name": "Compulsion",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Confusion",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Conjure Minor Elementals",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Conjure Woodland Beings",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Control Water",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Dimension Door",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Dominate Beast",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Envejecer",
+			"source": "GPNM",
+			"level": 4
+		},
+		{
+			"name": "Fabricate",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Gravity Sinkhole",
+			"source": "EGW",
+			"level": 4
+		},
+		{
+			"name": "Major Bird Charm",
+			"source": "GMAM",
+			"level": 4
+		},
+		{
+			"name": "Pesadilla",
+			"source": "CdS",
+			"level": 4
+		},
+		{
+			"name": "Phantasmal Killer",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Otiluke's Resilient Sphere",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Raulothim's Psychic Lance",
+			"source": "FTD",
+			"level": 4
+		},
+		{
+			"name": "Robar Pensamientos",
+			"source": "CdS",
+			"level": 4
+		},
+		{
+			"name": "Sending (Hishna)",
+			"source": "GMAM",
+			"level": 4
+		},
+		{
+			"name": "Summon Aberration",
+			"source": "TCE",
+			"level": 4
+		},
+		{
+			"name": "Summon Construct",
+			"source": "TCE",
+			"level": 4
+		},
+		{
+			"name": "Summon Elemental",
+			"source": "TCE",
+			"level": 4
+		},
+		{
+			"name": "Summon Greater Demon",
+			"source": "XGE",
+			"level": 4
+		},
+		{
+			"name": "Circle of Power",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Conjure Elemental",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Contact Other Plane",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Creation",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Dispel Evil and Good",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Dominate Person",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Geas",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Hallow",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Hold Monster",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Infernal Calling",
+			"source": "XGE",
+			"level": 5
+		},
+		{
+			"name": "Legend Lore",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Modify Memory",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Planar Binding",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Skill Empowerment",
+			"source": "XGE",
+			"level": 5
+		},
+		{
+			"name": "Synaptic Static",
+			"source": "XGE",
+			"level": 5
+		},
+		{
+			"name": "Summon Celestial",
+			"source": "TCE",
+			"level": 5
+		},
+		{
+			"name": "Summon Draconic Spirit",
+			"source": "FTD",
+			"level": 5
+		},
+		{
+			"name": "Telekinesis",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Teleportation Circle",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Bones of the Earth",
+			"source": "XGE",
+			"level": 6
+		},
+		{
+			"name": "Conjure Fey",
+			"source": "PHB",
+			"level": 6
+		},
+		{
+			"name": "Create Undead",
+			"source": "PHB",
+			"level": 6
+		},
+		{
+			"name": "Eyebite",
+			"source": "PHB",
+			"level": 6
+		},
+		{
+			"name": "Flesh to Stone",
+			"source": "PHB",
+			"level": 6
+		},
+		{
+			"name": "Forbiddance",
+			"source": "PHB",
+			"level": 6
+		},
+		{
+			"name": "Fusionar Parajes Oníricos",
+			"source": "CdS",
+			"level": 6
+		},
+		{
+			"name": "Heal",
+			"source": "PHB",
+			"level": 6
+		},
+		{
+			"name": "Harm",
+			"source": "PHB",
+			"level": 6
+		},
+		{
+			"name": "Magic Jar",
+			"source": "PHB",
+			"level": 6
+		},
+		{
+			"name": "Mass Suggestion",
+			"source": "PHB",
+			"level": 6
+		},
+		{
+			"name": "Paraje Onírico",
+			"source": "CdS",
+			"level": 6
+		},
+		{
+			"name": "Planar Ally",
+			"source": "PHB",
+			"level": 6
+		},
+		{
+			"name": "Soul Cage",
+			"source": "XGE",
+			"level": 6
+		},
+		{
+			"name": "Summon Fiend",
+			"source": "TCE",
+			"level": 6
+		},
+		{
+			"name": "True Seeing",
+			"source": "PHB",
+			"level": 6
+		},
+		{
+			"name": "Amnesia Negra",
+			"source": "GdR",
+			"level": 7
+		},
+		{
+			"name": "Conjure Celestial",
+			"source": "PHB",
+			"level": 7
+		},
+		{
+			"name": "Divine Word",
+			"source": "PHB",
+			"level": 7
+		},
+		{
+			"name": "Dream of the Blue Veil",
+			"source": "TCE",
+			"level": 7
+		},
+		{
+			"name": "Forcecage",
+			"source": "PHB",
+			"level": 7
+		},
+		{
+			"name": "Plane Shift",
+			"source": "PHB",
+			"level": 7
+		},
+		{
+			"name": "Power Word Pain",
+			"source": "XGE",
+			"level": 7
+		},
+		{
+			"name": "Power Word Shield",
+			"source": "GPNM",
+			"level": 7
+		},
+		{
+			"name": "Resurrection",
+			"source": "PHB",
+			"level": 7
+		},
+		{
+			"name": "Reverse Gravity",
+			"source": "PHB",
+			"level": 7
+		},
+		{
+			"name": "Symbol",
+			"source": "PHB",
+			"level": 7
+		},
+		{
+			"name": "Teleport",
+			"source": "PHB",
+			"level": 7
+		},
+		{
+			"name": "Antimagic Field",
+			"source": "PHB",
+			"level": 8
+		},
+		{
+			"name": "Antipathy/Sympathy",
+			"source": "PHB",
+			"level": 8
+		},
+		{
+			"name": "Control Weather",
+			"source": "PHB",
+			"level": 8
+		},
+		{
+			"name": "Dominate Monster",
+			"source": "PHB",
+			"level": 8
+		},
+		{
+			"name": "Earthquake",
+			"source": "PHB",
+			"level": 8
+		},
+		{
+			"name": "Feeblemind",
+			"source": "PHB",
+			"level": 8
+		},
+		{
+			"name": "Maze",
+			"source": "PHB",
+			"level": 8
+		},
+		{
+			"name": "Power Word Stun",
+			"source": "PHB",
+			"level": 8
+		},
+		{
+			"name": "Reality Break",
+			"source": "EGW",
+			"level": 8
+		},
+		{
+			"name": "Tsunami",
+			"source": "PHB",
+			"level": 8
+		},
+		{
+			"name": "Gate",
+			"source": "PHB",
+			"level": 9
+		},
+		{
+			"name": "Imprisonment",
+			"source": "PHB",
+			"level": 9
+		},
+		{
+			"name": "Invulnerability",
+			"source": "XGE",
+			"level": 9
+		},
+		{
+			"name": "Power Word Heal",
+			"source": "PHB",
+			"level": 9
+		},
+		{
+			"name": "Power Word Kill",
+			"source": "PHB",
+			"level": 9
+		},
+		{
+			"name": "Proyección Onírica",
+			"source": "CdS",
+			"level": 9
+		},
+		{
+			"name": "Psychic Scream",
+			"source": "XGE",
+			"level": 9
+		},
+		{
+			"name": "Ravenous Void",
+			"source": "EGW",
+			"level": 9
+		},
+		{
+			"name": "Time Stop",
+			"source": "PHB",
+			"level": 9
+		},
+		{
+			"name": "Wish",
+			"source": "PHB",
+			"level": 9
+		}
+	],
+	"Payaso": [
+		{
+			"name": "Dancing Lights",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Friends",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Graffiti Arcano",
+			"source": "GdR",
+			"level": 0
+		},
+		{
+			"name": "Gust",
+			"source": "XGE",
+			"level": 0
+		},
+		{
+			"name": "Impulso",
+			"source": "GdR",
+			"level": 0
+		},
+		{
+			"name": "Mage Hand",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Message",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Minor Illusion",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Ramo Mágico",
+			"source": "GdR",
+			"level": 0
+		},
+		{
+			"name": "Shape Water",
+			"source": "XGE",
+			"level": 0
+		},
+		{
+			"name": "Thaumaturgy",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Armor of Agathys",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Barrera",
+			"source": "GPNM",
+			"level": 1
+		},
+		{
+			"name": "Burning Hands",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Charm Person",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Color Spray",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Cápsula Temporal",
+			"source": "GPNM",
+			"level": 1
+		},
+		{
+			"name": "Danza de las Herramientas",
+			"source": "GdR",
+			"level": 1
+		},
+		{
+			"name": "Disguise Self",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Dispersal",
+			"source": "GdR",
+			"level": 1
+		},
+		{
+			"name": "Distort Value",
+			"source": "AI",
+			"level": 1
+		},
+		{
+			"name": "Expeditious Retreat",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Faerie Fire",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Feather Fall",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Fog Cloud",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Fuga del Cobarde",
+			"source": "GdR",
+			"level": 1
+		},
+		{
+			"name": "Grease",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Jump",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Longstrider",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Sanctuary",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Silent Image",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Silvery Barbs",
+			"source": "SCC",
+			"level": 1
+		},
+		{
+			"name": "Tasha's Hideous Laughter",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Vértigo",
+			"source": "GPNM",
+			"level": 1
+		},
+		{
+			"name": "Alter Self",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Amplificación",
+			"source": "GdR",
+			"level": 2
+		},
+		{
+			"name": "Blindness/Deafness",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Cloud of Daggers",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Crown of Madness",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Darkness",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Detect Thoughts",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Embestida Pírica",
+			"source": "GPNM",
+			"level": 2
+		},
+		{
+			"name": "Enlarge/Reduce",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Enthrall",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Gift of Gab",
+			"source": "AI",
+			"level": 2
+		},
+		{
+			"name": "Gust of Wind",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Heat Metal",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Hipnosis",
+			"source": "GMAM",
+			"level": 2
+		},
+		{
+			"name": "Jim's Glowing Coin",
+			"source": "AI",
+			"level": 2
+		},
+		{
+			"name": "Kinetic Jaunt",
+			"source": "SCC",
+			"level": 2
+		},
+		{
+			"name": "Magic Mouth",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Mirror Image",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Nathair's Mischief",
+			"source": "FTD",
+			"level": 2
+		},
+		{
+			"name": "Vortex Warp",
+			"source": "SCC",
+			"level": 2
+		},
+		{
+			"name": "Ashardalon's Stride",
+			"source": "FTD",
+			"level": 3
+		},
+		{
+			"name": "Bestow Curse",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Blink",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Counterspell",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Dispel Magic",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Enemies Abound",
+			"source": "XGE",
+			"level": 3
+		},
+		{
+			"name": "Fast Friends",
+			"source": "AI",
+			"level": 3
+		},
+		{
+			"name": "Feign Death",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Hypnotic Pattern",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Major Image",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Slow",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Thunder Step",
+			"source": "XGE",
+			"level": 3
+		},
+		{
+			"name": "Wall of Sand",
+			"source": "XGE",
+			"level": 3
+		},
+		{
+			"name": "Water Breathing",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Water Walk",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Charm Monster",
+			"source": "XGE",
+			"level": 4
+		},
+		{
+			"name": "Compulsion",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Confusion",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Control Water",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Dimension Door",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Envejecer",
+			"source": "GPNM",
+			"level": 4
+		},
+		{
+			"name": "Freedom of Movement",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Incendio",
+			"source": "GMAM",
+			"level": 4
+		},
+		{
+			"name": "Otiluke's Resilient Sphere",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Polymorph",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Sending (Hishna)",
+			"source": "GMAM",
+			"level": 4
+		},
+		{
+			"name": "Watery Sphere",
+			"source": "XGE",
+			"level": 4
+		},
+		{
+			"name": "Animate Objects",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Bigby's Hand",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Cloudkill",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Dominate Person",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Guarda Efímera",
+			"source": "GPNM",
+			"level": 5
+		},
+		{
+			"name": "Melodía Exhultante",
+			"source": "GdR",
+			"level": 5
+		},
+		{
+			"name": "Mislead",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Passwall",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Reflejos Predatorios",
+			"source": "GPNM",
+			"level": 5
+		},
+		{
+			"name": "Wall of Force",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Wall of Light",
+			"source": "XGE",
+			"level": 5
+		}
+	],
+	"Planeswalker": [
+		{
+			"name": "Adivinación Menor",
+			"source": "GdR",
+			"level": 0
+		},
+		{
+			"name": "Blade Ward",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Booming Blade",
+			"source": "TCE",
+			"level": 0
+		},
+		{
+			"name": "Dancing Lights",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Eco del Presente",
+			"source": "GPNM",
+			"level": 0
+		},
+		{
+			"name": "Green-Flame Blade",
+			"source": "TCE",
+			"level": 0
+		},
+		{
+			"name": "Friends",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Guidance",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Gust",
+			"source": "XGE",
+			"level": 0
+		},
+		{
+			"name": "Impulso",
+			"source": "GdR",
+			"level": 0
+		},
+		{
+			"name": "Light",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Mending",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Message",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Mind Sliver",
+			"source": "TCE",
+			"level": 0
+		},
+		{
+			"name": "Prestidigitation",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Primal Savagery",
+			"source": "XGE",
+			"level": 0
+		},
+		{
+			"name": "Produce Flame",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Resistance",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Sword Burst",
+			"source": "TCE",
+			"level": 0
+		},
+		{
+			"name": "True Strike",
+			"source": "PHB",
+			"level": 0
+		},
+		{
+			"name": "Abrir Mente",
+			"source": "CdS",
+			"level": 1
+		},
+		{
+			"name": "Absorb Elements",
+			"source": "XGE",
+			"level": 1
+		},
+		{
+			"name": "Alarm",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Barrera",
+			"source": "GPNM",
+			"level": 1
+		},
+		{
+			"name": "Cápsula Temporal",
+			"source": "GPNM",
+			"level": 1
+		},
+		{
+			"name": "Cauterizar",
+			"source": "GdR",
+			"level": 1
+		},
+		{
+			"name": "Chaos Bolt",
+			"source": "XGE",
+			"level": 1
+		},
+		{
+			"name": "Comprehend Languages",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Conjuro no Letal",
+			"source": "GdR",
+			"level": 1
+		},
+		{
+			"name": "Conversación Codificada",
+			"source": "GPNM",
+			"level": 1
+		},
+		{
+			"name": "Create or Destroy Water",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Detect Evil and Good",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Detect Magic",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Disguise Self",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Dispersal",
+			"source": "GdR",
+			"level": 1
+		},
+		{
+			"name": "Expeditious Retreat",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Faerie Fire",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Feather Fall",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Gift of Alacrity",
+			"source": "EGW",
+			"level": 1
+		},
+		{
+			"name": "Goodberry",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Guiding Bolt",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Hush",
+			"source": "GdR",
+			"level": 1
+		},
+		{
+			"name": "Identify",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Illusory Script",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Inscripción Diplomática",
+			"source": "GdR",
+			"level": 1
+		},
+		{
+			"name": "Jump",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Longstrider",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Luz de Luna",
+			"source": "GdR",
+			"level": 1
+		},
+		{
+			"name": "Mage Armor",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Magic Missile",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Magnify Gravity",
+			"source": "EGW",
+			"level": 1
+		},
+		{
+			"name": "Protection from Evil and Good",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Regulación Térmica",
+			"source": "GMAM",
+			"level": 1
+		},
+		{
+			"name": "Sanctuary",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Searing Smite",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Shield",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Tenser's Floating Disk",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Thunderous Smite",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Thunderwave",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Vértigo",
+			"source": "GPNM",
+			"level": 1
+		},
+		{
+			"name": "Vuelo de proyectil",
+			"source": "GMAM",
+			"level": 1
+		},
+		{
+			"name": "Witch Bolt",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Wrathful Smite",
+			"source": "PHB",
+			"level": 1
+		},
+		{
+			"name": "Zephyr Strike",
+			"source": "XGE",
+			"level": 1
+		},
+		{
+			"name": "Air Bubble",
+			"source": "AAG",
+			"level": 2
+		},
+		{
+			"name": "Alter Self",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Ancla Temporal",
+			"source": "GPNM",
+			"level": 2
+		},
+		{
+			"name": "Arcane Lock",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Blur",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Branding Smite",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Borrowed Knowledge",
+			"source": "SCC",
+			"level": 2
+		},
+		{
+			"name": "Buscador de Sueños",
+			"source": "CdS",
+			"level": 2
+		},
+		{
+			"name": "Corte Espiritual",
+			"source": "GPNM",
+			"level": 2
+		},
+		{
+			"name": "Darkvision",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Detect Thoughts",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Dragon's Breath",
+			"source": "XGE",
+			"level": 2
+		},
+		{
+			"name": "Domo de Protección",
+			"source": "GdR",
+			"level": 2
+		},
+		{
+			"name": "Eco de Combate",
+			"source": "GPNM",
+			"level": 2
+		},
+		{
+			"name": "Embestida Pírica",
+			"source": "GPNM",
+			"level": 2
+		},
+		{
+			"name": "Emboscada",
+			"source": "GMAM",
+			"level": 2
+		},
+		{
+			"name": "Enhance Ability",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Find Steed",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Find Traps",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Gift of Gab",
+			"source": "AI",
+			"level": 2
+		},
+		{
+			"name": "Gust of Wind",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Hipnosis",
+			"source": "GMAM",
+			"level": 2
+		},
+		{
+			"name": "Infinitas Posibilidades",
+			"source": "GPNM",
+			"level": 2
+		},
+		{
+			"name": "Invisibility",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Kinetic Jaunt",
+			"source": "SCC",
+			"level": 2
+		},
+		{
+			"name": "Knock",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Levitate",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Locate Object",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Locate Animals or Plants",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Magic Mouth",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Mind Spike",
+			"source": "XGE",
+			"level": 2
+		},
+		{
+			"name": "Misty Step",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Nystul's Magic Aura",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Ojos de Oghma",
+			"source": "GdR",
+			"level": 2
+		},
+		{
+			"name": "Pacto de Verdad",
+			"source": "GPNM",
+			"level": 2
+		},
+		{
+			"name": "Pass without Trace",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Protección Totémica",
+			"source": "GPNM",
+			"level": 2
+		},
+		{
+			"name": "Rope Trick",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "See Invisibility",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Shadow Blade",
+			"source": "XGE",
+			"level": 2
+		},
+		{
+			"name": "Spider Climb",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Sueño de Selûne",
+			"source": "GdR",
+			"level": 2
+		},
+		{
+			"name": "Tasha's Mind Whip",
+			"source": "TCE",
+			"level": 2
+		},
+		{
+			"name": "Vortex Warp",
+			"source": "SCC",
+			"level": 2
+		},
+		{
+			"name": "Web",
+			"source": "PHB",
+			"level": 2
+		},
+		{
+			"name": "Wristpocket",
+			"source": "EGW",
+			"level": 2
+		},
+		{
+			"name": "Anonimato",
+			"source": "CdS",
+			"level": 3
+		},
+		{
+			"name": "Ashardalon's Stride",
+			"source": "FTD",
+			"level": 3
+		},
+		{
+			"name": "Blinding Smite",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Blink",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Catnap",
+			"source": "XGE",
+			"level": 3
+		},
+		{
+			"name": "Clairvoyance",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Counterspell",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Dispel Magic",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Fast Friends",
+			"source": "AI",
+			"level": 3
+		},
+		{
+			"name": "Feign Death",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Flecha atemporal",
+			"source": "GPNM",
+			"level": 3
+		},
+		{
+			"name": "Fly",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Lanza Atrapante de Claymore",
+			"source": "GPNM",
+			"level": 3
+		},
+		{
+			"name": "Leomund's Tiny Hut",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Cabaña Instantánea de Leomund",
+			"source": "GdR",
+			"level": 3
+		},
+		{
+			"name": "Meld into Stone",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Migración",
+			"source": "GPNM",
+			"level": 3
+		},
+		{
+			"name": "Navegante del Viento",
+			"source": "GMAM",
+			"level": 3
+		},
+		{
+			"name": "Nondetection",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Ojo de Halcón",
+			"source": "GdR",
+			"level": 3
+		},
+		{
+			"name": "Protection from Energy",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Sending",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Thunder Step",
+			"source": "XGE",
+			"level": 3
+		},
+		{
+			"name": "Tiny Servant",
+			"source": "XGE",
+			"level": 3
+		},
+		{
+			"name": "Tongues",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Water Breathing",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Water Walk",
+			"source": "PHB",
+			"level": 3
+		},
+		{
+			"name": "Arcane Eye",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Banishment",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Cadéncia Sincrónica",
+			"source": "GPNM",
+			"level": 4
+		},
+		{
+			"name": "Caminante de Sueños",
+			"source": "CdS",
+			"level": 4
+		},
+		{
+			"name": "Charm Monster",
+			"source": "XGE",
+			"level": 4
+		},
+		{
+			"name": "Compulsion",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Control Water",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Dimension Door",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Freedom of Movement",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Gravity Sinkhole",
+			"source": "EGW",
+			"level": 4
+		},
+		{
+			"name": "Greater Invisibility",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Leomund's Secret Chest",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Locate Creature",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Marca Pasada",
+			"source": "GPNM",
+			"level": 4
+		},
+		{
+			"name": "Mirror Echo",
+			"source": "GPNM",
+			"level": 4
+		},
+		{
+			"name": "Mordenkainen's Faithful Hound",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Mordenkainen's Private Sanctum",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Otiluke's Resilient Sphere",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Paso Elevado",
+			"source": "GPNM",
+			"level": 4
+		},
+		{
+			"name": "Polymorph",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Sending (Hishna)",
+			"source": "GMAM",
+			"level": 4
+		},
+		{
+			"name": "Staggering Smite",
+			"source": "PHB",
+			"level": 4
+		},
+		{
+			"name": "Robar Pensamientos",
+			"source": "CdS",
+			"level": 4
+		},
+		{
+			"name": "Shadow of Moil",
+			"source": "XGE",
+			"level": 4
+		},
+		{
+			"name": "Sincronía",
+			"source": "GPNM",
+			"level": 4
+		},
+		{
+			"name": "Ver Ramificación Temporal",
+			"source": "GPNM",
+			"level": 4
+		},
+		{
+			"name": "Banishing Smite",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Cacería",
+			"source": "GPNM",
+			"level": 5
+		},
+		{
+			"name": "Commune with Nature",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Contact Other Plane",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Control Fire",
+			"source": "GPNM",
+			"level": 5
+		},
+		{
+			"name": "Control Winds",
+			"source": "XGE",
+			"level": 5
+		},
+		{
+			"name": "Drenaje de Maná",
+			"source": "GPNM",
+			"level": 5
+		},
+		{
+			"name": "Far Step",
+			"source": "XGE",
+			"level": 5
+		},
+		{
+			"name": "Geas",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Mislead",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Molly's True Shield",
+			"source": "GPNM",
+			"level": 5
+		},
+		{
+			"name": "Nudo de Nyx",
+			"source": "GdR",
+			"level": 5
+		},
+		{
+			"name": "Passwall",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Planar Binding",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Rary's Telepathic Bond",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Scrying",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Steel Wind Strike",
+			"source": "XGE",
+			"level": 5
+		},
+		{
+			"name": "Teleportation Circle",
+			"source": "PHB",
+			"level": 5
+		},
+		{
+			"name": "Talismán de Hishna",
+			"source": "GMAM",
+			"level": 5
+		},
+		{
+			"name": "Talismán de Pluma",
+			"source": "GMAM",
+			"level": 5
+		},
+		{
+			"name": "Temporal Shunt",
+			"source": "EGW",
+			"level": 5
+		},
+		{
+			"name": "Wall of Force",
+			"source": "PHB",
+			"level": 5
+		}
+	]
+}

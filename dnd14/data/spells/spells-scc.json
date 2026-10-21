@@ -37,7 +37,19 @@
 			],
 			"entries": [
 				"You draw on knowledge from spirits of the past. Choose one skill in which you lack proficiency. For the spell's duration, you have proficiency in the chosen skill. The spell ends early if you cast it again."
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Kinetic Jaunt",
@@ -83,7 +95,19 @@
 			],
 			"damageInflict": [
 				"force"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Silvery Barbs",
@@ -123,7 +147,19 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Vortex Warp",
@@ -171,7 +207,19 @@
 			"miscTags": [
 				"SGT",
 				"TP"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Wither and Bloom",

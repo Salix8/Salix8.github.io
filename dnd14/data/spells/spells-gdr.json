@@ -50,7 +50,19 @@
 			],
 			"miscTags": [
 				"ADV"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Graffiti Arcano",
@@ -106,7 +118,15 @@
 				"SGT",
 				"PRM",
 				"OBJ"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Herir",
@@ -208,7 +228,19 @@
 			"miscTags": [
 				"SCL",
 				"RO"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Ramo Mágico",
@@ -252,7 +284,15 @@
 			],
 			"miscTags": [
 				"RO"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Cauterizar",
@@ -309,7 +349,15 @@
 			"miscTags": [
 				"HL",
 				"SCL"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Conjuro no Letal",
@@ -362,7 +410,15 @@
 			"miscTags": [
 				"SGT",
 				"SCL"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Danza de las Herramientas",
@@ -418,6 +474,14 @@
 			],
 			"meta": {
 				"ritual": true
+			},
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
 			}
 		},
 		{
@@ -456,7 +520,19 @@
 			"miscTags": [
 				"TP",
 				"RO"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Fuga del Cobarde",
@@ -496,7 +572,15 @@
 			"miscTags": [
 				"SGT",
 				"RO"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Hush",
@@ -554,7 +638,19 @@
 			],
 			"abilityCheck": [
 				"dexterity"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Inscripción Diplomática",
@@ -595,7 +691,15 @@
 			},
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Luz de Luna",
@@ -643,7 +747,15 @@
 				"SGT",
 				"SCL",
 				"LGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Tocón de Elfo",
@@ -804,7 +916,19 @@
 			"miscTags": [
 				"FMV",
 				"RO"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Covering",
@@ -915,7 +1039,15 @@
 			"miscTags": [
 				"THP",
 				"SCL"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Jugarreta de Lum",
@@ -1040,6 +1172,18 @@
 			],
 			"meta": {
 				"ritual": true
+			},
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
 			}
 		},
 		{
@@ -1247,7 +1391,15 @@
 				"PRM",
 				"SCL",
 				"RO"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Cabaña Instantánea de Leomund",
@@ -1306,7 +1458,15 @@
 				"THP",
 				"SCL",
 				"RO"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Hemorragia",
@@ -1517,7 +1677,15 @@
 				"SGT",
 				"RO",
 				"LGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Restaurar Mente",
@@ -1898,7 +2066,15 @@
 				"SGT",
 				"MAC",
 				"RO"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Negar la Muerte",
@@ -2028,7 +2204,15 @@
 					],
 					"type": "entries"
 				}
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Precio del Alma",
@@ -2129,7 +2313,15 @@
 			],
 			"miscTags": [
 				"PRM"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Trueno de los Dioses",

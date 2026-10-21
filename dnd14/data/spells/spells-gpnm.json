@@ -157,7 +157,15 @@
 						"Puede afectar 2 criaturas más por lv de conjuro extra."
 					]
 				}
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Postrar",
@@ -202,6 +210,14 @@
 				"v": true,
 				"s": true,
 				"m": "Un eslabón de hierro y un candado"
+			},
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
 			}
 		},
 		{
@@ -258,7 +274,15 @@
 				"SCL",
 				"RO",
 				"UBA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Pacto de Verdad",
@@ -304,7 +328,19 @@
 			"miscTags": [
 				"RO",
 				"ADV"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Protección Totémica",
@@ -353,7 +389,15 @@
 				"SGT",
 				"RO",
 				"LGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Lanza Atrapante de Claymore",
@@ -427,7 +471,15 @@
 				"FMV",
 				"RO",
 				"LGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Migración",
@@ -467,7 +519,15 @@
 			],
 			"miscTags": [
 				"FMV"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Drenaje de Maná",
@@ -508,7 +568,15 @@
 						"Este conjuro puede ser upcasteado para seguir las normas antimaga."
 					]
 				}
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Molly's True Shield",
@@ -569,6 +637,14 @@
 			],
 			"components": {
 				"s": true
+			},
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
 			}
 		},
 		{
@@ -659,7 +735,15 @@
 				"THP",
 				"SGT",
 				"ADV"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Mente Colmena",
@@ -899,7 +983,15 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Criogénesis",
@@ -1021,7 +1113,19 @@
 				"RO",
 				"LGT",
 				"OBJ"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Cacería",
@@ -1085,7 +1189,15 @@
 				"SCL",
 				"RO",
 				"ADV"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Vértigo",
@@ -1138,7 +1250,23 @@
 			"miscTags": [
 				"SGT",
 				"FMV"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Reflejos Predatorios",
@@ -1185,7 +1313,15 @@
 			],
 			"miscTags": [
 				"MAC"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Barrera",
@@ -1240,7 +1376,19 @@
 			],
 			"miscTags": [
 				"SCL"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Cronotruco",
@@ -1389,7 +1537,19 @@
 			"miscTags": [
 				"SCL",
 				"OBJ"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Restaurar Juventud",
@@ -1475,7 +1635,15 @@
 				"SGT",
 				"RO",
 				"OBJ"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Envejecer",
@@ -1527,7 +1695,19 @@
 						"Puede upcastear según las normas antimagia."
 					]
 				}
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Maldición de Juventud",
@@ -1643,7 +1823,15 @@
 				"SGT",
 				"SCL",
 				"SCT"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Guarda Efímera",
@@ -1701,7 +1889,15 @@
 			],
 			"miscTags": [
 				"THP"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Payaso",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Anomalía Espaciotemporal de Molly",
@@ -1862,45 +2058,45 @@
 					"rows": [
 						[
 							"Fecha exacta",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"01\u2013100"
+							"—",
+							"—",
+							"—",
+							"01–100"
 						],
 						[
 							"Fecha aproximada",
-							"01\u201305",
-							"06\u201320",
-							"21\u201340",
-							"41\u2013100"
+							"01–05",
+							"06–20",
+							"21–40",
+							"41–100"
 						],
 						[
 							"Año y mes",
-							"01\u201305",
-							"06\u201316",
-							"17\u201353",
-							"54\u2013100"
+							"01–05",
+							"06–16",
+							"17–53",
+							"54–100"
 						],
 						[
 							"Solo año",
-							"01\u201305",
-							"06\u201353",
-							"54\u201373",
-							"74\u2013100"
+							"01–05",
+							"06–53",
+							"54–73",
+							"74–100"
 						],
 						[
 							"Siglo",
-							"01\u201343",
-							"44\u201384",
-							"85\u201390",
-							"91\u2013100"
+							"01–43",
+							"44–84",
+							"85–90",
+							"91–100"
 						],
 						[
 							"Nada",
-							"01\u2013100",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"01–100",
+							"—",
+							"—",
+							"—"
 						]
 					]
 				},
@@ -1980,7 +2176,15 @@
 			"miscTags": [
 				"SGT",
 				"SCL"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Latido del Tiempo",
@@ -2187,7 +2391,15 @@
 				"SGT",
 				"SCT",
 				"TP"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Infinitas Posibilidades",
@@ -2239,7 +2451,15 @@
 				"SCL",
 				"UBA",
 				"OBJ"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Eco de Combate",
@@ -2282,7 +2502,19 @@
 			"miscTags": [
 				"SGT",
 				"TP"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Cadéncia Sincrónica",
@@ -2327,7 +2559,15 @@
 			"miscTags": [
 				"SGT",
 				"SMN"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Espiral de Dolor",
@@ -2648,7 +2888,15 @@
 			"miscTags": [
 				"SGT",
 				"PRM"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Ver Ramificación Temporal",
@@ -2707,7 +2955,15 @@
 			"miscTags": [
 				"PRM",
 				"SCL"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Mirror Echo",
@@ -2752,7 +3008,15 @@
 				"SCL",
 				"TP",
 				"UBA"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Wall of Acid",
@@ -2911,7 +3175,15 @@
 			"savingThrow": [
 				"dexterity",
 				"constitution"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		}
 	]
 }

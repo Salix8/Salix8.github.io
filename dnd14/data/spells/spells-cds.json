@@ -58,7 +58,19 @@
 			"miscTags": [
 				"SGT",
 				"PS"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Buscador de Sueños",
@@ -121,7 +133,19 @@
 						"Si lanzas este conjuro con un espacio de lv5 o superior no necesitas que el objetivo se haya dormido volunariamente. Servirá cualquier criatura {@condition Unconscious|PHB} pero estable."
 					]
 				}
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Anonimato",
@@ -167,7 +191,19 @@
 			"miscTags": [
 				"SGT",
 				"PRM"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Atar Consciencia",
@@ -229,7 +265,15 @@
 						"Dura 1 hora extra por cada lv de más."
 					]
 				}
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Bloqueo Onírico",
@@ -280,7 +324,15 @@
 						"Puede upcastear para aplicar normas de antimagia."
 					]
 				}
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Caminante de Sueños",
@@ -341,7 +393,19 @@
 				"FMV",
 				"RO",
 				"PS"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Pesadilla",
@@ -404,7 +468,15 @@
 			"miscTags": [
 				"SCL",
 				"RO"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Robar Pensamientos",
@@ -462,7 +534,19 @@
 				"PRM",
 				"SCL",
 				"RO"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					},
+					{
+						"name": "Planeswalker",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Fusionar Parajes Oníricos",
@@ -517,7 +601,15 @@
 						"Este conjuro permite targetear dos criaturas extra por lv de conjuro, hasta un máximo de 12 a lv9."
 					]
 				}
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Paraje Onírico",
@@ -587,7 +679,15 @@
 				"FMV",
 				"RO",
 				"PS"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		},
 		{
 			"name": "Proyección Onírica",
@@ -659,7 +759,15 @@
 			"abilityCheck": [
 				"intelligence",
 				"wisdom"
-			]
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Lexarca",
+						"source": "Himo"
+					}
+				]
+			}
 		}
 	]
 }

@@ -218,11 +218,11 @@
 			"classSource": "PHB"
 		},
 		{
-			"name": "Círculo de la Tierra (Corrección)",
+			"name": "Círculo de la Tierra (Himo)",
 			"shortName": "Tierra (Corrección)",
 			"source": "Himo",
 			"subclassFeatures": [
-				"Círculo de la Tierra (Corrección)|Druid||Tierra (Corrección)|Himo|2",
+				"Círculo de la Tierra (Himo)|Druid||Tierra (Corrección)|Himo|2",
 				"Terreno Predilecto|Druid||Tierra (Corrección)|Himo|6",
 				"Guarda Natural|Druid||Tierra (Corrección)|Himo|10",
 				"Santuario de la Naturaleza|Druid||Tierra (Corrección)|Himo|14"
