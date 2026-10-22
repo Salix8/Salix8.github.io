@@ -623,19 +623,6 @@
   ],
   "subclass": [
     {
-      "name": "Vía Elemental",
-      "shortName": "Elemental",
-      "source": "Himo",
-      "subclassFeatures": [
-        "Vía Elemental|Planeswalker|Himo|Elemental|Himo|1|Himo",
-        "Versatilidad Natural|Planeswalker|Himo|Elemental|Himo|3|Himo",
-        "Entidad Elemental|Planeswalker|Himo|Elemental|Himo|7|Himo",
-        "Quintaesencia|Planeswalker|Himo|Elemental|Himo|14|Himo"
-      ],
-      "className": "Planeswalker",
-      "classSource": "Himo"
-    },
-    {
       "name": "Vía de la Oscuridad",
       "shortName": "Oscuridad",
       "source": "Himo",
@@ -714,45 +701,6 @@
       "classSource": "Himo"
     },
     {
-      "name": "Vía del Caos",
-      "shortName": "Caos",
-      "source": "Himo",
-      "additionalSpells": [
-        {
-          "prepared": {
-            "1": [
-              "Charm Person|PHB",
-              "Cause Fear|XGE"
-            ],
-            "5": [
-              "Moonbeam|PHB",
-              "Blindness/Deafness|PHB"
-            ],
-            "9": [
-              "Fast Friends|AI",
-              "Fear|PHB"
-            ],
-            "13": [
-              "Charm Monster|XGE",
-              "Robar Pensamientos|CdS"
-            ],
-            "17": [
-              "Dominate Person|PHB",
-              "Danse Macabre|XGE"
-            ]
-          }
-        }
-      ],
-      "subclassFeatures": [
-        "Vía del Caos|Planeswalker|Himo|Caos|Himo|1|Himo",
-        "Trance lento|Planeswalker|Himo|Caos|Himo|3|Himo",
-        "Target Específico|Planeswalker|Himo|Caos|Himo|7|Himo",
-        "Caminante de las brumas|Planeswalker|Himo|Caos|Himo|14|Himo"
-      ],
-      "className": "Planeswalker",
-      "classSource": "Himo"
-    },
-    {
       "name": "Vía del Fantasma",
       "shortName": "Fantasma",
       "source": "Himo",
@@ -793,7 +741,7 @@
     },
     {
       "name": "Vía de los Sueños",
-      "shortName": "Oniromante",
+      "shortName": "Sueños",
       "source": "Himo",
       "additionalSpells": [
         {
@@ -822,10 +770,10 @@
         }
       ],
       "subclassFeatures": [
-        "Vía de los Sueños|Planeswalker|Himo|Oniromante|Himo|1|Himo",
-        "Forzar Inconsciencia|Planeswalker|Himo|Oniromante|Himo|3|Himo",
-        "Cazador de Quori|Planeswalker|Himo|Oniromante|Himo|7|Himo",
-        "Sleep Potenciado|Planeswalker|Himo|Oniromante|Himo|14|Himo"
+        "Vía de los Sueños|Planeswalker|Himo|Sueños|Himo|1|Himo",
+        "Forzar Inconsciencia|Planeswalker|Himo|Sueños|Himo|3|Himo",
+        "Cazador de Quori|Planeswalker|Himo|Sueños|Himo|7|Himo",
+        "Sleep Potenciado|Planeswalker|Himo|Sueños|Himo|14|Himo"
       ],
       "className": "Planeswalker",
       "classSource": "Himo"
@@ -870,143 +818,59 @@
       "classSource": "Himo"
     },
     {
-      "name": "Vía del Pecado",
-      "shortName": "Pecado",
+      "name": "Vía de las Brumas",
+      "shortName": "Brumas",
       "source": "Himo",
-      "additionalSpells": [
-        {
-          "prepared": {
-            "1": [
-              "Postrar|GPNM",
-              "Hex|PHB"
-            ],
-            "5": [
-              "Desconcierto|GMAM",
-              "Shadow Blade|XGE"
-            ],
-            "9": [
-              "Bestow Curse|PHB",
-              "Spirit Shroud|TCE"
-            ],
-            "13": [
-              "Evard's Black Tentacles|PHB",
-              "Summon Greater Demon|XGE"
-            ],
-            "17": [
-              "Precio del Alma|GdR",
-              "Contagion|PHB"
-            ]
-          }
-        }
-      ],
       "subclassFeatures": [
-        "Vía del Pecado|Planeswalker|Himo|Pecado|Himo|1|Himo",
-        "Peso del Pecado|Planeswalker|Himo|Pecado|Himo|3|Himo",
-        "Plegaria de Perdón|Planeswalker|Himo|Pecado|Himo|7|Himo",
-        "Bendición del Penitente|Planeswalker|Himo|Pecado|Himo|14|Himo"
+        "Vía de las Brumas|Planeswalker|Himo|Brumas|Himo|1|Himo",
+        "Trance lento|Planeswalker|Himo|Brumas|Himo|3|Himo",
+        "Cazador de Cuento|Planeswalker|Himo|Brumas|Himo|7|Himo",
+        "Caminante de las brumas|Planeswalker|Himo|Brumas|Himo|14|Himo"
+      ],
+      "className": "Planeswalker",
+      "classSource": "Himo"
+    },
+    {
+      "name": "Vía del Caos",
+      "shortName": "Caos",
+      "source": "Himo",
+      "subclassFeatures": [
+        "Vía del Caos|Planeswalker|Himo|Caos|Himo|1|Himo",
+        "Caos Contagioso|Planeswalker|Himo|Caos|Himo|3|Himo",
+        "Descontrol|Planeswalker|Himo|Caos|Himo|7|Himo",
+        "Bendición del Penitente|Planeswalker|Himo|Caos|Himo|14|Himo"
+      ],
+      "className": "Planeswalker",
+      "classSource": "Himo"
+    },
+    {
+      "name": "Vía Elemental",
+      "shortName": "Elemental",
+      "source": "Himo",
+      "subclassFeatures": [
+        "Vía Elemental|Planeswalker|Himo|Elemental|Himo|1|Himo",
+        "Caos Elemental|Planeswalker|Himo|Elemental|Himo|3|Himo",
+        "Uno con los Elementos|Planeswalker|Himo|Elemental|Himo|7|Himo",
+        "Quintaesencia|Planeswalker|Himo|Elemental|Himo|14|Himo"
+      ],
+      "className": "Planeswalker",
+      "classSource": "Himo"
+    },
+    {
+      "name": "Vía de lo Desconocido",
+      "shortName": "Desconocido",
+      "source": "Himo",
+      "subclassFeatures": [
+        "Vía de lo Desconocido|Planeswalker|Himo|Desconocido|Himo|1|Himo",
+        "Mutación Planar|Planeswalker|Himo|Desconocido|Himo|3|Himo",
+        "Mente Invulnerable|Planeswalker|Himo|Desconocido|Himo|7|Himo",
+        "Emisario del Más Allá|Planeswalker|Himo|Desconocido|Himo|14|Himo"
       ],
       "className": "Planeswalker",
       "classSource": "Himo"
     }
   ],
   "subclassFeature": [
-    {
-      "name": "Vía Elemental",
-      "source": "Himo",
-      "entries": [
-        "Los Planeswalkers que estudian los Planos Interiores aprenden también a infundirse en los elementos, logrando ser uno con ellos. Es común ver a estos viajeros convertir su piel en la de los distintos elementos, buscando la siempre perfecta Quintaesencia.",
-        {
-          "type": "entries",
-          "name": "Level 1: Consciencia interior",
-          "entries": [
-            "Elije un plano interior y añádelo a tu lista de planos de tu Consciencia Planar. Hablas Primordial. Ganas un rasgo y un cantrip en función del plano. A niveles superiores adquieres su evolución y un plano nuevo, con su respectivo cantrip:",
-            {
-              "type": "list",
-              "items": [
-                "Fuego: Un número de veces igual a tu BC por descanso largo puedes usar tu reacción para hacer {@dice 1d10} de daño por fuego a una criatura que te haya atacado a melé y aprendes el cantrip {@spell control flames|XGE|Control Flames}.",
-                "Agua: Adquieres una velocidad de nado igual a la mayor de tus movilidades y el cantrip {@spell shape water|XGE|Shape Water}",
-                "Tierra: Eres resistente al daño Perforante no mágico y aprendes el cantrip {@spell mold earth|XGE|Mold Earth}",
-                "Aire: Tu velocidad aumenta en 10 pies y aprendes {@spell gust|XGE|Gust}."
-              ]
-            }
-          ]
-        }
-      ],
-      "level": 1,
-      "className": "Planeswalker",
-      "classSource": "Himo",
-      "subclassShortName": "Elemental",
-      "subclassSource": "Himo"
-    },
-    {
-      "name": "Versatilidad Natural",
-      "source": "Himo",
-      "entries": [
-        "Elije otro plano interior que no tuvieras y gana su rasgo de lv anteriores, los de este lv y el cantrip (especificado a lv 1):",
-        {
-          "type": "list",
-          "items": [
-            "Fuego: Eres resistente al fuego.",
-            "Agua: Puedes respirar bajo el agua, tu movilidad de nado aumenta en 10 pies. Puedes meterte en orificios de hasta una pulgada.",
-            "Tierra: Eres resistente al daño Cortante no mágico.",
-            "Aire: Reduces el daño por caída en una cantidad de HP igual a tu lv de Planeswalker"
-          ]
-        }
-      ],
-      "level": 3,
-      "className": "Planeswalker",
-      "classSource": "Himo",
-      "subclassShortName": "Elemental",
-      "subclassSource": "Himo",
-      "_displayName": "Level 3: Versatilidad Natural",
-      "isDisplayAsSubclassTrait": true
-    },
-    {
-      "name": "Entidad Elemental",
-      "source": "Himo",
-      "entries": [
-        "Elije otro plano interior que no tuvieras y gana su rasgo de lv anteriores, los de este lv y el cantrip (especificado a lv 1):",
-        {
-          "type": "list",
-          "items": [
-            "Fuego: Una vez por turno, cuando te teletransportes puedes elegir hacer daño de fuego igual a tu BC a toda criatura a 5 pies del punto de partida.",
-            "Agua: Obtienes {@spell speak with animals}, {@spell animal friendship} y {@spell beast sense} at will, pero solo con criaturas marinas.",
-            "Tierra: Eres resistente al daño Contundente no mágico.",
-            "Aire: Tienes una velocidad de vuelo igual a tu movilidad más alta."
-          ]
-        }
-      ],
-      "level": 7,
-      "className": "Planeswalker",
-      "classSource": "Himo",
-      "subclassShortName": "Elemental",
-      "subclassSource": "Himo",
-      "_displayName": "Level 7: Entidad Elemental",
-      "isDisplayAsSubclassTrait": true
-    },
-    {
-      "name": "Quintaesencia",
-      "source": "Himo",
-      "entries": [
-        "Elije otro plano interior que no tuvieras y gana su rasgo de lv anteriores, los de este lv y el cantrip (especificado a lv 1):",
-        {
-          "type": "list",
-          "items": [
-            "Fuego: Puedes entrar en una llama que puedas ver y tocar. Puedes gastar un espacio de lv1 para sentir la presencia de todas las llamas a 1 milla de ti durante un minuto. Mientras dure, eres capaz de teletransportarte a cualquiera de ellas.",
-            "Agua: Mientras nades en aguas no mágicas, eres {@condition Invisible|PHB} a todos los efectos.",
-            "Tierra: Eres resistente a los daños Cortante, Perforante y Contundente mágicos.",
-            "Aire: Consigues fundirte con el aire, siendo {@condition Invisible|PHB} durante un minuto o hasta que realices un ataque o utilices un conjuro que afecte a una criatura. Mientras seas {@condition Invisible|PHB} eres resistente a todo daño. Una vez utilizado este rasgo no puedes volver a usarlo hasta el próximo descanso largo."
-          ]
-        }
-      ],
-      "level": 14,
-      "className": "Planeswalker",
-      "classSource": "Himo",
-      "subclassShortName": "Elemental",
-      "subclassSource": "Himo",
-      "_displayName": "Level 14: Quintaesencia",
-      "isDisplayAsSubclassTrait": true
-    },
     {
       "name": "Vía de la Oscuridad",
       "source": "Himo",
@@ -1212,47 +1076,25 @@
       "isDisplayAsSubclassTrait": true
     },
     {
-      "name": "Vía del Caos",
+      "name": "Vía de las Brumas",
       "source": "Himo",
       "entries": [
         "No hace falta irse muy lejos para encontrar realms de lo más variopintos. Los planeswalkers que deciden estudiar los planos espirituales del Feywild y el Shadowfell se encuentran con una gran variedad de lugares a su disposición. No hay dos realms iguales, y eso, sin cambiar de plano, es muy atractivo para alguien capaz de vagar entre planos.",
         {
           "type": "entries",
-          "name": "Level 1: Consciencia espiritual",
+          "name": "Consciencia espiritual",
           "entries": [
             "Elige un realm del Shadowfell o del Feywild y añadelo a tu Consciencia Planar. Dependiendo de tu elección, hablas Silvano y eres competente en {@skill Intimidation} o {@skill Persuasion}.",
-            "Estos conjuros siempre están preparados y no cuentan contra la cantidad de conjuros que puedes preparar.",
             {
               "type": "table",
-              "colLabels": [
-                "Nivel de Planeswalker",
-                "Conjuros"
-              ],
-              "colStyles": [
-                "col-3 text-center",
-                "col-9"
-              ],
+              "colLabels": ["Nivel de Planeswalker", "Conjuro 1", "Conjuro 2"],
+              "colStyles": ["col-2 text-center", "col-5", "col-5"],
               "rows": [
-                [
-                  "1",
-                  "{@spell charm person}, {@spell cause fear|XGE}"
-                ],
-                [
-                  "5",
-                  "{@spell moonbeam}, {@spell blindness/deafness|PHB|Blindness / Deafness}"
-                ],
-                [
-                  "9",
-                  "{@spell fast friends|AI}, {@spell fear}"
-                ],
-                [
-                  "13",
-                  "{@spell charm monster|XGE}, {@spell Robar Pensamientos|CdS}"
-                ],
-                [
-                  "17",
-                  "{@spell dominate person}, {@spell danse macabre|XGE}"
-                ]
+                ["1", "{@spell charm person}", "{@spell cause fear|XGE}"],
+                ["5", "{@spell moonbeam}", "{@spell blindness/deafness}"],
+                ["9", "{@spell fast friends|AI}", "{@spell fear}"],
+                ["13", "{@spell charm monster|XGE}", "{@spell Robar Pensamientos|CdS}"],
+                ["17", "{@spell dominate person}", "{@spell danse macabre|XGE}"]
               ]
             }
           ]
@@ -1261,49 +1103,49 @@
       "level": 1,
       "className": "Planeswalker",
       "classSource": "Himo",
-      "subclassShortName": "Caos",
+      "subclassShortName": "Brumas",
       "subclassSource": "Himo"
     },
     {
       "name": "Trance lento",
       "source": "Himo",
       "entries": [
-        "Elige un realm del plano no escogido a lv1 y añadelo a tu consciencia planar. Las criaturas charmeadas o {@condition Frightened|PHB} por ti ganan el estado de {@condition Dazed|Himo|dazed}."
+        "Elige un realm del plano no escogido a lv1 y añadelo a tu consciencia planar. Las criaturas charmeadas o asustadas por ti ganan el estado de {@condition Dazed|Himo|dazed}."
       ],
       "level": 3,
       "className": "Planeswalker",
       "classSource": "Himo",
-      "subclassShortName": "Caos",
+      "subclassShortName": "Brumas",
       "subclassSource": "Himo",
-      "_displayName": "Level 3: Trance lento",
+      "_displayName": "Lv3 Trance lento",
       "isDisplayAsSubclassTrait": true
     },
     {
-      "name": "Target Específico",
+      "name": "Cazador de Cuento",
       "source": "Himo",
       "entries": [
-        "Los licántropos, Undead y fey de CR 4 o inferior salvan tus charms y tus miedos con desventaja."
+        "Los licántropos, Undead y fey salvan tus charms y tus miedos con desventaja. Si eran inmunes a miedo y/o charm, puedes targetearle igual con efectos que causen estos estados y dejarlos {@condition Dazed|Himo|dazed}. Si fallan, en vez de meter el estado, los {@condition stunned} un turno, y luego seguirán {@condition Dazed|Himo|dazed} por la duración original del efecto, salvando como salvarían para el efecto original."
       ],
       "level": 7,
       "className": "Planeswalker",
       "classSource": "Himo",
-      "subclassShortName": "Caos",
+      "subclassShortName": "Brumas",
       "subclassSource": "Himo",
-      "_displayName": "Level 7: Target Específico",
+      "_displayName": "Lv7 Cazador de Cuento",
       "isDisplayAsSubclassTrait": true
     },
     {
       "name": "Caminante de las brumas",
       "source": "Himo",
       "entries": [
-        "Tu Consciencia Planar recoge cualquier realm del Shadowfell y del Feywild. Mientras estés en uno de estos planos, puedes cambiar de Realm con un ritual de 10 minutos."
+        "Tu Consciencia Planar recoge cualquier realm del Shadowfell y del Feywild. Mientras estés en uno de estos planos, puedes cambiar de Realm con un ritual de 10 minutos. Además, ignoras las resistencias de las criaturas nativas de estos planos y tienes ventaja para salvar contra cualquier efecto al que estas te sometan si este no hace daño directo."
       ],
       "level": 14,
       "className": "Planeswalker",
       "classSource": "Himo",
-      "subclassShortName": "Caos",
+      "subclassShortName": "Brumas",
       "subclassSource": "Himo",
-      "_displayName": "Level 14: Caminante de las brumas",
+      "_displayName": "Lv14 Caminante de las brumas",
       "isDisplayAsSubclassTrait": true
     },
     {
@@ -1473,7 +1315,7 @@
       "level": 1,
       "className": "Planeswalker",
       "classSource": "Himo",
-      "subclassShortName": "Oniromante",
+      "subclassShortName": "Sueños",
       "subclassSource": "Himo"
     },
     {
@@ -1486,7 +1328,7 @@
       "level": 3,
       "className": "Planeswalker",
       "classSource": "Himo",
-      "subclassShortName": "Oniromante",
+      "subclassShortName": "Sueños",
       "subclassSource": "Himo",
       "_displayName": "Level 3: Forzar Inconsciencia",
       "isDisplayAsSubclassTrait": true
@@ -1507,7 +1349,7 @@
       "level": 7,
       "className": "Planeswalker",
       "classSource": "Himo",
-      "subclassShortName": "Oniromante",
+      "subclassShortName": "Sueños",
       "subclassSource": "Himo",
       "_displayName": "Level 7: Cazador de Quori",
       "isDisplayAsSubclassTrait": true
@@ -1521,7 +1363,7 @@
       "level": 14,
       "className": "Planeswalker",
       "classSource": "Himo",
-      "subclassShortName": "Oniromante",
+      "subclassShortName": "Sueños",
       "subclassSource": "Himo",
       "_displayName": "Level 14: Sleep Potenciado",
       "isDisplayAsSubclassTrait": true
@@ -1651,47 +1493,100 @@
       "isDisplayAsSubclassTrait": true
     },
     {
-      "name": "Vía del Pecado",
+      "name": "Vía del Caos",
       "source": "Himo",
       "entries": [
         "Algunos hacen peregrinajes para expiar pecados, pero esos viajes dan un vuelco cuando toda la rueda de los planos está en tu mano. Los Planeswalkers del Pecado llevan este peregrinaje por todo el cosmos, llevando consigo cuanto puedan arrastrar de planos más restrictivos, a veces para librarse de ese mal, otras para abrazarlo y tomar su poder. ¿Cuál eres tú?",
         {
           "type": "entries",
-          "name": "Level 1: Consciencia Penitente",
+          "name": "Consciencia Caótica",
           "entries": [
-            "Elige un Plano, realm o piso de Baator, el Abismo, Carcieri, el Hades, Celestia o Mechanus y añadelo a tu Consciencia Planar. Añades otro plano, realm o piso por cada lv de subclase. Además, hablas Supernal (ver trait del lexarca).",
-            "Estos conjuros siempre están preparados y no cuentan contra la cantidad de conjuros que puedes preparar.",
+            "Añade el Limbo a tu consciencia planar. Aprendes slaad y cada vez que castees un conjuro, tira {@dice 1d20}. Con un 1, tiras en la wild magic. Si no tiraste en la wild magic, la próxima que tires ese d20 deberá superar 3, y seguirá subiendo en 2 por cada conjuro que no trigeree la wild magic. Cuando lo haga, la cuenta se resetea."
+          ]
+        }
+      ],
+      "level": 1,
+      "className": "Planeswalker",
+      "classSource": "Himo",
+      "subclassShortName": "Caos",
+      "subclassSource": "Himo"
+    },
+    {
+      "name": "Caos Contagioso",
+      "source": "Himo",
+      "entries": [
+        "Cada vez que tires en la Wild Magic y vayas a recibir un efecto o sea para un target aleatorio, puedes elegir tú el target si este está a 30 ft de ti y puedes verlo."
+      ],
+      "level": 3,
+      "className": "Planeswalker",
+      "classSource": "Himo",
+      "subclassShortName": "Caos",
+      "subclassSource": "Himo",
+      "_displayName": "Lv3 Caos Contagioso",
+      "isDisplayAsSubclassTrait": true
+    },
+    {
+      "name": "Descontrol",
+      "source": "Himo",
+      "entries": [
+        "Un número de veces igual a tu BC al día, cuando vayas a ser targeteado por un efecto que te haga actuar en contra de tu voluntad (como la posesión de un fantasma o conjuros como {@spell suggestion} o {@spell confusion}), puedes anular por completo el efecto durante el inicio del primer turno en el que esté activo. Tú y la criatura que creó el efecto tiráis en la tabla de Wild Magic. Solo tu tirada puede verse afectada por Caos Contagioso.",
+        "Este trait es una pasiva que se aplica en orden. El Jugador no pude elegir si se activa o no, simplemente lo hace cada vez que vaya a ocurrir el trigger."
+      ],
+      "level": 7,
+      "className": "Planeswalker",
+      "classSource": "Himo",
+      "subclassShortName": "Caos",
+      "subclassSource": "Himo",
+      "_displayName": "Lv7 Descontrol",
+      "isDisplayAsSubclassTrait": true
+    },
+    {
+      "name": "Bendición del Penitente",
+      "source": "Himo",
+      "entries": [
+        "Tus estudios te permiten traer criaturas del Limbo para ayudarte en combate. Como acción puedes gastar un slot de lv3 o 4 para invocar un {@creature Red Slaad|MM} o un {@creature Blue Slaad|MM} respectivamente. El Slaad aparece a 5 ft del wormhole más alejado de ti y permanece en este plano 10 minutos. El wormhole es destruido en el proceso.",
+        "Este rasgo requiere que te concentres, y si pierdes la concentración, el slaad se vuelve primero contra ti y luego contra el resto de tus aliados.",
+        "Mientras el slaad esté activo, todos tus conjuros y tus críticos en cantrips o conjuros triggerean la wild magic. Hay un 20% de que el slaad reciba el efecto antes de que puedas decidir quién lo hace, independientemente de si este era bueno o malo."
+      ],
+      "level": 14,
+      "className": "Planeswalker",
+      "classSource": "Himo",
+      "subclassShortName": "Caos",
+      "subclassSource": "Himo",
+      "_displayName": "Lv14 Bendición del Penitente",
+      "isDisplayAsSubclassTrait": true
+    },
+    {
+      "name": "Vía Elemental",
+      "source": "Himo",
+      "entries": [
+        "Los Planeswalkers que estudian los Planos Interiores aprenden también a infundirse en los elementos, logrando ser uno con ellos. Es común ver a estos viajeros convertir su piel en la de los distintos elementos, buscando la siempre perfecta Quintaesencia.",
+        {
+          "type": "entries",
+          "name": "Consciencia Elemental",
+          "entries": [
+            "Elije un plano interior y añádelo a tu lista de planos de tu Consciencia Planar. Hablas Primordial. Ganas un conjuro y un cantrip en función del plano. Adquieres otro plano interior con cada nivel de subclase. Llegado ese punto, ganas el cantrip de su elemento y un conjuro asociado a ese nivel. Solo puedes coger conjuros de elementos que ya tengas, aunque no necesariamente del elemento que acabas de ganar.",
             {
               "type": "table",
-              "colLabels": [
-                "Nivel de Planeswalker",
-                "Conjuros"
-              ],
-              "colStyles": [
-                "col-3 text-center",
-                "col-9"
-              ],
+              "colLabels": ["Nivel de Planeswalker", "Conjuro 1", "Conjuro 2"],
+              "colStyles": ["col-2 text-center", "col-5", "col-5"],
               "rows": [
-                [
-                  "1",
-                  "{@spell Postrar|GPNM}, {@spell hex}"
-                ],
-                [
-                  "5",
-                  "{@spell Desconcierto|GMAM}, {@spell shadow blade|XGE}"
-                ],
-                [
-                  "9",
-                  "{@spell bestow curse}, {@spell spirit shroud|TCE}"
-                ],
-                [
-                  "13",
-                  "{@spell evard's black tentacles}, {@spell summon greater demon|XGE}"
-                ],
-                [
-                  "17",
-                  "{@spell Precio del Alma|GdR}, {@spell contagion}"
-                ]
+                ["1", "{@spell chromatic orb}", "{@spell thunderwave}"],
+                ["5", "{@spell dragon's breath|XGE}", "{@spell melf's acid arrow}"],
+                ["9", "{@spell elemental weapon}", "{@spell sleet storm}"],
+                ["13", "{@spell conjure minor elementals}", "{@spell elemental bane|XGE}"],
+                ["17", "{@spell Control Fire|GPNM}", "{@spell maelstrom|XGE}"]
+              ]
+            },
+            {
+              "type": "table",
+              "colLabels": ["Elemento", "Aire", "Agua", "Fuego", "Tierra"],
+              "colStyles": ["col-2", "col-2", "col-2", "col-2", "col-2"],
+              "rows": [
+                ["Cantrip", "{@spell gust|XGE}", "{@spell shape water|XGE}", "{@spell control flames|XGE}", "{@spell mold earth|XGE}"],
+                ["Lv1 / 3", "{@spell fog cloud}", "{@spell create or destroy water}", "{@spell burning hands}", "{@spell earth tremor|XGE}"],
+                ["Lv7", "{@spell gust of wind}", "{@spell rime's binding ice|FTD}", "{@spell aganazzar's scorcher|XGE}", "{@spell maximilian's earthen grasp|XGE}"],
+                ["Lv14", "{@spell Paso Elevado|GPNM}", "{@spell control water}", "{@spell Incendio|GMAM}", "{@spell stone shape}"]
               ]
             }
           ]
@@ -1700,70 +1595,143 @@
       "level": 1,
       "className": "Planeswalker",
       "classSource": "Himo",
-      "subclassShortName": "Pecado",
+      "subclassShortName": "Elemental",
       "subclassSource": "Himo"
     },
     {
-      "name": "Peso del Pecado",
+      "name": "Caos Elemental",
       "source": "Himo",
       "entries": [
-        "Un número de veces al día igual a tu BC, como acción, puedes hacer que una criatura de tu elección que puedas ver a 60 ft reciba el peso de tus pecados. La criatura objetivo Salva Carisma o recibe los siguientes debuffos durante 1 minuto:",
-        {
-          "type": "list",
-          "items": [
-            "Su movilidad se reduce a la mitad.",
-            "No puede evitar provocar ataques de oportunidad.",
-            "No puede atacar con la bonus de ninguna forma.",
-            "Resta tu modificador de Inteligencia a Salvaciones de Fuerza, Destreza y Constitución."
-          ]
-        },
-        "No puedes tener este rasgo activo en dos criaturas a la vez (da hacerlo, se desactiva el más antiguo)."
+        "Cada vez que castees un conjuro de al menos lv1 que haga daño por Frio, Fuego, Rayo, Acido, Veneno, Trueno o contundente, puedes cambiar el daño por uno de esa misma lista.",
+        "Además, tu arma gana 1 carga elemental por la mitad del nivel de conjuro (redondeado hacia arriba; 1 carga por lv1 y 2, 2 cargas por lv3 y 4 y 3 cargas por lv5) durante 1 minuto. La próxima vez que golpees a una criatura con un arma, añade {@damage 1d8} por cada carga. Puedes elegir que todas las cargas hagan el mismo daño (uno de los daños de alguna de las cargas) o que cada carga haga su propio daño (el daño original que las creó).",
+        "Ganas esa carga incluso si no intercambiaste el tipo de daño."
       ],
       "level": 3,
       "className": "Planeswalker",
       "classSource": "Himo",
-      "subclassShortName": "Pecado",
+      "subclassShortName": "Elemental",
       "subclassSource": "Himo",
-      "_displayName": "Level 3: Peso del Pecado",
+      "_displayName": "Lv3 Caos Elemental",
       "isDisplayAsSubclassTrait": true
     },
     {
-      "name": "Plegaria de Perdón",
+      "name": "Uno con los Elementos",
       "source": "Himo",
       "entries": [
-        "Cuando caigas a 0 HP o mueras, puedes elegir tirar 3 dados de golpe (no puedes usar el rasgo si tienes menos de 3). Recuperas esa cantidad de HP sumando tu modificador de Constitución a cada dado. Pierdes HP máximos igual a la cantidad curada.",
-        "Alternativamente, cuando una criatura a 10 ft de ti muera, puedes usar tu reacción para devolverla a la vida. Al hacerlo, se recupera una cantidad de HP igual a tres tiradas de sus dados de golpe, sumando constitución a cada dado. Si tenía menos HD, tira todos los que tenga. Tu pierdes una cantidad de HP máximos igual a la cantidad que se haya curado.",
-        "Recuperas los HP al final de un descanso largo. Si al usar este rasgo tus HP máximos bajan a 0, mueres y solo puedes ser revivido por {@spell wish} o {@spell true resurrection}."
+        "Un número de veces al día igual a tu BC, puedes fundirte en tus elementos y moverte por ellos. Como acción, elige uno de los planos interiores de tu Consciencia Planar. Durante 1 minuto o hasta que vuelvas a usar este rasgo, ganas una de las siguientes opciones:",
+        {
+          "type": "list",
+          "items": [
+            "Como parte de tu movimiento puedes gastar 10ft para entrar en una llama y teletransportarte a otra llama que puedas ver a 200 ft.",
+            "Ganas velocidad de nado de 60 ft y puedes respirar bajo el agua.",
+            "Ganas velocidad de burrow de 40 ft en tierra, arena y roca. Mientras estés bajo tierra eres invisible a todos los sentidos excepto tremorsense y tu mismo ganas tremorsense a 30 ft. No puedes superar una profundidad de 5 ft ni atravesar paredes de más de 5 ft de grosor.",
+            "Ganas velocidad de vuelo de 60 ft."
+          ]
+        }
       ],
       "level": 7,
       "className": "Planeswalker",
       "classSource": "Himo",
-      "subclassShortName": "Pecado",
+      "subclassShortName": "Elemental",
       "subclassSource": "Himo",
-      "_displayName": "Level 7: Plegaria de Perdón",
+      "_displayName": "Lv7 Uno con los Elementos",
       "isDisplayAsSubclassTrait": true
     },
     {
-      "name": "Bendición del Penitente",
+      "name": "Quintaesencia",
       "source": "Himo",
       "entries": [
-        "Una vez al día, como bonus, puedes activar un estado de éxtasis religioso que te ayuda a continuar por el buen camino. Durante un minuto ganas los siguientes rasgos:",
+        "Una vez al día, como acción, puedes hacer que los elementos fluyan en ti como un avatar de lo perfecto. Durante 1 minuto ganas los siguientes efectos:",
         {
           "type": "list",
           "items": [
-            "Eres inmune a {@condition Charmed|PHB}, {@condition Frightened|PHB}, estrés, dormir mágicamente y no se te puede hacer actuar en contra de tu voluntad.",
-            "Eres resistente a los daños BSP y Fuego, Frío, Rayo, Ácido y Veneno.",
-            "Salvas los efectos ({@condition Blinded|PHB}, {@condition Deafened|PHB}, {@condition Paralyzed|PHB}, etc.) con ventaja.",
-            "La primera vez que ataques en tu turno con un arma, añade {@dice 1d8} al dado de ataque o al de daño (puedes elegir después de ver la tirada de ataque pero antes de saber si falla o acierta)."
+            "Eres resistente a los daños Fuego, Trueno, Rayo, Frío y Ácido e inmune a Veneno.",
+            "Puedes usar tu reacción para ser inmune a una fuente de daño de las anteriores.",
+            "Cada vez que hagas daño con uno de los daños anteriores, añades tu Inteligencia al daño. Si un ataque trigerea varios daños (como usar cargas y/o el daño extra de absorber elementos) o hace daño variad veces (Flecha de Melf o Dragon's Breath), solo añade la inteligencia una vez durante la primera tirada de daño."
           ]
         }
       ],
       "level": 14,
       "className": "Planeswalker",
       "classSource": "Himo",
-      "subclassShortName": "Pecado",
+      "subclassShortName": "Elemental",
       "subclassSource": "Himo",
-      "_displayName": "Level 14: Bendición del Penitente",
+      "_displayName": "Lv14 Quintaesencia",
+      "isDisplayAsSubclassTrait": true
+    },
+    {
+      "name": "Vía de lo Desconocido",
+      "source": "Himo",
+      "entries": [
+        "Pocos se atreven a adentrarse en lo desconocido, y mucho menos caminar entre las mil bocas y escuchar el millón de voces en su mente sin perder la cabeza. Los Planeswakers que se atreven a hacerlo son conscientes de que podrían morir en cualquier momento, o peor, convertirse en una versión de sí mismos que ni ellos mismos reconocen. Bienvenido al Far Realm. ¿Serás capaz de volver a casa?",
+        {
+          "type": "entries",
+          "name": "Consciencia Eldritch",
+          "entries": [
+            "Elige una capa del Abismo dominado por un Obyrith y añadelo a tu Consciencia Planar. Pide lore a tu DM o provéelo si no conoce el Abismo. Siéntete libre de crear el tuyo propio, al fin y al cabo hay capas infinitas. Ganas otro realm de este tipo a los lv 3, 7 y 12. Aprendes a hablar Daelkyr/Deep Speech (el que use tu DM) y eres competente en salvaciones de Carisma."
+          ]
+        }
+      ],
+      "level": 1,
+      "className": "Planeswalker",
+      "classSource": "Himo",
+      "subclassShortName": "Desconocido",
+      "subclassSource": "Himo"
+    },
+    {
+      "name": "Mutación Planar",
+      "source": "Himo",
+      "entries": [
+        "Un número de veces al día igual a tu BC, puedes mutar para adquirir cualidades físicas o mentales más allá del entendimiento humanoide. Como acción ganas uno de los siguientes rasgos, que dura un número de minutos igual a tu modificador de inteligencia x10:",
+        {
+          "type": "list",
+          "items": [
+            "Garras. Arma simple, ligera y sutil con la que se te considera competente. Hace {@damage 1d8} cortante o perforante. Con un crítico, también provoca {@condition Sangrado|Himo|sangrado} a {@dice d6}.",
+            "Tentáculos. Arma simple con rango 15 ft. con la que se te considera competente. Hace {@damage 1d6} contundente. Como parte del ataque, el objetivo salva fuerza sobre tu CD de conjuros. Con un fallo, puedes elegir graplearlo, arrastrarlo 5 ft o pronearlo. Si decides no aplicar ningún efecto, el tentáculo hace {@damage 1d10} contundente.",
+            "Alas. Recibes velocidad de vuelo igual a tu velocidad caminando.",
+            "Boca. Una segunda aparece en algún lugar de tu cuerpo y se mueve a tu antojo por tu piel. Es un arma simple sutil que puedes usar incluso con las manos ocupadas. Se te considera competente. Solo puedes usarla una vez por multiataque y hace {@damage 2d6} de daño perforante.",
+            "Aletas y Branquias. Ganas velocidad de nado igual a tu movilidad caminando y puedes respirar bajo el agua.",
+            "Visión Térmica. Tus ojos te permiten discernir el calor de objetos y criaturas. Puedes determinar la silueta general de una criatura y su localización a 90 pies de ti, incluso cuando sea invisible o esté en cobertura total. Debes poder ver para usar este sentido. Un pie de material frío o una fina capa de material caliente (independientemente del estado), así como cualquier cantidad de fuego; bloquean esta visión.",
+            "Brazo Extra. Te crece un tercer brazo al que puedes aplicarle también la mutación de garras o tentáculos. Si lo haces, gastas dos usos, pero sale ya con la segunda mutación como parte de la misma acción. En su forma base permite equipar objetos u armas para poder usarlos aunque las dos manos reales estén ocupadas. Sigues pudiendo equipar solo un escudo. Tampoco puedes ponerte más de dos brazos extra.",
+            "Antenas. Te crecen unas antenas que mejoran tus capacidades sensoriales. Tienes ventaja a {@skill Perception} y añades tu bono de inteligencia al check."
+          ]
+        }
+      ],
+      "level": 3,
+      "className": "Planeswalker",
+      "classSource": "Himo",
+      "subclassShortName": "Desconocido",
+      "subclassSource": "Himo",
+      "_displayName": "Lv3 Mutación Planar",
+      "isDisplayAsSubclassTrait": true
+    },
+    {
+      "name": "Mente Invulnerable",
+      "source": "Himo",
+      "entries": [
+        "Has visto cosas que harían vomitar a una cabra. Eres inmune a miedo y charm, resistes al daño psíquico y puedes usar tu reacción para que tu atacante reciba todo el daño que tú no recibiste, ignorando resistencias, pero no inmunidades; y salvas con ventaja para, locura, estrés y efectos que te hagan actuar en contra de tu propia voluntad. Tus ataques de Mutación Planar hacen daño mágico."
+      ],
+      "level": 7,
+      "className": "Planeswalker",
+      "classSource": "Himo",
+      "subclassShortName": "Desconocido",
+      "subclassSource": "Himo",
+      "_displayName": "Lv7 Mente Invulnerable",
+      "isDisplayAsSubclassTrait": true
+    },
+    {
+      "name": "Emisario del Más Allá",
+      "source": "Himo",
+      "entries": [
+        "Añade el Far Realm a tu Consciencia Planar. Una vez al día, como acción, puedes abrir un portal al Far Realm para someter a tus enemigos a la influencia del plano. El portal se abre en la localización de tu Wormhole más alejado, destruyéndolo en el proceso; en el suelo, centrando un área de 15 ft de radio. Todas las criaturas dentro de ese área salvan Carisma sobre tu CD de conjuros para recibir {@damage 6d10} psíquicos o la mitad y estar asustada un minuto, pudiendo salvar al final de cada turno. Además, con una salvación fallida, puedes crear mutaciones físicas grotescas en cada criatura. La criatura objetivo recibe desventaja a todas las tiradas de un stat de tu elección permanentemente. Conjuros como {@spell wish}, {@spell greater restoration} o {@spell remove curse} de lv7 pueden acabar con estos efectos.",
+        "Con una salvación exitosa la criatura recibe la mitad del daño y está asustada, pero no tiene la malformación. Este rasgo ignora resistencias al daño psíquico e inmunidades al miedo, pero no inmunidades al daño psíquico. Una criatura inmune al daño psíquico es inmune a este rasgo, y una criatura inmune al miedo salva con ventaja."
+      ],
+      "level": 14,
+      "className": "Planeswalker",
+      "classSource": "Himo",
+      "subclassShortName": "Desconocido",
+      "subclassSource": "Himo",
+      "_displayName": "Lv14 Emisario del Más Allá",
       "isDisplayAsSubclassTrait": true
     }
   ]

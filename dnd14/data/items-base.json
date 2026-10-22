@@ -3651,21 +3651,6 @@
 			"range": "20/60"
 		},
 		{
-			"name": "Cimitarra de Doble Filo",
-			"type": "M",
-			"weapon": true,
-			"weaponCategory": "martial",
-			"rarity": "none",
-			"value": 7500,
-			"weight": 3,
-			"dmg1": "2d4",
-			"dmgType": "S",
-			"property": [
-				"F"
-			],
-			"source": "Himo"
-		},
-		{
 			"name": "Sai",
 			"type": "M",
 			"weapon": true,
