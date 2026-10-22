@@ -764,6 +764,21 @@
 			]
 		},
 		{
+			"name": "Anchor Howl",
+			"source": "Himo",
+			"featureType": [
+				"MV:B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Como acción adicional, puedes gastar un dado de superioridad para dejar escapar un rugido desafiante. Tira el dado y añade la mitad del resultado a tu CA hasta el final de tu próximo turno.",
+				"Todos los enemigos a 30 pies (6 casillas) de ti deben hacer una salvación de Sabiduría. Con un fallo, sienten la necesidad de atacarte durante un número de turnos igual al resultado del dado de superioridad. Mientras no salven al final de su turno, usarán sus turnos para llegar hasta ti de forma segura —o no, si deciden ponerse voluntariamente en peligro— y atacarte. No contemplarán la opción de no atacarte mientras tengan posibilidades de ello.",
+				"Conjuros como {@spell enemies abound|XGE|Enemies Abound}, ilusiones que te muestren en otro lugar o conjuros de encantamiento de nivel 2 o superior pueden truncar esta maniobra para una o más criaturas."
+			]
+		},
+		{
 			"name": "Bait and Switch",
 			"source": "TCE",
 			"page": 42,
@@ -903,6 +918,19 @@
 			],
 			"entries": [
 				"You can cast {@spell compulsion} once using a warlock spell slot. You can't do so again until you finish a long rest."
+			]
+		},
+		{
+			"name": "Block",
+			"source": "Himo",
+			"featureType": [
+				"MV:B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Como reacción cuando un ataque impacte contra ti, puedes interponer tu arma o escudo para bloquearlo. Gasta un dado de superioridad y añádelo a tu CA hasta el inicio de tu próximo turno, pudiendo convertir el acierto en un fallo."
 			]
 		},
 		{
@@ -2236,6 +2264,19 @@
 			]
 		},
 		{
+			"name": "Deflect",
+			"source": "Himo",
+			"featureType": [
+				"MV:B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Como reacción cuando un ataque contra tu CA falle, puedes desviarlo para que impacte a una criatura a 5 pies de ti que siga dentro del rango del ataque. La criatura suma tu dado de superioridad al ataque."
+			]
+		},
+		{
 			"name": "Defense",
 			"source": "PHB",
 			"page": 72,
@@ -2253,7 +2294,9 @@
 			"featureType": [
 				"FS:F",
 				"FS:P",
-				"FS:R"
+				"FS:R",
+				"FS:C",
+				"FS:EM"
 			],
 			"entries": [
 				"While you are wearing armor, you gain a +1 bonus to AC."
@@ -2465,7 +2508,9 @@
 				"FS:F",
 				"FS:B",
 				"FS:P",
-				"FS:R"
+				"FS:R",
+				"FS:C",
+				"FS:EM"
 			],
 			"entries": [
 				"When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
@@ -3913,7 +3958,8 @@
 			],
 			"featureType": [
 				"FS:F",
-				"FS:P"
+				"FS:P",
+				"FS:EM"
 			],
 			"entries": [
 				"When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit."
@@ -4223,7 +4269,8 @@
 			"isClassFeatureVariant": true,
 			"featureType": [
 				"FS:F",
-				"FS:P"
+				"FS:P",
+				"FS:EM"
 			],
 			"entries": [
 				"When a creature you can see hits a target, other than you, within 5 feet of you with an attack, you can use your reaction to reduce the damage the target takes by {@dice 1d10} + your proficiency bonus (to a minimum of 0 damage). You must be wielding a {@item shield|phb} or a {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon;simple weapon} to use this reaction."
@@ -4473,6 +4520,16 @@
 			],
 			"entries": [
 				"El objetivo salva Carisma. Con un fallo tiene una locura permanente de tu elección."
+			]
+		},
+		{
+			"name": "Lucha Hiriente",
+			"source": "Himo",
+			"featureType": [
+				"FS:C"
+			],
+			"entries": [
+				"Como reacción, cuando un objetivo dentro de tu alcance falle un ataque, puedes lanzar {@spell vicious mockery|PHB|Vicious Mockery} contra él. No puedes utilizar esta reacción dos veces seguidas contra la misma criatura."
 			]
 		},
 		{
@@ -5169,6 +5226,19 @@
 			]
 		},
 		{
+			"name": "Partner's Shield",
+			"source": "Himo",
+			"featureType": [
+				"MV:B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Como reacción, puedes interponer tu arma o escudo para proteger a un aliado a 5 pies. Gasta un dado de superioridad y añádelo a la CA del objetivo. Este puede usar su reacción para hacer un ataque de oportunidad contra el atacante."
+			]
+		},
+		{
 			"name": "Parry",
 			"source": "PHB",
 			"page": 74,
@@ -5778,7 +5848,8 @@
 			],
 			"featureType": [
 				"FS:F",
-				"FS:P"
+				"FS:P",
+				"FS:EM"
 			],
 			"entries": [
 				"When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield."
@@ -7138,6 +7209,16 @@
 			]
 		},
 		{
+			"name": "Shield Fighting",
+			"source": "Himo",
+			"featureType": [
+				"FS:EM"
+			],
+			"entries": [
+				"Puedes usar un escudo como arma de melé. Hace {@damage 1d8} de daño contundente y utiliza Fuerza."
+			]
+		},
+		{
 			"name": "Shock",
 			"source": "Himo",
 			"featureType": [
@@ -7409,7 +7490,8 @@
 			"page": 41,
 			"isClassFeatureVariant": true,
 			"featureType": [
-				"FS:F"
+				"FS:F",
+				"FS:EM"
 			],
 			"optionalfeatureProgression": [
 				{
@@ -7566,7 +7648,9 @@
 			"isClassFeatureVariant": true,
 			"featureType": [
 				"FS:F",
-				"FS:R"
+				"FS:R",
+				"FS:C",
+				"FS:EM"
 			],
 			"entries": [
 				"You can draw a weapon that has the thrown property as part of the attack you make with the weapon.",
@@ -7721,7 +7805,9 @@
 			"featureType": [
 				"FS:F",
 				"FS:B",
-				"FS:R"
+				"FS:R",
+				"FS:C",
+				"FS:EM"
 			],
 			"entries": [
 				"When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
@@ -7733,7 +7819,9 @@
 			"page": 42,
 			"isClassFeatureVariant": true,
 			"featureType": [
-				"FS:F"
+				"FS:F",
+				"FS:C",
+				"FS:EM"
 			],
 			"entries": [
 				"Your unarmed strikes can deal bludgeoning damage equal to {@damage 1d6} + your Strength modifier on a hit. If you aren't wielding any weapons or a {@item shield|phb} when you make the attack roll, the {@damage d6} becomes a {@damage d8}.",

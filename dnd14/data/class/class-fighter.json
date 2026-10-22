@@ -1417,7 +1417,19 @@
 					"entries": [
 						{
 							"type": "refOptionalfeature",
+							"optionalfeature": "Anchor Howl|Himo"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Block|Himo"
+						},
+						{
+							"type": "refOptionalfeature",
 							"optionalfeature": "Commander's Strike"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Deflect|Himo"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -1450,6 +1462,10 @@
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Menacing Attack"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Partner's Shield|Himo"
 						},
 						{
 							"type": "refOptionalfeature",

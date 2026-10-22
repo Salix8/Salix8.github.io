@@ -129,11 +129,7 @@
 						"{@optfeature Great Weapon Fighting|PHB}",
 						"{@optfeature Interception|TCE}",
 						"{@optfeature Protection|PHB}",
-						{
-							"type": "item",
-							"name": "Shield Fighting",
-							"entry": "Puedes usar el escudo como arma a melé. Hace {@damage 1d8} contundente y va a fuerza."
-						},
+						"{@optfeature Shield Fighting|Himo}",
 						"{@optfeature Superior Technique|TCE} (puede cogerse más de una vez)",
 						"{@optfeature Thrown Weapon Fighting|TCE}",
 						"{@optfeature Two-Weapon Fighting|PHB}",

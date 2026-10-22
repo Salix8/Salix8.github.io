@@ -117,11 +117,7 @@
 						"{@optfeature Thrown Weapon Fighting|TCE|Lucha de armas arrojadizas}",
 						"{@optfeature Two-Weapon Fighting|PHB|Lucha a dos armas}",
 						"{@optfeature Unarmed Fighting|TCE|Lucha desarmada}",
-						{
-							"type": "item",
-							"name": "Lucha Hiriente",
-							"entry": "como reacción cuando un objetivo dentro del rango falle un ataque, puedes castear {@spell vicious mockery|PHB|vicious mockery} contra él. No puedes utilizar esta reacción dos veces seguidas con esa criatura."
-						}
+						"{@optfeature Lucha Hiriente|Himo}"
 					]
 				}
 			],

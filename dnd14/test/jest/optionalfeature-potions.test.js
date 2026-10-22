@@ -268,13 +268,39 @@ describe("Pociones del Alquimista", () => {
 		expect(fightingStyles.every(it => it.featureType.includes("FS:F"))).toBe(true);
 	});
 
+	it("filters Other independently from Alquimista potions", () => {
+		const pageFilter = getOptionalFeatureFilterPage();
+		pageFilter._typeFilter.setValue("OTH", 1);
+
+		const otherFeatures = getFilterBoxMatches(pageFilter, DATA.optionalfeature);
+		expect(otherFeatures).toHaveLength(81);
+		expect(otherFeatures.every(it => it.featureType.includes("OTH") && !it.potion)).toBe(true);
+		expect(otherFeatures.map(it => it.name)).toContain("Arena en el ojo");
+	});
+
+	it("filters the exact fighting-style lists for Canalla and Experto Marcial", () => {
+		const pageFilter = getOptionalFeatureFilterPage();
+
+		pageFilter._typeFilter.setValue("FS:C", 1);
+		expect(getFilterBoxMatches(pageFilter, DATA.optionalfeature).map(it => it.name).sort()).toEqual([
+			"Defense", "Dueling", "Lucha Hiriente", "Thrown Weapon Fighting", "Two-Weapon Fighting", "Unarmed Fighting",
+		]);
+
+		pageFilter._typeFilter.setValue("FS:C", 0);
+		pageFilter._typeFilter.setValue("FS:EM", 1);
+		expect(getFilterBoxMatches(pageFilter, DATA.optionalfeature).map(it => it.name).sort()).toEqual([
+			"Defense", "Dueling", "Great Weapon Fighting", "Interception", "Protection", "Shield Fighting", "Superior Technique", "Thrown Weapon Fighting", "Two-Weapon Fighting", "Unarmed Fighting",
+		]);
+	});
+
 	it("shows maneuvers as the single Battle Master feature-type tag", () => {
 		const pageFilter = getOptionalFeatureFilterPage();
 		pageFilter._typeFilter.setValue("MV:B", 1);
 
 		const maneuvers = getFilterBoxMatches(pageFilter, DATA.optionalfeature);
-		expect(maneuvers).toHaveLength(23);
+		expect(maneuvers).toHaveLength(27);
 		expect(maneuvers.every(it => it.featureType.includes("MV:B"))).toBe(true);
+		expect(maneuvers.map(it => it.name)).toEqual(expect.arrayContaining(["Anchor Howl", "Block", "Deflect", "Partner's Shield"]));
 		const maneuverItem = pageFilter._typeFilter._items.find(it => it.item === "MV:B");
 		expect(pageFilter._typeFilter._getDisplayText(maneuverItem)).toBe("Battle Master");
 	});

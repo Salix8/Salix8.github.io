@@ -786,7 +786,7 @@ class IndexableFileOptFeatures_FightingStyle extends IndexableFile {
 			listProp: "optionalfeature",
 			baseUrl: "optionalfeatures.html",
 			isHover: true,
-			include: (it) => it.featureType.includes("FS:F") || it.featureType.includes("FS:B") || it.featureType.includes("FS:R") || it.featureType.includes("FS:P"),
+			include: (it) => it.featureType.includes("FS:F") || it.featureType.includes("FS:B") || it.featureType.includes("FS:C") || it.featureType.includes("FS:EM") || it.featureType.includes("FS:R") || it.featureType.includes("FS:P"),
 		});
 	}
 }

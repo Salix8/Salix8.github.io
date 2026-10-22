@@ -47,6 +47,8 @@ class PageFilterOptionalFeatures extends PageFilterBase {
 
 	static _FEATURE_TYPE_NESTS = {
 		"FS:B": {nest: "fighting-styles", displayName: "Fighting Styles"},
+		"FS:C": {nest: "fighting-styles", displayName: "Fighting Styles"},
+		"FS:EM": {nest: "fighting-styles", displayName: "Fighting Styles"},
 		"FS:F": {nest: "fighting-styles", displayName: "Fighting Styles"},
 		"FS:P": {nest: "fighting-styles", displayName: "Fighting Styles"},
 		"FS:R": {nest: "fighting-styles", displayName: "Fighting Styles"},

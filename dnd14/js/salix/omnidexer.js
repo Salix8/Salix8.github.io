@@ -404,7 +404,7 @@ Omnidexer.TO_INDEX = [
 		listProp: "optionalfeature",
 		baseUrl: "optionalfeatures.html",
 		hover: true,
-		include: (it) => Omnidexer.arrIncludesOrEquals(it.featureType, "FS:F") || Omnidexer.arrIncludesOrEquals(it.featureType, "FS:B") || Omnidexer.arrIncludesOrEquals(it.featureType, "FS:R") || Omnidexer.arrIncludesOrEquals(it.featureType, "FS:P")
+		include: (it) => Omnidexer.arrIncludesOrEquals(it.featureType, "FS:F") || Omnidexer.arrIncludesOrEquals(it.featureType, "FS:B") || Omnidexer.arrIncludesOrEquals(it.featureType, "FS:C") || Omnidexer.arrIncludesOrEquals(it.featureType, "FS:EM") || Omnidexer.arrIncludesOrEquals(it.featureType, "FS:R") || Omnidexer.arrIncludesOrEquals(it.featureType, "FS:P")
 	},
 	{
 		category: Parser.CAT_ID_PACT_BOON,
