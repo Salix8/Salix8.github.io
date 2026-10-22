@@ -85,6 +85,22 @@ class PageFilterEquipment extends PageFilterBase {
 		return (item.ac || 0) + Number(item.bonusAc);
 	}
 
+	static _mutateForFilters_isArmorClassBonus (item) {
+		if (item.bonusAc) return true;
+		if (item.ac == null) return false;
+
+		const itemType = item.bardingType || item.type;
+		if (!itemType) return false;
+
+		const itemTypeAbv = DataUtil.itemType.unpackUid(itemType).abbreviation;
+		return [
+			Parser.ITM_TYP_ABV__LIGHT_ARMOR,
+			Parser.ITM_TYP_ABV__MEDIUM_ARMOR,
+			Parser.ITM_TYP_ABV__HEAVY_ARMOR,
+			Parser.ITM_TYP_ABV__SHIELD,
+		].includes(itemTypeAbv);
+	}
+
 	static _RE_RANGE = /^(?<rangeShort>\d+)(?:\/(?<rangeLong>\d+))?$/;
 
 	static _mutateForFilters_getFilterRanges (item) {
@@ -400,7 +416,7 @@ class PageFilterItems extends PageFilterEquipment {
 		item._fBaseItemAll = fBaseItemSelf ? [fBaseItemSelf, ...(item._fBaseItem || [])] : item._fBaseItem;
 
 		item._fBonus = null;
-		if (item.bonusAc) (item._fBonus ||= []).push("Armor Class");
+		if (this._mutateForFilters_isArmorClassBonus(item)) (item._fBonus ||= []).push("Armor Class");
 		this._mutateForFilters_bonusWeapon({prop: "bonusWeapon", item, text: "Weapon Attack and Damage Rolls"});
 		this._mutateForFilters_bonusWeapon({prop: "bonusWeaponAttack", item, text: "Weapon Attack Rolls"});
 		this._mutateForFilters_bonusWeapon({prop: "bonusWeaponDamage", item, text: "Weapon Damage Rolls"});

@@ -3648,10 +3648,7 @@
 				"T"
 			],
 			"source": "Himo",
-			"range": "20/60",
-			"entries": [
-				"Cuando realizas la acción de Desarmar, obtienes un bonificador de +2 por cada sai que tengas equipado."
-			]
+			"range": "20/60"
 		},
 		{
 			"name": "Cimitarra de Doble Filo",
@@ -3684,7 +3681,10 @@
 				"T"
 			],
 			"source": "Himo",
-			"range": "20/60"
+			"range": "20/60",
+			"entries": [
+				"Cuando realizas la acción de Desarmar, obtienes un bonificador de +2 por cada sai que tengas equipado."
+			]
 		},
 		{
 			"name": "Diente de Hada",

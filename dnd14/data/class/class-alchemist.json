@@ -140,7 +140,7 @@
         "Ability Score Improvement|Alquimista|Himo|4|Himo",
         "Invocación Débil|Alquimista|Himo|5|Himo",
         "Especialización|Alquimista|Himo|5|Himo",
-        "Recolector Filosofal-Ritual|Alquimista|Himo|6|Himo",
+        "Recolector Filosofal-Ritual de Quimerización|Alquimista|Himo|6|Himo",
         "Mejora de la Piedra|Alquimista|Himo|7|Himo",
         "Ability Score Improvement|Alquimista|Himo|8|Himo",
         "Especialización|Alquimista|Himo|9|Himo",
@@ -168,7 +168,7 @@
           "type": "entries",
           "name": "Magia Filosofal",
           "entries": [
-            "Al nivel 1No es considerada como una magia como tal, pero sí puede usarse para combatir a la verdadera. Siempre que se trate de usar magia para emular la alquimia, esta será anulada por una fuerza extraña. Además, la alquimia puede ser detectada como una magia, pero no podrá identificarse, ya que no lo es en realidad. Siempre que dos fuerzas colisionen, una mágica y otra filosofal, será esta última la que se imponga, a menos que la fuerza de poder entre una y otra sea muy notable."
+            "Al nivel 1. No es considerada como una magia como tal, pero sí puede usarse para combatir a la verdadera. Siempre que se trate de usar magia para emular la alquimia, esta será anulada por una fuerza extraña. Además, la alquimia puede ser detectada como una magia, pero no podrá identificarse, ya que no lo es en realidad. Siempre que dos fuerzas colisionen, una mágica y otra filosofal, será esta última la que se imponga, a menos que la fuerza de poder entre una y otra sea muy notable."
           ]
         },
         {
@@ -287,7 +287,7 @@
       "level": 5
     },
     {
-      "name": "Recolector Filosofal-Ritual",
+      "name": "Recolector Filosofal-Ritual de Quimerización",
       "source": "Himo",
       "entries": [
         {

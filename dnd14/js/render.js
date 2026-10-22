@@ -11844,10 +11844,11 @@ Renderer.item = class {
 			const dexterityMax = (itemTypeAbv === Parser.ITM_TYP_ABV__MEDIUM_ARMOR && item.dexterityMax === undefined)
 				? 2
 				: item.dexterityMax;
-			const isAddDex = item.dexterityMax !== undefined || ![Parser.ITM_TYP_ABV__HEAVY_ARMOR, Parser.ITM_TYP_ABV__SHIELD].includes(itemTypeAbv);
+			const acAbility = item.acAbility || "Dex";
+			const isAddAbility = item.acAbility != null || item.dexterityMax !== undefined || ![Parser.ITM_TYP_ABV__HEAVY_ARMOR, Parser.ITM_TYP_ABV__SHIELD].includes(itemTypeAbv);
 
 			const prefix = itemTypeAbv === Parser.ITM_TYP_ABV__SHIELD ? "+" : "";
-			const suffix = isAddDex ? ` + Dex${dexterityMax ? ` (max ${dexterityMax})` : ""}` : "";
+			const suffix = isAddAbility ? ` + ${acAbility}${dexterityMax ? ` (max ${dexterityMax})` : ""}` : "";
 
 			damageParts.push(`AC ${prefix}${item.ac}${suffix}`);
 		}
