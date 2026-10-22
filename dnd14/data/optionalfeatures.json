@@ -4543,6 +4543,7 @@
 			"name": "Lucha Hiriente",
 			"source": "Himo",
 			"featureType": [
+				"FS:F",
 				"FS:C"
 			],
 			"entries": [
@@ -7237,6 +7238,7 @@
 			"name": "Shield Fighting",
 			"source": "Himo",
 			"featureType": [
+				"FS:F",
 				"FS:EM"
 			],
 			"entries": [
