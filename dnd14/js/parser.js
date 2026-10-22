@@ -2293,9 +2293,9 @@ Parser.OPT_FEATURE_TYPE_TO_FULL = {
 	"RN": "Rune Knight Rune",
 	"AF": "Alchemical Formula",
 	"POT": "Pociones del Alquimista",
-	"PW": "Planeswalker Power",
-	"BRM": "Clown Trick",
-	"JUG": "Canalla Trick",
+	"PW": "Words",
+	"BRM": "Bromas",
+	"JUG": "Jugarretas",
 	"TT": "Traveler's Trick",
 	"RP": "Renown Perk",
 };

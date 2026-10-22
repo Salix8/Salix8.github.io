@@ -268,14 +268,38 @@ describe("Pociones del Alquimista", () => {
 		expect(fightingStyles.every(it => it.featureType.includes("FS:F"))).toBe(true);
 	});
 
-	it("filters Other independently from Alquimista potions", () => {
-		const pageFilter = getOptionalFeatureFilterPage();
-		pageFilter._typeFilter.setValue("OTH", 1);
 
-		const otherFeatures = getFilterBoxMatches(pageFilter, DATA.optionalfeature);
-		expect(otherFeatures).toHaveLength(81);
-		expect(otherFeatures.every(it => it.featureType.includes("OTH") && !it.potion)).toBe(true);
-		expect(otherFeatures.map(it => it.name)).toContain("Arena en el ojo");
+	it("groups Words, Bromas, and Jugarretas by their feature type", () => {
+		const expectedGroups = [
+			["PW", "Words", 28, "Condición"],
+			["BRM", "Bromas", 19, "Chorro de Agua"],
+			["JUG", "Jugarretas", 34, "Arena en el ojo"],
+		];
+
+		expect(DATA.optionalfeature.some(it => it.featureType?.includes("OTH"))).toBe(false);
+
+		for (const [featureType, displayName, count, exampleName] of expectedGroups) {
+			const pageFilter = getOptionalFeatureFilterPage();
+			pageFilter._typeFilter.setValue(featureType, 1);
+			const matches = getFilterBoxMatches(pageFilter, DATA.optionalfeature);
+
+			expect(matches).toHaveLength(count);
+			expect(matches.every(it => it.featureType.includes(featureType))).toBe(true);
+			expect(matches.map(it => it.name)).toContain(exampleName);
+			const typeItem = pageFilter._typeFilter._items.find(it => it.item === featureType);
+			expect(pageFilter._typeFilter._getDisplayText(typeItem)).toBe(displayName);
+		}
+	});
+
+	it("keeps Lexarca identity for power word levels and subclasses without rendering it as a prerequisite", () => {
+		const powerWords = DATA.optionalfeature.filter(it => it.source === "Himo" && it.featureType?.includes("PW"));
+
+		expect(powerWords).toHaveLength(28);
+		powerWords.forEach(powerWord => {
+			const prerequisite = powerWord.prerequisite.find(it => it.level?.class?.name === "Lexarca");
+			expect(prerequisite.level.class).toEqual({name: "Lexarca", source: "Himo"});
+			expect(Renderer.optionalfeature.getPrerequisiteHtml(powerWord)).not.toContain("Lexarca");
+		});
 	});
 
 	it("filters the exact fighting-style lists for Canalla and Experto Marcial", () => {

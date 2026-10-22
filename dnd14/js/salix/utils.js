@@ -1606,9 +1606,9 @@ Parser.OPT_FEATURE_TYPE_TO_FULL = {
 	"RN": "Rune Knight Rune",
 	"AF": "Alchemical Formula",
 	"POT": "Poti",
-	"PW": "Palabra de Poder",
-	"BRM": "Broma",
-	"JUG": "Jugarreta"
+	"PW": "Words",
+	"BRM": "Bromas",
+	"JUG": "Jugarretas"
 };
 
 Parser.optFeatureTypeToFull = function (type) {
