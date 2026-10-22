@@ -628,7 +628,7 @@
 			"name": "Nombres de Poder",
 			"source": "Himo",
 			"entries": [
-				"Aprendes el conjuro de True Name de lv10, que puedes usar gastando slots con un sumatorio de slots de lv10, solo si tienes acceso al true name del objetivo. El DM te propondrá un statblock de Fiend, Celestial, Dragón o Undead (depende de tu subclase) de CR máximo igual a la mitad de tu lv redondeado hacia abajo (bajo su juicio puede levelear contigo). Este NPC está a tu servicio y conoces su true name. Si cae a 0 HP vuelve a su plano de origen, pero no es destruido. Si la criatura muere en su plano de origen, es destruida para siempre o hasta que se recupere con el conjuro de {@spell Wish}.",
+				"Aprendes el conjuro de {@spell True Name|DdV} de lv10, que puedes usar gastando slots con un sumatorio de slots de lv10, solo si tienes acceso al true name del objetivo. El DM te propondrá un statblock de Fiend, Celestial, Dragón o Undead (depende de tu subclase) de CR máximo igual a la mitad de tu lv redondeado hacia abajo (bajo su juicio puede levelear contigo). Este NPC está a tu servicio y conoces su true name. Si cae a 0 HP vuelve a su plano de origen, pero no es destruido. Si la criatura muere en su plano de origen, es destruida para siempre o hasta que se recupere con el conjuro de {@spell Wish}.",
 				"También conoces tu propio True Name.",
 				"El DM puede ayudarte a ganar nuevos true names durante la campaña, pero no tiene la obligación. Háblalo con él si creéis que llegaréis a este lv.",
 				"Además, si conoces el nombre de la criatura objetivo (el normal, no el true name), puedes decirlo como parte del componente verbal de un conjuro. Si ibas a atacarle o a hacerle salvar, gastas un uso de tus Palabras de Poder y el objetivo salva con desventaja o le atacas con ventaja. Si el conjuro hacía objetivo a una criatura pero no requería de salvaciones ni ataques, puedes gastar igual el uso y extender la duración al doble. Solo puedes decir un nombre de esta forma, aunque el conjuro targetease a más de una criatura."
@@ -734,7 +734,7 @@
 			"name": "True Name",
 			"source": "Himo",
 			"entries": [
-				"Ganas un slot de conjuro de lv10 que solo puedes usar para castear True Name. Puedes seguir casteandolo como antes."
+				"Ganas un slot de conjuro de lv10 que solo puedes usar para castear {@spell True Name|DdV}. Puedes seguir casteandolo como antes."
 			],
 			"className": "Lexarca",
 			"classSource": "Himo",

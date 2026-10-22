@@ -959,7 +959,7 @@
 								],
 								[
 									"7th",
-									"Perrete del Morde, {@spell confusion}"
+									"{@spell Mordenkainen's Faithful Hound|PHB|Perrete del Morde}, {@spell confusion}"
 								],
 								[
 									"9th",
@@ -1280,7 +1280,7 @@
 								],
 								[
 									"7th",
-									"{@spell plant growth}, Florecer"
+									"{@spell plant growth}, {@spell Florecer|GMAM}"
 								],
 								[
 									"9th",
@@ -1288,7 +1288,7 @@
 								],
 								[
 									"11th",
-									"Ira del Árbol, {@spell Espíritu del Sauce|GdR}"
+									"{@spell Ira del Árbol|GdR}, {@spell Espíritu del Sauce|GdR}"
 								]
 							]
 						}
@@ -1598,35 +1598,35 @@
 							"rows": [
 								[
 									"2",
-									"Rust Monster, Worg y Krasis Categoría 1"
+									"{@creature Rust Monster|MM}, {@creature Worg|MM} y {@creature Category 1 Krasis|GGR|Krasis Categoría 1}"
 								],
 								[
 									"4",
-									"Hippocamp, Nyx-Fleece Ram y Homarid"
+									"{@creature Hippocamp|MOT}, {@creature Nyx-Fleece Ram|MOT} y {@creature Homarid|PSD}"
 								],
 								[
 									"6",
-									"Kruthik Adulto, Ankheg y Mímico"
+									"{@creature Adult Kruthik|MTF|Kruthik Adulto}, {@creature Ankheg|MM} y {@creature Mimic|MM|Mímico}"
 								],
 								[
 									"8",
-									"Griffon, Peryton y Ettercap"
+									"{@creature Griffon|MM}, {@creature Peryton|MM} y {@creature Ettercap|MM}"
 								],
 								[
 									"9",
-									"Displacer Beast, Basilisk y Owlbear"
+									"{@creature Displacer Beast|MM}, {@creature Basilisk|MM} y {@creature Owlbear|MM}"
 								],
 								[
 									"12",
-									"Kamadan, Strigoi y Doppelganger"
+									"{@creature Kamadan|ToA}, {@creature Strigoi|VRGR} y {@creature Doppelganger|MM}"
 								],
 								[
 									"15",
-									"Bulette, Sea Lion y Catoblepas"
+									"{@creature Bulette|MM}, {@creature Sea Lion|TftYP} y {@creature Catoblepas|VGM}"
 								],
 								[
 									"18",
-									"Chimera, Krasis Categoría 2 y Thunder Boar"
+									"{@creature Chimera|MM}, {@creature Category 2 Krasis|GGR|Krasis Categoría 2} y {@creature Gorthok the Thunder Boar|DIP|Thunder Boar}"
 								]
 							]
 						}
@@ -1821,7 +1821,7 @@
 						[
 							"Ártico",
 							"{@spell Rime's Binding Ice|FTD}; {@spell Blur}; {@creature Black Bear|MM}",
-							"{@spell Hypnotic Pattern}; {@spell Slow}; Snow Leopard",
+							"{@spell Hypnotic Pattern}; {@spell Slow}; {@creature Snow Leopard|IDRotF}",
 							"{@spell Greater Invisibility}; {@spell Compulsion}; {@creature Polar Bear|MM} y Sabertooth",
 							"{@spell Steel Wind Strike|XGE}; {@spell Hold Monster}; {@creature Killer Whale|MM} y Spotted Lion"
 						],
@@ -1836,7 +1836,7 @@
 							"Ciénaga",
 							"{@spell Melf's Acid Arrow|PHB|Melf's Arrow}; {@spell Web}; {@creature Crocodile|MM}",
 							"{@spell Stinking Cloud}; {@spell Hunger of Hadar}; {@creature Giant Toad|MM}",
-							"{@spell Vitriolic Sphere|XGE}; {@spell Evard's Black Tentacles}; River Serpent",
+							"{@spell Vitriolic Sphere|XGE}; {@spell Evard's Black Tentacles}; {@creature River Serpent|PSX}",
 							"{@spell Nudo de Nyx|GdR}; {@spell Enervation|XGE}; Amphisbaena"
 						],
 						[
@@ -1844,20 +1844,20 @@
 							"{@spell Maximilian's Earthen Grasp|XGE}; {@spell Misty Step}; {@creature Giant Crab|MM}",
 							"{@spell Wall of Sand|XGE}; {@spell Catnap|XGE}; Snapping Turtle",
 							"{@spell Storm Sphere|XGE}; {@spell Evard's Black Tentacles}; Giant Crayfish",
-							"{@spell Creation}; {@spell Dawn|XGE}; Giant Snapping Turtle y {@creature Killer Whale|MM}"
+							"{@spell Creation}; {@spell Dawn|XGE}; {@creature Giant Snapping Turtle|ToA} y {@creature Killer Whale|MM}"
 						],
 						[
 							"Desierto",
 							"{@spell Phantasmal Force}; {@spell Mirror Image}; Camel (FM!)",
 							"{@spell Gaseous Form}; {@spell Wall of Sand|XGE}; Dogmole",
-							"{@spell Sickening Radiance|XGE}; {@spell Compulsion}; Relic Sloth",
+							"{@spell Sickening Radiance|XGE}; {@spell Compulsion}; {@creature Relic Sloth|EGW}",
 							"{@spell Flame Strike}; {@spell Dream}; {@creature Giant Scorpion|MM}"
 						],
 						[
 							"Montaña",
 							"{@spell Spider Climb}; {@spell Snilloc's Snowball Swarm|XGE}; {@creature Giant Goat|MM}",
 							"{@spell Thunder Step|XGE}; {@spell Lanza Atrapante de Claymore|GPNM}; Mountain Lion",
-							"{@spell Dimension Door}; {@spell Storm Sphere|XGE}; Quetzalcoatlus",
+							"{@spell Dimension Door}; {@spell Storm Sphere|XGE}; {@creature Quetzalcoatlus|ToA}",
 							"{@spell Passwall}; {@spell Animate Objects}; Dire Bird of Prey sin flyby y 60 ft de vuelo"
 						],
 						[
@@ -1869,7 +1869,7 @@
 						],
 						[
 							"Underdark",
-							"{@spell Spider Climb}; {@spell Web}; Fiendish Giant Spider",
+							"{@spell Spider Climb}; {@spell Web}; {@creature Fiendish Giant Spider|ToA}",
 							"{@spell Gaseous Form}; {@spell Stinking Cloud}; {@creature Giant Spider|MM} y Dragón de Komodo",
 							"{@spell Greater Invisibility}; {@spell Shadow of Moil|XGE}; Young Bulette",
 							"{@spell Mislead}; {@spell Passwall}; Night Scorpion"
@@ -1879,7 +1879,7 @@
 							"{@spell Shatter}; {@spell Invisibility}; {@creature Reef Shark|MM}",
 							"{@spell Hypnotic Pattern}; {@spell Thunder Step|XGE}; {@creature Giant Octopus|MM} y Snapping Turtle",
 							"{@spell Evard's Black Tentacles}; {@spell Storm Sphere|XGE}; {@creature Plesiosaurus|MM}",
-							"{@spell Dominate Person}; {@spell Nudo de Nyx|GdR}; Giant Lightning Eel"
+							"{@spell Dominate Person}; {@spell Nudo de Nyx|GdR}; {@creature Giant Lightning Eel|ToA}"
 						]
 					]
 				}
@@ -2520,7 +2520,7 @@
 								],
 								[
 									"9th",
-									"Ritual Funerario de Zackie, {@spell conjure barrage}"
+									"{@spell Ritual Funerario de Zackie|GdR}, {@spell conjure barrage}"
 								],
 								[
 									"13th",
@@ -3016,19 +3016,19 @@
 							"rows": [
 								[
 									"1st",
-									"Abrir Mente, {@spell sleep}"
+									"{@spell Abrir Mente|CdS}, {@spell sleep}"
 								],
 								[
 									"3rd",
-									"Buscador de Sueños, {@spell calm emotions}"
+									"{@spell Buscador de Sueños|CdS}, {@spell calm emotions}"
 								],
 								[
 									"5th",
-									"Atar Consciencia, {@spell clairvoyance}"
+									"{@spell Atar Consciencia|CdS}, {@spell clairvoyance}"
 								],
 								[
 									"7th",
-									"Caminante de Sueños, {@spell arcane eye}"
+									"{@spell Caminante de Sueños|CdS}, {@spell arcane eye}"
 								],
 								[
 									"9th",

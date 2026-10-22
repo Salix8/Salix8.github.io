@@ -5059,7 +5059,7 @@
 				{
 					"type": "entries",
 					"entries": [
-						"Aprendes dos maniobras de guerrero. Para usarlas, debes gastar 1 punto de ki en cada una y sustituyes el dado de superioridad por tu dado de Artes Marciales. Si no tienes dado de Artes Marciales, es un d4.",
+						"Aprendes dos {@filter maniobras de guerrero|optionalfeatures|feature type=MV:B}. Para usarlas, debes gastar 1 punto de ki en cada una y sustituyes el dado de superioridad por tu dado de Artes Marciales. Si no tienes dado de Artes Marciales, es un d4.",
 						"Ganas 2 puntos de ki adicionales que sólo puedes usar para esto."
 					]
 				}
@@ -5093,7 +5093,7 @@
 					"type": "entries",
 					"entries": [
 						"Mejora de Habilidad: Tu inteligencia, widom o Carisma aumenta en 1, hasta un máximo de 20.",
-						"Aprendes el conjuro Alter self y un conjuro de lv1 de tu elección de las escuelas de Conjuración o Transmutación. Puedes castear cualquiera de los dos conjuros 1 vez por descanso largo sin gastar slot, y usar slots que ya tengas para volver a castearlos. Tu habilidad de spellcasting para castearlos es la subida por esta dote."
+						"Aprendes el conjuro {@spell Alter Self|PHB} y un {@filter conjuro de lv1|spells|level=1|school=C;T} de tu elección de las escuelas de Conjuración o Transmutación. Puedes castear cualquiera de los dos conjuros 1 vez por descanso largo sin gastar slot, y usar slots que ya tengas para volver a castearlos. Tu habilidad de spellcasting para castearlos es la subida por esta dote."
 					]
 				}
 			],
@@ -5135,7 +5135,7 @@
 					"type": "entries",
 					"entries": [
 						"Requisito: Elfo de Sangre",
-						"Aprende un conjuro de lv1 y otro de lv2 que tengan coste material de hasta 100 GP.",
+						"Aprende un {@filter conjuro de lv1|spells|level=1|components & miscellaneous=Material with Cost} y otro {@filter conjuro de lv2|spells|level=2|components & miscellaneous=Material with Cost} que tengan coste material de hasta 100 GP.",
 						"Puedes ignorar el coste material de un conjuro y gastando 5 HP por cada 25 GP que cueste, hasta un máximo de 100 GP."
 					]
 				}
@@ -5362,7 +5362,7 @@
 					"entries": [
 						"Requisitos: Lv4 y tener competencia en al menos un arma marcial",
 						"+1 a Carisma",
-						"Aprendes el conjuro Branding Smite y un conjuro a elegir entre Searing Smite, Thunderous Smite o Wrathful Smite.",
+						"Aprendes el conjuro {@spell Branding Smite|PHB} y un conjuro a elegir entre {@spell Searing Smite|PHB}, {@spell Thunderous Smite|PHB} o {@spell Wrathful Smite|PHB}.",
 						"Puedes lanzar cada uno de estos conjuros sin gastar un espacio de conjuro una vez entre descansos largos. También puedes lanzar estos conjuros usando espacios del nivel apropiado. Usas Carisma."
 					]
 				}
@@ -5411,7 +5411,7 @@
 					"entries": [
 						"Requisito: Competencia en {@skill Medicine}",
 						"Expertise en {@skill Medicine}",
-						"Aprendes el cantrip Spare the Dying y puedes castearlo como reacción a 15 ft cuando una criatura caiga a 0 HP.",
+						"Aprendes el cantrip {@spell Spare the Dying|PHB} y puedes castearlo como reacción a 15 ft cuando una criatura caiga a 0 HP.",
 						"Reroleas 1 y 2 en curaciones y te quedas con la nueva tirada.",
 						"Puedes aplicar pociones de curación a otras criaturas usando la bonus como si fuera la acción. También puedes hacerte esto a ti mismo."
 					]
@@ -5465,9 +5465,9 @@
 					"type": "entries",
 					"entries": [
 						"Requisito: Oni lv4",
-						"Disguise Self at will y Sleep y Darkness una vez al día.",
-						"A lv8 puedes castear Fly (self) una vez al día.",
-						"A lv12 puedes castear una vez gratis Cono de Frío.",
+						"{@spell Disguise Self|PHB} at will y {@spell Sleep|PHB} y {@spell Darkness|PHB} una vez al día.",
+						"A lv8 puedes castear {@spell Fly|PHB} (self) una vez al día.",
+						"A lv12 puedes castear una vez gratis {@spell Cone of Cold|PHB|Cono de Frío}.",
 						"Si tienes una habilidad de Spellcasting y espacios de conjuro, puedes lanzar estos conjuros como si fueran de tu clase y los tienes siempre preparados. Si no, usas Constitución para tu modificador."
 					]
 				}
@@ -5542,7 +5542,7 @@
 					"type": "entries",
 					"entries": [
 						"Mejora de Habilidad: Tu inteligencia, widom o Carisma aumenta en 1, hasta un máximo de 20.",
-						"Aprendes el conjuro Spiritual Weapon y un conjuro de lv1 de tu elección de las escuelas de Abjuración o Evocación. Puedes castear cualquiera de los dos conjuros 1 vez por descanso largo sin gastar slot, y usar slots que ya tengas para volver a castearlos. Tu habilidad de spellcasting para castearlos es la subida por esta dote."
+						"Aprendes el conjuro {@spell Spiritual Weapon|PHB} y un {@filter conjuro de lv1|spells|level=1|school=A;V} de tu elección de las escuelas de Abjuración o Evocación. Puedes castear cualquiera de los dos conjuros 1 vez por descanso largo sin gastar slot, y usar slots que ya tengas para volver a castearlos. Tu habilidad de spellcasting para castearlos es la subida por esta dote."
 					]
 				}
 			],

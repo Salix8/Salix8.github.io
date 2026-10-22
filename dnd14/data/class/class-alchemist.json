@@ -182,7 +182,7 @@
 					"type": "entries",
 					"name": "Cuaderno de investigación",
 					"entries": [
-						"Puedes investigar cadáveres que aún no hayan estado en proceso de putrefacción. Para ello debes tener un objeto afilado o arma con los que puedas abrirlos en canal. Tras investigar una hora podrás añadirlos a tu lista de criaturas. Con esta lista podrás transmutar quimeras o invocar bestias, aberraciones y monstruosidades. Ambas cosas cuando llegues al nivel apropiado. Se da por hecho que conoces todas las bestias comunes de CR 0, Mastines, Mulas, Perros de Trineo y Simios."
+						"Puedes investigar cadáveres que aún no hayan estado en proceso de putrefacción. Para ello debes tener un objeto afilado o arma con los que puedas abrirlos en canal. Tras investigar una hora podrás añadirlos a tu lista de criaturas. Con esta lista podrás transmutar quimeras o invocar bestias, aberraciones y monstruosidades. Ambas cosas cuando llegues al nivel apropiado. Se da por hecho que conoces todas las bestias comunes de CR 0, {@creature Mastiff|MM|Mastines}, {@creature Mule|MM|Mulas}, {@creature Sled Dog|RoT|Perros de Trineo} y {@creature Ape|MM|Simios}."
 					]
 				},
 				{
@@ -313,13 +313,13 @@
 						{
 							"type": "list",
 							"items": [
-								"Inkling Mascot: Necesitas 1 litro de tinta, 1 componente de cualquier tipo de slime y 1 Elixir Curativo.",
-								"Pest Mascot: Un insecto de hasta 30 cm, sangre de cualquier criatura con regeneración y 1 Elixir Curativo",
-								"Skitterling: Un mamífero pequeño, alas de una criatura pequeña y 2 Frascos de Veneno",
-								"Garroter Crab: Un crustáceo pequeño, 1 Elixir Curativo y 1 Vapor del Nirvana",
-								"Wynling: Un mamífero tiny, alas de una criatura tiny o pequeña y dos pociones, una de invisibilidad y otra de velocidad.",
-								"Flumph: Un cerebro de una criatura con telepatía, tentáculos, un cuerpo pequeño (opcional) y dos pociones: una bomba fétida y una cubeta de ácido.",
-								"Morph: Baba de mímico (1 componente), poción de cieno transmutante y elixir curativo."
+								"{@creature Inkling Mascot|SCC}: Necesitas 1 litro de tinta, 1 componente de cualquier tipo de slime y 1 {@optfeature Elixir curativo|Himo|Elixir Curativo}.",
+								"{@creature Pest Mascot|SCC}: Un insecto de hasta 30 cm, sangre de cualquier criatura con regeneración y 1 {@optfeature Elixir curativo|Himo|Elixir Curativo}",
+								"Skitterling: Un mamífero pequeño, alas de una criatura pequeña y 2 {@optfeature Frasco de Veneno|Himo|Frascos de Veneno}",
+								"Garroter Crab: Un crustáceo pequeño, 1 {@optfeature Elixir curativo|Himo|Elixir Curativo} y 1 {@optfeature Vapores del Nirvana|Himo|Vapor del Nirvana}",
+								"{@creature Wynling|JttRC}: Un mamífero tiny, alas de una criatura tiny o pequeña y dos pociones, una de {@optfeature Cubierta de Invisibilidad|Himo|invisibilidad} y otra de {@optfeature Frasco de Velocidad|Himo|velocidad}.",
+								"{@creature Flumph|MM}: Un cerebro de una criatura con telepatía, tentáculos, un cuerpo pequeño (opcional) y dos pociones: una {@optfeature Bomba Fétida Lv1|Himo|bomba fétida} y una {@optfeature Cubeta de Ácido|Himo|cubeta de ácido}.",
+								"Morph: Baba de mímico (1 componente), poción de cieno transmutante y {@optfeature Elixir curativo|Himo|elixir curativo}."
 							]
 						},
 						{
@@ -330,13 +330,13 @@
 								{
 									"type": "list",
 									"items": [
-										"Barro →  Poción de fango",
-										"Humo →  Bomba de Humo",
-										"Vapor →  Proyectil Efervescente",
-										"Polvo →  Fango Cegador",
-										"Magma →  Aceite Alquímico",
-										"Hielo →  Bomba de Escarcha",
-										"Slime →  cubeta de ácido"
+								"Barro →  {@optfeature Poción de Fango|Himo}",
+								"Humo →  {@optfeature Bomba de Humo|Himo}",
+								"Vapor →  {@optfeature Proyectil Efervescente|Himo}",
+								"Polvo →  {@optfeature Fango cegador|Himo}",
+								"Magma →  {@optfeature Aceite Alquímico|Himo}",
+								"Hielo →  {@optfeature Bomba de Escarcha (lv5)|Himo|Bomba de Escarcha}",
+								"Slime →  {@optfeature Cubeta de Ácido|Himo|cubeta de ácido}"
 									]
 								}
 							]
@@ -344,17 +344,17 @@
 						{
 							"type": "list",
 							"items": [
-								"Spiderfrog: Una rana, una araña y un Elixir de Cuarción",
-								"Plant Familiar: Planta tiny o small, un Antídoto y un Vial de Crecimiento",
-								"Darkmantle: Un cefalópodo, tinta, sistema auditivo de algo con ecolocalización y una bomba de humo",
-								"Gazer: 4 ojos de beholder (de la familia), un cráneo, unas cuerdas vocales de algo capaz de hablar (puede venir incluido en el cráneo) y un Aliento Químico."
+							"{@creature Spiderfrog|MGELFT}: Una rana, una araña y un Elixir de Cuarción",
+							"Plant Familiar: Planta tiny o small, un {@optfeature Antídoto|Himo} y un {@optfeature Vial de Crecimiento|Himo}",
+							"{@creature Darkmantle|MM}: Un cefalópodo, tinta, sistema auditivo de algo con ecolocalización y una {@optfeature Bomba de Humo|Himo|bomba de humo}",
+							"{@creature Gazer|VGM}: 4 ojos de beholder (de la familia), un cráneo, unas cuerdas vocales de algo capaz de hablar (puede venir incluido en el cráneo) y un {@optfeature Aliento químico (lv1)|Himo|Aliento Químico}."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "Lantern Dragonette (modificado)",
 							"entries": [
-								"Un reptil tiny, alas de criatura tiny o small y una Poción Luminiscente",
+						"Un reptil tiny, alas de criatura tiny o small y una {@optfeature Poción Luminiscente|Himo}",
 								{
 									"type": "list",
 									"items": [
@@ -367,7 +367,7 @@
 						{
 							"type": "list",
 							"items": [
-								"Zorbo: Un mamífero pequeño, cuatro componentes: uno de polvo de hueso, otro de serrín, otro mineral y uno que puede ser animal (de una criatura con magic resistance) o mineral (plomo). También hará falta una poción de Hierro Líquido."
+							"{@creature Zorbo|ToA}: Un mamífero pequeño, cuatro componentes: uno de polvo de hueso, otro de serrín, otro mineral y uno que puede ser animal (de una criatura con magic resistance) o mineral (plomo). También hará falta una poción de {@optfeature Hierro Líquido|Himo}."
 							]
 						}
 					]
@@ -646,7 +646,7 @@
 					"type": "entries",
 					"name": "Trabajador del Metal",
 					"entries": [
-						"Conoces de memoria cómo preparar las pociones de Hierro Líquido y Ácido de Mercurio. Estas pociones estarán siempre preparadas. Cuando uses tu Transmutación Filosofal, puedes gastar 2 PF para darle un valor de 2d20 GP, debido a que produces el objeto recubierto de un oro macizo indistinguible del oro real. Aún así, el oro no parece de buena calidad para alguien que sepa del tema."
+						"Conoces de memoria cómo preparar las pociones de {@optfeature Hierro Líquido|Himo} y {@optfeature Ácido de Mercurio|Himo}. Estas pociones estarán siempre preparadas. Cuando uses tu Transmutación Filosofal, puedes gastar 2 PF para darle un valor de 2d20 GP, debido a que produces el objeto recubierto de un oro macizo indistinguible del oro real. Aún así, el oro no parece de buena calidad para alguien que sepa del tema."
 					]
 				}
 			],
@@ -684,7 +684,7 @@
 			"name": "Perdición de Midas",
 			"source": "Himo",
 			"entries": [
-				"Una vez por cada descanso largo, puedes imbuir tu Piedra con el poder de Midas. Al tocar a una criatura, deberá hacer una tirada de Salvación de Constitución contra tu CD de salvación de Pociones. En una tirada fallida, la criatura se convertirá en una estatua de oro permanentemente. La criatura seguirá viva, aunque {@condition Petrified|PHB}, y solo podrá volver a la normalidad con un conjuro de Restauración Mayor o Wish. Si la estatua es dañada y luego devuelta a la normalidad, la criatura mantendrá los daños recibidos y perderá HP a juicio del DM."
+			"Una vez por cada descanso largo, puedes imbuir tu Piedra con el poder de Midas. Al tocar a una criatura, deberá hacer una tirada de Salvación de Constitución contra tu CD de salvación de Pociones. En una tirada fallida, la criatura se convertirá en una estatua de oro permanentemente. La criatura seguirá viva, aunque {@condition Petrified|PHB}, y solo podrá volver a la normalidad con un conjuro de {@spell Greater Restoration|PHB|Restauración Mayor} o {@spell Wish|PHB}. Si la estatua es dañada y luego devuelta a la normalidad, la criatura mantendrá los daños recibidos y perderá HP a juicio del DM."
 			],
 			"level": 17,
 			"className": "Alquimista",
@@ -701,7 +701,7 @@
 					"type": "entries",
 					"name": "Sanador medicinal",
 					"entries": [
-						"La mejor forma de seguir vivo es no morir, por ello te especializaste en las pociones de curación. Ahora tienes siempre preparados el Elixir de Curación y el Antídoto. Además, ahora puedes gastar PF para curar a un aliado o a una de tus invocaciones. Al tocar al objetivo con la Piedra Filosofal, el objetivo puede recuperar una cantidad de dados de golpe igual al nº de PF gastados, añadiendo tu modificador de Wisdom a cada uno en vez del suyo de CON. Si la criatura no tiene dados de golpe suficientes, los puntos sobrantes se pierden."
+						"La mejor forma de seguir vivo es no morir, por ello te especializaste en las pociones de curación. Ahora tienes siempre preparados el {@optfeature Elixir curativo|Himo|Elixir de Curación} y el {@optfeature Antídoto|Himo}. Además, ahora puedes gastar PF para curar a un aliado o a una de tus invocaciones. Al tocar al objetivo con la Piedra Filosofal, el objetivo puede recuperar una cantidad de dados de golpe igual al nº de PF gastados, añadiendo tu modificador de Wisdom a cada uno en vez del suyo de CON. Si la criatura no tiene dados de golpe suficientes, los puntos sobrantes se pierden."
 					]
 				}
 			],
@@ -756,7 +756,7 @@
 					"type": "entries",
 					"name": "Artista del bisturí",
 					"entries": [
-						"Dominas el uso de la hoja casi como un pícaro o un cirujano. Investigar una criatura o recoger componentes Animales o Vegetales te llevará la mitad de tiempo. Podrás investigar una criatura en media hora y recoger ingredientes cada cinco minutos. También conocerás al dedillo las recetas del Elixir Animal y la Poción Energizante, por lo que no necesitarás tenerlas preparadas. La primera no matará al animal una vez acabe el efecto."
+						"Dominas el uso de la hoja casi como un pícaro o un cirujano. Investigar una criatura o recoger componentes Animales o Vegetales te llevará la mitad de tiempo. Podrás investigar una criatura en media hora y recoger ingredientes cada cinco minutos. También conocerás al dedillo las recetas del {@optfeature Elixir Animal|Himo} y la {@optfeature Poción Energizante|Himo}, por lo que no necesitarás tenerlas preparadas. La primera no matará al animal una vez acabe el efecto."
 					]
 				}
 			],
@@ -870,7 +870,7 @@
 					"type": "entries",
 					"name": "Conocedor de lo Arcano",
 					"entries": [
-						"Tus horas de estudio, búsqueda y observación te han enseñado a buscar la magia y contrarrestar las estrategias de los casters. Tienes siempre preparadas las pociones de Bomba de Humo y el Frasco de Veneno. Además, como acción, puedes gastar 1 PF para hacer visible cualquier aura mágica a 30 pies de ti durante un turno. La magia se verá de un determinado color según su escuela, y de una forma específica según su origen (Luz, divina; Humo, maldición; Aurora Boreal, Natural; y Aura de color, {@skill Arcana})."
+						"Tus horas de estudio, búsqueda y observación te han enseñado a buscar la magia y contrarrestar las estrategias de los casters. Tienes siempre preparadas las pociones de {@optfeature Bomba de Humo|Himo} y el {@optfeature Frasco de Veneno|Himo}. Además, como acción, puedes gastar 1 PF para hacer visible cualquier aura mágica a 30 pies de ti durante un turno. La magia se verá de un determinado color según su escuela, y de una forma específica según su origen (Luz, divina; Humo, maldición; Aurora Boreal, Natural; y Aura de color, {@skill Arcana})."
 					]
 				}
 			],
@@ -1280,7 +1280,7 @@
 					"type": "entries",
 					"name": "Bombardeo Potente",
 					"entries": [
-						"Te has centrado en bombardear sistemáticamente a tus enemigos. Tienes siempre preparadas la Cubeta de Ácido y la Poción Explosiva. Cuando tú uses tus pociones de área que hagan daño, ignoras resistencias al daño y añades tu modificador de Wisdom al daño la primera vez que hagan daño a cada objetivo.",
+						"Te has centrado en bombardear sistemáticamente a tus enemigos. Tienes siempre preparadas la {@optfeature Cubeta de Ácido|Himo} y la {@optfeature Poción Explosiva|Himo}. Cuando tú uses tus pociones de área que hagan daño, ignoras resistencias al daño y añades tu modificador de Wisdom al daño la primera vez que hagan daño a cada objetivo.",
 						"Nota que el Aliento Químico no es de área (es self)."
 					]
 				}

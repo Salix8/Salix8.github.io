@@ -780,11 +780,11 @@
 				],
 				[
 					"5",
-					"Invocas un Modron* controlado por el DM a 5 ft. Desaparece en 1 minuto."
+					"Invocas un {@table Modron|Himo|Modron}* controlado por el DM a 5 ft. Desaparece en 1 minuto."
 				],
 				[
 					"6",
-					"Invocas un Slaad* controlado por el DM. Desaparece en 1 minuto"
+					"Invocas un {@table Slaad|Himo|Slaad}* controlado por el DM. Desaparece en 1 minuto"
 				],
 				[
 					"7",
@@ -1152,7 +1152,7 @@
 				]
 			],
 			"footnotes": [
-				"* Hay más de una opción posible. Tira en la tabla de Modron o Slaad según corresponda."
+				"* Hay más de una opción posible. Tira en la tabla de {@table Modron|Himo} o {@table Slaad|Himo} según corresponda."
 			]
 		},
 		{
@@ -1170,27 +1170,27 @@
 			"rows": [
 				[
 					"1-8",
-					"Monodrone"
+					"{@creature Monodrone|MM}"
 				],
 				[
 					"9-11",
-					"Duodrone"
+					"{@creature Duodrone|MM}"
 				],
 				[
 					"12-13",
-					"Tridrone"
+					"{@creature Tridrone|MM}"
 				],
 				[
 					"14",
-					"Quadrone"
+					"{@creature Quadrone|MM}"
 				],
 				[
 					"15",
-					"Pentadrone"
+					"{@creature Pentadrone|MM}"
 				],
 				[
 					"16",
-					"Hexton"
+					"{@creature Hexton Modron|MPP|Hexton}"
 				],
 				[
 					"17",
@@ -1198,15 +1198,15 @@
 				],
 				[
 					"18",
-					"Octon"
+					"{@creature Octon Modron|MPP|Octon}"
 				],
 				[
 					"19",
-					"Nonaton"
+					"{@creature Nonaton Modron|MPP|Nonaton}"
 				],
 				[
 					"20",
-					"Decaton"
+					"{@creature Decaton Modron|MPP|Decaton}"
 				]
 			]
 		},
@@ -1225,27 +1225,27 @@
 			"rows": [
 				[
 					"1",
-					"Tadpole"
+					"{@creature Slaad Tadpole|MM|Tadpole}"
 				],
 				[
 					"2",
-					"Rojo"
+					"{@creature Red Slaad|MM|Rojo}"
 				],
 				[
 					"3",
-					"Azul"
+					"{@creature Blue Slaad|MM|Azul}"
 				],
 				[
 					"4",
-					"Verde"
+					"{@creature Green Slaad|MM|Verde}"
 				],
 				[
 					"5",
-					"Gris"
+					"{@creature Gray Slaad|MM|Gris}"
 				],
 				[
 					"6",
-					"Negro"
+					"{@creature Death Slaad|MM|Negro}"
 				]
 			]
 		}
