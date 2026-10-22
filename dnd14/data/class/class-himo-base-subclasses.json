@@ -50,6 +50,17 @@
 			"name": "Bladesmith",
 			"shortName": "Bladesmith",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": ["Compelled Duel|PHB", "Wrathful Smite|PHB"],
+						"5": ["Kinetic Jaunt|SCC", "Spiritual Weapon|PHB"],
+						"9": ["Crusader's Mantle|PHB", "Elemental Weapon|PHB"],
+						"13": ["Staggering Smite|PHB", "Fire Shield|PHB"],
+						"17": ["Steel Wind Strike|XGE", "Holy Weapon|XGE"]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"Bladesmith|Artificer|TCE|Bladesmith|Himo|3",
 				"Multiataque|Artificer|TCE|Bladesmith|Himo|5",
@@ -101,6 +112,17 @@
 			"name": "Dominio Shintoísta",
 			"shortName": "Shintoísta",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"1": ["Dissonant Whispers|PHB", "Silvery Barbs|SCC"],
+						"3": ["Invisibility|PHB", "Phantasmal Force|PHB"],
+						"5": ["Fear|PHB", "Blink|PHB"],
+						"7": ["Mordenkainen's Faithful Hound|PHB", "Confusion|PHB"],
+						"9": ["Mislead|PHB", "Telekinesis|PHB"]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"Dominio Shintoísta|Cleric||Shintoísta|Himo|1",
 				"Canalizar Divinidad: Puente Etéreo|Cleric||Shintoísta|Himo|2",
@@ -115,6 +137,17 @@
 			"name": "Dominio del Vacío",
 			"shortName": "Vacío",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"1": ["Dissonant Whispers|PHB", "Feather Fall|PHB"],
+						"3": ["Levitate|PHB", "Silence|PHB"],
+						"5": ["Fly|PHB", "Magic Circle|PHB"],
+						"7": ["Banishment|PHB", "Dimension Door|PHB"],
+						"9": ["Contact Other Plane|PHB", "Planar Binding|PHB"]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"Dominio del Vacío|Cleric||Vacío|Himo|1",
 				"Canalizar Divinidad: Empuje Gravitacional|Cleric||Vacío|Himo|2",
@@ -129,6 +162,17 @@
 			"name": "Dominio del Viaje",
 			"shortName": "Viaje",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"1": ["Disguise Self|PHB", "Zephyr Strike|XGE"],
+						"3": ["Find Steed|PHB", "Vortex Warp|SCC"],
+						"5": ["Leomund's Tiny Hut|PHB", "Thunder Step|XGE"],
+						"7": ["Dimension Door|PHB", "Sending (Hishna)|GMAM"],
+						"9": ["Passwall|PHB", "Teleportation Circle|PHB"]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"Dominio del Viaje|Cleric||Viaje|Himo|1",
 				"Canalizar Divinidad: Huida Cortante|Cleric||Viaje|Himo|2",
@@ -143,6 +187,17 @@
 			"name": "Círculo del Bosque",
 			"shortName": "Bosque",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": ["Entangle|PHB", "Ensnaring Strike|PHB"],
+						"5": ["Emboscada|GMAM", "Spike Growth|PHB"],
+						"7": ["Plant Growth|PHB", "Florecer|GMAM"],
+						"9": ["Cambiar Cauce|GMAM", "Grasping Vine|PHB"],
+						"11": ["Ira del Árbol|GdR", "Espíritu del Sauce|GdR"]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"Círculo del Bosque|Druid||Bosque|Himo|2",
 				"Habla Vegetal|Druid||Bosque|Himo|6",
@@ -182,6 +237,15 @@
 			"name": "Círculo de las Espinas",
 			"shortName": "Espinas",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"2": ["Hex|PHB"],
+						"6": ["Animate Dead|PHB"],
+						"10": ["Scrying|PHB"]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"Círculo de las Espinas|Druid||Espinas|Himo|2",
 				"Espíritus Guardianes|Druid||Espinas|Himo|6",
@@ -221,6 +285,16 @@
 			"name": "Círculo de la Tierra (Himo)",
 			"shortName": "Tierra (Corrección)",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": ["Rime's Binding Ice|FTD", "Blur|PHB", "Silence|PHB", "Spider Climb|PHB", "Melf's Acid Arrow|PHB", "Web|PHB", "Maximilian's Earthen Grasp|XGE", "Misty Step|PHB", "Phantasmal Force|PHB", "Mirror Image|PHB", "Find Steed|PHB", "Invisibility|PHB", "Snilloc's Snowball Swarm|XGE", "Shatter|PHB"],
+						"5": ["Hypnotic Pattern|PHB", "Slow|PHB", "Clairvoyance|PHB", "Conjure Barrage|PHB", "Stinking Cloud|PHB", "Hunger of Hadar|PHB", "Wall of Sand|XGE", "Catnap|XGE", "Gaseous Form|PHB", "Thunder Step|XGE", "Lanza Atrapante de Claymore|GPNM", "Fly|PHB", "Haste|PHB"],
+						"7": ["Greater Invisibility|PHB", "Compulsion|PHB", "Aura of Purity|PHB", "Find Greater Steed|XGE", "Vitriolic Sphere|XGE", "Evard's Black Tentacles|PHB", "Storm Sphere|XGE", "Sickening Radiance|XGE", "Dimension Door|PHB", "Shadow of Moil|XGE"],
+						"9": ["Steel Wind Strike|XGE", "Hold Monster|PHB", "Conjure Volley|PHB", "Seeming|PHB", "Nudo de Nyx|GdR", "Enervation|XGE", "Creation|PHB", "Dawn|XGE", "Flame Strike|PHB", "Dream|PHB", "Passwall|PHB", "Animate Objects|PHB", "Far Step|XGE", "Mislead|PHB", "Dominate Person|PHB"]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"Círculo de la Tierra (Himo)|Druid||Tierra (Corrección)|Himo|2",
 				"Terreno Predilecto|Druid||Tierra (Corrección)|Himo|6",
@@ -322,11 +396,12 @@
 			],
 			"additionalSpells": [
 				{
-					"name": "Catalog access",
-					"expanded": {
-						"s1": [
-							"Llamada del Cazador|GMAM"
-						]
+					"prepared": {
+						"3": ["Hunter's Mark|PHB", "Animal Friendship|PHB"],
+						"5": ["Animal Messenger|PHB", "Beast Sense|PHB"],
+						"9": ["Conjure Animals|PHB", "Phantom Steed|PHB"],
+						"13": ["Guardian of Nature|XGE", "Aura of Life|PHB"],
+						"17": ["Commune with Nature|PHB", "Wrath of Nature|XGE"]
 					}
 				}
 			],
@@ -337,6 +412,17 @@
 			"name": "Juramento Fey",
 			"shortName": "Fey",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": ["Faerie Fire|PHB", "Hunter's Mark|PHB"],
+						"5": ["Calm Emotions|PHB", "Phantasmal Force|PHB"],
+						"9": ["Ritual Funerario de Zackie|GdR", "Conjure Barrage|PHB"],
+						"13": ["Guardian of Nature|XGE", "Charm Monster|XGE"],
+						"17": ["Geas|PHB", "Far Step|XGE"]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"Juramento Fey|Paladin||Fey|Himo|3",
 				"Canalizar Divinidad: Lluvia Radiante|Paladin||Fey|Himo|7",
@@ -350,6 +436,17 @@
 			"name": "Juramento de Magia Hishna",
 			"shortName": "Hishna",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": ["Cat Charm|GMAM", "Espolón de Roca|GMAM"],
+						"5": ["Heartsense|GMAM", "Emboscada|GMAM"],
+						"9": ["Sequía|GMAM", "Forma de Jaguar|GMAM"],
+						"13": ["Incendio|GMAM", "Sending (Hishna)|GMAM"],
+						"17": ["Cacería|GPNM", "Talismán de Hishna|GMAM"]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"Juramento de Magia Hishna|Paladin||Hishna|Himo|3",
 				"Aura de Sangre|Paladin||Hishna|Himo|7",
@@ -363,6 +460,17 @@
 			"name": "Juramento de Magia Pluma",
 			"shortName": "Pluma",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": ["Elevar Menor|GMAM", "Regulación Térmica|GMAM"],
+						"5": ["Breathsense|GMAM", "Suerte del Pescador|GMAM"],
+						"9": ["Elevar Mayor|GMAM", "Forma de Águila|GMAM"],
+						"13": ["Cambiar Cauce|GMAM", "Major Bird Charm|GMAM"],
+						"17": ["Espíritu del Sauce|GdR", "Talismán de Pluma|GMAM"]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"Juramento de Magia Pluma|Paladin||Pluma|Himo|3",
 				"Aura de Paz|Paladin||Pluma|Himo|7",
@@ -376,6 +484,17 @@
 			"name": "Linaje Vampírico",
 			"shortName": "Vampírico",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"known": {
+						"1": ["Charm Person|PHB", "Sleep|PHB"],
+						"3": ["Hold Person|PHB", "Wither and Bloom|SCC"],
+						"5": ["Vampiric Touch|PHB", "Speak with Dead|PHB"],
+						"7": ["Charm Monster|XGE", "Shadow of Moil|XGE"],
+						"9": ["Geas|PHB", "Enervation|XGE"]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"Linaje Vampírico|Sorcerer||Vampírico|Himo|1",
 				"Cambio de Forma|Sorcerer||Vampírico|Himo|6",
@@ -389,6 +508,17 @@
 			"name": "El Parásito",
 			"shortName": "Parásito",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s1": ["Dissonant Whispers|PHB", "Identify|PHB"],
+						"s2": ["Detect Thoughts|PHB", "Enhance Ability|PHB"],
+						"s3": ["Pulse Wave|EGW", "Sending|PHB"],
+						"s4": ["Compulsion|PHB", "Confusion|PHB"],
+						"s5": ["Modify Memory|PHB", "Telekinesis|PHB"]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"El Parásito|Warlock||Parásito|Himo|1",
 				"Protección Mental|Warlock||Parásito|Himo|6",
@@ -402,6 +532,17 @@
 			"name": "El Quori",
 			"shortName": "Quori",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s1": ["Abrir Mente|CdS", "Sleep|PHB"],
+						"s2": ["Buscador de Sueños|CdS", "Calm Emotions|PHB"],
+						"s3": ["Atar Consciencia|CdS", "Clairvoyance|PHB"],
+						"s4": ["Caminante de Sueños|CdS", "Arcane Eye|PHB"],
+						"s5": ["Modify Memory|PHB", "Rary's Telepathic Bond|PHB"]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"El Quori|Warlock||Quori|Himo|1",
 				"Mente Abierta|Warlock||Quori|Himo|6",
@@ -415,6 +556,17 @@
 			"name": "El Archimago",
 			"shortName": "Archimago",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s1": ["Magic Missile|PHB", "Shield|PHB"],
+						"s2": ["Rope Trick|PHB", "Leomund's Tiny Hut|PHB"],
+						"s3": ["Lightning Bolt|PHB", "Tiny Servant|XGE"],
+						"s4": ["Arcane Eye|PHB", "Otiluke's Resilient Sphere|PHB"],
+						"s5": ["Bigby's Hand|PHB", "Wall of Force|PHB"]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"El Archimago|Warlock||Archimago|Himo|1",
 				"Tropiezo Astral|Warlock||Archimago|Himo|6",
@@ -429,6 +581,17 @@
 			"name": "El Dragón",
 			"shortName": "Dragón",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s1": ["Absorb Elements|XGE", "Chromatic Orb|PHB"],
+						"s2": ["Dragon's Breath|XGE", "Rime's Binding Ice|FTD"],
+						"s3": ["Lightning Bolt|PHB", "Ashardalon's Stride|FTD"],
+						"s4": ["Fire Shield|PHB", "Ice Storm|PHB"],
+						"s5": ["Cone of Cold|PHB", "Immolation|XGE"]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"El Dragón|Warlock||Dragón|Himo|1",
 				"Influencia Dracónica|Warlock||Dragón|Himo|6",
@@ -442,6 +605,17 @@
 			"name": "Lich",
 			"shortName": "Lich",
 			"source": "Himo",
+			"additionalSpells": [
+				{
+					"expanded": {
+						"s0": [
+							{
+								"all": "school=N"
+							}
+						]
+					}
+				}
+			],
 			"subclassFeatures": [
 				"Lich|Wizard||Lich|Himo|2",
 				"Levantar No Muertos|Wizard||Lich|Himo|6",
