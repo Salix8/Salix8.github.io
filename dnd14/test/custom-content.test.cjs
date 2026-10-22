@@ -43,18 +43,94 @@ assert.equal(optionalFeatures.length, 311, "D&D 2014 must retain the curated Opt
 assert.ok(optionalFeatures.every(({source}) => !removedUaSources.has(source)), "Removed UA sources must not remain in Optional Features.");
 assert.ok(optionalFeatures.every(({featureType = []}) => featureType.every(type => !type.startsWith("SHP:") && !type.startsWith("IWM:"))), "Vehicle upgrades must not remain in Optional Features.");
 assert.equal(new Set(optionalFeatures.map(({name, source}) => `${name}\u0000${source}`)).size, optionalFeatures.length, "Optional Features must not be duplicated.");
-assert.deepEqual(optionalFeatures.find(it => it.name === "Lucha Hiriente" && it.source === "Himo")?.featureType, ["FS:C"]);
-assert.deepEqual(optionalFeatures.find(it => it.name === "Shield Fighting" && it.source === "Himo")?.featureType, ["FS:EM"]);
+assert.ok(optionalFeatures.find(it => it.name === "Lucha Hiriente" && it.source === "Himo")?.featureType.includes("FS:C"));
+assert.ok(optionalFeatures.find(it => it.name === "Shield Fighting" && it.source === "Himo")?.featureType.includes("FS:EM"));
 assert.match(optionalFeatures.find(it => it.name === "Lucha Hiriente" && it.source === "Himo")?.entries?.[0] || "", /vicious mockery/i);
 assert.deepEqual(optionalFeatures.filter(it => it.featureType?.includes("FS:C")).map(it => it.name).sort(), ["Defense", "Dueling", "Lucha Hiriente", "Thrown Weapon Fighting", "Two-Weapon Fighting", "Unarmed Fighting"]);
 assert.deepEqual(optionalFeatures.filter(it => it.featureType?.includes("FS:EM")).map(it => it.name).sort(), ["Defense", "Dueling", "Great Weapon Fighting", "Interception", "Protection", "Shield Fighting", "Superior Technique", "Thrown Weapon Fighting", "Two-Weapon Fighting", "Unarmed Fighting"]);
 
 const canalla = fs.readFileSync(path.join(root, "data", "class", "class-canalla.json"), "utf8");
+const canallaData = JSON.parse(canalla);
 const martialExpert = fs.readFileSync(path.join(root, "data", "class", "class-martial-expert.json"), "utf8");
 assert.match(canalla, /\{@optfeature Lucha Hiriente\|Himo\}/);
 assert.match(martialExpert, /\{@optfeature Shield Fighting\|Himo\}/);
 assert.doesNotMatch(canalla, /"entry": "como reacción cuando un objetivo dentro del rango falle un ataque/i);
 assert.doesNotMatch(martialExpert, /"entry": "Puedes usar el escudo como arma/i);
+
+const canallaSubclassTricks = optionalFeatures.filter(feature => feature.featureType?.includes("JUG")
+	&& feature.prerequisite?.some(prerequisite => prerequisite.level?.class?.name === "Canalla" && prerequisite.level.subclass));
+assert.equal(canallaSubclassTricks.length, 28, "Every subclass trick must remain an Optional Feature.");
+for (const trick of canallaSubclassTricks) {
+	const level = trick.prerequisite.find(prerequisite => prerequisite.level?.class?.name === "Canalla" && prerequisite.level.subclass).level;
+	const subclassFeature = canallaData.subclassFeature.find(feature => feature.subclassShortName === level.subclass.name && feature.level === level.level && feature.name !== "Jugarreta Extra");
+	const trickLink = `{@optfeature ${trick.name}|Himo}`;
+
+	assert.ok(subclassFeature, `Missing ${level.subclass.name} level ${level.level} feature for ${trick.name}.`);
+
+	if (level.level === 3) {
+		assert.equal(subclassFeature._displayName, undefined, `${level.subclass.name} must be the unprefixed subclass heading.`);
+		const extraTrick = subclassFeature.entries.find(entry => entry?.name === "Level 3: Jugarreta Extra" && JSON.stringify(entry.entries).includes(trickLink));
+		assert.ok(extraTrick, `Missing separate Level 3 Jugarreta Extra entry for ${trick.name}.`);
+		assert.match(extraTrick.entries[0], /Adquieres una \{@filter jugarreta\|optionalfeatures\|feature type=JUG\|source=Himo\} extra/, `${trick.name} must link to the Jugarretas catalogue.`);
+		assert.match(extraTrick.entries[1], new RegExp(`A las jugarretas de ${level.subclass.name} se añade: .*${trickLink.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`), `${trick.name} must link to its Optional Feature entry.`);
+		continue;
+	}
+
+	const extraTrickFeature = canallaData.subclassFeature.find(feature => feature.subclassShortName === level.subclass.name && feature.level === level.level && feature.name === "Jugarreta Extra" && JSON.stringify(feature.entries).includes(trickLink));
+	assert.equal(subclassFeature._displayName, `Level ${level.level}: ${subclassFeature.name}`, `${subclassFeature.name} must display its level.`);
+	assert.equal(subclassFeature.isDisplayAsSubclassTrait, true, `${subclassFeature.name} must render as an inline trait.`);
+	assert.ok(extraTrickFeature, `Missing independent Jugarreta Extra feature for ${trick.name}.`);
+	assert.equal(extraTrickFeature._displayName, `Level ${level.level}: Jugarreta Extra`, `${trick.name} must display in an independent, levelled feature.`);
+	assert.equal(extraTrickFeature.isDisplayAsSubclassTrait, true, `${trick.name} must render as an inline trait.`);
+	assert.match(extraTrickFeature.entries[0], /Adquieres una \{@filter jugarreta\|optionalfeatures\|feature type=JUG\|source=Himo\} extra/, `${trick.name} must link to the Jugarretas catalogue.`);
+	assert.match(extraTrickFeature.entries[1], new RegExp(`A las jugarretas de ${level.subclass.name} se añade: .*${trickLink.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`), `${trick.name} must link to its Optional Feature entry.`);
+	assert.ok(!JSON.stringify(subclassFeature.entries).includes(trickLink), `${trick.name} must not be embedded in the preceding subclass trait.`);
+}
+assert.doesNotMatch(canalla, /"name": "Jugarretas de /, "Subclass features must use the individual Jugarreta label.");
+
+const alchemistData = JSON.parse(fs.readFileSync(path.join(root, "data", "class", "class-alchemist.json"), "utf8"));
+const alchemistSubclassLevels = [5, 9, 13, 17];
+for (const subclass of alchemistData.subclass) {
+	const features = alchemistData.subclassFeature
+		.filter(feature => feature.subclassShortName === subclass.shortName && feature.subclassSource === subclass.source)
+		.sort((a, b) => a.level - b.level);
+
+	assert.deepEqual(features.map(feature => feature.level), alchemistSubclassLevels, `${subclass.name} must gain its features at levels 5, 9, 13, and 17.`);
+	assert.equal(features[0]._displayName, undefined, `${subclass.name} must remain the unprefixed subclass heading.`);
+	for (const entry of features[0].entries.filter(entry => entry?.type === "entries" && entry.name)) {
+		assert.match(entry.name, /^Level 5: /, `${subclass.name}'s initial trait must display level 5.`);
+	}
+	for (const feature of features.slice(1)) {
+		assert.equal(feature._displayName, `Level ${feature.level}: ${feature.name}`, `${feature.name} must display its acquisition level.`);
+		assert.equal(feature.isDisplayAsSubclassTrait, true, `${feature.name} must render as an inline trait.`);
+	}
+}
+
+const levelledSubclassFiles = [
+	["class-desangrador.json", [3, 6, 10, 14]],
+	["class-martial-expert.json", [3, 7, 13, 18]],
+	["class-lexarch.json", [3, 6, 9, 14, 18]],
+	["class-clown.json", [3, 6, 10, 15]],
+	["class-planeswalker.json", [1, 3, 7, 14]],
+];
+for (const [fileName, expectedLevels] of levelledSubclassFiles) {
+	const classData = JSON.parse(fs.readFileSync(path.join(root, "data", "class", fileName), "utf8"));
+	for (const subclass of classData.subclass) {
+		const features = classData.subclassFeature
+			.filter(feature => feature.subclassShortName === subclass.shortName && feature.subclassSource === subclass.source)
+			.sort((a, b) => a.level - b.level);
+
+		assert.deepEqual(features.map(feature => feature.level), expectedLevels, `${subclass.name} must retain its subclass progression.`);
+		assert.equal(features[0]._displayName, undefined, `${subclass.name} must remain the unprefixed subclass heading.`);
+		for (const entry of features[0].entries.filter(entry => entry?.type === "entries" && entry.name)) {
+			assert.match(entry.name, new RegExp(`^Level ${expectedLevels[0]}: `), `${subclass.name}'s initial traits must display their acquisition level.`);
+		}
+		for (const feature of features.slice(1)) {
+			assert.equal(feature._displayName, `Level ${feature.level}: ${feature.name}`, `${feature.name} must display its acquisition level.`);
+			assert.equal(feature.isDisplayAsSubclassTrait, true, `${feature.name} must render as an inline trait.`);
+		}
+	}
+}
 
 const fighter = fs.readFileSync(path.join(root, "data", "class", "class-fighter.json"), "utf8");
 const himoBattleMasterManeuvers = ["Anchor Howl", "Block", "Deflect", "Partner's Shield"];

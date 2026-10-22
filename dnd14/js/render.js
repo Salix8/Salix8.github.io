@@ -7427,6 +7427,19 @@ Renderer.class = class {
 		styleHint ||= VetoolsConfig.get("styleSwitcher", "style");
 
 		const cpy = MiscUtil.copyFast(ent);
+		if (cpy.isDisplayAsSubclassTrait) {
+			const displayName = cpy._displayName || cpy.name;
+			delete cpy.isDisplayAsSubclassTrait;
+			delete cpy.name;
+			delete cpy._displayName;
+			cpy.entries = [{
+				type: "entries",
+				name: displayName,
+				entries: cpy.entries,
+			}];
+			return cpy;
+		}
+
 		cpy.entries = cpy.entries
 			.map(ent => {
 				if (ent.type !== "entries" || !ent.name) return ent;
