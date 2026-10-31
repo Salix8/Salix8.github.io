@@ -1,0 +1,308 @@
+{
+  "class": [
+    {
+      "name": "Guardián",
+      "source": "Himo",
+      "page": "??",
+      "hd": {"number": 1, "faces": 12},
+      "proficiency": ["con", "cha"],
+      "startingProficiencies": {
+        "armor": ["light", "medium", "heavy", "shield"],
+        "weapons": ["Simples", "Marciales"],
+        "tools": ["-"],
+        "skills": [{"choose": {"from": ["athletics", "deception", "insight", "intimidation", "medicine", "perception", "persuasion"], "count": 2}}]
+      },
+      "startingEquipment": {
+        "additionalFromBackground": true,
+        "default": [
+          "(a) Un arma marcial y un escudo o (b) dos armas marciales.",
+          "(a) una ballesta ligera y 20 virotes o (b) dos light hammers.",
+          "(a) Pack de dungeoneer o (b) un explorer’s pack.",
+          "Una Chain Mail"
+        ],
+        "goldAlternative": "5d4x10 GP"
+      },
+      "multiclassing": {
+        "requirements": {"con": 13, "cha": 13},
+        "proficienciesGained": {
+          "armor": ["light", "medium", "shield"],
+          "weapons": ["simples", "marciales"]
+        }
+      },
+      "fluff": {"entries": ["CD = 8 + BC + Carisma"]},
+      "classTableGroups": [
+        {
+          "colLabels": ["Inner Fire"],
+          "rows": [["1d4"], ["1d4"], ["1d4"], ["1d4"], ["1d6"], ["1d6"], ["1d6"], ["1d6"], ["1d6"], ["1d8"], ["1d8"], ["1d8"], ["1d8"], ["1d8"], ["1d10"], ["1d10"], ["1d10"], ["1d10"], ["1d10"], ["1d10"]]
+        }
+      ],
+      "classFeatures": [
+        "Inner Fire|Guardián|Himo|1|Himo",
+        "Reactive Fighting|Guardián|Himo|1|Himo",
+        "Dominant Will|Guardián|Himo|1|Himo",
+        "Daring Taunt|Guardián|Himo|2|Himo",
+        "Disruption Tactics|Guardián|Himo|2|Himo",
+        "Defensive Archetypes|Guardián|Himo|3|Himo",
+        "Guardian’s Patience|Guardián|Himo|3|Himo",
+        "Ability Score Improvement|Guardián|Himo|4|Himo",
+        "Extra Reaction|Guardián|Himo|5|Himo",
+        "Heavy Blows|Guardián|Himo|5|Himo",
+        "Juggernaut|Guardián|Himo|5|Himo",
+        "Defensive Archetypes|Guardián|Himo|6|Himo",
+        "Honed Reflexes|Guardián|Himo|7|Himo",
+        "Ability Score Improvement|Guardián|Himo|8|Himo",
+        "Unbreakable|Guardián|Himo|9|Himo",
+        "Ability Score Improvement|Guardián|Himo|10|Himo",
+        "Ferocious Taunt|Guardián|Himo|11|Himo",
+        "Ability Score Improvement|Guardián|Himo|12|Himo",
+        "Defensive Archetypes|Guardián|Himo|13|Himo",
+        "Unstoppable|Guardián|Himo|14|Himo",
+        "Unbreakable|Guardián|Himo|15|Himo",
+        "Ability Score Improvement|Guardián|Himo|16|Himo",
+        "Extra Reaction|Guardián|Himo|17|Himo",
+        "Outrageous Affront|Guardián|Himo|17|Himo",
+        "Defensive Archetypes|Guardián|Himo|18|Himo",
+        "Ability Score Improvement|Guardián|Himo|19|Himo",
+        "Unyielding Bastion|Guardián|Himo|20|Himo"
+      ],
+      "subclassTitle": "Defensive Archetypes"
+    }
+  ],
+  "classFeature": [
+    {
+      "name": "Inner Fire", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 1,
+      "entries": [
+        "Tienes un fuego dentro que te permite aguantar golpes que llevarían a cualquiera a rendirse. Los daños contundentes, cortantes y perforantes que recibas son reducidos en una cantidad igual a una tirada de tu inner fire mientras reúnas las siguientes condiciones:",
+        {"type": "list", "items": ["Llevas armadura media o pesada.", "No estás {@condition incapacitated}.", "Tu velocidad no es 0."]},
+        "Tu inner fire escala según la tabla. Si no llevas armadura mediana o pesada pero cumples el resto de requisitos, puedes usar tu reacción para seguir reduciendo los daños mencionados.",
+        "Aviso: La reducción de daño se da antes de aplicar otras reducciones y/o resistencias."
+      ]
+    },
+    {
+      "name": "Reactive Fighting", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 1,
+      "entries": [
+        "A nivel 1 tomas un estilo de lucha más reactivo, favoreciendo parrys y bloqueos en vez de ataques agresivos. Ganas acceso a las siguientes reacciones:",
+        {"type": "entries", "name": "Detrás de mi", "entries": ["Cuando una criatura que puedas ver a 10 ft de ti que no seas tú recibe daño de un ataque o efecto que puedas ver; puedes usar tu reacción para mover 5 ft en dirección a la criatura. Si acabas a 5 ft de esta, puedes reducir el daño recibido en Inner Fire + BC hasta un mínimo de 0 y tú recibes esa cantidad de daño del mismo tipo."]},
+        {"type": "entries", "name": "Retribution Strike", "entries": ["Cuando una criatura que puedas ver a 10 ft de ti dañe a una criatura aliada que puedas ver; puedes usar tu reacción para mover 5 ft en dirección a la criatura y atacarle."]}
+      ]
+    },
+    {
+      "name": "Dominant Will", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 1,
+      "entries": ["Tienes competencia en una de las siguientes habilidades: Engaño, Performance, Persuasión o Intimidación. Si ya eras competente en la habilidad escogida, tienes expertise."]
+    },
+    {
+      "name": "Daring Taunt", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 2,
+      "entries": [
+        "Al nivel 2 haces uso táctico de las palabras y las acciones. Como acción y/o como bonus, elige una criatura que te pueda ver u escuchar. Esta salva Wisdom, con ventaja si le golpeaste con un ataque desde el inicio de tu turno. Con un éxito, es inmune a este rasgo hasta el inicio de tu próximo turno. Con un fallo, tiene los siguientes efectos:",
+        {"type": "list", "items": ["Tiene ventaja para atacarte pero desventaja para atacar a los demás.", "Cuando use un conjuro o efecto de daño que no requiera que haga un ataque, debe salvar Wisdom. Con un fallo, tiene que targetearte a ti o incluirte en el área de efecto."]}
+      ]
+    },
+    {
+      "name": "Disruption Tactics", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 2,
+      "entries": [
+        "Empiezas a usar técnicas diseñadas para perturbar y anular a tus oponentes. Cuando golpees a una criatura con un melee weapon attack, puedes elegir uno de los siguientes efectos:",
+        {"type": "list", "items": ["Salva Fuerza o es empujado según tu fuerza.", "Salva Destreza o tropieza, dando ventaja al siguiente ataque que reciba.", "Reduces su movilidad a 0."]}
+      ]
+    },
+    {
+      "name": "Defensive Archetypes", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 3,
+      "entries": ["A nivel 3, eliges un Defensive Archetype de la lista de opciones disponibles. Tu elección te otorga rasgos a nivel 3 y de nuevo a los niveles 6, 13 y 18."]
+    },
+    {
+      "name": "Guardian’s Patience", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 3,
+      "entries": ["A nivel 3 aprendes a esperar el momento adecuado. Cuando esquives, tienes ventaja en el siguiente ataque que hagas hasta el final de tu próximo turno."]
+    },
+    {
+      "name": "Ability Score Improvement", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 4,
+      "entries": ["When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]
+    },
+    {
+      "name": "Extra Reaction", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 5,
+      "entries": ["A partir de nivel 5, cuando acabes tu turno sin castear un conjuro o sin usar un objeto mágico, ganas una reacción extra hasta el inicio de tu próximo turno. Solo una de estas reacciones puede ser para castear un conjuro de lv1 o superior."]
+    },
+    {
+      "name": "Heavy Blows", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 5,
+      "entries": ["Aprendes a golpear con todo tu peso, logrando golpes devastadores. La primera vez que golpees con un ataque a melé en cada uno de tus turnos, añade el inner fire al daño.", "Además, recuperas tus Disruption Tactics por descanso corto."]
+    },
+    {
+      "name": "Juggernaut", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 5,
+      "entries": ["Eres capaz de sobrellevar casi cualquier obstáculo. Mientras estés consciente tu velocidad no puede reducirse si no es a 0 y eres inmune al terreno difícil no mágico."]
+    },
+    {
+      "name": "Defensive Archetypes", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 6,
+      "entries": ["Obtienes un nuevo rasgo de tu Defensive Archetype."]
+    },
+    {
+      "name": "Honed Reflexes", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 7,
+      "entries": ["A nivel 7 tus rangos de Reactive Fighting aumentan en 5 ft hasta un total de 15 ft de rango y 10 de movimiento.", "A lv17 estos rangos vuelven a aumentar en 5 ft para 20 ft de rango y 15 de movilidad."]
+    },
+    {
+      "name": "Ability Score Improvement", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 8,
+      "entries": ["When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]
+    },
+    {
+      "name": "Unbreakable", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 9,
+      "entries": ["A nivel 9, cuando vayas a recibir daño puedes elegir usar tu reacción para salvar Constitución CD 10 o la mitad del daño que fueras a recibir, lo que fuera más alto. Con un éxito, eres inmune a todo el daño de esa fuente de daño. Con un fallo, recibes la mitad.", "Solo puedes usar este rasgo 1 vez al día, pero ganas un uso extra a lv15."]
+    },
+    {
+      "name": "Ability Score Improvement", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 10,
+      "entries": ["When you reach 10th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]
+    },
+    {
+      "name": "Ferocious Taunt", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 11,
+      "entries": ["A nivel 11 tus taunts empiezan a afectar gravemente a la psyche de tus oponentes. Cuando una criatura falle la salvación para tu Daring Taunt, recibe daño psíquico igual a tu dado de Inner Fire, aunque este daño no puede reducir a la criatura a menos de 1 HP.", "Además, si la criatura salva por 5 o menos, puedes elegir uno de los tres efectos del Daring/Ferocious Taunt y aplicarlo igualmente.", "A nivel 17 este margen de error aumenta de 5 a 10."]
+    },
+    {
+      "name": "Ability Score Improvement", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 12,
+      "entries": ["When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]
+    },
+    {
+      "name": "Defensive Archetypes", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 13,
+      "entries": ["Obtienes un nuevo rasgo de tu Defensive Archetype."]
+    },
+    {
+      "name": "Unstoppable", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 14,
+      "entries": ["A nivel 14 tus enemigos empiezan a no poder evitar que llegues hasta ellos. Cada vez que salves para librarte de {@condition frightened}, {@condition grappled}, {@condition prone}, {@condition restrained}, {@condition paralyzed}, o {@condition stunned}, añades tu dado de inner fire."]
+    },
+    {
+      "name": "Unbreakable", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 15,
+      "entries": ["Puedes usar Unbreakable una vez adicional al día."]
+    },
+    {
+      "name": "Ability Score Improvement", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 16,
+      "entries": ["When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]
+    },
+    {
+      "name": "Extra Reaction", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 17,
+      "entries": ["Ganas una reacción extra."]
+    },
+    {
+      "name": "Outrageous Affront", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 17,
+      "entries": ["A nivel 17 eres todo un experto en joder a tus enemigos. Cuando uses un Daring Taunt, puedes gastar un uso de tus Disruption Tactics para convertir tu Taunt en una Affront. La criatura objetivo tiene desventaja en la salvación y de fallar, gana los efectos del Daring Taunt y los siguientes:", {"type": "list", "items": ["Solo puede targetearte a ti con ataques.", "Ya no puede salvar Wisdom para no targetearte o incluirte en el área de efecto de un conjuro o efecto dañino.", "Si se aleja de ti, trata su movilidad como terreno difícil."]}]
+    },
+    {
+      "name": "Defensive Archetypes", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 18,
+      "entries": ["Obtienes un nuevo rasgo de tu Defensive Archetype."]
+    },
+    {
+      "name": "Ability Score Improvement", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 19,
+      "entries": ["When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.", "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."]
+    },
+    {
+      "name": "Unyielding Bastion", "source": "Himo", "className": "Guardián", "classSource": "Himo", "level": 20,
+      "entries": ["A nivel 20 el fuego de tu interior no puede extinguirse. Incluso al borde del colapso servirás como un protector contra la oscuridad para aquellos que lo necesiten. Cuando tires iniciativa ganas HPT iguales a tres tiradas de tu inner fire y recuperas hasta 2 usos de tus disrupting tactics."]
+    }
+  ],
+  "subclass": [
+    {
+      "name": "Heraldo Místico", "shortName": "Heraldo Místico", "source": "Himo", "page": "??", "className": "Guardián", "classSource": "Himo", "spellcastingAbility": "cha", "casterProgression": "1/3",
+      "cantripProgression": [0, 0, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+      "spellsKnownProgression": [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13],
+      "subclassSpells": [{"filter": {"class": {"name": "Bard", "source": "PHB"}}}, {"name": "Guidance", "source": "PHB"}],
+      "additionalSpells": [{"expanded": {"s0": ["Guidance|PHB", {"all": "level=0|class=Bard"}, {"all": "level=1|class=Bard"}, {"all": "level=2|class=Bard"}, {"all": "level=3|class=Bard"}, {"all": "level=4|class=Bard"}]}}],
+      "subclassTableGroups": [
+        {"subclasses": [{"name": "Heraldo Místico", "source": "Himo"}], "colLabels": ["{@filter Cantrips Known|spells|level=0|subclass=Guardián: Heraldo Místico}", "{@filter Spells Known|spells|subclass=Guardián: Heraldo Místico}"], "rows": [[0,0],[0,0],[3,3],[3,4],[3,4],[3,4],[3,5],[3,6],[3,6],[4,7],[4,8],[4,8],[4,9],[4,10],[4,10],[4,11],[4,11],[4,11],[4,12],[4,13]]},
+        {"title": "Spell Slots per Spell Level", "subclasses": [{"name": "Heraldo Místico", "source": "Himo"}], "colLabels": ["{@filter 1st|spells|level=1|subclass=Guardián: Heraldo Místico}", "{@filter 2nd|spells|level=2|subclass=Guardián: Heraldo Místico}", "{@filter 3rd|spells|level=3|subclass=Guardián: Heraldo Místico}", "{@filter 4th|spells|level=4|subclass=Guardián: Heraldo Místico}"], "rowsSpellProgression": [[0,0,0,0],[0,0,0,0],[2,0,0,0],[3,0,0,0],[3,0,0,0],[3,0,0,0],[4,2,0,0],[4,2,0,0],[4,2,0,0],[4,3,0,0],[4,3,0,0],[4,3,0,0],[4,3,2,0],[4,3,2,0],[4,3,2,0],[4,3,3,0],[4,3,3,0],[4,3,3,0],[4,3,3,1],[4,3,3,1]]}
+      ],
+      "subclassFeatures": ["Spellcasting|Guardián|Himo|Heraldo Místico|Himo|3|Himo", "Magia Alentadora|Guardián|Himo|Heraldo Místico|Himo|6|Himo", "Conjuro Agravante|Guardián|Himo|Heraldo Místico|Himo|13|Himo", "Guarda Deflectante|Guardián|Himo|Heraldo Místico|Himo|18|Himo"]
+    },
+    {
+      "name": "Juramentado", "shortName": "Juramentado", "source": "Himo", "page": "??", "className": "Guardián", "classSource": "Himo",
+      "subclassFeatures": ["Juramento Vinculante|Guardián|Himo|Juramentado|Himo|3|Himo", "Apoyo Resolutivo|Guardián|Himo|Juramentado|Himo|6|Himo", "Habla SIlenciosa|Guardián|Himo|Juramentado|Himo|13|Himo", "Sin importar las consecuencias|Guardián|Himo|Juramentado|Himo|18|Himo"]
+    },
+    {
+      "name": "Warden", "shortName": "Warden", "source": "Himo", "page": "??", "className": "Guardián", "classSource": "Himo",
+      "subclassFeatures": ["Defensa Mejorada|Guardián|Himo|Warden|Himo|3|Himo", "Siempre Vigilante|Guardián|Himo|Warden|Himo|6|Himo", "Defensa Superior|Guardián|Himo|Warden|Himo|13|Himo", "Defensor Incansable|Guardián|Himo|Warden|Himo|18|Himo"]
+    },
+    {
+      "name": "Renegado", "shortName": "Renegado", "source": "Himo", "page": "??", "className": "Guardián", "classSource": "Himo",
+      "subclassFeatures": ["¿Eso es todo?|Guardián|Himo|Renegado|Himo|3|Himo", "Multiataque|Guardián|Himo|Renegado|Himo|6|Himo", "Lucha Audaz|Guardián|Himo|Renegado|Himo|13|Himo", "¿Lo estás intentando?|Guardián|Himo|Renegado|Himo|18|Himo"]
+    },
+    {
+      "name": "Wyrmguard", "shortName": "Wyrmguard", "source": "Himo", "page": "??", "className": "Guardián", "classSource": "Himo",
+      "subclassFeatures": ["Discípulo de Dragón|Guardián|Himo|Wyrmguard|Himo|3|Himo", "Aura Dracónida|Guardián|Himo|Wyrmguard|Himo|6|Himo", "Resistencia Legendaria|Guardián|Himo|Wyrmguard|Himo|13|Himo", "Alzamiento del Wyrmguard|Guardián|Himo|Wyrmguard|Himo|18|Himo"]
+    }
+  ],
+  "subclassFeature": [
+    {
+      "name": "Spellcasting", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Heraldo Místico", "subclassSource": "Himo", "level": 3,
+      "entries": ["Los heraldos místicos aumentan sus defensas con magia basada en las enseñanzas de los bardos., usando magia arcana canalizada a través de palabras emocionantes o música para defenderse a sí mismo y a sus aliados.", "Aprendes el cantrip de {@spell guidance|PHB|guía} y dos más de la lista de cantrips del bardo. Aprendes 3 conjuros de lv1 de la lista de conjuros de bardo que sean de las escuelas de Abjuración o Encantamiento, aunque uno de ellos puede ser de cualquier otra lista y escuela. Los conjuros que aprendas a los lv8, 14 y 20 también pueden ser ajenos a la lista de conjuros de Bardo.", "No puedes castear rituales, recuperas tus slots por descanso largo y solo puedes cambiar tus conjuros al subir de nivel, siendo 1 cada vez. Si cambias conjuros, los requisitos de clase y escuela se mantienen, a menos que estés cambiando uno de los 4 especiales.", "Eres competente con focos arcanos de Bardo y Mago.", {"type": "entries", "name": "Vocalización", "entries": ["Los rangos de tu cantrip de guía, tus conjuros de rango y tu Daring Taunt se extienden eb 30 ft."]}]
+    },
+    {
+      "name": "Magia Alentadora", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Heraldo Místico", "subclassSource": "Himo", "level": 6,
+      "entries": ["A nivel 6 el espectáculo de tu magia envalentona a tus aliados. Cuando castees un conjuro de lv1 o superior puedes elegir a una criatura a 30 ft de ti que no seas tú y darle HPT iguales a una tirada de tu inner fire."]
+    },
+    {
+      "name": "Conjuro Agravante", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Heraldo Místico", "subclassSource": "Himo", "level": 13,
+      "entries": ["A nivel 13 tus conjuros llevan la sorna de tus taunts consigo. Cuando hagas daño a una criatura con un conjuro durante tu turno, puedes usar tu daring taunt contra esa criatura como parte del conjuro sin importar a qué distancia esté de ti."]
+    },
+    {
+      "name": "Guarda Deflectante", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Heraldo Místico", "subclassSource": "Himo", "level": 18,
+      "entries": ["A nivel 18 eres capaz de canalizar tu magia arcana en un muro protector para ti y tus aliados. Como bonus, levantas un muro traslúcido de 25 ft de largo, 10 ft de alto y 1 pulgada de ancho colocado de forma que al menos 5 ft de su lado largo están a rango de toque para ti en el momento en que lo canalizas. En tus siguientes turnos puedes mover ese muro con la bonus siguiendo los requisitos (lo eliminas y lo vuelves a poner, pero con los HP que tenga en ese momento).", "Tenerlo activo te cuesta 10 ft de movilidad máxima (el trait de juggernaut no afecta a este trait). Puedes deshacer el muro en cualquier momento sin necesidad de acción.", "El muro tiene HP iguales al triple de tu lv de guardián y una CA igual a tu CD de conjuros. Falla automáticamente cualquier salvación para conjuros de daño y es inmune a cualquier efecto que no reduzca o trate de reducir sus HP y es inmune a los daños psíquico y veneno. El muro se considera cobertura total para criaturas al otro lado. Si el muro llega a 0 HP, se disipa y tú recibes el daño restante en daño psíquico. Con un descanso corto recupera la mitad de sus HP máximos."]
+    },
+    {
+      "name": "Juramento Vinculante", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Juramentado", "subclassSource": "Himo", "level": 3,
+      "entries": ["Los guardianes que viven por y para su honor hacen un juramento de protección para una criatura específica, para la cual están dispuestos a dar su vida. Estos guardianes podrían jurar en nombre del amor verdadero, lealtad, deber, honor o cualquier otra razón de gran importancia. Cualquiera que sea la razón, todos los guardianes juramentados comparten el mismo objetivo: proteger al camarada escogido, sin importar las consecuencias.", "A nivel 3 dedicas tu vida a proteger a un miembro de tu equipo. Cuando eliges esta subclase, realizas un juramento de protección hacia una criatura amistosa, que pasa a ser tu Compañero. Te mantienes vinculado hasta que el compañero muera o te libere del juramento. Una vez este vínculo se rompe, debes esperar al menos 24 horas para realizar otro juramento. Tras el primer descanso largo pasado ese tiempo puedes hacer un nuevo juramento. Usar tu reacción de Detrás de mi para proteger a tu compañero no requiere que gastes reacción.", {"type": "entries", "name": "Ángel Guardián", "entries": ["Nunca estás lejos cuando tu compañero te necesita. Cuando tu vinculado acaba su turno a más de 5 ft de ti, puedes usar tu reacción para moverte hasta la mitad de tu movilidad hacia este."]}, {"type": "entries", "name": "Refuerzo", "entries": ["Cuando uses la acción de ayuda en tu compañero para un skill check, tu compañero añade tu inner fire a la tirada."]}]
+    },
+    {
+      "name": "Apoyo Resolutivo", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Juramentado", "subclassSource": "Himo", "level": 6,
+      "entries": ["A nivel 6 tu empeño por proteger a los demás inspira a tu compañero. Cada vez que tanques daño con tu inner fire, tu compañero recibe HPT iguales a la cantidad tanqueada."]
+    },
+    {
+      "name": "Habla SIlenciosa", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Juramentado", "subclassSource": "Himo", "level": 13,
+      "entries": ["A partir del nivel 13 tú y tu compañero podéis entenderos sin hablar. Mientras podáis veros, podéis comunicaros ideas simples mediantes gestos, expresiones o comportamientos, casi como si pensarais igual. Esta comunicación es imperceptible para cualquier otra criatura. Para poder ganar esta comunicación debes convivir con tu compañero actual durante al menos 7 días."]
+    },
+    {
+      "name": "Sin importar las consecuencias", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Juramentado", "subclassSource": "Himo", "level": 18,
+      "entries": ["A nivel 18 defenderás a tu compañero hasta el mismísimo final. Cuando uses tu reacción de Detrás de Mi en tu compañero puedes elegir reducir el daño a 0 y llevarte tú todo el daño.", "Si esta reacción te reduce a 0 HP, tu compañero se ve inspirado por tu sacrificio. Gana HPT iguales a tu lv y añade tu inner fire a cada tirada de ataque, daño y salvación hasta el final de su próximo turno.", "Solo puedes inspirar a tu compañero 1 vez por descanso corto de esta forma."]
+    },
+    {
+      "name": "Defensa Mejorada", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Warden", "subclassSource": "Himo", "level": 3,
+      "entries": ["Los Wardens han refinado sus defensas hasta límites insospechados. Estos guardianes entrenan día sí y día también para asegurarse de que nada tiene ni la más mínima oportunidad de acabar con ellos.", "A nivel 3 tu defensa se ha vuelto tan potente que incluso las artes místicas lo tienen difícil para encontrar tu punto débil. Tu inner fire es efectivo contra todos los tipos de daño excepto psíquico.", "Además, puedes usar tu reacción para añadir tu BC al inner fire cuando reduzcas daño.", {"type": "entries", "name": "En guardia", "entries": ["Siempre tienes la guarda alta, no solo en combate. Las criaturas tienen desventaja en insight contra ti."]}]
+    },
+    {
+      "name": "Siempre Vigilante", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Warden", "subclassSource": "Himo", "level": 6,
+      "entries": ["Al nivel 6 tienes el ojo puesto en posibles amenazas constantemente. Ganas los siguientes rasgos:", {"type": "list", "items": ["No se te puede sorprender mientras estés consciente.", "Añades tu carisma a la iniciativa."]}]
+    },
+    {
+      "name": "Defensa Superior", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Warden", "subclassSource": "Himo", "level": 13,
+      "entries": ["A nivel 13 tu defensa es legendaria. Tu dado de Inner Fire sube en 1 nivel."]
+    },
+    {
+      "name": "Defensor Incansable", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Warden", "subclassSource": "Himo", "level": 18,
+      "entries": ["A nivel 18 te vuelves incansable a la hora de proteger a tus aliados. Si eres capaz de ver u oir al menos a un aliado cuando te reducen a 0 HP pero no te matan de una; tira 1d20. Con 6 o menos, quedas a 1 HP."]
+    },
+    {
+      "name": "¿Eso es todo?", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Renegado", "subclassSource": "Himo", "level": 3,
+      "entries": ["Los renegados son rarezas entre los guardianes. Estos mercenarios malhablados que rara vez se preocupan por el bienestar de su party dificilmente encajan en la definición de guardián. Sin embargo, a través de una mezcla de burlas absurdas y competencia marcial tienden a llamar la atención de sus enemigos, alejando la batalla de sus aliados.", "A nivel 3 el combate pasa a ser una conversación para ti… y no eres muy educado. Cuando una criatura a 30 ft de ti te ataca, puedes usar tu reacción para insultarle. La criatura salva Wisdom para evitar caer en tu juego. Con un fallo la criatura se mueve 15 ft hacia ti y tienes ventaja al siguiente ataque que le hagas hasta el final de tu próximo turno.", {"type": "entries", "name": "Tácticas de Interrogación", "entries": ["Ganas competencia en intimidación si no la tenías. Además, puedes usar chantaje, provocaciones, insultos o cualquier otro método de tu elección para sonsacar información. Si te pasas 10 minutos interactuando con tu objetivo, puedes hacer una pregunta de sí o no y hacer un check enfrentado de Intimidación vs insight. Si le superas, debe contestar “sí”, “no” o “no lo sé” de forma veraz. Tras esto, esa criatura es inmune a este rasgo 24 horas."]}]
+    },
+    {
+      "name": "Multiataque", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Renegado", "subclassSource": "Himo", "level": 6,
+      "entries": ["A nivel 6 ejerces la violencia 2 veces."]
+    },
+    {
+      "name": "Lucha Audaz", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Renegado", "subclassSource": "Himo", "level": 13,
+      "entries": ["A nivel 13 eres un maestro en el arte de mezclar insultos y combate. Cuando una criatura falle la salvación contra tu Taunt, puedes hacer un ataque a melé contra dicha criatura inmediatamente."]
+    },
+    {
+      "name": "¿Lo estás intentando?", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Renegado", "subclassSource": "Himo", "level": 18,
+      "entries": ["A nivel 18 eres capaz de comentarle a tus aliados que deberían estar haciéndolo mejor, respetuosamente, claro. Como bonus, elige a un aliado a 60 ft que te pueda oir. Durante 1 minuto gana los siguientes beneficios:", {"type": "list", "items": ["Inmunidad a miedo.", "Ganan HPT iguales a tu inner fire al inicio de cada turno.", "1 vez por turno puede añadir el inner fire a un check, ataque o daño. Puede elegir ver el resultado en el d20 antes de añadirlo, pero debe hacerlo antes de que el DM decida si tiene éxito o no."]}, "El efecto acaba antes si el objetivo es incapacitado o muere. Solo puedes usar este rasgo 1 vez al día."]
+    },
+    {
+      "name": "Discípulo de Dragón", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Wyrmguard", "subclassSource": "Himo", "level": 3,
+      "entries": ["Cuenta la leyenda que los primeros Wyrmguards defendieron a Bahamut en sus cruzadas contra Tiamat. Agradecido con sus protectores y reconociendo una deuda pendiente, Bahamut les reveló los secretos de la legendaria resistencia propia de su estirpe. Ya sea porque aprendieron directamente de los dragones o porque el conocimiento se transmitió a través de generaciones, los Wyrmguards aprovechan las habilidades de los dragones para derrotar a sus enemigos y proteger a sus aliados.", "A nivel 3 ya has aprendido mucho de tu tutelaje bajo el cuidado de un dragón. Ganas los siguientes beneficios:", {"type": "entries", "name": "Presencia Dracónida", "entries": ["Cuando falles un check de Intimidación o Persuasión, puedes usar tu reacción para rerollear el check. Una vez este reroll te brinde 1 éxito, debes esperar a acabar el próximo descanso largo."]}, {"type": "entries", "name": "Golpes Dracónidos", "entries": ["Puedes elegir cambiar el daño de tus ataques a ácido, frío, fuego, rayo o veneno."]}, {"type": "entries", "name": "Lengua de los Dragones", "entries": ["Aprendes a hablar, leer y escribir dracónido u otra lengua de tu elección si ya hablabas dracónido."]}, {"type": "entries", "name": "Mirada Aterradora", "entries": ["Tu mirada invoca el miedo de los dragones en tus enemigos. Cuando una criatura empieza su turnos 30 ft de ti, puedes usar tu reacción para hacerles salvar Wisdom o reduces su movilidad a la mitad.", "Puedes usar este rasgo un número de veces igual a tu modificador de Carisma y recuperas tus usos tras un descanso largo. Si no te quedan usos, puedes gastar 2 usos de tus Disruption Tactics para volver a hacerlo."]}]
+    },
+    {
+      "name": "Aura Dracónida", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Wyrmguard", "subclassSource": "Himo", "level": 6,
+      "entries": ["A nivel 6 puedes invocar la energía elemental de los dragones para atacar a tus enemigos. Como bonus creas un aura de 10 ft a tu alrededor y eligies un tipo de daño de tus Golpes Dracónidos. Las criaturas que acaben su turno en ese área reciben {@damage 1d6} del daño elegido. El aura dura hasta que te incapaciten o hasta que decidas anularla (free). No eliges quién recibe daño y quién no.", "A nivel 13 el daño del aura escala a {@damage 2d6}."]
+    },
+    {
+      "name": "Resistencia Legendaria", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Wyrmguard", "subclassSource": "Himo", "level": 13,
+      "entries": ["A nivel 13 ganas literalmente una resistencia legendaria. Una vez al día, si fallas una salvación, puedes elegir salvar igualmente."]
+    },
+    {
+      "name": "Alzamiento del Wyrmguard", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Wyrmguard", "subclassSource": "Himo", "level": 18,
+      "entries": ["A nivel 18, cuando te reduzcan a 0 HP puedes elegir ascender hasta una forma dracónica. Tus HP pasan a ser 5 veces tu lv de guardián o tu máximo de HP (lo que sea menor) y ganas velocidad de vuelo de 60 ft por los próximos 10 minutos. Además, recuperas todos los usos de Disruption Tactics, Frightful Presence y Resistencia Legendaria.", "Una vez pasan esos 10 minutos ganas 1 punto de agotamiento. No puedes usar este rasgo hasta el próximo descanso largo."]
+    }
+  ]
+}
