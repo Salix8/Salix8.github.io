@@ -219,18 +219,18 @@ describe("Pociones del Alquimista", () => {
 	it("keeps potion controls independent from the general class level", () => {
 		const pageFilter = getOptionalFeatureFilterPage();
 		const {classKey} = PageFilterOptionalFeatures._getPotionClassFilterMeta();
-		const clownBaseKey = `${PageFilterOptionalFeatures._getClassKey("Payaso", "Himo")}\u0000base`;
 
 		pageFilter._classFilter._nestsHidden[classKey] = true;
 		pageFilter._classFilter._nestsHidden[classKey] = false;
-		pageFilter._classFilter.setValue(clownBaseKey, 1);
 		pageFilter._levelFilter._state.curMin = 2;
 		pageFilter._levelFilter._state.curMax = 2;
 		pageFilter._ingredientFilter.setValue("Mineral", 1);
 		pageFilter._potionLevelFilter.setValue(1, 1);
 
 		expect(pageFilter._levelFilter._isExternallyHidden).toBe(false);
-		expect(getPrerequisiteFilterMatches(pageFilter, DATA.optionalfeature).map(it => it.name)).toEqual(expect.arrayContaining(["Poción Explosiva", "Chorro de Agua"]));
+		const matches = getPrerequisiteFilterMatches(pageFilter, DATA.optionalfeature).map(it => it.name);
+		expect(matches).toContain("Poción Explosiva");
+		expect(matches).not.toContain("Chorro de Agua");
 	});
 
 	it("uses Alquimista and Warlock as section headers without Base tags", () => {
@@ -293,6 +293,8 @@ describe("Pociones del Alquimista", () => {
 
 	it("renders the required Lexarca specialization for subclass power words", () => {
 		const powerWords = DATA.optionalfeature.filter(it => it.source === "Himo" && it.featureType?.includes("PW"));
+		const basePowerWords = powerWords.filter(it => !it.prerequisite);
+		const subclassPowerWords = powerWords.filter(it => it.prerequisite);
 		const expectedSubclassByPowerWord = {
 			"Alma": "Lengua de Plata",
 			"Curación": "Lengua de Oro",
@@ -306,19 +308,40 @@ describe("Pociones del Alquimista", () => {
 		};
 
 		expect(powerWords).toHaveLength(28);
-		powerWords.forEach(powerWord => {
+		expect(basePowerWords).toHaveLength(19);
+		basePowerWords.forEach(powerWord => {
+			expect(Renderer.optionalfeature.getListPrerequisiteHtml(powerWord)).toBe("—");
+		});
+
+		expect(subclassPowerWords).toHaveLength(9);
+		subclassPowerWords.forEach(powerWord => {
 			const prerequisite = powerWord.prerequisite.find(it => it.level?.class?.name === "Lexarca");
-			expect(prerequisite.level.class).toEqual({name: "Lexarca", source: "Himo"});
+			expect(prerequisite.level.class).toMatchObject({name: "Lexarca", source: "Himo", visible: true});
 
 			const expectedSubclass = expectedSubclassByPowerWord[powerWord.name];
 			const prerequisiteHtml = Renderer.optionalfeature.getPrerequisiteHtml(powerWord);
-			if (!expectedSubclass) {
-				expect(prerequisiteHtml).not.toContain("Lexarca");
-				return;
-			}
+			const listPrerequisiteHtml = Renderer.optionalfeature.getListPrerequisiteHtml(powerWord);
+			expect(listPrerequisiteHtml).toContain("Lexarca");
+			expect(listPrerequisiteHtml).not.toContain("Prerequisite:");
 
 			expect(prerequisite.level.subclass).toMatchObject({name: expectedSubclass, source: "Himo", visible: true});
 			expect(prerequisiteHtml).toContain(`Lexarca (${expectedSubclass})`);
+			expect(listPrerequisiteHtml).toContain(`Lexarca (${expectedSubclass})`);
+		});
+	});
+
+	it("renders full subclass requirements for bromas and jugarretas", () => {
+		const subclassFeatures = DATA.optionalfeature.filter(it => ["BRM", "JUG"].some(featureType => it.featureType?.includes(featureType))
+			&& it.prerequisite?.some(prerequisite => prerequisite.level?.subclass?.visible));
+
+		expect(subclassFeatures).not.toHaveLength(0);
+		subclassFeatures.forEach(feature => {
+			const levelPrerequisite = feature.prerequisite.find(prerequisite => prerequisite.level?.subclass?.visible).level;
+			const listPrerequisiteHtml = Renderer.optionalfeature.getListPrerequisiteHtml(feature);
+
+			expect(listPrerequisiteHtml).toContain(levelPrerequisite.class.name);
+			if (levelPrerequisite.subclass) expect(listPrerequisiteHtml).toContain(`(${levelPrerequisite.subclass.name})`);
+			expect(listPrerequisiteHtml).not.toContain("Prerequisite:");
 		});
 	});
 

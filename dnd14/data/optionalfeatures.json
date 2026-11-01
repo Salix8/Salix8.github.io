@@ -157,17 +157,6 @@
 			"featureType": [
 				"PW"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 17,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
-			],
 			"entries": [
 				"Esta palabra vale el equivalente a 5 palabras de poder.",
 				"El suelo se abre bajo los pies del objetivo. Este salva Carisma o cae en un abismo sin fondo. Con un fallo el objetivo desaparece hasta que salve de nuevo al final de cada turno. Con cada fallo recibe {@damage 4d6} psíquicos, con un éxito el portal se abre en el cielo y cae {@condition Prone|PHB} donde estaba. El portal aparece a un número de ft de altura igual a tus modificadores de Inteligencia, wisdom y carisma multiplicados por 5 y recibe daño por caída."
@@ -408,7 +397,8 @@
 						"level": 3,
 						"class": {
 							"name": "Lexarca",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						},
 						"subclass": {
 							"name": "Lengua de Plata",
@@ -513,17 +503,6 @@
 			"featureType": [
 				"PW"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 17,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
-			],
 			"entries": [
 				"Esta palabra vale el equivalente a 5 palabras de poder.",
 				"La criatura objetivo y tu estáis vinculados, pero solo a tu favor. Cada vez que fueras a recibir daño, lo recibe la criatura objetivo. Cada vez que la criatura fuera a ser curada, tú recibes esa curación. El efecto acaba pasado un minuto o cuando la criatura salve Carisma. Puede salvar Carisma cada vez que se active este rasgo."
@@ -567,17 +546,6 @@
 			"source": "Himo",
 			"featureType": [
 				"PW"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 7,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
 			],
 			"entries": [
 				"Al decir esta palabra targeteas un conjuro o efecto mágico. El caster original del conjuro salva Carisma si se estaba concentrando. Con un fallo el conjuro acaba. Si no se estaba concentrando o no hay caster original, haz un check de carisma añadiendo tu BC cuya CD siga las normas antimagia."
@@ -658,18 +626,6 @@
 			"source": "Himo",
 			"featureType": [
 				"JUG"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 2,
-						"class": {
-							"name": "Canalla",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
 			],
 			"entries": [
 				"Como acción lanzas arena a los ojos de una criatura a 5 pies. Esta salva Dex o queda ciega hasta el final de tu siguiente turno."
@@ -875,18 +831,6 @@
 			"featureType": [
 				"JUG"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 9,
-						"class": {
-							"name": "Canalla",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
-			],
 			"entries": [
 				"Como acción, besas a una criatura a 5 pies de ti que tenga boca. La criatura salva destreza para intentar hacerte una cobra. Mientras dure el beso, debes usar tu acción cada turno para mantenerlo. La criatura salva wisdom al final de su turno o cada vez que reciba daño. Mientras dure, la criatura está {@condition Paralyzed|PHB} y charmeada por ti, y tu estás {@condition Restrained|PHB}. Puedes usar la otra acción del multiataque únicamente para atacar al objetivo y puedes intentar robarle con la bonus. Una vez salve o acabe el efecto, es inmune a este rasgo durante 24 horas. Una criatura inmune a {@condition Charmed|PHB} es inmune a este rasgo."
 			]
@@ -989,18 +933,6 @@
 			"source": "Himo",
 			"featureType": [
 				"BRM"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 5,
-						"class": {
-							"name": "Payaso",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
 			],
 			"entries": [
 				"Un objeto de hasta 1 metro cúbico desaparece mágicamente en alguna parte de tu cuerpo, incluso si no cabe de normal. Durante 1 hora puedes sacar y guardar ese objeto con la bonus y nadie, excepto tú, puede sacarlo de ahí. Tampoco cuenta para el peso que puedas cargar. Pasado el tiempo, si no sacaste el objeto, se cae cómicamente de tu bolsillo.",
@@ -1718,18 +1650,6 @@
 			"featureType": [
 				"BRM"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 2,
-						"class": {
-							"name": "Payaso",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
-			],
 			"entries": [
 				"Lanzas un chorro de agua a la cara de una criatura. Haz un spell attack a una criatura a 15 ft de ti o menos. Con un éxito, la criatura está {@condition Dazed|Himo}, pudiendo salvar inteligencia al final de cada turno.",
 				{
@@ -2004,17 +1924,6 @@
 			"featureType": [
 				"PW"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 2,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
-			],
 			"entries": [
 				"En el momento en el que preparas esta palabra elige una de las siguientes condiciones: {@condition Blinded|PHB}, {@condition Deafened|PHB}, {@condition Dazed|Himo}, mudo, {@condition Charmed|PHB} o {@condition Frightened|PHB}. El objetivo salva Carisma o está bajo los efectos de esa condición. Puede salvar al final de cada turno para acabar con el efecto. Si no, dura un número de minutos igual a tu Modificador de Wisdom. Puedes preparar esta palabra más de una vez con distintos efectos."
 			]
@@ -2024,18 +1933,6 @@
 			"source": "Himo",
 			"featureType": [
 				"BRM"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 5,
-						"class": {
-							"name": "Payaso",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
 			],
 			"entries": [
 				"Como reacción, cuando una criatura vaya a castear un conjuro de lv 1 o superior, puedes hacer una tirada de spellcasting enfrentada contra el spellcasting del objetivo. Tú añades el BC dos veces a esta tirada, y el objetivo añade el lv de conjuro. Si tú ganas, en vez del conjuro, el objetivo lanza una nube de confeti con las mismas áreas y rango que el conjuro original, pero no afecta negativamente a nadie. El spell slot se pierde igualmente.",
@@ -2148,18 +2045,6 @@
 			"featureType": [
 				"BRM"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 2,
-						"class": {
-							"name": "Payaso",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
-			],
 			"entries": [
 				"Puedes usar 10 minutos para crear una trampa mágica en una ventana, puerta o pasaje. Cuando una criatura que no hayas designado antes pase por el pasaje, salva wisdom. Con un fallo, un cubo mágico cae en su cabeza, cegándole durante 1 minuto. El objetivo debe usar su acción en salvar fuerza y quitarse el cubo.",
 				{
@@ -2210,7 +2095,8 @@
 						"level": 6,
 						"class": {
 							"name": "Lexarca",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						},
 						"subclass": {
 							"name": "Lengua de Oro",
@@ -2256,18 +2142,6 @@
 			"source": "Himo",
 			"featureType": [
 				"JUG"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 9,
-						"class": {
-							"name": "Canalla",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
 			],
 			"entries": [
 				"Haces un ataque desarmado sutil a melé contra una criatura con, al menos, un ojo. Con un impacto recibe {@damage 1d8} y está cegado un minuto. Puede salvar consti al final de cada turno."
@@ -2318,17 +2192,6 @@
 			"source": "Himo",
 			"featureType": [
 				"PW"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 7,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
 			],
 			"entries": [
 				"Una criatura de tu elección salva Fuerza. Con un fallo el arma o escudo (eliges al usar la palabra) sale disparada un número de ft igual a tu modificador de wisdom x10 en dirección contraria a ti y cae al suelo."
@@ -2422,17 +2285,6 @@
 			"source": "Himo",
 			"featureType": [
 				"PW"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 2,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
 			],
 			"entries": [
 				"El objetivo salva Carisma o, durante un número de turnos igual a tu modificador de Wisdom, cada vez que reciba cualquier fuente de daño, recibe daño psíquico extra igual a tus modificadores de Wisdom e Inteligencia."
@@ -2857,17 +2709,6 @@
 			"featureType": [
 				"PW"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 2,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
-			],
 			"entries": [
 				"El objetivo salva Carisma o es empujado un número de casillas igual a tus modificadores de Inteligencia y Wisdom. Durante 1 minuto, al principio de cada turno salva Carisma o es empujado otra vez. Con un éxito acaba el efecto."
 			]
@@ -3052,18 +2893,6 @@
 			"featureType": [
 				"JUG"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 2,
-						"class": {
-							"name": "Canalla",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
-			],
 			"entries": [
 				"Como acción escupes a una criatura a la cara. Haz una tirada de ataque a melé contra el objetivo a un rango de hasta 10 pies. Con un éxito, el objetivo queda {@condition Dazed|Himo} y salva Wisdom. Con un fallo, pierde o, un ataque del multiataque, o su bonus a tu elección hasta el final de su próximo turno. Si solo atacaba una vez y no tenía bonus, tiene desventaja."
 			]
@@ -3134,18 +2963,6 @@
 			"source": "Himo",
 			"featureType": [
 				"BRM"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 11,
-						"class": {
-							"name": "Payaso",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
 			],
 			"entries": [
 				"Como reacción al recibir un ataque, impones desventaja a la tirada. Con un fallo el ataque ahora targetea a una criatura de tu elección a 5 ft de ti que siga en el rango del arma.",
@@ -3701,7 +3518,8 @@
 						"level": 6,
 						"class": {
 							"name": "Lexarca",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						},
 						"subclass": {
 							"name": "Lengua de Sangre",
@@ -4016,17 +3834,6 @@
 			"featureType": [
 				"PW"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 13,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
-			],
 			"entries": [
 				"Una criatura de tu elección rerolea iniciativa sumando tu Wisdom a la tirada y quedándose la opción más alta. Además gana HPT iguales a tu lv. Mientras duren los HPT, suma tu carisma al daño, tu Inteligencia a la CA y gana 15 ft de movilidad. Si es a un conjuro, solo lo suma una vez por casteo."
 			]
@@ -4148,18 +3955,6 @@
 			"featureType": [
 				"BRM"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 11,
-						"class": {
-							"name": "Payaso",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
-			],
 			"entries": [
 				"Como acción elige una criatura a 5 ft de ti y oblígale a hacer una tirada enfrentada de Carisma vs fuerza o destreza. Si tú ganas, la criatura queda encerrada en tu bag of holding. La criatura puede usar su acción para hacer una salvación de Fuerza o Destreza sobre tu CD. Con un éxito, sale de la bag of holding {@condition Prone|PHB} a 5 ft de ti.",
 				{
@@ -4252,17 +4047,6 @@
 			"featureType": [
 				"PW"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 13,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
-			],
 			"entries": [
 				"El objetivo cae {@condition Unconscious|PHB} un número de minutos igual a tu modificador de Wisdom. Cada vez que reciba daño salva de nuevo. Con un éxito despierta."
 			]
@@ -4279,7 +4063,8 @@
 						"level": 18,
 						"class": {
 							"name": "Lexarca",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						},
 						"subclass": {
 							"name": "Lengua de Plata",
@@ -4349,7 +4134,8 @@
 						"level": 3,
 						"class": {
 							"name": "Lexarca",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						},
 						"subclass": {
 							"name": "Lengua de Sangre",
@@ -4415,17 +4201,6 @@
 			"featureType": [
 				"PW"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 7,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
-			],
 			"entries": [
 				"La criatura objetivo salva Carisma o empieza a flotar a una altura de un número de ft igual a tu modificador de wisdom x5. Mientras se mantenga ahí está {@condition Restrained|PHB}. Puede salvar al final de cada turno. Al liberarse cae y punto (puede recibir daño)."
 			]
@@ -4442,7 +4217,8 @@
 						"level": 18,
 						"class": {
 							"name": "Lexarca",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						},
 						"subclass": {
 							"name": "Lengua de Sangre",
@@ -4546,17 +4322,6 @@
 			"source": "Himo",
 			"featureType": [
 				"PW"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 13,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
 			],
 			"entries": [
 				"El objetivo salva Carisma. Con un fallo tiene una locura permanente de tu elección."
@@ -4942,18 +4707,6 @@
 			"featureType": [
 				"JUG"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 9,
-						"class": {
-							"name": "Canalla",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
-			],
 			"entries": [
 				"Como reacción gimes o dices algo incómodo al recibir un ataque en cualquiera de sus opciones. La criatura salva wisdom, de fallar: si te estaba grappleando, te suelta automáticamente; si te estaba atacando, te hace la mitad de daño y pierde el resto del multiataque si iba contra ti; si te estaba empujando, queda {@condition Dazed|Himo}; si te estaba proneando, cae contigo. El DM puede elegir usos adicionales para formas especiales de atacar."
 			]
@@ -4990,17 +4743,6 @@
 			"source": "Himo",
 			"featureType": [
 				"PW"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 13,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
 			],
 			"entries": [
 				"El objetivo empieza a ahogarse y está mudo. Al final de cada uno de sus turnos salva Constitución para poder volver a respirar y acabar con el efecto. Al recibir el efecto el objetivo salva Carisma. Con un éxito logra coger aire antes de empezar a ahogarse."
@@ -5065,17 +4807,6 @@
 			"source": "Himo",
 			"featureType": [
 				"PW"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 2,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
 			],
 			"entries": [
 				"El objetivo salva Carisma. Con un fallo, puedes castear {@spell command} a esa criatura cada turno como free action. No necesitas concentrarte, la criatura falla automáticamente cada command y dura un número de minutos igual a tu modificador de Wisdom. La criatura salva de nuevo tras completar cada command."
@@ -5245,18 +4976,6 @@
 			"featureType": [
 				"BRM"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 2,
-						"class": {
-							"name": "Payaso",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
-			],
 			"entries": [
 				"Sueltas una descarga eléctrica a una criatura para realentizarla. Haz un melé spell attack. Con un impacto el objetivo recibe {@damage 1d8} eléctrico, pierde su reacción, su bonus y su velocidad se reduce a la mitad. Estas desventajas desaparecen al final de tu siguiente turno.",
 				{
@@ -5363,18 +5082,6 @@
 			"featureType": [
 				"JUG"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 2,
-						"class": {
-							"name": "Canalla",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
-			],
 			"entries": [
 				"Si atacaste con la acción, puedes usar tu bonus para hacer un ataque desarmado a fuerza o destreza. Con un impacto, el objetivo recibe {@damage 1d4}+stat y queda {@condition Dazed|Himo} hasta el final de su próximo turno."
 			]
@@ -5412,17 +5119,6 @@
 			"featureType": [
 				"PW"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 13,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
-			],
 			"entries": [
 				"Una criatura de tu elección salva Carisma o pasa a ser inmune a {@condition Frightened|PHB} y a {@condition Charmed|PHB} y pierde todas las ganas de luchar hasta que reciba daño de nuevo. Su iniciativa, si se había tirado, pasa a ser 0. Si recibe daño, el efecto acaba y rerolea la iniciativa."
 			]
@@ -5432,17 +5128,6 @@
 			"source": "Himo",
 			"featureType": [
 				"PW"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 17,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
 			],
 			"entries": [
 				"Esta palabra vale el equivalente a 5 palabras de poder.",
@@ -5857,18 +5542,6 @@
 			"featureType": [
 				"BRM"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 11,
-						"class": {
-							"name": "Payaso",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
-			],
 			"entries": [
 				"Como reacción cuando una criatura que puedas ver a 60 ft de ti vaya a hacer daño contundente a otra criatura que puedas ver dentro del rango, puedes hacer crecer su arma hasta que sea 8 veces más grande. La criatura tiene ventaja en el ataque y, con un impacto, hace el doble del daño que fuera a hacer. Además el objetivo salva Constitución o está {@condition Stunned|PHB} hasta el final de su próximo turno. Puedes targetear dos veces a la misma arma, pero no puede targetear dos veces al mismo objetivo.",
 				{
@@ -6008,17 +5681,6 @@
 			"source": "Himo",
 			"featureType": [
 				"PW"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 2,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
 			],
 			"entries": [
 				"El objetivo salva Carisma o su movilidad es reducida a 0 durante un número de minutos igual a tu modifcador de Wisdom, pudiendo salvar al final de cada turno."
@@ -6911,17 +6573,6 @@
 			"featureType": [
 				"PW"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 7,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
-			],
 			"entries": [
 				"Esta palabra puede targetearte a ti o a un aliado. La criatura gana resistencia al tipo de daño de la palabra. Eliges el tipo de daño al preparar la palabra y puedes preparar esta palabra más de una vez."
 			]
@@ -6980,7 +6631,8 @@
 						"level": 18,
 						"class": {
 							"name": "Lexarca",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						},
 						"subclass": {
 							"name": "Lengua de Oro",
@@ -7098,7 +6750,8 @@
 						"level": 18,
 						"class": {
 							"name": "Lexarca",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						},
 						"subclass": {
 							"name": "Lengua de Serpiente",
@@ -7276,18 +6929,6 @@
 			"source": "Himo",
 			"featureType": [
 				"BRM"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 2,
-						"class": {
-							"name": "Payaso",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
 			],
 			"entries": [
 				"Cuando una criatura que puedas ver y esté a rango de un ataque tuyo esté charmeada, puedes convertir el {@condition Charmed|PHB} en shock. Haz una tirada de ataque con tu arma contra la criatura, con un impacto la criatura recibe el daño normal de tu ataque y deja de estar charmeada. Ahora está {@condition Paralyzed|PHB} hasta el inicio de tu próximo turno.",
@@ -7623,18 +7264,6 @@
 			"source": "Himo",
 			"featureType": [
 				"BRM"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 2,
-						"class": {
-							"name": "Payaso",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
 			],
 			"entries": [
 				"Eres capaz de crear tartas mágicas que dañen o curen a las criaturas a las que vayan dirigidas. Elige una criatura a 30 ft de ti y haz un spell attack contra ella. Con un impacto la criatura recibe {@damage 1d8}+Cha necróticos o {@dice 3d8}+Cha de curación. Independientemente del resultado, la criatura está ciega hasta el final de su siguiente turno. (Esta broma no puede prepararse con la acción).",
@@ -8069,17 +7698,6 @@
 			"featureType": [
 				"PW"
 			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 2,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
-			],
 			"entries": [
 				"El objetivo salva Carisma. Con un fallo el objetivo está obligado a decir únicamente la verdad o únicamente mentiras durante un número de minutos igual a tus modificadores de Inteligencia y Wisdom. Preparar esta palabra vale para ambos efectos."
 			]
@@ -8131,7 +7749,8 @@
 						"level": 3,
 						"class": {
 							"name": "Lexarca",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						},
 						"subclass": {
 							"name": "Lengua de Oro",
@@ -8150,17 +7769,6 @@
 			"source": "Himo",
 			"featureType": [
 				"PW"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 7,
-						"class": {
-							"name": "Lexarca",
-							"source": "Himo"
-						}
-					}
-				}
 			],
 			"entries": [
 				"Elige una dirección en la que empezará a soplar un viento fuerte (60 km/h si fuera relevante). Todos los ataques a rango en contra del viento tienen desventaja y pierden el rango largo, correr en contra del viento es terreno dificil y correr con el viento a favor hace que se gaste la mitad de movilidad. Pasado un minuto o cuando vuelvas a usar esta palabra de poder, el viento se disipa."
@@ -8350,18 +7958,6 @@
 			"source": "Himo",
 			"featureType": [
 				"BRM"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 2,
-						"class": {
-							"name": "Payaso",
-							"source": "Himo",
-							"visible": true
-						}
-					}
-				}
 			],
 			"entries": [
 				"Como reacción cuando una criatura se mueva a 5 ft de ti, puedes ponerle la zancadilla. La criatura salva destreza o cae {@condition Prone|PHB} y pierde el resto de su movilidad.",

@@ -8548,12 +8548,16 @@ Renderer.optionalfeature = class {
 		};
 	}
 
-	static getPrerequisiteHtml (ent, {isListMode = false, styleHint} = {}) {
-		return Renderer.utils.prerequisite.getHtml(ent.prerequisite, {isListMode, styleHint, keyOptions: {level: {isNameOnly: true}}});
+	static getPrerequisiteHtml (ent, {isListMode = false, isSkipPrefix = false, styleHint} = {}) {
+		return Renderer.utils.prerequisite.getHtml(ent.prerequisite, {isListMode, isSkipPrefix, styleHint, keyOptions: {level: {isNameOnly: true}}});
 	}
 
 	static getListPrerequisiteHtml (ent) {
-		const ptPrerequisites = Renderer.optionalfeature.getPrerequisiteHtml(ent, {isListMode: true});
+		// These class-specific subclass options have short, meaningful requirements.
+		// Preserve those in full instead of using the generic four-character abbreviation.
+		const isClassSpecificSubclassOption = ent.featureType?.some(featureType => ["PW", "BRM", "JUG"].includes(featureType))
+			&& ent.prerequisite?.some(prerequisite => prerequisite.level?.subclass?.visible);
+		const ptPrerequisites = Renderer.optionalfeature.getPrerequisiteHtml(ent, {isListMode: !isClassSpecificSubclassOption, isSkipPrefix: isClassSpecificSubclassOption});
 		const potionMeta = Renderer.optionalfeature.getPotionMeta(ent);
 		if (!potionMeta) return ptPrerequisites;
 
