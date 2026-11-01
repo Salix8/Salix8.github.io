@@ -412,7 +412,8 @@
 						},
 						"subclass": {
 							"name": "Lengua de Plata",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						}
 					}
 				}
@@ -645,7 +646,8 @@
 			],
 			"featureType": [
 				"FS:F",
-				"FS:R"
+				"FS:R",
+				"FS:D"
 			],
 			"entries": [
 				"You gain a +2 bonus to attack rolls you make with ranged weapons."
@@ -970,7 +972,8 @@
 			"featureType": [
 				"FS:F",
 				"FS:P",
-				"FS:R"
+				"FS:R",
+				"FS:D"
 			],
 			"senses": [
 				{
@@ -2211,7 +2214,8 @@
 						},
 						"subclass": {
 							"name": "Lengua de Oro",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						}
 					}
 				}
@@ -2302,7 +2306,8 @@
 				"FS:P",
 				"FS:R",
 				"FS:C",
-				"FS:EM"
+				"FS:EM",
+				"FS:D"
 			],
 			"entries": [
 				"While you are wearing armor, you gain a +1 bonus to AC."
@@ -2518,7 +2523,8 @@
 				"FS:P",
 				"FS:R",
 				"FS:C",
-				"FS:EM"
+				"FS:EM",
+				"FS:D"
 			],
 			"entries": [
 				"When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
@@ -3699,7 +3705,8 @@
 						},
 						"subclass": {
 							"name": "Lengua de Sangre",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						}
 					}
 				}
@@ -3969,7 +3976,8 @@
 			"featureType": [
 				"FS:F",
 				"FS:P",
-				"FS:EM"
+				"FS:EM",
+				"FS:D"
 			],
 			"entries": [
 				"When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit."
@@ -4037,6 +4045,17 @@
 			},
 			"entries": [
 				"When you cast a spell that forces a creature to make a saving throw to resist its effects, you can spend 3 sorcery points to give one target of the spell disadvantage on its first saving throw made against the spell."
+			]
+		},
+		{
+			"name": "Hechizo Rúnico",
+			"source": "Himo",
+			"featureType": [
+				"MM"
+			],
+			"entries": [
+				"Cuando lanzas un conjuro, puedes gastar una cantidad de puntos de hechicería igual a 1 + el nivel del conjuro para dibujar una runa de hasta medio metro cuadrado en una superficie sólida. Cuando una criatura toque la runa, el conjuro se desatará tomando dicha criatura como objetivo y el área circundante a la runa necesaria para el conjuro. El conjuro utilizará el bono de ataque y la CD de salvación de conjuros de su creador, y se disipará una vez haya detonado. Si no detona pasada 1 hora, la runa se desvanece.",
+				"Puedes gastar una cantidad de puntos de hechicería igual a 2 + el nivel del conjuro para aumentar la duración hasta 24 horas, y 5 + el nivel del conjuro para hacerla permanente. No recuperarás dichos puntos de hechicería hasta que el conjuro detone."
 			]
 		},
 		{
@@ -4264,7 +4283,8 @@
 						},
 						"subclass": {
 							"name": "Lengua de Plata",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						}
 					}
 				}
@@ -4283,7 +4303,8 @@
 			"featureType": [
 				"FS:F",
 				"FS:P",
-				"FS:EM"
+				"FS:EM",
+				"FS:D"
 			],
 			"entries": [
 				"When a creature you can see hits a target, other than you, within 5 feet of you with an attack, you can use your reaction to reduce the damage the target takes by {@dice 1d10} + your proficiency bonus (to a minimum of 0 damage). You must be wielding a {@item shield|phb} or a {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon;simple weapon} to use this reaction."
@@ -4332,7 +4353,8 @@
 						},
 						"subclass": {
 							"name": "Lengua de Sangre",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						}
 					}
 				}
@@ -4424,7 +4446,8 @@
 						},
 						"subclass": {
 							"name": "Lengua de Sangre",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						}
 					}
 				}
@@ -5871,7 +5894,8 @@
 			"featureType": [
 				"FS:F",
 				"FS:P",
-				"FS:EM"
+				"FS:EM",
+				"FS:D"
 			],
 			"entries": [
 				"When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield."
@@ -6960,7 +6984,8 @@
 						},
 						"subclass": {
 							"name": "Lengua de Oro",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						}
 					}
 				}
@@ -7077,7 +7102,8 @@
 						},
 						"subclass": {
 							"name": "Lengua de Serpiente",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						}
 					}
 				}
@@ -7518,7 +7544,8 @@
 			"isClassFeatureVariant": true,
 			"featureType": [
 				"FS:F",
-				"FS:EM"
+				"FS:EM",
+				"FS:D"
 			],
 			"optionalfeatureProgression": [
 				{
@@ -7677,7 +7704,8 @@
 				"FS:F",
 				"FS:R",
 				"FS:C",
-				"FS:EM"
+				"FS:EM",
+				"FS:D"
 			],
 			"entries": [
 				"You can draw a weapon that has the thrown property as part of the attack you make with the weapon.",
@@ -7834,7 +7862,8 @@
 				"FS:B",
 				"FS:R",
 				"FS:C",
-				"FS:EM"
+				"FS:EM",
+				"FS:D"
 			],
 			"entries": [
 				"When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
@@ -7848,7 +7877,8 @@
 			"featureType": [
 				"FS:F",
 				"FS:C",
-				"FS:EM"
+				"FS:EM",
+				"FS:D"
 			],
 			"entries": [
 				"Your unarmed strikes can deal bludgeoning damage equal to {@damage 1d6} + your Strength modifier on a hit. If you aren't wielding any weapons or a {@item shield|phb} when you make the attack roll, the {@damage d6} becomes a {@damage d8}.",
@@ -8105,7 +8135,8 @@
 						},
 						"subclass": {
 							"name": "Lengua de Oro",
-							"source": "Himo"
+							"source": "Himo",
+							"visible": true
 						}
 					}
 				}

@@ -1082,19 +1082,47 @@
         "No hace falta irse muy lejos para encontrar realms de lo más variopintos. Los planeswalkers que deciden estudiar los planos espirituales del Feywild y el Shadowfell se encuentran con una gran variedad de lugares a su disposición. No hay dos realms iguales, y eso, sin cambiar de plano, es muy atractivo para alguien capaz de vagar entre planos.",
         {
           "type": "entries",
-          "name": "Consciencia espiritual",
+          "name": "Level 1: Consciencia espiritual",
           "entries": [
             "Elige un realm del Shadowfell o del Feywild y añadelo a tu Consciencia Planar. Dependiendo de tu elección, hablas Silvano y eres competente en {@skill Intimidation} o {@skill Persuasion}.",
             {
               "type": "table",
-              "colLabels": ["Nivel de Planeswalker", "Conjuro 1", "Conjuro 2"],
-              "colStyles": ["col-2 text-center", "col-5", "col-5"],
+              "colLabels": [
+                "Nivel de Planeswalker",
+                "Conjuro 1",
+                "Conjuro 2"
+              ],
+              "colStyles": [
+                "col-2 text-center",
+                "col-5",
+                "col-5"
+              ],
               "rows": [
-                ["1", "{@spell charm person}", "{@spell cause fear|XGE}"],
-                ["5", "{@spell moonbeam}", "{@spell blindness/deafness}"],
-                ["9", "{@spell fast friends|AI}", "{@spell fear}"],
-                ["13", "{@spell charm monster|XGE}", "{@spell Robar Pensamientos|CdS}"],
-                ["17", "{@spell dominate person}", "{@spell danse macabre|XGE}"]
+                [
+                  "1",
+                  "{@spell charm person}",
+                  "{@spell cause fear|XGE}"
+                ],
+                [
+                  "5",
+                  "{@spell moonbeam}",
+                  "{@spell blindness/deafness}"
+                ],
+                [
+                  "9",
+                  "{@spell fast friends|AI}",
+                  "{@spell fear}"
+                ],
+                [
+                  "13",
+                  "{@spell charm monster|XGE}",
+                  "{@spell Robar Pensamientos|CdS}"
+                ],
+                [
+                  "17",
+                  "{@spell dominate person}",
+                  "{@spell danse macabre|XGE}"
+                ]
               ]
             }
           ]
@@ -1117,7 +1145,7 @@
       "classSource": "Himo",
       "subclassShortName": "Brumas",
       "subclassSource": "Himo",
-      "_displayName": "Lv3 Trance lento",
+      "_displayName": "Level 3: Trance lento",
       "isDisplayAsSubclassTrait": true
     },
     {
@@ -1131,7 +1159,7 @@
       "classSource": "Himo",
       "subclassShortName": "Brumas",
       "subclassSource": "Himo",
-      "_displayName": "Lv7 Cazador de Cuento",
+      "_displayName": "Level 7: Cazador de Cuento",
       "isDisplayAsSubclassTrait": true
     },
     {
@@ -1145,7 +1173,7 @@
       "classSource": "Himo",
       "subclassShortName": "Brumas",
       "subclassSource": "Himo",
-      "_displayName": "Lv14 Caminante de las brumas",
+      "_displayName": "Level 14: Caminante de las brumas",
       "isDisplayAsSubclassTrait": true
     },
     {
@@ -1499,7 +1527,7 @@
         "Algunos hacen peregrinajes para expiar pecados, pero esos viajes dan un vuelco cuando toda la rueda de los planos está en tu mano. Los Planeswalkers del Pecado llevan este peregrinaje por todo el cosmos, llevando consigo cuanto puedan arrastrar de planos más restrictivos, a veces para librarse de ese mal, otras para abrazarlo y tomar su poder. ¿Cuál eres tú?",
         {
           "type": "entries",
-          "name": "Consciencia Caótica",
+          "name": "Level 1: Consciencia Caótica",
           "entries": [
             "Añade el Limbo a tu consciencia planar. Aprendes slaad y cada vez que castees un conjuro, tira {@dice 1d20}. Con un 1, tiras en la wild magic. Si no tiraste en la wild magic, la próxima que tires ese d20 deberá superar 3, y seguirá subiendo en 2 por cada conjuro que no trigeree la wild magic. Cuando lo haga, la cuenta se resetea."
           ]
@@ -1522,7 +1550,7 @@
       "classSource": "Himo",
       "subclassShortName": "Caos",
       "subclassSource": "Himo",
-      "_displayName": "Lv3 Caos Contagioso",
+      "_displayName": "Level 3: Caos Contagioso",
       "isDisplayAsSubclassTrait": true
     },
     {
@@ -1537,7 +1565,7 @@
       "classSource": "Himo",
       "subclassShortName": "Caos",
       "subclassSource": "Himo",
-      "_displayName": "Lv7 Descontrol",
+      "_displayName": "Level 7: Descontrol",
       "isDisplayAsSubclassTrait": true
     },
     {
@@ -1553,7 +1581,7 @@
       "classSource": "Himo",
       "subclassShortName": "Caos",
       "subclassSource": "Himo",
-      "_displayName": "Lv14 Bendición del Penitente",
+      "_displayName": "Level 14: Bendición del Penitente",
       "isDisplayAsSubclassTrait": true
     },
     {
@@ -1563,30 +1591,94 @@
         "Los Planeswalkers que estudian los Planos Interiores aprenden también a infundirse en los elementos, logrando ser uno con ellos. Es común ver a estos viajeros convertir su piel en la de los distintos elementos, buscando la siempre perfecta Quintaesencia.",
         {
           "type": "entries",
-          "name": "Consciencia Elemental",
+          "name": "Level 1: Consciencia Elemental",
           "entries": [
             "Elije un plano interior y añádelo a tu lista de planos de tu Consciencia Planar. Hablas Primordial. Ganas un conjuro y un cantrip en función del plano. Adquieres otro plano interior con cada nivel de subclase. Llegado ese punto, ganas el cantrip de su elemento y un conjuro asociado a ese nivel. Solo puedes coger conjuros de elementos que ya tengas, aunque no necesariamente del elemento que acabas de ganar.",
             {
               "type": "table",
-              "colLabels": ["Nivel de Planeswalker", "Conjuro 1", "Conjuro 2"],
-              "colStyles": ["col-2 text-center", "col-5", "col-5"],
+              "colLabels": [
+                "Nivel de Planeswalker",
+                "Conjuro 1",
+                "Conjuro 2"
+              ],
+              "colStyles": [
+                "col-2 text-center",
+                "col-5",
+                "col-5"
+              ],
               "rows": [
-                ["1", "{@spell chromatic orb}", "{@spell thunderwave}"],
-                ["5", "{@spell dragon's breath|XGE}", "{@spell melf's acid arrow}"],
-                ["9", "{@spell elemental weapon}", "{@spell sleet storm}"],
-                ["13", "{@spell conjure minor elementals}", "{@spell elemental bane|XGE}"],
-                ["17", "{@spell Control Fire|GPNM}", "{@spell maelstrom|XGE}"]
+                [
+                  "1",
+                  "{@spell chromatic orb}",
+                  "{@spell thunderwave}"
+                ],
+                [
+                  "5",
+                  "{@spell dragon's breath|XGE}",
+                  "{@spell melf's acid arrow}"
+                ],
+                [
+                  "9",
+                  "{@spell elemental weapon}",
+                  "{@spell sleet storm}"
+                ],
+                [
+                  "13",
+                  "{@spell conjure minor elementals}",
+                  "{@spell elemental bane|XGE}"
+                ],
+                [
+                  "17",
+                  "{@spell Control Fire|GPNM}",
+                  "{@spell maelstrom|XGE}"
+                ]
               ]
             },
             {
               "type": "table",
-              "colLabels": ["Elemento", "Aire", "Agua", "Fuego", "Tierra"],
-              "colStyles": ["col-2", "col-2", "col-2", "col-2", "col-2"],
+              "colLabels": [
+                "Elemento",
+                "Aire",
+                "Agua",
+                "Fuego",
+                "Tierra"
+              ],
+              "colStyles": [
+                "col-2",
+                "col-2",
+                "col-2",
+                "col-2",
+                "col-2"
+              ],
               "rows": [
-                ["Cantrip", "{@spell gust|XGE}", "{@spell shape water|XGE}", "{@spell control flames|XGE}", "{@spell mold earth|XGE}"],
-                ["Lv1 / 3", "{@spell fog cloud}", "{@spell create or destroy water}", "{@spell burning hands}", "{@spell earth tremor|XGE}"],
-                ["Lv7", "{@spell gust of wind}", "{@spell rime's binding ice|FTD}", "{@spell aganazzar's scorcher|XGE}", "{@spell maximilian's earthen grasp|XGE}"],
-                ["Lv14", "{@spell Paso Elevado|GPNM}", "{@spell control water}", "{@spell Incendio|GMAM}", "{@spell stone shape}"]
+                [
+                  "Cantrip",
+                  "{@spell gust|XGE}",
+                  "{@spell shape water|XGE}",
+                  "{@spell control flames|XGE}",
+                  "{@spell mold earth|XGE}"
+                ],
+                [
+                  "Lv1 / 3",
+                  "{@spell fog cloud}",
+                  "{@spell create or destroy water}",
+                  "{@spell burning hands}",
+                  "{@spell earth tremor|XGE}"
+                ],
+                [
+                  "Lv7",
+                  "{@spell gust of wind}",
+                  "{@spell rime's binding ice|FTD}",
+                  "{@spell aganazzar's scorcher|XGE}",
+                  "{@spell maximilian's earthen grasp|XGE}"
+                ],
+                [
+                  "Lv14",
+                  "{@spell Paso Elevado|GPNM}",
+                  "{@spell control water}",
+                  "{@spell Incendio|GMAM}",
+                  "{@spell stone shape}"
+                ]
               ]
             }
           ]
@@ -1611,7 +1703,7 @@
       "classSource": "Himo",
       "subclassShortName": "Elemental",
       "subclassSource": "Himo",
-      "_displayName": "Lv3 Caos Elemental",
+      "_displayName": "Level 3: Caos Elemental",
       "isDisplayAsSubclassTrait": true
     },
     {
@@ -1634,7 +1726,7 @@
       "classSource": "Himo",
       "subclassShortName": "Elemental",
       "subclassSource": "Himo",
-      "_displayName": "Lv7 Uno con los Elementos",
+      "_displayName": "Level 7: Uno con los Elementos",
       "isDisplayAsSubclassTrait": true
     },
     {
@@ -1656,7 +1748,7 @@
       "classSource": "Himo",
       "subclassShortName": "Elemental",
       "subclassSource": "Himo",
-      "_displayName": "Lv14 Quintaesencia",
+      "_displayName": "Level 14: Quintaesencia",
       "isDisplayAsSubclassTrait": true
     },
     {
@@ -1666,7 +1758,7 @@
         "Pocos se atreven a adentrarse en lo desconocido, y mucho menos caminar entre las mil bocas y escuchar el millón de voces en su mente sin perder la cabeza. Los Planeswakers que se atreven a hacerlo son conscientes de que podrían morir en cualquier momento, o peor, convertirse en una versión de sí mismos que ni ellos mismos reconocen. Bienvenido al Far Realm. ¿Serás capaz de volver a casa?",
         {
           "type": "entries",
-          "name": "Consciencia Eldritch",
+          "name": "Level 1: Consciencia Eldritch",
           "entries": [
             "Elige una capa del Abismo dominado por un Obyrith y añadelo a tu Consciencia Planar. Pide lore a tu DM o provéelo si no conoce el Abismo. Siéntete libre de crear el tuyo propio, al fin y al cabo hay capas infinitas. Ganas otro realm de este tipo a los lv 3, 7 y 12. Aprendes a hablar Daelkyr/Deep Speech (el que use tu DM) y eres competente en salvaciones de Carisma."
           ]
@@ -1702,7 +1794,7 @@
       "classSource": "Himo",
       "subclassShortName": "Desconocido",
       "subclassSource": "Himo",
-      "_displayName": "Lv3 Mutación Planar",
+      "_displayName": "Level 3: Mutación Planar",
       "isDisplayAsSubclassTrait": true
     },
     {
@@ -1716,7 +1808,7 @@
       "classSource": "Himo",
       "subclassShortName": "Desconocido",
       "subclassSource": "Himo",
-      "_displayName": "Lv7 Mente Invulnerable",
+      "_displayName": "Level 7: Mente Invulnerable",
       "isDisplayAsSubclassTrait": true
     },
     {
@@ -1731,7 +1823,7 @@
       "classSource": "Himo",
       "subclassShortName": "Desconocido",
       "subclassSource": "Himo",
-      "_displayName": "Lv14 Emisario del Más Allá",
+      "_displayName": "Level 14: Emisario del Más Allá",
       "isDisplayAsSubclassTrait": true
     }
   ]

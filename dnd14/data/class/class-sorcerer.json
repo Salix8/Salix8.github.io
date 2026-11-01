@@ -1362,6 +1362,13 @@
 							"preserve": {
 								"consumes": true
 							}
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Hechizo Rúnico|Himo",
+							"preserve": {
+								"consumes": true
+							}
 						}
 					]
 				}

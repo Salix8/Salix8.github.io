@@ -39,15 +39,23 @@ const optionalFeatures = JSON.parse(fs.readFileSync(path.join(root, "data", "opt
 const removedUaSources = new Set([
 	"UAArtificer", "UAArtificerRevisited", "UAClassFeatureVariants", "UAClericDruidWizard", "UAFighter", "UAFighterRangerRogue", "UAFighterRogueWizard", "UALightDarkUnderdark", "UARevisedClassOptions", "UARevisedSubclasses", "UASorcererAndWarlock", "UAStarterSpells", "UATheFaithful", "UAWarlockAndWizard", "UAWaterborneAdventures",
 ]);
-assert.equal(optionalFeatures.length, 311, "D&D 2014 must retain the curated Optional Features catalogue.");
+assert.equal(optionalFeatures.length, 312, "D&D 2014 must retain the curated Optional Features catalogue.");
 assert.ok(optionalFeatures.every(({source}) => !removedUaSources.has(source)), "Removed UA sources must not remain in Optional Features.");
 assert.ok(optionalFeatures.every(({featureType = []}) => featureType.every(type => !type.startsWith("SHP:") && !type.startsWith("IWM:"))), "Vehicle upgrades must not remain in Optional Features.");
 assert.equal(new Set(optionalFeatures.map(({name, source}) => `${name}\u0000${source}`)).size, optionalFeatures.length, "Optional Features must not be duplicated.");
 assert.ok(optionalFeatures.find(it => it.name === "Lucha Hiriente" && it.source === "Himo")?.featureType.includes("FS:C"));
 assert.ok(optionalFeatures.find(it => it.name === "Shield Fighting" && it.source === "Himo")?.featureType.includes("FS:EM"));
+assert.ok(optionalFeatures.find(it => it.name === "Archery" && it.source === "PHB")?.featureType.includes("FS:D"));
 assert.match(optionalFeatures.find(it => it.name === "Lucha Hiriente" && it.source === "Himo")?.entries?.[0] || "", /vicious mockery/i);
 assert.deepEqual(optionalFeatures.filter(it => it.featureType?.includes("FS:C")).map(it => it.name).sort(), ["Defense", "Dueling", "Lucha Hiriente", "Thrown Weapon Fighting", "Two-Weapon Fighting", "Unarmed Fighting"]);
 assert.deepEqual(optionalFeatures.filter(it => it.featureType?.includes("FS:EM")).map(it => it.name).sort(), ["Defense", "Dueling", "Great Weapon Fighting", "Interception", "Protection", "Shield Fighting", "Superior Technique", "Thrown Weapon Fighting", "Two-Weapon Fighting", "Unarmed Fighting"]);
+assert.deepEqual(optionalFeatures.filter(it => it.featureType?.includes("FS:D")).map(it => it.name).sort(), ["Archery", "Blind Fighting", "Defense", "Dueling", "Great Weapon Fighting", "Interception", "Protection", "Superior Technique", "Thrown Weapon Fighting", "Two-Weapon Fighting", "Unarmed Fighting"]);
+const runicSpell = optionalFeatures.find(it => it.name === "Hechizo Rúnico" && it.source === "Himo");
+assert.deepEqual(runicSpell?.featureType, ["MM"], "Hechizo Rúnico must be indexed as Metamagic.");
+assert.match(runicSpell?.entries?.join(" ") || "", /5 \+ el nivel del conjuro/, "Hechizo Rúnico must retain its permanent-rune cost.");
+const sorcererData = JSON.parse(fs.readFileSync(path.join(root, "data", "class", "class-sorcerer.json"), "utf8"));
+const sorcererMetamagic = sorcererData.classFeature.find(it => it.name === "Metamagic" && it.source === "PHB" && it.level === 3);
+assert.ok(sorcererMetamagic.entries.some(it => it.type === "options" && it.entries.some(option => option.optionalfeature === "Hechizo Rúnico|Himo")), "Hechizo Rúnico must be available from the Sorcerer Metamagic feature.");
 
 const canalla = fs.readFileSync(path.join(root, "data", "class", "class-canalla.json"), "utf8");
 const canallaData = JSON.parse(canalla);
@@ -175,7 +183,9 @@ assert.match(optionalFeaturesFilter, /_getClassKey\("Alquimista", "Himo"\)\]: "n
 assert.match(optionalFeaturesFilter, /_getClassKey\("Fighter", "PHB"\)\]: "omit"/);
 assert.match(optionalFeaturesFilter, /"fighting-styles", displayName: "Fighting Styles"/);
 assert.match(optionalFeaturesFilter, /"FS:C": \{nest: "fighting-styles"/);
+assert.match(optionalFeaturesFilter, /"FS:D": \{nest: "fighting-styles"/);
 assert.match(optionalFeaturesFilter, /"FS:EM": \{nest: "fighting-styles"/);
+assert.match(fs.readFileSync(path.join(root, "js", "parser.js"), "utf8"), /"FS:D": "Fighting Style; Desangrador"/);
 assert.match(optionalFeaturesFilter, /featureType === "MV:B" \? "Battle Master"/);
 assert.doesNotMatch(optionalFeaturesFilter, /"MV:B": \{nest:/);
 assert.match(optionalFeaturesFilter, /isNestDivider: true/);

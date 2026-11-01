@@ -2277,6 +2277,7 @@ Parser.OPT_FEATURE_TYPE_TO_FULL = {
 	"FS:F": "Fighting Style; Fighter",
 	"FS:B": "Fighting Style; Bard",
 	"FS:C": "Fighting Style; Canalla",
+	"FS:D": "Fighting Style; Desangrador",
 	"FS:EM": "Fighting Style; Experto Marcial",
 	"FS:P": "Fighting Style; Paladin",
 	"FS:R": "Fighting Style; Ranger",

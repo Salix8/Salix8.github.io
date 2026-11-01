@@ -291,18 +291,38 @@ describe("Pociones del Alquimista", () => {
 		}
 	});
 
-	it("keeps Lexarca identity for power word levels and subclasses without rendering it as a prerequisite", () => {
+	it("renders the required Lexarca specialization for subclass power words", () => {
 		const powerWords = DATA.optionalfeature.filter(it => it.source === "Himo" && it.featureType?.includes("PW"));
+		const expectedSubclassByPowerWord = {
+			"Alma": "Lengua de Plata",
+			"Curación": "Lengua de Oro",
+			"Ghoul": "Lengua de Sangre",
+			"Infierno": "Lengua de Plata",
+			"Jaula": "Lengua de Sangre",
+			"Lichdom": "Lengua de Sangre",
+			"Revivir": "Lengua de Oro",
+			"Rugido": "Lengua de Serpiente",
+			"Vida": "Lengua de Oro",
+		};
 
 		expect(powerWords).toHaveLength(28);
 		powerWords.forEach(powerWord => {
 			const prerequisite = powerWord.prerequisite.find(it => it.level?.class?.name === "Lexarca");
 			expect(prerequisite.level.class).toEqual({name: "Lexarca", source: "Himo"});
-			expect(Renderer.optionalfeature.getPrerequisiteHtml(powerWord)).not.toContain("Lexarca");
+
+			const expectedSubclass = expectedSubclassByPowerWord[powerWord.name];
+			const prerequisiteHtml = Renderer.optionalfeature.getPrerequisiteHtml(powerWord);
+			if (!expectedSubclass) {
+				expect(prerequisiteHtml).not.toContain("Lexarca");
+				return;
+			}
+
+			expect(prerequisite.level.subclass).toMatchObject({name: expectedSubclass, source: "Himo", visible: true});
+			expect(prerequisiteHtml).toContain(`Lexarca (${expectedSubclass})`);
 		});
 	});
 
-	it("filters the exact fighting-style lists for Canalla and Experto Marcial", () => {
+	it("filters the exact fighting-style lists for Canalla, Desangrador, and Experto Marcial", () => {
 		const pageFilter = getOptionalFeatureFilterPage();
 
 		pageFilter._typeFilter.setValue("FS:C", 1);
@@ -311,6 +331,12 @@ describe("Pociones del Alquimista", () => {
 		]);
 
 		pageFilter._typeFilter.setValue("FS:C", 0);
+		pageFilter._typeFilter.setValue("FS:D", 1);
+		expect(getFilterBoxMatches(pageFilter, DATA.optionalfeature).map(it => it.name).sort()).toEqual([
+			"Archery", "Blind Fighting", "Defense", "Dueling", "Great Weapon Fighting", "Interception", "Protection", "Superior Technique", "Thrown Weapon Fighting", "Two-Weapon Fighting", "Unarmed Fighting",
+		]);
+
+		pageFilter._typeFilter.setValue("FS:D", 0);
 		pageFilter._typeFilter.setValue("FS:EM", 1);
 		expect(getFilterBoxMatches(pageFilter, DATA.optionalfeature).map(it => it.name).sort()).toEqual([
 			"Defense", "Dueling", "Great Weapon Fighting", "Interception", "Protection", "Shield Fighting", "Superior Technique", "Thrown Weapon Fighting", "Two-Weapon Fighting", "Unarmed Fighting",
