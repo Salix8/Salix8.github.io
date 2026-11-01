@@ -469,7 +469,7 @@
 			]
 		},
 		{
-			"name": "Aliento químico (lv1)",
+			"name": "Aliento químico",
 			"source": "Himo",
 			"page": "??",
 			"featureType": [
@@ -609,7 +609,7 @@
 			]
 		},
 		{
-			"name": "Amplitud de Sentidos (lv5)",
+			"name": "Amplitud de Sentidos",
 			"source": "Himo",
 			"page": "??",
 			"featureType": [
@@ -1365,7 +1365,7 @@
 			]
 		},
 		{
-			"name": "Bomba de Escarcha (lv5)",
+			"name": "Bomba de Escarcha",
 			"source": "Himo",
 			"page": "??",
 			"featureType": [
@@ -1539,7 +1539,7 @@
 			]
 		},
 		{
-			"name": "Bomba Magnética (lv 5)",
+			"name": "Bomba Magnética",
 			"source": "Himo",
 			"page": "??",
 			"featureType": [
@@ -1574,7 +1574,7 @@
 			]
 		},
 		{
-			"name": "Bomba Química (lv 10)",
+			"name": "Bomba Química",
 			"source": "Himo",
 			"page": "??",
 			"featureType": [
@@ -6652,7 +6652,7 @@
 			]
 		},
 		{
-			"name": "Licor Relajante (Lv1)",
+			"name": "Licor Relajante",
 			"source": "Himo",
 			"page": "??",
 			"featureType": [
@@ -12249,7 +12249,7 @@
 			"page": 2
 		},
 		{
-			"name": "Vapores del Nirvana (lv 5)",
+			"name": "Vapores del Nirvana",
 			"source": "Himo",
 			"page": "??",
 			"featureType": [

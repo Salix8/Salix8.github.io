@@ -268,7 +268,6 @@ describe("Pociones del Alquimista", () => {
 		expect(fightingStyles.every(it => it.featureType.includes("FS:F"))).toBe(true);
 	});
 
-
 	it("groups Words, Bromas, and Jugarretas by their feature type", () => {
 		const expectedGroups = [
 			["PW", "Words", 28, "Condición"],

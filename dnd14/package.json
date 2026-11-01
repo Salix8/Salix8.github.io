@@ -10,6 +10,7 @@
 		"version-bump": "npm version -m \"chore(version): bump\"",
 		"gen": "node node/generate-all.js",
 		"gen:search-index": "node node/generate-search-index.js",
+		"gen:search-index:minified": "node node/generate-search-index.js --minify",
 		"gen:pages": "node node/generate-pages.js",
 		"clean-jsons": "node node/clean-jsons.js",
 		"test:js": "vet-eslint .",

@@ -316,7 +316,7 @@
                 "{@creature Inkling Mascot|SCC}: Necesitas 1 litro de tinta, 1 componente de cualquier tipo de slime y 1 {@optfeature Elixir curativo|Himo|Elixir Curativo}.",
                 "{@creature Pest Mascot|SCC}: Un insecto de hasta 30 cm, sangre de cualquier criatura con regeneración y 1 {@optfeature Elixir curativo|Himo|Elixir Curativo}",
                 "Skitterling: Un mamífero pequeño, alas de una criatura pequeña y 2 {@optfeature Frasco de Veneno|Himo|Frascos de Veneno}",
-                "Garroter Crab: Un crustáceo pequeño, 1 {@optfeature Elixir curativo|Himo|Elixir Curativo} y 1 {@optfeature Vapores del Nirvana|Himo|Vapor del Nirvana}",
+				"Garroter Crab: Un crustáceo pequeño, 1 {@optfeature Elixir curativo|Himo|Elixir Curativo} y 1 {@optfeature Vapores del Nirvana|Himo}",
                 "{@creature Wynling|JttRC}: Un mamífero tiny, alas de una criatura tiny o pequeña y dos pociones, una de {@optfeature Cubierta de Invisibilidad|Himo|invisibilidad} y otra de {@optfeature Frasco de Velocidad|Himo|velocidad}.",
                 "{@creature Flumph|MM}: Un cerebro de una criatura con telepatía, tentáculos, un cuerpo pequeño (opcional) y dos pociones: una {@optfeature Bomba Fétida Lv1|Himo|bomba fétida} y una {@optfeature Cubeta de Ácido|Himo|cubeta de ácido}.",
                 "Morph: Baba de mímico (1 componente), poción de cieno transmutante y {@optfeature Elixir curativo|Himo|elixir curativo}."
@@ -335,7 +335,7 @@
                     "Vapor →  {@optfeature Proyectil Efervescente|Himo}",
                     "Polvo →  {@optfeature Fango cegador|Himo}",
                     "Magma →  {@optfeature Aceite Alquímico|Himo}",
-                    "Hielo →  {@optfeature Bomba de Escarcha (lv5)|Himo|Bomba de Escarcha}",
+                    "Hielo →  {@optfeature Bomba de Escarcha|Himo|Bomba de Escarcha}",
                     "Slime →  {@optfeature Cubeta de Ácido|Himo|cubeta de ácido}"
                   ]
                 }
@@ -347,7 +347,7 @@
                 "{@creature Spiderfrog|MGELFT}: Una rana, una araña y un Elixir de Cuarción",
                 "Plant Familiar: Planta tiny o small, un {@optfeature Antídoto|Himo} y un {@optfeature Vial de Crecimiento|Himo}",
                 "{@creature Darkmantle|MM}: Un cefalópodo, tinta, sistema auditivo de algo con ecolocalización y una {@optfeature Bomba de Humo|Himo|bomba de humo}",
-                "{@creature Gazer|VGM}: 4 ojos de beholder (de la familia), un cráneo, unas cuerdas vocales de algo capaz de hablar (puede venir incluido en el cráneo) y un {@optfeature Aliento químico (lv1)|Himo|Aliento Químico}."
+				"{@creature Gazer|VGM}: 4 ojos de beholder (de la familia), un cráneo, unas cuerdas vocales de algo capaz de hablar (puede venir incluido en el cráneo) y un {@optfeature Aliento químico|Himo|Aliento Químico}."
               ]
             },
             {

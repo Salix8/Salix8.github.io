@@ -14,15 +14,15 @@ import {Timer} from "./util.js";
 
 const program = new Command()
 	.option("--partnered", `If the partnered content index is to be generated.`)
-	.option("--uncompressed", `If the output should be human-readable.`)
+	.option("--minify", `If the output should be compacted for deployment.`)
 ;
 
 program.parse(process.argv);
 const params = program.opts();
 
 const getJsonString = (data) => {
-	if (!params.uncompressed) return JSON.stringify(data);
-	return JSON.stringify(data, null, "\t");
+	if (params.minify) return JSON.stringify(data);
+	return `${JSON.stringify(data, null, "\t")}\n`;
 };
 
 async function pMain () {
