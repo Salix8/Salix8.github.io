@@ -998,6 +998,10 @@
 						},
 						{
 							"type": "refOptionalfeature",
+							"optionalfeature": "Pact of the Chain (Himo)|Himo"
+						},
+						{
+							"type": "refOptionalfeature",
 							"optionalfeature": "Pact of the Blade"
 						},
 						{
@@ -1007,6 +1011,10 @@
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Pact of the Talisman|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Pacto de los Sentidos|Himo"
 						}
 					]
 				}

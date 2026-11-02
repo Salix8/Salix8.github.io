@@ -4123,6 +4123,37 @@
 			]
 		},
 		{
+			"name": "Investment of the Chain Master (Himo)",
+			"source": "Himo",
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Chain (Himo)",
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Imbuyes a tu familiar en un poder sobrenatural, otorgándole los siguientes poderes:",
+				{
+					"type": "list",
+					"items": [
+						"Puedes usar la bonus para que ataque. Usa tu modificador de spellcasting y tu BC.",
+						"Añade tu modificador de spellcasting y tu BC al daño. Sus ataques se consideran mágicos.",
+						"Gana HP extras igual a tu nivel.",
+						"Si el familiar fuerza a una criatura a salvar, puede usar tu CD de conjuros.",
+						"Cuando vaya a recibir daño, puedes usar tu reacción para darle resistencia."
+					]
+				}
+			]
+		},
+		{
 			"name": "Jaula",
 			"source": "Himo",
 			"featureType": [
@@ -4930,6 +4961,42 @@
 				"You learn the {@spell find familiar} spell and can cast it as a ritual. The spell doesn't count against your number of spells known.",
 				"When you cast the spell, you can choose one of the normal forms for your familiar or one of the following special forms: {@creature imp}, {@creature pseudodragon}, {@creature quasit}, or {@creature sprite}.",
 				"Additionally, when you take the {@action Attack} action, you can forgo one of your own attacks to allow your familiar to use its reaction to make one attack of its own."
+			]
+		},
+		{
+			"name": "Pact of the Chain (Himo)",
+			"source": "Himo",
+			"featureType": [
+				"PB"
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"find familiar"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"Aprendes el conjuro {@spell find familiar} y puedes lanzarlo una vez al día sin componentes. No cuenta para el máximo de conjuros que puedes tener preparados.",
+				"Cuando lances el conjuro, puedes elegir las formas originales o una de las siguientes: {@creature imp|MM}, {@creature pseudodragon|MM}, {@creature quasit|MM}, {@creature sprite|MM}, {@creature gazer|VGM}, Tsutsugamushi, {@creature abyssal chicken|BGDIA}, {@creature neogi hatchling|VGM}, {@creature tressym|BGDIA}, {@creature slaad tadpole|MM}, {@creature crawling claw|MM} o un mephit cualquiera, pero con la vida reducida a 17 si tenía más."
+			]
+		},
+		{
+			"name": "Pacto de los Sentidos",
+			"source": "Himo",
+			"featureType": [
+				"PB"
+			],
+			"entries": [
+				"Usas tu habilidad de {@skill Perception} con Carisma y ganas competencia en ella.",
+				"Tu percepción pasiva no puede recibir penalizadores por estar inconsciente."
 			]
 		},
 		{
@@ -7851,6 +7918,21 @@
 			]
 		},
 		{
+			"name": "Voice of the Chain Master (Himo)",
+			"source": "Himo",
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Chain (Himo)"
+				}
+			],
+			"entries": [
+				"Ignoras el tope de 100 ft para el vínculo telepático y para el cambio de sentidos con tu familiar. Puedes quitarte un ataque para que lo haga tu familiar."
+			]
+		},
+		{
 			"name": "Water Whip",
 			"source": "PHB",
 			"page": 81,
@@ -7951,6 +8033,161 @@
 			],
 			"entries": [
 				"You can see the true form of any shapechanger or creature concealed by illusion or transmutation magic while the creature is within 30 feet of you and within line of sight."
+			]
+		},
+		{
+			"name": "Ecolocalización Arcana",
+			"source": "Himo",
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Pacto de los Sentidos"
+				}
+			],
+			"entries": [
+				"Con tu acción eres capaz de emitir un pulso arcano en forma de cono a 30 pies de ti. Eres consciente de cada objeto u obstáculo, esté quieto o en movimiento, así como de la presencia y tamaño de criaturas, si bien no las distinguirás de los obstáculos.",
+				"Este sentido funciona incluso en oscuridad total, mágica o mundana, o cuando estés ciego."
+			]
+		},
+		{
+			"name": "Visión más allá del Subsuelo",
+			"source": "Himo",
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Pacto de los Sentidos",
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Puedes concentrarte como acción para ganar tremorsense en un radio de 30 pies. Puedes localizar cualquier vibración en la o las superficies que estés tocando o en la sustancia en la que estés envuelto (no vale si es un gas).",
+				"Cuando lo hagas, puedes usar tu reacción para atacar a cualquier criatura que emerja de la superficie que estás sintiendo. Este rasgo funciona aunque estés cegado."
+			]
+		},
+		{
+			"name": "Ojos de Reptil",
+			"source": "Himo",
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Pacto de los Sentidos",
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción puedes modificar tu visión durante un minuto para discernir el calor de objetos y criaturas. Puedes determinar la silueta general de una criatura y su localización a 90 pies de ti, incluso cuando sea invisible o esté en cobertura total.",
+				"Debes poder ver para usar este sentido. Un pie de material frío o una fina capa de material caliente, independientemente de su estado, así como cualquier cantidad de fuego, bloquean esta visión."
+			]
+		},
+		{
+			"name": "Percepción Arcana",
+			"source": "Himo",
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Pacto de los Sentidos",
+					"level": {
+						"level": 14,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como acción eres capaz de usar tu propia onda para seguir la estática del ambiente. En un radio a 90 pies de ti puedes sentir la presencia de fuentes de electricidad o cargadas de estática, así como criaturas vivas.",
+				"Disciernes su tamaño, localización y cantidad de focos eléctricos. Eres capaz de diferenciar entre criaturas, objetos y zonas cargadas. Seis pies de un material no conductor o cualquier campo electromagnético bloquean este sentido."
+			]
+		},
+		{
+			"name": "Ascensión Sobrenatural",
+			"source": "Himo",
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Chain (Himo)",
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Puedes lanzar uno de los siguientes conjuros de invocación una vez al día sin gastar espacio de conjuro ni componentes. La invocación depende del tipo de familiar que portes:",
+				{
+					"type": "table",
+					"colLabels": [
+						"Familiar",
+						"Conjuro",
+						"Extra"
+					],
+					"colStyles": [
+						"col-3",
+						"col-3",
+						"col-6"
+					],
+					"rows": [
+						["Devil", "{@spell summon greater demon|XGE|Summon Demon}", "Lánzalo a nivel 5, pero debe tener el tag devil."],
+						["Demon", "{@spell summon greater demon|XGE|Summon Demon}", "Lánzalo a nivel 5, pero debe tener el tag demon."],
+						["Aberración", "{@spell summon aberration|TCE}", "A nivel 5: beholderkin si tenías un gazer, slaad si tenías un slaad o star spawn si tenías un neogi."],
+						["Monstruosidad", "{@spell summon beast|TCE}", "A nivel 5, de aire."],
+						["Fey", "{@spell summon fey|TCE}", "A nivel 5: fuming si era un sprite, Mirthful si era un tsutsugamushi."],
+						["Dragón", "{@spell summon draconic spirit|FTD}", "Pues eso."],
+						["Undead", "{@spell summon undead|TCE}", "A nivel 5, putrid."],
+						["Elemental", "{@spell summon elemental|TCE}", "A nivel 5; el elemento depende del mephit."]
+					]
+				}
+			]
+		},
+		{
+			"name": "Mente Psiónica",
+			"source": "Himo",
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"nondetection"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Puedes lanzar {@spell nondetection} a voluntad sin componentes materiales."
 			]
 		},
 		{
