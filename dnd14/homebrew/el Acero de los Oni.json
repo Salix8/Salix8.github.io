@@ -1,0 +1,2014 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "eAdlO",
+				"abbreviation": "eAdlO",
+				"full": "el Acero de los Oni",
+				"version": "1.0.0",
+				"authors": [
+					"Randy"
+				],
+				"convertedBy": [
+					"Me"
+				],
+				"color": "660000"
+			}
+		]
+	},
+	"monster": [
+		{
+			"name": "Dakao Gami",
+			"source": "eAdlO",
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "giant",
+				"tags": [
+					"oni"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item chain mail|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "22d12 + 88",
+				"average": 231
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 30,
+				"climb": 30
+			},
+			"str": 22,
+			"dex": 14,
+			"con": 18,
+			"int": 14,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+6",
+				"con": "+8",
+				"cha": "+7",
+				"wis": "+6"
+			},
+			"skill": {
+				"arcana": "+6",
+				"deception": "+11",
+				"perception": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"CD 15"
+					],
+					"will": [
+						"{@spell darkness}",
+						"{@spell invisibility}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell charm person}",
+							"{@spell cone of cold}",
+							"{@spell fear}",
+							"{@spell gaseous form}",
+							"{@spell sleep}",
+							"{@spell spirit guardians}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"The oni's weapon attacks are magical."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"The oni regains 10 hit points at the start of its turn if it has at least 1 hit point."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The oni makes two attacks, either with its claws or its katana."
+					]
+				},
+				{
+					"name": "Katana",
+					"entries": [
+						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 6}) slashing damage, or 8 ({@damage 1d8 + 4}) slashing damage in medium or small form."
+					]
+				},
+				{
+					"name": "Claw (Oni Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 6}) slashing damage."
+					]
+				},
+				{
+					"name": "Change Shape",
+					"entries": [
+						"The oni magically polymorphs into a Small or Medium humanoid, into a Large giant, or back into its true form. Other than its size, its statistics are the same in each form. The only equipment that is transformed is its glaive, which shrinks so that it can be wielded in humanoid form. If the oni dies, it reverts to its true form, and its glaive reverts to its normal size."
+					]
+				}
+			],
+			"environment": [
+				"forest",
+				"mountain"
+			],
+			"traitTags": [
+				"Magic Weapons",
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"reaction": [
+				{
+					"name": "Bloquear con Katana (si no gastó la bonus)",
+					"entries": [
+						"+3 a la CA para un ataque."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Posición de Defensa (Katana)",
+					"entries": [
+						"+1 a la CA hasta el inicio del próximo turno."
+					]
+				}
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": "https://cdn.discordapp.com/attachments/1159115238822649967/1202372195448266782/token_2_6.png?ex=65f2215e&is=65dfac5e&hm=dc7a0ca90dde0bbd4c83af369aa5832eaf967503ef9fc90a2b772536e6e388b4&"
+			},
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://cdn.discordapp.com/attachments/1154736682281750559/1203095178131406859/6fa82bb4f6ab99e99e790fb3ec62b577.png?ex=65eb8832&is=65d91332&hm=cea80dcd619edba63847fae868f1f63137fe683846f72226f2d23bd845eeb5e2&"
+						}
+					}
+				]
+			},
+			"damageTags": [
+				"S"
+			],
+			"damageTagsSpell": [
+				"C",
+				"N",
+				"R"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Harrukin",
+			"source": "eAdlO",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"kenku"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 13,
+				"formula": "3d8"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "si no tiene nada en las manos"
+				}
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 10,
+			"int": 10,
+			"wis": 12,
+			"cha": 14,
+			"skill": {
+				"acrobatics": "+5",
+				"persuasion": "+4",
+				"sleight of hand": "+5"
+			},
+			"passive": 11,
+			"languages": [
+				"Mulanita"
+			],
+			"cr": "1/4",
+			"environment": [
+				"forest",
+				"urban"
+			],
+			"traitTags": [
+				"Ambusher"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"action": [
+				{
+					"name": "Daga Larga",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}6 ({@damage 1d6 + 3}) slashing damage in melee, or 6 ({@damage 1d6 + 3}) slashing damage at range."
+					]
+				}
+			],
+			"miscTags": [
+				"RW",
+				"MW"
+			],
+			"bonus": [
+				{
+					"name": "Zarpas largas",
+					"entries": [
+						"Puede hacer una tirada de Juego de Manos contrarrestada por una salvación de Destreza. Si el harrukin gana, roba el objeto que esté equipando el objetivo.",
+						"No puede robar armas pesadas ni beneficiarse de los usos de los objetos, a menos que los equipe como bonus."
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Hurto incómodo",
+					"entries": [
+						"Cuando el harrukin roba algo con su rasgo Zarpas Largas, lo porta en las patas. Puede llevar hasta dos objetos. Cada uno resta 10 pies a su movilidad de caminar y 5 a la de vuelo."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://cdn.discordapp.com/attachments/1162778358271201380/1170477795827265576/image.png?ex=65ecd764&is=65da6264&hm=9fc816e3c7e697b76f66d37c4aa401640fc90267ff91bf68d378ada985eb2154&"
+						}
+					}
+				]
+			},
+			"tokenHref": {
+				"type": "external",
+				"url": "https://cdn.discordapp.com/attachments/1170477796477378661/1170478173704691772/token_1_22.png?ex=65ecd7bf&is=65da62bf&hm=08fc3c4df709c633a3c19aaa6a73559c3b5920f568c80ef5ec70c386292eec70&"
+			},
+			"damageTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Hazuki Pakkoi",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"source": "eAdlO",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item studded leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "8d8 + 16",
+				"average": 68
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 18,
+			"con": 14,
+			"int": 14,
+			"wis": 16,
+			"cha": 12,
+			"passive": 13,
+			"cr": "6",
+			"level": 8,
+			"languages": [
+				"Mulanita y Auran"
+			],
+			"languageTags": [
+				"AU"
+			],
+			"save": {
+				"wis": "+6",
+				"con": "+5",
+				"str": "+4"
+			},
+			"skill": {
+				"acrobatics": "+7",
+				"history": "+5",
+				"stealth": "+7",
+				"survival": "+6",
+				"persuasion": "+7"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"senseTags": [
+				"B"
+			],
+			"bonus": [
+				{
+					"name": "Second Wind (1 /rest)",
+					"entries": [
+						"Se cura {@dice 1d10 + 8}"
+					]
+				},
+				{
+					"name": "Espíritu de Lucha (3 /day)",
+					"entries": [
+						"Gana ventaja en todos sus ataques y 5 HPT."
+					]
+				},
+				{
+					"name": "Posición de defensa (Katana only)",
+					"entries": [
+						"Gana un +1 a la CA hasta el inicio de su próximo turno."
+					]
+				}
+			],
+			"actionHeader": [
+				"Ejerce la violencia dos veces. Si usa la naginata, puede atacar una vez más con desventaja a una criatura a 5 pies del último objetivo que aún esté dentro del rango. No puede moverse para realizar este ataque."
+			],
+			"reaction": [
+				{
+					"name": "Bloqueo (Katana only)",
+					"entries": [
+						"Si no usó la bonus de la katana, puede usar su reacción al recibir un ataque para darse +3 a la CA para ese ataque."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Katana",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) slashing damage."
+					]
+				},
+				{
+					"name": "Naginata",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 10 ft., one target. {@h}6 ({@damage 1d10 + 1}) slashing damage."
+					]
+				},
+				{
+					"name": "Arco largo",
+					"entries": [
+						"{@atk rw} {@hit 7} to hit, range 150/600 ft., one target. {@h}8 ({@damage 1d8 + 4}) damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"environment": [
+				"forest",
+				"mountain",
+				"urban"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://cdn.discordapp.com/attachments/1154736942819319848/1204910241662242866/bc43b63acd575a3f055b0f606719c5f1.png?ex=65f2229b&is=65dfad9b&hm=8f225882978b3b1bf458f5ae2df2fc94be38a1e0356f8636c17e4a7587c3a9c9&"
+						}
+					}
+				]
+			},
+			"tokenHref": {
+				"type": "external",
+				"url": "https://cdn.discordapp.com/attachments/1159115238822649967/1204919328147898398/token_1_6.png?ex=65f22b12&is=65dfb612&hm=fe0547f3c5961c8ed0c453d138ff84a1dcf06dfb75f439fab1824b4423f57f4a&"
+			},
+			"damageTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Kyodan Adame",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "giant",
+				"tags": [
+					{
+						"tag": "oni",
+						"prefix": "Half-"
+					}
+				]
+			},
+			"source": "eAdlO",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item breastplate|phb}",
+						"Guard {@item shield|phb}",
+						"Defense"
+					]
+				}
+			],
+			"hp": {
+				"formula": "7d10 + 14",
+				"average": 60
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 14,
+			"int": 16,
+			"wis": 18,
+			"cha": 14,
+			"passive": 14,
+			"cr": "6",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Común y Gigante"
+			],
+			"save": {
+				"wis": "+7",
+				"con": "+5",
+				"str": "+6"
+			},
+			"skill": {
+				"history": "+6",
+				"religion": "+6",
+				"sleight of hand": "+4",
+				"survival": "+7",
+				"persuasion": "+9"
+			},
+			"trait": [
+				{
+					"name": "Regeneración",
+					"entries": [
+						"Mientras tenga HP regenera 10 HP."
+					]
+				},
+				{
+					"name": "Action Surge (1 /rest)",
+					"entries": [
+						"Gana una acción extra."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Kanabo",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) bludgeoning damage. El objetivo hace una salvación de Constitución CD 14 o queda dazed. El resto de criaturas, a excepción del objetivo, pueden atacar al oni con ventaja hasta el inicio de su próximo turno."
+					]
+				},
+				{
+					"name": "Guardia",
+					"entries": [
+						"+1ca la CA y ventaja en ataques de oportunidad hasta el inicio de su siguiente turno. Si nadie le agrede y no ataca a nadie, tiene ventaja en el próximo ataque."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"bonus": [
+				{
+					"name": "Second Wind (1 /rest)",
+					"entries": [
+						"Se cura {@dice 1d10 + 7}."
+					]
+				},
+				{
+					"name": "Espíritu de Lucha",
+					"entries": [
+						"Se da ventaja a todos los ataques y gana 5 HPT."
+					]
+				}
+			],
+			"actionHeader": [
+				"Ejerce la violencia 2 veces."
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell hunter sense|GHLoE}",
+								"{@spell mending}",
+								"{@spell resistance}"
+							]
+						}
+					},
+					"daily": {
+						"4e": [
+							"{@spell cauterizar|GdR}",
+							"{@spell identify}",
+							"{@spell snare|XGE}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": "https://cdn.discordapp.com/attachments/1159115238822649967/1203032537102950502/token_3_1.png?ex=65eb4ddc&is=65d8d8dc&hm=1743f779ca5c01b533f31953e49e99f5c35f05527de658d5c77afd4a36796260&"
+			},
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://cdn.discordapp.com/attachments/1154736682281750559/1203099279007293530/8630d36fe55fe0631b7c236c5a935628.png?ex=65eb8c04&is=65d91704&hm=95f3c22a112647dfd88570029ee05ccfc00680a00f8f978a467db8f9cec524de&"
+						}
+					}
+				]
+			},
+			"damageTags": [
+				"B"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			]
+		},
+		{
+			"name": "Oge",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "giant",
+				"tags": [
+					"oni"
+				]
+			},
+			"source": "eAdlO",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item +1 studded leather armor}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "7d10 + 21",
+				"average": 67
+			},
+			"speed": {
+				"walk": 35,
+				"climb": 35,
+				"swim": 35
+			},
+			"str": 18,
+			"dex": 16,
+			"con": 16,
+			"int": 10,
+			"wis": 14,
+			"cha": 10,
+			"passive": 15,
+			"cr": "5",
+			"level": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Común",
+				"Mulanita",
+				"Gigante y Orco"
+			],
+			"save": {
+				"str": "+7",
+				"dex": "+6"
+			},
+			"skill": {
+				"acrobatics": "+9",
+				"athletics": "+7",
+				"intimidation": "+3",
+				"perception": "+5",
+				"stealth": "+9",
+				"survival": "+5"
+			},
+			"actionHeader": [
+				"Ejerce la violencia 2 veces, pero puede atacar una tercera vez a una criatura que no haya atacado aún."
+			],
+			"action": [
+				{
+					"name": "Kanabo",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d12 + 4}) bludgeoning damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"trait": [
+				{
+					"name": "Cataplasmas (2 /rest)",
+					"entries": [
+						"Puede pasar 1 minuto poniéndole una cataplasma a una criatura voluntaria y le cura {@dice 4d6}."
+					]
+				},
+				{
+					"name": "Superioridad Marcial (5 /rest)",
+					"entries": [
+						"Puede gastar dados de superioridad en los siguientes usos:",
+						"- Trip Attack. Añades {@dice 1d8} al daño y salva Fuerza CD 15 o lo tumbas.",
+						"- Brace. Si se le acercan, ataca y añade {@dice 1d8} al daño.",
+						"- Pushing Attack. Añades {@dice 1d8} al daño y salva Fuerza CD 15 o lo empujas 15 pies.",
+						"- Sweeping Attack. Elige una criatura a 5 pies del objetivo del ataque y de él. Si el ataque a ese objetivo hubiera dado al de al lado, este recibe {@dice 1d8} de daño."
+					]
+				},
+				{
+					"name": "Ágil",
+					"entries": [
+						"Los ataques de oportunidad contra él van con desventaja."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Brace",
+					"entries": [
+						"Si se le acercan a 5 pies, le ataca y añade {@dice 1d8} al daño.",
+						"Gasta dado de superioridad."
+					]
+				}
+			],
+			"environment": [
+				"forest",
+				"mountain"
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": "https://cdn.discordapp.com/attachments/1159115238822649967/1204919329544478770/token_3_2.png?ex=65f22b12&is=65dfb612&hm=b7152d9cb45748aeb5e3531ff8b2f812551ee7c7e0faa066583ee9f62aaa2b3b&"
+			},
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://cdn.discordapp.com/attachments/1154736942819319848/1204525336717565972/8e09b1ba5826a35f450406a936bf63e9.png?ex=65f0bc23&is=65de4723&hm=70c92d4f57454e1f743c149c77472548c6b4e45b6df94018f757b65b6d058530&"
+						}
+					}
+				]
+			},
+			"damageTags": [
+				"B"
+			]
+		},
+		{
+			"name": "Samurais Goliat",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "giant",
+				"tags": [
+					"goliath"
+				]
+			},
+			"source": "eAdlO",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d10 + 18",
+				"average": 51
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 10,
+			"passive": 10,
+			"cr": "5",
+			"skill": {
+				"athletics": "+7",
+				"intimidation": "+6",
+				"perception": "+4"
+			},
+			"save": {
+				"str": "+7",
+				"dex": "+3"
+			},
+			"reaction": [
+				{
+					"name": "Dureza (1 /rest)",
+					"entries": [
+						"Reduce el daño de un ataque en {@dice 1d12 + 3}"
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Construcción poderosa",
+					"entries": [
+						"Cuenta como una talla más y resiste mejor las alturas y el clima frío."
+					]
+				},
+				{
+					"name": "Ataque Fuerte (con Kanabō)",
+					"entries": [
+						"Al acertar un ataque, puede entumecer al rival. Este debe salvar Constitución CD 15 o quedar desorientado.",
+						"Al acerlo, el resto de criaturas le pegan con ventaja hasta el inicio de su próximo turno."
+					]
+				},
+				{
+					"name": "Atacante contundente",
+					"entries": [
+						"Una vez por ataque, rerolea 1 y 2."
+					]
+				},
+				{
+					"name": "Action Surge (1 /rest)",
+					"entries": [
+						"Ese turno tiene una acción extra."
+					]
+				}
+			],
+			"languages": [
+				"Común (Shou) y Gigante"
+			],
+			"resist": [
+				"cold"
+			],
+			"action": [
+				{
+					"name": "Kanabō",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d12 + 4}) bludgeoning damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"bonus": [
+				{
+					"name": "Second Wind (1 /rest)",
+					"entries": [
+						"Recupera {@dice 1d10 + 6}"
+					]
+				}
+			],
+			"damageTags": [
+				"B"
+			]
+		},
+		{
+			"name": "Tanato Gami",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "giant",
+				"tags": [
+					"oni"
+				]
+			},
+			"source": "eAdlO",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item splint armor|phb}",
+						"Guard {@item Shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "15d8 + 45",
+				"average": 142
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 16,
+			"int": 12,
+			"wis": 18,
+			"cha": 10,
+			"passive": 17,
+			"cr": "8",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Común (Mulanita)",
+				"Gigante y Enano"
+			],
+			"save": {
+				"wis": "+7",
+				"cha": "+3"
+			},
+			"skill": {
+				"athletics": "+7",
+				"acrobatics": "+4",
+				"intimidation": "+6",
+				"perception": "+7"
+			},
+			"action": [
+				{
+					"name": "Tanto",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d6 + 4}) slashing damage, plus 4 ({@damage 1d8}) radiant damage."
+					]
+				},
+				{
+					"name": "Guardia",
+					"entries": [
+						"Gana un +1 a la CA y ventaja en ataques de oportunidad.",
+						"Si no ataca ni recibe ataques, ventaja en el siguiente ataque."
+					]
+				},
+				{
+					"name": "Visión Etérea (2 /rest)",
+					"entries": [
+						"Durante diez minutos, ve criaturas en el plano etéreo o invisibles"
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Construcción Poderosa",
+					"entries": [
+						"Cuenta como un tamaño más para hacer cosas."
+					]
+				},
+				{
+					"name": "Regeneración",
+					"entries": [
+						"Al principio del turno regenera 10 HP a menos que esté a 0."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"actionHeader": [
+				"Ejerce la violencia una vez normal o dos con desventaja"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell Adivinación Menor|GdR|adivinacion menor}",
+								"{@spell mending}",
+								"{@spell resistance}",
+								"{@spell toll the dead|XGE}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell dissonant whispers}",
+								"{@spell inflict wounds}",
+								"{@spell silvery barbs|SCC}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell blindness/deafness}",
+								"{@spell hold person}",
+								"{@spell invisibility}",
+								"{@spell phantasmal force}",
+								"{@spell spiritual weapon}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell bestow curse}",
+								"{@spell blink}",
+								"{@spell fear}",
+								"{@spell spirit guardians}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell confusion}",
+								"{@spell guardian of faith}",
+								"{@spell Mordenkainen's faithful hound}"
+							],
+							"slots": 2
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"reaction": [
+				{
+					"name": "Evsión Etérea (3 /day)",
+					"entries": [
+						"Al recibir daño, viaja al plano etéreo y lo evita. Vuelve al final de su próximo turno."
+					]
+				}
+			],
+			"environment": [
+				"forest",
+				"mountain"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://cdn.discordapp.com/attachments/1154736682281750559/1208154009886785596/e2ccc83bf3a8f7589f51b86765ddee18.png?ex=65eb7a9a&is=65d9059a&hm=bfaf6a6d78081c00365dd92cff8de6c78a0304548118b53aed2e336902f348f0&"
+						}
+					}
+				]
+			},
+			"tokenHref": {
+				"type": "external",
+				"url": "https://cdn.discordapp.com/attachments/1159115238822649967/1202359876265709619/token_1_22.png?ex=65f215e5&is=65dfa0e5&hm=d4d4de40645d53c632f0e5c9bee8478d4b4f573e26e1128a996894daafc524d0&"
+			},
+			"damageTags": [
+				"R",
+				"S"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"P",
+				"R",
+				"Y"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Torduk",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "dragonborn",
+						"prefix": "silver"
+					}
+				]
+			},
+			"source": "eAdlO",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"Kimono Grueso"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d8 + 24",
+				"average": 51
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 16,
+			"int": 12,
+			"wis": 10,
+			"cha": 14,
+			"passive": 15,
+			"cr": "5",
+			"level": 6,
+			"action": [
+				{
+					"name": "Espada Larga",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) slashing damage, or 7 ({@damage 1d10 + 2}) slashing damage if used with both hands."
+					]
+				},
+				{
+					"name": "Aliento de Hielo (3 /day)",
+					"entries": [
+						"Cono de 15 pies, salvación de Dex CD 14 o reciben {@dice 2d10} de daño por frío."
+					]
+				},
+				{
+					"name": "Aliento de Plata (1 /day)",
+					"entries": [
+						"Cono de 15 pies, salvación CD 14:",
+						"- Constitución o quedar incapacitado hasta el inicio del próximo turno de Torduk.",
+						"- Fuerza o ser empujado 20 pies y caer al suelo."
+					]
+				},
+				{
+					"name": "Rugido de Guerra",
+					"entries": [
+						"Ruge poderosamente hasta el final de su próximo turno, a menos que sea silenciado, incapacitado o quiera acabarlo.",
+						"Mientras dura, toda criatura aliada a 30 pies tiene ventaja contra miedo y charm."
+					]
+				},
+				{
+					"name": "Canalizar Alma",
+					"entries": [
+						"Gasta un alma que tenga guardada para adoptar la forma de la criatura mediante un disfraz mágico que dura una hora. Aprende todo lo que la criatura estuviera dispuesta a contar a un amigo.",
+						"Puede ser descubierto con un Insight vs Engaño (suma un total de 10)"
+					]
+				}
+			],
+			"resist": [
+				"cold"
+			],
+			"languages": [
+				"Común",
+				"Dracónido",
+				"Shou y Gigante"
+			],
+			"save": {
+				"dex": "+4",
+				"cha": "+5"
+			},
+			"skill": {
+				"intimidation": "+8",
+				"history": "+4",
+				"persuasion": "+5",
+				"deception": "+5",
+				"stealth": "+7"
+			},
+			"trait": [
+				{
+					"name": "Cuchilla Psíquica (2 /rest)",
+					"entries": [
+						"Una vez por ronda, en tu turno, puede añadir {@dice 3d6} al daño."
+					]
+				},
+				{
+					"name": "Palabras de Terror (1 /rest)",
+					"entries": [
+						"Cuando hable con una criatura durante un minuto, puede obligarla sutilmente a salvar Wisdom CD 13 o asustarla durante 1 hora o hasta que el objetivo o un aliado suyo sean dañados o atacados."
+					]
+				},
+				{
+					"name": "Obserbant",
+					"entries": [
+						"Sabe leer los labios.",
+						"Su investigación pasiva es de 16."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Manto de Susurros (1 /rest)",
+					"entries": [
+						"Cuando una criatura muere a 60 pies, puede capturar su alma y guardarla hasta el próximo descanso largo."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Inspiración de Bardo",
+					"entries": [
+						"Tiene 2 y gastan el uso de la cuchilla psíquica.",
+						"Son {@dice d8}."
+					]
+				},
+				{
+					"name": "Finalizar Canalización",
+					"entries": [
+						"Se quita el disfraz ganado mediante su Manto de Susurros."
+					]
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+5 to hit, CD 13",
+						"2 dados al cantrip"
+					],
+					"footerEntries": [
+						"*Rituales"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell minor illusion}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell color spray}",
+								"{@spell comprehend languages}*",
+								"{@spell dissonant whispers}",
+								"{@spell distort value|AI}",
+								"{@spell identify}*"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell detect thoughts}",
+								"{@spell knock}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell sending}",
+								"{@spell speak with dead}"
+							],
+							"slots": 3
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://cdn.discordapp.com/attachments/1154736682281750559/1172651143101427814/c0026c92a0ce18acd1c3a69a25b6bca2.png?ex=65eb84fb&is=65d90ffb&hm=363e5b050eca0394ed0b55ce961de574cdc4796267f0fb8f51993d95a64c673a&"
+						}
+					}
+				]
+			},
+			"tokenHref": {
+				"type": "external",
+				"url": "https://cdn.discordapp.com/attachments/1159115238822649967/1159115698040209418/token_1_5.png?ex=65f1a61d&is=65df311d&hm=8b6fc2b1ce1b0ebf143421fe8f77a1b9aa7e91f5c149d5efe50684fadc27ebee&"
+			},
+			"damageTags": [
+				"S"
+			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Towashi",
+			"source": "eAdlO",
+			"size": [
+				"L"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "24d10 + 72",
+				"average": 204
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 30
+			},
+			"str": 20,
+			"dex": 14,
+			"con": 16,
+			"int": 14,
+			"wis": 12,
+			"cha": 16,
+			"save": {
+				"dex": "+6",
+				"con": "+7",
+				"wis": "+5",
+				"cha": "+7"
+			},
+			"skill": {
+				"arcana": "+6",
+				"deception": "+11",
+				"perception": "+9"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 19,
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "11",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"The oni's innate spellcasting ability is Charisma (spell save {@dc 13}). The oni can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell darkness}",
+						"{@spell invisibility}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell cause fear|XGE}",
+							"{@spell contagion}",
+							"{@spell stinking cloud}",
+							"{@spell Tasha's hideous laughter}"
+						]
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"The oni regains 4 hit points at the start of its turn if it has at least 1 hit point."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 5}) slashing damage."
+					]
+				},
+				{
+					"name": "Mandoble de Necrosis",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 10 ft., one target. {@h}12 ({@damage 2d6 + 5}) slashing damage, plus 3 necrotic damage."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Weapons",
+				"Regeneration"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Oni",
+				"source": "MM"
+			},
+			"resist": [
+				"necrotic"
+			],
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"actionHeader": [
+				"Ejerce la violencia 2 veces."
+			],
+			"legendaryActions": 2,
+			"legendaryHeader": [
+				"Tiene 2 acciones legendarias"
+			],
+			"legendary": [
+				{
+					"name": "Mordisco",
+					"entries": [
+						"El dragón de su brazo muerde a una criatura a 15 ft. {@hit 7} to hit, {@dice 2d6} de daño psíquico."
+					]
+				},
+				{
+					"name": "Conjuro",
+					"entries": [
+						"Lanza uno de sus conjuros."
+					]
+				},
+				{
+					"name": "Aliento de dragón (cuesta 2)",
+					"entries": [
+						"Cono de 15ft. Salvan inteligencia CD 15 para recibir {@dice 3d10} o la mitad de daño psíquico."
+					]
+				}
+			],
+			"environment": [
+				"mountain"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Akashi",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "giant",
+				"tags": [
+					"oni"
+				]
+			},
+			"source": "eAdlO",
+			"alignment": [
+				"L",
+				"G",
+				"NY",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "11d8 + 33",
+				"average": 82
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 12,
+			"passive": 11,
+			"cr": "5",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Mulanita y Gigante"
+			],
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Mientras le queden HP, regenera 10 al principio de cada turno"
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"save": {
+				"str": "+7",
+				"con": "+6"
+			},
+			"actionHeader": [
+				"Ejerce la violencia dos veces."
+			],
+			"action": [
+				{
+					"name": "Kanabo",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d12 + 4}) bludgeoning damage.  El objetivo hace una salvación de Constitución CD 15 o queda dazed. El resto de criaturas, a excepción del objetivo, pueden atacar al oni con ventaja hasta el inicio de su próximo turno."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"environment": [
+				"mountain",
+				"urban"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://cdn.discordapp.com/attachments/1159115238822649967/1203030522956222504/c91df65f64d3575a720a8489ef8563d4.png?ex=65eb4bfb&is=65d8d6fb&hm=121b0c774fa5dec954837753b46751298ef81be9e9c8f7831e028c548697ee08&"
+						}
+					}
+				]
+			},
+			"tokenHref": {
+				"type": "external",
+				"url": "https://cdn.discordapp.com/attachments/1159115238822649967/1203030953166114906/token_1_1.png?ex=65eb4c62&is=65d8d762&hm=8e8c70c43095ef62ab679a08471729422bd332e4f0971dac290508179421e013&"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"daily": {
+						"1e": [
+							"{@spell charm person}",
+							"{@spell gaseous form}",
+							"{@spell invisibility}",
+							"{@spell sleep}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"damageTags": [
+				"B"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Asharitato",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "fey",
+				"tags": [
+					"Yokai"
+				]
+			},
+			"source": "eAdlO",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@spell Mage Armor}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "14d8 - 14",
+				"average": 49
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 4,
+			"dex": 18,
+			"con": 8,
+			"int": 24,
+			"wis": 22,
+			"cha": 18,
+			"passive": 16,
+			"cr": "6",
+			"languages": [
+				"Común (Mulanita)",
+				"Gigante",
+				"Celestial",
+				"dracónido"
+			],
+			"save": {
+				"int": "+11",
+				"wis": "+10"
+			},
+			"skill": {
+				"acrobatics": "+8",
+				"history": "+11",
+				"investigation": "+15",
+				"religion": "+15"
+			},
+			"vulnerable": [
+				"acid",
+				"fire"
+			],
+			"resist": [
+				"bludgeoning",
+				"psychic"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"petrified",
+				"prone"
+			],
+			"trait": [
+				{
+					"name": "Conocimiento Compuesto",
+					"entries": [
+						"Es capaz de añadir libros y pergamino a su cuerpo y aprender todo lo que pone al instante. Puede memorizar cualquier extracto de cualquier libro absorbido de esta forma.",
+						"Los idiomas dependen de los textos. Solo puede hablar usando palabras que hayan sido escritas en él. Su expertise en Historia puede variar en función de la temática de sus escritos."
+					]
+				},
+				{
+					"name": "Cúmulo de papel",
+					"entries": [
+						"Es susceptible a arder o deshacerse como papel. Tiene desventaja en salvaciones para evitar daños de fuego o ácido. Estar en contacto con una superficie líquida le hace {@dice 1d6} de daño por ácido. Además, falla automáticamente cualquier salvación para evitar ser empujado o arrastrado por fuertes corrientes de aire.",
+						"Por contra, puede pasar por espacios estrechos por los que cabría un libro, puede hacer checks para grapplear a destreza y puede liberarse de grapple con la bonus sin necesidad de hacer tiradas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Corte de papel",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) slashing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"fluff": {
+				"entries": [
+					"Asharitato es un Kyōrinrin que actúa como consejero principal del Nurarihyon de la Montaña de los Espíritus. Todo libro que pasa por el templo acaba en él y lo absorbe. Gracias a esto es capaz de lanzar conjuros de alto nivel que usa, principalmente, para huir con toda la información que posee."
+				]
+			},
+			"level": 9,
+			"pbNote": "+4",
+			"languageTags": [
+				"CE"
+			],
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"+11 to hit, CD 19",
+						"2 dados al cantrip"
+					],
+					"daily": {
+						"1": [
+							"{@spell sending}"
+						],
+						"2": [
+							"{@spell misty step}"
+						],
+						"3": [
+							"{@spell mage armor}"
+						]
+					},
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell Adivinación Menor|GdR|adivinacion menor}",
+								"{@spell graffiti arcano|GdR}",
+								"{@spell impulso|GdR}",
+								"{@spell message}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell absorb elements|XGE}",
+								"{@spell comprehend languages}",
+								"{@spell detect magic}",
+								"{@spell distort value|AI}",
+								"{@spell identify}",
+								"{@spell fog cloud|PHB|scroll cloud}",
+								"{@spell Vértigo|GPNM|vertigo}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell cloud of daggers|PHB|cloud of papers}",
+								"{@spell invisibility}",
+								"{@spell locate object}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell clairvoyance}",
+								"{@spell wall of sand|XGE|wall of papers}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell arcane eye}",
+								"{@spell dimension door}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell passwall}",
+								"{@spell reflejos predatorios|GPNM}"
+							],
+							"slots": 1
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"environment": [
+				"mountain"
+			],
+			"isNpc": true,
+			"damageTags": [
+				"S"
+			],
+			"damageTagsSpell": [
+				"O",
+				"S"
+			]
+		},
+		{
+			"name": "Egoshi",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "giant",
+				"tags": [
+					"oni"
+				]
+			},
+			"source": "eAdlO",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "17d12 + 34",
+				"average": 144
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30,
+				"fly": 30
+			},
+			"str": 12,
+			"dex": 12,
+			"con": 14,
+			"int": 12,
+			"wis": 18,
+			"cha": 14,
+			"passive": 14,
+			"cr": "11",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Mulanita",
+				"Gigante y Abisal"
+			],
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Mientras le queden HP, regenera 10 al principio de cada turno"
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"fluff": {
+				"entries": [
+					"1. La criatura es víctima de una profunda depresión. Durante una hora falla las tiradas de habilidad de Carisma y tiene desventaja en las salvaciones de Carisma.",
+					".",
+					"2. La criatura se ve afectada por el conjuro de Risa Contagiosa de Tasha durante 10 minutos.",
+					".",
+					"3. Una rabia incontrolable invade al objetivo durante un minuto. La criatura afectada debe atacar a una criatura aleatoria a 5 pies de distancia. Si no tiene a nadie cerca, debe usar su movilidad para acercarse.",
+					".",
+					"4. La criatura se enamora profundamente de una criatura elegida por ti. Durante un minuto, el objetivo esta encantado por dicha criatura",
+					".",
+					"5. La criatura siente un hambre voraz. Si hay algo comestible en su línea de visión o en su equipamiento, la criatura dedicará todo su turno durante un minuto a ingerir dicha comida. Si no hay nada, deberá hacer otra salvación de sabiduría o intentar comerse a sí mismo. Si salva o es atacado, tratará de comerse viva a otra criatura.",
+					".",
+					"6. La criatura se duerme como si fuera víctima del conjuro Sleep, con una duración de 10 minutos.",
+					".",
+					"7. La criatura desarrolla un miedo irracional hacia algo de su rango de visión elegido por ti. Durante 1 minuto la criatura debe invertir cada turno en huir de su fuente de miedo lo más rápidamente posible. Si no puede huir, se cubrirá o esquivará.",
+					".",
+					"8. Ciegas o ensordeces a la criatura durante 1 minuto",
+					".",
+					"9. Puedes leer la mente de la criatura como con el conjuro Detectar Pensamientos",
+					".",
+					"10. La criatura recibe un punto de agotamiento durante un minuto. Una criatura puede recibir este mismo efecto más de una vez, pero todos desaparecen a la vez cuando pierda el último.",
+					".",
+					"11. La criatura queda paralizada durante un minuto.",
+					".",
+					"12. La criatura recibe un efecto de locura a largo plazo durante 10 minutos. La criatura no puede intentar salvar al final de cada turno."
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://cdn.discordapp.com/attachments/1154736942819319848/1203046925771739257/88e70fafc5ee065cba45c0bef721c0c2.png?ex=65eb5b42&is=65d8e642&hm=2adc9a7ee9ab9db0297b8f04cb3c6f29d8e1ba40f8f0544a76c268c115fd2198&"
+						}
+					}
+				]
+			},
+			"save": {
+				"int": "+4",
+				"wis": "+7"
+			},
+			"skill": {
+				"arcana": "+4",
+				"nature": "+5",
+				"medicine": "+7",
+				"religion": "+4",
+				"survival": "+7"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"+8 to hit, CD 16",
+						"2 dados al cantrip"
+					],
+					"will": [
+						"{@spell animate dead} (ritual only)"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance}",
+								"{@spell hunter sense|GHLoE}",
+								"{@spell primal savagery|XGE}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell dispersal|GdR}",
+								"{@spell earth tremor|XGE}",
+								"{@spell ice knife|XGE}",
+								"{@spell thunderwave}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell augury}",
+								"{@spell heat metal}",
+								"{@spell hold person}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell call lightning}",
+								"{@spell Ojo De Halcón|GdR|ojo de halcon}",
+								"{@spell sleet storm}"
+							],
+							"slots": 3
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"action": [
+				{
+					"name": "Primal Savagery",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}12 ({@damage 2d10 + 1}) acid damage."
+					]
+				},
+				{
+					"name": "Katana",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d8 + 1}) slashing damage."
+					]
+				},
+				{
+					"name": "Maldición de Oni (3 /day)",
+					"entries": [
+						"Un objetivo que el oni pueda ver salva Wisdom CD 15 o recibe uno de los siguientes efectos citados en información. El efecto dura un minuto, puede salvar al final de cada turno y no puede ser afectado por más de un efecto; a menos que se especifique lo contrario."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"bonus": [
+				{
+					"name": "Posición de Defensa (katana only)",
+					"entries": [
+						"+1 a la CA hasta el inicio de su próximo turno."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry (Katana only)",
+					"entries": [
+						"+3 a la CA para un ataque."
+					]
+				}
+			],
+			"actionTags": [
+				"Parry"
+			],
+			"environment": [
+				"forest",
+				"mountain"
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": "https://cdn.discordapp.com/attachments/1159115238822649967/1203047872665493584/token_2_2.png?ex=65eb5c24&is=65d8e724&hm=f4aad5dab14f48b7e46f544fe57c4fe50151173e16fdff160bf8fc639a56d07b&"
+			},
+			"damageTags": [
+				"A",
+				"S"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"L",
+				"P",
+				"T"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			]
+		}
+	],
+	"spell": [],
+	"legendaryGroup": []
+}

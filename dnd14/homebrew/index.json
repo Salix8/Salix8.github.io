@@ -6,6 +6,11 @@
 		"For example, add \"My Homebrew.json\" to the \"toImport\" array below, and have a valid JSON homebrew file in this (\"homebrew/\") directory."
 	],
 	"toImport": [
-		"Mycorrhiza.json"
+		"Mycorrhiza.json",
+		"Bugfolk Expansion Pack.json",
+		"Deepwing.json",
+		"el Acero de los Oni.json",
+		"Humanoid Adventurer's Guild.json",
+		"Bestiario de Armin.json"
 	]
 }

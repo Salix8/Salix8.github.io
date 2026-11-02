@@ -1,0 +1,188 @@
+{
+	"siteVersion": "1.215.1",
+	"_meta": {
+		"sources": [
+			{
+				"json": "CdU",
+				"abbreviation": "CdU",
+				"full": "Compendio del Underdark",
+				"version": "1.0.0",
+				"authors": [
+					"Mush"
+				],
+				"convertedBy": [
+					"Me"
+				],
+				"color": "3e016f",
+				"edition": "classic"
+			}
+		],
+		"dateAdded": 1775925364,
+		"dateLastModified": 1775925364,
+		"edition": "classic"
+	},
+	"monster": [
+		{
+			"name": "Deepwing",
+			"source": "CdU",
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "5d10 + 15",
+				"average": 49
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30,
+				"fly": 60,
+				"swim": 40
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 16,
+			"int": 19,
+			"wis": 17,
+			"cha": 10,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"Puede trepar por superficies verticales o boca abajo sin necesidad de checks."
+					]
+				},
+				{
+					"name": "Anfibio",
+					"entries": [
+						"Respira aire y agua."
+					]
+				},
+				{
+					"name": "Huesos de Mithril",
+					"entries": [
+						"Puede colarse por huecos aptos para una criatura mediana sin apretarse y tiene ventaja en checks y salvaciones para liberarse de {@condition grappled|PHB|grapples} y {@condition restrained|PHB|constricciones}."
+					]
+				},
+				{
+					"name": "Regeneración",
+					"entries": [
+						"Al principio de su turno regenera 10 HP si no recibió ese daño de tipo fuego o ácido desde el final de su turno anterior. Si empieza su turno a 0 HP y no recibió esos 10 de daño de esos tipos, está estable. Llegado este punto regenera 1 HP por minuto durante 1 hora."
+					]
+				},
+				{
+					"name": "Ojos de Xorn",
+					"entries": [
+						"Detecta metales preciosos, gemas, y monedas a 40 ft."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Mordisco ácido",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 3}) piercing damage. El objetivo recibe un -1 a la CA si llevaba armadura de metal o {@dice 1d8} de ácido extra si tenía natural armor. Una armadura solo puede recibir este bono 1 vez. A partir de ahí el objetivo también recibe {@dice 1d8} de ácido extra."
+					]
+				},
+				{
+					"name": "Garrazo",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}6 ({@damage 2d4 + 3}) piercing damage. La criatura salva Constitución CD 13 para quedar envenenado. Si saca 8 o menos, está inconsciente. Si salva es inmune a este veneno durante 24 horas."
+					]
+				},
+				{
+					"name": "Extraer Cerebro",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target that is {@condition incapacitated}. {@h}55 ({@damage 5d6}) piercing damage. Si el objetivo cae a 0 HP, muere instantáneamente y la quimera se come el cerebro."
+					]
+				},
+				{
+					"name": "Aliento de dragón (1 /rest)",
+					"entries": [
+						"Línea 30 ft por 5 ft de grosor. Salvación CD 14 para {@dice 11d8} de ácido o la mitad."
+					]
+				},
+				{
+					"name": "Ojo de Espectador (recarga 5-6)",
+					"entries": [
+						"Dispara un rayo a un objetivo a 90 ft. El objetivo salva Constitución CD 14 o queda {@condition paralyzed|PHB|paralizado} 1 minuto. El objetivo puede salvar al final de cada turno."
+					]
+				},
+				{
+					"name": "Camaleónico",
+					"entries": [
+						"La quimera puede cambiar el color y la textura de sus escamas y de sus otros apéndices para camuflarse con el entorno. Mientras no cambie de zona a una claramente distinta o caiga a 0 HP o esté {@condition incapacitated|PHB|incapacitado}, tiene ventaja a sigilo."
+					]
+				}
+			],
+			"traitTags": [
+				"Spider Climb"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"resist": [
+				"acid",
+				"fire"
+			],
+			"skill": {
+				"stealth": "+5",
+				"perception": "+6"
+			},
+			"pbNote": "+3",
+			"languages": [
+				"Entiende (Común, Abisal, Élfico y Silvano) Telepatía empática 120 ft"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"actionHeader": [
+				"Puede dar un mordisco de ácido y un garrazo, o dar dos garrazos."
+			],
+			"token": {
+				"name": "Spiderdragon",
+				"source": "VEoR"
+			},
+			"spellcasting": [
+				{
+					"name": "Psiónica",
+					"headerEntries": [
+						"CD 15"
+					],
+					"will": [
+						"{@spell detect thoughts}"
+					],
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"damageTags": [
+				"P"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		}
+	]
+}
