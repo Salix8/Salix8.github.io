@@ -208,7 +208,7 @@
     },
     {
       "name": "Juramentado", "shortName": "Juramentado", "source": "Himo", "page": "??", "className": "Guardián", "classSource": "Himo",
-      "subclassFeatures": ["Juramento Vinculante|Guardián|Himo|Juramentado|Himo|3|Himo", "Apoyo Resolutivo|Guardián|Himo|Juramentado|Himo|6|Himo", "Habla SIlenciosa|Guardián|Himo|Juramentado|Himo|13|Himo", "Sin importar las consecuencias|Guardián|Himo|Juramentado|Himo|18|Himo"]
+      "subclassFeatures": ["Juramento Vinculante|Guardián|Himo|Juramentado|Himo|3|Himo", "Apoyo Resolutivo|Guardián|Himo|Juramentado|Himo|6|Himo", "Habla Silenciosa|Guardián|Himo|Juramentado|Himo|13|Himo", "Sin importar las consecuencias|Guardián|Himo|Juramentado|Himo|18|Himo"]
     },
     {
       "name": "Warden", "shortName": "Warden", "source": "Himo", "page": "??", "className": "Guardián", "classSource": "Himo",
@@ -249,7 +249,7 @@
       "entries": ["A nivel 6 tu empeño por proteger a los demás inspira a tu compañero. Cada vez que tanques daño con tu inner fire, tu compañero recibe HPT iguales a la cantidad tanqueada."]
     },
     {
-      "name": "Habla SIlenciosa", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Juramentado", "subclassSource": "Himo", "level": 13,
+      "name": "Habla Silenciosa", "source": "Himo", "className": "Guardián", "classSource": "Himo", "subclassShortName": "Juramentado", "subclassSource": "Himo", "level": 13,
       "entries": ["A partir del nivel 13 tú y tu compañero podéis entenderos sin hablar. Mientras podáis veros, podéis comunicaros ideas simples mediantes gestos, expresiones o comportamientos, casi como si pensarais igual. Esta comunicación es imperceptible para cualquier otra criatura. Para poder ganar esta comunicación debes convivir con tu compañero actual durante al menos 7 días."]
     },
     {

@@ -6,6 +6,38 @@
   },
   "item": [
     {
+      "name": "Poción de Humo Azul",
+      "source": "Himo",
+      "page": "??",
+      "type": "P",
+      "rarity": "legendary",
+      "entries": [
+        "Cuando inhalas esta poción, ganas HPT iguales al número de dados de golpe totales de toda criatura en un área a 30 pies de ti, contándote a ti mismo. Estos HPT no se pierden por el tiempo ni por los descansos, pero si se adquieren nuevos HPT se pierden. No pueden curarse los HPT.",
+        "La poción es un vial lleno de un humo azul intenso que, de inhalarse, huele igual que el olor favorito del usuario."
+      ]
+    },
+    {
+      "name": "Bulbo Psiónico",
+      "source": "Himo",
+      "page": "??",
+      "wondrous": true,
+      "rarity": "uncommon",
+      "entries": [
+        "Bulbo de origen misterioso creado por los Mind Flayers. Puedes arrojarlo hasta a 30 ft o usarlo como proyectil para una onda. Si impacta a una criatura, hace 1 +stat de daño contundente. Una vez haya impactado contra el suelo o una criatura, hay un 50% de posibilidades de que todo objeto no equipado o asegurado a 20 ft del impacto se vea atraído al punto de impacto. Si era una criatura salva destreza CD 12 o recibe {@dice 1d4} por cada objeto diminuto que se vea atraído hacia el centro del área. Por cada tamaño que aumente el item, el nivel del dado sube en 1, y por cada tamaño que supere el tamaño mediano gana un dado extra. Si a juicio del DM había suficientes objetos como para inmovilizar al objetivo, está además {@condition restrained}. El objetivo u otra criatura puede salvar Fuerza para liberar al objetivo.",
+        "El campo gravitacional dura 1 minuto antes de que pierda efecto, pero puede romperse liberando a la criatura o arrancando un objeto de este de la misma forma en la que se liberaría a una criatura. La casilla en la que se acumulen los objetos cuenta como si estuviera ocupada para efectos de movilidad."
+      ]
+    },
+    {
+      "name": "Bulbo ácido",
+      "source": "Himo",
+      "page": "??",
+      "wondrous": true,
+      "rarity": "uncommon",
+      "entries": [
+        "Bulbo de origen misterioso creado por los Mind Flayers. Puedes arrojarlo a 30 ft o usarlo como proyectil de onda. Con un impacto el objetivo recibe {@dice 1d4}+stat de daño por ácido y su CA se reduce en -2. Además, se crea un charco de 10 ft de radio desde la zona de impacto. Cualquier criatura que reciba un ataque mientras pisa el charco recibe un -2 a la CA. La criatura que recibió el ataque de este u otro bulbo ácido no recibe la penalización extra del charco. La penalización del ataque dura hasta que se seca pasados 10 minutos o hasta que se limpia con agua abundante."
+      ]
+    },
+    {
       "name": "+1 All-Purpose Tool",
       "source": "TCE",
       "page": 119,

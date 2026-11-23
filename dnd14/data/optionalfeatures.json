@@ -4985,7 +4985,8 @@
 			],
 			"entries": [
 				"Aprendes el conjuro {@spell find familiar} y puedes lanzarlo una vez al día sin componentes. No cuenta para el máximo de conjuros que puedes tener preparados.",
-				"Cuando lances el conjuro, puedes elegir las formas originales o una de las siguientes: {@creature imp|MM}, {@creature pseudodragon|MM}, {@creature quasit|MM}, {@creature sprite|MM}, {@creature gazer|VGM}, Tsutsugamushi, {@creature abyssal chicken|BGDIA}, {@creature neogi hatchling|VGM}, {@creature tressym|BGDIA}, {@creature slaad tadpole|MM}, {@creature crawling claw|MM} o un mephit cualquiera, pero con la vida reducida a 17 si tenía más."
+				"Cuando lances el conjuro, puedes elegir las formas originales o una de las siguientes: {@creature imp|MM}, {@creature pseudodragon|MM}, {@creature quasit|MM}, {@creature sprite|MM}, {@creature gazer|VGM}, Tsutsugamushi, {@creature abyssal chicken|BGDIA}, {@creature neogi hatchling|VGM}, {@creature tressym|BGDIA}, {@creature slaad tadpole|MM}, {@creature crawling claw|MM} o un mephit cualquiera, pero con la vida reducida a 17 si tenía más.",
+				"Además, ignoras el tope de 100 ft para el vínculo telepático y para el cambio de sentidos con el familiar. Puedes quitarte un ataque para que lo haga tu familiar."
 			]
 		},
 		{
