@@ -22,7 +22,69 @@
 				}
 			],
 			"entries": [
-				"+2 Constitución +1 Carisma o Inteligencia",
+				{
+					"type": "entries",
+					"name": "Edad",
+					"entries": [
+						"Los enanos maduran al mismo ritmo que los humanos, pero se consideran jóvenes hasta los 50 años. Viven unos 350 años de media."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tamaño",
+					"entries": [
+						"Los enanos miden entre 4 y 5 pies y pesan unas 150 libras de media. Tu tamaño es Mediano."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Velocidad",
+					"entries": [
+						"Tu velocidad base a pie es de 25 pies. No se reduce por llevar armadura pesada."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Visión en la oscuridad",
+					"entries": [
+						"Puedes ver con luz tenue a 60 pies como si fuera luz brillante, y en la oscuridad como si fuera luz tenue. En la oscuridad solo distingues tonos de gris."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Resistencia enana",
+					"entries": [
+						"Tienes ventaja en las tiradas de salvación contra veneno y resistencia al daño por veneno."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Entrenamiento de combate enano",
+					"entries": [
+						"Eres competente con el {@item battleaxe|phb|hacha de batalla}, el {@item handaxe|phb|hacha de mano}, el {@item light hammer|phb|martillo ligero} y el {@item warhammer|phb|martillo de guerra}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Competencia con herramientas",
+					"entries": [
+						"Obtienes competencia con una de estas herramientas de artesano a tu elección: {@item Smith's tools|phb|herramientas de herrero}, {@item brewer's supplies|phb|suministros de cervecero} o {@item mason's tools|phb|herramientas de albañil}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Afinidad con la piedra",
+					"entries": [
+						"Cuando hagas una prueba de Inteligencia ({@skill History|PHB|Historia}) relacionada con el origen de un trabajo en piedra, se te considera competente en Historia y añades el doble de tu bonificador de competencia, en lugar del bonificador normal."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Idiomas",
+					"entries": [
+						"Puedes hablar, leer y escribir común y enano."
+					]
+				},
 				{
 					"type": "entries",
 					"name": "Titiritero",
@@ -30,6 +92,43 @@
 						"Aprendes el cantrip de Mending. Una vez al día puedes castear Animate Objects en un solo objeto inanimado tiny. Cuando castees el conjuro de esta forma, no necesita concentración y dura hasta el final de tu próximo descanso largo o hasta que el objeto haya ido reducido a 0 HP. Si tú quedas incapacitado mientras el conjuro está activo, el objeto queda incapacitado también hasta que tú pierdas dicho efecto."
 					]
 				}
+			],
+			"size": [
+				"M"
+			],
+			"speed": 25,
+			"age": {
+				"mature": 20,
+				"max": 350
+			},
+			"darkvision": 60,
+			"languageProficiencies": [
+				{
+					"common": true,
+					"dwarvish": true
+				}
+			],
+			"toolProficiencies": [
+				{
+					"choose": {
+						"from": [
+							"smith's tools",
+							"brewer's supplies",
+							"mason's tools"
+						]
+					}
+				}
+			],
+			"weaponProficiencies": [
+				{
+					"battleaxe|phb": true,
+					"handaxe|phb": true,
+					"light hammer|phb": true,
+					"warhammer|phb": true
+				}
+			],
+			"resist": [
+				"poison"
 			]
 		},
 		{

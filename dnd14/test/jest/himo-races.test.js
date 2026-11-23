@@ -56,3 +56,18 @@ describe("Himo race choices", () => {
 		expect(Renderer.get().render(table)).toContain("<table");
 	});
 });
+
+describe("Demeris dwarf traits", () => {
+	it("inherits the common 2014 dwarf mechanics and keeps its own abilities", () => {
+		const demeris = data.race.find(it => it.name === "Demeris (Enano)" && it.source === "Himo");
+		const dwarf = data.race.find(it => it.name === "Dwarf" && it.source === "PHB");
+		for (const key of ["size", "speed", "age", "darkvision", "languageProficiencies", "toolProficiencies", "weaponProficiencies", "resist"]) {
+			expect(demeris[key]).toEqual(dwarf[key]);
+		}
+		expect(demeris.ability).toEqual([{con: 2, choose: {from: ["cha", "int"], amount: 1}}]);
+		expect(demeris.entries.map(it => it.name)).toEqual([
+			"Edad", "Tamaño", "Velocidad", "Visión en la oscuridad", "Resistencia enana",
+			"Entrenamiento de combate enano", "Competencia con herramientas", "Afinidad con la piedra", "Idiomas", "Titiritero",
+		]);
+	});
+});
