@@ -52,13 +52,6 @@
 			],
 			"entries": [
 				"Como acción das ventaja a todas las criaturas que puedan verte y oirte para atacar a una criatura que puedas ver a 60 ft hasta el inicio de tu próximo turno.",
-				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
-				},
 				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
 			]
 		},
@@ -140,14 +133,7 @@
 				}
 			],
 			"entries": [
-				"Puedes convencer a una persona de hacer una acción mediante verborrea. Cuando hables al menos 1 minuto con una criatura puedes hacer un check enfrentado de {@skill Persuasion} vs {@skill Insight}. Si fallas, la criatura no se da cuenta, pero si aciertas, logras que una criatura con inteligencia 6 o superior realice una acción o siga un curso de acción simple y específico. La criatura creerá que lo hace por voluntad propia.",
-				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
-				},
+				"Puedes convencer a una persona de hacer una acción mediante verborrea. Cuando hables al menos 1 minuto con una criatura puedes hacer un check enfrentado de {@skill Persuasion} vs {@skill Insight}. Si fallas, la criatura no se da cuenta, pero si aciertas, logras que una criatura con inteligencia 6 o superior realice una acción o siga un curso de acción simple y específico. El curso de acción debe proyectarse a menos de 1 hora desde que se usa la broma y poder efectuarse al completo en menos de 10 minutos. Si el curso de acción dura más de una hora, el objetivo se da cuenta de que en realidad no era eso lo que quería hacer, y si completar la acción cuesta más de 10 minutos desde que empieza a hacerlo, empieza a cuestionarse lo que está haciendo y deja la acción a medias. La criatura creerá que lo hace por voluntad propia.",
 				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
 			]
 		},
@@ -294,13 +280,6 @@
 			],
 			"entries": [
 				"Con tu acción puedes teletransportarte a 5 ft de una criatura que puedas ver pero que no te esté mirando directamente. No necesitas estar oculto para usar este rasgo. Si te teletransportas a la espalda del objetivo puedes hacer un check de {@skill Stealth} contra su {@skill Perception} pasiva. Con un éxito estás oculto para esa criatura.",
-				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
-				},
 				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
 			]
 		},
@@ -934,15 +913,20 @@
 			"featureType": [
 				"BRM"
 			],
-			"entries": [
-				"Un objeto de hasta 1 metro cúbico desaparece mágicamente en alguna parte de tu cuerpo, incluso si no cabe de normal. Durante 1 hora puedes sacar y guardar ese objeto con la bonus y nadie, excepto tú, puede sacarlo de ahí. Tampoco cuenta para el peso que puedas cargar. Pasado el tiempo, si no sacaste el objeto, se cae cómicamente de tu bolsillo.",
+			"prerequisite": [
 				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
 				}
+			],
+			"entries": [
+				"Un objeto de hasta 1 metro cúbico desaparece mágicamente en alguna parte de tu cuerpo, incluso si no cabe de normal. Durante 1 hora puedes sacar y guardar ese objeto con la bonus y nadie, excepto tú, puede sacarlo de ahí. Tampoco cuenta para el peso que puedas cargar. Pasado el tiempo, si no sacaste el objeto, se cae cómicamente de tu bolsillo."
 			]
 		},
 		{
@@ -1513,14 +1497,7 @@
 				}
 			],
 			"entries": [
-				"Cuando hagas un ataque apta para el rasgo de experto e impactes, puedes gastar un uso de tus bromas para meter sangrado. La CD es tu CD de Payaso y el daño es un dado igual al del arma.",
-				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
-				},
+				"Cuando hagas un ataque apto para el rasgo de experto e impactes, puedes gastar un uso de tus bromas para meter sangrado. La CD es tu CD de Payaso y el daño es un dado igual al del arma. Una misma criatura puede recibir más de una vez esta broma, incluso si sigue activa.",
 				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
 			]
 		},
@@ -1650,15 +1627,20 @@
 			"featureType": [
 				"BRM"
 			],
-			"entries": [
-				"Lanzas un chorro de agua a la cara de una criatura. Haz un spell attack a una criatura a 15 ft de ti o menos. Con un éxito, la criatura está {@condition Dazed|Himo}, pudiendo salvar inteligencia al final de cada turno.",
+			"prerequisite": [
 				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
 				}
+			],
+			"entries": [
+				"Lanzas un chorro de agua a la cara de una criatura. Haz un spell attack a una criatura a 15 ft de ti o menos. Con un éxito, la criatura está {@condition Dazed|Himo}, pudiendo salvar inteligencia al final de cada turno."
 			]
 		},
 		{
@@ -1934,15 +1916,20 @@
 			"featureType": [
 				"BRM"
 			],
-			"entries": [
-				"Como reacción, cuando una criatura vaya a castear un conjuro de lv 1 o superior, puedes hacer una tirada de spellcasting enfrentada contra el spellcasting del objetivo. Tú añades el BC dos veces a esta tirada, y el objetivo añade el lv de conjuro. Si tú ganas, en vez del conjuro, el objetivo lanza una nube de confeti con las mismas áreas y rango que el conjuro original, pero no afecta negativamente a nadie. El spell slot se pierde igualmente.",
+			"prerequisite": [
 				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
 				}
+			],
+			"entries": [
+				"Como reacción, cuando una criatura vaya a castear un conjuro de lv 1 o superior, puedes hacer una tirada de spellcasting enfrentada contra el spellcasting del objetivo. Tú añades el BC dos veces a esta tirada, y el objetivo añade el lv de conjuro. Si tú ganas, en vez del conjuro, el objetivo lanza una nube de confeti con las mismas áreas y rango que el conjuro original, pero no afecta negativamente a nadie. El spell slot se pierde igualmente."
 			]
 		},
 		{
@@ -2045,15 +2032,20 @@
 			"featureType": [
 				"BRM"
 			],
-			"entries": [
-				"Puedes usar 10 minutos para crear una trampa mágica en una ventana, puerta o pasaje. Cuando una criatura que no hayas designado antes pase por el pasaje, salva wisdom. Con un fallo, un cubo mágico cae en su cabeza, cegándole durante 1 minuto. El objetivo debe usar su acción en salvar fuerza y quitarse el cubo.",
+			"prerequisite": [
 				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
 				}
+			],
+			"entries": [
+				"Puedes usar 10 minutos para crear una trampa mágica en una ventana, puerta o pasaje. Cuando una criatura que no hayas designado antes pase por el pasaje, salva wisdom. Con un fallo, un cubo mágico cae en su cabeza, cegándole durante 1 minuto. El objetivo debe usar su acción en salvar fuerza y quitarse el cubo. Si el objetivo tuvo éxito en la salvación de wisdom, la trampa no salta, por lo que sigue activa."
 			]
 		},
 		{
@@ -2964,15 +2956,20 @@
 			"featureType": [
 				"BRM"
 			],
-			"entries": [
-				"Como reacción al recibir un ataque, impones desventaja a la tirada. Con un fallo el ataque ahora targetea a una criatura de tu elección a 5 ft de ti que siga en el rango del arma.",
+			"prerequisite": [
 				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
 				}
+			],
+			"entries": [
+				"Como reacción al recibir un ataque, impones desventaja a la tirada. Con un fallo el ataque ahora targetea a una criatura de tu elección a 5 ft de ti que siga en el rango del arma."
 			]
 		},
 		{
@@ -3955,15 +3952,20 @@
 			"featureType": [
 				"BRM"
 			],
-			"entries": [
-				"Como acción elige una criatura a 5 ft de ti y oblígale a hacer una tirada enfrentada de Carisma vs fuerza o destreza. Si tú ganas, la criatura queda encerrada en tu bag of holding. La criatura puede usar su acción para hacer una salvación de Fuerza o Destreza sobre tu CD. Con un éxito, sale de la bag of holding {@condition Prone|PHB} a 5 ft de ti.",
+			"prerequisite": [
 				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
 				}
+			],
+			"entries": [
+				"Como acción elige una criatura a 5 ft de ti y oblígale a hacer una tirada enfrentada de Carisma vs fuerza o destreza. Si tú ganas, la criatura queda encerrada en tu bag of holding. La criatura puede usar su acción para hacer una salvación de Fuerza o Destreza sobre tu CD. Con un éxito, sale de la bag of holding {@condition Prone|PHB} a 5 ft de ti."
 			]
 		},
 		{
@@ -4431,14 +4433,7 @@
 				}
 			],
 			"entries": [
-				"Como acción empiezas un espectáculo de malabares con el que pretendes ofrecer apoyo en combate y que puede formar parte del rasgo *Miradas a Mi*. Escoge un número de objetos de tu inventario igual a tu BC. Si los objetos son armas ligeras/arrojadizas, proyectiles o consumibles, los tienes todos equipados. Mientras duren los malabares debes concentrarte como con un conjuro. En tu turno puedes usar tu acción para añadir dos objetos más a tus manos, y con la bonus puedes decidir lanzar cualquier número de ataques con las armas arrojadizas equipadas y/o lanzar pociones. Si el uso de la poción era arrojadizo, puedes hacerlo. Si no, puedes pasarlo a un aliado que puedas ver a 30 ft y que tenga una mano libre. Este puede usar su reacción para cogerlo al vuelo y usarlo. Si dejas de tener objetos en las manos y no tienes tu acción para reponerlos, la broma acaba. Si caes {@condition Prone|PHB} tu {@status Concentration|PHB} se rompe, y si eres empujado la CD de tu {@status Concentration|PHB} es igual al número de pies recorridos.",
-				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
-				},
+				"Como acción empiezas un espectáculo de malabares con el que pretendes ofrecer apoyo en combate y que puede formar parte del rasgo {@i Miradas a Mi}. Escoge un número de objetos de tu inventario igual a tu BC. Si los objetos son armas ligeras/arrojadizas, proyectiles o consumibles, los tienes todos equipados. Mientras duren los malabares debes concentrarte como con un conjuro. En tu turno puedes usar tu acción para añadir dos objetos más a tus manos, y con la bonus puedes decidir lanzar cualquier número de ataques con las armas arrojadizas equipadas y/o lanzar pociones. Si el uso de la poción era arrojadizo, puedes hacerlo. Si no, puedes pasarlo a un aliado que puedas ver a 30 ft y que tenga una mano libre. Este puede usar su reacción para cogerlo al vuelo y usarlo. Si dejas de tener objetos en las manos y no tienes tu acción para reponerlos, la broma acaba. Si caes {@condition Prone|PHB} tu {@status Concentration|PHB} se rompe, y si eres empujado la CD de tu {@status Concentration|PHB} es igual al número de pies recorridos.",
 				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
 			]
 		},
@@ -4574,13 +4569,6 @@
 			],
 			"entries": [
 				"Nublas los sentidos de una criatura que puedas ver a 60 ft. Dicha criatura salva Carisma o te ve reflejado en cada otra criatura que pueda ver. Al inicio de su turno usa toda la movilidad necesaria para acercarse a una criatura aleatoria (puede decidirse al azar o puede elegir el DM). La criatura provoca ataques de oportunidad. Una vez llegue ataca a dicha criatura 1 vez y la ilusión acaba. Si la criatura aún tiene movilidad o ataques, aún puede usarlos. Las criaturas con blindsight o trueshight sí distinguen a las criaturas reales dentro de su rango, por lo que podrían ser inmunes.",
-				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
-				},
 				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
 			]
 		},
@@ -5044,15 +5032,20 @@
 			"featureType": [
 				"BRM"
 			],
-			"entries": [
-				"Sueltas una descarga eléctrica a una criatura para realentizarla. Haz un melé spell attack. Con un impacto el objetivo recibe {@damage 1d8} eléctrico, pierde su reacción, su bonus y su velocidad se reduce a la mitad. Estas desventajas desaparecen al final de tu siguiente turno.",
+			"prerequisite": [
 				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
 				}
+			],
+			"entries": [
+				"Sueltas una descarga eléctrica a una criatura para realentizarla. Haz un melé spell attack. Con un impacto el objetivo recibe {@damage 1d8} eléctrico, pierde su reacción, su bonus y su velocidad se reduce a la mitad. Estas desventajas desaparecen al final de tu siguiente turno."
 			]
 		},
 		{
@@ -5107,13 +5100,6 @@
 			],
 			"entries": [
 				"Como parte de la acción de dash puedes dar un salto en el que te encoges hasta el tamaño de una pulga. Puedes pasar por el espacio de cualquier criatura sin provocar ataques de oportunidad o por huecos de 1 mm sin apretarte. Una vez acabe el salto vuelves a tu tamaño original.",
-				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
-				},
 				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
 			]
 		},
@@ -5610,15 +5596,20 @@
 			"featureType": [
 				"BRM"
 			],
-			"entries": [
-				"Como reacción cuando una criatura que puedas ver a 60 ft de ti vaya a hacer daño contundente a otra criatura que puedas ver dentro del rango, puedes hacer crecer su arma hasta que sea 8 veces más grande. La criatura tiene ventaja en el ataque y, con un impacto, hace el doble del daño que fuera a hacer. Además el objetivo salva Constitución o está {@condition Stunned|PHB} hasta el final de su próximo turno. Puedes targetear dos veces a la misma arma, pero no puede targetear dos veces al mismo objetivo.",
+			"prerequisite": [
 				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
 				}
+			],
+			"entries": [
+				"Como reacción cuando una criatura que puedas ver a 60 ft de ti vaya a hacer daño contundente a otra criatura que puedas ver dentro del rango, puedes hacer crecer su arma hasta que sea 8 veces más grande. La criatura tiene ventaja en el ataque y, con un impacto, hace el doble del daño que fuera a hacer. Además el objetivo salva Constitución o está {@condition Stunned|PHB} hasta el final de su próximo turno. Puedes targetear dos veces a la misma arma, pero no puede targetear dos veces al mismo objetivo."
 			]
 		},
 		{
@@ -5954,13 +5945,6 @@
 			],
 			"entries": [
 				"Como reacción cuando sea targeteado por daño psíquico, {@condition Charmed|PHB} o {@condition Frightened|PHB}, puede hacer que un pulso salga de él a 30 ft. Todas las criaturas de su elección se curan o reciben daño psíquico igual a su modificador de Carisma, reciben o acaban con {@condition Charmed|PHB} o {@condition Frightened|PHB}, según el efecto original que fuera a recibir el payaso.",
-				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
-				},
 				"Esta broma está preparada y no cuenta para el máximo de bromas que puedes preparar."
 			]
 		},
@@ -6998,15 +6982,20 @@
 			"featureType": [
 				"BRM"
 			],
-			"entries": [
-				"Cuando una criatura que puedas ver y esté a rango de un ataque tuyo esté charmeada, puedes convertir el {@condition Charmed|PHB} en shock. Haz una tirada de ataque con tu arma contra la criatura, con un impacto la criatura recibe el daño normal de tu ataque y deja de estar charmeada. Ahora está {@condition Paralyzed|PHB} hasta el inicio de tu próximo turno.",
+			"prerequisite": [
 				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
 				}
+			],
+			"entries": [
+				"Cuando una criatura que puedas ver y esté a rango de un ataque tuyo esté charmeada, puedes convertir el {@condition Charmed|PHB} en shock. Haz una tirada de ataque con tu arma contra la criatura, con un impacto la criatura recibe el daño normal de tu ataque y deja de estar charmeada. Ahora está {@condition Paralyzed|PHB} hasta el inicio de tu próximo turno."
 			]
 		},
 		{
@@ -7333,15 +7322,20 @@
 			"featureType": [
 				"BRM"
 			],
-			"entries": [
-				"Eres capaz de crear tartas mágicas que dañen o curen a las criaturas a las que vayan dirigidas. Elige una criatura a 30 ft de ti y haz un spell attack contra ella. Con un impacto la criatura recibe {@damage 1d8}+Cha necróticos o {@dice 3d8}+Cha de curación. Independientemente del resultado, la criatura está ciega hasta el final de su siguiente turno. (Esta broma no puede prepararse con la acción).",
+			"prerequisite": [
 				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
 				}
+			],
+			"entries": [
+				"Eres capaz de crear tartas mágicas que dañen o curen a las criaturas a las que vayan dirigidas. Elige una criatura a 30 ft de ti y haz un spell attack contra ella. Con un impacto la criatura recibe {@damage 1d8}+Cha necróticos o {@dice 3d8}+Cha de curación. Independientemente del resultado, la criatura está ciega hasta el final de su siguiente turno. (Esta broma no puede prepararse con la acción, pero sí puede ser utilizada varias veces en la misma criatura)."
 			]
 		},
 		{
@@ -8197,15 +8191,20 @@
 			"featureType": [
 				"BRM"
 			],
-			"entries": [
-				"Como reacción cuando una criatura se mueva a 5 ft de ti, puedes ponerle la zancadilla. La criatura salva destreza o cae {@condition Prone|PHB} y pierde el resto de su movilidad.",
+			"prerequisite": [
 				{
-					"type": "entries",
-					"name": "Uso de las bromas",
-					"entries": [
-						"Llevas tus bromas al siguiente nivel, a uno peligroso. Puedes usar tus bromas en combate para ayudar a tus aliados. Escoge un número de bromas de la siguiente lista igual a tu BC. Puedes hacer un número de bromas al día igual a tu BC+1. En cada descanso largo puede cambiar 2 de tus bromas. Una misma criatura no puede caer más de dos veces en la misma broma y los efectos iguales no stackean. Recibirás nuevas bromas a futuros niveles."
-					]
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Payaso",
+							"source": "Himo",
+							"visible": true
+						}
+					}
 				}
+			],
+			"entries": [
+				"Como reacción cuando una criatura se mueva a 5 ft de ti, puedes ponerle la zancadilla. La criatura salva destreza o cae {@condition Prone|PHB} y pierde el resto de su movilidad."
 			]
 		}
 	]
