@@ -7,6 +7,633 @@
 	},
 	"race": [
 		{
+			"name": "Demeris (Enano)",
+			"source": "Himo",
+			"ability": [
+				{
+					"con": 2,
+					"choose": {
+						"from": [
+							"cha",
+							"int"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"+2 Constitución +1 Carisma o Inteligencia",
+				{
+					"type": "entries",
+					"name": "Titiritero",
+					"entries": [
+						"Aprendes el cantrip de Mending. Una vez al día puedes castear Animate Objects en un solo objeto inanimado tiny. Cuando castees el conjuro de esta forma, no necesita concentración y dura hasta el final de tu próximo descanso largo o hasta que el objeto haya ido reducido a 0 HP. Si tú quedas incapacitado mientras el conjuro está activo, el objeto queda incapacitado también hasta que tú pierdas dicho efecto."
+					]
+				}
+			]
+		},
+		{
+			"name": "Iluminado",
+			"source": "Himo",
+			"ability": [
+				{
+					"cha": 2
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Idiomas",
+					"entries": [
+						"Común y un idioma más."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Apariencia",
+					"entries": [
+						"Los Iluminados son seres de diferentes razas que algún Dios tocó en su nacimiento. A simple vista parecen ser exactamente iguales a sus congéneres, pero poseen unas alas etéreas que solo ellos mismos, aquellos con visión verdadera o que puedan ver invisibilidad o en el plano etéreo pueden ver."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Alas divinas",
+					"entries": [
+						"Aunque no pueden utilizar estas alas para volar, el usuario podrá planear con ellas siempre y cuando no lleve una carga superior a la mitad de su capacidad máxima. Puede dirigir la caída moviéndose 1 casilla por cada 4 de caída."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Rasgo Divino",
+					"entries": [
+						"Puedes ganar un idioma, un rasgo y un modificador en función del dios que te dio las alas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Bueno",
+					"entries": [
+						"+1 a Wisdom. Aprende Celestial. Una vez por descanso corto puede tocar a una criatura y curar 1d8+Carisma. (Añade un dado a los lv5, 11 y 17)."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Neutral",
+					"entries": [
+						"+1 a Inteligencia. Aprende Primordial. Puede lanzar Find Familiar una vez al día sin gastar espacios de conjuro ni componente. Si tiene espacios de conjuro, puede usarlos para volver a lanzarlo."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Malo",
+					"entries": [
+						"+1 a Constitución. Aprende Infernal. Puede lanzar Hex una vez al día sin gastar espacios de conjuro. Si tiene espacios de conjuro, puede usarlos para volver a lanzarlo. Va a Carisma."
+					]
+				}
+			]
+		},
+		{
+			"name": "Dracónidos Feéricos",
+			"source": "Himo",
+			"ability": [
+				{
+					"wis": 2,
+					"cha": 1
+				}
+			],
+			"darkvision": 60,
+			"entries": [
+				"+2 Sabiduría +1 Carisma",
+				{
+					"type": "entries",
+					"name": "Idiomas",
+					"entries": [
+						"Común, Silvano y Dracónido."
+					]
+				},
+				"Cuentas como dracónido o semielfo para coger dotes",
+				{
+					"type": "entries",
+					"name": "Alineamiento",
+					"entries": [
+						"Acostumbrados a ser los heraldos de sabiduría del mundo silvano, pero con la fiereza del mundo dracónico, los feéricos tienden a adoptar personalidades tranquilas y fieras. No suelen mostrar sus intenciones, sentimientos u opiniones, pero cuando lo hacen, las hacen ver de las formas más temibles y/o vistosas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Edad",
+					"entries": [
+						"Las hadas pueden llegar a vivir varios miles de años, pero los Dracónidos raramente viven más de un siglo. Los feéricos tienen apariencia de niño o adolescente durante los primeros cincuenta años, creciendo muy despacio. Alcanzan la adultez física y completa a mediados del segundo siglo, cuando son considerados adultos. No viven más de un milenio."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Apariencia",
+					"entries": [
+						"La convivencia entre especies conlleva ciertos cruces de vez en cuando. Estos dracónidos tienen apariencia humana, si bien sus orejas son parecidas a las de los semielfos; sin cuernos ni cola, sin embargo, aún conservan los colmillos (todos sus dientes son colmillos adaptados a su nueva mandíbula [tipo tiburón]). Además, son capaces de hacer, contraer o retraer unas alas dracónidas, que en realidad son herencia feérica."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Variante",
+					"entries": [
+						"El usuario puede hacer ciertos añadidos, como la posibilidad de tener una piel escamosa (o un trozo solo) del color de su ascendencia, así como tenerla solo de vez en cuando, cuando el personaje se enfada, se pone nervioso etc, garras, ojos reptilianos o de dragón (no son iguales, buscalo pto) o cosas por el estilo, pero nada de eso tendrá repercusión en las mecánicas. También puede tener escamas o alas arcoíris, como herencia feérica, pero su resistencia será la de la ascendencia escogida."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Resistencia dracónida",
+					"entries": [
+						"Posee la ascendencia de su clan dracónido, y, por lo tanto, la resistencia a tal daño."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Alas Feéricas",
+					"entries": [
+						"Posees unas alas con las que llegarás a los 30 pies de velocidad y que, además, te mantendrán suspendido sin importar qué distancia haya debajo. También, puedes retraerlas para ponerte armadura, pues no puedes desplegarlas con ella puesta. La forma de estas serán siempre semejantes a las de los dragones, aunque con motivos relacionados a su ascendencia."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Visión en la Oscuridad",
+					"entries": [
+						"Por herencia feérica, tienes una visión superior en condiciones de oscuridad y luz tenue. Puedes ver con luz tenue a una distancia de 60 pies (18 m) desde ti como si estuviera bien iluminado, y en la oscuridad como si hubiese luz tenue. No puedes discernir colores en la oscuridad, tan solo tonos de gris"
+					]
+				}
+			]
+		},
+		{
+			"name": "Hadas",
+			"source": "Himo",
+			"ability": [
+				{
+					"wis": 2,
+					"cha": 1
+				}
+			],
+			"size": [
+				"M"
+			],
+			"speed": {
+				"walk": 30,
+				"fly": 30
+			},
+			"darkvision": 60,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Incremento de puntuación",
+					"entries": [
+						"Tu puntuación de Sabiduría aumenta en 2, y Carisma aumenta en +1."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tipo",
+					"entries": [
+						"Eres Fey y Humanoide. Cuentas como alto elfo o elfo de la madera para coger dotes."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Edad",
+					"entries": [
+						"Las hadas pueden llegar a vivir varios miles de años. Tienen apariencia de niño o adolescente durante los primeros mil años, creciendo apenas un centímetro cada muchos años. Alcanzan la adultez física y completa a finales del primer milenio, cuando son considerados adultos. Sin embargo, la adultez mental, así como la capacidad de vuelo y de lanzar hechizos, es alcanzada al segundo siglo, en la mayoría de los casos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Alineamiento",
+					"entries": [
+						"Siempre defienden la justicia, aunque el método no sea precisamente justo. Harán todo lo posible por preservar el orden desde un punto de vista lógico y objetivo, respetando siempre a su Reina. La Reina Hada puede considerarse un patrón. Su relación con ella es muy similar a la de las hormigas y abejas con la suya."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tamaño",
+					"entries": [
+						"Las hadas miden entre 1,5 m y 1,7 m de alto y pesan en promedio 40 kg. Tu tamaño es Mediano. Tus alas son del mismo tamaño que el cuerpo y las piernas. Puedes regenerar las heridas en las alas (pero no los daños mecánicos) durante un descanso largo."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Velocidad",
+					"entries": [
+						"Tu velocidad base a pie es de 30 pies, 30 volando."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Visión en la Oscuridad",
+					"entries": [
+						"Acostumbrado a vivir en bosques muy frondosos, tienes una visión superior en condiciones de oscuridad y luz tenue. Puedes ver con luz tenue a una distancia de 60 pies (12 casillas) desde ti como si estuviera bien iluminado, y en la oscuridad como si hubiese luz tenue. No puedes discernir colores en la oscuridad, tan solo tonos de gris."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Alas Feéricas",
+					"entries": [
+						"Posees unas alas con las que llegarás a los 30 pies de velocidad y que además te mantendrán suspendido sin importar qué distancia haya debajo. También, pueden retraerlas para ponerse armadura, pues no pueden desplegarlas con ella puesta. La forma de estas serán siempre semejantes a élitros o alas de mariposa."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Truco",
+					"entries": [
+						"Puedes escoger un truco de la lista de conjuros que elijas, pero lo lanzarás con la característica de lanzamiento de conjuros de dicha clase."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Idiomas",
+					"entries": [
+						"Puedes hablar, leer y escribir Común, Silvano y Dracónido."
+					]
+				}
+			]
+		},
+		{
+			"name": "Semi-Hada",
+			"source": "Himo",
+			"ability": [
+				{
+					"int": 2,
+					"wis": 1
+				}
+			],
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Incremento de puntuación",
+					"entries": [
+						"Tu puntuación de Inteligencia aumenta en 2, y Sabiduría aumenta en +1."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Edad",
+					"entries": [
+						"Las hadas pueden llegar a vivir varios miles de años, pero los humanos raramente viven más de un siglo. Las semi-hadas tienen apariencia de niño o adolescente durante los primeros cincuenta años, creciendo muy despacio. Alcanzan la adultez física y completa a mediados del segundo siglo, cuando son considerados adultos. No viven más de un milenio."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Alineamiento",
+					"entries": [
+						"Marginados por los humanos y aceptados por las hadas, tienden a adoptar alineamientos caóticos en sociedades humanas y legales en el seno de las hadas. No es difícil encontrar híbridos con personalidades contradictorias o bipolares."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tamaño",
+					"entries": [
+						"Las semi-hadas miden entre 1,7 m y 1,8 m de alto y pesan en promedio 50 kg. Tu tamaño es Mediano. Tus alas son del mismo tamaño que el cuerpo y las piernas, pero muchos híbridos tienden a cortárselas para ser aceptados en sociedades humanas o élficas."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Velocidad",
+					"entries": [
+						"Tu velocidad base a pie es de 30 pies."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Visión en la Oscuridad",
+					"entries": [
+						"Tus ojos son la poca herencia funcional que has recibido de tu rama feérica. Puedes ver con luz tenue a una distancia de 60 pies (18 m) desde ti como si estuviera bien iluminado, y en la oscuridad como si hubiese luz tenue. No puedes discernir colores en la oscuridad, tan solo tonos de gris."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Conocimiento Urbano",
+					"entries": [
+						"Ganas competencia con una habilidad o equipo de herramientas a elegir."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Idiomas",
+					"entries": [
+						"Puedes hablar, leer y escribir Común y Silvano."
+					]
+				}
+			]
+		},
+		{
+			"name": "Elfo de Sangre",
+			"source": "Himo",
+			"ability": [
+				{
+					"cha": 2,
+					"int": 1
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Suponen un 5% de la población",
+					"entries": [
+						"Pueden utilizar magia, y muchos lo saben pero lo mantienen en secreto, casi hasta el punto de olvidarlo. Siempre nacen con el pelo rojo o rosado en tonos vivos."
+					]
+				},
+				"Esta es la única clase de elfo que puede morir a causa de la edad, durando menos de 400 años. En muchos casos, los problemas ocasionados por su órgano mágico pueden hacerlos morir a los 100 o a los 200 años. En casos tan extremos en los que el poder es mayor, el pelo se vuelve rosado.",
+				{
+					"type": "entries",
+					"name": "Incremento de Puntuación de Característica",
+					"entries": [
+						"Tu puntuación de Carisma aumenta en 2 y tu puntuación de Inteligencia en 1."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Letargo arcano",
+					"entries": [
+						"Empezando en el nivel 3 puedes lanzar conjuros extra sin gastar espacio de conjuro de ningún nivel, a cambio, de una cantidad de HP equivalente a diez veces el nivel del conjuro. Además, adquieres un punto de agotamiento."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Variante",
+					"entries": [
+						"A juicio del DM y del momento, de morir de esta forma puedes estallar en un cúmulo mágico. Toda criatura a 30 pies de ti debe superar una salvación de Constitución CD 18 o recibir una cantidad de daño de fuerza igual a tu máximo de dados de golpe, o la mitad si salvan. Además, cada criatura en el área se ve afectada por un efecto aleatorio e individual de la Wild Magic. Si te reviven tras esto, tardas 1d4 días en recuperar todos tus espacios de conjuro."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Trucos",
+					"entries": [
+						"Conoces un truco de tu elección de la lista de conjuros de Mago, Brujo, Hechicero, Druida o Bardo y lo tiras con tu característica de lanzamiento de conjuros. Si tu clase no te permite lanzar conjuros, utilizarás tu Carisma como habilidad de lanzamiento de conjuros para este truco."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Cuerpo Arcano",
+					"entries": [
+						"Usas tu propio cuerpo como Foco Arcano, por lo que no eres competente con ningún otro ni podrás serlo nunca. No podrás recibir focos arcanos superiores, pero contará como si siempre llevaras equipado el foco, aunque en realidad no lleves nada en las manos o tengas ambas manos ocupadas."
+					]
+				}
+			]
+		},
+		{
+			"name": "Oni",
+			"source": "Himo",
+			"ability": [
+				{
+					"str": 1,
+					"con": 2
+				}
+			],
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"darkvision": 60,
+			"entries": [
+				"Estas criaturas de aspecto demoníaco y ascendencia gigante habitan sobre todo el continente de Kara-Tur y este de Faerûn, concretamente la zona de Rashenmen, Thay y Mulhorand. En Faerûn se juntan en hordas que rara vez superan los 30 individuos, mientras que en su continente de origen se juntan en shogunatos de más de 300 oni. Se han llegado a encontrar imperios enteros escondidos en las sombras de las montañas y los bosques.",
+				"El sistema jerárquico y militar de un shogun u horda oni se basa en una meritocracia hereditaria. En otras palabras, mandarán aquellos linajes que cuenten con los mayores méritos. Si el linaje y/o su posición social están en peligro o en entredicho, el oni estará dispuesto a casi cualquier cosa por limpiar su nombre.",
+				{
+					"type": "entries",
+					"name": "Incremento de Puntuación",
+					"entries": [
+						"Tu puntuación de Fuerza aumenta en +1 y Constitución en +2."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Edad",
+					"entries": [
+						"Los oni maduran a una velocidad algo más lenta que los humanos, llegando a la adultez física a los 25 años. Pueden vivir hasta pasar el milenio, aunque no es muy común."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Alineamiento",
+					"entries": [
+						"Si bien siguen a rajatabla las normas de su propia sociedad, estas casi nunca se asemejan a las del resto de criaturas civilizadas. Además, solo miran el bien propio y el de los suyos, por lo que tienden al mal o a la neutralidad."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tamaño",
+					"entries": [
+						"El tamaño de un oni ronda entre los 2 y 3 metros. Suelen tener una constitución robusta y musculosa, aunque es posible encontrar alguno increíblemente delgado. Aún así, su peso es desproporcionadamente superior al que debería respecto a altura y constitución. Su peso ronda entre los 100 y los 250kg."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Velocidad",
+					"entries": [
+						"Su velocidad a pie y de trepado es de 30 pies."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Darkvision",
+					"entries": [
+						"60 pies."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Construcción Poderosa",
+					"entries": [
+						"Tu capacidad de carga se duplica y tu tamaño cuenta como uno superior para checks de fuerza y grapple."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Regeneración",
+					"entries": [
+						"Cada vez que seas objetivo de un conjuro o rasgo que deba curarte, incluidos los dados de golpe, añades un extra a la curación igual a tu modificador de Constitución. Una vez cada 1d4 descansos largos puedes pasar un descanso corto en un estado letárgico para regenerar una cantidad de miembros igual a tu BC. Regeneras roturas, heridas graves, mutilaciones… El DM decide cómo determinar el número de miembros a regenerar."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Idiomas",
+					"entries": [
+						"Hablas Gigante y un dialecto del común a elegir entre: Mulanita, Shou, Calishita o Rashemi"
+					]
+				},
+				"Tienes acceso a la dote racial Spellcasting Demoníaco."
+			]
+		},
+		{
+			"name": "Spirit folk",
+			"source": "Himo",
+			"ability": [
+				{
+					"wis": 2
+				}
+			],
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Incremento de puntuación",
+					"entries": [
+						"Tu puntuación de Sabiduría aumenta en +2. +1 a dex si se es de Bamboo, +1 a Constitución si se es de la Montaña, +1 a Carisma si se es del mar y +1 a Fuerza si se es del Río."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tipo",
+					"entries": [
+						"Eres Fey y Humanoide."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Edad",
+					"entries": [
+						"Los Spirit Folk maduran a la misma velocidad que los humanos, pero viven hasta los 120 años. Los spirit folk más cercanos a los dioses pueden llegar a vivir hasta los 180."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Alineamiento",
+					"entries": [
+						"Siempre defienden la justicia, aunque el método no sea precisamente justo. Harán todo lo posible por preservar el orden desde un punto de vista lógico y objetivo, respetando siempre a su Reina. La Reina Hada puede considerarse un patrón. Su relación con ella es muy similar a la de las hormigas y abejas con la suya."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tamaño",
+					"entries": [
+						"Los spirit folk miden entre 1,5 m y 1,7 m de alto y pesan en promedio 50-60 kg. Tu tamaño es Mediano."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Velocidad",
+					"entries": [
+						"Tu velocidad base a pie es de 30 pies. Si eres un Spirit Folk de Bamboo, es de 35, si eres de Montaña, tienes 30 de trepado y si eres del Mar o del Río tienes 30 de nado y sales completamente seco del agua."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Visión en la Oscuridad",
+					"entries": [
+						"60 ft."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Lengua Espiritual",
+					"entries": [
+						"Eres capaz de entablar una conversación con un tipo de criaturas que depende con tu subraza. No necesitas tener un idioma común para comunicarte con la criatura y la entiendes y te haces entender sin importar la diferencia de inteligencia. Estas criaturas son Bestias terrestres si eres del Bamboo, Bestias voladoras si eres de Montaña, bestias marinas si eres de Río y criaturas incorpóreas si eres del Mar (nota que vale para fey, loumara, undead, etc.)."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Resistencia Elemental",
+					"entries": [
+						"Cada subraza salva ciertos conjuros con ventaja. El de Bamboo resiste conjuros basados en plantas y madera, el de Montaña resiste conjuros basados en tierra y rocas o que empujen y/o te proneen como parte del efecto del conjuro, el del Mar resiste salvaciones de charm y miedo y el de río resiste conjuros de agua."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Conexión Natural",
+					"entries": [
+						"Cada subraza tiene ciertas capacidades naturales. El de Bamboo tiene ventaja para esconderse entre vegetación, competencia en survival y gana el cantrip de Thorn Whip; el de Montaña dobla su rango de darkvision, tiene competencia en Percepción y gana el cantrip de Adivinación Menor; el del Mar respira bajo ‘el mah, competencia en Religión y gana el cantrip de Druidcraft; y el de Río respira bajo el awa, competencia en Medicina y gana el cantrip de Shape Water."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Idiomas",
+					"entries": [
+						"Puedes hablar, leer y escribir Común y uno a elegir entre Primordial, Celestial o Silvano."
+					]
+				}
+			]
+		},
+		{
+			"name": "Bugfolk",
+			"source": "Himo",
+			"ability": [
+				{
+					"wis": 1,
+					"cha": -1
+				}
+			],
+			"size": [
+				"S",
+				"M"
+			],
+			"darkvision": 120,
+			"entries": [
+				"Estas criaturas pueden vivir en el Underdark formando colonias gregarias o vagar en solitario por las profundidades de la tierra. Han logrado evolucionar hasta obtener entendimiento, y su fisionomía se ha adaptado hasta equiparar el antropomorfismo de los humanoides. Tienen fama de ser cazadores crueles y despiadados y de no entender las construcciones sociales ajenas a las suyas.",
+				{
+					"type": "entries",
+					"name": "Alineamiento",
+					"entries": [
+						"En general tienden al caos. No les importa qué está bien y qué está mal, sino qué aporta más a su supervivencia. Pese a que suelen regirse ciegamente por su instinto, algunos, sobre todo las especies gregarias, tienen un fuerte sentido del deber y un código normativo que no osan saltarse bajo ningún concepto. En estos casos, lo peor que puede pasar es la muerte por canibalismo, el exilio o la demonización."
+					]
+				},
+				"Las subrazas hacen referencia a unos pocos ejemplos, pero pueden usarse con skins similares.",
+				"Son considerados tanto Monstruosidades como Humanoides.",
+				{
+					"type": "entries",
+					"name": "Mejora de Característica",
+					"entries": [
+						"+1 a Wisdom, -1 a Carisma"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Edad",
+					"entries": [
+						"Pasan en estado larvario un 10% de su vida y tienen una esperanza de vida de diez a cincuenta años en función de la especie."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tamaño",
+					"entries": [
+						"Su tamaño varía dependiendo de la raza. Las razas pequeñas, como moscas y hormigas, miden poco menos de un metro. Las grandes, llegan hasta los dos metros y medio. Pesan muy poco en comparación con las criaturas de su tamaño."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Idioma",
+					"entries": [
+						"Hablan común y su propio dialecto de Thri-Kreen, entendido solo por los de su subespecie. Este dialecto puede ser entendido por un druida, pero estos no necesariamente entienden el druídico."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Darkvision Superior",
+					"entries": [
+						"Tienen Darkvision a 120 pies, pero desventaja a Percepción cuando esté en sunlight."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Exoesqueleto ligero",
+					"entries": [
+						"El poco peso junto con la dureza natural de la piel permiten que la criatura sea más resistente. Es inmune a los primeros 100ft de daño por caída y tiene resistencia al daño restante a partir de ahí. Además, su velocidad base es de 30 pies caminando si es pequeño y 35 si es grande. Si la criatura es pequeña puede hacer una tirada de acrobacias a discreción del DM para planear en una fuerte corriente, moviendose 1 casilla por cada tres de caída; cuenta como una criatura de un tamaño superior para cargar peso y manejar grapples, empujes y proneos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Escalada de Araña",
+					"entries": [
+						"Su velocidad de trepado es igual a la de caminar, en todo tipo de superficies, incluso boca abajo."
+					]
+				}
+			]
+		},
+		{
 			"name": "Aarakocra",
 			"source": "DMG",
 			"page": 282,
@@ -11758,6 +12385,157 @@
 		}
 	],
 	"subrace": [
+		{
+			"name": "Mantis",
+			"source": "Himo",
+			"raceName": "Bugfolk",
+			"raceSource": "Himo",
+			"ability": [
+				{
+					"dex": 2
+				}
+			],
+			"entries": [
+				"+2 en destreza",
+				{
+					"type": "entries",
+					"name": "Armas naturales",
+					"entries": [
+						"Tus brazos cuentan, mecánicamente, como armas sutiles y ligeras con las que eres competente (1d6 cortante). Puedes utilizar estos apéndices para usar consumibles, hacer los somáticos de conjuros y manipular objetos, pero no puedes equipar escudos ni armas. Los checks de habilidad con herramientas se hacen con desventaja."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Salto potente",
+					"entries": [
+						"No necesitas carrerilla para saltar al máximo potencial, y puedes calcularlos con la fuerza o la destreza indistintamente. Además, eres competente en Acrobacias."
+					]
+				}
+			]
+		},
+		{
+			"name": "Avispa",
+			"source": "Himo",
+			"raceName": "Bugfolk",
+			"raceSource": "Himo",
+			"ability": [
+				{
+					"cha": 3
+				}
+			],
+			"entries": [
+				"+3 en carisma (+2 con el bonificador de raza añadido)",
+				{
+					"type": "entries",
+					"name": "Élitros",
+					"entries": [
+						"Tienes una velocidad de vuelo igual a tu velocidad de caminar más tu bono de competencia (en casillas)."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Mente colmena",
+					"entries": [
+						"Tienes la capacidad de comunicarte telepáticamente con cualquier criatura con un mínimo de 5 en inteligencia (-3) que pueda entenderte y que esté dispuesto a contraer dicho vínculo contigo. Para ello, debe estar a 30 pies de ti. Mientras estés vinculado con una criatura por medio de este rasgo, puedes sentir el dolor recibido por la otra criatura sin ser dañado realmente, localizar a dicha criatura y vincularte telepática y automáticamente con las criaturas que estén vinculadas con él telepáticamente, incluso si están fuera de tu rango."
+					]
+				}
+			]
+		},
+		{
+			"name": "Escarabajo",
+			"source": "Himo",
+			"raceName": "Bugfolk",
+			"raceSource": "Himo",
+			"ability": [
+				{
+					"str": 2
+				}
+			],
+			"entries": [
+				"+2 en fuerza",
+				{
+					"type": "entries",
+					"name": "Coraza dura",
+					"entries": [
+						"Tu coraza te proporciona una CA base de 17 (tu modificador de Destreza no afecta este número). No puedes llevar una armadura ligera, media o pesada, pero si estás usando un escudo, puedes aplicar la bonificación del escudo de forma normal. Puede usar bardings a medida para mejorar la CA."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Construcción Poderosa",
+					"entries": [
+						"Cuenta como una talla más grande al determinar su capacidad de carga y el peso que puede empujar, arrastrar o levantar."
+					]
+				}
+			]
+		},
+		{
+			"name": "Hormiga",
+			"source": "Himo",
+			"raceName": "Bugfolk",
+			"raceSource": "Himo",
+			"ability": [
+				{
+					"str": 2
+				}
+			],
+			"entries": [
+				"+2 en fuerza",
+				{
+					"type": "entries",
+					"name": "Fuerza de los pequeños",
+					"entries": [
+						"Tu talla siempre es pequeña, pues no sobrepasas el metro de estatura. Sin embargo, puedes cargar peso como si se tratara de una criatura grande."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Mente Colmena",
+					"entries": [
+						"Tienes la capacidad de comunicarte telepáticamente con cualquier criatura con un mínimo de 5 en inteligencia (-3) que pueda entenderte y que esté dispuesto a contraer dicho vínculo contigo. Para ello, debe estar a 30 pies de ti. Mientras estés vinculado con una criatura por medio de este rasgo, puedes sentir el dolor recibido por la otra criatura sin ser dañado realmente, localizar a dicha criatura y vincularte telepática y automáticamente con las criaturas que estén vinculadas con él telepáticamente, incluso si están fuera de tu rango."
+					]
+				},
+				"Cuando llegue a un lv de dote puede no subir un stat o ganar una dote y, a cambio, ganar una velocidad de vuelo igual a su velocidad caminando y +1 a Dex."
+			],
+			"size": [
+				"S"
+			]
+		},
+		{
+			"name": "Polilla",
+			"source": "Himo",
+			"raceName": "Bugfolk",
+			"raceSource": "Himo",
+			"ability": [
+				{
+					"cha": 3
+				}
+			],
+			"entries": [
+				"+3 en carisma (+2 con el bonificador de raza añadido)",
+				{
+					"type": "entries",
+					"name": "Vuelo",
+					"entries": [
+						"Tienes una velocidad de vuelo igual a tu velocidad de caminar. No puedes usar tu velocidad de vuelo mientras usas una armadura mediana o pesada."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Noctámbulo",
+					"entries": [
+						"Su darkvision también funciona en oscuridad mágica y el sunlight ya no impone desventaja."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Perdición de Luz",
+					"entries": [
+						"Cuando aparece una luz en medio de la oscuridad, la polilla debe hacer una salvación de Carisma 13 o verse atraído por la luz. La polilla cuenta como encantada por la luz y debe usar toda su movilidad posible para acercarse a esta tanto como pueda. Una vez llega, queda aturdida hasta que esta se apague o salve al final del turno. Cada vez que recibe daño puede volver a repetir la tirada. Al tener éxito, es inmune a dicha luz durante las próximas 24 horas."
+					]
+				}
+			]
+		},
 		{
 			"name": "Amonkhet",
 			"source": "PSA",
