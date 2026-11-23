@@ -37,7 +37,15 @@
 			"source": "Himo",
 			"ability": [
 				{
-					"cha": 2
+					"cha": 2,
+					"choose": {
+						"from": [
+							"wis",
+							"int",
+							"con"
+						],
+						"amount": 1
+					}
 				}
 			],
 			"entries": [
@@ -64,30 +72,45 @@
 				},
 				{
 					"type": "entries",
-					"name": "Rasgo Divino",
+					"name": "Rasgo divino",
 					"entries": [
-						"Puedes ganar un idioma, un rasgo y un modificador en función del dios que te dio las alas."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Bueno",
-					"entries": [
-						"+1 a Wisdom. Aprende Celestial. Una vez por descanso corto puede tocar a una criatura y curar 1d8+Carisma. (Añade un dado a los lv5, 11 y 17)."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Neutral",
-					"entries": [
-						"+1 a Inteligencia. Aprende Primordial. Puede lanzar Find Familiar una vez al día sin gastar espacios de conjuro ni componente. Si tiene espacios de conjuro, puede usarlos para volver a lanzarlo."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Malo",
-					"entries": [
-						"+1 a Constitución. Aprende Infernal. Puede lanzar Hex una vez al día sin gastar espacios de conjuro. Si tiene espacios de conjuro, puede usarlos para volver a lanzarlo. Va a Carisma."
+						"Elige la naturaleza del dios que te otorgó las alas. Recibes el aumento de característica, el idioma y el rasgo correspondientes, además del +2 a Carisma y los idiomas comunes de esta raza.",
+						{
+							"type": "table",
+							"caption": "Naturaleza divina",
+							"colLabels": [
+								"Dios",
+								"Característica",
+								"Idioma",
+								"Rasgo"
+							],
+							"colStyles": [
+								"col-2",
+								"col-2",
+								"col-2",
+								"col-6"
+							],
+							"rows": [
+								[
+									"Bueno",
+									"+1 Sabiduría",
+									"Celestial",
+									"Una vez por descanso corto, toca a una criatura para curarla 1d8 + tu modificador de Carisma. La curación aumenta en 1d8 en los niveles 5, 11 y 17."
+								],
+								[
+									"Neutral",
+									"+1 Inteligencia",
+									"Primordial",
+									"Puedes lanzar {@spell find familiar} una vez al día sin gastar espacio de conjuro ni componentes. Si tienes espacios de conjuro, puedes usarlos para volver a lanzarlo."
+								],
+								[
+									"Malo",
+									"+1 Constitución",
+									"Infernal",
+									"Puedes lanzar {@spell hex} una vez al día sin gastar espacio de conjuro. Si tienes espacios de conjuro, puedes usarlos para volver a lanzarlo. Carisma es tu característica de lanzamiento."
+								]
+							]
+						}
 					]
 				}
 			]
@@ -580,13 +603,12 @@
 						"En general tienden al caos. No les importa qué está bien y qué está mal, sino qué aporta más a su supervivencia. Pese a que suelen regirse ciegamente por su instinto, algunos, sobre todo las especies gregarias, tienen un fuerte sentido del deber y un código normativo que no osan saltarse bajo ningún concepto. En estos casos, lo peor que puede pasar es la muerte por canibalismo, el exilio o la demonización."
 					]
 				},
-				"Las subrazas hacen referencia a unos pocos ejemplos, pero pueden usarse con skins similares.",
 				"Son considerados tanto Monstruosidades como Humanoides.",
 				{
 					"type": "entries",
 					"name": "Mejora de Característica",
 					"entries": [
-						"+1 a Wisdom, -1 a Carisma"
+						"Todos los bugfolk reciben +1 a Sabiduría y −1 a Carisma. Además, aplica el aumento de tu subraza. La tabla muestra los modificadores finales, con ambos ajustes ya sumados."
 					]
 				},
 				{
@@ -629,6 +651,47 @@
 					"name": "Escalada de Araña",
 					"entries": [
 						"Su velocidad de trepado es igual a la de caminar, en todo tipo de superficies, incluso boca abajo."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Subrazas",
+					"entries": [
+						"Elige una de las siguientes subrazas. Sus rasgos específicos aparecen después de los rasgos comunes. Las subrazas son ejemplos y pueden representar criaturas de aspecto similar.",
+						{
+							"type": "table",
+							"caption": "Modificadores finales de Bugfolk",
+							"colLabels": [
+								"Subraza",
+								"Modificadores finales"
+							],
+							"colStyles": [
+								"col-4",
+								"col-8"
+							],
+							"rows": [
+								[
+									"Mantis",
+									"+2 Destreza, +1 Sabiduría, −1 Carisma"
+								],
+								[
+									"Avispa",
+									"+1 Sabiduría, +2 Carisma"
+								],
+								[
+									"Escarabajo",
+									"+2 Fuerza, +1 Sabiduría, −1 Carisma"
+								],
+								[
+									"Hormiga",
+									"+2 Fuerza, +1 Sabiduría, −1 Carisma"
+								],
+								[
+									"Polilla",
+									"+1 Sabiduría, +2 Carisma"
+								]
+							]
+						}
 					]
 				}
 			]
@@ -12396,7 +12459,6 @@
 				}
 			],
 			"entries": [
-				"+2 en destreza",
 				{
 					"type": "entries",
 					"name": "Armas naturales",
@@ -12420,11 +12482,10 @@
 			"raceSource": "Himo",
 			"ability": [
 				{
-					"cha": 3
+					"cha": 2
 				}
 			],
 			"entries": [
-				"+3 en carisma (+2 con el bonificador de raza añadido)",
 				{
 					"type": "entries",
 					"name": "Élitros",
@@ -12452,7 +12513,6 @@
 				}
 			],
 			"entries": [
-				"+2 en fuerza",
 				{
 					"type": "entries",
 					"name": "Coraza dura",
@@ -12480,7 +12540,6 @@
 				}
 			],
 			"entries": [
-				"+2 en fuerza",
 				{
 					"type": "entries",
 					"name": "Fuerza de los pequeños",
@@ -12495,7 +12554,13 @@
 						"Tienes la capacidad de comunicarte telepáticamente con cualquier criatura con un mínimo de 5 en inteligencia (-3) que pueda entenderte y que esté dispuesto a contraer dicho vínculo contigo. Para ello, debe estar a 30 pies de ti. Mientras estés vinculado con una criatura por medio de este rasgo, puedes sentir el dolor recibido por la otra criatura sin ser dañado realmente, localizar a dicha criatura y vincularte telepática y automáticamente con las criaturas que estén vinculadas con él telepáticamente, incluso si están fuera de tu rango."
 					]
 				},
-				"Cuando llegue a un lv de dote puede no subir un stat o ganar una dote y, a cambio, ganar una velocidad de vuelo igual a su velocidad caminando y +1 a Dex."
+				{
+					"type": "entries",
+					"name": "Alas de hormiga",
+					"entries": [
+						"Cuando llegue a un lv de dote puede no subir un stat o ganar una dote y, a cambio, ganar una velocidad de vuelo igual a su velocidad caminando y +1 a Dex."
+					]
+				}
 			],
 			"size": [
 				"S"
@@ -12508,11 +12573,10 @@
 			"raceSource": "Himo",
 			"ability": [
 				{
-					"cha": 3
+					"cha": 2
 				}
 			],
 			"entries": [
-				"+3 en carisma (+2 con el bonificador de raza añadido)",
 				{
 					"type": "entries",
 					"name": "Vuelo",

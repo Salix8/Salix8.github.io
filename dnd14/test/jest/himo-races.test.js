@@ -21,3 +21,38 @@ describe("Cuaderno de Himo races", () => {
 		}
 	});
 });
+import "../../js/parser.js";
+import "../../js/utils.js";
+import "../../js/render.js";
+import "../../js/render-dice.js";
+globalThis.VetoolsConfig = {get: () => "classic"};
+
+describe("Himo race choices", () => {
+	it("renders the divine options and their effects in a table", () => {
+		const race = data.race.find(it => it.source === "Himo" && it.name === "Iluminado");
+		const trait = race.entries.find(it => it.name === "Rasgo divino");
+		const table = trait.entries.find(it => it.type === "table");
+		expect(table.rows.map(row => row[0])).toEqual(["Bueno", "Neutral", "Malo"]);
+		expect(race.ability[0]).toEqual({cha: 2, choose: {from: ["wis", "int", "con"], amount: 1}});
+		expect(Renderer.get().render(table)).toContain("<table");
+	});
+
+	it("merges each Bugfolk subrace into the correct final ability scores", () => {
+		const base = data.race.find(it => it.source === "Himo" && it.name === "Bugfolk");
+		const expected = {
+			Mantis: {wis: 1, cha: -1, dex: 2},
+			Avispa: {wis: 1, cha: 2},
+			Escarabajo: {wis: 1, cha: -1, str: 2},
+			Hormiga: {wis: 1, cha: -1, str: 2},
+			Polilla: {wis: 1, cha: 2},
+		};
+		for (const [name, scores] of Object.entries(expected)) {
+			const subrace = data.subrace.find(it => it.source === "Himo" && it.raceName === "Bugfolk" && it.name === name);
+			const merged = Renderer.race._getMergedSubrace(base, structuredClone(subrace));
+			expect(merged.ability).toEqual([scores]);
+		}
+		const table = base.entries.find(it => it.name === "Subrazas").entries.find(it => it.type === "table");
+		expect(table.rows.map(row => row[0])).toEqual(Object.keys(expected));
+		expect(Renderer.get().render(table)).toContain("<table");
+	});
+});
