@@ -138,6 +138,7 @@
         "Sabiduría Alquímica|Alquimista|Himo|2|Himo",
         "Piedra Filosofal|Alquimista|Himo|3|Himo",
         "Ability Score Improvement|Alquimista|Himo|4|Himo",
+        "Study Versatility|Alquimista|Himo|4|Himo",
         "Invocación Débil|Alquimista|Himo|5|Himo",
         "Especialización|Alquimista|Himo|5|Himo",
         "Recolector Filosofal-Ritual de Quimerización|Alquimista|Himo|6|Himo",
@@ -518,6 +519,18 @@
       "className": "Alquimista",
       "classSource": "Himo",
       "level": 20
+    },
+    {
+      "name": "Study Versatility",
+      "source": "Himo",
+      "page": "??",
+      "className": "Alquimista",
+      "classSource": "Himo",
+      "level": 4,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can change one of the proficiencies that you chose with the Carbonero Trait."
+      ]
     }
   ],
   "subclass": [

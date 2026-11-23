@@ -3,12 +3,11 @@ import fs from "node:fs";
 const _getData = () => JSON.parse(fs.readFileSync(new URL("../../data/class/class-planeswalker.json", import.meta.url), "utf8"));
 
 describe("Vías de Planeswalker de Himo", () => {
-	it("registers the four requested paths and resolves each feature reference", () => {
+	it("registers the requested paths and resolves each feature reference", () => {
 		const data = _getData();
-		const expectedPaths = ["Brumas", "Caos", "Elemental", "Desconocido"];
+		const expectedPaths = ["Brumas", "Caos", "Elemental", "Desconocido", "Pecado"];
 
 		expect(data.subclass.map(it => it.shortName)).toEqual(expect.arrayContaining(expectedPaths));
-		expect(data.subclass.some(it => it.shortName === "Pecado")).toBe(false);
 
 		for (const shortName of expectedPaths) {
 			const subclass = data.subclass.find(it => it.shortName === shortName);
@@ -48,5 +47,26 @@ describe("Vías de Planeswalker de Himo", () => {
 			"dominate person",
 			"danse macabre|XGE",
 		]) expect(renderedData).toContain(`{@spell ${spell}}`);
+	});
+
+	it("keeps the Sin path spell table and prepared spell data aligned", () => {
+		const data = _getData();
+		const subclass = data.subclass.find(it => it.shortName === "Pecado");
+		const feature = data.subclassFeature.find(it => it.name === "Vía del Pecado" && it.subclassShortName === "Pecado");
+		const preparedSpells = Object.values(subclass.additionalSpells[0].prepared).flat();
+
+		expect(preparedSpells).toEqual([
+			"Postrar|GPNM", "Hex|PHB",
+			"Desconcierto|GMAM", "Shadow Blade|XGE",
+			"Bestow Curse|PHB", "Spirit Shroud|TCE",
+			"Evard's Black Tentacles|PHB", "Summon Greater Demon|XGE",
+			"Precio del Alma|GdR", "Contagion|PHB",
+		]);
+
+		const renderedData = JSON.stringify(feature);
+		for (const spell of [
+			"Postrar|GPNM", "Hex|PHB", "Desconcierto|GMAM", "Shadow Blade|XGE", "Bestow Curse|PHB",
+			"Spirit Shroud|TCE", "Evard's Black Tentacles|PHB", "Summon Greater Demon|XGE", "Precio del Alma|GdR", "Contagion|PHB",
+		]) expect(renderedData).toContain(`{@spell ${spell}`);
 	});
 });

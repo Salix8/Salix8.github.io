@@ -352,6 +352,7 @@
         "Batuta Irascible|Payaso|Himo|3|Himo",
         "Circo|Payaso|Himo|3|Himo",
         "Ability Score Improvement|Payaso|Himo|4|Himo",
+        "Cantrip Versatility|Payaso|Himo|4|TCE",
         "Miradas a Mi|Payaso|Himo|5|Himo",
         "Bromas|Payaso|Himo|5|Himo",
         "Experto|Payaso|Himo|5|Himo",
@@ -745,6 +746,19 @@
       "className": "Payaso",
       "classSource": "Himo",
       "level": 20
+    },
+    {
+      "name": "Cantrip Versatility",
+      "source": "TCE",
+      "page": 30,
+      "className": "Payaso",
+      "classSource": "Himo",
+      "level": 4,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 4th-level payaso {@variantrule optional class features|tce|optional feature}}",
+        "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the {@filter Payaso spell list|spells|level=0|class=Payaso}."
+      ]
     }
   ],
   "subclass": [

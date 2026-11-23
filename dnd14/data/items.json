@@ -52464,8 +52464,8 @@
       ]
     },
     {
-      "name": "Kit de Tatuador",
-      "type": "T",
+      "name": "Herramientas de Tatuador",
+      "type": "AT",
       "rarity": "none",
       "value": 1000,
       "source": "Himo",
@@ -52501,7 +52501,7 @@
         },
         {
           "type": "table",
-          "caption": "Actividades del Kit de Tatuador",
+          "caption": "Actividades de las Herramientas de Tatuador",
           "colLabels": [
             "Actividad",
             "CD"
@@ -53142,6 +53142,7 @@
         "Cobbler's Tools|PHB",
         "Cook's Utensils|PHB",
         "Glassblower's Tools|PHB",
+        "Herramientas de Tatuador|Himo",
         "Jeweler's Tools|PHB",
         "Leatherworker's Tools|PHB",
         "Mason's Tools|PHB",

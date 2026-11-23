@@ -174,6 +174,7 @@
         "Filo Sangriento|Desangrador|Himo|2|Himo",
         "Ritos de Sangre|Desangrador|Himo|3|Himo",
         "Ability Score Improvement|Desangrador|Himo|4|Himo",
+        "Martial Versatility|Desangrador|Himo|4|TCE",
         "Multiataque|Desangrador|Himo|5|Himo",
         "Ritos de Sangre|Desangrador|Himo|6|Himo",
         "Regeneración Vascular|Desangrador|Himo|7|Himo",
@@ -202,7 +203,7 @@
         {
           "type": "list",
           "items": [
-            "Hacer un golpe crítico con un arma o con daño necrótico.",
+            "Hacer un golpe crítico natural (20 en el d20, o aplicando reducciones como las del champion, pero no críticos automáticos como los del Experto Marcial, Pícaro asesino o estado de Paralizado) con un arma o con daño necrótico.",
             "Recibir un ataque crítico de los daños BSP o necrótico",
             "Como reacción cuando una criatura caiga a 0 HP a 30 ft de ti. Si tú redujiste a la criatura a 0 HP, no gastas la reacción.",
             "Como reacción cuando una criatura enemiga reciba daño de sangrado.",
@@ -446,6 +447,16 @@
       "className": "Desangrador",
       "classSource": "Himo",
       "level": 20
+    },
+    {
+      "name": "Martial Versatility",
+      "source": "TCE",
+      "page": 56,
+      "className": "Desangrador",
+      "classSource": "Himo",
+      "level": 4,
+      "isClassFeatureVariant": true,
+      "entries": ["{@i 4th-level desangrador {@variantrule optional class features|tce|optional feature}}","Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to Desangrador. This replacement represents a shift of focus in your martial practice."]
     }
   ],
   "subclass": [
@@ -825,63 +836,17 @@
       "name": "Romper Huesos",
       "source": "Himo",
       "entries": [
-        "Tus ataques son capaces de deshacer lo huesos de tus enemigos uno a uno. Cuando golpees crítico con daño contundente a un objetivo que tenga huesos, tira en la tabla:",
+        "Tus ataques son capaces de deshacer los huesos de tus enemigos uno a uno. Cuando golpeas con un crítico que inflige daño contundente a un objetivo que tenga huesos, sus HP máximos se reducen en una cantidad igual al daño recibido y eliges uno de los siguientes efectos:",
         {
-          "type": "table",
-          "caption": "Romper Huesos",
-          "colLabels": [
-            "d8",
-            "Hueso Roto",
-            "Efecto"
-          ],
-          "colStyles": [
-            "col-1 text-center",
-            "col-2",
-            "col-9"
-          ],
-          "rows": [
-            [
-              1,
-              "Pie",
-              "Desventaja contra efectos que le empujen o le proneen"
-            ],
-            [
-              2,
-              "Pierna",
-              "-15 ft de movilidad por cada pierna rota"
-            ],
-            [
-              3,
-              "Cadera",
-              "Desventaja a checks y salvaciones de destreza"
-            ],
-            [
-              4,
-              "Brazo",
-              "Desventaja a los checks y ataques relacionados con ese brazo"
-            ],
-            [
-              5,
-              "Mano",
-              "No puede equipar nada en esa mano ni usarla para los somáticos de conjuros"
-            ],
-            [
-              6,
-              "Costillas",
-              "Desventaja en salvaciones de {@status Concentration|PHB}, agotamiento y no puede aguantar la respiración"
-            ],
-            [
-              7,
-              "Espalda",
-              "Si se movió más de la mitad de su movilidad sin dashear, cae {@condition Prone|PHB}"
-            ],
-            [
-              8,
-              "Cabeza",
-              "Desventaja en salvaciones de {@status Concentration|PHB}, Inteligencia, wisdom y carisma"
-            ]
+          "type": "list",
+          "items": [
+            "Su movilidad se reduce a la mitad.",
+            "Si se mueve más de la mitad de su movilidad en un turno, recibe daño necrótico igual a tu modificador de Constitución. Este daño ignora resistencias e inmunidades.",
+            "Tiene desventaja en checks y salvaciones de Inteligencia, Wisdom, Carisma, Iniciativa y {@status Concentration|PHB}.",
+            "Pierde sus reacciones y hasta 1 acción legendaria."
           ]
-        }
+        },
+        "Este efecto dura hasta el próximo descanso largo del objetivo o hasta que se cure una cantidad equivalente al daño recibido o recupere sus HP máximos. Una misma criatura no puede recibir el mismo efecto dos veces."
       ],
       "level": 10,
       "className": "Desangrador",

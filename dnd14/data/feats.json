@@ -5453,7 +5453,6 @@
 				{
 					"type": "entries",
 					"entries": [
-						"Requisito: Oni lv4",
 						"{@spell Disguise Self|PHB} at will y {@spell Sleep|PHB} y {@spell Darkness|PHB} una vez al día.",
 						"A lv8 puedes castear {@spell Fly|PHB} (self) una vez al día.",
 						"A lv12 puedes castear una vez gratis {@spell Cone of Cold|PHB|Cono de Frío}.",

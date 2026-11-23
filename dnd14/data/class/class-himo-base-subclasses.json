@@ -2479,11 +2479,11 @@
 				{
 					"type": "list",
 					"items": [
-						"Dragón\u2014Presencia Dracónica: competencia en {@skill Intimidation}. Al dirigir ambos golpes de Ráfaga de Golpes a un objetivo, puedes forzar una salvación de Sabiduría si al menos uno impactó; con un fallo te teme hasta el inicio de tu próximo turno.",
-						"Mono\u2014Salto Encadenado: competencia en {@skill Acrobatics}. Tras impactar con el primer ataque de Ráfaga de Golpes, puedes saltar hasta otra criatura a 30 pies sin provocar ataques de oportunidad y atacarla con el otro.",
-						"Grulla\u2014Golpe Directo: competencia en Perspicacia. El primer ataque que impacte de Ráfaga de Golpes hace un dado de Artes Marciales adicional.",
-						"Tigre\u2014Golpe Atrapante: competencia en {@skill Athletics}. Al usar Ráfaga de Golpes puedes forzar una salvación de Fuerza; con un fallo, el objetivo queda {@condition Grappled|PHB} y apresado por ti, mientras tú también estás apresado.",
-						"Serpiente\u2014Golpe Rápido: puedes sacrificar un ataque de Ráfaga de Golpes para que el otro tenga ventaja y haga un dado de daño adicional."
+						"{@b Dragón} - {@b {@i Presencia Dracónica}}: competencia en {@skill Intimidation}. Al dirigir ambos golpes de Ráfaga de Golpes a un objetivo, puedes forzar una salvación de Sabiduría si al menos uno impactó; con un fallo te teme hasta el inicio de tu próximo turno.",
+						"{@b Mono} - {@b {@i Salto Encadenado}}: competencia en {@skill Acrobatics}. Tras impactar con el primer ataque de Ráfaga de Golpes, puedes saltar hasta otra criatura a 30 pies sin provocar ataques de oportunidad y atacarla con el otro.",
+						"{@b Grulla} - {@b {@i Golpe Directo}}: competencia en {@skill Perception}. El primer ataque que impacte de Ráfaga de Golpes hace un dado de Artes Marciales adicional.",
+						"{@b Tigre} - {@b {@i Golpe Atrapante}}: competencia en {@skill Athletics}. Al usar Ráfaga de Golpes puedes forzar una salvación de Fuerza; con un fallo, el objetivo queda {@condition Grappled|PHB} y apresado por ti, mientras tú también estás apresado.",
+						"{@b Serpiente} - {@b {@i Golpe Rápido}}: competencia en {@skill Stealth}. Puedes sacrificar un ataque de Ráfaga de Golpes para que el otro tenga ventaja y haga un dado de daño adicional"
 					]
 				}
 			],
@@ -2500,11 +2500,11 @@
 				{
 					"type": "list",
 					"items": [
-						"Dragón\u2014Ataque de Dedos: puedes cambiar el daño de los ataques desarmados entre cortante, perforante y contundente.",
-						"Mono\u2014Esquiva Ágil: como reacción puedes gastar puntos de ki para sumarlos a la CA, hasta un máximo de tu bonificador de competencia.",
-						"Grulla\u2014Táctica Evasiva: cada criatura que golpees en tu turno te ataca con desventaja.",
-						"Tigre\u2014Sometedor de Fuerza: tienes ventaja en {@skill Athletics} para derribar a alguien y puedes hacerlo con una acción adicional.",
-						"Serpiente\u2014Peleador de Suelo: estar {@condition Prone|PHB} ya no impone ventaja a los ataques contra ti."
+						"{@b Dragón} - {@b {@i Ataque de Dedos}}: puedes cambiar el daño de los ataques desarmados entre cortante, perforante y contundente.",
+						"{@b Mono} - {@b {@i Esquiva Ágil}}: como reacción puedes gastar puntos de ki para sumarlos a la CA, hasta un máximo de tu bonificador de competencia.",
+						"{@b Grulla} - {@b {@i Táctica Evasiva}}: cada criatura que golpees en tu turno te ataca con desventaja.",
+						"{@b Tigre} - {@b {@i Sometedor de Fuerza}}: tienes ventaja en {@skill Athletics} para derribar a alguien y puedes hacerlo con una acción adicional.",
+						"{@b Serpiente} - {@b {@i Peleador de Suelo}}: estar {@condition Prone|PHB} ya no impone ventaja a los ataques contra ti."
 					]
 				}
 			],
@@ -2521,11 +2521,11 @@
 				{
 					"type": "list",
 					"items": [
-						"Dragón\u2014Velocidad del Dragón: velocidad de vuelo y de nado igual a la de caminar.",
-						"Mono\u2014Salto Extralargo: tu distancia de salto iguala tu velocidad de caminar y no provocas ataques de oportunidad; sin carrerilla es la mitad.",
-						"Grulla\u2014Golpe Paciente: como acción adoptas una posición de espera hasta la próxima ronda; tienes ventaja en salvaciones de Destreza y una reacción para realizar un ataque con ventaja contra quien te ataque cuerpo a cuerpo o se acerque a 5 pies. Un impacto hace cuatro veces el daño de Artes Marciales.",
-						"Tigre\u2014Mimetismo Salvaje: ventaja en {@skill Stealth} para esconderte; mientras no te vean eres {@condition Invisible|PHB}.",
-						"Serpiente\u2014Veneno de Víbora: puedes cambiar el daño de tus ataques desarmados a veneno y gastar 1 punto de ki para forzar una salvación de Constitución o envenenar al objetivo."
+						"{@b Dragón} - {@b {@i Velocidad del Dragón}}: velocidad de vuelo y de nado igual a la de caminar.",
+						"{@b Mono} - {@b {@i Salto Extralargo}}: tu distancia de salto iguala tu velocidad de caminar y no provocas ataques de oportunidad; sin carrerilla es la mitad.",
+						"{@b Grulla} - {@b {@i Golpe Paciente}}: como acción adoptas una posición de espera hasta la próxima ronda; tienes ventaja en salvaciones de Destreza y una reacción para realizar un ataque con ventaja contra quien te ataque cuerpo a cuerpo o se acerque a 5 pies. Un impacto hace cuatro veces el daño de Artes Marciales.",
+						"{@b Tigre} - {@b {@i Mimetismo Salvaje}}: ventaja en {@skill Stealth} para esconderte; mientras no te vean eres {@condition Invisible|PHB}.",
+						"{@b Serpiente} - {@b {@i Veneno de Víbora}}: puedes cambiar el daño de tus ataques desarmados a veneno y gastar 1 punto de ki para forzar una salvación de Constitución o envenenar al objetivo."
 					]
 				}
 			],
@@ -2542,11 +2542,11 @@
 				{
 					"type": "list",
 					"items": [
-						"Dragón\u2014Desvío de Fuerza: como reacción al ser objetivo de un ataque, haces una tirada de ataque enfrentada. Si ganas, el objetivo queda {@condition Prone|PHB}, pierde el ataque y el resto de su multiataque, y su velocidad se reduce a 0. Se declara antes de ver la tirada.",
-						"Mono\u2014Ataque-Defensa: cuando una criatura falle un ataque contra ti, puedes usar tu reacción para atacarla; con un impacto tiene desventaja en el resto de ataques contra ti.",
-						"Grulla\u2014Entereza Sutil: inmunidad a quedar {@condition Prone|PHB}, {@condition Grappled|PHB}, apresado y {@condition Paralyzed|PHB}; tu velocidad no puede reducirse salvo a 0.",
-						"Tigre\u2014Fuerza Bruta: añades tu modificador de Fuerza además del de Destreza al daño de tus ataques desarmados.",
-						"Serpiente\u2014Movimientos Imprevisibles: tu movimiento no provoca ataques de oportunidad, el terreno difícil no te frena y tus ataques de oportunidad tienen ventaja."
+						"{@b Dragón} - {@b {@i Desvío de Fuerza}}: como reacción al ser objetivo de un ataque, haces una tirada de ataque enfrentada. Si ganas, el objetivo queda {@condition Prone|PHB}, pierde el ataque y el resto de su multiataque, y su velocidad se reduce a 0. Se declara antes de ver la tirada.",
+						"{@b Mono} - {@b {@i Ataque-Defensa}}: cuando una criatura falle un ataque contra ti, puedes usar tu reacción para atacarla; con un impacto tiene desventaja en el resto de ataques contra ti.",
+						"{@b Grulla} - {@b {@i Entereza Sutil}}: inmunidad a quedar {@condition Prone|PHB}, {@condition Grappled|PHB}, apresado y {@condition Paralyzed|PHB}; tu velocidad no puede reducirse salvo a 0.",
+						"{@b Tigre} - {@b {@i Fuerza Bruta}}: añades tu modificador de Fuerza además del de Destreza al daño de tus ataques desarmados.",
+						"{@b Serpiente} - {@b {@i Movimientos Imprevisibles}}: tu movimiento no provoca ataques de oportunidad, el terreno difícil no te frena y tus ataques de oportunidad tienen ventaja."
 					]
 				}
 			],

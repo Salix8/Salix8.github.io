@@ -329,6 +329,8 @@
         "Wormhole|Planeswalker|Himo|2|Himo",
         "Vía de Exploración|Planeswalker|Himo|3|Himo",
         "Ability Score Improvement|Planeswalker|Himo|4|Himo",
+        "Planar Versatility|Planeswalker|Himo|4|Himo",
+        "Cantrip Versatility|Planeswalker|Himo|4|TCE",
         "Consciencia Planar|Planeswalker|Himo|5|Himo",
         "Multiataque|Planeswalker|Himo|5|Himo",
         "Paso Lejano|Planeswalker|Himo|6|Himo",
@@ -367,7 +369,7 @@
       "name": "Consciencia Planar",
       "source": "Himo",
       "entries": [
-        "Elige un plano material en el que no se desarrolle la campaña. Has estado allí y tienes conocimiento de ese plano y las criaturas que viven allí. Elige un idioma que sea común allí para tu tipo de gente. Además, tienes ventaja en checks de habilidad respecto a ese plano. Más adelante podrás usar este conocimiento con otros rasgos.",
+        "Elige un plano material en el que no se desarrolle la campaña. Has estado allí y tienes conocimiento de ese plano y las criaturas que viven allí. Elige un idioma que sea común allí para tu tipo de gente. Además, tienes ventaja en cualquier check relacionado con la historia, formación, religión, sociología o situación planar de los planos que formen parte de esta lista. Más adelante podrás usar este conocimiento con otros rasgos.",
         "A lv5, 10, 14 y 18 puedes elegir otro plano material y otro plano de la Rueda Planar. Si el plano tiene realms, pisos o capas, puedes elegir una solamente."
       ],
       "className": "Planeswalker",
@@ -619,6 +621,31 @@
       "className": "Planeswalker",
       "classSource": "Himo",
       "level": 20
+    },
+    {
+      "name": "Cantrip Versatility",
+      "source": "TCE",
+      "page": 30,
+      "className": "Planeswalker",
+      "classSource": "Himo",
+      "level": 4,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 4th-level planeswalker {@variantrule optional class features|tce|optional feature}}",
+        "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the {@filter Planeswalker spell list|spells|level=0|class=Planeswalker}."
+      ]
+    },
+    {
+      "name": "Planar Versatility",
+      "source": "Himo",
+      "page": "??",
+      "className": "Planeswalker",
+      "classSource": "Himo",
+      "level": 4,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can change one of the planes in your Conciencia Planar that isn’t given to you by the subclass. You need to choose another one following its initial restrictions (you can’t change one Material Plane for one of the lower or upper ones)."
+      ]
     }
   ],
   "subclass": [
@@ -865,6 +892,30 @@
         "Mutación Planar|Planeswalker|Himo|Desconocido|Himo|3|Himo",
         "Mente Invulnerable|Planeswalker|Himo|Desconocido|Himo|7|Himo",
         "Emisario del Más Allá|Planeswalker|Himo|Desconocido|Himo|14|Himo"
+      ],
+      "className": "Planeswalker",
+      "classSource": "Himo"
+    },
+    {
+      "name": "Vía del Pecado",
+      "shortName": "Pecado",
+      "source": "Himo",
+      "additionalSpells": [
+        {
+          "prepared": {
+            "1": ["Postrar|GPNM", "Hex|PHB"],
+            "5": ["Desconcierto|GMAM", "Shadow Blade|XGE"],
+            "9": ["Bestow Curse|PHB", "Spirit Shroud|TCE"],
+            "13": ["Evard's Black Tentacles|PHB", "Summon Greater Demon|XGE"],
+            "17": ["Precio del Alma|GdR", "Contagion|PHB"]
+          }
+        }
+      ],
+      "subclassFeatures": [
+        "Vía del Pecado|Planeswalker|Himo|Pecado|Himo|1|Himo",
+        "Peso del Pecado|Planeswalker|Himo|Pecado|Himo|3|Himo",
+        "Plegaria de Perdón|Planeswalker|Himo|Pecado|Himo|7|Himo",
+        "Bendición del Penitente|Planeswalker|Himo|Pecado|Himo|14|Himo"
       ],
       "className": "Planeswalker",
       "classSource": "Himo"
@@ -1524,7 +1575,7 @@
       "name": "Vía del Caos",
       "source": "Himo",
       "entries": [
-        "Algunos hacen peregrinajes para expiar pecados, pero esos viajes dan un vuelco cuando toda la rueda de los planos está en tu mano. Los Planeswalkers del Pecado llevan este peregrinaje por todo el cosmos, llevando consigo cuanto puedan arrastrar de planos más restrictivos, a veces para librarse de ese mal, otras para abrazarlo y tomar su poder. ¿Cuál eres tú?",
+        "Cuando tienes la opción de ir a cualquier parte, todo es una opción; y cuando todo es una opción, las normas ya no aplican para ti porque nada puede pararte. Los Planeswalkers del Caos se convierten en fuerzas del caos en sí mismas, seres imparables que imponen su voluntad allá donde vayan y cuyas intenciones carecen de lógica aplicable. Los enemigos de estos planeswalkers a menudo tienen problemas para hacer planes de contención para ellos, ya que de repente pueden mostrarte un conjuro, herramienta o faceta que no esperabas de ellos.",
         {
           "type": "entries",
           "name": "Level 1: Consciencia Caótica",
@@ -1824,6 +1875,101 @@
       "subclassShortName": "Desconocido",
       "subclassSource": "Himo",
       "_displayName": "Level 14: Emisario del Más Allá",
+      "isDisplayAsSubclassTrait": true
+    },
+    {
+      "name": "Vía del Pecado",
+      "source": "Himo",
+      "entries": [
+        "Algunos hacen peregrinajes para expiar pecados, pero esos viajes dan un vuelco cuando toda la rueda de los planos está en tu mano. Los Planeswalkers del Pecado llevan este peregrinaje por todo el cosmos, llevando consigo cuanto puedan arrastrar de planos más restrictivos, a veces para librarse de ese mal, otras para abrazarlo y tomar su poder. ¿Cuál eres tú?",
+        {
+          "type": "entries",
+          "name": "Lv1 Consciencia Penitente.",
+          "entries": [
+            "Elige un Plano, realm o piso de Baator, el Abismo, Carcieri, el Hades, Celestia o Mechanus y añadelo a tu Consciencia Planar. Añades otro plano, realm o piso por cada lv de subclase. Además, hablas Supernal (ver trait del lexarca).",
+            "Estos conjuros siempre están preparados y no cuentan contra la cantidad de conjuros que puedes preparar.",
+            {
+              "type": "table",
+              "colLabels": ["Nivel de Planeswalker", "Conjuros"],
+              "colStyles": ["col-3 text-center", "col-9"],
+              "rows": [
+                ["1", "{@spell Postrar|GPNM}, {@spell Hex|PHB}"],
+                ["5", "{@spell Desconcierto|GMAM}, {@spell Shadow Blade|XGE}"],
+                ["9", "{@spell Bestow Curse|PHB}, {@spell Spirit Shroud|TCE}"],
+                ["13", "{@spell Evard's Black Tentacles|PHB}, {@spell Summon Greater Demon|XGE}"],
+                ["17", "{@spell Precio del Alma|GdR|Precio del ALma}, {@spell Contagion|PHB}"]
+              ]
+            }
+          ]
+        }
+      ],
+      "level": 1,
+      "className": "Planeswalker",
+      "classSource": "Himo",
+      "subclassShortName": "Pecado",
+      "subclassSource": "Himo"
+    },
+    {
+      "name": "Peso del Pecado",
+      "source": "Himo",
+      "entries": [
+        "Un número de veces al día igual a tu BC, como acción, puedes hacer que una criatura de tu elección que puedas ver a 60 ft reciba el peso de tus pecados. La criatura objetivo Salva Carisma o recibe los siguientes debuffos durante 1 minuto:",
+        {
+          "type": "list",
+          "items": [
+            "Su movilidad se reduce a la mitad.",
+            "No puede evitar provocar ataques de oportunidad.",
+            "No puede atacar con la bonus de ninguna forma.",
+            "Resta tu modificador de Inteligencia a Salvaciones de Fuerza, Destreza y Constitución."
+          ]
+        },
+        "No puedes tener este rasgo activo en dos criaturas a la vez (da hacerlo, se desactiva el más antiguo)."
+      ],
+      "level": 3,
+      "className": "Planeswalker",
+      "classSource": "Himo",
+      "subclassShortName": "Pecado",
+      "subclassSource": "Himo",
+      "_displayName": "Level 3: Peso del Pecado",
+      "isDisplayAsSubclassTrait": true
+    },
+    {
+      "name": "Plegaria de Perdón",
+      "source": "Himo",
+      "entries": [
+        "Cuando caigas a 0 HP o mueras, puedes elegir tirar 3 dados de golpe (no puedes usar el rasgo si tienes menos de 3). Recuperas esa cantidad de HP sumando tu modificador de Constitución a cada dado. Pierdes HP máximos igual a la cantidad curada.",
+        "Alternativamente, cuando una criatura a 10 ft de ti muera, puedes usar tu reacción para devolverla a la vida. Al hacerlo, se recupera una cantidad de HP igual a tres tiradas de sus dados de golpe, sumando constitución a cada dado. Si tenía menos HD, tira todos los que tenga. Tu pierdes una cantidad de HP máximos igual a la cantidad que se haya curado.",
+        "Recuperas los HP al final de un descanso largo. Si al usar este rasgo tus HP máximos bajan a 0, mueres y solo puedes ser revivido por {@spell Wish|PHB} o {@spell True Resurrection|PHB}."
+      ],
+      "level": 7,
+      "className": "Planeswalker",
+      "classSource": "Himo",
+      "subclassShortName": "Pecado",
+      "subclassSource": "Himo",
+      "_displayName": "Level 7: Plegaria de Perdón",
+      "isDisplayAsSubclassTrait": true
+    },
+    {
+      "name": "Bendición del Penitente",
+      "source": "Himo",
+      "entries": [
+        "Una vez al día, como bonus, puedes activar un estado de éxtasis religioso que te ayuda a continuar por el buen camino. Durante un minuto ganas los siguientes rasgos:",
+        {
+          "type": "list",
+          "items": [
+            "Eres inmune a Charm, Miedo, estrés, dormir mágicamente y no se te puede hacer actuar en contra de tu voluntad.",
+            "Eres resistente a los daños BSP y Fuego, Frío, Rayo, Ácido y Veneno.",
+            "Salvas los efectos (ceguera, sordera, parálisis, etc.) con ventaja.",
+            "La primera vez que ataques en tu turno con un arma, añade {@dice 1d8} al dado de ataque o al de daño (puedes elegir después de ver la tirada de ataque pero antes de saber si falla o acierta)."
+          ]
+        }
+      ],
+      "level": 14,
+      "className": "Planeswalker",
+      "classSource": "Himo",
+      "subclassShortName": "Pecado",
+      "subclassSource": "Himo",
+      "_displayName": "Level 14: Bendición del Penitente",
       "isDisplayAsSubclassTrait": true
     }
   ]

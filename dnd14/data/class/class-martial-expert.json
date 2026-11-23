@@ -78,6 +78,7 @@
         "Golpe Amortiguado|Experto Marcial|Himo|2|Himo",
         "Forma de Combate|Experto Marcial|Himo|3|Himo",
         "Ability Score Improvement|Experto Marcial|Himo|4|Himo",
+        "Martial Versatility|Experto Marcial|Himo|4|TCE",
         "Generar Apertura|Experto Marcial|Himo|4|Himo",
         "Multiataque|Experto Marcial|Himo|5|Himo",
         "Siempre Listo|Experto Marcial|Himo|5|Himo",
@@ -414,6 +415,16 @@
       "className": "Experto Marcial",
       "classSource": "Himo",
       "level": 20
+    },
+    {
+      "name": "Martial Versatility",
+      "source": "TCE",
+      "page": 56,
+      "className": "Experto Marcial",
+      "classSource": "Himo",
+      "level": 4,
+      "isClassFeatureVariant": true,
+      "entries": ["{@i 4th-level experto marcial {@variantrule optional class features|tce|optional feature}}","Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to Experto Marcial. This replacement represents a shift of focus in your martial practice."]
     }
   ],
   "subclass": [

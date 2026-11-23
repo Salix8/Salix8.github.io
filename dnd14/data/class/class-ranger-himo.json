@@ -324,7 +324,8 @@
 				"Subclase|Ranger (Himo)|Himo|3|Himo",
 				"Consciencia Primigenia|Ranger (Himo)|Himo|3|Himo",
 				"Golpe Medido|Ranger (Himo)|Himo|3|Himo",
-				"Ability Score Improvement|Ranger (Himo)|Himo|4|Himo",
+        "Ability Score Improvement|Ranger (Himo)|Himo|4|Himo",
+        "Martial Versatility|Ranger (Himo)|Himo|4|TCE",
 				"Multiataque|Ranger (Himo)|Himo|5|Himo",
 				"Cataplasmas|Ranger (Himo)|Himo|5|Himo",
 				"Móvil|Ranger (Himo)|Himo|6|Himo",
@@ -773,6 +774,26 @@
 			"className": "Ranger (Himo)",
 			"classSource": "Himo",
 			"level": 20
+		},
+		{
+			"name": "Martial Versatility",
+			"source": "TCE",
+			"page": 41,
+			"className": "Ranger (Himo)",
+			"classSource": "Himo",
+			"level": 4,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 4th-level ranger (Himo) {@variantrule optional class features|tce|optional feature}}",
+				"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, as you shift the focus of your martial practice:",
+				{
+					"type": "list",
+					"items": [
+						"Replace a fighting style you know with another fighting style available to Ranger (Himo).",
+						"If you know any {@filter maneuvers|optionalfeatures|feature type=MV:B} from the {@class fighter|phb|Battle Master|Battle Master|phb|2-0} archetype, you can replace one maneuver you know with a different maneuver."
+					]
+				}
+			]
 		}
 	]
 }

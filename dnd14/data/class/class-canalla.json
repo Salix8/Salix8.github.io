@@ -80,6 +80,7 @@
         "Jugarretas|Canalla|Himo|2|Himo",
         "Experiencia|Canalla|Himo|3|Himo",
         "Ability Score Improvement|Canalla|Himo|4|Himo",
+        "Martial Versatility|Canalla|Himo|4|TCE",
         "Multiataque|Canalla|Himo|5|Himo",
         "Oponente Odioso|Canalla|Himo|5|Himo",
         "Experiencia|Canalla|Himo|6|Himo",
@@ -416,6 +417,16 @@
       "className": "Canalla",
       "classSource": "Himo",
       "level": 20
+    },
+    {
+      "name": "Martial Versatility",
+      "source": "TCE",
+      "page": 56,
+      "className": "Canalla",
+      "classSource": "Himo",
+      "level": 4,
+      "isClassFeatureVariant": true,
+      "entries": ["{@i 4th-level canalla {@variantrule optional class features|tce|optional feature}}","Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to Canalla. This replacement represents a shift of focus in your martial practice."]
     }
   ],
   "subclass": [

@@ -470,6 +470,7 @@
         "Variación de Poder|Lexarca|Himo|2|Himo",
         "Especialización de Lengua|Lexarca|Himo|3|Himo",
         "Ability Score Improvement|Lexarca|Himo|4|Himo",
+        "Cantrip Versatility|Lexarca|Himo|4|TCE",
         "Especialización de Lengua|Lexarca|Himo|6|Himo",
         "Palabras de Poder|Lexarca|Himo|7|Himo",
         "Ability Score Improvement|Lexarca|Himo|8|Himo",
@@ -739,6 +740,19 @@
       "className": "Lexarca",
       "classSource": "Himo",
       "level": 20
+    },
+    {
+      "name": "Cantrip Versatility",
+      "source": "TCE",
+      "page": 30,
+      "className": "Lexarca",
+      "classSource": "Himo",
+      "level": 4,
+      "isClassFeatureVariant": true,
+      "entries": [
+        "{@i 4th-level lexarca {@variantrule optional class features|tce|optional feature}}",
+        "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the {@filter Lexarca spell list|spells|level=0|class=Lexarca}."
+      ]
     }
   ],
   "subclass": [
