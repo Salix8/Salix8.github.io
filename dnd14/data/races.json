@@ -225,7 +225,6 @@
 			],
 			"darkvision": 60,
 			"entries": [
-				"+2 Sabiduría +1 Carisma",
 				{
 					"type": "entries",
 					"name": "Idiomas",
@@ -303,13 +302,6 @@
 			},
 			"darkvision": 60,
 			"entries": [
-				{
-					"type": "entries",
-					"name": "Incremento de puntuación",
-					"entries": [
-						"Tu puntuación de Sabiduría aumenta en 2, y Carisma aumenta en +1."
-					]
-				},
 				{
 					"type": "entries",
 					"name": "Tipo",
@@ -390,13 +382,6 @@
 			"speed": 30,
 			"darkvision": 60,
 			"entries": [
-				{
-					"type": "entries",
-					"name": "Incremento de puntuación",
-					"entries": [
-						"Tu puntuación de Inteligencia aumenta en 2, y Sabiduría aumenta en +1."
-					]
-				},
 				{
 					"type": "entries",
 					"name": "Edad",
